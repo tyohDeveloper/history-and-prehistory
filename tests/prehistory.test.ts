@@ -9,10 +9,13 @@
 import { describe, expect, it } from "vitest";
 import {
   allClaims,
+  hasAuthoritativeNative,
+  isDateRegime,
   disclosureReasons,
   disclosureSummary,
   hasDisclosure,
   type BoundaryDating,
+  type YearValue,
 } from "../src/lib/chrono/year";
 import { bpFromYear, formatBpRange, resolveFrame, suggestFrame } from "../src/lib/chrono/bp";
 import { yearFromBp } from "../src/lib/chrono/bp";
@@ -294,5 +297,49 @@ describe("deep time renders at honest resolution", () => {
 
   it("still lets a user force calendar reckoning on a deep date", () => {
     expect(resolveFrame(OLDOWAN.primary.value, "calendar")).toBe("calendar");
+  });
+});
+
+// --- Native dates as the authoritative form -------------------------------
+
+describe("where a cultural calendar is the real date, ISO is only the index", () => {
+  // 10 Muharram 61 AH. Exact in the Hijri calendar; its ISO conversion is not.
+  const KARBALA: YearValue = {
+    consensus: { year: 680 },
+    method: "calendar",
+    nativeFrame: "calendar",
+    native: {
+      calendarId: "islamic",
+      text: "10 Mu\u1E25arram 61 AH",
+      year: 61,
+      month: 1,
+      day: 10,
+      observance: "\u02BF\u0100sh\u016Br\u0101\u02BE",
+      // umalqura and civil give 0680-10-13; tbla gives 0680-10-12.
+      conversionFuzzDays: 1,
+    },
+  };
+
+  it("marks the native form as authoritative", () => {
+    expect(hasAuthoritativeNative(KARBALA)).toBe(true);
+    expect(hasAuthoritativeNative({ consensus: { year: 1066 } })).toBe(false);
+  });
+
+  it("keeps the source's own wording rather than reconstructing it", () => {
+    expect(KARBALA.native?.text).toContain("61 AH");
+    expect(KARBALA.native?.observance).toBeDefined();
+  });
+
+  it("lets the conversion be less precise than the original", () => {
+    // The Hijri date is exact; the ISO date carries a day of slop from the
+    // choice of Hijri variant. Precision runs the opposite way to intuition.
+    expect(KARBALA.consensus.fuzz).toBeUndefined();
+    expect(KARBALA.native?.conversionFuzzDays).toBe(1);
+  });
+
+  it("still indexes on ISO so the event sorts against everything else", () => {
+    // Placing Karbala beside Tang China is exactly what the index is for.
+    expect(KARBALA.consensus.year).toBe(680);
+    expect(isDateRegime(KARBALA.consensus.year)).toBe(true);
   });
 });

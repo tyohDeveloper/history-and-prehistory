@@ -741,6 +741,67 @@ widely understood, and they are what the readout leads with. But architecturally
 ordinary consumers of the canonical layer, not the canonical layer itself. That is the change the
 ISO proposal buys, and it is worth having.
 
+### The native date is the fact; ISO is the index
+
+Where a good date exists in its own cultural calendar, **store both, and treat the native one as
+authoritative.** ISO remains the single model — it is what everything is indexed, sorted, and
+compared on — but it is a derived cross-reference, not the underlying truth.
+
+The Battle of Karbala happened on **10 Muḥarram 61 AH**. That is the date. It is ʿĀshūrāʾ, it is
+observed annually on a Hijri anniversary, and that anniversary has no fixed Gregorian counterpart.
+"13 October 680" is something we compute so the event can be placed beside Tang China. Useful, and
+not what happened.
+
+#### The conversion is less precise than the original
+
+Measured against the polyfill for 10 Muḥarram 61 AH:
+
+| Hijri variant | Proleptic Gregorian |
+|---|---|
+| `islamic-umalqura` | 0680-10-13 |
+| `islamic-civil` | 0680-10-13 |
+| `islamic-tbla` | 0680-10-12 |
+
+A **two-day spread on a date the source knew exactly**, and each variant round-trips its own value
+perfectly. The uncertainty is manufactured by the conversion; it is not carried by the original.
+
+This runs opposite to the usual assumption that the stored canonical value is the precise one and
+displays are approximations. `conversionFuzzDays` records it, so a readout neither presents a
+derived date as sharper than the derivation allows, nor lets the derivation cast doubt on a native
+date that has none.
+
+(Historians usually quote Karbala as 10 October 680 in the **Julian** calendar, which the app's own
+JDN module handles — Julian and proleptic Gregorian differ by three days in the seventh century.
+Three defensible answers, and only the Hijri one is exact.)
+
+#### Display consequence
+
+`hasAuthoritativeNative()` is true when a native form exists, and the readout then **leads with
+it**, offering ISO as the cross-reference rather than the reverse. This is a per-entity decision
+derived from the data, not a user preference — relevant to `Q-18`, which asked whether frame
+choice is global or per-entity. Part of the answer is now "neither": some entities carry their own.
+
+### One axis, two kinds of view
+
+The observation that **BP is just an extension of the ISO calendar** tidies the whole taxonomy, and
+it is worth stating explicitly because the registry currently blurs it.
+
+There is **one axis** — ISO astronomical day and year — and two different things layered on it:
+
+| | Examples | Nature |
+|---|---|---|
+| **Origin views** | CE/BCE, BP (1950), b2k (2000) | Pure subtraction on the axis. Not calendars. |
+| **Structural transforms** | Hijri, Hebrew, Chinese, nengō, +22 more | Own month and year structure. Genuinely different. |
+
+CE/BCE is an origin view with a numbering quirk (no year zero). BP and b2k are the same axis with
+the origin moved, which is why `bpFromYear` is one subtraction and why BP needed no separate
+machinery. The 26 calendars are the only things that are structurally different, and they are the
+only things that need Temporal.
+
+So the standard frameworks — CE/BCE and BP — are not two of twenty-eight options. They are two
+origins on the one axis everything is measured against, which is exactly why they can be the
+defaults without privileging any culture's calendar structure.
+
 ## Focus and context (requirement 10)
 
 The described behavior — focus large, falling away with perspective compression — is
@@ -845,8 +906,11 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
   Converted once at load, never inside arithmetic.
 - **Two regimes, split at ±271,821 years** — Temporal's hard limit. Inside, a value is a date;
   outside, a number of years.
-- **Keep the source's own number** (`NativeValue`) wherever a date was quoted in another calendar,
-  because year-precision conversion is irreversible in every non-Gregorian calendar measured.
+- **The native cultural date is authoritative where one exists**; ISO is the derived index. The
+  readout leads with the native form. Conversion may be *less* precise than the original, and
+  `conversionFuzzDays` records that.
+- **One axis, two kinds of view.** CE/BCE, BP and b2k are origin shifts on the ISO axis, not
+  calendars. Only the 26 structural calendars need Temporal.
 - **Ship `temporal-polyfill/full`** (`Q-26`), for display and input both. ~24 kB gzip, imported
   together with the conversion layer rather than ahead of it.
 - **The app is a starting point, not a research tool.** Handoff links are generated from the
@@ -1021,6 +1085,11 @@ That could replace the control, or make it redundant, or confuse users who expec
 
 **Q-10. When does the dataset gain fuzzy bounds and `dating_method`?** The Python builder helpers
 cannot emit them today (gap analysis §5.1), so this gates all prehistory authoring.
+
+**Q-28. Does the registry need splitting into origins and transforms?** `common`, `gregorian`,
+`iso8601` and the BP/b2k datums are origin views; the other 23 entries are structural calendars.
+They currently sit in one list. Splitting would make the picker clearer and the code simpler, at
+the cost of a schema change.
 
 **Q-27. When does the ISO-internal refactor land?** The decision is made; the code still stores
 historical years internally. The change is mechanical but touches every chronology module, so it

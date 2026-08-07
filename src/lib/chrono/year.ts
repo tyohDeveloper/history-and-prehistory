@@ -84,6 +84,49 @@ export const DATUM_YEAR: Record<Datum, number> = { bp: 1950, b2k: 2000 };
 
 export const DATUM_LABEL: Record<Datum, string> = { bp: "BP", b2k: "b2k" };
 
+/**
+ * The date in its own cultural calendar — **the authoritative form**.
+ *
+ * Where a `NativeValue` is present it is not a fidelity backup for the ISO
+ * value. It is the fact, and the ISO value is a derived index. The Battle of
+ * Karbala happened on **10 Muharram 61 AH**; that is the date, it is Ashura,
+ * and it is observed annually on a Hijri anniversary with no fixed Gregorian
+ * counterpart. "13 October 680" is a cross-reference we compute so the event
+ * can be sorted and placed beside Tang China — useful, and not what happened.
+ *
+ * ## The conversion can be less precise than the original
+ *
+ * This inverts the usual assumption. 10 Muharram 61 AH is exact: one
+ * unambiguous day. Its ISO conversion is not — measured against the polyfill,
+ * the three Hijri variants disagree by two days:
+ *
+ *     islamic-umalqura -> 0680-10-13
+ *     islamic-civil    -> 0680-10-13
+ *     islamic-tbla     -> 0680-10-12
+ *
+ * Each variant round-trips its own value perfectly, so nothing is broken. The
+ * uncertainty is introduced by the conversion; it is not carried by the
+ * original. `conversionFuzzDays` records it, so a readout neither presents a
+ * derived date as sharper than the derivation allows, nor lets the derivation
+ * cast doubt on a native date that has none.
+ */
+export interface NativeValue {
+  /** Calendar id from the registry. */
+  calendarId: string;
+  /** Verbatim as a source would write it: "10 Muharram 61 AH". */
+  text: string;
+  year?: number;
+  month?: number;
+  day?: number;
+  /** A culturally salient name for the day: Ashura, Nowruz, Yom Kippur. */
+  observance?: string;
+  /**
+   * Uncertainty introduced by converting to ISO, in days. Independent of —
+   * and often larger than — any uncertainty in the native date itself.
+   */
+  conversionFuzzDays?: number;
+}
+
 export interface YearValue {
   /**
    * Best accepted value: what most scholars would call reasonable, at the
@@ -102,8 +145,24 @@ export interface YearValue {
    * this exists so a conversion cannot silently restate the source.
    */
   nativeFrame?: NativeFrame;
+  /**
+   * The authoritative date in its own cultural calendar, where one exists.
+   * Present means the native form leads the readout and ISO is the index.
+   */
+  native?: NativeValue;
   /** Free text for genuine scholarly disagreement, as opposed to imprecision. */
   note?: string;
+}
+
+/**
+ * Does this value have an authoritative form in another calendar?
+ *
+ * When true the readout leads with the native date and offers ISO as the
+ * cross-reference, not the other way round. A per-entity display decision
+ * derived from the data rather than a user preference — see `Q-18`.
+ */
+export function hasAuthoritativeNative(v: YearValue): boolean {
+  return v.native !== undefined;
 }
 
 export function isCrisp(p: FuzzyPoint): boolean {

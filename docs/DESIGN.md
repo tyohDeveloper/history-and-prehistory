@@ -451,6 +451,82 @@ predict: Narmer, Gojoseon, Gilgamesh, David, Solomon, the Roman Kingdom, Romulus
 Nitocris. Legendary founders and dynastic origin stories. The existing authoring was right; it
 just lacked a field that said what it meant.
 
+### Measured against the real dataset
+
+The model is no longer hypothetical: `src/lib/chrono/fromEntity.ts` adapts a v2.1.0 `Entity` into
+it, so the migration map above is executable and testable rather than aspirational. Running it
+over all 1,305 entities:
+
+| Metric | Value |
+|---|---|
+| Dated boundaries | 2,500 |
+| Boundaries showing a marker | 49 — **2.0%** |
+| Entities needing boundary review | 33 |
+| Entity caveats produced | 5 |
+
+**2.0% is the number that matters.** A disclosure marker only works while it stays rare; one that
+appears on most records stops being read and becomes decoration. Two percent means it retains
+signal. It is also a budget: if authoring pushes marker density past roughly one in ten, the
+mechanism has been over-applied and it is the authoring that should change, not the threshold.
+
+Marker breakdown — only two reasons fire on current data:
+
+- `overlaps-parent` — **27**, over half of all markers
+- `traditional-date` — 16 (8 entities × two boundaries)
+
+`rival-chronologies` and `method-conflict` cannot fire yet because nothing has alternatives
+authored. `wide-uncertainty` does not fire because only three entities carry bounds at all, and
+those are well constrained. Both will activate with prehistory.
+
+That `overlaps-parent` is the single commonest disclosure in the real data — a reason the model
+did not have until the audit — is the clearest evidence the audit was worth doing.
+
+### Two defects the measurement exposed
+
+**The uncertainty ratio used the wrong denominator.** It divided by `|year|`, which collapses
+toward year zero: a date of 1 CE with a five-year error scored a ratio of 5.0, so everything near
+the era boundary read as wildly uncertain. Fixed to use distance from the BP datum, which is
+monotonic across the whole range and never collapses.
+
+The fix also produces better *judgement*, not merely better arithmetic. The same fifty-year error
+is unremarkable on a Bronze Age date and glaring on a Victorian one, and the datum-relative metric
+reproduces that automatically — which is how historians read precision anyway.
+
+**Eight entities marked the same thing twice.** Every legendary founder — Narmer, Gojoseon,
+Gilgamesh, David, Solomon, the Roman Kingdom, Romulus Augustulus, Nitocris — has a traditional
+accession *and* a traditional death, so both boundaries produced "Traditional date". Rendering it
+twice on one record is exactly the noise a marker cannot afford. `rollupDisclosure()` collapses
+identical markers into one entity-level statement.
+
+### The caveat classifier
+
+The one-time migration heuristic in `classifyCaveat` got all five right:
+
+| Entity | Assigned | Source text |
+|---|---|---|
+| Ghana Empire | `naming-confusion` | "not located in the modern nation of Ghana" |
+| Benin Empire | `naming-confusion` | "in southern Nigeria, not the modern nation of Benin" |
+| Maya Civilization | `misconception` | "never formed a single unified empire" |
+| Gilgamesh (legendary) | `contested-existence` | inferred from the display name |
+| Nitocris (traditional) | `contested-existence` | inferred from the display name |
+
+It is deliberately conservative — only an explicit name-versus-place construction promotes to
+`naming-confusion`. Erring toward the generic label costs a slightly vague heading; erring the
+other way would file a factual correction under a heading that misdescribes it. Delete the
+function once the field is authored directly.
+
+### Migration is lossy in one specific way
+
+v2.1.0 stores `date_note` and `allow_outside_parent_dates` **per entity**, while disclosure
+attaches **per boundary**. The old schema cannot say which end a note is about, and the notes
+themselves show why that matters: "Oda Nobunaga's rule began 1568, before the formal era start" is
+plainly about the start, while "nengō 782–806 spans the Nara–Heian boundary" is about neither end
+in particular.
+
+The adapter attaches both to the start boundary — right more often than not — and sets
+`needsBoundaryReview`. **33 entities carry that flag** and want a human pass before the migration
+is trusted.
+
 ### Validator rules this implies
 
 Enforceable in `tools/validate.py`, and worth enforcing because each catches a real authoring
@@ -567,6 +643,9 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
   naming confusions are not chronological.
 - **Superseded claims are ranked last but never hidden.**
 - **Notes and caveats are length-capped** at 200 characters.
+- **Marker density budget: 2% today, ~10% ceiling.** Past that the mechanism is over-applied and
+  authoring should change, not the threshold.
+- **Identical markers on both boundaries collapse** to one entity-level statement.
 - **The app is a starting point, not a research tool.** Handoff links are generated from the
   entity; the offline answer is a copyable URL and a downloadable research note, not a
   connectivity probe.
@@ -622,9 +701,15 @@ with the native search on English Wikipedia, or add an explicit `wiki_lang` fiel
 **Q-18. Is the frame preference global, per-entity, or both?** A global "always BP" toggle is
 simple. A per-entity override is more precise but adds state the URL fragment would have to carry.
 
-**Q-17. Where exactly does the unknown-method fallback switch?** Step 3 of the BP rule uses
-relative fuzziness as a proxy for provenance. The ratio that trips it needs a value, and it should
-be checked against real cases before being fixed.
+**Q-17. Both fuzziness thresholds are unvalidated.** `UNKNOWN_METHOD_FUZZ_RATIO` (0.05, chooses BP
+over calendar) and `WIDE_UNCERTAINTY_RATIO` (0.10, trips the broad-range marker) are currently
+guesses. Only three entities carry bounds, so tuning against them would be overfitting to three
+data points. Revisit once prehistory supplies real ranges. The one encouraging sign: the canonical
+worked example — ~3500 BCE (3000 .. ~4500 BCE) — trips the broad-range marker at 27%, comfortably
+clear of the threshold.
+
+**Q-22. Who reviews the 33 flagged boundary attachments?** Migration cannot infer which boundary an
+entity-level note belongs to. The flag is set; the pass is not scheduled.
 
 ### Non-blocking
 

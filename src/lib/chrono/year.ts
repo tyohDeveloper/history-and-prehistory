@@ -102,6 +102,30 @@ export function supportOf(v: YearValue): { earliest: number; latest: number } | 
   };
 }
 
+/**
+ * The Before Present datum, 1950 CE. Defined here rather than in `bp.ts`
+ * because the uncertainty ratio below needs it, and `bp.ts` already imports
+ * from this module. Re-exported from `bp.ts` for callers who expect it there.
+ */
+export const BP_DATUM_YEAR = 1950;
+
+/**
+ * Distance from the BP datum, always positive.
+ *
+ * This is the right denominator for "is this uncertainty large?", and using
+ * `|year|` instead was a bug: the denominator collapses toward year zero, so a
+ * date of 1 CE with a five-year error scored a ratio of 5.0 and every date
+ * near the era boundary looked wildly uncertain. Distance from the datum is
+ * monotonic across the whole range and never collapses.
+ *
+ * It also produces the right *judgement*, not just the right arithmetic: the
+ * same fifty-year error is unremarkable on a Bronze Age date and glaring on a
+ * Victorian one, which is how historians actually read precision.
+ */
+export function distanceFromDatum(historicalYear: number): number {
+  return Math.max(Math.abs(BP_DATUM_YEAR - toAstronomical(historicalYear)), 1);
+}
+
 export function toAstronomical(historicalYear: number): number {
   if (historicalYear === 0) {
     throw new RangeError("Year zero does not exist in historical numbering.");
@@ -360,8 +384,10 @@ export function disclosureReasons(d: BoundaryDating): DisclosureReason[] {
   }
 
   const uncertainty = uncertaintyOf(d.primary.value);
-  const age = Math.abs(d.primary.value.consensus.year);
-  if (uncertainty !== undefined && age > 0 && uncertainty / age >= WIDE_UNCERTAINTY_RATIO) {
+  if (
+    uncertainty !== undefined &&
+    uncertainty / distanceFromDatum(d.primary.value.consensus.year) >= WIDE_UNCERTAINTY_RATIO
+  ) {
     out.add("wide-uncertainty");
   }
 
@@ -419,6 +445,36 @@ export function allClaims(d: BoundaryDating): DatingClaim[] {
     (a, b) => STANDING_ORDER[a.standing] - STANDING_ORDER[b.standing],
   );
   return [d.primary, ...rest];
+}
+
+/**
+ * Disclosure across both boundaries of an entity, deduplicated.
+ *
+ * Measured against the real dataset, eight entities produce the identical
+ * marker on start and end — every legendary founder whose accession and death
+ * are both traditional dates. Rendering "Traditional date" twice on one
+ * record is noise, and noise is the specific failure mode a disclosure marker
+ * cannot afford: a mark that appears everywhere stops being read.
+ *
+ * When both boundaries say the same thing, say it once against the entity.
+ */
+export interface DisclosureRollup {
+  shared?: string;
+  start?: string;
+  end?: string;
+}
+
+export function rollupDisclosure(
+  start: BoundaryDating | undefined,
+  end: BoundaryDating | undefined,
+): DisclosureRollup {
+  const a = start === undefined ? undefined : disclosureSummary(start);
+  const b = end === undefined ? undefined : disclosureSummary(end);
+  if (a !== undefined && a === b) return { shared: a };
+  const out: DisclosureRollup = {};
+  if (a !== undefined) out.start = a;
+  if (b !== undefined) out.end = b;
+  return out;
 }
 
 /** Caveats worth surfacing, filtered of any that exceed the length cap. */

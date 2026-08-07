@@ -5,6 +5,8 @@ import {
   entityCaveats,
   disclosureReasons,
   disclosureSummary,
+  distanceFromDatum,
+  rollupDisclosure,
   hasDisclosure,
   isExact,
   MAX_CAVEAT_LENGTH,
@@ -197,10 +199,28 @@ describe("disclosure fires only when a single number would mislead", () => {
   });
 
   it("infers a broad range without the author saying so", () => {
+    // The canonical worked example: ~3500 BCE (3000 .. ~4500 BCE). Support
+    // runs -5000 to -3000, so uncertainty is 1500 against 5449 years before
+    // the datum -- 27%, unambiguously a range wearing a date's clothes.
     const broad: BoundaryDating = {
-      primary: claim({ value: { consensus: { year: -3500, fuzz: 500 } } }),
+      primary: claim({
+        value: {
+          consensus: { year: -3500, fuzz: 250 },
+          earliest: { year: -4500, fuzz: 500 },
+          latest: { year: -3000 },
+        },
+      }),
     };
     expect(disclosureReasons(broad)).toContain("wide-uncertainty");
+  });
+
+  it("does not call a well-constrained ancient date broad", () => {
+    // +/-500 on a 5,450-year-old date is 9% -- ordinary precision for the
+    // period, and flagging it would train the reader to ignore the marker.
+    const ordinary: BoundaryDating = {
+      primary: claim({ value: { consensus: { year: -3500, fuzz: 500 } } }),
+    };
+    expect(disclosureReasons(ordinary)).not.toContain("wide-uncertainty");
   });
 
   it("carries a stated reason that cannot be inferred", () => {
@@ -213,7 +233,8 @@ describe("the marker says what kind of complication it is", () => {
   it("surfaces the most consequential reason when several apply", () => {
     // Definitional outranks the wide range that also applies here.
     const both: BoundaryDating = {
-      primary: claim({ value: { consensus: { year: 476, fuzz: 100 } } }),
+      // 300 years on a 1,474-year-old date is 20%: broad as well as definitional.
+      primary: claim({ value: { consensus: { year: 476, fuzz: 300 } } }),
       reasons: ["definitional"],
     };
     expect(disclosureReasons(both).length).toBeGreaterThan(1);
@@ -301,5 +322,62 @@ describe("entity caveats are separate from dating disclosure", () => {
 
   it("keeps caveat text inside the brevity cap", () => {
     for (const c of caveats) expect(c.text.length).toBeLessThanOrEqual(MAX_CAVEAT_LENGTH);
+  });
+});
+
+describe("uncertainty is judged against distance from the datum", () => {
+  it("does not blow up near the era boundary", () => {
+    // Regression: |year| as denominator gave 1 CE +/-5 a ratio of 5.0, so
+    // every date near year zero read as wildly uncertain.
+    expect(distanceFromDatum(1)).toBe(1949);
+    expect(distanceFromDatum(-1)).toBe(1950);
+    const nearZero: BoundaryDating = {
+      primary: claim({ value: { consensus: { year: 1, fuzz: 5 } } }),
+    };
+    expect(disclosureReasons(nearZero)).not.toContain("wide-uncertainty");
+  });
+
+  it("stays positive after the datum", () => {
+    expect(distanceFromDatum(2026)).toBeGreaterThan(0);
+  });
+
+  it("reads the same error differently by remoteness", () => {
+    // +/-50 years is unremarkable on a Bronze Age date...
+    const ancient: BoundaryDating = {
+      primary: claim({ value: { consensus: { year: -3300, fuzz: 50 } } }),
+    };
+    expect(disclosureReasons(ancient)).not.toContain("wide-uncertainty");
+    // ...and glaring on a Victorian one.
+    const recent: BoundaryDating = {
+      primary: claim({ value: { consensus: { year: 1870, fuzz: 50 } } }),
+    };
+    expect(disclosureReasons(recent)).toContain("wide-uncertainty");
+  });
+});
+
+describe("rollup avoids marking the same thing twice", () => {
+  const traditional = (y: number): BoundaryDating => ({
+    primary: claim({ value: { consensus: { year: y } }, standing: "traditional" }),
+  });
+
+  it("collapses identical markers to one entity-level statement", () => {
+    // Every legendary founder: accession and death are both traditional.
+    expect(rollupDisclosure(traditional(-3100), traditional(-3080))).toEqual({
+      shared: "Traditional date",
+    });
+  });
+
+  it("keeps distinct markers on their own boundaries", () => {
+    const r = rollupDisclosure(traditional(-753), {
+      primary: claim({ value: { consensus: { year: 476 } } }),
+      reasons: ["definitional"],
+    });
+    expect(r.shared).toBeUndefined();
+    expect(r.start).toBe("Traditional date");
+    expect(r.end).toBe("Depends on definition");
+  });
+
+  it("is empty when nothing needs disclosing", () => {
+    expect(rollupDisclosure({ primary: claim({ value: SEPT_11 }) }, undefined)).toEqual({});
   });
 });

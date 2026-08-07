@@ -25,10 +25,16 @@
  * rounded to that interval's own resolution so the two never disagree.
  */
 
-import { isScientificDating, supportOf, toAstronomical, uncertaintyOf, type YearValue } from "./year";
+import {
+  BP_DATUM_YEAR,
+  isScientificDating,
+  supportOf,
+  toAstronomical,
+  uncertaintyOf,
+  type YearValue,
+} from "./year";
 
-/** The BP datum, in historical Gregorian years. */
-export const BP_DATUM_YEAR = 1950;
+export { BP_DATUM_YEAR };
 
 /**
  * Convert a historical Gregorian year to years Before Present.

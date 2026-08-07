@@ -9,6 +9,8 @@
 import { describe, expect, it } from "vitest";
 import {
   allClaims,
+  bce,
+  ce,
   hasAuthoritativeNative,
   isDateRegime,
   disclosureReasons,
@@ -140,7 +142,7 @@ const YOUNGER_DRYAS_END: BoundaryDating = {
 const GOBEKLI: BoundaryDating = {
   primary: {
     value: {
-      consensus: { year: -9530, fuzz: 200 },
+      consensus: { year: bce(9530), fuzz: 200 },
       method: "radiocarbon-calibrated",
       nativeFrame: "calendar",
     },
@@ -305,13 +307,13 @@ describe("deep time renders at honest resolution", () => {
 describe("where a cultural calendar is the real date, ISO is only the index", () => {
   // 10 Muharram 61 AH. Exact in the Hijri calendar; its ISO conversion is not.
   const KARBALA: YearValue = {
-    consensus: { year: 680 },
+    consensus: { year: ce(680) },
     method: "calendar",
     nativeFrame: "calendar",
     native: {
       calendarId: "islamic",
       text: "10 Mu\u1E25arram 61 AH",
-      year: 61,
+      year: ce(61),
       month: 1,
       day: 10,
       observance: "\u02BF\u0100sh\u016Br\u0101\u02BE",
@@ -322,7 +324,7 @@ describe("where a cultural calendar is the real date, ISO is only the index", ()
 
   it("marks the native form as authoritative", () => {
     expect(hasAuthoritativeNative(KARBALA)).toBe(true);
-    expect(hasAuthoritativeNative({ consensus: { year: 1066 } })).toBe(false);
+    expect(hasAuthoritativeNative({ consensus: { year: ce(1066) } })).toBe(false);
   });
 
   it("keeps the source's own wording rather than reconstructing it", () => {

@@ -22,6 +22,79 @@
  * off-by-one errors that survive review, so they are never mixed inline.
  */
 
+// ---------------------------------------------------------------------------
+// Year numbering: two schemes, kept apart by the type system.
+// ---------------------------------------------------------------------------
+
+/**
+ * **ISO astronomical year.** Has a year zero: 1 BCE is 0, 2 BCE is -1.
+ *
+ * This is the canonical internal representation. Everything downstream —
+ * arithmetic, BP, comparison, sorting — operates on it. It is what Temporal
+ * uses natively, so nothing has to be converted at the arithmetic boundary,
+ * and BP reduces to one subtraction with no special case at the era boundary.
+ */
+declare const IsoYearBrand: unique symbol;
+export type IsoYear = number & { readonly [IsoYearBrand]: true };
+
+/**
+ * **Historical year.** No year zero: -753 means 753 BCE, 1 means 1 CE.
+ *
+ * The authoring scheme. All 1,305 entities in `src/data` use it, and
+ * historians write it. It exists only at the edges: JSON in, display out.
+ */
+declare const HistoricalYearBrand: unique symbol;
+export type HistoricalYear = number & { readonly [HistoricalYearBrand]: true };
+
+/**
+ * The two schemes differ by one for every BCE date and by nothing for CE
+ * dates, which is precisely why this needs a type and not a convention.
+ * `-753` and `-752` are both entirely plausible values for the founding of
+ * Rome, so a mix-up survives code review indefinitely. Branding makes it a
+ * compile error instead.
+ *
+ * These four functions are the ONLY sanctioned crossings. Everything else
+ * takes one type or the other and cannot silently accept the wrong one.
+ */
+export function isoFromHistorical(year: HistoricalYear): IsoYear {
+  if ((year as number) === 0) {
+    throw new RangeError("Year zero does not exist in historical numbering.");
+  }
+  return ((year as number) < 0 ? (year as number) + 1 : (year as number)) as IsoYear;
+}
+
+export function historicalFromIso(year: IsoYear): HistoricalYear {
+  return ((year as number) <= 0 ? (year as number) - 1 : (year as number)) as HistoricalYear;
+}
+
+/** Tag a raw number arriving from the dataset as a historical year. */
+export function asHistorical(n: number): HistoricalYear {
+  if (n === 0) throw new RangeError("Year zero does not exist in historical numbering.");
+  return n as HistoricalYear;
+}
+
+/** Tag a raw number as already being an ISO year. Rare; prefer `ce`/`bce`. */
+export function asIso(n: number): IsoYear {
+  return n as IsoYear;
+}
+
+/**
+ * Readable constructors for fixtures and literals.
+ *
+ * `bce(753)` says what it means; `-752` does not, and `-753` is wrong. Using
+ * these everywhere a year is written by hand removes the last place the
+ * off-by-one can hide.
+ */
+export function ce(year: number): IsoYear {
+  if (year < 1) throw new RangeError(`ce() expects a positive year, got ${year}`);
+  return year as IsoYear;
+}
+
+export function bce(year: number): IsoYear {
+  if (year < 1) throw new RangeError(`bce() expects a positive year, got ${year}`);
+  return (1 - year) as IsoYear;
+}
+
 export type DatingMethod =
   | "calendar"
   | "radiocarbon-calibrated"
@@ -47,8 +120,8 @@ export type DatingMethod =
  * anchor (a trapezoid, say) would have to discard one of those facts.
  */
 export interface FuzzyPoint {
-  /** The stated value, historical Gregorian. Negative = BCE, no year zero. */
-  year: number;
+  /** The stated value as an ISO astronomical year. Build with `ce` / `bce`. */
+  year: IsoYear;
   /** Half-width in years. Absent or zero means the anchor is crisp. */
   fuzz?: number;
 }
@@ -178,13 +251,13 @@ export function isExact(v: YearValue): boolean {
  * Total span the value could occupy, widened by each bound's own fuzz.
  * Returns `undefined` when no bounds are stated.
  */
-export function supportOf(v: YearValue): { earliest: number; latest: number } | undefined {
+export function supportOf(v: YearValue): { earliest: IsoYear; latest: IsoYear } | undefined {
   if (v.earliest === undefined && v.latest === undefined) return undefined;
   const e = v.earliest ?? v.consensus;
   const l = v.latest ?? v.consensus;
   return {
-    earliest: e.year - (e.fuzz ?? 0),
-    latest: l.year + (l.fuzz ?? 0),
+    earliest: asIso((e.year as number) - (e.fuzz ?? 0)),
+    latest: asIso((l.year as number) + (l.fuzz ?? 0)),
   };
 }
 
@@ -207,8 +280,8 @@ export function supportOf(v: YearValue): { earliest: number; latest: number } | 
  */
 export const DATE_REGIME_LIMIT_YEARS = 271_821;
 
-export function isDateRegime(historicalYear: number): boolean {
-  return Math.abs(historicalYear) <= DATE_REGIME_LIMIT_YEARS;
+export function isDateRegime(year: IsoYear): boolean {
+  return Math.abs(year as number) <= DATE_REGIME_LIMIT_YEARS;
 }
 
 /**
@@ -231,24 +304,13 @@ export const BP_DATUM_YEAR = DATUM_YEAR.bp;
  * same fifty-year error is unremarkable on a Bronze Age date and glaring on a
  * Victorian one, which is how historians actually read precision.
  */
-export function distanceFromDatum(historicalYear: number): number {
-  return Math.max(Math.abs(BP_DATUM_YEAR - toAstronomical(historicalYear)), 1);
+export function distanceFromDatum(year: IsoYear): number {
+  return Math.max(Math.abs(BP_DATUM_YEAR - (year as number)), 1);
 }
 
-export function toAstronomical(historicalYear: number): number {
-  if (historicalYear === 0) {
-    throw new RangeError("Year zero does not exist in historical numbering.");
-  }
-  return historicalYear < 0 ? historicalYear + 1 : historicalYear;
-}
-
-export function fromAstronomical(astronomicalYear: number): number {
-  return astronomicalYear <= 0 ? astronomicalYear - 1 : astronomicalYear;
-}
-
-/** Whole years between two historical years, skipping the absent year zero. */
-export function yearsBetween(from: number, to: number): number {
-  return toAstronomical(to) - toAstronomical(from);
+/** Whole years between two ISO years. Plain subtraction; no year-zero gap. */
+export function yearsBetween(from: IsoYear, to: IsoYear): number {
+  return (to as number) - (from as number);
 }
 
 /**
@@ -262,8 +324,8 @@ export function uncertaintyOf(v: YearValue): number | undefined {
     return v.consensus.fuzz;
   }
   return Math.max(
-    Math.abs(v.consensus.year - support.earliest),
-    Math.abs(support.latest - v.consensus.year),
+    Math.abs((v.consensus.year as number) - (support.earliest as number)),
+    Math.abs((support.latest as number) - (v.consensus.year as number)),
   );
 }
 

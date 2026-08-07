@@ -26,14 +26,15 @@
  */
 
 import {
+  asIso,
   BP_DATUM_YEAR,
   DATUM_LABEL,
   DATUM_YEAR,
   isScientificDating,
   supportOf,
-  toAstronomical,
   uncertaintyOf,
   type Datum,
+  type IsoYear,
   type YearValue,
 } from "./year";
 
@@ -45,13 +46,21 @@ export { BP_DATUM_YEAR };
  * Uses astronomical numbering internally so the absent year zero does not
  * introduce an off-by-one: 1 BCE is 1950 BP, 1 CE is 1949 BP.
  */
-export function bpFromYear(historicalYear: number, datum: Datum = "bp"): number {
-  return DATUM_YEAR[datum] - toAstronomical(historicalYear);
+/**
+ * Years before the datum.
+ *
+ * One subtraction. Before the ISO refactor this called `toAstronomical` on
+ * every invocation, so the year-zero crossing happened inside arithmetic,
+ * repeatedly, at every call site that wanted a BP value. Now the crossing
+ * happens once when the dataset is loaded and this is just the axis with its
+ * origin moved — which is all BP ever was.
+ */
+export function bpFromYear(year: IsoYear, datum: Datum = "bp"): number {
+  return DATUM_YEAR[datum] - (year as number);
 }
 
-export function yearFromBp(bp: number, datum: Datum = "bp"): number {
-  const astronomical = DATUM_YEAR[datum] - bp;
-  return astronomical <= 0 ? astronomical - 1 : astronomical;
+export function yearFromBp(bp: number, datum: Datum = "bp"): IsoYear {
+  return asIso(DATUM_YEAR[datum] - bp);
 }
 
 export type BpUnit = "yr" | "ka" | "Ma";
@@ -102,16 +111,16 @@ export interface BpFormatOptions {
  * `uncertainty` is a half-width in years, if known.
  */
 export function formatBp(
-  historicalYear: number,
+  year: IsoYear,
   uncertainty?: number,
   options: BpFormatOptions & { datum?: Datum } = {},
 ): string {
   const datum = options.datum ?? "bp";
-  const bp = bpFromYear(historicalYear, datum);
+  const bp = bpFromYear(year, datum);
   if (bp <= 0) {
     // After the datum. "AP" (After Present) is not standard usage, so fall
     // back to plain CE rather than inventing a label.
-    return `${historicalYear.toLocaleString("en-US")} CE`;
+    return `${(year as number).toLocaleString("en-US")} CE`;
   }
   const unit = bpUnitFor(bp);
   const magnitude = formatMagnitude(bp, unit, uncertainty);

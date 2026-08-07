@@ -2,6 +2,12 @@ import { describe, expect, it } from "vitest";
 import { bpFromYear, formatBp, formatBpRange, resolveFrame, suggestFrame, yearFromBp } from "../src/lib/chrono/bp";
 import {
   allClaims,
+  asHistorical,
+  asIso,
+  bce,
+  ce,
+  historicalFromIso,
+  isoFromHistorical,
   entityCaveats,
   disclosureReasons,
   disclosureSummary,
@@ -14,36 +20,48 @@ import {
   supportOf,
   uncertaintyOf,
 } from "../src/lib/chrono/year";
-import type { BoundaryDating, DatingClaim, EntityCaveat } from "../src/lib/chrono/year";
+import type { BoundaryDating, DatingClaim, EntityCaveat, IsoYear } from "../src/lib/chrono/year";
 import type { YearValue } from "../src/lib/chrono/year";
 
 // The cases that drove the design. Named so a regression says which idea broke.
-const SEPT_11: YearValue = { consensus: { year: 2001 }, method: "calendar" };
-const ALEXANDER: YearValue = { consensus: { year: -323 }, method: "calendar" };
-const CYRUS: YearValue = { consensus: { year: -530 }, method: "calendar" };
+const SEPT_11: YearValue = { consensus: { year: ce(2001) }, method: "calendar" };
+const ALEXANDER: YearValue = { consensus: { year: bce(323) }, method: "calendar" };
+const CYRUS: YearValue = { consensus: { year: bce(530) }, method: "calendar" };
 const STONEHENGE: YearValue = {
-  consensus: { year: -2500, fuzz: 100 },
+  consensus: { year: bce(2500), fuzz: 100 },
   method: "radiocarbon-calibrated",
 };
 const WORKED_EXAMPLE: YearValue = {
-  consensus: { year: -3500, fuzz: 250 },
-  earliest: { year: -4500, fuzz: 500 },
-  latest: { year: -3000 },
+  consensus: { year: bce(3500), fuzz: 250 },
+  earliest: { year: bce(4500), fuzz: 500 },
+  latest: { year: bce(3000) },
 };
 const OLDOWAN: YearValue = {
-  consensus: { year: -3300000 },
-  earliest: { year: -3400000 },
-  latest: { year: -3200000 },
+  consensus: { year: bce(3300000) },
+  earliest: { year: bce(3400000) },
+  latest: { year: bce(3200000) },
   method: "potassium-argon",
 };
 
 describe("BP datum arithmetic", () => {
-  it("skips the absent year zero", () => {
-    expect(bpFromYear(1950)).toBe(0);
-    expect(bpFromYear(1)).toBe(1949);
-    expect(bpFromYear(-1)).toBe(1950);
-    expect(yearFromBp(1950)).toBe(-1);
-    expect(yearFromBp(1949)).toBe(1);
+  it("is plain subtraction, because ISO has a year zero", () => {
+    // The historical scheme's missing year zero is handled once, at the
+    // dataset boundary. By the time a value reaches here it is ISO, so BP
+    // needs no special case at the era boundary.
+    expect(bpFromYear(ce(1950))).toBe(0);
+    expect(bpFromYear(ce(1))).toBe(1949);
+    expect(bpFromYear(bce(1))).toBe(1950);
+    expect(yearFromBp(1950)).toBe(bce(1));
+    expect(yearFromBp(1949)).toBe(ce(1));
+    // 1 BCE is ISO year 0 -- the value that cannot appear in the dataset.
+    expect(bce(1) as number).toBe(0);
+  });
+
+  it("crosses the two schemes without an off-by-one", () => {
+    expect(isoFromHistorical(asHistorical(-753))).toBe(bce(753));
+    expect(historicalFromIso(bce(753)) as number).toBe(-753);
+    expect(isoFromHistorical(asHistorical(1492))).toBe(ce(1492));
+    expect(() => asHistorical(0)).toThrow(RangeError);
   });
 });
 
@@ -59,21 +77,23 @@ describe("frame selection is driven by provenance, not age", () => {
   });
 
   it("puts anything pre-Holocene in BP regardless of method", () => {
-    expect(suggestFrame({ consensus: { year: -20000 }, method: "calendar" })).toBe("bp");
+    expect(suggestFrame({ consensus: { year: bce(20000) }, method: "calendar" })).toBe("bp");
   });
 
   it("falls back on relative fuzziness when method is unknown", () => {
     // Tight date, no method: stays in calendar reckoning.
-    expect(suggestFrame({ consensus: { year: -500, fuzz: 10 } })).toBe("calendar");
+    expect(suggestFrame({ consensus: { year: bce(500), fuzz: 10 } })).toBe("calendar");
     // Uncertainty a large fraction of its own age: reads as measurement-shaped.
-    expect(suggestFrame({ consensus: { year: -3000, fuzz: 800 } })).toBe("bp");
+    expect(suggestFrame({ consensus: { year: bce(3000), fuzz: 800 } })).toBe("bp");
   });
 });
 
 describe("uncertainty is widened by each bound's own fuzz", () => {
   it("extends the support past a fuzzy bound", () => {
-    // earliest is -4500 +/- 500, so the support reaches -5000.
-    expect(supportOf(WORKED_EXAMPLE)).toEqual({ earliest: -5000, latest: -3000 });
+    // earliest is 4500 BCE +/- 500, so the support reaches 5000 BCE.
+    // Written with the era constructors, the intended values are unambiguous
+    // in a way the raw ISO integers -4999 / -2999 are not.
+    expect(supportOf(WORKED_EXAMPLE)).toEqual({ earliest: bce(5000), latest: bce(3000) });
   });
 
   it("treats a bare crisp consensus as exact", () => {
@@ -88,16 +108,16 @@ describe("uncertainty is widened by each bound's own fuzz", () => {
 
 describe("rendering never claims more precision than it has", () => {
   it("scales units by magnitude", () => {
-    expect(formatBp(-8000)).toBe("9,949 BP");
+    expect(formatBp(bce(8000))).toBe("9,949 BP");
     expect(formatBpRange(OLDOWAN)).toBe("3.4\u20133.2 Ma");
   });
 
   it("rounds a wide range to the resolution of its own uncertainty", () => {
     // Natufian-scale: quoted in ka, not spurious whole years.
     const natufian: YearValue = {
-      consensus: { year: -11000 },
-      earliest: { year: -13000 },
-      latest: { year: -9500 },
+      consensus: { year: bce(11000) },
+      earliest: { year: bce(13000) },
+      latest: { year: bce(9500) },
     };
     expect(formatBpRange(natufian)).toBe("15\u201311 ka");
   });
@@ -114,7 +134,7 @@ describe("display frame is a UI choice, not a property of the data", () => {
   });
 
   it("honours the frame a source quoted in", () => {
-    const quotedInBp: YearValue = { consensus: { year: -2550, fuzz: 50 }, nativeFrame: "bp" };
+    const quotedInBp: YearValue = { consensus: { year: bce(2550), fuzz: 50 }, nativeFrame: "bp" };
     expect(suggestFrame(quotedInBp)).toBe("bp");
   });
 });
@@ -134,10 +154,10 @@ const PLAIN: BoundaryDating = { primary: claim({ value: SEPT_11 }) };
 
 /** Egyptian New Kingdom: three rival schemes, same evidence base. */
 const EGYPTIAN: BoundaryDating = {
-  primary: claim({ value: { consensus: { year: -1550 } }, label: "Middle chronology" }),
+  primary: claim({ value: { consensus: { year: bce(1550) } }, label: "Middle chronology" }),
   alternatives: [
-    claim({ value: { consensus: { year: -1565 } }, label: "High chronology", standing: "minority" }),
-    claim({ value: { consensus: { year: -1539 } }, label: "Low chronology", standing: "minority" }),
+    claim({ value: { consensus: { year: bce(1565) } }, label: "High chronology", standing: "minority" }),
+    claim({ value: { consensus: { year: bce(1539) } }, label: "Low chronology", standing: "minority" }),
   ],
   note: "Schemes differ by a few decades; anchoring depends on Sothic dating assumptions.",
 };
@@ -145,12 +165,12 @@ const EGYPTIAN: BoundaryDating = {
 /** Radiocarbon against a king list — different methods, not just different numbers. */
 const METHOD_CLASH: BoundaryDating = {
   primary: claim({
-    value: { consensus: { year: -1200 }, method: "calendar" },
+    value: { consensus: { year: bce(1200) }, method: "calendar" },
     label: "Traditional king-list date",
   }),
   alternatives: [
     claim({
-      value: { consensus: { year: -1260, fuzz: 40 }, method: "radiocarbon-calibrated" },
+      value: { consensus: { year: bce(1260), fuzz: 40 }, method: "radiocarbon-calibrated" },
       label: "Radiocarbon (IntCal20)",
       standing: "majority",
     }),
@@ -160,7 +180,7 @@ const METHOD_CLASH: BoundaryDating = {
 /** Rome's founding: received, not established. */
 const TRADITIONAL: BoundaryDating = {
   primary: claim({
-    value: { consensus: { year: -753 } },
+    value: { consensus: { year: bce(753) } },
     label: "Varronian date",
     standing: "traditional",
   }),
@@ -168,14 +188,14 @@ const TRADITIONAL: BoundaryDating = {
 
 /** Nengo straddling a period boundary: the commonest real case, and not a dispute. */
 const OVERLAPS: BoundaryDating = {
-  primary: claim({ value: { consensus: { year: 782 } }, label: "Enryaku" }),
+  primary: claim({ value: { consensus: { year: ce(782) } }, label: "Enryaku" }),
   outsideParent: true,
   note: "Nengo 782-806 spans the Nara-Heian boundary (794).",
 };
 
 /** Fall of the Western Empire: a definitional argument, not an evidential one. */
 const DEFINITIONAL: BoundaryDating = {
-  primary: claim({ value: { consensus: { year: 476 } }, label: "Deposition of Romulus Augustulus" }),
+  primary: claim({ value: { consensus: { year: ce(476) } }, label: "Deposition of Romulus Augustulus" }),
   reasons: ["definitional"],
   note: "Some date the end to 480, others to 1453; the boundary is a matter of definition.",
 };
@@ -206,9 +226,9 @@ describe("disclosure fires only when a single number would mislead", () => {
     const broad: BoundaryDating = {
       primary: claim({
         value: {
-          consensus: { year: -3500, fuzz: 250 },
-          earliest: { year: -4500, fuzz: 500 },
-          latest: { year: -3000 },
+          consensus: { year: bce(3500), fuzz: 250 },
+          earliest: { year: bce(4500), fuzz: 500 },
+          latest: { year: bce(3000) },
         },
       }),
     };
@@ -219,7 +239,7 @@ describe("disclosure fires only when a single number would mislead", () => {
     // +/-200 on a 5,450-year-old date is 3.7%: ordinary precision for the
     // period, and flagging it would train the reader to ignore the marker.
     const ordinary: BoundaryDating = {
-      primary: claim({ value: { consensus: { year: -3500, fuzz: 200 } } }),
+      primary: claim({ value: { consensus: { year: bce(3500), fuzz: 200 } } }),
     };
     expect(disclosureReasons(ordinary)).not.toContain("wide-uncertainty");
   });
@@ -229,10 +249,10 @@ describe("disclosure fires only when a single number would mislead", () => {
     // 65 +/- 6 ka is the case the threshold was calibrated on, and a
     // Chalcolithic date at +/-500 is the same claim about precision.
     const madjedbebe: BoundaryDating = {
-      primary: claim({ value: { consensus: { year: -63050, fuzz: 6000 } } }),
+      primary: claim({ value: { consensus: { year: bce(63050), fuzz: 6000 } } }),
     };
     const chalcolithic: BoundaryDating = {
-      primary: claim({ value: { consensus: { year: -3500, fuzz: 500 } } }),
+      primary: claim({ value: { consensus: { year: bce(3500), fuzz: 500 } } }),
     };
     expect(disclosureReasons(madjedbebe)).toContain("wide-uncertainty");
     expect(disclosureReasons(chalcolithic)).toContain("wide-uncertainty");
@@ -249,7 +269,7 @@ describe("the marker says what kind of complication it is", () => {
     // Definitional outranks the wide range that also applies here.
     const both: BoundaryDating = {
       // 300 years on a 1,474-year-old date is 20%: broad as well as definitional.
-      primary: claim({ value: { consensus: { year: 476, fuzz: 300 } } }),
+      primary: claim({ value: { consensus: { year: ce(476), fuzz: 300 } } }),
       reasons: ["definitional"],
     };
     expect(disclosureReasons(both).length).toBeGreaterThan(1);
@@ -344,47 +364,47 @@ describe("uncertainty is judged against distance from the datum", () => {
   it("does not blow up near the era boundary", () => {
     // Regression: |year| as denominator gave 1 CE +/-5 a ratio of 5.0, so
     // every date near year zero read as wildly uncertain.
-    expect(distanceFromDatum(1)).toBe(1949);
-    expect(distanceFromDatum(-1)).toBe(1950);
+    expect(distanceFromDatum(ce(1))).toBe(1949);
+    expect(distanceFromDatum(bce(1))).toBe(1950);
     const nearZero: BoundaryDating = {
-      primary: claim({ value: { consensus: { year: 1, fuzz: 5 } } }),
+      primary: claim({ value: { consensus: { year: ce(1), fuzz: 5 } } }),
     };
     expect(disclosureReasons(nearZero)).not.toContain("wide-uncertainty");
   });
 
   it("stays positive after the datum", () => {
-    expect(distanceFromDatum(2026)).toBeGreaterThan(0);
+    expect(distanceFromDatum(ce(2026))).toBeGreaterThan(0);
   });
 
   it("reads the same error differently by remoteness", () => {
     // +/-50 years is unremarkable on a Bronze Age date...
     const ancient: BoundaryDating = {
-      primary: claim({ value: { consensus: { year: -3300, fuzz: 50 } } }),
+      primary: claim({ value: { consensus: { year: bce(3300), fuzz: 50 } } }),
     };
     expect(disclosureReasons(ancient)).not.toContain("wide-uncertainty");
     // ...and glaring on a Victorian one.
     const recent: BoundaryDating = {
-      primary: claim({ value: { consensus: { year: 1870, fuzz: 50 } } }),
+      primary: claim({ value: { consensus: { year: ce(1870), fuzz: 50 } } }),
     };
     expect(disclosureReasons(recent)).toContain("wide-uncertainty");
   });
 });
 
 describe("rollup avoids marking the same thing twice", () => {
-  const traditional = (y: number): BoundaryDating => ({
+  const traditional = (y: IsoYear): BoundaryDating => ({
     primary: claim({ value: { consensus: { year: y } }, standing: "traditional" }),
   });
 
   it("collapses identical markers to one entity-level statement", () => {
     // Every legendary founder: accession and death are both traditional.
-    expect(rollupDisclosure(traditional(-3100), traditional(-3080))).toEqual({
+    expect(rollupDisclosure(traditional(bce(3100)), traditional(bce(3080)))).toEqual({
       shared: "Traditional date",
     });
   });
 
   it("keeps distinct markers on their own boundaries", () => {
-    const r = rollupDisclosure(traditional(-753), {
-      primary: claim({ value: { consensus: { year: 476 } } }),
+    const r = rollupDisclosure(traditional(bce(753)), {
+      primary: claim({ value: { consensus: { year: ce(476) } } }),
       reasons: ["definitional"],
     });
     expect(r.shared).toBeUndefined();
@@ -400,16 +420,16 @@ describe("rollup avoids marking the same thing twice", () => {
 describe("date regime boundary", () => {
   it("puts historical dates inside the regime and deep time outside", () => {
     // Temporal throws beyond ~+/-271,821 years. Verified against the polyfill.
-    expect(isDateRegime(-9530)).toBe(true);
-    expect(isDateRegime(-271821)).toBe(true);
-    expect(isDateRegime(-271822)).toBe(false);
-    expect(isDateRegime(-3300000)).toBe(false);
+    expect(isDateRegime(bce(9530))).toBe(true);
+    expect(isDateRegime(asIso(-271821))).toBe(true);
+    expect(isDateRegime(asIso(-271822))).toBe(false);
+    expect(isDateRegime(asIso(-3300000))).toBe(false);
   });
 
   it("keeps every calendar-bearing entity comfortably inside", () => {
     // The seam sits far outside any calendar's meaningful range, so it never
     // bisects something a user would expect to convert.
-    for (const y of [-5508, -3760, -3114, -2637, -776, 622, 1912]) {
+    for (const y of [bce(5508), bce(3760), bce(3114), bce(2637), bce(776), ce(622), ce(1912)]) {
       expect(isDateRegime(y)).toBe(true);
     }
   });

@@ -21,6 +21,7 @@
  */
 
 import type { Entity } from "../types";
+import { asHistorical, isoFromHistorical } from "./year";
 import type {
   BoundaryDating,
   DatingClaim,
@@ -37,8 +38,17 @@ export interface EntityDates {
   needsBoundaryReview: boolean;
 }
 
-function point(year: number): FuzzyPoint {
-  return { year };
+/**
+ * The dataset boundary.
+ *
+ * `src/data/*.json` stores HISTORICAL years — `-753` means 753 BCE. Internals
+ * are ISO astronomical. This function is where the two meet, and after the
+ * branded-type refactor it is one of only a handful of places in the codebase
+ * that can perform the crossing at all: everything downstream takes `IsoYear`
+ * and will not compile against a raw dataset number.
+ */
+function point(historicalYear: number): FuzzyPoint {
+  return { year: isoFromHistorical(asHistorical(historicalYear)) };
 }
 
 function valueFor(

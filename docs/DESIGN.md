@@ -11,7 +11,7 @@ to read well one at a time. Revisit that choice when the register stops changing
 |---|---|
 | Branch | `calendar-layer`, unmerged. `main` is a clean baseline plus Replit config. |
 | Wired into the UI | **Nothing yet.** All chronology work is library code with tests. |
-| Tests | 95 passing, 5 files |
+| Tests | 109 passing, 6 files |
 | Artifact | 56.4 kB gzip, unchanged — none of this is imported by `main.ts`. Budgeted to ~80 kB once the polyfill lands. |
 | Replit | Repo is loaded there but dormant by choice; no commits from it yet |
 | Last reviewed | 2026-08-07 |
@@ -50,7 +50,7 @@ onto a calendar app; they change what a date *is* in the value model.
 | `src/lib/temporal/temporal.ts` | Source-selection shim re-exporting `temporal-polyfill/full`. Ported from OmniUnit unchanged in substance, so both apps make the same choice the same way. |
 | `src/lib/temporal/julianJdn.ts` | Fliegel–Van Flandern JDN converters for Julian and Revised Julian, which Temporal does not implement. Ported verbatim. |
 | `src/lib/calendars/registry.ts` | 26 calendars with validity horizons, primary/variant grouping, and per-calendar caveats. |
-| `src/lib/chrono/year.ts` | The core model: three independently-fuzzy anchors, dating method and datum, claim standing, disclosure reasons and inference, entity caveats, rollup. |
+| `src/lib/chrono/year.ts` | Branded `IsoYear`/`HistoricalYear` types and the four sanctioned crossings. The core model: three independently-fuzzy anchors, dating method and datum, claim standing, disclosure reasons and inference, entity caveats, rollup. |
 | `src/lib/chrono/bp.ts` | BP and b2k datums, `yr`/`ka`/`Ma` scaling, uncertainty-driven rounding, and frame selection with user override. |
 | `src/lib/chrono/fromEntity.ts` | Adapter from a v2.1.0 `Entity` into the model, so the migration map is executable rather than aspirational. Includes the one-time caveat classifier. |
 | `src/lib/handoff.ts` | Generated Wikipedia search links with dataset-measured disambiguation, plus the exportable research note. |
@@ -802,6 +802,53 @@ So the standard frameworks — CE/BCE and BP — are not two of twenty-eight opt
 origins on the one axis everything is measured against, which is exactly why they can be the
 defaults without privileging any culture's calendar structure.
 
+### The ISO refactor, and how it was made safe
+
+**Done** (`Q-27`). Internals now carry ISO astronomical years; the dataset keeps historical
+numbering; the crossing happens once, in `fromEntity.ts`.
+
+The hazard was never the arithmetic — it was that **every wrong answer looks right**. `-753` and
+`-752` are both entirely plausible for the founding of Rome, so a mixed-up value survives review
+indefinitely and surfaces years later as an unexplained one-year drift. A convention would not
+have held. So the two schemes are now **distinct types**:
+
+```ts
+type IsoYear        = number & { readonly [IsoYearBrand]: true };
+type HistoricalYear = number & { readonly [HistoricalYearBrand]: true };
+```
+
+Branding is compile-time only, so it costs nothing at runtime, and it makes the entire class of
+error unwriteable rather than merely discouraged. Four functions are the only sanctioned crossings
+— `isoFromHistorical`, `historicalFromIso`, `asHistorical`, `asIso` — and everything else takes one
+type or the other.
+
+**The refactor immediately proved the point.** Introducing the types surfaced **137 compile errors**
+across the codebase: every place the two schemes met, listed. Two were real bugs in library code;
+the rest were fixtures. Without branding those would have been silent.
+
+Two readable constructors carry the intent at every hand-written site:
+
+```ts
+bce(753)   // 753 BCE  -> ISO -752
+ce(1492)   // 1492 CE  -> ISO 1492
+```
+
+`bce(753)` says what it means. `-752` does not, and `-753` is wrong. Fixtures written this way are
+*more* legible after the refactor than before, which is unusual for a numbering migration.
+
+One test caught the shift honestly: an expectation of `{ earliest: -5000, latest: -3000 }` became
+`{ earliest: -4999, latest: -2999 }` — correct, since those are 5000 BCE and 3000 BCE in ISO. It is
+now written `{ earliest: bce(5000), latest: bce(3000) }`, where the intent is unmistakable.
+
+**What it bought.** `bpFromYear` is now one subtraction. Before, it called `toAstronomical` on every
+invocation, so the year-zero crossing happened inside arithmetic, at every call site wanting a BP
+value. Now it happens once at load. That is the whole justification for the change, and it is why
+BP really is just the ISO axis with its origin moved.
+
+`tests/iso-migration.test.ts` round-trips **every dated boundary in all 1,305 entities** through
+both conversions, checks BCE shifts by one while CE does not, and verifies that 1 BCE and 1 CE come
+out exactly one year apart in BP despite there being no year zero between them in the dataset.
+
 ## Focus and context (requirement 10)
 
 The described behavior — focus large, falling away with perspective compression — is
@@ -1057,7 +1104,7 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**14 open, 12 resolved.** Audited 2026-08-07.
+**14 open, 13 resolved.** Audited 2026-08-07.
 
 ### Blocking — date model
 
@@ -1090,11 +1137,6 @@ cannot emit them today (gap analysis §5.1), so this gates all prehistory author
 `iso8601` and the BP/b2k datums are origin views; the other 23 entries are structural calendars.
 They currently sit in one list. Splitting would make the picker clearer and the code simpler, at
 the cost of a schema change.
-
-**Q-27. When does the ISO-internal refactor land?** The decision is made; the code still stores
-historical years internally. The change is mechanical but touches every chronology module, so it
-wants doing in one commit, ideally before the conversion layer is built on top of the current
-shape.
 
 **Q-25. How is sub-year precision represented?** `Q-11` established that it is needed. Two shapes:
 an optional month/day on each anchor, or every anchor as a continuous day count with fuzz in days
@@ -1134,6 +1176,8 @@ frames per node or the app has a mode.
 
 ### Resolved
 
+- ~~`Q-27` ISO-internal refactor~~ — done. Branded `IsoYear` / `HistoricalYear` types made the
+  off-by-one a compile error; introducing them surfaced 137 sites, two of which were real bugs.
 - ~~`Q-26` Is calendar input worth 24 kB?~~ — yes. The `Intl`-inversion alternative was built and
   round-tripped 125/150, failing on BCE dates and Hebrew leap months; avoiding the dependency
   would mean hand-rolling a calendar library badly. Also keeps parity with OmniUnit.

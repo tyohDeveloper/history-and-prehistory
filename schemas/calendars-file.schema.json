@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://history-picker.local/schemas/calendars-file.schema.json",
+  "title": "Calendars file (calendars.json)",
+  "type": "object",
+  "required": ["schema_version", "dataset_version", "calendars"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "dataset_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "calendars": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "calendar.schema.json" }
+    }
+  }
+}

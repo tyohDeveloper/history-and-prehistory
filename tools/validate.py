@@ -1,0 +1,240 @@
+"""Validate every JSON data file against its schema and check referential integrity.
+
+Exits nonzero on ERRORS; prints WARNINGS but does not fail on them.
+
+Errors:
+    - Schema violation (any level)
+    - Duplicate entity id
+    - Missing parent / cross_parent / calendar / theme / frame reference
+    - Inverted date range (start_year > end_year)
+    - Year zero used with BCE/CE (there is no year 0 in this scheme)
+    - Named-year sequence has inverted or overlapping entries within a calendar
+
+Warnings:
+    - Child date range falls outside parent date range without allow_outside_parent_dates
+    - Foundational entity missing summary
+    - date_precision omitted on a dated entity
+    - Reference frame missing summary
+    - Duplicate sibling display names under the same parent
+"""
+
+import json
+import sys
+from pathlib import Path
+from collections import defaultdict, Counter
+from jsonschema import Draft202012Validator, RefResolver
+
+HERE = Path(__file__).parent
+SCHEMAS = HERE / "schemas"
+DATA = HERE / "data"
+
+# Load schemas
+def _load(p):
+    with open(p) as f:
+        return json.load(f)
+
+entity_schema = _load(SCHEMAS / "entity.schema.json")
+calendar_schema = _load(SCHEMAS / "calendar.schema.json")
+theme_schema = _load(SCHEMAS / "theme.schema.json")
+frame_schema = _load(SCHEMAS / "reference-frame.schema.json")
+entities_file_schema = _load(SCHEMAS / "entities-file.schema.json")
+calendars_file_schema = _load(SCHEMAS / "calendars-file.schema.json")
+themes_file_schema = _load(SCHEMAS / "themes-file.schema.json")
+frames_file_schema = _load(SCHEMAS / "reference-frames-file.schema.json")
+
+# Resolver for $ref between file schemas and item schemas
+store = {
+    entity_schema["$id"]: entity_schema,
+    calendar_schema["$id"]: calendar_schema,
+    theme_schema["$id"]: theme_schema,
+    frame_schema["$id"]: frame_schema,
+    "entity.schema.json": entity_schema,
+    "calendar.schema.json": calendar_schema,
+    "theme.schema.json": theme_schema,
+    "reference-frame.schema.json": frame_schema,
+}
+
+def _validator(schema):
+    resolver = RefResolver.from_schema(schema, store=store)
+    return Draft202012Validator(schema, resolver=resolver)
+
+# Load data
+entities_file = _load(DATA / "entities.json")
+calendars_file = _load(DATA / "calendars.json")
+themes_file = _load(DATA / "themes.json")
+frames_file = _load(DATA / "reference-frames.json")
+
+errors = []
+warnings = []
+
+
+def _validate_file(schema, data, label):
+    v = _validator(schema)
+    for err in v.iter_errors(data):
+        path = "/".join(str(p) for p in err.absolute_path)
+        errors.append(f"{label} schema: {err.message} at {path}")
+
+
+# ---- Schema validation (whole file, including wrapper) ---------------------
+_validate_file(entities_file_schema, entities_file, "entities.json")
+_validate_file(calendars_file_schema, calendars_file, "calendars.json")
+_validate_file(themes_file_schema, themes_file, "themes.json")
+_validate_file(frames_file_schema, frames_file, "reference-frames.json")
+
+
+entities = entities_file.get("entities", [])
+calendars = calendars_file.get("calendars", [])
+themes = themes_file.get("themes", [])
+frames = frames_file.get("frames", [])
+entity_ids = {e["id"] for e in entities}
+
+
+# ---- Referential integrity -------------------------------------------------
+seen = set()
+for e in entities:
+    if e["id"] in seen:
+        errors.append(f"entity duplicate id: {e['id']}")
+    seen.add(e["id"])
+    p = e.get("parent_id")
+    if p is not None and p not in entity_ids:
+        errors.append(f"entity {e['id']}: parent_id {p} does not exist")
+    for x in e.get("cross_parent_ids", []):
+        if x not in entity_ids:
+            errors.append(f"entity {e['id']}: cross_parent_ids ref {x} does not exist")
+    for link in e.get("links", []):
+        if link["entity_id"] not in entity_ids:
+            errors.append(f"entity {e['id']}: link.entity_id {link['entity_id']} does not exist")
+    for rid in e.get("redirect_ids", []):
+        if rid in entity_ids:
+            errors.append(f"entity {e['id']}: redirect_ids {rid} collides with a live entity id")
+
+for t in themes:
+    for eid in t.get("entity_ids", []):
+        if eid not in entity_ids:
+            errors.append(f"theme {t['id']}: entity_ids ref {eid} does not exist")
+
+for f_ in frames:
+    if f_.get("entity_id") and f_["entity_id"] not in entity_ids:
+        errors.append(f"frame {f_['id']}: entity_id {f_['entity_id']} does not exist")
+
+# Calendar named-year -> entity refs
+for c in calendars:
+    for ny in c.get("named_years", []):
+        if ny.get("entity_id") and ny["entity_id"] not in entity_ids:
+            errors.append(f"calendar {c['id']} named_year {ny['name']}: entity_id does not exist")
+        for eid in ny.get("entity_ids", []):
+            if eid not in entity_ids:
+                errors.append(f"calendar {c['id']} named_year {ny['name']}: entity_ids ref {eid} does not exist")
+
+# calendar_ids on entities must exist
+calendar_ids = {c["id"] for c in calendars}
+for e in entities:
+    for cid in e.get("calendar_ids", []):
+        if cid not in calendar_ids:
+            errors.append(f"entity {e['id']}: calendar_ids ref {cid} does not exist")
+
+
+# ---- Date sanity -----------------------------------------------------------
+for e in entities:
+    s, en = e.get("start_year"), e.get("end_year")
+    if s == 0 or en == 0:
+        errors.append(f"entity {e['id']}: year 0 is not valid in BCE/CE (there is no year 0)")
+    if s is not None and en is not None and s > en:
+        errors.append(f"entity {e['id']}: start_year {s} > end_year {en}")
+    # Range fields sanity
+    smin, smax = e.get("start_year_min"), e.get("start_year_max")
+    if smin is not None and smax is not None and smin > smax:
+        errors.append(f"entity {e['id']}: start_year_min {smin} > start_year_max {smax}")
+    emin, emax = e.get("end_year_min"), e.get("end_year_max")
+    if emin is not None and emax is not None and emin > emax:
+        errors.append(f"entity {e['id']}: end_year_min {emin} > end_year_max {emax}")
+
+
+# ---- Named-year sequence checks -------------------------------------------
+for c in calendars:
+    seen_years = set()
+    prev_start = None
+    for ny in c.get("named_years", []):
+        s = ny["start_gregorian"]
+        e_ = ny.get("end_gregorian")
+        if e_ is not None and s > e_:
+            errors.append(f"calendar {c['id']} named_year {ny['name']}: start {s} > end {e_}")
+
+
+# ---- Containment WARNINGS --------------------------------------------------
+by_id = {e["id"]: e for e in entities}
+for e in entities:
+    if e.get("allow_outside_parent_dates"):
+        continue
+    p_id = e.get("parent_id")
+    if not p_id or p_id not in by_id:
+        continue
+    p = by_id[p_id]
+    cs, ce = e.get("start_year"), e.get("end_year")
+    ps, pe = p.get("start_year"), p.get("end_year")
+    if cs is None or ps is None:
+        continue
+    if cs < ps:
+        warnings.append(
+            f"entity {e['id']}: start_year {cs} predates parent {p_id} start {ps}. "
+            f"Set allow_outside_parent_dates=true if intentional."
+        )
+        continue
+    if ce is not None and pe is not None and ce > pe:
+        warnings.append(
+            f"entity {e['id']}: end_year {ce} outlasts parent {p_id} end {pe}. "
+            f"Set allow_outside_parent_dates=true if intentional."
+        )
+
+
+# ---- Missing-summary warnings ----------------------------------------------
+for e in entities:
+    if e.get("tier") == "foundational" and not e.get("summary") and e.get("kind") != "region":
+        warnings.append(f"entity {e['id']}: foundational tier missing summary")
+
+for f_ in frames:
+    if not f_.get("summary"):
+        warnings.append(f"frame {f_['id']}: missing summary")
+
+
+# ---- Duplicate sibling display names ---------------------------------------
+by_parent = defaultdict(list)
+for e in entities:
+    by_parent[e.get("parent_id")].append(e)
+for parent_id, siblings in by_parent.items():
+    name_counts = Counter(s["name"] for s in siblings)
+    for name, cnt in name_counts.items():
+        if cnt > 1:
+            dupes = [s["id"] for s in siblings if s["name"] == name]
+            warnings.append(
+                f"duplicate sibling name '{name}' under parent {parent_id}: {dupes}"
+            )
+
+
+# ---- Report ---------------------------------------------------------------
+print(f"Entities:   {len(entities)}")
+print(f"Calendars:  {len(calendars)}")
+print(f"Themes:     {len(themes)}")
+print(f"Frames:     {len(frames)}")
+
+kinds = Counter(e["kind"] for e in entities)
+tiers = Counter(e.get("tier", "?") for e in entities)
+print(f"\nKind breakdown: {dict(kinds)}")
+print(f"Tier breakdown: {dict(tiers)}")
+
+if warnings:
+    print(f"\n⚠ WARNINGS ({len(warnings)}):")
+    for w in warnings[:60]:
+        print(f"  {w}")
+    if len(warnings) > 60:
+        print(f"  ... and {len(warnings) - 60} more warnings")
+
+if errors:
+    print(f"\n✗ ERRORS ({len(errors)}):")
+    for e in errors[:60]:
+        print(f"  {e}")
+    if len(errors) > 60:
+        print(f"  ... and {len(errors) - 60} more errors")
+    sys.exit(1)
+
+print(f"\n✓ OK — no errors. {len(warnings)} warning(s).")

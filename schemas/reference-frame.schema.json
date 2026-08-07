@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://history-picker.local/schemas/reference-frame.schema.json",
+  "title": "Reference Frame (Anchor)",
+  "description": "Well-known anchor points novices can use to orient themselves in time ('Fall of Rome', 'Meiji Restoration', 'Life of Buddha').",
+  "type": "object",
+  "required": ["id", "name", "year", "anchor_set", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "year": {
+      "type": "integer",
+      "description": "Anchoring year (proleptic Gregorian). Use start year for ranges; add end_year for spans."
+    },
+    "end_year": { "type": ["integer", "null"] },
+    "anchor_set": {
+      "type": "string",
+      "enum": [
+        "western",
+        "east-asian",
+        "islamic",
+        "south-asian",
+        "african",
+        "americas",
+        "oceanic",
+        "global"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "description": "One-sentence orientation text shown next to the anchor label."
+    },
+    "entity_id": {
+      "type": "string",
+      "description": "Optional link to the closest entity in the tree."
+    }
+  }
+}

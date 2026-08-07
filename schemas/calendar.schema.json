@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://history-picker.local/schemas/calendar.schema.json",
+  "title": "Calendar System",
+  "description": "A dating system (Gregorian, Julian, Hijri, Nengō, Buddhist Era, etc.).",
+  "type": "object",
+  "required": ["id", "name", "kind"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "kind": {
+      "type": "string",
+      "enum": ["solar", "lunar", "lunisolar", "regnal", "era-name", "cyclic", "mixed"]
+    },
+    "epoch_year": {
+      "type": ["integer", "null"],
+      "description": "Proleptic Gregorian year of year 1. Negative = BCE. null = no fixed epoch (pure regnal)."
+    },
+    "direction": {
+      "type": "string",
+      "enum": ["forward", "backward", "both"],
+      "default": "forward"
+    },
+    "notes": { "type": "string" },
+    "conversion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gregorian_offset": {
+          "type": "integer",
+          "description": "gregorian_year = calendar_year + gregorian_offset. Used for simple solar calendars."
+        },
+        "formula": {
+          "type": "string",
+          "description": "Textual/pseudocode formula for non-linear conversions (Hijri lunar drift, Ethiopian, etc.)."
+        },
+        "approximate": {
+          "type": "boolean",
+          "description": "True when the conversion is inherently approximate (e.g. lunar-to-solar drift). UI should show a ~ prefix."
+        }
+      }
+    },
+    "named_years": {
+      "type": "array",
+      "description": "Named year sequences within this calendar (all Japanese nengō, all Chinese regnal era names, etc.).",
+      "items": {
+        "type": "object",
+        "required": ["name", "start_gregorian", "end_gregorian"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable id, e.g. 'japanese-nengo.meiji'. Optional; recommended for calendars with entity cross-refs."
+          },
+          "name": { "type": "string", "minLength": 1 },
+          "native": { "type": "string" },
+          "start_gregorian": { "type": "integer" },
+          "end_gregorian": { "type": ["integer", "null"], "description": "null = ongoing." },
+          "entity_id": {
+            "type": "string",
+            "description": "Deprecated single-value entity link. Prefer entity_ids for many-to-many linking."
+          },
+          "entity_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string" },
+            "description": "Entities associated with this named year (Period, Reign, and/or Event nodes)."
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

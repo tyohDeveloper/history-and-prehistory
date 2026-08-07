@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_version": "2.1.0",
+  "generated_at": "2026-07-20T18:45:02Z",
+  "themes": [
+    {
+      "id": "empires-classical",
+      "name": "Classical Empires",
+      "description": "Great empires of antiquity that shaped the ancient world.",
+      "entity_ids": [
+        "west-asia.mesopotamia.akkadian",
+        "west-asia.iran.achaemenid",
+        "europe.mediterranean.macedon",
+        "south-asia.maurya",
+        "east-asia.china.han",
+        "europe.mediterranean.rome.empire",
+        "west-asia.iran.parthian",
+        "central-asia.kushan",
+        "west-asia.iran.sasanian"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "golden-ages",
+      "name": "Golden Ages",
+      "description": "Peak eras of art, science, and cultural flowering.",
+      "entity_ids": [
+        "africa.nile.egypt.new-kingdom.dyn18",
+        "europe.mediterranean.greece.classical",
+        "europe.mediterranean.rome.empire.nerva-antonine",
+        "south-asia.gupta",
+        "east-asia.china.tang",
+        "east-asia.japan.heian",
+        "cross-regional.abbasid",
+        "east-asia.china.song",
+        "east-asia.japan.edo",
+        "south-asia.mughal"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "world-empires",
+      "name": "World-Spanning Empires",
+      "description": "Empires that reshaped multiple continents.",
+      "entity_ids": [
+        "west-asia.iran.achaemenid",
+        "europe.mediterranean.rome.empire",
+        "cross-regional.umayyad",
+        "cross-regional.abbasid",
+        "central-asia.mongol-empire",
+        "cross-regional.ottoman",
+        "south-asia.mughal",
+        "europe.western.iberia.spanish-empire",
+        "europe.western.france.napoleon",
+        "europe.eastern.russian-empire"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "revolutions",
+      "name": "Revolutions",
+      "description": "Political and social upheavals that overturned old orders.",
+      "entity_ids": [
+        "europe.western.france.revolution",
+        "americas.north.usa",
+        "east-asia.japan.modern.meiji",
+        "europe.eastern.soviet.lenin",
+        "east-asia.china.prc",
+        "west-asia.iran.islamic-republic"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "collapses",
+      "name": "Collapses & Dark Ages",
+      "description": "Times when established orders unraveled.",
+      "entity_ids": [
+        "cross-regional.bronze-collapse",
+        "africa.nile.egypt.fip",
+        "africa.nile.egypt.sip",
+        "africa.nile.egypt.tip",
+        "europe.mediterranean.greece.dark-age",
+        "east-asia.china.three-kingdoms",
+        "cross-regional.black-death"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "silk-road",
+      "name": "Silk Road Eras",
+      "description": "Periods when long-distance Eurasian trade flourished.",
+      "entity_ids": [
+        "east-asia.china.han.western",
+        "central-asia.kushan",
+        "east-asia.china.tang",
+        "cross-regional.abbasid",
+        "central-asia.mongol-empire",
+        "central-asia.timurid"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "great-founders",
+      "name": "Empire Founders",
+      "description": "Individuals who founded or refounded major states.",
+      "entity_ids": [
+        "africa.nile.egypt.early-dynastic.dyn1.narmer",
+        "west-asia.mesopotamia.akkadian.sargon",
+        "west-asia.iran.achaemenid.cyrus2",
+        "europe.mediterranean.macedon.alexander",
+        "south-asia.maurya.chandragupta",
+        "east-asia.china.qin.shi-huang",
+        "europe.mediterranean.rome.empire.augustus",
+        "central-asia.mongol-empire.genghis",
+        "africa.west.mali.sundiata",
+        "americas.andes.inca.pachacuti",
+        "americas.mesoamerica.aztec.itzcoatl",
+        "south-asia.mughal.babur",
+        "oceania.polynesia.hawaii.kamehameha1"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "women-rulers",
+      "name": "Women Rulers",
+      "description": "Empresses, queens, and female heads of state.",
+      "entity_ids": [
+        "africa.nile.egypt.new-kingdom.dyn18.hatshepsut",
+        "africa.nile.egypt.ptolemaic.cleopatra7",
+        "east-asia.china.tang.wu-zetian",
+        "europe.western.england.tudor.elizabeth1",
+        "europe.western.britain.victorian.victoria",
+        "europe.eastern.russian-empire.catherine2",
+        "east-asia.china.qing.cixi",
+        "oceania.polynesia.hawaii.liliuokalani"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "indian-ocean-world",
+      "name": "Indian Ocean World",
+      "description": "Maritime powers of the Indian Ocean trade network.",
+      "entity_ids": [
+        "south-asia.chola",
+        "africa.east.swahili",
+        "southeast-asia.maritime.srivijaya",
+        "southeast-asia.maritime.majapahit",
+        "africa.nile.aksum",
+        "west-asia.arabia.pre-islamic",
+        "africa.east.zanzibar-sultanate"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "islamic-world",
+      "name": "The Greater Islamic World",
+      "description": "Muslim-ruled polities from the Rashidun conquests through the great early-modern empires.",
+      "entity_ids": [
+        "west-asia.arabia.rise-islam",
+        "cross-regional.rashidun",
+        "cross-regional.umayyad",
+        "cross-regional.abbasid",
+        "cross-regional.fatimid",
+        "west-asia.iran.safavid",
+        "south-asia.mughal",
+        "cross-regional.ottoman",
+        "africa.west.mali",
+        "africa.west.songhai",
+        "africa.west.sokoto",
+        "africa.north.almoravid",
+        "africa.north.almohad"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "industrialization",
+      "name": "Industrialization",
+      "description": "The two industrial revolutions and their global spread.",
+      "entity_ids": [
+        "global.industrial-revolution",
+        "global.second-industrial-revolution",
+        "europe.western.britain.victorian",
+        "europe.central.german-empire",
+        "east-asia.japan.modern.meiji",
+        "americas.north.usa"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "world-religions",
+      "name": "Birth of Major Religions",
+      "description": "Founding periods and figures of the major world religions.",
+      "entity_ids": [
+        "west-asia.mesopotamia.israel-judah",
+        "south-asia.mahajanapadas",
+        "east-asia.china.zhou.eastern.spring-autumn",
+        "west-asia.arabia.rise-islam.muhammad",
+        "south-asia.maurya.ashoka",
+        "africa.nile.aksum.ezana"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "cold-war-proxy",
+      "name": "Cold War Proxy Conflicts",
+      "description": "Regional conflicts in which the US and USSR backed opposing sides.",
+      "entity_ids": [
+        "cross-regional.korean-war",
+        "cross-regional.vietnam-war",
+        "cross-regional.cuban-missile-crisis",
+        "cross-regional.berlin-wall-fall",
+        "cross-regional.soviet-dissolution"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "decolonization",
+      "name": "Decolonization",
+      "description": "Dissolution of European colonial empires and emergence of independent post-colonial states.",
+      "entity_ids": [
+        "cross-regional.decolonization",
+        "south-asia.independence",
+        "southeast-asia.maritime.indonesia",
+        "africa.nile.ethiopia.haile-selassie",
+        "africa.southern.zulu"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "mesoamerican-civilizations",
+      "name": "Mesoamerican Civilizations",
+      "description": "Pre-Columbian civilizations of Mexico and Central America.",
+      "entity_ids": [
+        "americas.mesoamerica.olmec",
+        "americas.mesoamerica.zapotec",
+        "americas.mesoamerica.teotihuacan",
+        "americas.mesoamerica.maya",
+        "americas.mesoamerica.toltec",
+        "americas.mesoamerica.aztec"
+      ],
+      "sort": "chronological"
+    },
+    {
+      "id": "early-modern-europe",
+      "name": "Early Modern European Transformations",
+      "description": "Renaissance, Reformation, Scientific Revolution, and Enlightenment.",
+      "entity_ids": [
+        "europe.renaissance",
+        "europe.reformation",
+        "europe.scientific-revolution",
+        "europe.enlightenment"
+      ],
+      "sort": "chronological"
+    }
+  ]
+}

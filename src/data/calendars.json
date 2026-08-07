@@ -1,0 +1,518 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_version": "2.1.0",
+  "generated_at": "2026-07-20T18:45:02Z",
+  "calendars": [
+    {
+      "id": "gregorian",
+      "name": "Gregorian",
+      "kind": "solar",
+      "epoch_year": 1,
+      "direction": "both",
+      "notes": "Adopted in 1582 by Catholic Europe; used proleptically before that date. The default modern calendar.",
+      "conversion": {
+        "gregorian_offset": 0
+      }
+    },
+    {
+      "id": "julian",
+      "name": "Julian",
+      "kind": "solar",
+      "epoch_year": -45,
+      "direction": "forward",
+      "notes": "Introduced by Julius Caesar in 45 BCE. Drifted about 11 days behind the Gregorian by 1582."
+    },
+    {
+      "id": "ce-bce",
+      "name": "CE / BCE (Common Era)",
+      "kind": "solar",
+      "epoch_year": 1,
+      "direction": "both",
+      "notes": "Religion-neutral labeling of the same year numbers as AD/BC. No year 0."
+    },
+    {
+      "id": "hijri",
+      "name": "Islamic (Hijri, AH)",
+      "kind": "lunar",
+      "epoch_year": 622,
+      "direction": "forward",
+      "notes": "Lunar calendar starting from Muhammad's Hijra (622 CE). ~354-day year drifts ~11 days/year against solar; ~33 lunar years ≈ 32 solar years.",
+      "conversion": {
+        "formula": "gregorian ≈ 622 + (hijri * 0.970224)"
+      }
+    },
+    {
+      "id": "solar-hijri",
+      "name": "Iranian (Solar Hijri, SH)",
+      "kind": "solar",
+      "epoch_year": 622,
+      "direction": "forward",
+      "notes": "Same epoch as Islamic Hijri but solar. Modern Iranian and Afghan calendar.",
+      "conversion": {
+        "gregorian_offset": 621
+      }
+    },
+    {
+      "id": "buddhist-era",
+      "name": "Buddhist Era (BE, Thai)",
+      "kind": "solar",
+      "epoch_year": -543,
+      "direction": "forward",
+      "notes": "Based on the traditional date of the Buddha's parinirvana. Thai reckoning: BE = CE + 543.",
+      "conversion": {
+        "gregorian_offset": -543
+      }
+    },
+    {
+      "id": "hebrew-am",
+      "name": "Hebrew (Anno Mundi)",
+      "kind": "lunisolar",
+      "epoch_year": -3761,
+      "direction": "forward",
+      "notes": "AM = CE + 3761 (approximate; year change is Rosh Hashanah, not January 1).",
+      "conversion": {
+        "gregorian_offset": -3760
+      }
+    },
+    {
+      "id": "ethiopian",
+      "name": "Ethiopian",
+      "kind": "solar",
+      "epoch_year": 8,
+      "direction": "forward",
+      "notes": "About 7-8 years behind Gregorian. Ethiopia officially uses this calendar.",
+      "conversion": {
+        "gregorian_offset": 7
+      }
+    },
+    {
+      "id": "roman-auc",
+      "name": "Ab Urbe Condita (AUC)",
+      "kind": "regnal",
+      "epoch_year": -753,
+      "direction": "forward",
+      "notes": "'From the founding of the City' — Rome. AUC 1 = 753 BCE by tradition.",
+      "conversion": {
+        "gregorian_offset": -754
+      }
+    },
+    {
+      "id": "maya-long-count",
+      "name": "Maya Long Count",
+      "kind": "cyclic",
+      "epoch_year": -3114,
+      "direction": "forward",
+      "notes": "Counts days from a mythological creation date (Aug 11, 3114 BCE proleptic Gregorian). Positional in base-20 with a base-18 exception."
+    },
+    {
+      "id": "aztec-calendar",
+      "name": "Aztec Calendar Round",
+      "kind": "cyclic",
+      "epoch_year": null,
+      "direction": "forward",
+      "notes": "Two interlocking cycles (260-day tonalpohualli + 365-day xiuhpohualli) yielding a 52-year Calendar Round."
+    },
+    {
+      "id": "chinese-sexagenary",
+      "name": "Chinese Sexagenary Cycle",
+      "kind": "cyclic",
+      "epoch_year": -2637,
+      "direction": "forward",
+      "notes": "60-year repeating cycle combining 10 Heavenly Stems and 12 Earthly Branches. Used across East Asia."
+    },
+    {
+      "id": "japanese-nengo",
+      "name": "Japanese Nengō (Era Names)",
+      "kind": "era-name",
+      "epoch_year": 645,
+      "direction": "forward",
+      "notes": "Era names declared by the imperial court, from Taika (645) onward. Multiple per emperor before Meiji; one per emperor from 1868.",
+      "named_years": [
+        {
+          "name": "Taika",
+          "native": "大化",
+          "start_gregorian": 645,
+          "end_gregorian": 650
+        },
+        {
+          "name": "Hakuchi",
+          "native": "白雉",
+          "start_gregorian": 650,
+          "end_gregorian": 654
+        },
+        {
+          "name": "Shuchō",
+          "native": "朱鳥",
+          "start_gregorian": 686,
+          "end_gregorian": 686
+        },
+        {
+          "name": "Taihō",
+          "native": "大宝",
+          "start_gregorian": 701,
+          "end_gregorian": 704
+        },
+        {
+          "name": "Wadō",
+          "native": "和銅",
+          "start_gregorian": 708,
+          "end_gregorian": 715
+        },
+        {
+          "name": "Tenpyō",
+          "native": "天平",
+          "start_gregorian": 729,
+          "end_gregorian": 749
+        },
+        {
+          "name": "Enryaku",
+          "native": "延暦",
+          "start_gregorian": 782,
+          "end_gregorian": 806
+        },
+        {
+          "name": "Kōnin",
+          "native": "弘仁",
+          "start_gregorian": 810,
+          "end_gregorian": 824
+        },
+        {
+          "name": "Engi",
+          "native": "延喜",
+          "start_gregorian": 901,
+          "end_gregorian": 923
+        },
+        {
+          "name": "Kanpyō",
+          "native": "寛平",
+          "start_gregorian": 889,
+          "end_gregorian": 898
+        },
+        {
+          "name": "Genryaku",
+          "native": "元暦",
+          "start_gregorian": 1184,
+          "end_gregorian": 1185
+        },
+        {
+          "name": "Bunji",
+          "native": "文治",
+          "start_gregorian": 1185,
+          "end_gregorian": 1190
+        },
+        {
+          "name": "Kenkyū",
+          "native": "建久",
+          "start_gregorian": 1190,
+          "end_gregorian": 1199
+        },
+        {
+          "name": "Jōkyū",
+          "native": "承久",
+          "start_gregorian": 1219,
+          "end_gregorian": 1222
+        },
+        {
+          "name": "Bun'ei",
+          "native": "文永",
+          "start_gregorian": 1264,
+          "end_gregorian": 1275
+        },
+        {
+          "name": "Kōan",
+          "native": "弘安",
+          "start_gregorian": 1278,
+          "end_gregorian": 1288
+        },
+        {
+          "name": "Genkō",
+          "native": "元弘",
+          "start_gregorian": 1331,
+          "end_gregorian": 1334
+        },
+        {
+          "name": "Kenmu",
+          "native": "建武",
+          "start_gregorian": 1334,
+          "end_gregorian": 1336
+        },
+        {
+          "name": "Ōei",
+          "native": "応永",
+          "start_gregorian": 1394,
+          "end_gregorian": 1428
+        },
+        {
+          "name": "Ōnin",
+          "native": "応仁",
+          "start_gregorian": 1467,
+          "end_gregorian": 1469
+        },
+        {
+          "name": "Tenshō",
+          "native": "天正",
+          "start_gregorian": 1573,
+          "end_gregorian": 1592
+        },
+        {
+          "name": "Bunroku",
+          "native": "文禄",
+          "start_gregorian": 1592,
+          "end_gregorian": 1596
+        },
+        {
+          "name": "Keichō",
+          "native": "慶長",
+          "start_gregorian": 1596,
+          "end_gregorian": 1615
+        },
+        {
+          "name": "Genna",
+          "native": "元和",
+          "start_gregorian": 1615,
+          "end_gregorian": 1624
+        },
+        {
+          "name": "Kan'ei",
+          "native": "寛永",
+          "start_gregorian": 1624,
+          "end_gregorian": 1644
+        },
+        {
+          "name": "Genroku",
+          "native": "元禄",
+          "start_gregorian": 1688,
+          "end_gregorian": 1704
+        },
+        {
+          "name": "Kyōhō",
+          "native": "享保",
+          "start_gregorian": 1716,
+          "end_gregorian": 1736
+        },
+        {
+          "name": "Kansei",
+          "native": "寛政",
+          "start_gregorian": 1789,
+          "end_gregorian": 1801
+        },
+        {
+          "name": "Bunka",
+          "native": "文化",
+          "start_gregorian": 1804,
+          "end_gregorian": 1818
+        },
+        {
+          "name": "Tenpō",
+          "native": "天保",
+          "start_gregorian": 1830,
+          "end_gregorian": 1844
+        },
+        {
+          "name": "Kaei",
+          "native": "嘉永",
+          "start_gregorian": 1848,
+          "end_gregorian": 1854
+        },
+        {
+          "name": "Ansei",
+          "native": "安政",
+          "start_gregorian": 1854,
+          "end_gregorian": 1860
+        },
+        {
+          "name": "Bunkyū",
+          "native": "文久",
+          "start_gregorian": 1861,
+          "end_gregorian": 1864
+        },
+        {
+          "name": "Genji",
+          "native": "元治",
+          "start_gregorian": 1864,
+          "end_gregorian": 1865
+        },
+        {
+          "name": "Keiō",
+          "native": "慶応",
+          "start_gregorian": 1865,
+          "end_gregorian": 1868
+        },
+        {
+          "name": "Meiji",
+          "native": "明治",
+          "start_gregorian": 1868,
+          "end_gregorian": 1912,
+          "entity_id": "east-asia.japan.modern.meiji"
+        },
+        {
+          "name": "Taishō",
+          "native": "大正",
+          "start_gregorian": 1912,
+          "end_gregorian": 1926,
+          "entity_id": "east-asia.japan.modern.taisho"
+        },
+        {
+          "name": "Shōwa",
+          "native": "昭和",
+          "start_gregorian": 1926,
+          "end_gregorian": 1989,
+          "entity_id": "east-asia.japan.modern.showa"
+        },
+        {
+          "name": "Heisei",
+          "native": "平成",
+          "start_gregorian": 1989,
+          "end_gregorian": 2019,
+          "entity_id": "east-asia.japan.modern.heisei"
+        },
+        {
+          "name": "Reiwa",
+          "native": "令和",
+          "start_gregorian": 2019,
+          "end_gregorian": null,
+          "entity_id": "east-asia.japan.modern.reiwa"
+        }
+      ]
+    },
+    {
+      "id": "chinese-regnal",
+      "name": "Chinese Regnal Era Names",
+      "kind": "era-name",
+      "epoch_year": -140,
+      "direction": "forward",
+      "notes": "Emperors declared reign era names beginning with Emperor Wu of Han. Individual emperors could have multiple.",
+      "named_years": [
+        {
+          "name": "Jianyuan",
+          "native": "建元",
+          "start_gregorian": -140,
+          "end_gregorian": -135,
+          "notes": "First named Chinese era, under Emperor Wu of Han."
+        },
+        {
+          "name": "Kaiyuan",
+          "native": "開元",
+          "start_gregorian": 713,
+          "end_gregorian": 741,
+          "notes": "Golden age under Tang Xuanzong."
+        },
+        {
+          "name": "Yongle",
+          "native": "永樂",
+          "start_gregorian": 1403,
+          "end_gregorian": 1424,
+          "notes": "Ming Yongle Emperor."
+        },
+        {
+          "name": "Kangxi",
+          "native": "康熙",
+          "start_gregorian": 1662,
+          "end_gregorian": 1722,
+          "notes": "Qing Kangxi Emperor."
+        },
+        {
+          "name": "Qianlong",
+          "native": "乾隆",
+          "start_gregorian": 1736,
+          "end_gregorian": 1796,
+          "notes": "Qing Qianlong Emperor."
+        },
+        {
+          "name": "Guangxu",
+          "native": "光緒",
+          "start_gregorian": 1875,
+          "end_gregorian": 1908,
+          "notes": "Late Qing."
+        },
+        {
+          "name": "Xuantong",
+          "native": "宣統",
+          "start_gregorian": 1909,
+          "end_gregorian": 1912,
+          "notes": "Last Qing era (Puyi)."
+        }
+      ]
+    },
+    {
+      "id": "korean-regnal",
+      "name": "Korean Regnal Eras",
+      "kind": "era-name",
+      "epoch_year": 536,
+      "direction": "forward",
+      "notes": "Korean states used their own regnal era names in Silla and again in the Korean Empire (1897–1910).",
+      "named_years": [
+        {
+          "name": "Gwangmu",
+          "native": "光武",
+          "start_gregorian": 1897,
+          "end_gregorian": 1907,
+          "notes": "Emperor Gojong's Korean Empire era."
+        },
+        {
+          "name": "Yunghui",
+          "native": "隆熙",
+          "start_gregorian": 1907,
+          "end_gregorian": 1910
+        }
+      ]
+    },
+    {
+      "id": "juche",
+      "name": "Juche (North Korean)",
+      "kind": "solar",
+      "epoch_year": 1912,
+      "direction": "forward",
+      "notes": "North Korean calendar counting from Kim Il-sung's birth year (1912). Juche 1 = 1912 CE.",
+      "conversion": {
+        "gregorian_offset": 1911
+      }
+    },
+    {
+      "id": "vietnamese-nien-hieu",
+      "name": "Vietnamese Nien Hieu (Era Names)",
+      "kind": "era-name",
+      "epoch_year": 544,
+      "direction": "forward",
+      "notes": "Vietnamese dynasties adopted a Chinese-style era-name system beginning with the Early Lý (544). Emperors could have multiple."
+    },
+    {
+      "id": "egyptian-regnal",
+      "name": "Egyptian Regnal Years",
+      "kind": "regnal",
+      "epoch_year": null,
+      "direction": "forward",
+      "notes": "Years counted from each pharaoh's accession; reset on each reign. No continuous count."
+    },
+    {
+      "id": "french-republican",
+      "name": "French Republican",
+      "kind": "solar",
+      "epoch_year": 1792,
+      "direction": "forward",
+      "notes": "Revolutionary calendar in use 1792–1806 (and briefly 1871). Year 1 began 22 Sept 1792; 12 months of 30 days plus 5 (or 6) 'complementary days'.",
+      "conversion": {
+        "gregorian_offset": 1791
+      }
+    },
+    {
+      "id": "olympiad",
+      "name": "Greek Olympiad",
+      "kind": "cyclic",
+      "epoch_year": -776,
+      "direction": "forward",
+      "notes": "4-year cycles counted from the first ancient Olympics (776 BCE). Used by Greek historians."
+    },
+    {
+      "id": "byzantine-am",
+      "name": "Byzantine Anno Mundi",
+      "kind": "solar",
+      "epoch_year": -5508,
+      "direction": "forward",
+      "notes": "Byzantine 'year of the world' from a computed creation. AM = CE + 5508/5509.",
+      "conversion": {
+        "gregorian_offset": -5508
+      }
+    }
+  ]
+}

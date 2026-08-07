@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://history-picker.local/schemas/entities-file.schema.json",
+  "title": "Entities file (entities.json)",
+  "type": "object",
+  "required": ["schema_version", "dataset_version", "entities"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semantic version of the data model these entities conform to.",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "dataset_version": {
+      "type": "string",
+      "description": "Semantic version of the actual dataset contents.",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "generated_at": {
+      "type": "string",
+      "description": "ISO-8601 UTC timestamp of the build.",
+      "format": "date-time"
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "entity.schema.json" }
+    }
+  }
+}

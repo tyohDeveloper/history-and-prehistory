@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://history-picker.local/schemas/theme.schema.json",
+  "title": "Theme",
+  "description": "A cross-cutting topical collection (empires, golden ages, revolutions, plagues, etc.) that lets users enter the tree by concept rather than geography.",
+  "type": "object",
+  "required": ["id", "name"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "entity_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "Ids of entities that belong to this theme.",
+      "items": { "type": "string" }
+    },
+    "sort": {
+      "type": "string",
+      "enum": ["chronological", "alphabetical", "curated"],
+      "default": "chronological"
+    }
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_version": "2.1.0",
+  "generated_at": "2026-07-20T18:45:02Z",
+  "frames": [
+    {
+      "id": "life-jesus",
+      "name": "Life of Jesus",
+      "year": -4,
+      "end_year": 30,
+      "anchor_set": "western",
+      "summary": "Traditional dates for the life of Jesus of Nazareth."
+    },
+    {
+      "id": "fall-rome-west",
+      "name": "Fall of Western Rome",
+      "year": 476,
+      "anchor_set": "western",
+      "summary": "Deposition of Romulus Augustulus; conventional end of the Western Roman Empire.",
+      "entity_id": "europe.mediterranean.rome.empire"
+    },
+    {
+      "id": "fall-constantinople",
+      "name": "Fall of Constantinople",
+      "year": 1453,
+      "anchor_set": "western",
+      "summary": "Ottoman conquest ends the Byzantine Empire; conventional end of the Middle Ages.",
+      "entity_id": "cross-regional.ottoman.mehmed2"
+    },
+    {
+      "id": "columbus",
+      "name": "Columbus reaches the Americas",
+      "year": 1492,
+      "anchor_set": "western",
+      "summary": "Christopher Columbus's first landfall in the Bahamas; the beginning of sustained European contact with the Americas.",
+      "entity_id": "cross-regional.columbus"
+    },
+    {
+      "id": "american-revolution",
+      "name": "American Revolution",
+      "year": 1775,
+      "end_year": 1783,
+      "anchor_set": "western",
+      "summary": "Colonial revolt that produced the first successful independence movement in the Americas."
+    },
+    {
+      "id": "french-revolution",
+      "name": "French Revolution",
+      "year": 1789,
+      "anchor_set": "western",
+      "summary": "Overthrew the French monarchy and ancien régime; template for modern political revolutions.",
+      "entity_id": "europe.western.france.revolution"
+    },
+    {
+      "id": "ww1",
+      "name": "World War I",
+      "year": 1914,
+      "end_year": 1918,
+      "anchor_set": "global",
+      "summary": "First industrialized total war; collapsed four empires (Russian, German, Austro-Hungarian, Ottoman).",
+      "entity_id": "cross-regional.ww1"
+    },
+    {
+      "id": "ww2",
+      "name": "World War II",
+      "year": 1939,
+      "end_year": 1945,
+      "anchor_set": "global",
+      "summary": "Global war fought in Europe, Asia, and the Pacific; ended with Axis defeat and the atomic bombings of Hiroshima and Nagasaki.",
+      "entity_id": "cross-regional.ww2"
+    },
+    {
+      "id": "confucius",
+      "name": "Life of Confucius",
+      "year": -551,
+      "end_year": -479,
+      "anchor_set": "east-asian",
+      "summary": "Life of the Chinese philosopher Kongzi."
+    },
+    {
+      "id": "buddha",
+      "name": "Life of the Buddha",
+      "year": -563,
+      "end_year": -483,
+      "anchor_set": "south-asian",
+      "summary": "Traditional dates (varies by tradition)."
+    },
+    {
+      "id": "qin-unification",
+      "name": "Qin Unification of China",
+      "year": -221,
+      "anchor_set": "east-asian",
+      "summary": "Qin Shi Huangdi ended the Warring States period and founded the first unified Chinese empire.",
+      "entity_id": "east-asia.china.qin.shi-huang"
+    },
+    {
+      "id": "meiji-restoration",
+      "name": "Meiji Restoration",
+      "year": 1868,
+      "anchor_set": "east-asian",
+      "summary": "Ended the Tokugawa shogunate and restored imperial authority under Emperor Meiji; launched Japan's rapid modernization.",
+      "entity_id": "east-asia.japan.modern.meiji"
+    },
+    {
+      "id": "prc-founding",
+      "name": "Founding of the PRC",
+      "year": 1949,
+      "anchor_set": "east-asian",
+      "summary": "Mao Zedong proclaimed the People's Republic of China after Communist victory in the Chinese Civil War.",
+      "entity_id": "east-asia.china.prc"
+    },
+    {
+      "id": "muhammad",
+      "name": "Life of Muhammad",
+      "year": 570,
+      "end_year": 632,
+      "anchor_set": "islamic",
+      "summary": "Life of the Prophet Muhammad, founder of Islam. His flight from Mecca to Medina in 622 marks Year 1 of the Islamic calendar.",
+      "entity_id": "west-asia.arabia.rise-islam.muhammad"
+    },
+    {
+      "id": "hijra",
+      "name": "The Hijra (Muhammad's migration)",
+      "year": 622,
+      "anchor_set": "islamic",
+      "summary": "Year 1 of the Islamic calendar."
+    },
+    {
+      "id": "sack-baghdad",
+      "name": "Mongol Sack of Baghdad",
+      "year": 1258,
+      "anchor_set": "islamic",
+      "summary": "Hülegü Khan's Mongols destroyed Baghdad and ended the Abbasid Caliphate; a symbolic close to the Islamic Golden Age.",
+      "entity_id": "cross-regional.abbasid"
+    },
+    {
+      "id": "ashoka-conversion",
+      "name": "Ashoka's conversion (Kalinga War)",
+      "year": -261,
+      "anchor_set": "south-asian",
+      "summary": "Mauryan emperor Ashoka's remorse after the bloody conquest of Kalinga led him to embrace Buddhism and pacifism.",
+      "entity_id": "south-asia.maurya.ashoka"
+    },
+    {
+      "id": "indian-independence",
+      "name": "Indian Independence & Partition",
+      "year": 1947,
+      "anchor_set": "south-asian",
+      "summary": "End of the British Raj; partition into independent India and Pakistan produced one of history's largest forced migrations.",
+      "entity_id": "south-asia.independence"
+    },
+    {
+      "id": "great-pyramid",
+      "name": "Great Pyramid of Giza built",
+      "year": -2560,
+      "anchor_set": "african",
+      "summary": "Traditional date of the Great Pyramid of Khufu at Giza; the oldest of the Seven Wonders and the only one still standing.",
+      "entity_id": "africa.nile.egypt.old-kingdom.dyn4.khufu"
+    },
+    {
+      "id": "mansa-musa-hajj",
+      "name": "Mansa Musa's Hajj",
+      "year": 1324,
+      "anchor_set": "african",
+      "summary": "Mansa Musa of Mali's pilgrimage to Mecca was so lavish it crashed Egyptian gold prices for a decade.",
+      "entity_id": "africa.west.mali.mansa-musa"
+    },
+    {
+      "id": "adwa",
+      "name": "Battle of Adwa",
+      "year": 1896,
+      "anchor_set": "african",
+      "summary": "Ethiopian victory over Italy; kept Ethiopia the only major African state to remain uncolonized in the age of European empires.",
+      "entity_id": "africa.nile.ethiopia.menelik2"
+    },
+    {
+      "id": "cahokia-peak",
+      "name": "Cahokia at peak",
+      "year": 1100,
+      "anchor_set": "americas",
+      "summary": "Mississippian city near modern St. Louis; the largest pre-Columbian settlement in North America.",
+      "entity_id": "americas.north.mississippian"
+    },
+    {
+      "id": "aztec-fall",
+      "name": "Fall of Tenochtitlan",
+      "year": 1521,
+      "anchor_set": "americas",
+      "summary": "Spanish conquistadors under Cortés, allied with Tlaxcala and other indigenous nations, took the Aztec capital.",
+      "entity_id": "americas.mesoamerica.aztec.moctezuma2"
+    },
+    {
+      "id": "inca-fall",
+      "name": "Fall of the Inca",
+      "year": 1533,
+      "anchor_set": "americas",
+      "summary": "Pizarro executed Atahualpa; effective end of the Inca Empire, though the Vilcabamba state resisted until 1572.",
+      "entity_id": "americas.andes.inca.atahualpa"
+    },
+    {
+      "id": "polynesia-settlement",
+      "name": "Settlement of Aotearoa (Māori)",
+      "year": 1280,
+      "anchor_set": "oceanic",
+      "summary": "Approximate date of first Polynesian settlement of New Zealand; last major landmass on Earth to be settled by humans.",
+      "entity_id": "oceania.polynesia.aotearoa"
+    },
+    {
+      "id": "cook-first-voyage",
+      "name": "Cook's first Pacific voyage",
+      "year": 1768,
+      "end_year": 1771,
+      "anchor_set": "oceanic",
+      "summary": "James Cook's HMS Endeavour voyage mapped New Zealand and the eastern coast of Australia."
+    },
+    {
+      "id": "agriculture-origin",
+      "name": "Origin of agriculture",
+      "year": -10000,
+      "anchor_set": "global",
+      "summary": "Independent agricultural revolutions began around this time in the Fertile Crescent, China, and Mesoamerica."
+    },
+    {
+      "id": "writing-origin",
+      "name": "Origin of writing",
+      "year": -3200,
+      "anchor_set": "global",
+      "summary": "Earliest known writing systems: Sumerian cuneiform and Egyptian hieroglyphs."
+    },
+    {
+      "id": "waterloo",
+      "name": "Battle of Waterloo",
+      "year": 1815,
+      "anchor_set": "western",
+      "summary": "Napoleon's final defeat; the reset point for 19th-century European order.",
+      "entity_id": "europe.western.france.napoleon.waterloo"
+    },
+    {
+      "id": "fall-granada",
+      "name": "Fall of Granada",
+      "year": 1492,
+      "anchor_set": "islamic",
+      "summary": "End of Muslim rule in Iberia; completion of the Reconquista."
+    },
+    {
+      "id": "siege-vienna",
+      "name": "Siege of Vienna",
+      "year": 1529,
+      "anchor_set": "islamic",
+      "summary": "High-water mark of Ottoman expansion into Europe under Suleiman the Magnificent."
+    },
+    {
+      "id": "mughal-founding",
+      "name": "Founding of the Mughal Empire",
+      "year": 1526,
+      "anchor_set": "south-asian",
+      "summary": "Babur's victory at Panipat established Mughal rule in northern India.",
+      "entity_id": "south-asia.mughal.babur"
+    },
+    {
+      "id": "opium-war-1",
+      "name": "First Opium War",
+      "year": 1839,
+      "end_year": 1842,
+      "anchor_set": "east-asian",
+      "summary": "British defeat of Qing China; opened the treaty-port century and marked China's decline."
+    },
+    {
+      "id": "hiroshima",
+      "name": "Atomic bombing of Hiroshima",
+      "year": 1945,
+      "anchor_set": "global",
+      "summary": "First combat use of a nuclear weapon; helped end WWII in the Pacific."
+    },
+    {
+      "id": "moon-landing-anchor",
+      "name": "Apollo 11 Moon Landing",
+      "year": 1969,
+      "anchor_set": "global",
+      "summary": "First human landing on the Moon.",
+      "entity_id": "cross-regional.moon-landing"
+    },
+    {
+      "id": "berlin-wall-anchor",
+      "name": "Fall of the Berlin Wall",
+      "year": 1989,
+      "anchor_set": "global",
+      "summary": "Symbolic end of the Cold War division of Europe.",
+      "entity_id": "cross-regional.berlin-wall-fall"
+    },
+    {
+      "id": "nine-eleven",
+      "name": "September 11 Attacks",
+      "year": 2001,
+      "anchor_set": "global",
+      "summary": "al-Qaeda attacks on the United States; catalyst for the War on Terror.",
+      "entity_id": "global.contemporary.september-11"
+    }
+  ]
+}

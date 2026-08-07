@@ -130,6 +130,29 @@ export function supportOf(v: YearValue): { earliest: number; latest: number } | 
 }
 
 /**
+ * Outer limit of the date regime, in years either side of the ISO epoch.
+ *
+ * Temporal cannot represent a date beyond roughly +/-271,821 years — asking
+ * for 3.3 Ma throws a RangeError, verified against the polyfill. That is not
+ * a limitation to work around; it marks a real boundary between two kinds of
+ * quantity.
+ *
+ * Inside it, a value is a **date**: it has a position in every calendar, it
+ * round-trips exactly at day precision, and calendar conversion is meaningful.
+ * Outside it, a value is a **number of years**. No calendar reaches the
+ * Paleolithic, so nothing is lost by treating deep time as a scalar in BP.
+ *
+ * The seam sits far outside any calendar's meaningful range — the oldest
+ * epoch in the registry is Byzantine AM at 5508 BCE — so it never bisects
+ * anything a user would expect to convert.
+ */
+export const DATE_REGIME_LIMIT_YEARS = 271_821;
+
+export function isDateRegime(historicalYear: number): boolean {
+  return Math.abs(historicalYear) <= DATE_REGIME_LIMIT_YEARS;
+}
+
+/**
  * The Before Present datum, 1950 CE. Defined here rather than in `bp.ts`
  * because the uncertainty ratio below needs it, and `bp.ts` already imports
  * from this module. Re-exported from `bp.ts` for callers who expect it there.

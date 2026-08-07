@@ -651,6 +651,96 @@ only the outbound click touches the network. See `ARCHITECTURE.md` §2 and §10.
 Bundle consequence, tracked against `Q-16`: claims and sources across many entities will grow the
 dataset materially. The registry keeps that linear in distinct sources rather than in citations.
 
+## Canonical representation, and whether a date round-trips
+
+Three questions, one architecture. Answered by measurement against the polyfill.
+
+### Does an Islamic date survive conversion to Common Era and back?
+
+**At day precision, yes, exactly.** 252 of 252 round trips across twelve calendars returned the
+identical date, with zero loss. Calendar conversion at day granularity is a bijection — every
+calendar day is one day, and the mapping is reversible.
+
+**At year precision, no — and not "sometimes", but always.** Measured over a century of Gregorian
+years:
+
+| Calendar | Gregorian years spanning two of its years |
+|---|---|
+| Islamic (Umm al-Qura) | **100 / 100** |
+| Hebrew | **100 / 100** |
+| Persian | **100 / 100** |
+| Chinese | **100 / 100** |
+
+None of those calendars starts its year on 1 January, so every Gregorian year straddles two of
+theirs. "897 AH" reduced to a Gregorian year and converted back is genuinely ambiguous between 897
+and 898. The arithmetic is not at fault: the information was destroyed by reducing to year
+precision, and no conversion can recover it.
+
+This generalises the nengō result. There it was 43% of years; for lunar and solar-Hijri calendars
+it is all of them.
+
+**Consequence:** where a source states a date in its own calendar, keep the source's own number.
+`NativeValue` records it verbatim alongside the canonical value. Displayed in its native calendar
+a date then shows exactly what the source said; displayed elsewhere it shows a conversion that can
+be hedged. This is the same argument as `nativeFrame` for b2k, generalised.
+
+### Should ISO be the underlying representation?
+
+**Yes for internals, no for the JSON.** Taking the parts separately:
+
+**ISO astronomical numbering internally.** The year-zero discontinuity is a genuine source of
+off-by-one errors, and astronomical numbering removes it. BP becomes plain subtraction —
+`1950 − isoYear`, no branching. Temporal already uses ISO natively, so there is no conversion at
+the arithmetic boundary. And CE/BCE stops being privileged: it becomes one display transform among
+twenty-six, which is exactly the right shape given CE/BCE and BP are the two standard frameworks
+and everything else is presentation.
+
+There is a subtle argument in favour that is easy to miss. Today `toAstronomical` is called inside
+every BP computation — the crossing happens repeatedly, in logic. With ISO internal, the crossing
+happens **once at load**, at the I/O boundary. Fewer sites, all auditable, none inside arithmetic.
+
+**Historical numbering in the JSON.** All 1,305 entities already use it, historians write BCE, and
+a migration off-by-one would be almost undetectable by review — `-753` and `-752` both look
+plausible for the founding of Rome. The dataset should stay human-auditable. Convert once, on load,
+in `fromEntity.ts`.
+
+### Temporal cannot hold deep time, and that decides the shape
+
+Verified: `Temporal.PlainDate` throws a `RangeError` beyond roughly ±271,821 years. Asking for
+3.3 Ma fails outright. So ISO **cannot** be the single canonical representation, whatever else is
+decided.
+
+That is not a limitation to route around. It marks a real boundary between two kinds of quantity:
+
+| | Date regime | Deep-time regime |
+|---|---|---|
+| Range | within ±271,821 years | beyond it |
+| A value is | a **date** | a **number of years** |
+| Calendars | all 26 meaningful | none reach here |
+| Round-trip | exact at day precision | n/a |
+| Frames | CE/BCE, BP, b2k, any calendar | BP / ka / Ma only |
+
+`DATE_REGIME_LIMIT_YEARS` and `isDateRegime()` make the seam explicit. It sits far outside any
+calendar's meaningful range — the oldest calendar epoch in the registry is Byzantine AM at
+5508 BCE — so it never bisects anything a user would expect to convert.
+
+### The resulting three layers
+
+```
+Authoring   historical Gregorian in JSON, plus NativeValue where a source
+            quoted another calendar          -753 = 753 BCE
+     |      converted once, at load
+Canonical   date regime:      ISO astronomical year (+ optional month/day)
+            deep-time regime: years before datum, as a scalar
+     |      one transform per target
+Display     CE/BCE · BP · b2k · any of 26 calendars — none privileged
+```
+
+CE/BCE and BP remain **the two standard frameworks** as a product decision: they are the most
+widely understood, and they are what the readout leads with. But architecturally they are now
+ordinary consumers of the canonical layer, not the canonical layer itself. That is the change the
+ISO proposal buys, and it is worth having.
+
 ## Focus and context (requirement 10)
 
 The described behavior — focus large, falling away with perspective compression — is
@@ -751,6 +841,12 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
 - **A settled revision is not a dispute.** All-superseded alternatives read as "Date revised", and
   superseded claims are excluded when testing whether live claims conflict.
 - **Open disputes carry an `asOf` review date**; settled ones must not.
+- **ISO astronomical numbering is canonical internally; JSON keeps historical numbering.**
+  Converted once at load, never inside arithmetic.
+- **Two regimes, split at ±271,821 years** — Temporal's hard limit. Inside, a value is a date;
+  outside, a number of years.
+- **Keep the source's own number** (`NativeValue`) wherever a date was quoted in another calendar,
+  because year-precision conversion is irreversible in every non-Gregorian calendar measured.
 - **Ship `temporal-polyfill/full`** (`Q-26`), for display and input both. ~24 kB gzip, imported
   together with the conversion layer rather than ahead of it.
 - **The app is a starting point, not a research tool.** Handoff links are generated from the
@@ -925,6 +1021,11 @@ That could replace the control, or make it redundant, or confuse users who expec
 
 **Q-10. When does the dataset gain fuzzy bounds and `dating_method`?** The Python builder helpers
 cannot emit them today (gap analysis §5.1), so this gates all prehistory authoring.
+
+**Q-27. When does the ISO-internal refactor land?** The decision is made; the code still stores
+historical years internally. The change is mechanical but touches every chronology module, so it
+wants doing in one commit, ideally before the conversion layer is built on top of the current
+shape.
 
 **Q-25. How is sub-year precision represented?** `Q-11` established that it is needed. Two shapes:
 an optional month/day on each anchor, or every anchor as a continuous day count with fuzz in days

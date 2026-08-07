@@ -8,6 +8,7 @@ import {
   distanceFromDatum,
   rollupDisclosure,
   hasDisclosure,
+  isDateRegime,
   isExact,
   MAX_CAVEAT_LENGTH,
   supportOf,
@@ -393,5 +394,23 @@ describe("rollup avoids marking the same thing twice", () => {
 
   it("is empty when nothing needs disclosing", () => {
     expect(rollupDisclosure({ primary: claim({ value: SEPT_11 }) }, undefined)).toEqual({});
+  });
+});
+
+describe("date regime boundary", () => {
+  it("puts historical dates inside the regime and deep time outside", () => {
+    // Temporal throws beyond ~+/-271,821 years. Verified against the polyfill.
+    expect(isDateRegime(-9530)).toBe(true);
+    expect(isDateRegime(-271821)).toBe(true);
+    expect(isDateRegime(-271822)).toBe(false);
+    expect(isDateRegime(-3300000)).toBe(false);
+  });
+
+  it("keeps every calendar-bearing entity comfortably inside", () => {
+    // The seam sits far outside any calendar's meaningful range, so it never
+    // bisects something a user would expect to convert.
+    for (const y of [-5508, -3760, -3114, -2637, -776, 622, 1912]) {
+      expect(isDateRegime(y)).toBe(true);
+    }
   });
 });

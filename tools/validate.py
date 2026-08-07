@@ -24,9 +24,11 @@ from pathlib import Path
 from collections import defaultdict, Counter
 from jsonschema import Draft202012Validator, RefResolver
 
-HERE = Path(__file__).parent
-SCHEMAS = HERE / "schemas"
-DATA = HERE / "data"
+# Repo layout: schemas live at the repo root, generated data under src/data
+# so Vite can inline it at build time.
+ROOT = Path(__file__).resolve().parent.parent
+SCHEMAS = ROOT / "schemas"
+DATA = ROOT / "src" / "data"
 
 # Load schemas
 def _load(p):

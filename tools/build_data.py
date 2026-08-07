@@ -15,8 +15,9 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
-HERE = Path(__file__).parent
-DATA = HERE / "data"
+# Generated data is written to src/data so Vite inlines it at build time.
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "src" / "data"
 DATA.mkdir(exist_ok=True)
 
 # ---- Versions --------------------------------------------------------------

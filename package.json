@@ -16,7 +16,7 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:e2e": "playwright test",
-    "validate:data": "python3 tools/validate.py",
+    "validate:data": "python3 tools/validate.py && python3 tools/check_regenerated.py",
     "build:bundle": "NODE_ENV=production vite build",
     "minify:artifact": "node scripts/minify-artifact.mjs",
     "verify:build": "node scripts/verify-build.mjs",

@@ -638,6 +638,8 @@ failure:
     alternative is `superseded` — a settled question has nothing to re-check.
 11. A value with `nativeFrame: "b2k"` must carry a `layer-counting` or otherwise ice-core method;
     b2k on a radiocarbon date is almost certainly an authoring slip.
+12. Warn when a boundary carries wide bounds and the entity also has a sibling boundary — a
+    period's extent has probably been collapsed into one fuzzy date.
 
 ### Offline constraint
 
@@ -758,13 +760,100 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
 - **Focus+context uses `tier` as the a-priori-importance term**, so no new per-entity authoring is
   required to make the view work.
 
+## Measured answers to open items
+
+Four items were settled by measurement rather than by decision, 2026-08-07.
+
+### Q-16 — the polyfill costs 24 kB gzip, and it buys *input*, not display
+
+Built two probe bundles against the real toolchain:
+
+| Bundle | gzip |
+|---|---|
+| `Intl.DateTimeFormat` only, no polyfill | **0.3 kB** |
+| `temporal-polyfill/full`, 15 calendars exercised | **24.0 kB** |
+
+Projected artifact with the polyfill wired in: **~80 kB gzip**, up from 56.4 kB. Comfortable
+against the 3 MB ceiling, but a deliberate re-baseline of `build-baseline.json` rather than
+something to let drift past the 5% regression check.
+
+The important part is what the 24 kB is actually for. **Native `Intl` already converts and renders
+any date into all 26 calendars at essentially zero cost** — that covers the multi-calendar readout
+in requirement 5 outright. What `Intl` cannot do is *parse* a date expressed in a non-Gregorian
+calendar, or do arithmetic in one.
+
+So the polyfill is the price of **requirement 6, calendar input** — not of the display feature it
+looks like it is paying for. If input were ever dropped or deferred, the display layer would cost
+almost nothing. Worth knowing before committing the budget.
+
+### Q-11 — year-only precision is structurally insufficient, and nengō prove it
+
+Measured the dataset's 248 nengō periods against CLDR:
+
+- **106 of 248 (43%)** are years in which the era changes mid-year.
+- **89 of 248 (36%)** resolve to the *wrong* era if you convert the start year at year precision.
+
+Meiji begins in October 1868, Taishō in July 1912, Shōwa in December 1926. Ask "what nengō is
+1912?" and there is no correct single answer. This is not an edge case; it is over a third of the
+Japanese branch, which is the largest branch in the dataset.
+
+**Answer: yes, at least some entities need month/day precision, and nengō need it structurally.**
+Whether that means an optional month/day on the anchor or a continuous day-count representation is
+still open — but "year-only is fine" is no longer defensible.
+
+### Q-14 — CLDR and the dataset agree, and the question dissolves
+
+Sampling inside each period rather than at its boundary, **213 of 248 (86%)** agree. Most of the
+remaining 35 are romanization variants of the same era — Kashō/Kajō, Jōhō/Shōho, Jōan/Shōan,
+Kangi/Kanki, Tenpyō-kanpō/Tenpyō-kampō — plus short one-to-two-year eras where any year-level
+probe lands in a neighbour. Only Shuchō versus Hakuhō at 686 is a genuine historical difference.
+
+But given Q-11, "which source is authoritative for nengō?" is the wrong question, because
+**neither can answer a year-precision query correctly 43% of the time.**
+
+**Resolution: never derive a nengō from a bare year.** The tree already knows which nengō the user
+selected — it is a node, with a `native_name` in kanji. Display that. Use CLDR only to convert a
+date the user actually supplied, which by then has a month and a day. Two sources, two jobs, no
+conflict, and the ambiguity never arises.
+
+### Q-17 — the broad-range marker was dead code
+
+Measured the uncertainty ratio across the eight prehistory cases and the three v2.1.0 entities
+carrying bounds. Observed range **0.002 to 0.092** — and the threshold was 0.10, so **nothing
+fired, ever**, including cases chosen specifically for being uncertain.
+
+| Case | ratio | | Case | ratio |
+|---|---|---|---|---|
+| Ashoka | 0.002 | | Neanderthal end | 0.026 |
+| Younger Dryas | 0.008 | | Bronze Age | 0.057 |
+| Göbekli Tepe | 0.017 | | Chauvet Phase I | 0.069 |
+| Oldowan | 0.019 | | Madjedbebe | 0.092 |
+
+Madjedbebe at 65 ± 6 ka is the clearest case that ought to fire, and the only one above 0.08.
+Threshold lowered to **0.08**. Still provisional — eleven samples is not a distribution — but a
+marker that never fires is worse than one calibrated loosely.
+
+`UNKNOWN_METHOD_FUZZ_RATIO` (0.05) remains untested; it only matters where `method` is absent, and
+every case measured here has one.
+
+### A modelling error the measurement exposed
+
+Chauvet Phase I is 37,000–33,500 cal BP. That is the **duration of an occupation phase**, not the
+uncertainty of a single event — and encoding it as `earliest`/`latest` on one anchor conflates the
+two, inflating apparent uncertainty and pushing the ratio toward the marker for the wrong reason.
+
+A period's *extent* and a boundary's *uncertainty* are different quantities. The model already has
+the right shape for this — a period is two boundaries, each with its own fuzz — but nothing stops
+an author collapsing a span into one fuzzy date. New validator rule: a boundary carrying wide
+bounds when the entity also has a sibling boundary is suspicious and should be reviewed.
+
 ## Open items
 
 The live register. `Q-n` ids are stable — reference them in commits and conversation. Ordered
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**17 open, 7 resolved.** Audited 2026-08-07.
+**15 open, 11 resolved.** Audited 2026-08-07.
 
 ### Blocking — date model
 
@@ -793,11 +882,10 @@ That could replace the control, or make it redundant, or confuse users who expec
 **Q-10. When does the dataset gain fuzzy bounds and `dating_method`?** The Python builder helpers
 cannot emit them today (gap analysis §5.1), so this gates all prehistory authoring.
 
-**Q-11. Do entities carry month/day precision?** Now looks like yes — "September 11, 2001" was
-given as the exact-end example. But `fuzz` measured in years cannot express day precision, so the
-anchor needs either an optional month/day or a continuous day-count representation with fuzz in
-days. The clean version is to store every anchor as a day count with fuzz in days: an exact date
-is fuzz 0, `~3500 BCE` is fuzz 91,000 days. Uniform, but heavier to author and to read in JSON.
+**Q-25. How is sub-year precision represented?** `Q-11` established that it is needed. Two shapes:
+an optional month/day on each anchor, or every anchor as a continuous day count with fuzz in days
+(exact date = fuzz 0, `~3500 BCE` = fuzz ~91,000 days). The second is uniform and makes all
+arithmetic one subtraction; it is also much heavier to author and to read in raw JSON.
 
 **Q-21. Which Wikipedia edition, and what about native script?** English is the default. An entity
 with a `native_name` might search better on the matching language edition, but inferring language
@@ -806,13 +894,6 @@ with the native search on English Wikipedia, or add an explicit `wiki_lang` fiel
 
 **Q-18. Is the frame preference global, per-entity, or both?** A global "always BP" toggle is
 simple. A per-entity override is more precise but adds state the URL fragment would have to carry.
-
-**Q-17. Both fuzziness thresholds are unvalidated.** `UNKNOWN_METHOD_FUZZ_RATIO` (0.05, chooses BP
-over calendar) and `WIDE_UNCERTAINTY_RATIO` (0.10, trips the broad-range marker) are currently
-guesses. Only three entities carry bounds, so tuning against them would be overfitting to three
-data points. Revisit once prehistory supplies real ranges. The one encouraging sign: the canonical
-worked example — ~3500 BCE (3000 .. ~4500 BCE) — trips the broad-range marker at 27%, comfortably
-clear of the threshold.
 
 **Q-23. What happens when an `asOf` goes stale?** A date-stamped open dispute is only honest while
 someone re-checks it. Options: surface the age in the UI ("last checked 2026-06"), fail a build
@@ -834,17 +915,23 @@ populated only on East Asian entities.
 **Q-13. What does calendar input resolve to?** Typing `AH 897` — select the matching node, filter
 the tree, or just display the conversion?
 
-**Q-14. Nengō from CLDR or from the dataset?** `Intl` already renders pre-Meiji era names; the
-dataset also ships ~250 nengō period nodes. Two sources of truth.
-
 **Q-15. Is prehistory a separate branch or interleaved?** Affects whether the readout switches
 frames per node or the app has a mode.
 
-**Q-16. Bundle budget.** `temporal-polyfill/full` is installed but not yet imported, so the
-artifact is still ~56 kB gzip. Wiring it in moves that materially. Set the ceiling first.
+**Q-26. Is calendar input worth 24 kB?** `Q-16` showed the polyfill buys input, not display —
+`Intl` handles the multi-calendar readout for free. Requirement 6 asks for input, so this is
+probably yes, but it is now an explicit trade rather than an assumption.
 
 ### Resolved
 
+- ~~`Q-11` Sub-year precision needed?~~ — yes, structurally. 43% of nengō years contain a mid-year
+  era change and 36% misattribute at year precision. Representation is now `Q-25`.
+- ~~`Q-14` Nengō from CLDR or the dataset?~~ — both, for different jobs. Never derive a nengō from
+  a bare year; display the selected tree node, use CLDR only for user-supplied dates.
+- ~~`Q-16` Bundle budget~~ — 24.0 kB gzip for the polyfill, projecting ~80 kB total. The trade is
+  now `Q-26`.
+- ~~`Q-17` Broad-range threshold~~ — lowered 0.10 to 0.08; at 0.10 the marker never fired on any
+  real case. `UNKNOWN_METHOD_FUZZ_RATIO` remains untested.
 - ~~`Q-1` Fuzzy date encoding~~ — three independently-fuzzy anchors (earliest, consensus, latest).
   The trapezoid was superseded: it has nowhere to put a bound's own uncertainty.
 - ~~`Q-3` What "consensus" means~~ — the value an early undergraduate course would give, not the

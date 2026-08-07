@@ -426,8 +426,26 @@ export interface BoundaryDating {
   asOf?: string;
 }
 
-/** Uncertainty at or above this fraction of a date's age reads as "broad". */
-export const WIDE_UNCERTAINTY_RATIO = 0.1;
+/**
+ * Uncertainty at or above this fraction of a date's distance from the datum
+ * reads as "broad".
+ *
+ * Lowered from 0.10 after measuring against real data. At 0.10 the marker was
+ * dead code: across eight prehistory cases chosen specifically for being
+ * uncertain, plus the three v2.1.0 entities carrying bounds, the observed
+ * range was 0.002 to 0.092 and nothing fired.
+ *
+ *   Ashoka           0.002      Neanderthal end   0.026
+ *   Younger Dryas    0.008      Bronze Age        0.057
+ *   Gobekli Tepe     0.017      Chauvet Phase I   0.069
+ *   Oldowan          0.019      Madjedbebe        0.092
+ *
+ * Madjedbebe at 65 +/- 6 ka is the clearest case that should fire and the
+ * only one above 0.08, so that is where the line sits. Still provisional —
+ * eleven samples is not a distribution, and the honest reason for moving it
+ * is that a marker which never fires is worse than one calibrated loosely.
+ */
+export const WIDE_UNCERTAINTY_RATIO = 0.08;
 /**
  * Reasons to disclose, stated and inferred together.
  *

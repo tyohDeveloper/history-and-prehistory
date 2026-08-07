@@ -215,12 +215,26 @@ describe("disclosure fires only when a single number would mislead", () => {
   });
 
   it("does not call a well-constrained ancient date broad", () => {
-    // +/-500 on a 5,450-year-old date is 9% -- ordinary precision for the
+    // +/-200 on a 5,450-year-old date is 3.7%: ordinary precision for the
     // period, and flagging it would train the reader to ignore the marker.
     const ordinary: BoundaryDating = {
-      primary: claim({ value: { consensus: { year: -3500, fuzz: 500 } } }),
+      primary: claim({ value: { consensus: { year: -3500, fuzz: 200 } } }),
     };
     expect(disclosureReasons(ordinary)).not.toContain("wide-uncertainty");
+  });
+
+  it("treats equal relative precision equally, however old", () => {
+    // Both sit at 9.2% of their distance from the datum. Madjedbebe at
+    // 65 +/- 6 ka is the case the threshold was calibrated on, and a
+    // Chalcolithic date at +/-500 is the same claim about precision.
+    const madjedbebe: BoundaryDating = {
+      primary: claim({ value: { consensus: { year: -63050, fuzz: 6000 } } }),
+    };
+    const chalcolithic: BoundaryDating = {
+      primary: claim({ value: { consensus: { year: -3500, fuzz: 500 } } }),
+    };
+    expect(disclosureReasons(madjedbebe)).toContain("wide-uncertainty");
+    expect(disclosureReasons(chalcolithic)).toContain("wide-uncertainty");
   });
 
   it("carries a stated reason that cannot be inferred", () => {

@@ -1,0 +1,25 @@
+# Replit configuration.
+#
+# Static deployment target: this app builds to exactly one self-contained
+# HTML file with no server, so there is nothing to run in production.
+# See docs/ARCHITECTURE.md §1.
+
+modules = ["nodejs-20", "python-3.12"]
+run = "npm run dev"
+entrypoint = "index.html"
+
+[nix]
+channel = "stable-24_05"
+
+# Vite binds 0.0.0.0:5000 in vite.config.ts to match this mapping.
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[deployment]
+deploymentTarget = "static"
+publicDir = "dist/public"
+build = ["npm", "run", "build"]
+
+[env]
+NODE_ENV = "development"

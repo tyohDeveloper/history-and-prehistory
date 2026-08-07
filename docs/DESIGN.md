@@ -5,9 +5,19 @@ register all live here. Open items are tracked as `Q-n` entries in §Open items 
 GitHub issues — issues are too formal for this stage, and the questions are too interdependent
 to read well one at a time. Revisit that choice when the register stops changing shape.
 
-**Status: work in progress, not merged.** Lives on branch `calendar-layer`. Enough is built to
-prove the shape and expose the decisions that still need making. Nothing is wired into the UI, so
-`main` remains a clean baseline.
+## Where things stand
+
+| | |
+|---|---|
+| Branch | `calendar-layer`, unmerged. `main` is a clean baseline plus Replit config. |
+| Wired into the UI | **Nothing yet.** All chronology work is library code with tests. |
+| Tests | 95 passing, 5 files |
+| Artifact | 56.4 kB gzip, unchanged — none of this is imported by `main.ts` |
+| Replit | Repo is loaded there but dormant by choice; no commits from it yet |
+| Last reviewed | 2026-08-07 |
+
+Enough is built to prove the shape and expose the decisions that still need making. The app
+itself still behaves exactly as the v0.1.0 baseline does.
 
 Related: [`gap-analysis-v2.1.0.md`](gap-analysis-v2.1.0.md) §7 holds dataset-side open items;
 [`ARCHITECTURE.md`](ARCHITECTURE.md) §12 cross-references the code-blocking ones.
@@ -38,10 +48,15 @@ onto a calendar app; they change what a date *is* in the value model.
 | Module | Purpose |
 |---|---|
 | `src/lib/temporal/temporal.ts` | Source-selection shim re-exporting `temporal-polyfill/full`. Ported from OmniUnit unchanged in substance, so both apps make the same choice the same way. |
-| `src/lib/temporal/julianJdn.ts` | Fliegel-Van Flandern JDN converters for Julian and Revised Julian, which Temporal does not implement. Ported verbatim. |
+| `src/lib/temporal/julianJdn.ts` | Fliegel–Van Flandern JDN converters for Julian and Revised Julian, which Temporal does not implement. Ported verbatim. |
 | `src/lib/calendars/registry.ts` | 26 calendars with validity horizons, primary/variant grouping, and per-calendar caveats. |
-| `src/lib/chrono/year.ts` | `YearValue` — point estimate plus optional bounds plus dating method. Historical/astronomical year-numbering crossings isolated to two functions. |
-| `src/lib/chrono/bp.ts` | BP from the 1950 datum, `yr`/`ka`/`Ma` scaling, uncertainty-driven rounding, and the rule for when BP is preferred over calendars. |
+| `src/lib/chrono/year.ts` | The core model: three independently-fuzzy anchors, dating method and datum, claim standing, disclosure reasons and inference, entity caveats, rollup. |
+| `src/lib/chrono/bp.ts` | BP and b2k datums, `yr`/`ka`/`Ma` scaling, uncertainty-driven rounding, and frame selection with user override. |
+| `src/lib/chrono/fromEntity.ts` | Adapter from a v2.1.0 `Entity` into the model, so the migration map is executable rather than aspirational. Includes the one-time caveat classifier. |
+| `src/lib/handoff.ts` | Generated Wikipedia search links with dataset-measured disambiguation, plus the exportable research note. |
+
+Tests: `tests/chrono.test.ts` (model), `tests/prehistory.test.ts` (eight real dating disputes),
+`tests/handoff.test.ts`, alongside the baseline `tree` and `dataset-integrity` suites.
 
 ## Findings that constrain the design
 
@@ -702,6 +717,10 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
 - **`dating_method` as a new field**, not a new `date_precision` enum value. Method and precision
   are orthogonal; `date_precision` is already 95% `approx` and carries no information.
 - **Open items live in this document**, not in GitHub issues, until the register stabilizes.
+- **Replit is configured but dormant.** `.replit` and `replit.md` are on `main` so the project runs
+  and a coding agent picks up the same rules, but no work happens there until the build phase
+  starts. Until then this checkout is the only writer. Once Replit is live, fetch before editing
+  and expect commits from another author.
 - **Fuzzy dates are opt-in** (`Q-2`, settled). `start_year`/`end_year` stay primary; fuzzy fields
   are an optional overlay. Revisit migration after prehistory has exercised it.
 - **The focus view is a second view alongside the Miller columns** (`Q-5`, settled), not a
@@ -742,7 +761,10 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
 ## Open items
 
 The live register. `Q-n` ids are stable — reference them in commits and conversation. Ordered
-roughly by how much else they block.
+roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
+its answer rather than being deleted, so a reference in an old commit still resolves.
+
+**17 open, 7 resolved.** Audited 2026-08-07.
 
 ### Blocking — date model
 
@@ -823,6 +845,10 @@ artifact is still ~56 kB gzip. Wiring it in moves that materially. Set the ceili
 
 ### Resolved
 
+- ~~`Q-1` Fuzzy date encoding~~ — three independently-fuzzy anchors (earliest, consensus, latest).
+  The trapezoid was superseded: it has nowhere to put a bound's own uncertainty.
+- ~~`Q-3` What "consensus" means~~ — the value an early undergraduate course would give, not the
+  research frontier. Where the field is genuinely split, say so rather than picking a side.
 - ~~Timeline scale across six orders of magnitude~~ — likely dissolved by logarithmic temporal
   distance in the DOI function. Confirm once `Q-6` is settled.
 - ~~`Q-2` Authoring scope~~ — opt-in overlay now, revisit migration after prehistory.
@@ -838,5 +864,19 @@ artifact is still ~56 kB gzip. Wiring it in moves that materially. Set the ceili
 
 ## Not yet built
 
-Year-to-calendar span conversion, the ambiguity-preserving input parser, the multi-calendar
-readout, calendar selection UI, and tests for any of it.
+Nothing below exists yet. Roughly in dependency order:
+
+- **Year-to-calendar span conversion.** The registry describes 26 calendars; nothing converts into
+  them. A Gregorian year maps to a *span* in lunar calendars, so this returns a range.
+- **Multi-calendar readout.** The simultaneous display that requirement 5 asks for.
+- **Ambiguity-preserving date input.** Entering a date in any calendar, with candidate chips.
+- **Disclosure UI.** Marker, popover, and the a11y contract in the render section above.
+- **Focus+context view.** The second view beside the Miller columns.
+- **Schema changes.** Optional `subkind`, fuzzy anchors, `dating_method`, `standing`, `asOf`,
+  and the source registry — none are in `entity.schema.json` yet.
+- **Validator rules.** Eleven are specified above; none are implemented in `tools/validate.py`.
+- **Prehistory content.** The eight cases in `tests/prehistory.test.ts` are test fixtures, not
+  dataset entries. No prehistory entity exists in `src/data/`.
+
+The dependency that gates most of this is `Q-10`: the Python builder helpers cannot emit the new
+fields, so prehistory authoring cannot start regardless of how good the model is.

@@ -12,7 +12,7 @@ to read well one at a time. Revisit that choice when the register stops changing
 | Branch | `calendar-layer`, unmerged. `main` is a clean baseline plus Replit config. |
 | Wired into the UI | **Nothing yet.** All chronology work is library code with tests. |
 | Tests | 95 passing, 5 files |
-| Artifact | 56.4 kB gzip, unchanged — none of this is imported by `main.ts` |
+| Artifact | 56.4 kB gzip, unchanged — none of this is imported by `main.ts`. Budgeted to ~80 kB once the polyfill lands. |
 | Replit | Repo is loaded there but dormant by choice; no commits from it yet |
 | Last reviewed | 2026-08-07 |
 
@@ -751,6 +751,8 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
 - **A settled revision is not a dispute.** All-superseded alternatives read as "Date revised", and
   superseded claims are excluded when testing whether live claims conflict.
 - **Open disputes carry an `asOf` review date**; settled ones must not.
+- **Ship `temporal-polyfill/full`** (`Q-26`), for display and input both. ~24 kB gzip, imported
+  together with the conversion layer rather than ahead of it.
 - **The app is a starting point, not a research tool.** Handoff links are generated from the
   entity; the offline answer is a copyable URL and a downloadable research note, not a
   connectivity probe.
@@ -783,8 +785,50 @@ in requirement 5 outright. What `Intl` cannot do is *parse* a date expressed in 
 calendar, or do arithmetic in one.
 
 So the polyfill is the price of **requirement 6, calendar input** — not of the display feature it
-looks like it is paying for. If input were ever dropped or deferred, the display layer would cost
-almost nothing. Worth knowing before committing the budget.
+looks like it is paying for.
+
+### Q-26 — settled: ship the polyfill
+
+**Decision: yes, the 24 kB is justified, for both display and input.**
+
+Before settling it, the free alternative was built and tested. `Intl` gives forward conversion
+(ISO → calendar); parsing needs the inverse. Because calendars are monotonic in time, the inverse
+can be recovered by binary search over ISO days, evaluating each candidate with `Intl`. No
+dependency, no bundle cost.
+
+It half-worked, and the half that failed is the half this app is about:
+
+| | |
+|---|---|
+| Round-trips | **125 of 150** across 15 calendars |
+| Mean iterations | 21.2 |
+| Fan-out across 15 calendars | 3.1 ms per parse |
+| Failures | BCE dates in `gregory`; Hebrew leap-month dates |
+
+Performance was never the problem. Correctness was. The failures cluster in two places:
+
+- **BCE dates.** `Intl`'s era is a *string*, not an ordinal, so a binary search cannot order
+  across the BC/AD boundary without special-casing it. Roughly half this dataset is BCE.
+- **Hebrew leap months.** Adar I / Adar II break the naive month ordering the search relies on.
+
+Both are fixable with enough special-casing, and that is precisely the argument against: we would
+be hand-rolling a calendar library, badly, to avoid depending on one. The failure modes would be
+silent and would land on exactly the dates a history app cares most about.
+
+Three further reasons the decision holds:
+
+1. **Requirement 6 asks for input in any calendar.** The free path cannot deliver it correctly.
+2. **`Intl` is display-only in another sense too** — no calendar arithmetic, so "add one year in
+   the Hebrew calendar" has no answer without the polyfill.
+3. **It keeps this app aligned with OmniUnit**, which already ships `temporal-polyfill/full`. Two
+   apps in the same family diverging on their date layer would be a maintenance cost with no
+   compensating benefit, and the shared source package under discussion assumes a common base.
+
+**Budget consequence:** the artifact goes from 56.4 kB to roughly 80 kB gzip when the conversion
+layer lands. The polyfill should be imported *with* that layer, not before it — adding 24 kB ahead
+of anything that uses it would be pure cost. `scripts/build-baseline.json` gets re-recorded
+deliberately in that commit, with the growth justified in the message, rather than being allowed
+to slip past the 5% regression check.
 
 ### Q-11 — year-only precision is structurally insufficient, and nengō prove it
 
@@ -853,7 +897,7 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**15 open, 11 resolved.** Audited 2026-08-07.
+**14 open, 12 resolved.** Audited 2026-08-07.
 
 ### Blocking — date model
 
@@ -918,12 +962,11 @@ the tree, or just display the conversion?
 **Q-15. Is prehistory a separate branch or interleaved?** Affects whether the readout switches
 frames per node or the app has a mode.
 
-**Q-26. Is calendar input worth 24 kB?** `Q-16` showed the polyfill buys input, not display —
-`Intl` handles the multi-calendar readout for free. Requirement 6 asks for input, so this is
-probably yes, but it is now an explicit trade rather than an assumption.
-
 ### Resolved
 
+- ~~`Q-26` Is calendar input worth 24 kB?~~ — yes. The `Intl`-inversion alternative was built and
+  round-tripped 125/150, failing on BCE dates and Hebrew leap months; avoiding the dependency
+  would mean hand-rolling a calendar library badly. Also keeps parity with OmniUnit.
 - ~~`Q-11` Sub-year precision needed?~~ — yes, structurally. 43% of nengō years contain a mid-year
   era change and 36% misattribute at year precision. Representation is now `Q-25`.
 - ~~`Q-14` Nengō from CLDR or the dataset?~~ — both, for different jobs. Never derive a nengō from
@@ -954,7 +997,8 @@ probably yes, but it is now an explicit trade rather than an assumption.
 Nothing below exists yet. Roughly in dependency order:
 
 - **Year-to-calendar span conversion.** The registry describes 26 calendars; nothing converts into
-  them. A Gregorian year maps to a *span* in lunar calendars, so this returns a range.
+  them. A Gregorian year maps to a *span* in lunar calendars, so this returns a range. This is the
+  commit that imports `temporal-polyfill/full` and re-baselines the artifact to ~80 kB.
 - **Multi-calendar readout.** The simultaneous display that requirement 5 asks for.
 - **Ambiguity-preserving date input.** Entering a date in any calendar, with candidate chips.
 - **Disclosure UI.** Marker, popover, and the a11y contract in the render section above.

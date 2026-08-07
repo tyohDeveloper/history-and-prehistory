@@ -48,6 +48,18 @@ export interface FuzzyPoint {
   fuzz?: number;
 }
 
+/**
+ * The frame a date was *quoted in by its source*.
+ *
+ * Distinct from how it is displayed. BP and calendar reckoning are exactly
+ * interconvertible, so display is free — but the native frame is not
+ * recoverable after the fact, and it matters. A source reading "4500 BP" is
+ * quoting to the nearest century; re-rendering it as "2550 BCE" silently
+ * claims a precision the source never offered. Recording the native frame
+ * lets the readout show the source's own number verbatim when asked for it.
+ */
+export type NativeFrame = "bp" | "calendar";
+
 export interface YearValue {
   /**
    * Best accepted value: what most scholars would call reasonable, at the
@@ -61,8 +73,58 @@ export interface YearValue {
   /** Youngest plausible bound. */
   latest?: FuzzyPoint;
   method?: DatingMethod;
+  /** The frame the source quoted. Display frame is chosen separately. */
+  nativeFrame?: NativeFrame;
   /** Free text for genuine scholarly disagreement, as opposed to imprecision. */
   note?: string;
+}
+
+export interface SourceRef {
+  title: string;
+  url?: string;
+  note?: string;
+}
+
+/**
+ * A single dating claim, attributable to a method and a source.
+ *
+ * Some dates are not one fuzzy value but several rival positions. Egyptian
+ * chronology has high, middle, and low variants; a radiocarbon sequence can
+ * disagree with a traditional king-list date by a century. Those are not
+ * imprecision — they are competing claims, and flattening them into one wide
+ * range misrepresents all of them.
+ */
+export interface DatingClaim {
+  value: YearValue;
+  /** e.g. "Low chronology", "Radiocarbon, calibrated". */
+  label: string;
+  sources?: SourceRef[];
+}
+
+/**
+ * An entity's dating, as presented.
+ *
+ * `primary` is the novice-facing answer — the value an early undergraduate
+ * course would give. `alternatives` is what the disclosure affordance opens:
+ * the basics stay simple, while signalling that the basics are not the whole
+ * story and offering a way through to the rest.
+ */
+export interface EntityDating {
+  primary: YearValue;
+  /** Rival positions, revealed on demand rather than shown inline. */
+  alternatives?: DatingClaim[];
+  /** Why the field is divided, as opposed to merely uncertain. */
+  note?: string;
+  sources?: SourceRef[];
+}
+
+/** True when this entity has more to say than the primary value shows. */
+export function hasDisclosure(d: EntityDating): boolean {
+  return (
+    (d.alternatives !== undefined && d.alternatives.length > 0) ||
+    d.note !== undefined ||
+    (d.sources !== undefined && d.sources.length > 0)
+  );
 }
 
 export function isCrisp(p: FuzzyPoint): boolean {

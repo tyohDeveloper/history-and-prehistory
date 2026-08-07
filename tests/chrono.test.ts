@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { bpFromYear, formatBp, formatBpRange, prefersBp, yearFromBp } from "../src/lib/chrono/bp";
-import { isExact, supportOf, uncertaintyOf } from "../src/lib/chrono/year";
+import { bpFromYear, formatBp, formatBpRange, resolveFrame, suggestFrame, yearFromBp } from "../src/lib/chrono/bp";
+import { hasDisclosure, isExact, supportOf, uncertaintyOf } from "../src/lib/chrono/year";
 import type { YearValue } from "../src/lib/chrono/year";
 
 // The cases that drove the design. Named so a regression says which idea broke.
@@ -35,24 +35,24 @@ describe("BP datum arithmetic", () => {
 
 describe("frame selection is driven by provenance, not age", () => {
   it("puts measured dates in BP even when recent", () => {
-    expect(prefersBp(STONEHENGE)).toBe(true);
+    expect(suggestFrame(STONEHENGE)).toBe("bp");
   });
 
   it("keeps reckoned dates in calendar reckoning even when BCE", () => {
-    expect(prefersBp(ALEXANDER)).toBe(false);
-    expect(prefersBp(CYRUS)).toBe(false);
-    expect(prefersBp(SEPT_11)).toBe(false);
+    expect(suggestFrame(ALEXANDER)).toBe("calendar");
+    expect(suggestFrame(CYRUS)).toBe("calendar");
+    expect(suggestFrame(SEPT_11)).toBe("calendar");
   });
 
   it("puts anything pre-Holocene in BP regardless of method", () => {
-    expect(prefersBp({ consensus: { year: -20000 }, method: "calendar" })).toBe(true);
+    expect(suggestFrame({ consensus: { year: -20000 }, method: "calendar" })).toBe("bp");
   });
 
   it("falls back on relative fuzziness when method is unknown", () => {
     // Tight date, no method: stays in calendar reckoning.
-    expect(prefersBp({ consensus: { year: -500, fuzz: 10 } })).toBe(false);
+    expect(suggestFrame({ consensus: { year: -500, fuzz: 10 } })).toBe("calendar");
     // Uncertainty a large fraction of its own age: reads as measurement-shaped.
-    expect(prefersBp({ consensus: { year: -3000, fuzz: 800 } })).toBe(true);
+    expect(suggestFrame({ consensus: { year: -3000, fuzz: 800 } })).toBe("bp");
   });
 });
 
@@ -86,5 +86,34 @@ describe("rendering never claims more precision than it has", () => {
       latest: { year: -9500 },
     };
     expect(formatBpRange(natufian)).toBe("15\u201311 ka");
+  });
+});
+
+describe("display frame is a UI choice, not a property of the data", () => {
+  it("lets an explicit preference override the automatic choice", () => {
+    // Cyrus defaults to calendar, but BP is always available on request.
+    expect(resolveFrame(CYRUS, "auto")).toBe("calendar");
+    expect(resolveFrame(CYRUS, "bp")).toBe("bp");
+    // ...and the reverse, including against the pre-Holocene backstop.
+    expect(resolveFrame(OLDOWAN, "auto")).toBe("bp");
+    expect(resolveFrame(OLDOWAN, "calendar")).toBe("calendar");
+  });
+
+  it("honours the frame a source quoted in", () => {
+    const quotedInBp: YearValue = { consensus: { year: -2550, fuzz: 50 }, nativeFrame: "bp" };
+    expect(suggestFrame(quotedInBp)).toBe("bp");
+  });
+});
+
+describe("disclosure", () => {
+  it("flags entities with more to say than the primary value", () => {
+    expect(hasDisclosure({ primary: SEPT_11 })).toBe(false);
+    expect(
+      hasDisclosure({
+        primary: STONEHENGE,
+        alternatives: [{ value: ALEXANDER, label: "Traditional" }],
+      }),
+    ).toBe(true);
+    expect(hasDisclosure({ primary: SEPT_11, sources: [{ title: "x" }] })).toBe(true);
   });
 });

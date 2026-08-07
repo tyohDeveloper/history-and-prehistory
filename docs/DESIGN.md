@@ -178,6 +178,32 @@ from radiocarbon, so they render BP.** Same region, adjacent nodes in the tree, 
 and that is correct, because they are different kinds of claim. A single frame across that
 boundary would be the error.
 
+### Recording and display are different decisions
+
+BP and calendar reckoning are exactly interconvertible, so **which frame is shown is a UI
+decision, never a storage one.** Any date can be rendered either way. Someone reading about Cyrus
+may legitimately want BP, and nothing should prevent it. The provenance rule above therefore
+supplies a *default*; an explicit user preference always wins.
+
+What is *not* recoverable after the fact is the frame a source originally quoted in, and it
+matters. A source reading "4500 BP" is quoting to the nearest century. Storing that as -2550 and
+re-rendering it as "2550 BCE" silently claims a precision the source never offered. So
+`nativeFrame` is recorded alongside the value, and the readout can show the source's own number
+verbatim when displaying in that frame.
+
+The practical split:
+
+| Concern | Where it lives |
+|---|---|
+| Anchor values and fuzz | Data |
+| Dating method (provenance) | Data |
+| Frame the source quoted | Data (`nativeFrame`) |
+| Which frame leads | UI default from provenance, user-overridable |
+| Which frame is secondary | UI |
+
+Low-precision material will in practice only ever have BP dates, and that is fine — it falls out
+of the same mechanism rather than needing a special case.
+
 ### Both frames, one primary
 
 The switch decides which frame *leads*, not which one exists. The readout can carry both:
@@ -214,6 +240,54 @@ conservative. Proposed order:
 Step 3 is the interesting one — it means the *shape of the uncertainty* substitutes for knowing
 the provenance, which is a reasonable proxy and degrades honestly. It is also why the fuzzy date
 model and the BP question turn out to be the same question.
+
+## Progressive disclosure for complicated dates
+
+Some dating situations are genuinely messy — radiocarbon sequences disagreeing with king lists,
+the high/middle/low variants of Egyptian chronology, a Bronze Age boundary that moved twice this
+decade. The readout must not try to explain all of that inline, and must not pretend it does not
+exist either.
+
+**Show the basics; signal that the basics are not sufficient; offer a way through.**
+
+### Rival claims are not one wide range
+
+The important modelling point: competing chronologies are *not* imprecision. Three rival
+positions flattened into one fuzzy interval misrepresents all three — it implies the middle is
+most likely when the actual claim is that scholars disagree about which of three is right. So
+alternatives are separate claims, each with its own value, label, and sources:
+
+```ts
+interface DatingClaim { value: YearValue; label: string; sources?: SourceRef[] }
+interface EntityDating {
+  primary: YearValue;            // the early-undergraduate answer
+  alternatives?: DatingClaim[];  // what the disclosure opens
+  note?: string;                 // why the field is divided
+  sources?: SourceRef[];
+}
+```
+
+### The affordance
+
+`hasDisclosure()` tells the UI whether to render the marker at all, so undisputed dates stay
+completely clean. Where it fires, the readout shows a subtle indicator on the date line — a dotted
+underline or a superscript marker — opening a popover with the alternatives, the note, and the
+sources.
+
+This finally gives the empty `sources` field a job. It is unpopulated on all 1,305 entities (gap
+analysis §5.2), which currently blocks the sources page the standalone-HTML5 standard calls for.
+Date disclosure is the first concrete consumer, and prehistory is where it is least optional: an
+Oldowan boundary cannot be waved at as common knowledge the way a Ramesses date can.
+
+### Offline constraint on external links
+
+Wikipedia links and citation lists are permitted — they are user-initiated navigations to public
+static content, opening in a new tab with `rel="noopener noreferrer"`. What is *not* permitted is
+fetching any of it at runtime. So popover content is inlined at build time; only the outbound link
+touches the network, and only when clicked. See `ARCHITECTURE.md` §2 and §10.
+
+This has a bundle consequence worth tracking against `Q-16`: alternatives and sources across many
+entities will grow the dataset materially.
 
 ## Focus and context (requirement 10)
 
@@ -290,6 +364,10 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
 - **BP versus BCE/CE is decided by provenance, not age** — measured dates render BP, reckoned
   dates render BCE/CE, and the readout can show both with one leading.
 - **Consensus means the early-undergraduate value** (`Q-3`, settled), not the research frontier.
+- **Frame is a display choice, overridable by the user.** Provenance sets the default only.
+  `nativeFrame` records what the source quoted so precision is not inflated by conversion.
+- **Rival chronologies are separate claims, not one wide range**, revealed by an on-demand popover
+  rather than shown inline.
 - **Dates are three independently-fuzzy anchors** (`Q-1`, settled); the trapezoid is superseded.
 - **`D` blends temporal and tree distance** (`Q-6`, settled), with density normalization so the
   lens behaves consistently across sparse prehistory and dense modern history.
@@ -333,6 +411,9 @@ given as the exact-end example. But `fuzz` measured in years cannot express day 
 anchor needs either an optional month/day or a continuous day-count representation with fuzz in
 days. The clean version is to store every anchor as a day count with fuzz in days: an exact date
 is fuzz 0, `~3500 BCE` is fuzz 91,000 days. Uniform, but heavier to author and to read in JSON.
+
+**Q-18. Is the frame preference global, per-entity, or both?** A global "always BP" toggle is
+simple. A per-entity override is more precise but adds state the URL fragment would have to carry.
 
 **Q-17. Where exactly does the unknown-method fallback switch?** Step 3 of the BP rule uses
 relative fuzziness as a proxy for provenance. The ratio that trips it needs a value, and it should

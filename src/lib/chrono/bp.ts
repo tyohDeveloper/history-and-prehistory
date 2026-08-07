@@ -133,40 +133,59 @@ export function formatBpRange(v: YearValue): string {
 }
 
 /**
- * Which frame should lead for this value: BP or calendar reckoning?
+ * Which frame *leads* for a value, and who decides.
  *
- * Age is the wrong axis. Stonehenge (c. 2500 BCE) is a radiocarbon date and
- * belongs in BP; Alexander (also BCE) is fixed by king lists and eclipse
- * synchronisms and belongs in BCE. What separates them is where the number
- * came from.
+ * BP and calendar reckoning are exactly interconvertible, so this is a display
+ * decision, never a storage one. Any date can be shown either way — someone
+ * reading about Cyrus may legitimately want BP, and nothing should stop them.
+ * So the automatic choice is a *default*, and the user preference wins.
  *
- * Writing "2500 BCE" asserts a position in a calendar nobody was keeping — a
- * back-projection, sometimes well anchored by attested records and sometimes
- * borrowed authority. BP asserts no calendar at all; it is a count from a
- * datum, which is the right shape for a measurement.
+ * The automatic choice is driven by provenance rather than age. Stonehenge
+ * (c. 2500 BCE) is a radiocarbon date and leads in BP; Alexander is fixed by
+ * king lists and eclipse synchronisms and leads in BCE. Age would get both
+ * wrong. Writing "2500 BCE" asserts a position in a calendar nobody was
+ * keeping; BP asserts only a count from a datum, which is the right shape for
+ * a measurement.
  *
- *   1. measured (radiocarbon, luminescence, K-Ar, ESR)  -> BP
- *   2. reckoned (calendar, attested)                     -> BCE/CE
- *   3. unknown  -> fall back on the shape of the uncertainty, not the age
- *   4. backstop -> pre-Holocene is always BP; no calendar reaches there
+ *   1. quoted natively in a frame  -> that frame
+ *   2. measured                    -> BP
+ *   3. reckoned                    -> calendar
+ *   4. unknown                     -> shape of the uncertainty, not the age
+ *   5. backstop                    -> pre-Holocene is BP; no calendar reaches
  *
- * Step 3 uses relative fuzziness as a proxy for provenance: a date whose
+ * Step 4 uses relative fuzziness as a proxy for provenance: a date whose
  * uncertainty is a large fraction of its own age is doing measurement-shaped
- * work whatever its source. See DESIGN.md Q-17 — the ratio wants checking
- * against real cases before it is treated as settled.
+ * work whatever its source. See DESIGN.md Q-17.
  */
+export type DisplayFrame = "bp" | "calendar";
+export type FramePreference = "auto" | DisplayFrame;
+
 export const HOLOCENE_BACKSTOP_BP = 11_700;
 export const UNKNOWN_METHOD_FUZZ_RATIO = 0.05;
 
-export function prefersBp(v: YearValue): boolean {
+/** The default frame for a value, absent any user preference. */
+export function suggestFrame(v: YearValue): DisplayFrame {
   const bp = bpFromYear(v.consensus.year);
-  if (bp >= HOLOCENE_BACKSTOP_BP) return true;
+  if (bp >= HOLOCENE_BACKSTOP_BP) return "bp";
+  if (v.nativeFrame !== undefined) return v.nativeFrame;
 
   if (v.method !== undefined && v.method !== "unknown") {
-    return isScientificDating(v);
+    return isScientificDating(v) ? "bp" : "calendar";
   }
 
   const uncertainty = uncertaintyOf(v);
-  if (uncertainty === undefined || bp <= 0) return false;
-  return uncertainty / bp >= UNKNOWN_METHOD_FUZZ_RATIO;
+  if (uncertainty === undefined || bp <= 0) return "calendar";
+  return uncertainty / bp >= UNKNOWN_METHOD_FUZZ_RATIO ? "bp" : "calendar";
+}
+
+/**
+ * The frame actually used, given a user preference.
+ *
+ * An explicit preference always wins, including against the pre-Holocene
+ * backstop. Showing 3.3 Ma as a BCE year is not useful, but it is not our
+ * place to refuse — and the secondary line keeps the other frame visible
+ * either way.
+ */
+export function resolveFrame(v: YearValue, preference: FramePreference = "auto"): DisplayFrame {
+  return preference === "auto" ? suggestFrame(v) : preference;
 }

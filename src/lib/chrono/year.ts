@@ -32,14 +32,60 @@ export type DatingMethod =
   | "typological"
   | "unknown";
 
-export interface YearValue {
-  /** Point estimate, historical Gregorian. Negative = BCE, no year zero. */
+/**
+ * One anchor of a date, with its own uncertainty.
+ *
+ * Anchors are independently fuzzy, which is the whole point of the model. In
+ * "~3500 BCE (3000 BCE .. ~4500 BCE)" the latest bound is a hard floor, the
+ * consensus is soft, and the earliest bound is soft — three anchors, three
+ * different certainties. A representation that could not vary fuzziness per
+ * anchor (a trapezoid, say) would have to discard one of those facts.
+ */
+export interface FuzzyPoint {
+  /** The stated value, historical Gregorian. Negative = BCE, no year zero. */
   year: number;
-  /** Lower bound of the plausible range, if known. Inclusive. */
-  min?: number;
-  /** Upper bound of the plausible range, if known. Inclusive. */
-  max?: number;
+  /** Half-width in years. Absent or zero means the anchor is crisp. */
+  fuzz?: number;
+}
+
+export interface YearValue {
+  /**
+   * Best accepted value: what most scholars would call reasonable, at the
+   * level an early undergraduate course would teach. Not the research
+   * frontier, and not our adjudication of a live dispute — where the field is
+   * genuinely split, say so in `note` rather than quietly picking a side.
+   */
+  consensus: FuzzyPoint;
+  /** Oldest plausible bound. */
+  earliest?: FuzzyPoint;
+  /** Youngest plausible bound. */
+  latest?: FuzzyPoint;
   method?: DatingMethod;
+  /** Free text for genuine scholarly disagreement, as opposed to imprecision. */
+  note?: string;
+}
+
+export function isCrisp(p: FuzzyPoint): boolean {
+  return p.fuzz === undefined || p.fuzz === 0;
+}
+
+/** True when the value is a single crisp anchor with no bounds. */
+export function isExact(v: YearValue): boolean {
+  return v.earliest === undefined && v.latest === undefined && isCrisp(v.consensus);
+}
+
+/**
+ * Total span the value could occupy, widened by each bound's own fuzz.
+ * Returns `undefined` when no bounds are stated.
+ */
+export function supportOf(v: YearValue): { earliest: number; latest: number } | undefined {
+  if (v.earliest === undefined && v.latest === undefined) return undefined;
+  const e = v.earliest ?? v.consensus;
+  const l = v.latest ?? v.consensus;
+  return {
+    earliest: e.year - (e.fuzz ?? 0),
+    latest: l.year + (l.fuzz ?? 0),
+  };
 }
 
 export function toAstronomical(historicalYear: number): number {
@@ -59,12 +105,19 @@ export function yearsBetween(from: number, to: number): number {
 }
 
 /**
- * Half-width of the uncertainty interval, or `undefined` if unbounded.
- * Used to decide how hard to round a value before displaying it.
+ * Half-width of the overall uncertainty, or `undefined` if unbounded.
+ * Drives display rounding: a value is never printed to more resolution than
+ * its own uncertainty justifies.
  */
 export function uncertaintyOf(v: YearValue): number | undefined {
-  if (v.min === undefined || v.max === undefined) return undefined;
-  return Math.max(Math.abs(v.year - v.min), Math.abs(v.max - v.year));
+  const support = supportOf(v);
+  if (support === undefined) {
+    return v.consensus.fuzz;
+  }
+  return Math.max(
+    Math.abs(v.consensus.year - support.earliest),
+    Math.abs(support.latest - v.consensus.year),
+  );
 }
 
 /**

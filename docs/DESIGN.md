@@ -83,61 +83,137 @@ the range is the claim. Current behavior:
 
 ## The date model (requirement 9)
 
-A date is not a number here. It runs on a spectrum from exact to a fuzzy interval, and the
-interval widens as you go back. The stated shape is a triple — later boundary, consensus, early
-boundary — with each element itself possibly fuzzy.
+**Settled.** A date has up to three anchor points — **earliest bound, consensus, latest bound** —
+and *each anchor independently carries its own fuzziness*. The structure as a whole may also be
+qualified.
 
-That is, in the standard vocabulary, a **fuzzy number**. Membership rises across the early
-boundary, plateaus over the consensus, and falls across the later boundary. Encoding options:
+The worked example that settled it:
 
-| Option | Encoding | Exact date | Simple range | Fuzzy boundaries |
-|---|---|---|---|---|
-| **A. Hard triple** | `early, consensus, late` | 3 equal values | yes | no — boundaries are crisp |
-| **B. Triple + per-point fuzz** | 3 values + 3 half-widths | 6 fields | yes | yes, symmetric only |
-| **C. Trapezoid (recommended)** | `outerEarly, innerEarly, innerLate, outerLate` | 4 equal values | `inner == outer` | yes, asymmetric |
+> ~3500 BCE (3000 BCE .. ~4500 BCE) — we think about 3500 BCE, we know it is not later than
+> 3000 BCE, but it might be as early as 4500 BCE, and even that is fuzzy.
 
-**Recommendation: C, the 4-point trapezoid.** It degenerates cleanly in every direction — all four
-equal is an exact date, inner pair equal is a triangular distribution with a single consensus
-point, inner equal to outer is a crisp range — so one representation covers the whole spectrum
-without optional sub-structures or a discriminated union. It expresses asymmetry natively, which
-matters because the early boundary is the fuzzy one: an Aurignacian start might be
-`48,000 / 45,000 / 43,000 / 42,000 BP`, with a long tail older and a short one younger. And it is
-the conventional representation, so the arithmetic is known rather than invented.
+Three anchors, and they are **not uniformly certain**: the latest bound is crisp (3000 BCE is a
+hard floor), the consensus is soft, the earliest bound is soft. That asymmetry between *which
+anchor* is fuzzy is the thing the model has to preserve.
 
-### Does a trapezoid cost screen space?
+### This rules out the trapezoid
 
-No — and the reason is worth stating plainly, because it is easy to conflate the two: **the
-trapezoid is a storage encoding, not a rendering.** Four numbers in JSON occupy no pixels. How
-uncertainty is *displayed* is a separate decision, and every option below reads from the same
-stored shape:
+The earlier recommendation was a 4-point trapezoid. The example above shows why it does not work.
+Encoding it as a trapezoid forces a choice between representing 3500 as a peak — which collapses
+4500 into an anonymous tail and loses it as a *stated* bound — or representing 4500 and 3500 as a
+plateau, which wrongly asserts the whole span is equally likely. The trapezoid cannot hold both
+"the stated early bound is 4500" and "that bound is itself uncertain," because it has no place to
+put a bound's own uncertainty. Superseded.
 
-| Space available | Rendering | Example |
+### The model
+
+```ts
+interface FuzzyPoint {
+  year: number;      // the stated value
+  fuzz?: number;     // +/- years; absent or 0 means crisp
+}
+
+interface HistoricalDate {
+  consensus: FuzzyPoint;   // best accepted value
+  earliest?: FuzzyPoint;   // oldest plausible bound
+  latest?: FuzzyPoint;     // youngest plausible bound
+  method?: DatingMethod;
+  note?: string;           // when scholarship is genuinely split
+}
+```
+
+It degenerates the whole way down:
+
+| Case | Encoding | Renders |
 |---|---|---|
-| Column gutter (~60 px) | Consensus only, or outer range | `45 ka` · `48–42 ka` |
-| Readout line | Core range, tail parenthesised | `45–43 ka (possibly 48–42)` |
-| Timeline bar | Solid core, tapered or gradient shoulders | same footprint as a hard-edged bar |
-| Expanded detail | All four points, method, source | `48.0 / 45.0 / 43.0 / 42.0 ka, OSL` |
+| Exact | `consensus: { year: 2001 }`, no bounds | `2001 CE` |
+| Crisp range | three anchors, all `fuzz` absent | `3500 BCE (3000–4500 BCE)` |
+| The example | `consensus: {-3500, fuzz 250}`, `earliest: {-4500, fuzz 500}`, `latest: {-3000}` | `~3500 BCE (3000 – ~4500 BCE)` |
 
-The timeline row is the one that might seem expensive and is not: a bar with soft ends occupies
-exactly the same box as a bar with hard ends. Fuzziness is rendered as *softness at edges you were
-already drawing*, not as extra elements. If anything it is cheaper than the honest alternative,
-which is a hard bar plus a separate error-bar annotation.
+The last row is the point: **the notation renders back exactly as it was written by hand.** A `~`
+is precisely "this anchor has non-zero fuzz." Nothing has to be invented for the display layer,
+because the authoring notation and the rendering are the same notation.
 
-The decisive point: **the simpler encodings do not save screen space either.** A hard triple still
-has to render as some range, and that range is the same width. What the simpler options save is
-*authoring fields*, not pixels. So screen real estate is not a reason to prefer A or B over C —
-authoring burden is, and `Q-2` settles that by making the whole thing opt-in.
+### What "consensus" means
 
-Where the trapezoid genuinely costs something is **cognitive load in the expanded view**, if all
-four numbers are shown at once. Mitigation is progressive disclosure: consensus and core range by
-default, the tails on demand.
+**Settled:** what most scholars would accept as reasonable — the value an early undergraduate
+course would give. Not the research frontier, not our own adjudication of a live dispute.
 
-Cost: four numbers per boundary, and a period has two boundaries — so up to eight per entity. See
-`Q-2` on whether that is an acceptable authoring burden.
+This matches the app's stated audience and it pairs with the existing `tier` field: `foundational`
+content is what a novice sees, and the consensus date is the novice-facing number. Where
+scholarship is genuinely split rather than merely uncertain, that belongs in `note` — the app
+should say the field is divided rather than quietly picking a side and dressing it as consensus.
 
-Note this composes: a period's **core** (definitely inside) runs from the early boundary's inner
-edge to the later boundary's inner edge, and its **support** (possibly inside) runs outer to
-outer. That is close to how phase boundaries are actually discussed, which is a good sign.
+## When does a date switch to BP?
+
+The earlier rule was a magnitude threshold: anything older than 10,000 BP renders in BP. Two
+counter-examples break it, and both are ordinary rather than edge cases.
+
+- **Stonehenge**, roughly 2500 BCE. Well inside the threshold, but it is a radiocarbon date on
+  antler picks. It should read as BP.
+- **Alexander and Cyrus.** Also BCE-era, some of it known to the year via king lists and eclipse
+  synchronisms. Rendering those in BP would be a downgrade.
+
+So age is the wrong axis. What separates them is **where the date came from**.
+
+### The principle
+
+Writing "2500 BCE" asserts a position in a calendar. For any date before the calendar existed that
+is a back-projection — a proleptic claim about a reckoning nobody was keeping. Sometimes that
+projection is well anchored, because a chain of attested records, king lists, and datable
+astronomical events connects it to our reckoning. Often it is not, and the BCE label is borrowed
+authority.
+
+BP makes no calendar claim at all. It is a count from a fixed datum, which is exactly the right
+shape for a number that came out of a measurement.
+
+> **Use BCE/CE when the date was *reckoned* — an inscription, a king list, an eclipse
+> synchronism, a dated document. Use BP when the date was *measured* — radiocarbon, luminescence,
+> potassium-argon, ESR.**
+
+That line puts Alexander in BCE and Stonehenge in BP, which is the intuition it was built to
+match. It also handles a case that looks like an inconsistency and is not: **Egyptian dynastic
+dates come from king lists and Sothic observations, so they render BCE; Predynastic dates come
+from radiocarbon, so they render BP.** Same region, adjacent nodes in the tree, different frames —
+and that is correct, because they are different kinds of claim. A single frame across that
+boundary would be the error.
+
+### Both frames, one primary
+
+The switch decides which frame *leads*, not which one exists. The readout can carry both:
+
+```
+Stonehenge, main sarsen phase
+   4,500 cal BP        (primary)
+   c. 2500 BCE         (secondary)
+```
+
+That defuses most of the anxiety about where the line falls. A user who thinks in BCE is never
+locked out, and a borderline call costs a reordering rather than a loss.
+
+### Calibrated versus uncalibrated
+
+Radiocarbon has two scales and they are not interchangeable. Uncalibrated dates ("radiocarbon
+years BP") assume a constant atmospheric ¹⁴C level that is not constant; calibrated dates
+("cal BP") are corrected against tree-ring and other records. The gap reaches centuries in some
+periods. The dataset should record which one a value is, and the readout should print the
+distinction rather than flattening both to "BP" — `DatingMethod` already separates them.
+
+### When method is unknown
+
+Every entity in v2.1.0 has no `method` field, so a fallback is needed and it should be
+conservative. Proposed order:
+
+1. `method` is a measurement type -> **BP**
+2. `method` is calendar or attested -> **BCE/CE**
+3. `method` absent -> fall back on the *fuzziness*, not the age. A date whose uncertainty is a
+   large fraction of its distance from the datum is doing measurement-shaped work whatever its
+   provenance, so it renders BP. A tight date renders BCE/CE.
+4. Backstop: anything pre-Holocene renders BP regardless, because no calendar reaches there.
+
+Step 3 is the interesting one — it means the *shape of the uncertainty* substitutes for knowing
+the provenance, which is a reasonable proxy and degrades honestly. It is also why the fuzzy date
+model and the BP question turn out to be the same question.
 
 ## Focus and context (requirement 10)
 
@@ -207,12 +283,14 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
 - **`dating_method` as a new field**, not a new `date_precision` enum value. Method and precision
   are orthogonal; `date_precision` is already 95% `approx` and carries no information.
 - **Open items live in this document**, not in GitHub issues, until the register stabilizes.
-- **Fuzzy dates are a 4-point trapezoid** (provisional — pending `Q-1`). Encoding only; it does not
-  dictate how uncertainty is drawn.
 - **Fuzzy dates are opt-in** (`Q-2`, settled). `start_year`/`end_year` stay primary; fuzzy fields
   are an optional overlay. Revisit migration after prehistory has exercised it.
 - **The focus view is a second view alongside the Miller columns** (`Q-5`, settled), not a
   replacement. Columns answer "where am I"; the lens answers "what is near this".
+- **BP versus BCE/CE is decided by provenance, not age** — measured dates render BP, reckoned
+  dates render BCE/CE, and the readout can show both with one leading.
+- **Consensus means the early-undergraduate value** (`Q-3`, settled), not the research frontier.
+- **Dates are three independently-fuzzy anchors** (`Q-1`, settled); the trapezoid is superseded.
 - **`D` blends temporal and tree distance** (`Q-6`, settled), with density normalization so the
   lens behaves consistently across sparse prehistory and dense modern history.
 - **Focus+context uses `tier` as the a-priori-importance term**, so no new per-entity authoring is
@@ -224,13 +302,6 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block.
 
 ### Blocking — date model
-
-**Q-1. Trapezoid, or something simpler?** Recommendation is the 4-point trapezoid above. Confirm,
-or pick A/B from that table.
-
-**Q-3. Does `consensus` mean "scholarly consensus" or "our editorial pick"?** These diverge on
-contested chronologies — Egyptian New Kingdom, Indus decline, Homeric dating. If it is consensus,
-it wants a source. If it is editorial, it wants to say so.
 
 **Q-4. Do periods inherit boundary fuzziness from neighbors?** If the Shang ends fuzzily and the
 Zhou begins fuzzily, are those the same fuzzy boundary authored once, or two independent ones that
@@ -257,8 +328,15 @@ That could replace the control, or make it redundant, or confuse users who expec
 **Q-10. When does the dataset gain fuzzy bounds and `dating_method`?** The Python builder helpers
 cannot emit them today (gap analysis §5.1), so this gates all prehistory authoring.
 
-**Q-11. Do entities ever carry month/day precision, or stay year-only?** Calendar conversion is
-exact for a full date and a span for a bare year. Affects the readout's shape.
+**Q-11. Do entities carry month/day precision?** Now looks like yes — "September 11, 2001" was
+given as the exact-end example. But `fuzz` measured in years cannot express day precision, so the
+anchor needs either an optional month/day or a continuous day-count representation with fuzz in
+days. The clean version is to store every anchor as a day count with fuzz in days: an exact date
+is fuzz 0, `~3500 BCE` is fuzz 91,000 days. Uniform, but heavier to author and to read in JSON.
+
+**Q-17. Where exactly does the unknown-method fallback switch?** Step 3 of the BP rule uses
+relative fuzziness as a proxy for provenance. The ratio that trips it needs a value, and it should
+be checked against real cases before being fixed.
 
 ### Non-blocking
 

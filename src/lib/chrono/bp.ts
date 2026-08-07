@@ -25,7 +25,7 @@
  * rounded to that interval's own resolution so the two never disagree.
  */
 
-import { toAstronomical, type YearValue } from "./year";
+import { isScientificDating, supportOf, toAstronomical, uncertaintyOf, type YearValue } from "./year";
 
 /** The BP datum, in historical Gregorian years. */
 export const BP_DATUM_YEAR = 1950;
@@ -112,43 +112,61 @@ export function formatBp(
 /**
  * Render a `YearValue` as a BP range.
  *
- * When bounds are present they are rendered as the range, because at this
- * scale the range *is* the claim — a point estimate with a 200,000-year
- * interval is not a date, it is the midpoint of one.
+ * When bounds are present the range is rendered, because at this scale the
+ * range *is* the claim — a point estimate carrying a 200,000-year interval is
+ * not a date, it is the midpoint of one.
  */
 export function formatBpRange(v: YearValue): string {
-  const hasBounds = v.min !== undefined && v.max !== undefined;
-  if (!hasBounds) {
-    return formatBp(v.year);
+  const support = supportOf(v);
+  if (support === undefined) {
+    return formatBp(v.consensus.year, v.consensus.fuzz);
   }
-  const older = Math.min(v.min as number, v.max as number);
-  const younger = Math.max(v.min as number, v.max as number);
-  const olderBp = bpFromYear(older);
-  const youngerBp = bpFromYear(younger);
+  const olderBp = bpFromYear(support.earliest);
+  const youngerBp = bpFromYear(support.latest);
   const halfWidth = (olderBp - youngerBp) / 2;
   const unit = bpUnitFor(Math.max(olderBp, youngerBp));
+  const label = unit === "yr" ? "BP" : unit;
   const a = formatMagnitude(olderBp, unit, halfWidth);
   const b = formatMagnitude(youngerBp, unit, halfWidth);
-  if (a === b) return `${a} ${unit === "yr" ? "BP" : unit}`;
-  return `${a}\u2013${b} ${unit === "yr" ? "BP" : unit}`;
+  if (a === b) return `${a} ${label}`;
+  return `${a}\u2013${b} ${label}`;
 }
 
 /**
- * Should this value be presented in BP rather than in calendars?
+ * Which frame should lead for this value: BP or calendar reckoning?
  *
- * Two triggers, either sufficient:
- *   - the date comes from a scientific dating method rather than a calendar
- *   - it is old enough that calendar reckoning is not meaningful
+ * Age is the wrong axis. Stonehenge (c. 2500 BCE) is a radiocarbon date and
+ * belongs in BP; Alexander (also BCE) is fixed by king lists and eclipse
+ * synchronisms and belongs in BCE. What separates them is where the number
+ * came from.
  *
- * The 10,000 BP threshold is deliberately near the Holocene boundary
- * (~11,700 BP), which is also where the Deep Time app hands off. No calendar
- * in the registry has a meaningful epoch anywhere near it.
+ * Writing "2500 BCE" asserts a position in a calendar nobody was keeping — a
+ * back-projection, sometimes well anchored by attested records and sometimes
+ * borrowed authority. BP asserts no calendar at all; it is a count from a
+ * datum, which is the right shape for a measurement.
+ *
+ *   1. measured (radiocarbon, luminescence, K-Ar, ESR)  -> BP
+ *   2. reckoned (calendar, attested)                     -> BCE/CE
+ *   3. unknown  -> fall back on the shape of the uncertainty, not the age
+ *   4. backstop -> pre-Holocene is always BP; no calendar reaches there
+ *
+ * Step 3 uses relative fuzziness as a proxy for provenance: a date whose
+ * uncertainty is a large fraction of its own age is doing measurement-shaped
+ * work whatever its source. See DESIGN.md Q-17 — the ratio wants checking
+ * against real cases before it is treated as settled.
  */
-export const BP_PREFERRED_THRESHOLD_BP = 10_000;
+export const HOLOCENE_BACKSTOP_BP = 11_700;
+export const UNKNOWN_METHOD_FUZZ_RATIO = 0.05;
 
 export function prefersBp(v: YearValue): boolean {
-  if (v.method !== undefined && v.method !== "calendar" && v.method !== "unknown") {
-    return true;
+  const bp = bpFromYear(v.consensus.year);
+  if (bp >= HOLOCENE_BACKSTOP_BP) return true;
+
+  if (v.method !== undefined && v.method !== "unknown") {
+    return isScientificDating(v);
   }
-  return bpFromYear(v.year) >= BP_PREFERRED_THRESHOLD_BP;
+
+  const uncertainty = uncertaintyOf(v);
+  if (uncertainty === undefined || bp <= 0) return false;
+  return uncertainty / bp >= UNKNOWN_METHOD_FUZZ_RATIO;
 }

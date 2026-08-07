@@ -125,7 +125,11 @@ before large build phases begin, not after.
 
 ## 12. Open decisions
 
-Tracked in `docs/gap-analysis-v2.1.0.md` §7. The four that block code:
+The live register is [`DESIGN.md`](DESIGN.md) §Open items (`Q-n` ids). Dataset-side items are in
+[`gap-analysis-v2.1.0.md`](gap-analysis-v2.1.0.md) §7. Open items are tracked in these documents
+rather than GitHub issues for now.
+
+The four that block code:
 
 1. **Timeline scale** across 3.3 Ma to present — piecewise-compressed scrubber with a visible
    scale break is the current recommendation, unresolved.

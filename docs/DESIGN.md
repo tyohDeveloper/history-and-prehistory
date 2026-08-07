@@ -10,9 +10,9 @@ to read well one at a time. Revisit that choice when the register stops changing
 | | |
 |---|---|
 | Branch | `calendar-layer`, unmerged. `main` is a clean baseline plus Replit config. |
-| Wired into the UI | **Nothing yet.** All chronology work is library code with tests. |
-| Tests | 109 passing, 6 files |
-| Artifact | 56.4 kB gzip, unchanged — none of this is imported by `main.ts`. Budgeted to ~80 kB once the polyfill lands. |
+| Wired into the UI | Multi-calendar readout and calendar picker. Disclosure and focus view are not. |
+| Tests | 144 unit + 14 browser |
+| Artifact | 84.2 kB gzip, re-baselined for the polyfill and conversion layer |
 | Replit | Repo is loaded there but dormant by choice; no commits from it yet |
 | Last reviewed | 2026-08-07 |
 
@@ -53,6 +53,8 @@ onto a calendar app; they change what a date *is* in the value model.
 | `src/lib/chrono/year.ts` | Branded `IsoYear`/`HistoricalYear` types and the four sanctioned crossings. The core model: three independently-fuzzy anchors, dating method and datum, claim standing, disclosure reasons and inference, entity caveats, rollup. |
 | `src/lib/chrono/bp.ts` | BP and b2k datums, `yr`/`ka`/`Ma` scaling, uncertainty-driven rounding, and frame selection with user override. |
 | `src/lib/chrono/fromEntity.ts` | Adapter from a v2.1.0 `Entity` into the model, so the migration map is executable rather than aspirational. Includes the one-time caveat classifier. |
+| `src/lib/calendars/convert.ts` | Reads an ISO year in any of the 26 calendars, as a span, with validity. |
+| `src/lib/calendarSelection.ts` | Calendar choice parsed from and written to `location.hash`. |
 | `src/lib/handoff.ts` | Generated Wikipedia search links with dataset-measured disambiguation, plus the exportable research note. |
 
 Tests: `tests/chrono.test.ts` (model), `tests/prehistory.test.ts` (eight real dating disputes),
@@ -849,6 +851,66 @@ BP really is just the ISO axis with its origin moved.
 both conversions, checks BCE shifts by one while CE does not, and verifies that 1 BCE and 1 CE come
 out exactly one year apart in BP despite there being no year zero between them in the dataset.
 
+## The conversion layer (built)
+
+`src/lib/calendars/convert.ts` reads an ISO year in any of the 26 calendars. This is the commit
+that imports `temporal-polyfill/full` and re-baselines the artifact.
+
+### A reading is a span, and carries its own validity
+
+Two things travel with every result because callers cannot be trusted to remember them.
+
+**Spans, not points.** Only calendars whose year begins on 1 January map one Gregorian year to one
+of theirs. 1603 CE is 1011–1012 AH and 5363–5364 AM. Rendering a lunar year as one number would be
+wrong about half the time.
+
+**Validity.** Every conversion is *computable* far outside where it means anything — the polyfill
+returns Persian year -3521 for a Sumerian date without complaint. `readYear` never throws and never
+returns a bare number it does not believe, so a caller rendering a table of twenty-six calendars
+does not have to guard each cell.
+
+### Three bugs the visual check caught that tests did not
+
+Worth recording, because all three were invisible to the unit suite and obvious on screen.
+
+1. **A BCE year rendered identically to a CE one.** Reading `eraYear` off a Gregorian conversion
+   returns `2900` for 2900 BCE, with the era in a *separate field* — so the readout showed "2900".
+   Fixed by not routing origin views through Temporal at all: CE/BCE, AD/BC and raw ISO are the
+   axis with a label, not structural calendars, so `withCalendar` buys nothing and costs
+   correctness. This is the origin-versus-transform distinction paying for itself in code.
+
+2. **Pre-epoch extrapolations printed nonsense, in two different spellings.** Persian returns a
+   negative year (`-3521–-3520 AP`); Islamic returns a *positive* year in a Before-Hijra era that
+   counts **down** (`3630–3629 AH`), which reads as a broken range. A sign check catches the first
+   and misses the second. Now detected from the epoch rather than the sign, and both render
+   "before epoch" beside the flag — a number on top of "extrapolated" is noise dressed as data.
+
+3. **Years carried thousands separators** — "2,900 BCE". Years are conventionally written
+   unseparated, and the gutter already did. Separators stay for BP and ka, which are quantities
+   rather than years.
+
+### Selection lives in the URL
+
+`location.hash` carries the chosen calendars, so persistence is the user's decision: bookmark the
+link and it survives, close the tab and it does not. The only mechanism compatible with both the
+no-storage rule and `file://`.
+
+The app also listens for `hashchange`. Without it the fragment is write-only — pasting a link with
+`#cal=…` into an open tab, or pressing back after changing calendars, would silently do nothing.
+
+Capped at six calendars, and a hand-edited URL is filtered against the registry rather than
+trusted.
+
+### Bundle
+
+**56.4 kB → 84.2 kB gzip.** Slightly above the ~80 kB projection, the difference being the
+conversion layer and picker UI on top of the polyfill itself.
+
+The regression gate did its job: the build failed with *"Gzip 84.2 kB exceeds baseline ceiling
+59.2 kB — bundle regressed"* before the baseline was re-recorded deliberately, with the reason
+written into `build-baseline.json`. That is the intended workflow — the number moves in a commit
+that justifies it, not because someone edited it to make CI pass.
+
 ## Focus and context (requirement 10)
 
 The described behavior — focus large, falling away with perspective compression — is
@@ -1210,10 +1272,6 @@ frames per node or the app has a mode.
 
 Nothing below exists yet. Roughly in dependency order:
 
-- **Year-to-calendar span conversion.** The registry describes 26 calendars; nothing converts into
-  them. A Gregorian year maps to a *span* in lunar calendars, so this returns a range. This is the
-  commit that imports `temporal-polyfill/full` and re-baselines the artifact to ~80 kB.
-- **Multi-calendar readout.** The simultaneous display that requirement 5 asks for.
 - **Ambiguity-preserving date input.** Entering a date in any calendar, with candidate chips.
 - **Disclosure UI.** Marker, popover, and the a11y contract in the render section above.
 - **Focus+context view.** The second view beside the Miller columns.

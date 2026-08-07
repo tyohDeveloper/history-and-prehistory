@@ -6,7 +6,11 @@ import { fileURLToPath } from "node:url";
 // dev server. This is what catches inlining bugs, CSP violations, and
 // offline breakage that `vite dev` hides. See docs/ARCHITECTURE.md §5.
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
-const ARTIFACT = path.resolve(ROOT, "dist/public/index.html");
+// baseURL points at the DIRECTORY, so tests can navigate to
+// "index.html#cal=..." — a fragment alone does not resolve against a
+// file:// base, and a relative path against a file baseURL ending in a
+// filename does not either.
+const ARTIFACT_DIR = path.resolve(ROOT, "dist/public");
 
 export default defineConfig({
   testDir: "./tests/e2e",
@@ -16,7 +20,7 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   reporter: process.env.CI ? "list" : "html",
   use: {
-    baseURL: `file://${ARTIFACT}`,
+    baseURL: `file://${ARTIFACT_DIR}/`,
     trace: "on-first-retry",
   },
   projects: [{ name: "chromium", use: { browserName: "chromium" } }],

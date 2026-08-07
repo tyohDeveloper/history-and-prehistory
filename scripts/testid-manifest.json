@@ -12,12 +12,17 @@
     "text-readout-range",
     "list-readout-facts",
     "panel-footer-root",
-    "link-footer-repo"
+    "link-footer-repo",
+    "button-calendar-picker"
   ],
   "dynamic": [
     "option-tree-node-{entityId}",
     "region-column-{depth}",
     "list-search-results",
-    "text-readout-native"
+    "text-readout-native",
+    "panel-calendar-readout",
+    "panel-calendar-picker",
+    "text-calendar-{calendarId}",
+    "option-calendar-{calendarId}"
   ]
 }

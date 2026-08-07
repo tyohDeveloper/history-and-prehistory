@@ -112,13 +112,13 @@ describe("searchEntities", () => {
 });
 
 describe("year formatting", () => {
-  it("labels BCE and CE without a year zero", () => {
+  it("labels BCE and CE without a year zero, and without separators", () => {
     expect(formatYear(-44)).toBe("44 BCE");
-    expect(formatYear(1868)).toBe("1,868 CE");
+    expect(formatYear(1868)).toBe("1868 CE");
     expect(formatYear(null)).toBe("\u2014");
   });
   it("renders ongoing ranges", () => {
-    expect(formatRange(mk({ id: "x", start_year: 2019, end_year: null }))).toBe("2,019 CE \u2013 present");
+    expect(formatRange(mk({ id: "x", start_year: 2019, end_year: null }))).toBe("2019 CE \u2013 present");
   });
 });
 

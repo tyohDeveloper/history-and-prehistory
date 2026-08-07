@@ -190,3 +190,105 @@ footer a { color: var(--ink-dim); }
   .column { flex-basis: 78vw; }
   header h1 { font-size: 14px; }
 }
+
+/* --- Multi-calendar readout ---------------------------------------------- */
+
+.calendars {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.calendars-head {
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 6px;
+}
+.calendar-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 3px 14px;
+  margin: 0;
+  font-size: 12px;
+}
+.calendar-list dt { color: var(--ink-dim); }
+.calendar-list dd {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.cal-value {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+.cal-flag {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  padding: 0 5px;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+.cal-proleptic { border-color: #6b5a2e; color: #c8a24a; }
+.cal-outside-range,
+.cal-deep-time { border-color: var(--line); color: var(--ink-faint); }
+
+/* --- Calendar picker ----------------------------------------------------- */
+
+.cal-picker { position: relative; }
+.cal-picker-toggle {
+  background: var(--panel-2);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 6px 9px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.cal-picker-toggle:hover { border-color: var(--accent); }
+.cal-picker-toggle:focus-visible,
+.cal-option:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.cal-picker-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 5px);
+  z-index: 10;
+  width: 288px;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 5px 0;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 0.45);
+}
+.cal-group {
+  padding: 7px 12px 3px;
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.cal-option {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  width: 100%;
+  padding: 5px 12px;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+}
+.cal-option:hover { background: var(--panel); }
+.cal-option[aria-checked="true"] .cal-check { color: var(--accent); }
+.cal-check { color: var(--ink-faint); flex: 0 0 auto; font-size: 11px; }

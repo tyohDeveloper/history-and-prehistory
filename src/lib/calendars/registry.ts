@@ -216,7 +216,7 @@ export const CALENDARS: readonly CalendarDef[] = [
     short: "AM (Byz.)",
     group: "variant",
     backend: { kind: "offset", offset: 5508, suffix: "AM" },
-    validFrom: -5508,
+    validFrom: -5509,
     validTo: 1700,
     note: "Year began 1 September, so a Gregorian year maps to two Byzantine years.",
     sourceUrl: "https://en.wikipedia.org/wiki/Byzantine_calendar",

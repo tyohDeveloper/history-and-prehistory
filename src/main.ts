@@ -9,6 +9,10 @@ import {
   visibleAtTier,
 } from "./lib/tree";
 import type { Entity, EntityKind, Tier } from "./lib/types";
+import { readYearIn, type CalendarReading } from "./lib/calendars/convert";
+import { CALENDARS, getCalendar } from "./lib/calendars/registry";
+import { parseSelection, serializeSelection, toggleCalendar } from "./lib/calendarSelection";
+import { asHistorical, isoFromHistorical } from "./lib/chrono/year";
 
 const APP_VERSION = __APP_VERSION__;
 const REPO_URL = "https://github.com/tyohDeveloper/history-and-prehistory";
@@ -36,9 +40,29 @@ interface State {
   path: string[];
   tier: Tier;
   query: string;
+  /** Calendars shown in the readout. Persisted only in location.hash. */
+  calendars: string[];
+  calendarPickerOpen: boolean;
 }
 
-const state: State = { path: [], tier: "intermediate", query: "" };
+const state: State = {
+  path: [],
+  tier: "intermediate",
+  query: "",
+  calendars: parseSelection(window.location.hash),
+  calendarPickerOpen: false,
+};
+
+/**
+ * Write the selection to the URL fragment without adding a history entry.
+ * `replaceState` keeps the back button meaning "the page before this one"
+ * rather than "the last calendar I ticked".
+ */
+function syncHash(): void {
+  const next = serializeSelection(state.calendars);
+  const url = window.location.pathname + window.location.search + next;
+  window.history.replaceState(null, "", url);
+}
 
 const el = <K extends keyof HTMLElementTagNameMap>(
   tag: K,
@@ -210,7 +234,116 @@ function renderReadout(): HTMLElement {
   }
   if (e.capital !== undefined) fact("Capital", e.capital);
   box.append(dl);
+  const calendars = renderCalendarRows(e);
+  if (calendars !== null) box.append(calendars);
   return box;
+}
+
+
+/**
+ * The multi-calendar readout.
+ *
+ * A Gregorian year maps to a *span* in any calendar whose year does not begin
+ * on 1 January, so readings are rendered as spans rather than points. Every
+ * reading carries its own validity, because a conversion that is computable is
+ * not necessarily meaningful: the polyfill will return a Persian year for a
+ * Bronze Age date without complaint.
+ */
+function renderCalendarRows(entity: Entity): HTMLElement | null {
+  if (entity.start_year === null) return null;
+  const iso = isoFromHistorical(asHistorical(entity.start_year));
+  const readings = readYearIn(iso, state.calendars);
+
+  const box = el("div", { class: "calendars", "data-testid": "panel-calendar-readout" });
+  box.append(
+    el(
+      "div",
+      { class: "calendars-head" },
+      `Start of period in ${readings.length} calendar${readings.length === 1 ? "" : "s"}`,
+    ),
+  );
+  const list = el("dl", { class: "calendar-list" });
+  for (const r of readings) {
+    const def = getCalendar(r.calendarId);
+    const dt = el("dt", {}, def?.name ?? r.calendarId);
+    const dd = el("dd", {
+      dir: "auto",
+      "data-testid": `text-calendar-${r.calendarId}`,
+      ...(r.note === undefined ? {} : { title: r.note }),
+    });
+    dd.append(el("span", { class: "cal-value" }, r.label));
+    if (r.validity !== "ok") {
+      dd.append(el("span", { class: `cal-flag cal-${r.validity}` }, flagLabel(r)));
+    }
+    list.append(dt, dd);
+  }
+  box.append(list);
+  return box;
+}
+
+function flagLabel(r: CalendarReading): string {
+  switch (r.validity) {
+    case "proleptic":
+      return "extrapolated";
+    case "outside-range":
+      return "not computed";
+    case "deep-time":
+      return "before calendars";
+    default:
+      return "";
+  }
+}
+
+function renderCalendarPicker(): HTMLElement {
+  const wrap = el("div", { class: "cal-picker" });
+  const btn = el(
+    "button",
+    {
+      type: "button",
+      class: "cal-picker-toggle",
+      "aria-expanded": String(state.calendarPickerOpen),
+      "data-testid": "button-calendar-picker",
+    },
+    `Calendars (${state.calendars.length})`,
+  );
+  btn.addEventListener("click", () => {
+    state.calendarPickerOpen = !state.calendarPickerOpen;
+    render();
+  });
+  wrap.append(btn);
+
+  if (!state.calendarPickerOpen) return wrap;
+
+  const panel = el("div", { class: "cal-picker-panel", role: "group",
+    "aria-label": "Calendars to display", "data-testid": "panel-calendar-picker" });
+  let lastGroup = "";
+  for (const c of CALENDARS) {
+    if (c.group !== lastGroup) {
+      panel.append(el("div", { class: "cal-group" }, c.group === "primary" ? "Widely used" : "Other systems"));
+      lastGroup = c.group;
+    }
+    const on = state.calendars.includes(c.id);
+    const row = el("button", {
+      type: "button",
+      class: "cal-option",
+      role: "checkbox",
+      "aria-checked": String(on),
+      "data-testid": `option-calendar-${c.id}`,
+      ...(c.note === undefined ? {} : { title: c.note }),
+    });
+    row.append(
+      el("span", { class: "cal-check", "aria-hidden": "true" }, on ? "\u25A0" : "\u25A1"),
+      el("span", {}, c.name),
+    );
+    row.addEventListener("click", () => {
+      state.calendars = toggleCalendar(state.calendars, c.id);
+      syncHash();
+      render();
+    });
+    panel.append(row);
+  }
+  wrap.append(panel);
+  return wrap;
 }
 
 function renderHeader(): HTMLElement {
@@ -255,6 +388,7 @@ function renderHeader(): HTMLElement {
     render();
   });
   controls.append(tier);
+  controls.append(renderCalendarPicker());
 
   head.append(controls);
   return head;
@@ -279,5 +413,21 @@ function render(): void {
   if (!app) return;
   app.replaceChildren(renderHeader(), renderColumns(), renderReadout(), renderFooter());
 }
+
+/**
+ * Re-read the selection when the fragment changes.
+ *
+ * Without this the URL is write-only: pasting a link with `#cal=...` into an
+ * already-open tab, or using the back button after changing calendars, would
+ * silently do nothing. Since the fragment is the app's only persistence
+ * mechanism, it has to work in both directions.
+ */
+window.addEventListener("hashchange", () => {
+  const next = parseSelection(window.location.hash);
+  if (next.join(",") !== state.calendars.join(",")) {
+    state.calendars = next;
+    render();
+  }
+});
 
 render();

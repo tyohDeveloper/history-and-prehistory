@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 57752,
+  "gzipBytes": 86261,
   "recordedAt": "2026-08-07",
-  "note": "v0.1.0 baseline: v2.1.0 dataset (1,305 entities) inlined + Miller-column picker."
+  "note": "v0.2.0: adds temporal-polyfill/full and the multi-calendar readout. Up from 57,698 B (v0.1.0). The polyfill accounts for ~24 kB of the increase and buys calendar input as well as display; see DESIGN.md Q-16 and Q-26."
 }

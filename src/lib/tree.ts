@@ -109,8 +109,11 @@ export function searchEntities(
 /** Format a proleptic-Gregorian year for display. Year 0 does not exist. */
 export function formatYear(y: number | null): string {
   if (y === null) return "—";
-  if (y < 0) return `${Math.abs(y).toLocaleString("en-US")} BCE`;
-  return `${y.toLocaleString("en-US")} CE`;
+  // No thousands separators: years are conventionally written unseparated
+  // ("1603 CE", "14000 BCE"), and it keeps the readout consistent with the
+  // compact ranges in the column gutter. Separators stay for BP and ka
+  // counts, which are quantities rather than years.
+  return y < 0 ? `${Math.abs(y)} BCE` : `${y} CE`;
 }
 
 export function formatRange(e: Entity): string {

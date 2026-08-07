@@ -104,6 +104,34 @@ matters because the early boundary is the fuzzy one: an Aurignacian start might 
 `48,000 / 45,000 / 43,000 / 42,000 BP`, with a long tail older and a short one younger. And it is
 the conventional representation, so the arithmetic is known rather than invented.
 
+### Does a trapezoid cost screen space?
+
+No — and the reason is worth stating plainly, because it is easy to conflate the two: **the
+trapezoid is a storage encoding, not a rendering.** Four numbers in JSON occupy no pixels. How
+uncertainty is *displayed* is a separate decision, and every option below reads from the same
+stored shape:
+
+| Space available | Rendering | Example |
+|---|---|---|
+| Column gutter (~60 px) | Consensus only, or outer range | `45 ka` · `48–42 ka` |
+| Readout line | Core range, tail parenthesised | `45–43 ka (possibly 48–42)` |
+| Timeline bar | Solid core, tapered or gradient shoulders | same footprint as a hard-edged bar |
+| Expanded detail | All four points, method, source | `48.0 / 45.0 / 43.0 / 42.0 ka, OSL` |
+
+The timeline row is the one that might seem expensive and is not: a bar with soft ends occupies
+exactly the same box as a bar with hard ends. Fuzziness is rendered as *softness at edges you were
+already drawing*, not as extra elements. If anything it is cheaper than the honest alternative,
+which is a hard bar plus a separate error-bar annotation.
+
+The decisive point: **the simpler encodings do not save screen space either.** A hard triple still
+has to render as some range, and that range is the same width. What the simpler options save is
+*authoring fields*, not pixels. So screen real estate is not a reason to prefer A or B over C —
+authoring burden is, and `Q-2` settles that by making the whole thing opt-in.
+
+Where the trapezoid genuinely costs something is **cognitive load in the expanded view**, if all
+four numbers are shown at once. Mitigation is progressive disclosure: consensus and core range by
+default, the tails on demand.
+
 Cost: four numbers per boundary, and a period has two boundaries — so up to eight per entity. See
 `Q-2` on whether that is an acceptable authoring burden.
 
@@ -142,8 +170,29 @@ property of the view rather than a special case bolted onto the axis — the Pal
 very far from a focus on the Edo period and gets correspondingly little space. That is a better
 answer than either previous option, and it arrives free.
 
-Open: whether the distortion applies to the time axis, the tree, or both (`Q-4`), and whether it
-replaces the Miller columns or sits beside them (`Q-5`).
+### Distance must adapt to local density
+
+Settled: `D` is a weighted blend of temporal and tree distance (`Q-6`). The reasoning that decided
+it also implies a refinement worth recording.
+
+Prehistory and modern history have opposite shapes. Prehistory is **sparse in entities and vast in
+time** — a few nodes scattered across hundreds of millennia. Modern history is **dense in entities
+and compressed in time** — dozens of nodes inside a single century. A distance term calibrated in
+absolute years is therefore wrong at one end or the other no matter where it is tuned: any
+threshold generous enough to give the Aurignacian neighbours will swamp a focus on the 1930s.
+
+Log-scaling temporal distance helps but does not fix it, because it addresses magnitude, not
+density. The more robust formulation is **rank- or density-normalized distance** — "the nearest
+*n* nodes in time" rather than "nodes within *x* years", or raw distance divided by the local
+median gap. That makes the lens behave the same way whether it is over the Pleistocene or over the
+Cold War, which is the actual goal.
+
+This also gives the tree term a clear job. In sparse prehistory, temporal neighbours are far away
+and uninformative, so structural proximity should dominate. In dense modern history there are
+plenty of temporal neighbours, so the temporal term can carry more weight. The blend weights may
+themselves want to be density-dependent rather than constant.
+
+Open: whether the distortion is geometric or typographic (`Q-7`), and what sets the focus (`Q-8`).
 
 ## Decisions taken (reversible, flagging for review)
 
@@ -158,7 +207,14 @@ replaces the Miller columns or sits beside them (`Q-5`).
 - **`dating_method` as a new field**, not a new `date_precision` enum value. Method and precision
   are orthogonal; `date_precision` is already 95% `approx` and carries no information.
 - **Open items live in this document**, not in GitHub issues, until the register stabilizes.
-- **Fuzzy dates are a 4-point trapezoid** (provisional — pending `Q-1`).
+- **Fuzzy dates are a 4-point trapezoid** (provisional — pending `Q-1`). Encoding only; it does not
+  dictate how uncertainty is drawn.
+- **Fuzzy dates are opt-in** (`Q-2`, settled). `start_year`/`end_year` stay primary; fuzzy fields
+  are an optional overlay. Revisit migration after prehistory has exercised it.
+- **The focus view is a second view alongside the Miller columns** (`Q-5`, settled), not a
+  replacement. Columns answer "where am I"; the lens answers "what is near this".
+- **`D` blends temporal and tree distance** (`Q-6`, settled), with density normalization so the
+  lens behaves consistently across sparse prehistory and dense modern history.
 - **Focus+context uses `tier` as the a-priori-importance term**, so no new per-entity authoring is
   required to make the view work.
 
@@ -172,12 +228,6 @@ roughly by how much else they block.
 **Q-1. Trapezoid, or something simpler?** Recommendation is the 4-point trapezoid above. Confirm,
 or pick A/B from that table.
 
-**Q-2. What is the authoring burden, realistically?** Up to eight numbers per entity, against
-1,305 entities that today carry two. Is the fuzzy model opt-in for the handful of entities that
-need it (prehistory, contested ancient chronology) with everything else staying a plain year — or
-is it the target shape for all entities eventually? This determines whether the schema keeps
-`start_year`/`end_year` as the primary fields with fuzzy data as an optional overlay, or migrates.
-
 **Q-3. Does `consensus` mean "scholarly consensus" or "our editorial pick"?** These diverge on
 contested chronologies — Egyptian New Kingdom, Indus decline, Homeric dating. If it is consensus,
 it wants a source. If it is editorial, it wants to say so.
@@ -188,14 +238,6 @@ can contradict each other? Shared boundaries halve the authoring and remove a cl
 inconsistency, but they couple entities that may want independent sourcing.
 
 ### Blocking — focus and context
-
-**Q-5. Does the focus view replace the Miller columns, or sit beside them?** Columns are good at
-"where am I in the hierarchy"; a fisheye is good at "what is near this in time". They answer
-different questions and may both deserve to exist.
-
-**Q-6. What is `D`, the distance term?** Temporal distance, tree distance, or a weighted blend?
-Temporal alone gives a time-focused lens that ignores structure; tree alone reproduces the
-hyperbolic browser and ignores chronology; a blend is more useful and harder to tune.
 
 **Q-7. Is the distortion geometric or typographic?** True hyperbolic layout distorts positions and
 sizes continuously. A cheaper reading is that near-focus items get more space and larger type
@@ -240,6 +282,9 @@ artifact is still ~56 kB gzip. Wiring it in moves that materially. Set the ceili
 
 - ~~Timeline scale across six orders of magnitude~~ — likely dissolved by logarithmic temporal
   distance in the DOI function. Confirm once `Q-6` is settled.
+- ~~`Q-2` Authoring scope~~ — opt-in overlay now, revisit migration after prehistory.
+- ~~`Q-5` Focus view vs columns~~ — second view alongside, not a replacement.
+- ~~`Q-6` Distance term~~ — weighted blend, density-normalized.
 - ~~Per-app repos or monorepo~~ — per-app, settled 2026-08-07.
 - ~~GitHub issues or design docs~~ — design docs, for now.
 

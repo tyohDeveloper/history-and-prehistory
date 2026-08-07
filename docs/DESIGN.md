@@ -307,11 +307,31 @@ does not exist.
 
 **Show the basics; name the kind of complication; offer a way through.**
 
-### Disclosure attaches to a boundary, not an entity
+### Two surfaces: boundary dating, and entity caveats
 
-The Roman Empire's start is uncontroversial. Its end is one of the most argued dates in the field
-— 476, 480, 1453 — and the argument is definitional rather than evidential. Boundaries carry their
-own disputes, so they carry their own dating. `BoundaryDating` is per start and per end.
+Dating disclosure attaches to a **boundary**. The Roman Empire's start is uncontroversial; its end
+is one of the most argued dates in the field — 476, 480, 1453 — and the argument is definitional
+rather than evidential. Boundaries carry their own disputes, so `BoundaryDating` is per start and
+per end.
+
+But not every caveat is about a date, and auditing the existing dataset made that obvious. Its
+three `misconceptions` entries are:
+
+> "Ghana Empire was not located in the modern nation of Ghana."
+> "Benin Empire was in southern Nigeria, not the modern nation of Benin."
+> "The Maya never formed a single unified empire; they were a network of city-states."
+
+None of those is chronological. They are geographic and conceptual corrections belonging to the
+subject, and hanging them off a start date would be nonsense. So `EntityCaveat` is a second,
+separate surface with its own kinds — `misconception`, `naming-confusion`, `contested-existence`.
+
+`naming-confusion` earns its own kind because the pattern is everywhere in history: Ghana, Benin,
+the Holy Roman Empire, the Byzantine Empire, Latin America. And it matters more than most caveats
+for this audience — a reader who leaves believing the Ghana Empire sat in modern Ghana has been
+actively misled, which is worse than being left uncertain.
+
+`contested-existence` moved here too. Whether Gilgamesh or David existed is a question about the
+subject, not about a boundary. The dataset already flags Gilgamesh as legendary.
 
 ### Rival claims are not one wide range
 
@@ -338,17 +358,46 @@ able to tell which awaits before deciding to open anything.
 | `method-conflict` | Methods disagree | yes, from alternatives with differing methods |
 | `definitional` | Depends on definition | **no — must be authored** |
 | `traditional-date` | Traditional date | yes, from `standing` |
+| `overlaps-parent` | Crosses its period | yes, from `outsideParent` |
 | `calibration` | Calibration-dependent | no |
 | `wide-uncertainty` | Broad range | yes, from fuzz vs. age |
-| `contested-existence` | Contested | no |
 
-Four of the seven are derived, which is deliberate: authoring effort should go to the reasons that
-genuinely need a human. Nothing about the number 476 reveals that it is a definitional choice, so
-that one must be written down. That a claim marked `traditional` is a traditional date does not.
+Five of the seven are derived, which is deliberate: authoring effort should go to the reasons that
+genuinely need a human. Nothing about the number 476 reveals it is a definitional choice, so that
+must be written down. That a claim marked `traditional` is a traditional date does not.
 
-When several apply, `disclosureSummary()` returns the most consequential by a fixed priority —
-`contested-existence` > `definitional` > `rival-chronologies` > `method-conflict` >
-`traditional-date` > `calibration` > `wide-uncertainty`.
+**`overlaps-parent` is the commonest real case and the model originally had no room for it.**
+27 entities carry `allow_outside_parent_dates`: Oda Nobunaga's rule begins before the era named
+after him, and nengō routinely straddle period boundaries. Nothing is disputed and nothing is
+wrong — but it looks like a data error, and "this is intentional" is exactly the kind of thing a
+starting-point tool should say. Note this is the *opposite* of a dispute, which is why it needs
+its own wording rather than a shared marker.
+
+When several apply, `disclosureSummary()` returns the most consequential by fixed priority:
+`definitional` > `rival-chronologies` > `method-conflict` > `traditional-date` >
+`overlaps-parent` > `calibration` > `wide-uncertainty`.
+
+### Claim ordering, and never hiding a superseded date
+
+Primary always leads. The rest sort by standing: consensus, majority, minority, traditional,
+superseded.
+
+Superseded claims sort last but are **never hidden**. A reader who met the old date somewhere else
+needs to find it here and be told it is old. Dropping it silently leaves them concluding the app
+is wrong, which is the worst of the available outcomes.
+
+### Each claim renders in its own frame
+
+Where claims disagree because their *methods* disagree, they will usually want different frames —
+the radiocarbon claim in BP, the king-list claim in BCE. The popover renders each in its own
+frame rather than forcing one, because the frame difference is part of what the reader needs to
+see. Forcing a common frame would hide the very distinction the disclosure exists to surface.
+
+### Brevity is enforced
+
+`MAX_CAVEAT_LENGTH` caps notes and caveats at 200 characters. Prose is where "starting point, not
+research tool" quietly erodes; a hard limit keeps a caveat to something absorbed in passing and
+pushes anything longer out to the handoff link, where the argument belongs.
 
 ### Render contract
 
@@ -382,6 +431,26 @@ The gap-analysis complaint that `sources` is empty on all 1,305 entities (§5.2)
 What the sources page should list is the dataset's own provenance plus the handful of curated
 works behind contested dates — not 1,305 citations.
 
+### Migrating from v2.1.0
+
+The existing dataset already carries most of this in weaker form. The mapping:
+
+| v2.1.0 field | Uses | Maps to |
+|---|---|---|
+| `date_precision: "traditional"` | 8 | `standing: "traditional"` — resolves `Q-20`, yes migrate |
+| `allow_outside_parent_dates` | 27 | `outsideParent: true` -> `overlaps-parent` |
+| `date_note` | 33 | Boundary `note`. Mostly explains overlap, not dispute |
+| `misconceptions` | 3 | `EntityCaveat` — split by kind between misconception and naming-confusion |
+| `start_year_min/max`, `end_year_min/max` | 3 | Fuzzy anchors on `earliest`/`latest` |
+| `sources` | 0 | Registry ids, where curated at all |
+
+Two things fall out of this audit. First, `date_note` and `allow_outside_parent_dates` overlap
+almost exactly — nearly every note explains an overlap. That is a strong signal the model was
+missing the concept, which it was. Second, the traditional dates are exactly the eight one would
+predict: Narmer, Gojoseon, Gilgamesh, David, Solomon, the Roman Kingdom, Romulus Augustulus,
+Nitocris. Legendary founders and dynastic origin stories. The existing authoring was right; it
+just lacked a field that said what it meant.
+
 ### Validator rules this implies
 
 Enforceable in `tools/validate.py`, and worth enforcing because each catches a real authoring
@@ -394,6 +463,10 @@ failure:
    inferred, so an unexplained one is an authoring stub.
 5. At most one claim per boundary with `standing: "consensus"`.
 6. Warn when a registry source is cited by nothing.
+7. Notes and caveats must not exceed `MAX_CAVEAT_LENGTH`.
+8. `outsideParent: true` requires a `note` — "this is intentional" is useless without saying why.
+9. An `EntityCaveat` of kind `contested-existence` should pair with `standing: "traditional"` on
+   the entity's dates, or explain why not.
 
 ### Offline constraint
 
@@ -490,6 +563,10 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
   the seven reasons are inferred so authoring effort goes where a human is actually needed.
 - **Sources are a normalized id-keyed registry**, not inlined per entity — and used only where a
   specific work is the substance of the claim.
+- **Entity caveats are a second surface**, separate from boundary dating: misconceptions and
+  naming confusions are not chronological.
+- **Superseded claims are ranked last but never hidden.**
+- **Notes and caveats are length-capped** at 200 characters.
 - **The app is a starting point, not a research tool.** Handoff links are generated from the
   entity; the offline answer is a copyable URL and a downloadable research note, not a
   connectivity probe.
@@ -542,10 +619,6 @@ with a `native_name` might search better on the matching language edition, but i
 from script is unreliable (Han characters span at least three). Options: English only, offer both
 with the native search on English Wikipedia, or add an explicit `wiki_lang` field.
 
-**Q-20. Should `date_precision: "traditional"` migrate to `standing`?** Three entities use it
-today. The two overlap but are not the same thing — one is about resolution, the other about
-epistemic status. Keeping both risks them drifting apart.
-
 **Q-18. Is the frame preference global, per-entity, or both?** A global "always BP" toggle is
 simple. A per-entity override is more precise but adds state the URL fragment would have to carry.
 
@@ -578,6 +651,9 @@ artifact is still ~56 kB gzip. Wiring it in moves that materially. Set the ceili
 - ~~`Q-2` Authoring scope~~ — opt-in overlay now, revisit migration after prehistory.
 - ~~`Q-5` Focus view vs columns~~ — second view alongside, not a replacement.
 - ~~`Q-6` Distance term~~ — weighted blend, density-normalized.
+- ~~`Q-20` Migrate `date_precision: "traditional"` to `standing`?~~ — yes. Eight entities, all
+  legendary founders or dynastic origin stories; the field was always about standing, not
+  resolution.
 - ~~`Q-19` Must a consensus claim be sourced?~~ — no. The app is a starting point and does not
   claim scholarly authority; generated handoff replaces per-entity citation.
 - ~~Per-app repos or monorepo~~ — per-app, settled 2026-08-07.

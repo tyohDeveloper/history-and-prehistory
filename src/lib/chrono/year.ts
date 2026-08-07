@@ -245,8 +245,16 @@ export type DisclosureReason =
   | "calibration"
   /** No dispute, simply a broad range. */
   | "wide-uncertainty"
-  /** The subject's existence or identity is itself contested. */
-  | "contested-existence";
+  /**
+   * The boundary legitimately falls outside its parent's range.
+   *
+   * The commonest disclosure in the actual dataset — 27 entities carry
+   * `allow_outside_parent_dates`. Oda Nobunaga's rule starts before the era
+   * named after him; nengō routinely straddle period boundaries. Nothing is
+   * disputed and nothing is wrong, but it looks like a data error, so it has
+   * to be sayable.
+   */
+  | "overlaps-parent";
 
 export const DISCLOSURE_LABEL: Record<DisclosureReason, string> = {
   "rival-chronologies": "Chronologies differ",
@@ -255,8 +263,52 @@ export const DISCLOSURE_LABEL: Record<DisclosureReason, string> = {
   "traditional-date": "Traditional date",
   calibration: "Calibration-dependent",
   "wide-uncertainty": "Broad range",
-  "contested-existence": "Contested",
+  "overlaps-parent": "Crosses its period",
 };
+
+/**
+ * Caveats that belong to an ENTITY rather than to one of its boundaries.
+ *
+ * Splitting these out was forced by the data. The dataset's `misconceptions`
+ * entries are not about dates at all — "the Ghana Empire was not in modern
+ * Ghana", "the Maya never formed a single unified empire". Those are
+ * geographic and conceptual corrections attached to the subject, and hanging
+ * them off a start or end date would be nonsense.
+ *
+ * They matter disproportionately for a novice-facing tool: a reader who
+ * leaves believing the Ghana Empire sat in modern Ghana has been actively
+ * misled, which is worse than being left uncertain.
+ */
+export type EntityCaveatKind =
+  /** A widely held belief that is simply wrong. */
+  | "misconception"
+  /** The name misleads — Ghana, Benin, Holy Roman Empire, Byzantine. */
+  | "naming-confusion"
+  /** Existence or identity is contested: Gilgamesh, David, Nitocris. */
+  | "contested-existence";
+
+export const CAVEAT_LABEL: Record<EntityCaveatKind, string> = {
+  misconception: "Common misconception",
+  "naming-confusion": "Name is misleading",
+  "contested-existence": "Existence contested",
+};
+
+export interface EntityCaveat {
+  kind: EntityCaveatKind;
+  /** One sentence. Brevity is enforced — see MAX_CAVEAT_LENGTH. */
+  text: string;
+  sourceIds?: string[];
+}
+
+/**
+ * Cap on caveat and note length.
+ *
+ * The app is a starting point, not a research tool, and prose is where that
+ * scope quietly erodes. A hard limit keeps a caveat to something a reader
+ * absorbs in passing and pushes anything longer out to the handoff link,
+ * which is where the argument belongs.
+ */
+export const MAX_CAVEAT_LENGTH = 200;
 
 /**
  * The dating of ONE boundary — a start or an end, not an entity.
@@ -274,6 +326,11 @@ export interface BoundaryDating {
   reasons?: DisclosureReason[];
   /** Why the field is divided, as opposed to merely imprecise. */
   note?: string;
+  /**
+   * This boundary legitimately falls outside its parent's range.
+   * Mirrors the dataset's existing `allow_outside_parent_dates` flag.
+   */
+  outsideParent?: boolean;
 }
 
 /** Uncertainty at or above this fraction of a date's age reads as "broad". */
@@ -292,6 +349,7 @@ export function disclosureReasons(d: BoundaryDating): DisclosureReason[] {
   const out = new Set<DisclosureReason>(d.reasons ?? []);
 
   if (d.primary.standing === "traditional") out.add("traditional-date");
+  if (d.outsideParent === true) out.add("overlaps-parent");
 
   const alternatives = d.alternatives ?? [];
   if (alternatives.length > 0) {
@@ -325,14 +383,29 @@ export function hasDisclosure(d: BoundaryDating): boolean {
  * Returns the most consequential reason when several apply.
  */
 const REASON_PRIORITY: readonly DisclosureReason[] = [
-  "contested-existence",
   "definitional",
   "rival-chronologies",
   "method-conflict",
   "traditional-date",
+  "overlaps-parent",
   "calibration",
   "wide-uncertainty",
 ];
+
+/**
+ * Display order for competing claims. Primary always leads regardless.
+ *
+ * `superseded` sorts last but is never hidden: a reader who encountered the
+ * old date somewhere else needs to find it here and be told it is old.
+ * Silently dropping it leaves them thinking the app is wrong.
+ */
+const STANDING_ORDER: Record<ClaimStanding, number> = {
+  consensus: 0,
+  majority: 1,
+  minority: 2,
+  traditional: 3,
+  superseded: 4,
+};
 
 export function disclosureSummary(d: BoundaryDating): string | undefined {
   const reasons = new Set(disclosureReasons(d));
@@ -340,7 +413,15 @@ export function disclosureSummary(d: BoundaryDating): string | undefined {
   return top === undefined ? undefined : DISCLOSURE_LABEL[top];
 }
 
-/** Every claim for a boundary, primary first. */
+/** Every claim for a boundary: primary first, then the rest by standing. */
 export function allClaims(d: BoundaryDating): DatingClaim[] {
-  return [d.primary, ...(d.alternatives ?? [])];
+  const rest = [...(d.alternatives ?? [])].sort(
+    (a, b) => STANDING_ORDER[a.standing] - STANDING_ORDER[b.standing],
+  );
+  return [d.primary, ...rest];
+}
+
+/** Caveats worth surfacing, filtered of any that exceed the length cap. */
+export function entityCaveats(caveats: readonly EntityCaveat[] | undefined): EntityCaveat[] {
+  return (caveats ?? []).filter((c) => c.text.length > 0);
 }

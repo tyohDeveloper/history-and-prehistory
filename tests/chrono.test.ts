@@ -2,14 +2,16 @@ import { describe, expect, it } from "vitest";
 import { bpFromYear, formatBp, formatBpRange, resolveFrame, suggestFrame, yearFromBp } from "../src/lib/chrono/bp";
 import {
   allClaims,
+  entityCaveats,
   disclosureReasons,
   disclosureSummary,
   hasDisclosure,
   isExact,
+  MAX_CAVEAT_LENGTH,
   supportOf,
   uncertaintyOf,
 } from "../src/lib/chrono/year";
-import type { BoundaryDating, DatingClaim } from "../src/lib/chrono/year";
+import type { BoundaryDating, DatingClaim, EntityCaveat } from "../src/lib/chrono/year";
 import type { YearValue } from "../src/lib/chrono/year";
 
 // The cases that drove the design. Named so a regression says which idea broke.
@@ -161,6 +163,13 @@ const TRADITIONAL: BoundaryDating = {
   }),
 };
 
+/** Nengo straddling a period boundary: the commonest real case, and not a dispute. */
+const OVERLAPS: BoundaryDating = {
+  primary: claim({ value: { consensus: { year: 782 } }, label: "Enryaku" }),
+  outsideParent: true,
+  note: "Nengo 782-806 spans the Nara-Heian boundary (794).",
+};
+
 /** Fall of the Western Empire: a definitional argument, not an evidential one. */
 const DEFINITIONAL: BoundaryDating = {
   primary: claim({ value: { consensus: { year: 476 } }, label: "Deposition of Romulus Augustulus" }),
@@ -229,5 +238,68 @@ describe("claims", () => {
 
   it("treats a note alone as grounds for disclosure", () => {
     expect(hasDisclosure({ primary: claim({ value: SEPT_11 }), note: "why" })).toBe(true);
+  });
+});
+
+describe("structural overlap is disclosed without implying a dispute", () => {
+  it("infers the reason from the outside-parent flag", () => {
+    // 27 entities in v2.1.0 carry allow_outside_parent_dates. Nothing is
+    // wrong, but it looks wrong, so it has to be sayable.
+    expect(disclosureReasons(OVERLAPS)).toContain("overlaps-parent");
+    expect(disclosureSummary(OVERLAPS)).toBe("Crosses its period");
+  });
+
+  it("does not read as a chronological disagreement", () => {
+    expect(disclosureReasons(OVERLAPS)).not.toContain("rival-chronologies");
+    expect(disclosureReasons(OVERLAPS)).not.toContain("method-conflict");
+  });
+});
+
+describe("claim ordering", () => {
+  it("keeps the primary first and sorts the rest by standing", () => {
+    const d: BoundaryDating = {
+      primary: claim({ value: SEPT_11, label: "Primary" }),
+      alternatives: [
+        claim({ value: SEPT_11, label: "Old view", standing: "superseded" }),
+        claim({ value: SEPT_11, label: "Minority view", standing: "minority" }),
+        claim({ value: SEPT_11, label: "Most accept", standing: "majority" }),
+      ],
+    };
+    expect(allClaims(d).map((c) => c.label)).toEqual([
+      "Primary",
+      "Most accept",
+      "Minority view",
+      "Old view",
+    ]);
+  });
+
+  it("never hides a superseded claim", () => {
+    // A reader who met the old date elsewhere must find it here and be told
+    // it is old, rather than concluding the app is wrong.
+    const d: BoundaryDating = {
+      primary: claim({ value: SEPT_11 }),
+      alternatives: [claim({ value: SEPT_11, label: "Older estimate", standing: "superseded" })],
+    };
+    expect(allClaims(d)).toHaveLength(2);
+  });
+});
+
+describe("entity caveats are separate from dating disclosure", () => {
+  // Drawn verbatim from the dataset's own misconceptions entries.
+  const caveats: EntityCaveat[] = [
+    { kind: "naming-confusion", text: "Ghana Empire was not located in the modern nation of Ghana." },
+    {
+      kind: "misconception",
+      text: "The Maya never formed a single unified empire; they were a network of city-states.",
+    },
+  ];
+
+  it("carries corrections that have nothing to do with dates", () => {
+    expect(entityCaveats(caveats)).toHaveLength(2);
+    expect(entityCaveats(undefined)).toEqual([]);
+  });
+
+  it("keeps caveat text inside the brevity cap", () => {
+    for (const c of caveats) expect(c.text.length).toBeLessThanOrEqual(MAX_CAVEAT_LENGTH);
   });
 });

@@ -527,6 +527,82 @@ The adapter attaches both to the start boundary — right more often than not �
 `needsBoundaryReview`. **33 entities carry that flag** and want a human pass before the migration
 is trusted.
 
+### Stress-tested against eight real prehistory cases
+
+Prehistory was where this model was most likely to break, so it was tested against real cases with
+real disputes rather than invented fixtures. Sourced values are in
+[`prehistory-dating-research.md`](prehistory-dating-research.md); the cases are encoded in
+`tests/prehistory.test.ts`. Four changes came out of it.
+
+| Case | Stresses | Outcome |
+|---|---|---|
+| Oldowan, c. 2.6 Ma | Ma scale, definitional | Lomekwi 3 at 3.3 Ma excluded by *naming* it Lomekwian |
+| *H. floresiensis* | Large revision, ~18 ka → ~60 ka | Forced the `revised` reason |
+| Chauvet Cave | Evidence challenged, not dated | Forced `evidence-disputed` |
+| Madjedbebe, 65 ± 6 ka | Rival readings of one OSL programme | Handled |
+| Neanderthal extinction | Contamination-driven revision | Forced `revised` |
+| Younger Dryas | b2k datum, ±99 yr counting error | Forced datum support |
+| Göbekli Tepe | Definitional; phase scheme abandoned | Handled |
+| Monte Verde II | Live dispute, mid-2026 | Forced `asOf` |
+
+#### 1. b2k is a separate datum, not a rounding detail
+
+Ice-core chronologies quote **b2k** — years before 2000 CE — while radiocarbon uses BP at 1950. A
+50-year systematic offset. It sounds negligible and is not: the Younger Dryas termination is
+11,703 b2k with a maximum counting error of 99 years, so silently treating b2k as BP moves the
+date by **half its own stated uncertainty**. The literature is explicit about this, and the advice
+for datasets is to store b2k, BP, and BCE separately with the offset applied.
+
+`b2k` is therefore a first-class display frame, and a quoted `nativeFrame` now wins over every
+other rule in `suggestFrame()` — it is the only way to reproduce a source's own number, including
+its datum and its rounding.
+
+#### 2. A settled revision is not a live disagreement
+
+The sharpest finding, and the model got it wrong before these cases were tried. *H. floresiensis*
+moved from ~18 ka to ~60 ka in 2016 when the dated deposits turned out to be a younger unit
+overlying the remains. Neanderthal late survival at 28 ka collapsed once ultrafiltration removed
+modern-carbon contamination from old bone.
+
+Both produced two claims with different methods, so the model reported **"Methods disagree"** —
+which is false. They agreed; one side lost. A reader told there is a live methodological argument
+about Flores would take away something untrue.
+
+So when *every* alternative is `superseded`, the reason is `revised` — "Date revised" — and
+superseded claims are now excluded when deciding whether live claims conflict, so a dead claim's
+method cannot manufacture a disagreement among living ones. The old value stays reachable, because
+readers meet ~18 ka in books published before 2016 and need to find it here.
+
+#### 3. Challenging the evidence is not offering a rival date
+
+The Chauvet critique does not propose a better number from a better method. It argues the
+radiocarbon dates charcoal rather than paint, so the technique does not date the art at all.
+`method-conflict` would tell a reader to expect a competing figure, and none is on offer.
+`evidence-disputed` — "Evidence questioned" — is its own reason, and it outranks everything else
+in the priority order.
+
+Madjedbebe is the useful contrast: both sides run OSL, and the argument is about stratigraphic
+integrity. Same evidence type, rival readings, so `rival-chronologies`. The model now separates
+the three cleanly.
+
+#### 4. Open disputes need a shelf life
+
+Monte Verde II is under active challenge as of mid-2026: a March 2026 reanalysis proposed a
+Holocene age some six thousand years younger, roughly thirty specialists rebutted it in May, and
+the authors replied in June. Recording that state is genuinely useful. Recording it *without a
+date* is a trap, because a reader cannot tell whether the argument was resolved last week.
+
+`asOf` carries an ISO review date, and only where a dispute is genuinely open — settled dates do
+not get one, and a validator should reject them if they do.
+
+#### What did not need changing
+
+Deep-time rendering held up unmodified. The Oldowan quotes as `2.6 Ma` rather than a spurious
+seven-digit year, Chauvet in `ka`, and the uncertainty-driven rounding produced sensible output at
+every scale from 99 years to 68,000. The Younger Dryas termination — precise, ratified, and
+uncontested — correctly shows **no marker at all**, which is the behaviour that makes the marker
+worth having on the other seven.
+
 ### Validator rules this implies
 
 Enforceable in `tools/validate.py`, and worth enforcing because each catches a real authoring
@@ -543,6 +619,10 @@ failure:
 8. `outsideParent: true` requires a `note` — "this is intentional" is useless without saying why.
 9. An `EntityCaveat` of kind `contested-existence` should pair with `standing: "traditional"` on
    the entity's dates, or explain why not.
+10. `asOf` is required when any alternative has live standing, and forbidden when every
+    alternative is `superseded` — a settled question has nothing to re-check.
+11. A value with `nativeFrame: "b2k"` must carry a `layer-counting` or otherwise ice-core method;
+    b2k on a radiocarbon date is almost certainly an authoring slip.
 
 ### Offline constraint
 
@@ -646,6 +726,10 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
 - **Marker density budget: 2% today, ~10% ceiling.** Past that the mechanism is over-applied and
   authoring should change, not the threshold.
 - **Identical markers on both boundaries collapse** to one entity-level statement.
+- **b2k is a first-class datum**, and a quoted `nativeFrame` overrides every other frame rule.
+- **A settled revision is not a dispute.** All-superseded alternatives read as "Date revised", and
+  superseded claims are excluded when testing whether live claims conflict.
+- **Open disputes carry an `asOf` review date**; settled ones must not.
 - **The app is a starting point, not a research tool.** Handoff links are generated from the
   entity; the offline answer is a copyable URL and a downloadable research note, not a
   connectivity probe.
@@ -707,6 +791,14 @@ guesses. Only three entities carry bounds, so tuning against them would be overf
 data points. Revisit once prehistory supplies real ranges. The one encouraging sign: the canonical
 worked example — ~3500 BCE (3000 .. ~4500 BCE) — trips the broad-range marker at 27%, comfortably
 clear of the threshold.
+
+**Q-23. What happens when an `asOf` goes stale?** A date-stamped open dispute is only honest while
+someone re-checks it. Options: surface the age in the UI ("last checked 2026-06"), fail a build
+check past some horizon, or accept drift. Nothing is decided.
+
+**Q-24. Should `revised` claims show by default or stay behind the popover?** They are settled, so
+inline display is arguably noise — but the whole reason to keep them is that readers arrive
+holding the old number and need to collide with it.
 
 **Q-22. Who reviews the 33 flagged boundary attachments?** Migration cannot infer which boundary an
 entity-level note belongs to. The flag is set; the pass is not scheduled.

@@ -26,9 +26,14 @@ export type DatingMethod =
   | "calendar"
   | "radiocarbon-calibrated"
   | "radiocarbon-uncalibrated"
+  | "argon-argon"
   | "potassium-argon"
   | "luminescence"
+  | "uranium-series"
   | "esr"
+  /** Ice-core and varve annual layer counting. Reports a maximum counting error. */
+  | "layer-counting"
+  | "magnetostratigraphy"
   | "typological"
   | "unknown";
 
@@ -58,7 +63,26 @@ export interface FuzzyPoint {
  * claims a precision the source never offered. Recording the native frame
  * lets the readout show the source's own number verbatim when asked for it.
  */
-export type NativeFrame = "bp" | "calendar";
+export type NativeFrame = Datum | "calendar";
+
+/**
+ * Zero point for a "years before" count.
+ *
+ * Radiocarbon fixed BP at 1950 CE. Ice-core chronologies use **b2k**, before
+ * 2000 CE — a 50-year offset that is small but systematic, and one the
+ * literature is explicit about not eliding: Walker et al. state it directly
+ * when defining the Holocene GSSP, and the advice for datasets is to store
+ * b2k, BP, and BCE separately with the offset applied.
+ *
+ * It matters more than 50 years sounds. The Younger Dryas termination is
+ * quoted at 11,703 b2k with a maximum counting error of 99 years; silently
+ * treating that as BP moves it by half its own stated uncertainty.
+ */
+export type Datum = "bp" | "b2k";
+
+export const DATUM_YEAR: Record<Datum, number> = { bp: 1950, b2k: 2000 };
+
+export const DATUM_LABEL: Record<Datum, string> = { bp: "BP", b2k: "b2k" };
 
 export interface YearValue {
   /**
@@ -73,7 +97,10 @@ export interface YearValue {
   /** Youngest plausible bound. */
   latest?: FuzzyPoint;
   method?: DatingMethod;
-  /** The frame the source quoted. Display frame is chosen separately. */
+  /**
+   * The frame and datum the source quoted in. Display is chosen separately;
+   * this exists so a conversion cannot silently restate the source.
+   */
   nativeFrame?: NativeFrame;
   /** Free text for genuine scholarly disagreement, as opposed to imprecision. */
   note?: string;
@@ -107,7 +134,7 @@ export function supportOf(v: YearValue): { earliest: number; latest: number } | 
  * because the uncertainty ratio below needs it, and `bp.ts` already imports
  * from this module. Re-exported from `bp.ts` for callers who expect it there.
  */
-export const BP_DATUM_YEAR = 1950;
+export const BP_DATUM_YEAR = DATUM_YEAR.bp;
 
 /**
  * Distance from the BP datum, always positive.
@@ -180,10 +207,14 @@ export const DATING_METHOD_LABEL: Record<DatingMethod, string> = {
   calendar: "Calendar / historically attested",
   "radiocarbon-calibrated": "Radiocarbon, calibrated",
   "radiocarbon-uncalibrated": "Radiocarbon, uncalibrated",
+  "argon-argon": "Argon-argon (\u2074\u2070Ar/\u00B3\u2079Ar)",
   "potassium-argon": "Potassium-argon",
   luminescence: "Luminescence (OSL/TL)",
+  "uranium-series": "Uranium-series",
   esr: "Electron spin resonance",
-  typological: "Typological / stratigraphic",
+  "layer-counting": "Annual layer counting",
+  magnetostratigraphy: "Magnetostratigraphy",
+  typological: "Typological / stylistic",
   unknown: "Unknown",
 };
 
@@ -265,8 +296,30 @@ export type DisclosureReason =
   | "definitional"
   /** A received or legendary date rather than an established one. */
   | "traditional-date"
+  /**
+   * The date was revised, and the argument is over.
+   *
+   * Critically NOT a live dispute. *Homo floresiensis* moved from ~18 ka to
+   * ~60 ka in 2016 and nobody defends the old figure; Neanderthal late
+   * survival at 28 ka collapsed once ultrafiltration removed modern-carbon
+   * contamination. Marking either as "methods disagree" would be false — they
+   * agreed, and one side lost. The old value still has to be reachable
+   * because readers meet it in older books, but the reader must be told the
+   * question is settled.
+   */
+  | "revised"
   /** Value depends on calibration choice or correlation constant. */
   | "calibration"
+  /**
+   * The evidence is challenged, not just the number.
+   *
+   * Distinct from `method-conflict`, where two techniques give two answers.
+   * Here the objection is that the technique does not date the thing at all:
+   * the Chauvet critique argues the radiocarbon dates charcoal, not the art
+   * on the wall. A reader told "methods disagree" would draw the wrong
+   * conclusion, because a rival number is not what is on offer.
+   */
+  | "evidence-disputed"
   /** No dispute, simply a broad range. */
   | "wide-uncertainty"
   /**
@@ -286,6 +339,8 @@ export const DISCLOSURE_LABEL: Record<DisclosureReason, string> = {
   definitional: "Depends on definition",
   "traditional-date": "Traditional date",
   calibration: "Calibration-dependent",
+  "evidence-disputed": "Evidence questioned",
+  revised: "Date revised",
   "wide-uncertainty": "Broad range",
   "overlaps-parent": "Crosses its period",
 };
@@ -355,6 +410,20 @@ export interface BoundaryDating {
    * Mirrors the dataset's existing `allow_outside_parent_dates` flag.
    */
   outsideParent?: boolean;
+  /**
+   * ISO date at which this dating was last checked against the literature.
+   *
+   * Live disputes have a shelf life. Monte Verde is under active challenge as
+   * of mid-2026 — a March 2026 paper proposed moving it by six thousand years,
+   * roughly thirty specialists rebutted it in May, and the authors replied in
+   * June. An entry recording that state is useful; an entry recording it
+   * without saying when is a trap, because a reader cannot tell whether the
+   * argument was resolved last week.
+   *
+   * Only meaningful where a dispute is genuinely open. Settled dates do not
+   * need it and should not carry it.
+   */
+  asOf?: string;
 }
 
 /** Uncertainty at or above this fraction of a date's age reads as "broad". */
@@ -377,10 +446,16 @@ export function disclosureReasons(d: BoundaryDating): DisclosureReason[] {
 
   const alternatives = d.alternatives ?? [];
   if (alternatives.length > 0) {
-    const methods = new Set(
-      [d.primary, ...alternatives].map((c) => c.value.method ?? "unknown"),
-    );
-    out.add(methods.size > 1 ? "method-conflict" : "rival-chronologies");
+    // If every alternative is superseded, the argument is finished. Reporting
+    // that as a disagreement would misdescribe a resolved question, so the
+    // settled case is checked before the disputed ones.
+    if (alternatives.every((c) => c.standing === "superseded")) {
+      out.add("revised");
+    } else {
+      const live = [d.primary, ...alternatives].filter((c) => c.standing !== "superseded");
+      const methods = new Set(live.map((c) => c.value.method ?? "unknown"));
+      out.add(methods.size > 1 ? "method-conflict" : "rival-chronologies");
+    }
   }
 
   const uncertainty = uncertaintyOf(d.primary.value);
@@ -409,9 +484,11 @@ export function hasDisclosure(d: BoundaryDating): boolean {
  * Returns the most consequential reason when several apply.
  */
 const REASON_PRIORITY: readonly DisclosureReason[] = [
+  "evidence-disputed",
   "definitional",
   "rival-chronologies",
   "method-conflict",
+  "revised",
   "traditional-date",
   "overlaps-parent",
   "calibration",

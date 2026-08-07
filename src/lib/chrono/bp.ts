@@ -27,10 +27,13 @@
 
 import {
   BP_DATUM_YEAR,
+  DATUM_LABEL,
+  DATUM_YEAR,
   isScientificDating,
   supportOf,
   toAstronomical,
   uncertaintyOf,
+  type Datum,
   type YearValue,
 } from "./year";
 
@@ -42,12 +45,12 @@ export { BP_DATUM_YEAR };
  * Uses astronomical numbering internally so the absent year zero does not
  * introduce an off-by-one: 1 BCE is 1950 BP, 1 CE is 1949 BP.
  */
-export function bpFromYear(historicalYear: number): number {
-  return BP_DATUM_YEAR - toAstronomical(historicalYear);
+export function bpFromYear(historicalYear: number, datum: Datum = "bp"): number {
+  return DATUM_YEAR[datum] - toAstronomical(historicalYear);
 }
 
-export function yearFromBp(bp: number): number {
-  const astronomical = BP_DATUM_YEAR - bp;
+export function yearFromBp(bp: number, datum: Datum = "bp"): number {
+  const astronomical = DATUM_YEAR[datum] - bp;
   return astronomical <= 0 ? astronomical - 1 : astronomical;
 }
 
@@ -101,9 +104,10 @@ export interface BpFormatOptions {
 export function formatBp(
   historicalYear: number,
   uncertainty?: number,
-  options: BpFormatOptions = {},
+  options: BpFormatOptions & { datum?: Datum } = {},
 ): string {
-  const bp = bpFromYear(historicalYear);
+  const datum = options.datum ?? "bp";
+  const bp = bpFromYear(historicalYear, datum);
   if (bp <= 0) {
     // After the datum. "AP" (After Present) is not standard usage, so fall
     // back to plain CE rather than inventing a label.
@@ -112,7 +116,7 @@ export function formatBp(
   const unit = bpUnitFor(bp);
   const magnitude = formatMagnitude(bp, unit, uncertainty);
   if (options.withUnit === false) return magnitude;
-  return unit === "yr" ? `${magnitude} BP` : `${magnitude} ${unit}`;
+  return unit === "yr" ? `${magnitude} ${DATUM_LABEL[datum]}` : `${magnitude} ${unit}`;
 }
 
 /**
@@ -163,7 +167,13 @@ export function formatBpRange(v: YearValue): string {
  * uncertainty is a large fraction of its own age is doing measurement-shaped
  * work whatever its source. See DESIGN.md Q-17.
  */
-export type DisplayFrame = "bp" | "calendar";
+/**
+ * `b2k` is a display frame in its own right, not a rendering detail of BP.
+ * Ice-core literature quotes it directly, and a readout that silently
+ * converted b2k to BP would restate the source by 50 years — half the stated
+ * counting error on the Younger Dryas termination.
+ */
+export type DisplayFrame = Datum | "calendar";
 export type FramePreference = "auto" | DisplayFrame;
 
 export const HOLOCENE_BACKSTOP_BP = 11_700;
@@ -171,9 +181,11 @@ export const UNKNOWN_METHOD_FUZZ_RATIO = 0.05;
 
 /** The default frame for a value, absent any user preference. */
 export function suggestFrame(v: YearValue): DisplayFrame {
+  // A quoted native frame always wins: it is the only way to reproduce the
+  // source's own number, including its datum and its rounding.
+  if (v.nativeFrame !== undefined) return v.nativeFrame;
   const bp = bpFromYear(v.consensus.year);
   if (bp >= HOLOCENE_BACKSTOP_BP) return "bp";
-  if (v.nativeFrame !== undefined) return v.nativeFrame;
 
   if (v.method !== undefined && v.method !== "unknown") {
     return isScientificDating(v) ? "bp" : "calendar";

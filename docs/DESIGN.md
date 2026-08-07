@@ -81,6 +81,63 @@ the range is the claim. Current behavior:
 | 3.4–3.2 Ma range | `3.4–3.2 Ma` |
 | Natufian, 13000–9500 BCE | `15–11 ka` |
 
+## Scope: a starting point, not a research tool
+
+**Settled, and it constrains everything else.** This app shows how things relate and roughly when
+they happened. It is a big-picture orientation surface. Anyone who wants the argument itself has to
+go and read it elsewhere, and that is the intended outcome rather than a shortfall.
+
+What the app owes a curious user is a good push in the right direction. What it does not owe them
+— and could not honestly sustain across 1,305 entities — is a curated bibliography.
+
+This resolves several open items at once:
+
+- **Handoff links are generated, not authored.** A Wikipedia search URL built from the entity name
+  costs nothing to maintain, cannot rot, and covers every entity including ones nobody has edited.
+  Curating 1,305 article links would be a permanent maintenance liability for a marginal gain.
+- **The `Source` registry is demoted from mechanism to exception.** It stays for the rare case
+  where one specific work genuinely *is* the answer — a calibration curve, a named chronology —
+  but it is not how most entities get backed up. See `Q-19`.
+- **The disclosure popover stays short.** Name the complication in a sentence, then hand off. It
+  is not the place to adjudicate a chronological dispute.
+
+### Generated handoff
+
+`/w/index.php?search=` is the right URL form: it redirects straight to the article when the query
+matches one exactly, and falls back to the results page when it does not. A well-known subject
+lands on its article; an ambiguous one lands somewhere useful. No tracking parameters.
+
+Disambiguation is applied **exactly where ambiguity is known to exist**, by scanning the dataset
+for repeated names rather than by guessing. The tree then supplies the discriminator a reader
+would have supplied themselves:
+
+| Entity | Generated query |
+|---|---|
+| Emperor Taizong (×2) | `Emperor Taizong Tang Dynasty` / `Emperor Taizong Northern Song` |
+| Shōwa (×2) | `Shōwa Modern Japan` / `Shōwa Kamakura Period` |
+| Jōwa (×2) | `Jōwa Heian Period` / `Jōwa Muromachi / Nanboku-chō Period` |
+| Ancient Rome | `Ancient Rome` — unique, left alone |
+
+This is the second job the tree does for free, alongside supplying the a-priori-importance term
+for focus+context. Neither needed new per-entity authoring.
+
+### Offline
+
+Opened without a network, the link goes nowhere. That is accepted rather than engineered around —
+and the app does **not** probe for connectivity. `navigator.onLine` is unreliable, and testing it
+would be exactly the environment sniffing this app's privacy posture rules out.
+
+Two affordances make the dead link survivable, and both work identically offline:
+
+1. **The URL is shown as copyable text**, so it can be written down and run later.
+2. **The selection exports as a plain-text research note** — hierarchy, dates, dating caveats, the
+   search to run, and blank space to write in. Generated client-side via `Blob` +
+   `URL.createObjectURL()`, which the standalone-HTML5 standard explicitly permits; nothing leaves
+   the machine and no server is involved.
+
+The note closes with "Dates are a starting point, not a citation. Verify before relying on them."
+An app that hands people numbers should say what those numbers are worth.
+
 ## The date model (requirement 9)
 
 **Settled.** A date has up to three anchor points — **earliest bound, consensus, latest bound** —
@@ -307,21 +364,23 @@ When several apply, `disclosureSummary()` returns the most consequential by a fi
 - **Test IDs** — `button-disclosure-{boundary}`, `panel-disclosure-{boundary}`,
   `list-disclosure-claims`, per `ARCHITECTURE.md` §8.
 
-### Sources are a normalized registry
+### Sources: the exception, not the mechanism
 
-Sources live in an id-keyed `sources.json`, referenced from claims by id. Deduplication is the
-reason: one chronology reference may be cited by two hundred Egyptian entities, and inlining the
-full citation at each would multiply it two hundred times in a bundle under budget. The dataset
-already normalizes calendars and themes this way, so this follows the existing shape.
+Given the scope decision above, most entities are backed by a generated search link rather than a
+citation. The `Source` registry remains for the minority of cases where a specific work is the
+substance of the claim — IntCal20 for a calibration, a named chronology for an Egyptian date.
 
-`kind` distinguishes `scholarly`, `reference`, `primary`, and `dataset`. A Wikipedia link and an
-excavation report are not the same kind of backing, and the sources page should be able to sort
-and label them differently.
+Where it is used, sources live in an id-keyed `sources.json` referenced by id. Deduplication is
+the reason: one chronology reference cited by two hundred entities is stored once, not two hundred
+times, in a bundle under budget. The dataset already normalizes calendars and themes this way.
 
-This finally gives the empty `sources` field a job. It is unpopulated on all 1,305 entities (gap
-analysis §5.2), which currently blocks the sources page the standalone-HTML5 standard requires.
-Date disclosure is the first concrete consumer, and prehistory is where it is least optional: an
-Oldowan boundary cannot be waved at as common knowledge the way a Ramesses date can.
+`kind` distinguishes `scholarly`, `reference`, `primary`, and `dataset` — a Wikipedia link and an
+excavation report are not the same sort of backing.
+
+The gap-analysis complaint that `sources` is empty on all 1,305 entities (§5.2) is therefore
+**partly withdrawn**. Universal per-entity sourcing was the wrong target for a tool of this scope.
+What the sources page should list is the dataset's own provenance plus the handful of curated
+works behind contested dates — not 1,305 citations.
 
 ### Validator rules this implies
 
@@ -429,7 +488,11 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
   arguments.
 - **The marker names the kind of complication** rather than showing a generic mark, and four of
   the seven reasons are inferred so authoring effort goes where a human is actually needed.
-- **Sources are a normalized id-keyed registry**, not inlined per entity.
+- **Sources are a normalized id-keyed registry**, not inlined per entity — and used only where a
+  specific work is the substance of the claim.
+- **The app is a starting point, not a research tool.** Handoff links are generated from the
+  entity; the offline answer is a copyable URL and a downloadable research note, not a
+  connectivity probe.
 - **Dates are three independently-fuzzy anchors** (`Q-1`, settled); the trapezoid is superseded.
 - **`D` blends temporal and tree distance** (`Q-6`, settled), with density normalization so the
   lens behaves consistently across sparse prehistory and dense modern history.
@@ -474,10 +537,10 @@ anchor needs either an optional month/day or a continuous day-count representati
 days. The clean version is to store every anchor as a day count with fuzz in days: an exact date
 is fuzz 0, `~3500 BCE` is fuzz 91,000 days. Uniform, but heavier to author and to read in JSON.
 
-**Q-19. Does `standing: "consensus"` need a source to be credible?** Rule 5 allows exactly one
-consensus claim per boundary, but nothing currently requires it to be sourced. Requiring sources
-on all 1,305 entities is unrealistic; requiring them only where a date is contested may be the
-right line.
+**Q-21. Which Wikipedia edition, and what about native script?** English is the default. An entity
+with a `native_name` might search better on the matching language edition, but inferring language
+from script is unreliable (Han characters span at least three). Options: English only, offer both
+with the native search on English Wikipedia, or add an explicit `wiki_lang` field.
 
 **Q-20. Should `date_precision: "traditional"` migrate to `standing`?** Three entities use it
 today. The two overlap but are not the same thing — one is about resolution, the other about
@@ -515,6 +578,8 @@ artifact is still ~56 kB gzip. Wiring it in moves that materially. Set the ceili
 - ~~`Q-2` Authoring scope~~ — opt-in overlay now, revisit migration after prehistory.
 - ~~`Q-5` Focus view vs columns~~ — second view alongside, not a replacement.
 - ~~`Q-6` Distance term~~ — weighted blend, density-normalized.
+- ~~`Q-19` Must a consensus claim be sourced?~~ — no. The app is a starting point and does not
+  claim scholarly authority; generated handoff replaces per-entity citation.
 - ~~Per-app repos or monorepo~~ — per-app, settled 2026-08-07.
 - ~~GitHub issues or design docs~~ — design docs, for now.
 

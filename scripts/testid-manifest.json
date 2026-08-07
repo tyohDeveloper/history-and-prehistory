@@ -1,0 +1,23 @@
+{
+  "_comment": "Stable production test IDs, {role}-{area}-{name}[-{key}]. Adding or removing an id in src/ requires updating this file in the same PR. Enforced by scripts/verify-build.mjs.",
+  "required": [
+    "root-app-shell",
+    "text-app-version",
+    "input-search-query",
+    "select-detail-tier",
+    "region-picker-columns",
+    "panel-readout-root",
+    "text-readout-breadcrumb",
+    "text-readout-name",
+    "text-readout-range",
+    "list-readout-facts",
+    "panel-footer-root",
+    "link-footer-repo"
+  ],
+  "dynamic": [
+    "option-tree-node-{entityId}",
+    "region-column-{depth}",
+    "list-search-results",
+    "text-readout-native"
+  ]
+}

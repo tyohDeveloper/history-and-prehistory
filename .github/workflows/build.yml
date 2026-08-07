@@ -1,0 +1,59 @@
+# Build gate. `npm run build` runs the full composed chain and fails on the
+# first stage error, so "tests run at build time" is enforced rather than
+# aspirational. Playwright runs as a separate job against the built artifact
+# so bundler iteration stays fast.
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: Composed build (check + test + bundle + minify + verify)
+        run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: history-single-file
+          path: dist/public/index.html
+          retention-days: 7
+
+  e2e:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Build artifact for e2e
+        run: npm run build
+      - run: npm run test:e2e
+
+  dataset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install jsonschema
+      - name: Validate dataset against schemas
+        run: python tools/validate.py

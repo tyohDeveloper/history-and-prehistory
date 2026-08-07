@@ -1,0 +1,35 @@
+{
+  "name": "history-and-prehistory",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "description": "Offline, privacy-safe picker for historical and prehistoric periods, eras, dynasties, and rulers.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyohDeveloper/history-and-prehistory.git"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5000",
+    "preview": "vite preview --host 0.0.0.0 --port 5000",
+    "check": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:e2e": "playwright test",
+    "validate:data": "python3 tools/validate.py",
+    "build:bundle": "NODE_ENV=production vite build",
+    "minify:artifact": "node scripts/minify-artifact.mjs",
+    "verify:build": "node scripts/verify-build.mjs",
+    "build": "npm run check && npm run test:run && npm run build:bundle && npm run minify:artifact && npm run verify:build"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.5",
+    "html-minifier-terser": "^7.2.0",
+    "sax": "^1.4.1",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.7",
+    "vite-plugin-singlefile": "^2.1.0",
+    "vitest": "^2.1.8"
+  }
+}

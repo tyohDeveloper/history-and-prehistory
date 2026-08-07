@@ -243,51 +243,108 @@ model and the BP question turn out to be the same question.
 
 ## Progressive disclosure for complicated dates
 
-Some dating situations are genuinely messy — radiocarbon sequences disagreeing with king lists,
-the high/middle/low variants of Egyptian chronology, a Bronze Age boundary that moved twice this
-decade. The readout must not try to explain all of that inline, and must not pretend it does not
-exist either.
+Some dating situations are genuinely messy — radiocarbon disagreeing with king lists, the
+high/middle/low variants of Egyptian chronology, a boundary that is an argument about definitions
+rather than evidence. The readout must not explain all of that inline, and must not pretend it
+does not exist.
 
-**Show the basics; signal that the basics are not sufficient; offer a way through.**
+**Show the basics; name the kind of complication; offer a way through.**
+
+### Disclosure attaches to a boundary, not an entity
+
+The Roman Empire's start is uncontroversial. Its end is one of the most argued dates in the field
+— 476, 480, 1453 — and the argument is definitional rather than evidential. Boundaries carry their
+own disputes, so they carry their own dating. `BoundaryDating` is per start and per end.
 
 ### Rival claims are not one wide range
 
-The important modelling point: competing chronologies are *not* imprecision. Three rival
-positions flattened into one fuzzy interval misrepresents all three — it implies the middle is
-most likely when the actual claim is that scholars disagree about which of three is right. So
-alternatives are separate claims, each with its own value, label, and sources:
+Competing chronologies are not imprecision. Flattening three rival positions into a single fuzzy
+interval misrepresents all three: it implies the middle is likeliest, when the actual claim is
+that the field disagrees about which is right. So alternatives are separate `DatingClaim`s, each
+with its own value, label, standing, and sources.
 
-```ts
-interface DatingClaim { value: YearValue; label: string; sources?: SourceRef[] }
-interface EntityDating {
-  primary: YearValue;            // the early-undergraduate answer
-  alternatives?: DatingClaim[];  // what the disclosure opens
-  note?: string;                 // why the field is divided
-  sources?: SourceRef[];
-}
-```
+`standing` separates `traditional` from the rest deliberately. "Rome founded 753 BCE" and "Narmer
+c. 3100 BCE" are received dates, not findings, and giving them the same weight as measured or
+attested dates is the commonest way a history reference misleads. The dataset already flags a few
+with `date_precision: "traditional"`; this promotes that from a precision flag to a statement
+about standing, which is what it always was.
 
-### The affordance
+### The marker names the complication
 
-`hasDisclosure()` tells the UI whether to render the marker at all, so undisputed dates stay
-completely clean. Where it fires, the readout shows a subtle indicator on the date line — a dotted
-underline or a superscript marker — opening a popover with the alternatives, the note, and the
-sources.
+A generic asterisk makes every complication look alike. They are not alike — "scholars disagree"
+and "depends where you draw the line" call for completely different reading, and a user should be
+able to tell which awaits before deciding to open anything.
+
+| Reason | Marker reads | Inferred? |
+|---|---|---|
+| `rival-chronologies` | Chronologies differ | yes, from alternatives sharing a method |
+| `method-conflict` | Methods disagree | yes, from alternatives with differing methods |
+| `definitional` | Depends on definition | **no — must be authored** |
+| `traditional-date` | Traditional date | yes, from `standing` |
+| `calibration` | Calibration-dependent | no |
+| `wide-uncertainty` | Broad range | yes, from fuzz vs. age |
+| `contested-existence` | Contested | no |
+
+Four of the seven are derived, which is deliberate: authoring effort should go to the reasons that
+genuinely need a human. Nothing about the number 476 reveals that it is a definitional choice, so
+that one must be written down. That a claim marked `traditional` is a traditional date does not.
+
+When several apply, `disclosureSummary()` returns the most consequential by a fixed priority —
+`contested-existence` > `definitional` > `rival-chronologies` > `method-conflict` >
+`traditional-date` > `calibration` > `wide-uncertainty`.
+
+### Render contract
+
+- **No disclosure** — the date line renders plain. `hasDisclosure()` is false and nothing is
+  added. A marker on every date is the same as no marker; it stops carrying information.
+- **Disclosure present** — the date line gets a dotted underline plus the summary phrase in small
+  caps beside it. The phrase is the affordance; it is not hidden behind a hover.
+- **Opened** — a popover lists every claim with its label, value, standing, and method; then the
+  note; then sources as named links. Primary first, visually distinguished.
+- **Accessibility** — the marker is a real `<button>`, reachable by keyboard and touch, with
+  `aria-expanded` and `aria-controls`. Hover is never the only route. At the `specialist` tier,
+  alternatives may render inline rather than behind the popover.
+- **Test IDs** — `button-disclosure-{boundary}`, `panel-disclosure-{boundary}`,
+  `list-disclosure-claims`, per `ARCHITECTURE.md` §8.
+
+### Sources are a normalized registry
+
+Sources live in an id-keyed `sources.json`, referenced from claims by id. Deduplication is the
+reason: one chronology reference may be cited by two hundred Egyptian entities, and inlining the
+full citation at each would multiply it two hundred times in a bundle under budget. The dataset
+already normalizes calendars and themes this way, so this follows the existing shape.
+
+`kind` distinguishes `scholarly`, `reference`, `primary`, and `dataset`. A Wikipedia link and an
+excavation report are not the same kind of backing, and the sources page should be able to sort
+and label them differently.
 
 This finally gives the empty `sources` field a job. It is unpopulated on all 1,305 entities (gap
-analysis §5.2), which currently blocks the sources page the standalone-HTML5 standard calls for.
+analysis §5.2), which currently blocks the sources page the standalone-HTML5 standard requires.
 Date disclosure is the first concrete consumer, and prehistory is where it is least optional: an
 Oldowan boundary cannot be waved at as common knowledge the way a Ramesses date can.
 
-### Offline constraint on external links
+### Validator rules this implies
 
-Wikipedia links and citation lists are permitted — they are user-initiated navigations to public
-static content, opening in a new tab with `rel="noopener noreferrer"`. What is *not* permitted is
-fetching any of it at runtime. So popover content is inlined at build time; only the outbound link
-touches the network, and only when clicked. See `ARCHITECTURE.md` §2 and §10.
+Enforceable in `tools/validate.py`, and worth enforcing because each catches a real authoring
+failure:
 
-This has a bundle consequence worth tracking against `Q-16`: alternatives and sources across many
-entities will grow the dataset materially.
+1. `alternatives` non-empty requires `note` — if claims differ, say why.
+2. `standing: "superseded"` requires a `note` or a sourced replacement — superseded by what?
+3. Every `sourceIds` entry must resolve in the registry (referential integrity, as for themes).
+4. `reasons` containing `definitional` or `contested-existence` requires `note` — these cannot be
+   inferred, so an unexplained one is an authoring stub.
+5. At most one claim per boundary with `standing: "consensus"`.
+6. Warn when a registry source is cited by nothing.
+
+### Offline constraint
+
+Wikipedia links and citation lists are permitted: user-initiated navigations to public static
+content, new tab, `rel="noopener noreferrer"`. Fetching any of it at runtime is not — the CSP sets
+`connect-src 'none'` and the build check greps for `fetch`. Popover content inlines at build time;
+only the outbound click touches the network. See `ARCHITECTURE.md` §2 and §10.
+
+Bundle consequence, tracked against `Q-16`: claims and sources across many entities will grow the
+dataset materially. The registry keeps that linear in distinct sources rather than in citations.
 
 ## Focus and context (requirement 10)
 
@@ -368,6 +425,11 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
   `nativeFrame` records what the source quoted so precision is not inflated by conversion.
 - **Rival chronologies are separate claims, not one wide range**, revealed by an on-demand popover
   rather than shown inline.
+- **Disclosure attaches to a boundary, not an entity** — a start and an end carry different
+  arguments.
+- **The marker names the kind of complication** rather than showing a generic mark, and four of
+  the seven reasons are inferred so authoring effort goes where a human is actually needed.
+- **Sources are a normalized id-keyed registry**, not inlined per entity.
 - **Dates are three independently-fuzzy anchors** (`Q-1`, settled); the trapezoid is superseded.
 - **`D` blends temporal and tree distance** (`Q-6`, settled), with density normalization so the
   lens behaves consistently across sparse prehistory and dense modern history.
@@ -411,6 +473,15 @@ given as the exact-end example. But `fuzz` measured in years cannot express day 
 anchor needs either an optional month/day or a continuous day-count representation with fuzz in
 days. The clean version is to store every anchor as a day count with fuzz in days: an exact date
 is fuzz 0, `~3500 BCE` is fuzz 91,000 days. Uniform, but heavier to author and to read in JSON.
+
+**Q-19. Does `standing: "consensus"` need a source to be credible?** Rule 5 allows exactly one
+consensus claim per boundary, but nothing currently requires it to be sourced. Requiring sources
+on all 1,305 entities is unrealistic; requiring them only where a date is contested may be the
+right line.
+
+**Q-20. Should `date_precision: "traditional"` migrate to `standing`?** Three entities use it
+today. The two overlap but are not the same thing — one is about resolution, the other about
+epistemic status. Keeping both risks them drifting apart.
 
 **Q-18. Is the frame preference global, per-entity, or both?** A global "always BP" toggle is
 simple. A per-entity override is more precise but adds state the URL fragment would have to carry.

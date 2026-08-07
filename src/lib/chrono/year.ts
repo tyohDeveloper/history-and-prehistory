@@ -79,54 +79,6 @@ export interface YearValue {
   note?: string;
 }
 
-export interface SourceRef {
-  title: string;
-  url?: string;
-  note?: string;
-}
-
-/**
- * A single dating claim, attributable to a method and a source.
- *
- * Some dates are not one fuzzy value but several rival positions. Egyptian
- * chronology has high, middle, and low variants; a radiocarbon sequence can
- * disagree with a traditional king-list date by a century. Those are not
- * imprecision — they are competing claims, and flattening them into one wide
- * range misrepresents all of them.
- */
-export interface DatingClaim {
-  value: YearValue;
-  /** e.g. "Low chronology", "Radiocarbon, calibrated". */
-  label: string;
-  sources?: SourceRef[];
-}
-
-/**
- * An entity's dating, as presented.
- *
- * `primary` is the novice-facing answer — the value an early undergraduate
- * course would give. `alternatives` is what the disclosure affordance opens:
- * the basics stay simple, while signalling that the basics are not the whole
- * story and offering a way through to the rest.
- */
-export interface EntityDating {
-  primary: YearValue;
-  /** Rival positions, revealed on demand rather than shown inline. */
-  alternatives?: DatingClaim[];
-  /** Why the field is divided, as opposed to merely uncertain. */
-  note?: string;
-  sources?: SourceRef[];
-}
-
-/** True when this entity has more to say than the primary value shows. */
-export function hasDisclosure(d: EntityDating): boolean {
-  return (
-    (d.alternatives !== undefined && d.alternatives.length > 0) ||
-    d.note !== undefined ||
-    (d.sources !== undefined && d.sources.length > 0)
-  );
-}
-
 export function isCrisp(p: FuzzyPoint): boolean {
   return p.fuzz === undefined || p.fuzz === 0;
 }
@@ -183,10 +135,9 @@ export function uncertaintyOf(v: YearValue): number | undefined {
 }
 
 /**
- * Dating methods that are not calendar-derived. Anything in this set should
- * be rendered in BP and should carry a visible method flag: a calibrated
- * radiocarbon date and a historically attested date are not the same kind of
- * claim, and the readout should not present them identically.
+ * Dating methods that are not calendar-derived. A calibrated radiocarbon date
+ * and a historically attested date are not the same kind of claim, and the
+ * readout should not present them identically.
  */
 const NON_CALENDAR_METHODS: ReadonlySet<DatingMethod> = new Set([
   "radiocarbon-calibrated",
@@ -211,3 +162,185 @@ export const DATING_METHOD_LABEL: Record<DatingMethod, string> = {
   typological: "Typological / stratigraphic",
   unknown: "Unknown",
 };
+
+// ---------------------------------------------------------------------------
+// Disclosure: what to reveal when a single number is not an honest answer.
+// ---------------------------------------------------------------------------
+
+/**
+ * A source, held in a normalized registry rather than inlined per entity.
+ *
+ * Deduplication is the reason. A single chronology reference can be cited by
+ * two hundred Egyptian entities; inlining the full citation at each one would
+ * multiply it two hundred times in a bundle that must stay under budget. The
+ * dataset already normalizes calendars and themes into their own id-keyed
+ * files, so this follows the existing shape rather than inventing one.
+ */
+export type SourceKind =
+  /** Peer-reviewed or academic-press work. */
+  | "scholarly"
+  /** General reference: encyclopedia entries, standard handbooks. */
+  | "reference"
+  /** A primary document: inscription, king list, chronicle, excavation report. */
+  | "primary"
+  /** A published dataset or calibration curve. */
+  | "dataset";
+
+export interface Source {
+  id: string;
+  kind: SourceKind;
+  /** Rendered as the link text. Never a bare URL — see ARCHITECTURE.md §10. */
+  citation: string;
+  url?: string;
+  note?: string;
+}
+
+/**
+ * How a claim stands relative to the field.
+ *
+ * `traditional` is deliberately separate from the rest: "Rome founded in
+ * 753 BCE" and "Narmer c. 3100 BCE" are received dates, not findings, and
+ * presenting them with the same weight as a measured or attested date is the
+ * single most common way a history reference misleads. The dataset already
+ * marks a few of these with `date_precision: "traditional"`; this promotes
+ * that from a precision flag to a claim about standing, which is what it
+ * actually is.
+ */
+export type ClaimStanding =
+  | "consensus"
+  | "majority"
+  | "minority"
+  | "traditional"
+  | "superseded";
+
+export interface DatingClaim {
+  value: YearValue;
+  /** e.g. "Middle chronology", "Radiocarbon (IntCal20)". */
+  label: string;
+  standing: ClaimStanding;
+  /** Ids into the source registry. */
+  sourceIds?: string[];
+  note?: string;
+}
+
+/**
+ * Why this boundary needs more than one number.
+ *
+ * The reason is not decoration: it selects the wording on the marker, so a
+ * user can tell what kind of complication awaits before deciding to open it.
+ * A generic asterisk makes every complication look alike, and they are not
+ * alike — "scholars disagree" and "depends where you draw the line" call for
+ * completely different reading.
+ */
+export type DisclosureReason =
+  /** Competing chronological schemes, e.g. Egyptian high/middle/low. */
+  | "rival-chronologies"
+  /** Methods disagree, e.g. radiocarbon against a king list. */
+  | "method-conflict"
+  /** Not a dating question at all: the boundary is a matter of definition. */
+  | "definitional"
+  /** A received or legendary date rather than an established one. */
+  | "traditional-date"
+  /** Value depends on calibration choice or correlation constant. */
+  | "calibration"
+  /** No dispute, simply a broad range. */
+  | "wide-uncertainty"
+  /** The subject's existence or identity is itself contested. */
+  | "contested-existence";
+
+export const DISCLOSURE_LABEL: Record<DisclosureReason, string> = {
+  "rival-chronologies": "Chronologies differ",
+  "method-conflict": "Methods disagree",
+  definitional: "Depends on definition",
+  "traditional-date": "Traditional date",
+  calibration: "Calibration-dependent",
+  "wide-uncertainty": "Broad range",
+  "contested-existence": "Contested",
+};
+
+/**
+ * The dating of ONE boundary — a start or an end, not an entity.
+ *
+ * Attaching disclosure to the entity would be wrong: the Roman Empire's start
+ * is not controversial, while its end is one of the most argued dates in the
+ * field (476? 480? 1453?) and is a definitional dispute rather than an
+ * evidential one. Boundaries carry their own arguments, so they carry their
+ * own dating.
+ */
+export interface BoundaryDating {
+  primary: DatingClaim;
+  alternatives?: DatingClaim[];
+  /** Stated reasons. Combined with inferred ones by `disclosureReasons()`. */
+  reasons?: DisclosureReason[];
+  /** Why the field is divided, as opposed to merely imprecise. */
+  note?: string;
+}
+
+/** Uncertainty at or above this fraction of a date's age reads as "broad". */
+export const WIDE_UNCERTAINTY_RATIO = 0.1;
+/**
+ * Reasons to disclose, stated and inferred together.
+ *
+ * Some reasons are derivable, and deriving them keeps authors from having to
+ * restate the obvious: a claim marked `traditional` is self-evidently a
+ * traditional date, and a range spanning a tenth of its own age is
+ * self-evidently broad. Authoring effort should go to the reasons that
+ * genuinely need a human — why two methods conflict, or where a definitional
+ * line is being drawn.
+ */
+export function disclosureReasons(d: BoundaryDating): DisclosureReason[] {
+  const out = new Set<DisclosureReason>(d.reasons ?? []);
+
+  if (d.primary.standing === "traditional") out.add("traditional-date");
+
+  const alternatives = d.alternatives ?? [];
+  if (alternatives.length > 0) {
+    const methods = new Set(
+      [d.primary, ...alternatives].map((c) => c.value.method ?? "unknown"),
+    );
+    out.add(methods.size > 1 ? "method-conflict" : "rival-chronologies");
+  }
+
+  const uncertainty = uncertaintyOf(d.primary.value);
+  const age = Math.abs(d.primary.value.consensus.year);
+  if (uncertainty !== undefined && age > 0 && uncertainty / age >= WIDE_UNCERTAINTY_RATIO) {
+    out.add("wide-uncertainty");
+  }
+
+  return [...out];
+}
+
+/**
+ * Should the UI render a disclosure marker at all?
+ *
+ * Undisputed dates must stay completely clean. A marker on every date is the
+ * same as no marker: it stops carrying information and becomes visual noise.
+ */
+export function hasDisclosure(d: BoundaryDating): boolean {
+  return disclosureReasons(d).length > 0 || d.note !== undefined;
+}
+
+/**
+ * One-phrase summary for the marker itself, before anything is opened.
+ * Returns the most consequential reason when several apply.
+ */
+const REASON_PRIORITY: readonly DisclosureReason[] = [
+  "contested-existence",
+  "definitional",
+  "rival-chronologies",
+  "method-conflict",
+  "traditional-date",
+  "calibration",
+  "wide-uncertainty",
+];
+
+export function disclosureSummary(d: BoundaryDating): string | undefined {
+  const reasons = new Set(disclosureReasons(d));
+  const top = REASON_PRIORITY.find((r) => reasons.has(r));
+  return top === undefined ? undefined : DISCLOSURE_LABEL[top];
+}
+
+/** Every claim for a boundary, primary first. */
+export function allClaims(d: BoundaryDating): DatingClaim[] {
+  return [d.primary, ...(d.alternatives ?? [])];
+}

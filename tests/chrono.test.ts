@@ -1,6 +1,15 @@
 import { describe, expect, it } from "vitest";
 import { bpFromYear, formatBp, formatBpRange, resolveFrame, suggestFrame, yearFromBp } from "../src/lib/chrono/bp";
-import { hasDisclosure, isExact, supportOf, uncertaintyOf } from "../src/lib/chrono/year";
+import {
+  allClaims,
+  disclosureReasons,
+  disclosureSummary,
+  hasDisclosure,
+  isExact,
+  supportOf,
+  uncertaintyOf,
+} from "../src/lib/chrono/year";
+import type { BoundaryDating, DatingClaim } from "../src/lib/chrono/year";
 import type { YearValue } from "../src/lib/chrono/year";
 
 // The cases that drove the design. Named so a regression says which idea broke.
@@ -105,15 +114,120 @@ describe("display frame is a UI choice, not a property of the data", () => {
   });
 });
 
-describe("disclosure", () => {
-  it("flags entities with more to say than the primary value", () => {
-    expect(hasDisclosure({ primary: SEPT_11 })).toBe(false);
-    expect(
-      hasDisclosure({
-        primary: STONEHENGE,
-        alternatives: [{ value: ALEXANDER, label: "Traditional" }],
-      }),
-    ).toBe(true);
-    expect(hasDisclosure({ primary: SEPT_11, sources: [{ title: "x" }] })).toBe(true);
+
+// --- Disclosure -----------------------------------------------------------
+// Cases drawn from real chronological arguments, so a failure names the idea.
+
+const claim = (over: Partial<DatingClaim> & Pick<DatingClaim, "value">): DatingClaim => ({
+  label: "Conventional",
+  standing: "consensus",
+  ...over,
+});
+
+/** Undisputed: a date nobody argues about. */
+const PLAIN: BoundaryDating = { primary: claim({ value: SEPT_11 }) };
+
+/** Egyptian New Kingdom: three rival schemes, same evidence base. */
+const EGYPTIAN: BoundaryDating = {
+  primary: claim({ value: { consensus: { year: -1550 } }, label: "Middle chronology" }),
+  alternatives: [
+    claim({ value: { consensus: { year: -1565 } }, label: "High chronology", standing: "minority" }),
+    claim({ value: { consensus: { year: -1539 } }, label: "Low chronology", standing: "minority" }),
+  ],
+  note: "Schemes differ by a few decades; anchoring depends on Sothic dating assumptions.",
+};
+
+/** Radiocarbon against a king list — different methods, not just different numbers. */
+const METHOD_CLASH: BoundaryDating = {
+  primary: claim({
+    value: { consensus: { year: -1200 }, method: "calendar" },
+    label: "Traditional king-list date",
+  }),
+  alternatives: [
+    claim({
+      value: { consensus: { year: -1260, fuzz: 40 }, method: "radiocarbon-calibrated" },
+      label: "Radiocarbon (IntCal20)",
+      standing: "majority",
+    }),
+  ],
+};
+
+/** Rome's founding: received, not established. */
+const TRADITIONAL: BoundaryDating = {
+  primary: claim({
+    value: { consensus: { year: -753 } },
+    label: "Varronian date",
+    standing: "traditional",
+  }),
+};
+
+/** Fall of the Western Empire: a definitional argument, not an evidential one. */
+const DEFINITIONAL: BoundaryDating = {
+  primary: claim({ value: { consensus: { year: 476 } }, label: "Deposition of Romulus Augustulus" }),
+  reasons: ["definitional"],
+  note: "Some date the end to 480, others to 1453; the boundary is a matter of definition.",
+};
+
+describe("disclosure fires only when a single number would mislead", () => {
+  it("stays silent on undisputed dates", () => {
+    expect(hasDisclosure(PLAIN)).toBe(false);
+    expect(disclosureSummary(PLAIN)).toBeUndefined();
+  });
+
+  it("distinguishes rival schemes from clashing methods", () => {
+    // Same method throughout: the schemes differ, not the evidence type.
+    expect(disclosureReasons(EGYPTIAN)).toContain("rival-chronologies");
+    expect(disclosureReasons(EGYPTIAN)).not.toContain("method-conflict");
+    // Different methods: that is the more informative thing to say.
+    expect(disclosureReasons(METHOD_CLASH)).toContain("method-conflict");
+  });
+
+  it("infers a traditional date from claim standing", () => {
+    expect(disclosureReasons(TRADITIONAL)).toContain("traditional-date");
+    expect(disclosureSummary(TRADITIONAL)).toBe("Traditional date");
+  });
+
+  it("infers a broad range without the author saying so", () => {
+    const broad: BoundaryDating = {
+      primary: claim({ value: { consensus: { year: -3500, fuzz: 500 } } }),
+    };
+    expect(disclosureReasons(broad)).toContain("wide-uncertainty");
+  });
+
+  it("carries a stated reason that cannot be inferred", () => {
+    // Nothing about the numbers reveals that 476 is a definitional choice.
+    expect(disclosureReasons(DEFINITIONAL)).toContain("definitional");
+  });
+});
+
+describe("the marker says what kind of complication it is", () => {
+  it("surfaces the most consequential reason when several apply", () => {
+    // Definitional outranks the wide range that also applies here.
+    const both: BoundaryDating = {
+      primary: claim({ value: { consensus: { year: 476, fuzz: 100 } } }),
+      reasons: ["definitional"],
+    };
+    expect(disclosureReasons(both).length).toBeGreaterThan(1);
+    expect(disclosureSummary(both)).toBe("Depends on definition");
+  });
+
+  it("names the disagreement rather than showing a generic mark", () => {
+    expect(disclosureSummary(EGYPTIAN)).toBe("Chronologies differ");
+    expect(disclosureSummary(METHOD_CLASH)).toBe("Methods disagree");
+  });
+});
+
+describe("claims", () => {
+  it("returns every claim with the primary first", () => {
+    expect(allClaims(EGYPTIAN).map((c) => c.label)).toEqual([
+      "Middle chronology",
+      "High chronology",
+      "Low chronology",
+    ]);
+    expect(allClaims(PLAIN)).toHaveLength(1);
+  });
+
+  it("treats a note alone as grounds for disclosure", () => {
+    expect(hasDisclosure({ primary: claim({ value: SEPT_11 }), note: "why" })).toBe(true);
   });
 });

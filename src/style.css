@@ -299,3 +299,98 @@ footer a { color: var(--ink-dim); }
   line-height: 1.45;
   color: var(--muted, #666);
 }
+
+/* --- Focus+context lens -------------------------------------------------
+   Space per row varies with degree of interest; position stays monotonic in
+   time. Q-7: the distortion is typographic and one-dimensional, not a
+   hyperbolic disk, because sibling order here is temporal and is itself the
+   information. `--doi` is normalized interest in [0,1], set per row.        */
+
+.workspace {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+}
+
+.context {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-left: 1px solid var(--line, #ddd);
+  padding: 0.6rem 0.75rem;
+  background: var(--panel, #fafafa);
+}
+
+.context-body {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.context-head {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted, #666);
+  margin-bottom: 0.4rem;
+}
+
+.context-empty {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted, #666);
+}
+
+.context-body { display: flex; flex-direction: column; }
+
+.context-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  cursor: pointer;
+  border-radius: 4px;
+  /* The three effects move together so the falloff reads as one gradient. */
+  padding: calc(0.08rem + 0.20rem * var(--doi)) 0.4rem;
+  font-size: calc(0.74rem + 0.20rem * var(--doi));
+  opacity: calc(0.45 + 0.55 * var(--doi));
+}
+
+.context-row:hover {
+  background: var(--hover, #eee);
+  opacity: 1;
+}
+
+.context-row.is-focus {
+  font-weight: 600;
+  background: var(--sel, #e8eefc);
+  opacity: 1;
+}
+
+/* A contemporary from another branch is the thing Miller columns can never
+   show, so it is marked rather than left to blend in. */
+.context-row.is-elsewhere .context-name::before {
+  content: "\2197\00a0";
+  color: var(--muted, #888);
+}
+
+.context-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.context-when {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted, #666);
+  font-size: 0.72rem;
+}
+
+.context-budget {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--muted, #666);
+}
+
+.context-budget input { flex: 1; }
+.context-count { font-variant-numeric: tabular-nums; }

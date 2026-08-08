@@ -193,3 +193,59 @@ test("shows the behavioural floor as a threshold, not a site", async ({ page }) 
   // One-sided: a floor with no end, not an interval.
   await expect(page.getByTestId("text-readout-range")).toContainText("3.3 Ma");
 });
+
+test("the lens shows what surrounded the focus", async ({ page }) => {
+  await page.getByTestId("select-detail-tier").selectOption("specialist");
+  await page.getByTestId("button-toggle-context").click();
+  for (const id of [
+    "global", "east-asia", "east-asia.japan",
+    "east-asia.japan.heian", "east-asia.japan.heian.kohei",
+  ]) {
+    const n = page.getByTestId(`option-tree-node-${id}`);
+    await n.scrollIntoViewIfNeeded();
+    await n.click();
+  }
+  const rows = page.locator('[data-testid^="option-context-"]');
+  await expect(rows.first()).toContainText("Kōhei");
+  // Adjacent nengō, ranked by time rather than by tier: all 88 Heian children
+  // share one tier, so tier can contribute nothing here.
+  await expect(rows.nth(2)).toContainText("Tengi");
+});
+
+test("the lens reaches contemporaries in other branches", async ({ page }) => {
+  // The thing Miller columns can never show, and the reason Q-8 did not need
+  // a separately draggable lens.
+  await page.getByTestId("select-detail-tier").selectOption("specialist");
+  await page.getByTestId("button-toggle-context").click();
+  for (const id of [
+    "global", "east-asia", "east-asia.japan",
+    "east-asia.japan.heian", "east-asia.japan.heian.kohei",
+  ]) {
+    const n = page.getByTestId(`option-tree-node-${id}`);
+    await n.scrollIntoViewIfNeeded();
+    await n.click();
+  }
+  await page.getByTestId("input-context-budget").fill("40");
+  await page.getByTestId("input-context-budget").dispatchEvent("input");
+  await expect(page.locator(".context-row.is-elsewhere").first()).toContainText("Song Dynasty");
+});
+
+test("clicking in the lens moves the selection", async ({ page }) => {
+  // Q-8: one focus, two ways to move it.
+  await page.getByTestId("button-toggle-context").click();
+  await page.getByTestId("option-tree-node-global").click();
+  await page.getByTestId("option-tree-node-global.prehistory").click();
+  const row = page.locator('[data-testid^="option-context-"]').nth(1);
+  const name = (await row.locator(".context-name").textContent()) ?? "";
+  await row.click();
+  await expect(page.getByTestId("text-readout-name")).toHaveText(name);
+});
+
+test("the budget replaces the tier filter as the amount control", async ({ page }) => {
+  await page.getByTestId("button-toggle-context").click();
+  await page.getByTestId("option-tree-node-global").click();
+  await page.getByTestId("option-tree-node-global.prehistory").click();
+  await page.getByTestId("input-context-budget").fill("8");
+  await page.getByTestId("input-context-budget").dispatchEvent("input");
+  await expect(page.locator('[data-testid^="option-context-"]')).toHaveCount(8);
+});

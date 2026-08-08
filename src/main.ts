@@ -1,6 +1,7 @@
 import "./style.css";
 import { datasetVersion, entities } from "./dataset/dataset";
 import { displayRange } from "./chrono/displayRange";
+import { contextNeighbours } from "./focus/contextNeighbours";
 import { datingOf } from "./chrono/fromEntity";
 import { isCalendarConvertible } from "./chrono/year";
 import {
@@ -49,6 +50,9 @@ interface State {
   /** Calendars shown in the readout. Persisted only in location.hash. */
   calendars: string[];
   calendarPickerOpen: boolean;
+  /** Focus+context lens beside the columns. Q-9: a budget, not a tier filter. */
+  contextOpen: boolean;
+  contextBudget: number;
 }
 
 const state: State = {
@@ -57,6 +61,8 @@ const state: State = {
   query: "",
   calendars: parseSelection(window.location.hash),
   calendarPickerOpen: false,
+  contextOpen: false,
+  contextBudget: 24,
 };
 
 /**
@@ -398,6 +404,36 @@ function renderHeader(): HTMLElement {
   });
   controls.append(search);
 
+  const ctxToggle = el("button", {
+
+
+    type: "button",
+
+
+    class: `toggle${state.contextOpen ? " is-on" : ""}`,
+
+
+    "data-testid": "button-toggle-context",
+
+
+    "aria-pressed": state.contextOpen ? "true" : "false",
+
+
+  }, "In context");
+
+
+  ctxToggle.addEventListener("click", () => {
+
+
+    state.contextOpen = !state.contextOpen;
+
+
+    render();
+
+
+  });
+
+
   const tier = el("select", {
     "aria-label": "Level of detail",
     "data-testid": "select-detail-tier",
@@ -416,6 +452,7 @@ function renderHeader(): HTMLElement {
     render();
   });
   controls.append(tier);
+  controls.append(ctxToggle);
   controls.append(renderCalendarPicker());
 
   head.append(controls);
@@ -436,10 +473,81 @@ function renderFooter(): HTMLElement {
   );
 }
 
+/**
+ * The focus+context lens.
+ *
+ * Space allocated per row varies with degree of interest, and typography
+ * reinforces it; position stays monotonic in time. That is Q-7 settled: a
+ * hyperbolic disk needs sibling order to be free so children can be placed
+ * radially, and here sibling order is temporal and is the information. Heian's
+ * 88 nengō are a strict sequence — fanning them round a disk would destroy the
+ * one relationship a reader needs.
+ *
+ * The focus is the current selection (Q-8), so clicking a row moves both.
+ */
+function renderContext(): HTMLElement | null {
+  if (!state.contextOpen) return null;
+  const focus = selected();
+  const box = el("div", { class: "context", "data-testid": "panel-context-lens" });
+  box.append(el("div", { class: "context-head" }, "In context"));
+
+  if (!focus || focus.start_year === null) {
+    box.append(el("p", { class: "context-empty" }, "Select a dated entity to see what surrounds it."));
+    return box;
+  }
+
+  const neighbours = contextNeighbours(entities, focus, state.contextBudget, index);
+  const top = neighbours[0]?.score ?? 0;
+  const bottom = neighbours[neighbours.length - 1]?.score ?? top - 1;
+  const list = el("div", { class: "context-body", role: "listbox", "data-testid": "list-context" });
+
+  for (const n of neighbours) {
+    // Normalized interest drives size, weight and opacity together, so the
+    // falloff reads as one gradient rather than three effects.
+    const t = bottom === top ? 1 : (n.score - bottom) / (top - bottom);
+    const row = el("div", {
+      class: `context-row${n.entity.id === focus.id ? " is-focus" : ""}${n.elsewhere ? " is-elsewhere" : ""}`,
+      role: "option",
+      "aria-selected": n.entity.id === focus.id ? "true" : "false",
+      "data-testid": `option-context-${n.entity.id}`,
+      style: `--doi:${t.toFixed(3)}`,
+    });
+    row.append(el("span", { class: "context-name" }, n.entity.name));
+    row.append(el("span", { class: "context-when" }, displayRange(n.entity).text));
+    row.addEventListener("click", () => selectEntity(n.entity.id));
+    list.append(row);
+  }
+  box.append(list);
+
+  const budget = el("label", { class: "context-budget" }, "Detail ");
+  const input = el("input", {
+    type: "range", min: "8", max: "60", step: "4",
+    value: String(state.contextBudget),
+    "data-testid": "input-context-budget",
+    "aria-label": "How much context to show",
+  }) as HTMLInputElement;
+  input.addEventListener("input", () => {
+    state.contextBudget = Number(input.value);
+    render();
+  });
+  budget.append(input);
+  budget.append(el("span", { class: "context-count" }, `${neighbours.length}`));
+  box.append(budget);
+  return box;
+}
+
 function render(): void {
   const app = document.querySelector<HTMLDivElement>("#app");
   if (!app) return;
-  app.replaceChildren(renderHeader(), renderColumns(), renderReadout(), renderFooter());
+  // The lens sits BESIDE the columns, not below them. Stacking it cost the
+  // columns 67px of height, which is enough to push rows out of a long column
+  // like Heian's 88 nengo - and "a second view alongside the Miller columns"
+  // was the design intent anyway.
+  const ctx = renderContext();
+  const workspace = el("div", { class: "workspace" }, );
+  workspace.append(renderColumns());
+  if (ctx) workspace.append(ctx);
+  app.replaceChildren(renderHeader(), workspace, renderReadout(), renderFooter());
 }
 
 /**

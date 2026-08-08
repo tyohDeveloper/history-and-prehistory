@@ -3,8 +3,11 @@
 App releases. The dataset is versioned independently — see
 [`docs/DATASET-CHANGELOG.md`](docs/DATASET-CHANGELOG.md). The header shows both.
 
-Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); this project uses
-[semantic versioning](https://semver.org/spec/v2.0.0.html).
+Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are four-part,
+`MAJOR.MAJORFIX.MINORFIX.SPELLING`, and are **not** semver — see
+[`docs/CODING-STANDARDS.md`](docs/CODING-STANDARDS.md) §12. App and data are tracked separately and
+their numbers are unrelated: the app leads with `3` because it works as intended, the data with `0`
+because it is materially incomplete.
 
 ## [Unreleased]
 
@@ -13,9 +16,14 @@ this release.
 
 ## [0.5.0] — 2026-08-08
 
-First tagged release. Versions 0.2.0 through 0.4.0 never existed: `package.json` sat at `0.1.0`
-from the first commit while the work below landed, so this changelog starts here rather than
-inventing a release history to fill the gap.
+First tagged release, cut while the project still used three-part semver. It was renumbered
+shortly afterwards when four-part versioning was adopted: this release is the app now known as
+**3.1.1.0**, and the dataset it ships moved from `3.1.0` to the data track's `0.5.0.1`. The old
+`v0.5.0` tag is kept so the reference in this file does not rot.
+
+Nothing between `0.1.0` and `0.5.0` was ever released: `package.json` sat at `0.1.0` from the first
+commit while the work below landed, so this changelog starts here rather than inventing a release
+history to fill the gap.
 
 Ships as one self-contained HTML file that runs offline from `file://`, stores nothing, and makes
 no network requests.

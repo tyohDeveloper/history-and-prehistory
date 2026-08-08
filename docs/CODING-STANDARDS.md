@@ -501,7 +501,32 @@ removed.
 - **README as a contract** — minimum: one-line description, quickstart, build command, license line, link to the deployed instance if any.
 - **`.gitignore` from the first commit** — `node_modules/`, build outputs, coverage, editor files, OS junk, and secrets (`.env*` except `.env.example`).
 - **CHANGELOG discipline** — Keep-a-Changelog style, adopted at the first tagged release rather than retrofitted.
-- **Semantic versioning** for anything tagged and released.
+- **Four-part versioning** for anything tagged and released — `MAJOR.MAJORFIX.MINORFIX.SPELLING`,
+  significance falling left to right:
+
+  | Position | Bump it for |
+  |---|---|
+  | 1 `MAJOR` | Major change to the application or the database. |
+  | 2 `MAJORFIX` | Major bug fixing, multi-file changes, minor UI changes. |
+  | 3 `MINORFIX` | Minor bug fixes. |
+  | 4 `SPELLING` | Minor spelling and copy changes. |
+
+  This is deliberately **not** semver, and the difference is not cosmetic. Semver encodes a
+  compatibility promise to consumers of an API; these apps have no API consumers, so that promise
+  has nothing to describe. What a solo maintainer actually needs to read off a version is *how big
+  was this change*, which semver cannot express — it has one slot for "not breaking, not a
+  feature" and this scheme has three. Do not describe these versions as semver, and do not link
+  semver.org from a CHANGELOG.
+
+- **The app and its data are versioned on separate tracks.** They move for different reasons and
+  neither number constrains the other. `scripts/release.mjs` is the only supported way to bump
+  either: it refuses a dirty tree, validates the format, keeps `package-lock.json` and
+  `tools/build_data.py` in step, and tags `<id>-app` or `<id>-data` so the two histories stay
+  legible in `git tag`.
+
+  A track's leading digit is a readiness claim, so the two can sit far apart. In this repo the app
+  is at `3.1.x.x` because it does what it is meant to do, while the data is at `0.5.x.x` because it
+  is materially incomplete and not ready for general use. Do not "tidy" one to match the other.
 - **Repo topics** — a small set per repo (`tyoh-app`, deployment target, primary language) for discoverability.
 
 ---

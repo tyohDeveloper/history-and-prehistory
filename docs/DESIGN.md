@@ -1744,6 +1744,18 @@ invites them to disagree, and they already can, since the select can hide a colu
 lens still ranks. Removing the select in the same commit that introduced its replacement risked
 losing both; it should come out once the lens has been used enough to trust.
 
+## Planned changes
+
+Decided enhancements waiting on time rather than on a decision. Unlike a `Q-n` item there is no
+open question here — if one turns up while building, it becomes a `Q-n` and moves to the register.
+
+- **"Open Wikipedia" button on the readout.** Links to
+  `https://en.wikipedia.org/w/index.php?search={topic}`, where `{topic}` is the entity shown in the
+  lower panel. Two things to settle at build time rather than now: the offline guarantee means this
+  must be a plain link the user chooses to follow, never a fetch or a prefetch, and the search
+  string wants the entity's own name rather than its id — several names carry diacritics and
+  non-Latin script, so it needs URL-encoding, not the folded search key.
+
 ### Resolved
 
 - ~~`Q-7` Is the distortion geometric or typographic?~~ — **typographic, over a one-dimensional

@@ -16,14 +16,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.8.0.0");
+    expect(datasetVersion).toBe("0.9.0.0");
     expect(schemaVersion).toBe("3.0.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1480);
+    expect(entities.length).toBe(1519);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -103,11 +103,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(175);
+    expect(cited.length).toBe(214);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(182);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(221);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -119,7 +119,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(123);
+    expect(withEnd.length).toBe(158);
 
     const differing = entities
       .filter(
@@ -321,5 +321,90 @@ describe("Neolithic transition", () => {
     expect(horse.start_year).toBe(-2200);
     const botai = horse.alternatives?.find((a) => a.label.includes("Botai"));
     expect(botai?.standing).toBe("superseded");
+  });
+});
+
+describe("Europe 10,000-2,500 BCE", () => {
+  it("fills the Mesolithic hole", () => {
+    // Before this pass Europe had nothing at all between 10,000 and 5,500 BCE.
+    const band = entities.filter(
+      (e) =>
+        e.id.startsWith("europe.prehistory") &&
+        e.start_year !== null &&
+        e.start_year >= -10000 &&
+        e.start_year < -5500,
+    );
+    expect(band.length).toBeGreaterThanOrEqual(8);
+  });
+
+  it("keeps Lepenski Vir's hiatus visible instead of smoothing it", () => {
+    const lv = entities.find((e) => e.id === "europe.prehistory.lepenski-vir")!;
+    expect(lv.date_note).toMatch(/EMPTY for at least 700 years/);
+    expect(lv.alternatives?.[0]?.standing).toBe("superseded");
+  });
+
+  it("refuses a single pan-European Sauveterrian date", () => {
+    // Italian AMS and French typological dating differ by about a millennium.
+    const s = entities.find((e) => e.id === "europe.prehistory.sauveterrian")!;
+    expect(s.date_precision).toBe("disputed");
+    expect(s.date_note).toMatch(/REGIONAL, NOT PAN-EUROPEAN/);
+  });
+
+  it("does not author the Tardenoisian at all", () => {
+    // Sources disagreed by up to 3,000 years and mixed calibrated with
+    // uncalibrated figures. A gap is better than a guess.
+    expect(entities.some((e) => /tardenois/i.test(e.id))).toBe(false);
+  });
+
+  it("carries Varna's superseded traditional chronology", () => {
+    const v = entities.find((e) => e.id === "europe.prehistory.varna")!;
+    expect(v.start_year).toBe(-4596);
+    expect(v.alternatives?.some((a) => a.standing === "superseded")).toBe(true);
+  });
+});
+
+describe("Holocene Americas", () => {
+  it("stores Monte Verde in calendar years, not cal BP", () => {
+    // Regression: this entity held -14500..-14000 and its alternative
+    // -8200..-4200. Those were cal BP figures written into the BCE field,
+    // putting the site 1,950 years too early. 14,500 cal BP is 12,551 BCE.
+    const mv = entities.find((e) => e.id === "global.paleolithic.monte-verde")!;
+    expect(mv.start_year).toBe(-12551);
+    expect(mv.end_year).toBe(-12251);
+    const alt = mv.alternatives?.find((a) => a.label.includes("Surovell"))!;
+    expect(alt.start_year).toBe(-6251);
+    expect(alt.end_year).toBe(-2251);
+  });
+
+  it("has exactly one Monte Verde", () => {
+    // Two of them, disagreeing by two millennia, is what exposed the bug above.
+    expect(entities.filter((e) => /Monte Verde/.test(e.name)).length).toBe(1);
+  });
+
+  it("marks uncalibrated dates as uncalibrated", () => {
+    // Las Vegas is published in radiocarbon years. The app refuses calendar
+    // conversion for these, which only works if the method is recorded.
+    const lv = entities.find((e) => e.id === "americas.prehistory.las-vegas-culture")!;
+    expect(lv.start_dating_method).toBe("radiocarbon-uncalibrated");
+  });
+
+  it("puts American mummification before Egypt's", () => {
+    const m = entities.find(
+      (e) => e.id === "global.prehistory.firsts.artificial-mummification",
+    )!;
+    expect(m.start_year).toBeLessThan(-6000);
+    expect(m.caveats?.[0]?.kind).toBe("misconception");
+  });
+
+  it("reports Cerro Sechin's date as unverified rather than repeating it", () => {
+    const cs = entities.find((e) => e.id === "americas.prehistory.cerro-sechin")!;
+    expect(cs.start_year).toBe(-1887);
+    expect(cs.caveats?.[0]?.text).toMatch(/unverified/);
+  });
+
+  it("adds the two later rounds of the White Sands dispute", () => {
+    const ws = entities.find((e) => e.id === "americas.prehistory.white-sands")!;
+    expect(ws.date_note).toMatch(/three\s+material types, two labs/);
+    expect(ws.alternatives?.length).toBeGreaterThanOrEqual(2);
   });
 });

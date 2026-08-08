@@ -14,6 +14,26 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.7.0.0-app] — 2026-08-08
+
+### Fixed
+
+- **The column gutter converted uncalibrated radiocarbon ages to BCE, which the
+  readout explicitly refuses to do.** The same entity read "8851-4651 BCE" in the
+  column and "10.8 - 6.6 ka ¹⁴C BP" three inches away in the panel, which is the
+  exact false precision `renderCalendarRows` was written to prevent. `shortRange`
+  now defers to the readout's formatter for these. Affects 14 entities; found
+  while reviewing new Ecuadorian data, but pre-existing.
+
+### Changed
+
+- Ships dataset 0.9.0.0: the European Mesolithic and the arrival of farming, the
+  Holocene Americas, and a units fix to Monte Verde.
+- Build size baseline rebased to 163,818 bytes gzip. Content: 39 net new
+  entities and 58 new sources.
+
+See [`docs/DATASET-CHANGELOG.md`](docs/DATASET-CHANGELOG.md) for 0.9.0.0.
+
 ## [3.6.0.0-app] — 2026-08-08
 
 ### Added

@@ -426,22 +426,37 @@ def extend(E, glob):
                 "not map cleanly.",
       source_ids=["dietrich-2013-gobekli"])
 
-    P("monte-verde", "Monte Verde II", paleo, -14500, -14000, "intermediate",
+    # UNITS FIX (data 0.9.0.0): this entity previously stored -14500..-14000 and
+    # its alternative -8200..-4200. Both were cal BP figures written straight
+    # into the BCE field, putting the site ~1,950 years too early and the rival
+    # claim ~2,250 years too early. Exactly the error `bp()` exists to prevent,
+    # and the reason a bare number should never be assigned to a year field
+    # here. Found when a second Monte Verde was authored from the Americas pass
+    # and the two disagreed.
+    P("monte-verde", "Monte Verde II", paleo, bp(14500), bp(14200), "intermediate",
       summary="A settlement in southern Chile whose age broke the Clovis-first model of "
               "the peopling of the Americas.",
-      start_dating_method="radiocarbon-calibrated", standing="consensus",
+      start_dating_method="radiocarbon-calibrated",
+      end_dating_method="radiocarbon-calibrated", standing="consensus",
       as_of="2026-06-30",
-      date_note="Under active challenge: a March 2026 reanalysis proposed a Holocene age, "
-                "roughly thirty specialists rebutted it in May, and the authors replied in "
-                "June.",
+      date_note="Median c. 14,530 cal BP, 95.4% range 14,200-14,900 cal BP; the span shown is "
+                "the dating range, not a measured occupation length. Under active challenge: a "
+                "March 2026 reanalysis proposed a Holocene age, roughly thirty specialists "
+                "rebutted it in May, and the authors replied in June. The genetic models for "
+                "the peopling of the Americas do not depend on the outcome either way.",
       alternatives=[{
           "label": "Surovell et al. 2026",
           "standing": "minority",
-          "start_year": -8200, "end_year": -4200,
+          "start_year": bp(8200), "end_year": bp(4200),
           "dating_method": "radiocarbon-calibrated",
           "note": "Argues the dated material is intrusive and the occupation is mid-Holocene.",
-          "source_ids": ["surovell-2026-monte-verde"]}],
-      source_ids=["dillehay-1997-monte-verde", "surovell-2026-monte-verde"])
+          "source_ids": ["surovell-2026-monte-verde", "monte-verde-controversy-2026"]}],
+      caveats=[{"kind": "contested-existence",
+                "text": "The site that broke Clovis First is itself under serious challenge, "
+                        "and the argument is live as of 2026.",
+                "source_ids": ["monte-verde-controversy-2026"]}],
+      source_ids=["dillehay-1997-monte-verde", "surovell-2026-monte-verde",
+                  "monte-verde-antiquity-2023"])
 
     # =========================================================================
     # STRAND 3 of 3 - WHAT THEY FIRST DID: behavioural thresholds

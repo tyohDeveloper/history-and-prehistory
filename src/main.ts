@@ -171,6 +171,14 @@ function shortRange(e: Entity): string {
   const { start_year: s, end_year: t } = e;
   if (s === null) return "";
   const DASH = "\u2013";
+  // An uncalibrated radiocarbon age is not a calendar year, and the readout
+  // refuses to convert it — see renderCalendarRows. The gutter used to do the
+  // conversion anyway, so the same entity read "8851-4651 BCE" in the column
+  // and "10.8 - 6.6 ka 14C BP" three inches away in the panel. Defer to the
+  // readout's formatter, which already knows how to say it.
+  if (e.start_dating_method === "radiocarbon-uncalibrated") {
+    return displayRange(e).text.replace(/\s+/g, "\u2009");
+  }
   if (t === null) return `${magnitude(s)}${s < 0 ? "\u2009BCE" : ""}${DASH}`;
   if (s < 0 && t < 0) return `${magnitude(s)}${DASH}${magnitude(t)}\u2009BCE`;
   if (s < 0 && t >= 0) return `${magnitude(s)}\u2009BCE${DASH}${magnitude(t)}\u2009CE`;

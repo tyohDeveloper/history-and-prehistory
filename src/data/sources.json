@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
-  "dataset_version": "0.8.0.0",
-  "generated_at": "2026-08-08T20:13:32Z",
+  "dataset_version": "0.9.0.0",
+  "generated_at": "2026-08-08T21:06:52Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -1293,6 +1293,392 @@
       "citation": "Review of independent domestication centres, Genetic Resources and Crop Evolution",
       "url": "https://link.springer.com/article/10.1007/s10722-021-01114-7",
       "note": "Harlan counted 6 centres, Vavilov 12, Purugganan and Fuller 24."
+    },
+    {
+      "id": "maglemose-bone-points-2020",
+      "kind": "scholarly",
+      "citation": "'An integrated analysis of Maglemose bone points reframes the Early Mesolithic of Southern Scandinavia' (2020), Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-020-74258-8",
+      "note": "AMS series splitting Early from Late Maglemose at a c. 10,300 cal BP hiatus."
+    },
+    {
+      "id": "lundby-mose-preboreal",
+      "kind": "scholarly",
+      "citation": "'Early Maglemosian culture in the Preboreal landscape: Lundby Mose, Sjaelland'",
+      "url": "https://core.ac.uk/download/pdf/82106402.pdf"
+    },
+    {
+      "id": "nw-poland-mesolithic-c14",
+      "kind": "scholarly",
+      "citation": "'New radiocarbon dates for ornamented Mesolithic objects from northwest Poland', Antiquity",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/8A12B95243E8043511BC7C6E63D17B22/S0003598X22001429a.pdf/new_radiocarbon_dates_for_ornamented_mesolithic_objects_from_northwest_poland_chronology_and_regional_connections_in_the_western_baltic_region.pdf",
+      "note": "Gives Kongemose c. 6500-5400 BC."
+    },
+    {
+      "id": "ertebolle-southern-scandinavia",
+      "kind": "scholarly",
+      "citation": "'Places of Settlement in Southern Scandinavia', Oxford Handbooks",
+      "url": "https://academic.oup.com/edited-volume/35019/chapter/298822185",
+      "note": "Ertebolle period c. 5400-4000 cal BC."
+    },
+    {
+      "id": "azilian-radiocarbon-series",
+      "kind": "scholarly",
+      "citation": "'Divergence in the evolution of Paleolithic symbolic and Mesolithic technological traditions' (radiocarbon table for the French Early Azilian)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5336238/"
+    },
+    {
+      "id": "romagnano-sauveterrian-bayesian",
+      "kind": "scholarly",
+      "citation": "Bayesian-modelled radiocarbon distributions for the Romagnano rock shelter, PLOS ONE",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12440202/table/pone.0331392.t003/",
+      "note": "Italian Sauveterrian phases; diverges from older French typological dating by roughly a millennium."
+    },
+    {
+      "id": "star-carr-structures-2024",
+      "kind": "scholarly",
+      "citation": "'Spatial organisation within the earliest evidence of post-built structures at Star Carr' (2024), PLOS ONE",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0306908"
+    },
+    {
+      "id": "boric-2018-lepenski-vir",
+      "kind": "scholarly",
+      "citation": "Boric et al. (2018), 'High-Resolution AMS Dating of Architecture, Boulder Artworks and the Transition to Farming at Lepenski Vir', Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-018-31884-7",
+      "note": "111 measurements; establishes a hiatus of at least 700 years the original stratigraphy lacked."
+    },
+    {
+      "id": "doggerland-inundation-2026",
+      "kind": "news",
+      "citation": "'New timeline for the drowning of Doggerland', The Past (2026), reporting Bensharada et al., Humans 6(1):5",
+      "url": "https://the-past.com/news/new-timeline-for-the-drowning-of-doggerland/",
+      "note": "Reports the transitional freshwater-to-marine layer at 10,243-10,199 years ago."
+    },
+    {
+      "id": "europes-lost-frontiers",
+      "kind": "institutional",
+      "citation": "Europe's Lost Frontiers, Volume 1: Context and Methodology",
+      "url": "https://www.vliz.be/imisdocs/publications/407325.pdf",
+      "note": "Final inundation of the Outer Dowsing Deep cores between 8,200 and 7,200 BP."
+    },
+    {
+      "id": "bondevik-2024-storegga",
+      "kind": "scholarly",
+      "citation": "Bondevik et al. (2024), 'Contamination of 8.2 ka cold climate records by the Storegga tsunami in the Nordic Seas', Nature Communications 15:2904",
+      "url": "https://www.nature.com/articles/s41467-024-47347-9",
+      "note": "IntCal20/Marine20 recalibration placing the slide within the coldest decades of the 8.2 ka event."
+    },
+    {
+      "id": "weninger-2008-storegga",
+      "kind": "scholarly",
+      "citation": "Weninger et al. (2008), 'The catastrophic final flooding of Doggerland by the Storegga Slide Tsunami'",
+      "url": "https://profmarkcollard.com/wp-content/uploads/2014/09/Weninger_et_al_2008.pdf",
+      "note": "Gives 8,100 +/- 100 cal BP, compatible with the 2024 recalibration."
+    },
+    {
+      "id": "franchthi-early-cereals-2013",
+      "kind": "scholarly",
+      "citation": "'Early seventh-millennium AMS dates from domestic seeds in the Initial Neolithic at Franchthi Cave' (2013), Antiquity",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/early-seventhmillennium-ams-dates-from-domestic-seeds-in-the-initial-neolithic-at-franchthi-cave-argolid-greece/73AF10B4F6C3422ABA362FDBAC4D71FB",
+      "note": "Cereals earlier in the Argolid than in northern Greece or Bulgaria, against a single inland front."
+    },
+    {
+      "id": "greek-neolithic-recalibration",
+      "kind": "scholarly",
+      "citation": "'Preceramic, Aceramic or Early Ceramic? The radiocarbon-dated beginnings of the Greek Neolithic'",
+      "url": "https://scispace.com/pdf/preceramic-aceramic-or-early-ceramic-the-radiocarbon-dated-tqz02xg7wf.pdf",
+      "note": "Revises the Thessalian Neolithic start from c. 7000 cal BC to 6700-6500 cal BC."
+    },
+    {
+      "id": "starcevo-central-balkans-demography",
+      "kind": "scholarly",
+      "citation": "'Demography of the Early Neolithic Population in Central Balkans', PLOS ONE",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0160832"
+    },
+    {
+      "id": "starcevo-koros-cris-range",
+      "kind": "scholarly",
+      "citation": "Durham University repository, Starcevo-Koros-Cris radiocarbon range c. 6200-5500 cal BC",
+      "url": "https://durham-repository.worktribe.com/OutputFile/1319467"
+    },
+    {
+      "id": "zilhao-2001-maritime-pioneer",
+      "kind": "scholarly",
+      "citation": "Zilhao (2001), 'Radiocarbon evidence for maritime pioneer colonization at the origins of farming in west Mediterranean Europe', PNAS",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.241522898",
+      "note": "Short-lived samples only, an explicit guard against old-wood bias."
+    },
+    {
+      "id": "fort-2024-two-routes",
+      "kind": "scholarly",
+      "citation": "Fort & Perez-Losada (2024), 'Interbreeding between farmers and hunter-gatherers along the inland and Mediterranean routes of Neolithic spread in Europe', Nature Communications 15:7032",
+      "url": "https://www.nature.com/articles/s41467-024-51335-4",
+      "note": "50 km per generation inland against 70 km along the coast; interbreeding rate the same on both."
+    },
+    {
+      "id": "vinca-enclosed-settlement",
+      "kind": "scholarly",
+      "citation": "'A Vinca Culture Enclosed and Fortified Settlement in the Balkans', University of Lancashire repository",
+      "url": "https://knowledge.lancashire.ac.uk/id/eprint/21446/13/21446%20vinca%20paper.pdf"
+    },
+    {
+      "id": "vinca-belo-brdo-bayesian",
+      "kind": "scholarly",
+      "citation": "'Interwoven strategies: Vinca' (Bayesian dating of Vinca-Belo Brdo), University of Stirling repository",
+      "url": "https://dspace.stir.ac.uk/bitstream/1893/23547/1/RESUBMITTED-Interwoven-strategies-Vinca-v7.pdf",
+      "note": "Type-site occupation begins 5205-5095 cal BC at 95% probability."
+    },
+    {
+      "id": "cucuteni-trypillia-subsistence",
+      "kind": "scholarly",
+      "citation": "'A complex subsistence regime revealed for Cucuteni-Trypillia sites'",
+      "url": "https://ekmair.ukma.edu.ua/server/api/core/bitstreams/1ef22ee0-a636-4443-a6e8-038d70b3070b/content"
+    },
+    {
+      "id": "nebelivka-megasite-chronology",
+      "kind": "scholarly",
+      "citation": "'What was the ecological impact of a Trypillia megasite occupation?' (Nebelivka), Vegetation History and Archaeobotany",
+      "url": "https://link.springer.com/article/10.1007/s00334-019-00730-9",
+      "note": "c. 80 AMS dates; occupation 3980-3820 to 3870-3750 cal BCE at 95%."
+    },
+    {
+      "id": "trypillia-megasites-urbanism",
+      "kind": "scholarly",
+      "citation": "'Trypillia Megasites in Context: Independent Urban Development in Chalcolithic Eastern Europe', Cambridge Archaeological Journal",
+      "url": "https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/trypillia-megasites-in-context-independent-urban-development-in-chalcolithic-eastern-europe/C33D85AF4EE4BA2D61AAB77D3E399E4D"
+    },
+    {
+      "id": "higham-varna-ams",
+      "kind": "scholarly",
+      "citation": "'AMS Dating of the Late Copper Age Varna Cemetery, Bulgaria', Radiocarbon",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/abs/ams-dating-of-the-late-copper-age-varna-cemetery-bulgaria/706A7F638D010BB6C943FBDFC1062749",
+      "note": "Cemetery use modelled to 4596-4516 through 4427-4341 cal BC at 95.4%."
+    },
+    {
+      "id": "krauss-varna-analysis",
+      "kind": "scholarly",
+      "citation": "Krauss, Zauner & Pernicka, 'Statistical and Anthropological Analysis of the Varna Necropolis'",
+      "url": "https://www.academia.edu/13437312/R_Krau%C3%9F_S_Z%C3%A4uner_E_Pernicka_Statistical_and_Anthropological_Analysis_of_the_Varna_Necropolis",
+      "note": "States the AMS chronology runs c. 200 years younger than the traditional one."
+    },
+    {
+      "id": "trb-southern-sweden",
+      "kind": "scholarly",
+      "citation": "'The Early Funnel Beaker Culture in Southern Sweden and Central Europe', Lund University",
+      "url": "https://journals.lub.lu.se/lar/article/download/21767/19601/53159",
+      "note": "Earliest southern Swedish TRB c. 3950-3900 cal BC, centuries after the central European core."
+    },
+    {
+      "id": "trb-western-ukraine",
+      "kind": "scholarly",
+      "citation": "'Chronology of the Funnel Beaker Culture Settlement in Western Ukraine in the Context of Radiocarbon Dating'",
+      "url": "https://www.academia.edu/42194690/Chronology_of_the_Funnel_Beaker_Culture_Settlement_in_Western_Ukraine_in_the_Context_of_Radiocarbon_Dating"
+    },
+    {
+      "id": "michelsberg-ancient-dna",
+      "kind": "scholarly",
+      "citation": "'Multi-scale ancient DNA analyses confirm the western origin of Michelsberg farmers', PLOS ONE",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0179742"
+    },
+    {
+      "id": "michelsberg-hesse-phases",
+      "kind": "scholarly",
+      "citation": "Germania (Heidelberg University), Michelsberg phase chronology for Hesse",
+      "url": "https://journals.ub.uni-heidelberg.de/index.php/germania/libraryFiles/downloadPublic/763"
+    },
+    {
+      "id": "skara-brae-redating-2017",
+      "kind": "institutional",
+      "citation": "'Skara Brae - the date and extent of the settlement', Ness of Brodgar research project",
+      "url": "https://www.nessofbrodgar.co.uk/skarabrae-date-and-extent/",
+      "note": "2017 re-evaluation: occupied c. 3300 BC, largely abandoned after 2900, re-occupied 2800-2700, ended c. 2500."
+    },
+    {
+      "id": "ness-of-brodgar-bayesian",
+      "kind": "scholarly",
+      "citation": "'To cut a long story short: formal chronological modelling for the Ness of Brodgar', Cardiff University repository",
+      "url": "https://orca.cardiff.ac.uk/id/eprint/96028/1/Ness_paper_text%20v18%20Resubmitted%20(002).pdf",
+      "note": "65 measurements; main activity begins 3060-2950 cal BC at 95%."
+    },
+    {
+      "id": "newgrange-feasting-isotopes",
+      "kind": "scholarly",
+      "citation": "'Pigs, pannage, and the solstice: isotopic insights from prehistoric feasting at Newgrange', Proceedings of the Prehistoric Society",
+      "url": "https://www.cambridge.org/core/journals/proceedings-of-the-prehistoric-society/article/pigs-pannage-and-the-solstice-isotopic-insights-from-prehistoric-feasting-at-newgrange/ECC3D799B42C21FAA0EDF3045C230F33"
+    },
+    {
+      "id": "newgrange-calibration-history",
+      "kind": "reference",
+      "citation": "Newgrange.com institutional history, on the uncalibrated-versus-calibrated date confusion",
+      "url": "https://www.newgrange.com/newgrange-archaeology-book.htm",
+      "note": "Explains why the widely quoted 'c. 2500 bc' is a lab age, not a calendar date."
+    },
+    {
+      "id": "haak-2015-steppe-migration",
+      "kind": "scholarly",
+      "citation": "Haak et al. (2015), 'Massive migration from the steppe was a source for Indo-European languages in Europe', Nature",
+      "url": "https://www.nature.com/articles/nature14317",
+      "note": "Corded Ware individuals derive c. 75% of their ancestry from Yamnaya."
+    },
+    {
+      "id": "european-holocene-admixture-2022",
+      "kind": "scholarly",
+      "citation": "'The spatiotemporal patterns of major human admixture events during the European Holocene' (2022)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9293011/"
+    },
+    {
+      "id": "rhine-meuse-forager-ancestry-2026",
+      "kind": "scholarly",
+      "citation": "'Lasting Lower Rhine-Meuse forager ancestry shaped Bell Beaker expansion' (2026)",
+      "url": "https://research.vu.nl/en/publications/lasting-lower-rhine-meuse-forager-ancestry-shaped-bell-beaker-exp/",
+      "note": "70-100% replacement across most of Europe, but a wetland refuge retained c. 50% forager ancestry."
+    },
+    {
+      "id": "monte-verde-antiquity-2023",
+      "kind": "scholarly",
+      "citation": "'Monte Verde II: an assessment of new radiocarbon dates and their sedimentological context', Antiquity (2023)",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/monte-verde-ii-an-assessment-of-new-radiocarbon-dates-and-their-sedimentological-context/CF19BDBDE1ECE700EE59C7BF7CF502FF",
+      "note": "Median c. 14,530 cal BP; 95.4% range c. 14,200-14,900 cal BP."
+    },
+    {
+      "id": "monte-verde-controversy-2026",
+      "kind": "news",
+      "citation": "'Debate explodes over age of key South American archaeological site', Science (2026)",
+      "url": "https://www.science.org/content/article/debate-explodes-over-age-key-south-american-archaeological-site",
+      "note": "Surovell, Latorre et al. argue the dated wood was redeposited and the site is 4,200-8,200 years old."
+    },
+    {
+      "id": "davis-2019-coopers-ferry",
+      "kind": "scholarly",
+      "citation": "Davis et al. (2019), 'Late Upper Paleolithic occupation at Cooper's Ferry, Idaho, USA', Science 365:891-897",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31467216/",
+      "note": "Earliest occupation 16,560-15,280 cal BP, before the ice-free corridor opened."
+    },
+    {
+      "id": "coopers-ferry-2020-comment",
+      "kind": "scholarly",
+      "citation": "Comment on 'Late Upper Paleolithic occupation at Cooper's Ferry' (2020), Science",
+      "url": "https://www.science.org/doi/10.1126/science.aaz4695",
+      "note": "Minority: argues the dates are younger and fit Greenland Interstadial 1."
+    },
+    {
+      "id": "coopers-ferry-2022-stemmed",
+      "kind": "scholarly",
+      "citation": "'Dating of a large tool assemblage at the Cooper's Ferry site' (2022), Science Advances",
+      "url": "https://www.science.org/doi/10.1126/sciadv.ade1248"
+    },
+    {
+      "id": "rosencrance-western-stemmed",
+      "kind": "institutional",
+      "citation": "Rosencrance, 'The What, Where, and When of the Western Stemmed Tradition', Center for the Study of the First Americans",
+      "url": "https://liberalarts.tamu.edu/csfa/wp-content/uploads/sites/14/2025/01/Rosencrance_WST_Abstract.pdf",
+      "note": "States plainly that stemmed points are not derived from Clovis."
+    },
+    {
+      "id": "stewart-2021-megafauna-climate",
+      "kind": "scholarly",
+      "citation": "Stewart, Carleton & Groucutt (2021), 'Climate change, not human population growth, correlates with Late Quaternary megafauna declines in North America', Nature Communications",
+      "url": "https://www.nature.com/articles/s41467-021-21201-8"
+    },
+    {
+      "id": "northeast-megafauna-decline",
+      "kind": "news",
+      "citation": "'What Killed the Great Beasts of North America?', Science",
+      "url": "https://www.science.org/content/article/what-killed-great-beasts-north-america",
+      "note": "Northeastern case study, plus the overkill proponents' rebuttal to it."
+    },
+    {
+      "id": "holliday-2025-white-sands-mud",
+      "kind": "news",
+      "citation": "'Ancient footprints confirmed as oldest evidence of humans in the Americas' (2025), reporting Holliday & Windingstad, Science Advances",
+      "url": "https://www.sciencedaily.com/releases/2025/06/250629033438.htm",
+      "note": "Radiocarbon on mud, a third independent material, giving 20,700-22,400 years."
+    },
+    {
+      "id": "rhode-2024-white-sands-critique",
+      "kind": "scholarly",
+      "citation": "Rhode et al. (2024), critique of the White Sands chronology, Journal of Quaternary Science",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/20555563.2024.2345979",
+      "note": "Minority: argues for a significantly younger chronology on isotopic and depositional grounds."
+    },
+    {
+      "id": "saunders-1997-watson-brake",
+      "kind": "news",
+      "citation": "'Oldest earthen mounds heighten mystery', Science, reporting Saunders et al. (1997), Science 277:1796-1799",
+      "url": "https://www.science.org/content/article/oldest-earthen-mounds-heighten-mystery",
+      "note": "Construction begins 5,400-5,300 years ago and continues 400-600 years."
+    },
+    {
+      "id": "unesco-poverty-point",
+      "kind": "institutional",
+      "citation": "UNESCO World Heritage listing, Monumental Earthworks of Poverty Point",
+      "url": "https://whc.unesco.org/en/list/1435/"
+    },
+    {
+      "id": "marquet-2012-chinchorro",
+      "kind": "scholarly",
+      "citation": "Marquet, Santoro, Latorre et al. (2012), 'Emergence of social complexity among coastal hunter-gatherers in the Atacama Desert', PNAS",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1116724109",
+      "note": "Oldest artificial mummification c. 7-8 ka BP; the practice ends by c. 4.4 ka BP."
+    },
+    {
+      "id": "unesco-chinchorro",
+      "kind": "institutional",
+      "citation": "UNESCO World Heritage listing, Chinchorro culture settlement and artificial mummification",
+      "url": "https://whc.unesco.org/en/list/1634/"
+    },
+    {
+      "id": "tohoku-coastal-ecuador",
+      "kind": "institutional",
+      "citation": "'Functional Analysis of Prehistoric Artifacts from Coastal Ecuador', Bulletin of the Tohoku University Museum",
+      "url": "https://www.museum.tohoku.ac.jp/pdf/press_info/bulletin/No13/bulletin_13_03.pdf",
+      "note": "Las Vegas 10,800-6,600 BP, stated explicitly as uncalibrated."
+    },
+    {
+      "id": "kanomata-2019-san-pedro",
+      "kind": "scholarly",
+      "citation": "Kanomata et al. (2019), 'New data on early pottery traditions in South America: the San Pedro complex, Ecuador', Antiquity",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/new-data-on-early-pottery-traditions-in-south-america-the-san-pedro-complex-ecuador/8885FD3A582F285F93728325C4945B66"
+    },
+    {
+      "id": "huaca-prieta-chronology",
+      "kind": "scholarly",
+      "citation": "'Chronology, mound-building and environment at Huaca Prieta', Antiquity supplementary material",
+      "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0003598X00062451/resource/name/S0003598X00062451sup001.pdf"
+    },
+    {
+      "id": "huaca-cortada-excavation",
+      "kind": "scholarly",
+      "citation": "'Excavaciones en Huaca Cortada, complejo de Caballo Muerto', Boletin de Arqueologia PUCP",
+      "url": "https://revistas.pucp.edu.pe/index.php/boletindearqueologia/article/download/970/937/0",
+      "note": "Huaca Cortada's earliest floor calibrates to 1621-1443 BC."
+    },
+    {
+      "id": "mincul-cerro-sechin-report",
+      "kind": "institutional",
+      "citation": "Ministerio de Cultura del Peru, 'Cerro Sechin: informe tecnico de los estudios, analisis y resultados de los materiales arqueologicos'",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/4791046/Informe%20t%C3%A9cnico%20de%20los%20estudios,%20an%C3%A1lisis%20y%20resultados%20de%20los%20materiales%20arqueol%C3%B3gicos%20.pdf",
+      "note": "2019 AMS dates on five charcoal samples; oldest is 1887-1689 cal BC. No dates at all for Sechin Bajo."
+    },
+    {
+      "id": "pompeani-2021-old-copper",
+      "kind": "scholarly",
+      "citation": "Pompeani et al. (2021), 'On the Timing of the Old Copper Complex in North America', Radiocarbon 63(2):513-531",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/abs/on-the-timing-of-the-old-copper-complex-in-north-america-a-comparison-of-radiocarbon-dates-from-different-archaeological-contexts/E46715993E58EDC94F225CC6FE776CF2",
+      "note": "53 radiocarbon dates and six lake-sediment records; mining begins c. 9,500 years ago."
+    },
+    {
+      "id": "science-2021-great-lakes-copper",
+      "kind": "news",
+      "citation": "'Great Lakes people among first coppersmiths' (2021), Science",
+      "url": "https://www.science.org/doi/10.1126/science.371.6536.1299",
+      "note": "Sets the revision against the previous c. 6,000-years-ago consensus."
+    },
+    {
+      "id": "roosevelt-1991-taperinha",
+      "kind": "scholarly",
+      "citation": "Roosevelt et al. (1991), 'Eighth Millennium Pottery from a Prehistoric Shell Midden in the Brazilian Amazon', Science 254:1621-1624",
+      "url": "https://www.science.org/doi/10.1126/science.254.5038.1621"
     }
   ]
 }

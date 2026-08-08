@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.0.0"
-DATASET_VERSION = "0.8.0.0"
+DATASET_VERSION = "0.9.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1625,6 +1625,14 @@ _extend_africa(E, "global")
 from extensions_neolithic import extend as _extend_neolithic
 _extend_neolithic(E, entities)
 
+from extensions_europe import extend as _extend_europe
+_extend_europe(E, entities)
+
+# Reads the finished Americas corpus to enrich White Sands in place, so it runs
+# after the prehistory modules that created it.
+from extensions_americas import extend as _extend_americas
+_extend_americas(E, entities)
+
 # Must run last: it reads the finished corpus to derive its spans and to attach
 # cross-parent links to entities other modules created.
 from extensions_ages import extend as _extend_ages
@@ -3036,6 +3044,10 @@ from extensions_ages import AGES_SOURCES  # noqa: E402
 sources.extend(AGES_SOURCES)
 from extensions_neolithic import NEOLITHIC_SOURCES  # noqa: E402
 sources.extend(NEOLITHIC_SOURCES)
+from extensions_europe import EUROPE_SOURCES  # noqa: E402
+sources.extend(EUROPE_SOURCES)
+from extensions_americas import AMERICAS_SOURCES  # noqa: E402
+sources.extend(AMERICAS_SOURCES)
 
 with open(DATA / "sources.json", "w") as f:
     json.dump({"schema_version": SCHEMA_VERSION, "dataset_version": DATASET_VERSION,

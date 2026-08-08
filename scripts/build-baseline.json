@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 148460,
+  "gzipBytes": 163818,
   "recordedAt": "2026-08-08",
-  "note": "v3.6.0.0 + rendered source citations. The +17.3 kB is sources.json entering the bundle; it was a deliberate call, not a regression. Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.7.0.0 + European Mesolithic/Neolithic and Holocene Americas (data 0.9.0.0). Content growth: 40 entities and 58 sources. Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

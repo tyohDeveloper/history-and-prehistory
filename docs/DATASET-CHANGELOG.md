@@ -1,5 +1,90 @@
 # Changelog
 
+## 0.9.0.0 — European Mesolithic and Holocene Americas (2026-08-08)
+
+Two coverage passes aimed by `tools/coverage.py`, which found Europe holding
+five non-reign entities for the whole of 10,000-3,000 BCE — and nothing at all
+between 10,000 and 5,500 — and the Americas holding one 9,000-year "Archaic
+Period" for everything between the Paleoindians and Norte Chico. Research in
+`docs/europe-research.md` and `docs/americas-research.md`.
+
+### Fixed — a cal BP figure stored as a BCE year
+
+`global.paleolithic.monte-verde` held `-14500..-14000`, and its Surovell
+alternative `-8200..-4200`. Both were cal BP figures written straight into the
+calendar-year field, putting the site **1,950 years too early** and the rival
+claim 2,250 years too early. 14,500 cal BP is 12,551 BCE.
+
+Found by accident: the Americas pass authored a second Monte Verde using the
+`bp()` helper, and the two disagreed by two millennia. A dataset-wide audit for
+the same pattern turned up no other instances. Both a units regression test and
+a "there is exactly one Monte Verde" test now guard it.
+
+### Added — Europe, 10,000-2,500 BCE (24 entities)
+
+Mesolithic: Azilian, Maglemosian, Sauveterrian, Kongemose, Ertebolle, Star Carr,
+Lepenski Vir, the drowning of Doggerland, the Storegga tsunami.
+
+Farming's arrival: Franchthi Cave, Sesklo, Starcevo-Koros-Cris, Cardial and
+Impressed Ware, Vinca, Michelsberg, Varna, Cucuteni-Trypillia with its
+mega-sites, Funnelbeaker, Newgrange, Skara Brae, Ness of Brodgar.
+
+Two synthesis entities carry findings that do not belong buried in a note on
+someone's pottery: **The Two Routes of Neolithic Spread** (inland 50 km per
+generation, coastal 70, same interbreeding rate, different outcomes at the far
+ends) and **The Anatolian Farmer Turnover** (70-100% replacement of local
+forager ancestry between 6500 and 4000 BCE), plus **The Steppe Ancestry Influx**
+at 3000-2900 BCE.
+
+Nearly everything here has been re-dated recently and usually later. Varna moved
+~200 years younger under AMS; Thessaly's Neolithic start moved from 7000 to
+6700-6500 cal BC; Lepenski Vir gained a 700-year occupation hiatus its original
+stratigraphy lacked; Skara Brae turned out not to be continuously occupied. Each
+older figure is carried as a `superseded` alternative rather than dropped.
+
+### Added — Holocene Americas (15 entities)
+
+Cooper's Ferry, the Western Stemmed Tradition, the megafaunal extinction, Watson
+Brake, Poverty Point, the Chinchorro, Las Vegas culture, Valdivia, Huaca Prieta,
+Caballo Muerto, Cerro Sechin, the Old Copper Complex, Taperinha, and an
+**Artificial Mummification** threshold.
+
+Chosen for what they overturn: Great Lakes copper working starts c. 9,500 years
+ago, older than most Old World metallurgy; Chilean mummification predates
+Egypt's by two millennia; the hemisphere's oldest pottery is Amazonian, not
+Andean; Watson Brake's mounds were raised by hunter-gatherers with no
+agriculture.
+
+**Cerro Sechin is authored as a warning rather than a date.** Its widely
+repeated 7600 BCE occupation could not be confirmed against the Peruvian
+Ministry of Culture's own excavation report, whose oldest AMS date is 1887-1689
+cal BC and which has no dates at all for Sechin Bajo. The entity records what
+the primary source contains and says the popular figure is unverified — not that
+it is wrong.
+
+### Changed
+
+White Sands gains the two rounds it was missing: the 2025 mud dates (a third
+independent material, second lab) and the 2024 critique arguing for a
+significantly younger chronology. They cut in opposite directions and both are
+recorded.
+
+### Not added
+
+`n.a.` in research and deliberately absent: the Tardenoisian (sources disagree
+by up to 3,000 years and mix calibrated with uncalibrated figures), a
+pan-European Sauveterrian range, a sharp Azilian end date, Beringian Standstill
+durations, and Caverna da Pedra Pintada.
+
+One citation error from the research pass was caught during authoring: the
+Storegga tsunami paper had been given the DOI of the Fort & Perez-Losada
+interbreeding paper. Corrected in both the dataset and the archived research.
+
+### Counts
+
+1,480 → 1,519 entities. 175 → 214 cited. 203 → 261 sources. Schema unchanged at
+3.0.0.
+
 ## 0.8.0.0 — The Neolithic transition (2026-08-08)
 
 Aimed by `tools/coverage.py`, which found "Agricultural Revolution" holding

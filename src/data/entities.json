@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
-  "dataset_version": "0.8.0.0",
-  "generated_at": "2026-08-08T20:13:32Z",
+  "dataset_version": "0.9.0.0",
+  "generated_at": "2026-08-08T21:06:52Z",
   "entities": [
     {
       "id": "global",
@@ -15847,33 +15847,44 @@
       "kind": "period",
       "name": "Monte Verde II",
       "parent_id": "global.paleolithic",
-      "start_year": -14500,
-      "end_year": -14000,
+      "start_year": -12551,
+      "end_year": -12251,
       "tier": "intermediate",
       "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
       "standing": "consensus",
       "as_of": "2026-06-30",
-      "date_note": "Under active challenge: a March 2026 reanalysis proposed a Holocene age, roughly thirty specialists rebutted it in May, and the authors replied in June.",
+      "date_note": "Median c. 14,530 cal BP, 95.4% range 14,200-14,900 cal BP; the span shown is the dating range, not a measured occupation length. Under active challenge: a March 2026 reanalysis proposed a Holocene age, roughly thirty specialists rebutted it in May, and the authors replied in June. The genetic models for the peopling of the Americas do not depend on the outcome either way.",
       "alternatives": [
         {
           "label": "Surovell et al. 2026",
           "standing": "minority",
-          "start_year": -8200,
-          "end_year": -4200,
+          "start_year": -6251,
+          "end_year": -2251,
           "dating_method": "radiocarbon-calibrated",
           "note": "Argues the dated material is intrusive and the occupation is mid-Holocene.",
           "source_ids": [
-            "surovell-2026-monte-verde"
+            "surovell-2026-monte-verde",
+            "monte-verde-controversy-2026"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "The site that broke Clovis First is itself under serious challenge, and the argument is live as of 2026.",
+          "source_ids": [
+            "monte-verde-controversy-2026"
           ]
         }
       ],
       "source_ids": [
         "dillehay-1997-monte-verde",
-        "surovell-2026-monte-verde"
+        "surovell-2026-monte-verde",
+        "monte-verde-antiquity-2023"
       ],
       "summary": "A settlement in southern Chile whose age broke the Clovis-first model of the peopling of the Americas.",
-      "date_precision": "approx",
-      "end_dating_method": "radiocarbon-calibrated"
+      "date_precision": "approx"
     },
     {
       "id": "global.prehistory.firsts",
@@ -17877,7 +17888,7 @@
       "tier": "foundational",
       "start_dating_method": "radiocarbon-calibrated",
       "standing": "majority",
-      "date_note": "The original aquatic-seed dates of about 23-21 ka were independently supported by terrestrial pollen radiocarbon and quartz OSL, but objections remain active.",
+      "date_note": "The original aquatic-seed dates of about 23-21 ka were independently supported by terrestrial pollen radiocarbon and quartz OSL in 2023, and again in 2025 by radiocarbon on mud run at an independent lab, giving 20,700-22,400 years — three material types, two labs. A 2024 critique still argues for a significantly younger chronology. No stone tools, hearths or settlement debris have ever been found here, and that objection remains unanswered.",
       "alternatives": [
         {
           "label": "Hard-water reservoir objection",
@@ -17888,6 +17899,15 @@
           "note": "Critics argue aquatic seeds could be 7,000-10,000 years too old because they used ancient dissolved carbon from lake water.",
           "source_ids": [
             "madsen-2022-white-sands"
+          ]
+        },
+        {
+          "label": "Younger chronology (2024 critique)",
+          "standing": "minority",
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Rhode et al.: Ruppia carbon isotopes may carry an age offset, the OSL is maximum-limiting only, and the pollen may be redeposited.",
+          "source_ids": [
+            "rhode-2024-white-sands-critique"
           ]
         }
       ],
@@ -17905,10 +17925,13 @@
       "source_ids": [
         "bennett-2021-white-sands",
         "pigati-2023-white-sands",
-        "madsen-2022-white-sands"
+        "madsen-2022-white-sands",
+        "holliday-2025-white-sands-mud",
+        "rhode-2024-white-sands-critique"
       ],
       "summary": "Human footprints in New Mexico that may date to the height of the last ice age.",
       "date_precision": "approx",
+      "as_of": "2026-08-08",
       "end_dating_method": "radiocarbon-calibrated"
     },
     {
@@ -19556,6 +19579,955 @@
       ],
       "date_precision": "minimum",
       "summary": "The world's most numerous bird was domesticated in mainland Southeast Asia, far later and further east than long assumed."
+    },
+    {
+      "id": "europe.prehistory.azilian",
+      "kind": "period",
+      "name": "Azilian",
+      "parent_id": "europe.prehistory",
+      "start_year": -12951,
+      "end_year": -10251,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "French Early Azilian dates cluster at 14,900-12,200 cal BP. Most of it precedes the Mesolithic proper; the end shown is where the dated series stops, not a sharp boundary with the Sauveterrian, which the sources describe only qualitatively.",
+      "source_ids": [
+        "azilian-radiocarbon-series"
+      ],
+      "summary": "The first post-glacial culture of southwest France and northern Spain, with flat harpoons and painted pebbles.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.maglemose",
+      "kind": "period",
+      "name": "Maglemosian",
+      "parent_id": "europe.prehistory",
+      "start_year": -9651,
+      "end_year": -6451,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "A 2020 AMS study of bone-point series splits this into Early and Late Maglemose complexes either side of a hiatus of roughly 600 years at c. 10,300 cal BP — older accounts treat it as one uniform culture.",
+      "source_ids": [
+        "maglemose-bone-points-2020",
+        "lundby-mose-preboreal"
+      ],
+      "summary": "The founding culture of the northern European Mesolithic, working bone and antler in the forests and wetlands left by the retreating ice.",
+      "aliases": [
+        "Maglemose culture"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.sauveterrian",
+      "kind": "period",
+      "name": "Sauveterrian",
+      "parent_id": "europe.prehistory",
+      "start_year": -9740,
+      "end_year": -6771,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "minority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-08",
+      "date_note": "REGIONAL, NOT PAN-EUROPEAN. The dates shown are the Bayesian-modelled Italian sequence at Romagnano. Older French typological dating puts the Sauveterrian roughly a millennium later. The two have not been reconciled and are not averaged here; no single European range is defensible.",
+      "alternatives": [
+        {
+          "label": "French typological chronology",
+          "standing": "minority",
+          "dating_method": "typological",
+          "note": "Places the Sauveterrian around a millennium later than the Italian AMS series.",
+          "source_ids": [
+            "romagnano-sauveterrian-bayesian"
+          ]
+        }
+      ],
+      "source_ids": [
+        "romagnano-sauveterrian-bayesian"
+      ],
+      "summary": "A narrow-blade microlithic tradition of France, Italy and Iberia, the southern counterpart to the Maglemosian."
+    },
+    {
+      "id": "europe.prehistory.star-carr",
+      "kind": "period",
+      "name": "Star Carr",
+      "parent_id": "europe.prehistory",
+      "start_year": -9335,
+      "end_year": -8440,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Occupation 9335-9275 to 8525-8440 cal BC on Bayesian-modelled AMS dates. Popular accounts still quote the uncalibrated 1950s figures from Clark's original excavation.",
+      "source_ids": [
+        "star-carr-structures-2024"
+      ],
+      "summary": "A waterlogged Yorkshire site preserving the earliest known built structures in Britain, along with antler headdresses.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.lepenski-vir",
+      "kind": "period",
+      "name": "Lepenski Vir",
+      "parent_id": "europe.prehistory",
+      "start_year": -9900,
+      "end_year": -5660,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Bayesian modelling of 111 AMS dates gives occupation from 9900-9280 cal BC. The Mesolithic phase ends 7480-6860 cal BC, then the site is EMPTY for at least 700 years. The famous trapezoidal buildings and sculptures belong to a brief later phase, 6170-6070 to 6010-5940 cal BC.",
+      "alternatives": [
+        {
+          "label": "Srejovic's original stratigraphy",
+          "standing": "superseded",
+          "dating_method": "typological",
+          "note": "The 1969/1972 sequence was continuous and shorter, with no hiatus.",
+          "source_ids": [
+            "boric-2018-lepenski-vir"
+          ]
+        }
+      ],
+      "source_ids": [
+        "boric-2018-lepenski-vir"
+      ],
+      "summary": "A Danube Gorges site of trapezoidal houses and carved boulder sculptures, occupied across the transition to farming.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.kongemose",
+      "kind": "period",
+      "name": "Kongemose Culture",
+      "parent_id": "europe.prehistory",
+      "start_year": -6500,
+      "end_year": -5400,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Sources vary by several centuries, largely because uncalibrated BP and calendar BC figures are quoted interchangeably in the secondary literature.",
+      "source_ids": [
+        "nw-poland-mesolithic-c14"
+      ],
+      "summary": "The middle Mesolithic of southern Scandinavia, between the Maglemosian and the Ertebolle, turning increasingly to the coast.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.doggerland-inundation",
+      "kind": "period",
+      "name": "The Drowning of Doggerland",
+      "parent_id": "europe.prehistory",
+      "start_year": -8294,
+      "end_year": -5251,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "A 2026 sediment-core study dates the freshwater-to-marine transition to 10,243-10,199 years ago; the Lost Frontiers cores put final inundation between 8,200 and 7,200 BP. An active Groningen project states plainly that the accuracy of several Doggerland radiocarbon dates is in question, so this is a working chronology rather than a settled one.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Doggerland was not destroyed by a tsunami. It drowned gradually over three millennia; the Storegga wave was one damaging episode part-way through, not the end of it.",
+          "source_ids": [
+            "doggerland-inundation-2026",
+            "europes-lost-frontiers"
+          ]
+        }
+      ],
+      "source_ids": [
+        "doggerland-inundation-2026",
+        "europes-lost-frontiers"
+      ],
+      "summary": "The slow submergence of the land connecting Britain to the continent, which displaced Mesolithic populations and finally made Britain an island.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.storegga",
+      "kind": "event",
+      "name": "Storegga Slide Tsunami",
+      "parent_id": "europe.prehistory",
+      "start_year": -6191,
+      "end_year": -6191,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_precision": "approx",
+      "date_note": "8,140 +/- 55 cal BP on AMS dates from moss killed by the wave, recalibrated in 2024 against IntCal20 and Marine20. It falls within the coldest decades of the 8.2 ka climate event — and the same study shows the slide reworked the sediments from which that event was reconstructed.",
+      "source_ids": [
+        "bondevik-2024-storegga",
+        "weninger-2008-storegga"
+      ],
+      "summary": "One of the largest known Holocene tsunamis, generated by a submarine landslide off Norway and striking what remained of Doggerland."
+    },
+    {
+      "id": "europe.prehistory.ertebolle",
+      "kind": "period",
+      "name": "Ertebolle Culture",
+      "parent_id": "europe.prehistory",
+      "start_year": -5400,
+      "end_year": -4000,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Persists to c. 4000 cal BC, long after the Linear Pottery Culture had ended further south. The Mesolithic-Neolithic frontier in this region held for centuries rather than moving as a front.",
+      "source_ids": [
+        "ertebolle-southern-scandinavia"
+      ],
+      "summary": "Complex coastal foragers of southern Scandinavia who made pottery, built shell middens, and kept farming at arm's length for centuries.",
+      "aliases": [
+        "Ertebølle"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.franchthi",
+      "kind": "period",
+      "name": "Franchthi Cave",
+      "parent_id": "europe.prehistory",
+      "start_year": -36051,
+      "end_year": -4051,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "AMS dates on domesticated seeds put cereal cultivation here in the first half of the 7th millennium cal BC, EARLIER than northern Greece or Bulgaria. That ordering is backwards for a single overland front and points to a separate maritime route into the southern Aegean.",
+      "source_ids": [
+        "franchthi-early-cereals-2013"
+      ],
+      "summary": "A cave in the Argolid occupied continuously from the Upper Palaeolithic to the end of the Neolithic — and an argument that farming reached Greece by sea.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.sesklo",
+      "kind": "period",
+      "name": "Sesklo",
+      "parent_id": "europe.prehistory",
+      "start_year": -6500,
+      "end_year": null,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_precision": "unknown",
+      "standing": "majority",
+      "date_note": "Recalibration moved the Thessalian Neolithic start from an older c. 7000 cal BC to 6700-6500 cal BC. No end date is asserted here: the fetched sources give the start rigorously and the end only through figures that trace back to tertiary summaries.",
+      "alternatives": [
+        {
+          "label": "Older c. 7000 cal BC chronology",
+          "standing": "superseded",
+          "start_year": -7000,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Pre-recalibration figure, still widely repeated.",
+          "source_ids": [
+            "greek-neolithic-recalibration"
+          ]
+        }
+      ],
+      "source_ids": [
+        "greek-neolithic-recalibration"
+      ],
+      "summary": "A Thessalian tell settlement, type-site for the Greek Neolithic sequence and among the earliest farming villages in Europe."
+    },
+    {
+      "id": "europe.prehistory.starcevo",
+      "kind": "period",
+      "name": "Starcevo-Koros-Cris",
+      "parent_id": "europe.prehistory",
+      "start_year": -6200,
+      "end_year": -5300,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Culture-wide dates run 6200-5300 cal BC, but Bayesian modelling of individual sites gives much narrower and later windows — Alsonyek in Hungary begins only 5775-5740 cal BC. That spread is real regional variation in when farming arrived, not disagreement about the same event.",
+      "source_ids": [
+        "starcevo-central-balkans-demography",
+        "starcevo-koros-cris-range"
+      ],
+      "summary": "The founding Neolithic complex of the Balkans and Carpathian Basin, ancestral to both the Linear Pottery Culture and Vinca.",
+      "aliases": [
+        "Starčevo–Körös–Criș",
+        "Starcevo culture"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.cardial",
+      "kind": "period",
+      "name": "Cardial and Impressed Ware",
+      "parent_id": "europe.prehistory",
+      "start_year": -5800,
+      "end_year": null,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_precision": "unknown",
+      "standing": "consensus",
+      "date_note": "Using only short-lived samples — an explicit guard against old-wood bias — the full Neolithic package appears at c. 5800 cal BC in Liguria, 5600 in Valencia and 5400 in central Portugal. Roughly 2,000 km in about six generations. No end is asserted; the dated horizon is the arrival.",
+      "source_ids": [
+        "zilhao-2001-maritime-pioneer"
+      ],
+      "summary": "The Mediterranean route: farming carried west by sea along the northern Mediterranean coast, from Liguria to Portugal.",
+      "aliases": [
+        "Cardium Pottery",
+        "Impressed Ware"
+      ]
+    },
+    {
+      "id": "europe.prehistory.neolithic-routes",
+      "kind": "era",
+      "name": "The Two Routes of Neolithic Spread",
+      "parent_id": "europe.prehistory",
+      "start_year": -6500,
+      "end_year": -4000,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "Simulation against haplogroup clines gives the inland route c. 50 km per generation and the coastal route c. 70 km. The rate of interbreeding with foragers was near-identical on both, at roughly 3.6% of farmers — but the sea route was longer, so more admixture events accumulated, which is why Iberia ends up with more forager ancestry than northern France.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not one wave of advance. Two routes, different speeds, and different demographic outcomes at their far ends.",
+          "source_ids": [
+            "fort-2024-two-routes",
+            "zilhao-2001-maritime-pioneer"
+          ]
+        }
+      ],
+      "source_ids": [
+        "fort-2024-two-routes",
+        "zilhao-2001-maritime-pioneer"
+      ],
+      "summary": "Farming crossed Europe by an inland Danubian route and a Mediterranean sea route, at different speeds and with different outcomes."
+    },
+    {
+      "id": "europe.prehistory.vinca",
+      "kind": "period",
+      "name": "Vinca Culture",
+      "parent_id": "europe.prehistory",
+      "start_year": -5400,
+      "end_year": -4600,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Unusually well replicated: three independent radiocarbon datasets of 76, 155 and 600 dates converge on the same phase boundaries. The type-site itself begins 5205-5095 cal BC at 95% probability.",
+      "source_ids": [
+        "vinca-enclosed-settlement",
+        "vinca-belo-brdo-bayesian"
+      ],
+      "summary": "The major Late Neolithic culture of the central Balkans, with large tell settlements and some of Europe's earliest copper metallurgy.",
+      "aliases": [
+        "Vinča culture"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.michelsberg",
+      "kind": "period",
+      "name": "Michelsberg Culture",
+      "parent_id": "europe.prehistory",
+      "start_year": -4400,
+      "end_year": -3500,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Sub-phases run c. 4340/4200-3960, 3950-3800/3700 and 3800/3700-3500 cal BC.",
+      "source_ids": [
+        "michelsberg-ancient-dna",
+        "michelsberg-hesse-phases"
+      ],
+      "summary": "Causewayed enclosures and flint mines across the Rhineland, the Paris Basin and the Low Countries.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.varna",
+      "kind": "period",
+      "name": "Varna Necropolis",
+      "parent_id": "europe.prehistory",
+      "start_year": -4596,
+      "end_year": -4341,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "AMS Bayesian modelling gives 4596-4516 to 4427-4341 cal BC at 95.4%, a use life of only 120-260 years.",
+      "alternatives": [
+        {
+          "label": "Traditional pre-AMS chronology",
+          "standing": "superseded",
+          "start_year": -4600,
+          "end_year": -4200,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "About 200 years older than the AMS result, and still the figure most popular sources give.",
+          "source_ids": [
+            "krauss-varna-analysis"
+          ]
+        }
+      ],
+      "source_ids": [
+        "higham-varna-ams",
+        "krauss-varna-analysis"
+      ],
+      "summary": "A Black Sea cemetery holding the oldest worked gold known anywhere, and the earliest clear evidence of concentrated wealth in Europe.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.cucuteni-trypillia",
+      "kind": "period",
+      "name": "Cucuteni-Trypillia",
+      "parent_id": "europe.prehistory",
+      "start_year": -5050,
+      "end_year": -3000,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "source_ids": [
+        "cucuteni-trypillia-subsistence"
+      ],
+      "summary": "The great Chalcolithic farming culture of Romania, Moldova and Ukraine, which built the largest settlements in the prehistoric world.",
+      "aliases": [
+        "Cucuteni–Trypillia",
+        "Tripolye culture"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.cucuteni-trypillia.trypillia-megasites",
+      "kind": "period",
+      "name": "Trypillia Mega-Sites",
+      "parent_id": "europe.prehistory.cucuteni-trypillia",
+      "start_year": -4300,
+      "end_year": -3650,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Nebelivka is modelled on c. 80 AMS dates to 3980-3820 through 3870-3750 cal BCE; Maidanetske to 3990-3640 cal BCE. How long any one mega-site was occupied is actively disputed — estimates run from under a century to more than two.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Among the largest settlements on Earth at the time, and they show no sign of centralised hierarchy — urban scale without a ruling centre.",
+          "source_ids": [
+            "trypillia-megasites-urbanism"
+          ]
+        }
+      ],
+      "source_ids": [
+        "nebelivka-megasite-chronology",
+        "trypillia-megasites-urbanism"
+      ],
+      "summary": "Settlements of up to 320 hectares and perhaps 15,000 people, laid out in concentric rings with no palace, citadel or centre.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.funnelbeaker",
+      "kind": "period",
+      "name": "Funnelbeaker Culture",
+      "parent_id": "europe.prehistory",
+      "start_year": -4300,
+      "end_year": -2800,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Arrival is strongly diachronic: c. 4300 cal BC in the central European core but not before c. 3950 cal BC in southern Sweden, and 3700/3600 cal BC in western Ukraine.",
+      "source_ids": [
+        "trb-southern-sweden",
+        "trb-western-ukraine"
+      ],
+      "summary": "The farming culture of north-central Europe that built the megalithic tombs, and the last before Corded Ware.",
+      "aliases": [
+        "TRB",
+        "Trichterbecherkultur"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.newgrange",
+      "kind": "period",
+      "name": "Newgrange",
+      "parent_id": "europe.prehistory",
+      "start_year": -3300,
+      "end_year": -2700,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Construction and primary use c. 3300-3000 cal BC, with deposition inside continuing to c. 2700 cal BC.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The often-quoted 'c. 2500 BC' is an uncalibrated laboratory age, not a calendar date. Calibrated, it is c. 3200 BC — a difference of 600-700 years.",
+          "source_ids": [
+            "newgrange-calibration-history"
+          ]
+        }
+      ],
+      "source_ids": [
+        "newgrange-feasting-isotopes",
+        "newgrange-calibration-history"
+      ],
+      "summary": "An Irish passage tomb built to admit the winter solstice sunrise, older than Stonehenge's standing stones and older than the pyramids.",
+      "aliases": [
+        "Brú na Bóinne"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.skara-brae",
+      "kind": "period",
+      "name": "Skara Brae",
+      "parent_id": "europe.prehistory",
+      "start_year": -3300,
+      "end_year": -2500,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "A 2017 re-evaluation puts first occupation at c. 3300 BC, most surviving buildings at c. 2900 BC, re-occupation at 2800-2700 BC and abandonment at c. 2500 BC.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not continuously inhabited for 600 years. The re-dating found the village was largely abandoned and later re-occupied.",
+          "source_ids": [
+            "skara-brae-redating-2017"
+          ]
+        }
+      ],
+      "source_ids": [
+        "skara-brae-redating-2017"
+      ],
+      "summary": "The best-preserved Neolithic village in Europe, its stone furniture still standing in the houses.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.ness-of-brodgar",
+      "kind": "period",
+      "name": "Ness of Brodgar",
+      "parent_id": "europe.prehistory",
+      "start_year": -3060,
+      "end_year": -2500,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Bayesian modelling of 65 measurements gives 3060-2950 cal BC for the main phase; the hearth in Structure Ten was last used c. 2500 cal BC. Popular accounts round the start to 3200 BC.",
+      "source_ids": [
+        "ness-of-brodgar-bayesian"
+      ],
+      "summary": "A monumental Orkney complex between two stone circles, with buildings larger than anything else known in Neolithic northwest Europe.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.farmer-turnover",
+      "kind": "era",
+      "name": "The Anatolian Farmer Turnover",
+      "parent_id": "europe.prehistory",
+      "start_year": -6500,
+      "end_year": -4000,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_precision": "approx",
+      "date_note": "Anatolian-farmer ancestry is widespread from c. 6400 BCE and present almost everywhere in continental Europe and the British Isles by c. 4300 BCE. Between 6500 and 4000 BCE it replaced 70-100% of local forager ancestry across most of the continent.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Europeans are not mostly Mesolithic foragers who took up farming. Pre-2015 cultural-diffusion accounts are substantially wrong: the dominant mechanism was demographic replacement.",
+          "source_ids": [
+            "haak-2015-steppe-migration",
+            "european-holocene-admixture-2022"
+          ]
+        },
+        {
+          "kind": "contested-existence",
+          "text": "Replacement was uneven. Wetlands of the Netherlands, Belgium and western Germany kept about half their forager ancestry for some three thousand years longer than the rest of Europe.",
+          "source_ids": [
+            "rhine-meuse-forager-ancestry-2026"
+          ]
+        }
+      ],
+      "source_ids": [
+        "haak-2015-steppe-migration",
+        "european-holocene-admixture-2022",
+        "rhine-meuse-forager-ancestry-2026"
+      ],
+      "summary": "Farming spread into Europe substantially as people, not as ideas: incoming Anatolian-descended farmers replaced most of the resident forager ancestry."
+    },
+    {
+      "id": "europe.prehistory.steppe-influx",
+      "kind": "event",
+      "name": "The Steppe Ancestry Influx",
+      "parent_id": "europe.prehistory",
+      "start_year": -3000,
+      "end_year": -2900,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "Corded Ware individuals in Germany derive roughly 75% of their ancestry from Yamnaya-related steppe populations. The admixed population forms rapidly, within c. 3000-2900 BCE, across widely separated regions, and the ancestry persists in central Europe for at least two millennia.",
+      "source_ids": [
+        "haak-2015-steppe-migration",
+        "european-holocene-admixture-2022"
+      ],
+      "summary": "A second large population movement, out of the Pontic-Caspian steppe, which reshaped northern Europe and is widely tied to the arrival of Indo-European languages."
+    },
+    {
+      "id": "americas.prehistory.coopers-ferry",
+      "kind": "period",
+      "name": "Cooper's Ferry",
+      "parent_id": "americas.prehistory",
+      "start_year": -14611,
+      "end_year": -13331,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "as_of": "2026-08-08",
+      "date_note": "Earliest occupation 16,560-15,280 cal BP. The corridor was not available before c. 14,800 cal BP, so if these dates hold the first people did not come through it.",
+      "alternatives": [
+        {
+          "label": "Younger chronology (2020 comment)",
+          "standing": "minority",
+          "start_year": -13051,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Argues the dates fit Greenland Interstadial 1, c. 15,000 BP.",
+          "source_ids": [
+            "coopers-ferry-2020-comment"
+          ]
+        }
+      ],
+      "source_ids": [
+        "davis-2019-coopers-ferry",
+        "coopers-ferry-2020-comment",
+        "coopers-ferry-2022-stemmed"
+      ],
+      "summary": "An Idaho site occupied before the ice-free corridor was passable, which is the argument for a Pacific coastal route.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.western-stemmed",
+      "kind": "period",
+      "name": "Western Stemmed Tradition",
+      "parent_id": "americas.prehistory",
+      "start_year": -14051,
+      "end_year": -7051,
+      "tier": "intermediate",
+      "start_dating_method": "unknown",
+      "end_dating_method": "unknown",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "Earliest stemmed points c. 16,000 years ago, main florescence c. 13,000-9,000. The source gives these as round 'years ago' figures without stating a calibration, so they are NOT of the same standing as the Bayesian-modelled Clovis and Folsom ranges and the dating method is recorded as unknown.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not a Clovis derivative. Its proposed antecedents are Upper Palaeolithic stemmed-point traditions in northeast Asia.",
+          "source_ids": [
+            "rosencrance-western-stemmed"
+          ]
+        }
+      ],
+      "source_ids": [
+        "rosencrance-western-stemmed"
+      ],
+      "summary": "A stone-point tradition of the American Far West that runs alongside Clovis without descending from it."
+    },
+    {
+      "id": "americas.prehistory.megafaunal-extinction",
+      "kind": "event",
+      "name": "North American Megafaunal Extinction",
+      "parent_id": "americas.prehistory",
+      "start_year": -11851,
+      "end_year": -9451,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "approx",
+      "as_of": "2026-08-08",
+      "date_note": "16 of the 37 genera have last-appearance dates between 13.8 and 11.4 ka, clustering at the Bolling-Allerod to Younger Dryas transition. WHY they died is genuinely open: continent-wide Bayesian modelling finds climate, not human population size, correlates with the decline, and a northeastern study found 75-90% of megafauna already gone before humans arrived there. Overkill proponents reply that absence of butchery evidence is not evidence of absence, and that humans may have delivered the final blow to already-collapsing populations.",
+      "alternatives": [
+        {
+          "label": "Overkill by human hunting",
+          "standing": "minority",
+          "note": "Haynes and Surovell: early human presence is under-sampled, and the data are consistent with humans finishing off declining populations.",
+          "source_ids": [
+            "northeast-megafauna-decline"
+          ]
+        }
+      ],
+      "source_ids": [
+        "stewart-2021-megafauna-climate",
+        "northeast-megafauna-decline"
+      ],
+      "summary": "At least 37 genera, some four-fifths of North America's large mammals, disappear near the end of the Pleistocene."
+    },
+    {
+      "id": "americas.prehistory.watson-brake",
+      "kind": "period",
+      "name": "Watson Brake",
+      "parent_id": "americas.prehistory",
+      "start_year": -3500,
+      "end_year": -3100,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Charcoal from soil horizons beneath the mound bases dates construction to 5,400-5,300 years ago, continuing 400-600 years.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Monumental building did not require farming or a food surplus. There is little evidence of either here.",
+          "source_ids": [
+            "saunders-1997-watson-brake"
+          ]
+        }
+      ],
+      "source_ids": [
+        "saunders-1997-watson-brake"
+      ],
+      "summary": "Eleven earthen mounds in Louisiana raised by hunter-gatherers, nineteen centuries before Poverty Point.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.poverty-point",
+      "kind": "period",
+      "name": "Poverty Point",
+      "parent_id": "americas.prehistory",
+      "start_year": -1751,
+      "end_year": -1151,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "source_ids": [
+        "unesco-poverty-point"
+      ],
+      "summary": "Concentric earthen ridges and mounds in Louisiana, built by a hunter-fisher-gatherer society with a continental trade reach.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.chinchorro",
+      "kind": "period",
+      "name": "Chinchorro Culture",
+      "parent_id": "americas.prehistory",
+      "start_year": -5450,
+      "end_year": -890,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "UNESCO gives the settlement span as c. 5450-890 BCE. Artificial mummification itself begins c. 7-8 ka BP and had practically ceased by 4.4 ka BP, as extreme aridity set in across the central Atacama.",
+      "source_ids": [
+        "marquet-2012-chinchorro",
+        "unesco-chinchorro"
+      ],
+      "summary": "Coastal foragers of the Atacama who deliberately mummified their dead — including children and the stillborn — for four thousand years.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.firsts.artificial-mummification",
+      "kind": "threshold",
+      "name": "Artificial Mummification",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -6051,
+      "end_year": null,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Oldest known example c. 7-8 ka BP, in northern Chile and southern Peru. Coastal settlement in the region begins around 10 ka BP.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Egypt did not invent mummification. The Chinchorro were doing it roughly two millennia earlier, and they were foragers, not a state.",
+          "source_ids": [
+            "marquet-2012-chinchorro"
+          ]
+        }
+      ],
+      "source_ids": [
+        "marquet-2012-chinchorro",
+        "unesco-chinchorro"
+      ],
+      "date_precision": "minimum",
+      "summary": "Deliberate preparation of the dead, practised on the Atacama coast two thousand years before anyone in Egypt attempted it."
+    },
+    {
+      "id": "americas.prehistory.las-vegas-culture",
+      "kind": "period",
+      "name": "Las Vegas Culture",
+      "parent_id": "americas.prehistory",
+      "start_year": -8851,
+      "end_year": -4651,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-uncalibrated",
+      "end_dating_method": "radiocarbon-uncalibrated",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "UNCALIBRATED. The source states explicitly that 10,800-6,600 BP are radiocarbon years, not calendar years, so these are not directly comparable to the calibrated dates elsewhere in this dataset.",
+      "source_ids": [
+        "tohoku-coastal-ecuador"
+      ],
+      "summary": "The oldest known archaeological complex on the Ecuadorian coast, with squash and bottle gourd cultivated by 9,000 years ago."
+    },
+    {
+      "id": "americas.prehistory.valdivia",
+      "kind": "period",
+      "name": "Valdivia Culture",
+      "parent_id": "americas.prehistory",
+      "start_year": -3650,
+      "end_year": -2350,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-08",
+      "date_note": "Valdivia 1 at 3650-2650 BC and Valdivia 2 at 2650-2350 BC per the Antiquity study. A separate institutional source gives the culture as 5,000-3,500 UNCALIBRATED radiocarbon years BP, which is not reconcilable with the above without a conversion the research did not perform. Both are recorded; neither is averaged into the other.",
+      "alternatives": [
+        {
+          "label": "Uncalibrated 5,000-3,500 BP range",
+          "standing": "minority",
+          "dating_method": "radiocarbon-uncalibrated",
+          "note": "Given by the Tohoku University Museum bulletin without calibration.",
+          "source_ids": [
+            "tohoku-coastal-ecuador"
+          ]
+        }
+      ],
+      "source_ids": [
+        "kanomata-2019-san-pedro",
+        "tohoku-coastal-ecuador"
+      ],
+      "summary": "An early ceramic culture of coastal Ecuador, long claimed as the oldest pottery in the Americas — which it is not."
+    },
+    {
+      "id": "americas.prehistory.huaca-prieta",
+      "kind": "period",
+      "name": "Huaca Prieta",
+      "parent_id": "americas.prehistory",
+      "start_year": -11751,
+      "end_year": -2051,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "First human presence c. 13,700-13,300 cal BP; initial occupation 9,000-8,000; mound building begins c. 7,500 cal BP and continues c. 3,500 years. Cotton production from c. 6,800 cal BP, raised fields by c. 4,800.",
+      "source_ids": [
+        "huaca-prieta-chronology"
+      ],
+      "summary": "A Peruvian coastal mound with 13,000 years of human presence, cotton by 6,800 years ago, and mound-building sustained for three and a half millennia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.caballo-muerto",
+      "kind": "period",
+      "name": "Caballo Muerto",
+      "parent_id": "americas.prehistory",
+      "start_year": -1500,
+      "end_year": -400,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Huaca Cortada's earliest floor gives two AMS dates calibrating to 1666-1442 and 1628-1418 BC, averaging 1621-1443 BC, so construction begins around 1500 BC. The complex-wide 1400-400 BC span from the same report is stated as UNCALIBRATED and should not be read as calendar years.",
+      "source_ids": [
+        "huaca-cortada-excavation"
+      ],
+      "summary": "A complex of monumental adobe platforms in the Moche valley, with friezes predating the Moche state by a thousand years.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.cerro-sechin",
+      "kind": "period",
+      "name": "Cerro Sechin",
+      "parent_id": "americas.prehistory",
+      "start_year": -1887,
+      "end_year": null,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_precision": "unknown",
+      "standing": "minority",
+      "date_precision": "disputed",
+      "date_note": "The Peruvian Ministry of Culture's technical report gives 2019 AMS dates on five charcoal samples from the main building. The oldest is 1887-1689 cal BC. The report contains NO dates for Sechin Bajo at all.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The often-cited 7600 BCE occupation is unverified, not established: the government excavation report's own dates are thousands of years younger, and it has none at all for Sechin Bajo.",
+          "source_ids": [
+            "mincul-cerro-sechin-report"
+          ]
+        }
+      ],
+      "source_ids": [
+        "mincul-cerro-sechin-report"
+      ],
+      "summary": "A Peruvian site famous for granite friezes of dismembered warriors, and for a widely repeated early date that its own excavation report does not support."
+    },
+    {
+      "id": "americas.prehistory.old-copper-complex",
+      "kind": "period",
+      "name": "Old Copper Complex",
+      "parent_id": "americas.prehistory",
+      "start_year": -7551,
+      "end_year": -3451,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Lake-sediment lead records put the start of mining c. 9,500 years ago, some 3,500 years earlier than the previous estimate; the peak falls between 7,000 and 5,000 years ago and mining ends around 5,400. Organic material on 15 artefacts dates 8,500-3,580 cal BP, the oldest being a copper point from Eagle Lake, Wisconsin. Younger dates from mine contexts are now read as abandonment and infill rather than active mining — earlier workers were dating the wrong event.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Metalworking in the Americas is popularly credited to much later Andean and Mesoamerican societies. Great Lakes copper is at least as old as the earliest Old World copper-working, and older than most.",
+          "source_ids": [
+            "pompeani-2021-old-copper",
+            "science-2021-great-lakes-copper"
+          ]
+        }
+      ],
+      "source_ids": [
+        "pompeani-2021-old-copper",
+        "science-2021-great-lakes-copper"
+      ],
+      "summary": "Great Lakes peoples working native copper into tools and points — among the oldest metalworking traditions anywhere on Earth.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.taperinha",
+      "kind": "period",
+      "name": "Taperinha",
+      "parent_id": "americas.prehistory",
+      "start_year": -6051,
+      "end_year": -5051,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Calibrated accelerator dates on pottery, charcoal and shell, plus one thermoluminescence date on a sherd, give c. 8,000-7,000 BP.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The hemisphere's oldest pottery is Amazonian, not Andean or Mesoamerican, and it precedes Valdivia ceramics by thousands of years.",
+          "source_ids": [
+            "roosevelt-1991-taperinha"
+          ]
+        }
+      ],
+      "source_ids": [
+        "roosevelt-1991-taperinha"
+      ],
+      "summary": "An Amazonian shell midden holding the oldest pottery in the Western Hemisphere.",
+      "date_precision": "approx"
     },
     {
       "id": "west-asia.prehistory.epipalaeolithic",

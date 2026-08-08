@@ -14,6 +14,31 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.2.0.0-app] — 2026-08-08
+
+### Added
+
+- **The research handoff is now rendered.** The readout panel shows a "Search Wikipedia for …"
+  link for the selected entity, opening in a new tab with `rel="noopener noreferrer"`, descriptive
+  text and no tracking parameters (ARCHITECTURE §10). Queries are disambiguated where the dataset
+  actually repeats a name, so Emperor Taizong searches as `Emperor Taizong Tang Dynasty`.
+- The handoff URL is also rendered as selectable text beneath the link. Opened offline the link
+  goes nowhere, and `src/research/handoff.ts` states that the fallback is to read the URL and run
+  the search later — which only works if the URL is actually on screen.
+- `panel-handoff-root` added to the required test-ID manifest; `link-handoff-{targetId}` and
+  `text-handoff-url-{targetId}` added as dynamic ids. Three E2E cases cover the link contract,
+  disambiguation, and the absence of any network request.
+
+### Fixed
+
+- `src/research/handoff.ts` and its 11 unit tests had been in the tree since the research-handoff
+  work landed, but `src/main.ts` never imported them, so no handoff was reachable in the running
+  app. `CHANGELOG` and `docs/DESIGN.md` already described the feature as shipped. The unit tests
+  passed throughout because they exercise the URL builder in isolation — the part that worked.
+- The E2E version-stamp assertion had the two tracks the wrong way round since the renumbering,
+  checking for app `v0.5.0` and `data 3.1.0` when those are the data and app versions respectively.
+  It was the one red test in the E2E suite; now pinned to `v3.2.0.0` and `data 0.5.0.1`.
+
 ## [3.1.2.0-app] — 2026-08-08
 
 ### Fixed

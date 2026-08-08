@@ -13,7 +13,8 @@
     "list-readout-facts",
     "panel-footer-root",
     "link-footer-repo",
-    "button-calendar-picker"
+    "button-calendar-picker",
+    "panel-handoff-root"
   ],
   "dynamic": [
     "option-tree-node-{entityId}",
@@ -23,6 +24,8 @@
     "panel-calendar-readout",
     "panel-calendar-picker",
     "text-calendar-{calendarId}",
-    "option-calendar-{calendarId}"
+    "option-calendar-{calendarId}",
+    "link-handoff-{targetId}",
+    "text-handoff-url-{targetId}"
   ]
 }

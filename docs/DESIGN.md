@@ -56,7 +56,7 @@ onto a calendar app; they change what a date *is* in the value model.
 | `src/chrono/fromEntity.ts` | Adapter from a v2.1.0 `Entity` into the model, so the migration map is executable rather than aspirational. Includes the one-time caveat classifier. |
 | `src/calendars/convert.ts` | Reads an ISO year in any of the 26 calendars, as a span, with validity. |
 | `src/calendars/selection.ts` | Calendar choice parsed from and written to `location.hash`. |
-| `src/research/handoff.ts` | Generated Wikipedia search links with dataset-measured disambiguation, plus the exportable research note. |
+| `src/research/handoff.ts` | Generated Wikipedia search links with dataset-measured disambiguation, plus the exportable research note. Rendered by `renderHandoff` in `src/main.ts` as of 3.2.0.0; `researchNote` is exported and tested but not yet wired to a control. |
 
 Tests: `tests/chrono.test.ts` (model), `tests/prehistory.test.ts` (eight real dating disputes),
 `tests/handoff.test.ts`, alongside the baseline `tree` and `dataset-integrity` suites.

@@ -16,6 +16,7 @@ import { readYearIn, type CalendarReading } from "./calendars/convert";
 import { CALENDARS, getCalendar } from "./calendars/registry";
 import { parseSelection, serializeSelection, toggleCalendar } from "./calendars/selection";
 import { asHistorical, isoFromHistorical } from "./chrono/year";
+import { ambiguousNames, handoffTargets } from "./research/handoff";
 
 const APP_VERSION = __APP_VERSION__;
 const REPO_URL = "https://github.com/tyohDeveloper/history-and-prehistory";
@@ -41,6 +42,10 @@ const KIND_LABEL: Record<EntityKind, string> = {
 };
 
 const index = buildIndex(entities);
+
+// Measured once over all 1,305 entities, not per render: ambiguity is a
+// property of the dataset, and the dataset does not change at runtime.
+const ambiguous = ambiguousNames(entities);
 
 interface State {
   /** Selected node per column depth; index 0 is the root column. */
@@ -249,6 +254,51 @@ function renderReadout(): HTMLElement {
   box.append(dl);
   const calendars = renderCalendarRows(e);
   if (calendars !== null) box.append(calendars);
+  box.append(renderHandoff(e));
+  return box;
+}
+
+/**
+ * The research handoff.
+ *
+ * The link is generated from the entity rather than authored, so every entity
+ * has one — see `research/handoff`. The URL is also rendered as selectable
+ * text, because opened offline the link goes nowhere and the user's fallback
+ * is to write the search down and run it later. That is the module's stated
+ * offline contract, and it only holds if the URL is actually on screen.
+ *
+ * ARCHITECTURE.md §10: user-initiated, new tab, `rel="noopener noreferrer"`,
+ * descriptive text, no tracking parameters. Nothing here is fetched by the
+ * app, so the footer's "no network requests" claim still holds.
+ */
+function renderHandoff(entity: Entity): HTMLElement {
+  const box = el("div", { class: "handoff", "data-testid": "panel-handoff-root" });
+  box.append(el("div", { class: "handoff-head" }, "Start your research"));
+  for (const t of handoffTargets(entity, index, { ambiguous })) {
+    box.append(
+      el(
+        "a",
+        {
+          class: "handoff-link",
+          href: t.url,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          "data-testid": `link-handoff-${t.id}`,
+        },
+        t.label,
+      ),
+    );
+    box.append(
+      el("code", { class: "handoff-url", "data-testid": `text-handoff-url-${t.id}` }, t.displayUrl),
+    );
+  }
+  box.append(
+    el(
+      "p",
+      { class: "handoff-note" },
+      "Dates here are a starting point, not a citation. Verify before relying on them.",
+    ),
+  );
   return box;
 }
 

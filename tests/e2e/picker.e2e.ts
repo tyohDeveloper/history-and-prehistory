@@ -21,8 +21,11 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // Both versions are pinned. They move independently, and the app version
   // silently drifting out of the header is exactly the kind of thing that
   // goes unnoticed until a bug report quotes a version that never shipped.
-  await expect(page.getByTestId("text-app-version")).toContainText("v0.5.0");
-  await expect(page.getByTestId("text-app-version")).toContainText("data 3.1.0");
+  // The two tracks had been asserted the wrong way round since the renumbering:
+  // v0.5.0 is the DATA version and 3.1.0 was the APP version. The test was
+  // failing for that reason, not because the header was wrong.
+  await expect(page.getByTestId("text-app-version")).toContainText("v3.2.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 0.5.0.1");
   await expect(page.getByTestId("panel-footer-root")).toContainText("1,417 entities");
 });
 
@@ -252,4 +255,43 @@ test("the budget replaces the tier filter as the amount control", async ({ page 
   await page.getByTestId("input-context-budget").fill("8");
   await page.getByTestId("input-context-budget").dispatchEvent("input");
   await expect(page.locator('[data-testid^="option-context-"]')).toHaveCount(8);
+});
+
+test("offers a generated Wikipedia handoff for the selected entity", async ({ page }) => {
+  // The link is generated per entity rather than authored, so the assertion is
+  // on shape and on the §10 link contract, not on a curated URL.
+  await page.getByTestId("option-tree-node-east-asia").click();
+  await page.getByTestId("option-tree-node-east-asia.japan").click();
+
+  const link = page.getByTestId("link-handoff-wikipedia");
+  await expect(link).toBeVisible();
+  await expect(link).toHaveText(/^Search Wikipedia for /);
+  await expect(link).toHaveAttribute("href", /^https:\/\/en\.wikipedia\.org\/w\/index\.php\?search=Japan$/);
+  await expect(link).toHaveAttribute("target", "_blank");
+  await expect(link).toHaveAttribute("rel", "noopener noreferrer");
+
+  // The offline fallback: the URL is on screen as text, not only in the href.
+  await expect(page.getByTestId("text-handoff-url-wikipedia")).toContainText(
+    "en.wikipedia.org/w/index.php?search=Japan",
+  );
+});
+
+test("disambiguates a repeated name in the handoff query", async ({ page }) => {
+  // Two Emperor Taizongs exist in the dataset; the nearest ancestor that adds
+  // signal is appended so the search does not land on a disambiguation page.
+  await page.getByTestId("input-search-query").fill("Emperor Taizong");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+  await expect(page.getByTestId("link-handoff-wikipedia")).toHaveText(
+    /Search Wikipedia for .Emperor Taizong \w+/,
+  );
+});
+
+test("the handoff makes no network request of its own", async ({ page }) => {
+  const external: string[] = [];
+  page.on("request", (r) => {
+    if (!r.url().startsWith("file://")) external.push(r.url());
+  });
+  await page.getByTestId("option-tree-node-east-asia").click();
+  await expect(page.getByTestId("link-handoff-wikipedia")).toBeVisible();
+  expect(external).toEqual([]);
 });

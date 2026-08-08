@@ -104,6 +104,8 @@ export type DatingMethod =
   | "luminescence"
   | "uranium-series"
   | "esr"
+  /** Cosmogenic nuclide burial dating (26Al/10Be). Dates when sediment went underground. */
+  | "cosmogenic"
   /** Ice-core and varve annual layer counting. Reports a maximum counting error. */
   | "layer-counting"
   | "magnetostratigraphy"
@@ -376,6 +378,7 @@ const BP_SENSE: Partial<Record<DatingMethod, BpSense>> = {
   "uranium-series": "geological",
   luminescence: "geological",
   esr: "geological",
+  cosmogenic: "geological",
   magnetostratigraphy: "geological",
 };
 
@@ -425,6 +428,7 @@ export const DATING_METHOD_LABEL: Record<DatingMethod, string> = {
   luminescence: "Luminescence (OSL/TL)",
   "uranium-series": "Uranium-series",
   esr: "Electron spin resonance",
+  cosmogenic: "Cosmogenic nuclide burial dating",
   "layer-counting": "Annual layer counting",
   magnetostratigraphy: "Magnetostratigraphy",
   typological: "Typological / stylistic",

@@ -1,5 +1,108 @@
 # Changelog
 
+## 0.6.0.0 — African prehistory depth and per-boundary dating (2026-08-08)
+
+**Schema 3.0.0. Africa goes from 8 prehistory nodes to 37.**
+
+### Note on the gap in this file
+
+This changelog stopped at 2.1.0 and never recorded the renumbering to the
+four-part scheme, nor the prehistory and regional-prehistory passes that took
+the corpus from 1,305 to 1,417 entities. Those entries are not reconstructed
+here; this file resumes from 0.6.0.0 and the intervening work is visible in the
+git history and in `docs/regional-prehistory-authoring-notes.md`.
+
+### Schema 3.0.0 — per-boundary dating (Q-30)
+
+- `dating_method` is replaced by `start_dating_method` and `end_dating_method`.
+  MAJOR because a consumer reading the entity-level field now finds nothing.
+  Inside `alternatives`, `dating_method` is retained and correct: an alternative
+  is a claim about one boundary.
+- The end is **not** inherited from the start. 104 ends carry a method, derived
+  only where physically possible — radiocarbon carries only within radiocarbon's
+  reach, geochronological methods only where the end is also beyond it — and
+  left unset otherwise. See `tools/end_dating.py`.
+- Four entities have genuinely different science at each end: Neanderthal
+  Europe, the Middle Stone Age, Rising Star and Sterkfontein. Under the single
+  field every one of them was mislabelled at one end.
+- `cosmogenic` added to the dating-method vocabulary. Sterkfontein and
+  Swartkrans rest on 26Al/10Be isochron burial dating, which previously had no
+  way to be recorded.
+- The validator now checks BOTH boundaries against the radiocarbon ceiling. The
+  end check is new reach, not a port: an impossible end date was untestable
+  before, because the end had no method to test.
+
+### Added — African prehistory (31 entities, 46 sources)
+
+Africa held 8 prehistory nodes against Europe's 11, for the continent holding
+roughly 3.0 of the app's 3.3 million years. The dataset already carried a
+caveat warning readers that figurative art did not begin in Europe while the
+node counts implied the opposite.
+
+- **East African Rift:** Turkana Basin, Laetoli, Hadar, Gona, Melka Kunture,
+  Olorgesailie, Herto, Bodo, Enkapune Ya Muto.
+- **Southern Africa:** Sterkfontein, Swartkrans, Rising Star, Sibudu, Pinnacle
+  Point, Diepkloof, Apollo 11 Cave, Kabwe.
+- **North Africa and the Sahara:** Jebel Irhoud, Taforalt, Wadi Kubbaniya,
+  Gobero, Capsian, Khartoum Mesolithic, Fayum Neolithic; Ishango in Central
+  Africa.
+- **Domestication and metallurgy:** cattle herding, cereal domestication, the
+  Bantu homeland phase, Nok culture.
+- **Behavioural firsts:** Cut-Marked Bone (Dikika) and Structural Use of Wood
+  (Kalambo Falls). The Dikika sources had been in the registry since the
+  prehistory pass and the Behavioural Firsts era was already dated to 3.39 Ma to
+  hold it, but the node itself was never written.
+- Two reference anchors added, Laetoli footprints and Lucy, because the new
+  content ran older than the oldest anchor and had nothing to orient against.
+
+### Disputes carried rather than resolved
+
+Five entities are authored `date_precision: disputed` with rival chronologies as
+`alternatives` and an `as_of` stamp, instead of one figure being quietly chosen:
+
+- **Sterkfontein** — cosmogenic burial dating (~3.4-3.7 Ma) against U-Pb, ESR
+  and palaeomagnetism (~2.0-2.6 Ma). Over a million years apart, for the same
+  deposits, unresolved as of 2024.
+- **Melka Kunture** — whether Garba IVD holds the earliest Acheulean at 1.95 Ma.
+- **Ishango** — three incompatible figures; the radiocarbon is compromised by
+  volcanic disruption of the local carbon reservoir.
+- **Nok / Taruga iron smelting** — spread across nearly a millennium, partly
+  because of a radiocarbon calibration plateau that more dating cannot fix.
+- **Bantu homeland** — two syntheses 1,000-2,000 years apart on proto-Bantu.
+
+### Corrections carried as caveats
+
+Kabwe is not ~500,000 years old (299±25 ka by direct dating). Wadi Kubbaniya is
+not an early-agriculture site; its cereals were modern contaminants. Nabta
+Playa's early Holocene cattle are argued to be hunted aurochs, not domesticates.
+Herto is not the oldest *Homo sapiens*. Gona is no longer uniquely the earliest
+Oldowan.
+
+### Deliberately not done
+
+- **Laetoli is a site, not a behavioural first.** A bipedalism threshold would
+  have moved the app's floor from 3.3 Ma to 3.66 Ma on an anatomical trait
+  rather than a manufacturing behaviour, which is the arbitrary-floor problem
+  the scope gate exists to prevent.
+- **Nabta Playa and Green Sahara were already authored** with their own sources
+  and are left untouched.
+- **Regional placement is unchanged.** Jomon still sits under `east-asia.japan`
+  and Sahul under `oceania.australia.aboriginal` rather than under
+  `.prehistory` branches. Consistency there is a re-parenting job, not depth.
+- **No global Chalcolithic or Epipalaeolithic framework.** African
+  Epipalaeolithic content is authored (Capsian, Qarunian, Khartoum Mesolithic),
+  but a worldwide framework needs its own sourced pass and would otherwise be
+  invented rather than cited.
+
+### Stats
+
+- **1,448 entities** (up from 1,417). Prehistory 128, or 8.8% of the corpus, up
+  from 97 and 6.8%.
+- **Africa 37 prehistory nodes** (up from 8), now the largest regional branch.
+- **160 sources** (up from 114); 144 entities cite at least one (up from 113).
+- 49 entities carry alternatives, 52 carry caveats.
+- **Validation:** OK, no errors, 0 warnings.
+
 ## 2.1.0 — South Asia expansion (2026-07-20)
 
 **Closes the coverage gap flagged by the council review.** South Asia grew from 26 entities to 206, with dedicated attention to rulers, movements, and modern political history.

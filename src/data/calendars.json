@@ -1,7 +1,7 @@
 {
-  "schema_version": "2.0.0",
-  "dataset_version": "0.5.0.1",
-  "generated_at": "2026-08-08T04:26:06Z",
+  "schema_version": "3.0.0",
+  "dataset_version": "0.6.0.0",
+  "generated_at": "2026-08-08T19:20:20Z",
   "calendars": [
     {
       "id": "gregorian",
@@ -36,9 +36,9 @@
       "kind": "lunar",
       "epoch_year": 622,
       "direction": "forward",
-      "notes": "Lunar calendar starting from Muhammad's Hijra (622 CE). ~354-day year drifts ~11 days/year against solar; ~33 lunar years \u2248 32 solar years.",
+      "notes": "Lunar calendar starting from Muhammad's Hijra (622 CE). ~354-day year drifts ~11 days/year against solar; ~33 lunar years ≈ 32 solar years.",
       "conversion": {
-        "formula": "gregorian \u2248 622 + (hijri * 0.970224)"
+        "formula": "gregorian ≈ 622 + (hijri * 0.970224)"
       }
     },
     {
@@ -91,7 +91,7 @@
       "kind": "regnal",
       "epoch_year": -753,
       "direction": "forward",
-      "notes": "'From the founding of the City' \u2014 Rome. AUC 1 = 753 BCE by tradition.",
+      "notes": "'From the founding of the City' — Rome. AUC 1 = 753 BCE by tradition.",
       "conversion": {
         "gregorian_offset": -754
       }
@@ -122,7 +122,7 @@
     },
     {
       "id": "japanese-nengo",
-      "name": "Japanese Neng\u014d (Era Names)",
+      "name": "Japanese Nengō (Era Names)",
       "kind": "era-name",
       "epoch_year": 645,
       "direction": "forward",
@@ -130,245 +130,245 @@
       "named_years": [
         {
           "name": "Taika",
-          "native": "\u5927\u5316",
+          "native": "大化",
           "start_gregorian": 645,
           "end_gregorian": 650
         },
         {
           "name": "Hakuchi",
-          "native": "\u767d\u96c9",
+          "native": "白雉",
           "start_gregorian": 650,
           "end_gregorian": 654
         },
         {
-          "name": "Shuch\u014d",
-          "native": "\u6731\u9ce5",
+          "name": "Shuchō",
+          "native": "朱鳥",
           "start_gregorian": 686,
           "end_gregorian": 686
         },
         {
-          "name": "Taih\u014d",
-          "native": "\u5927\u5b9d",
+          "name": "Taihō",
+          "native": "大宝",
           "start_gregorian": 701,
           "end_gregorian": 704
         },
         {
-          "name": "Wad\u014d",
-          "native": "\u548c\u9285",
+          "name": "Wadō",
+          "native": "和銅",
           "start_gregorian": 708,
           "end_gregorian": 715
         },
         {
-          "name": "Tenpy\u014d",
-          "native": "\u5929\u5e73",
+          "name": "Tenpyō",
+          "native": "天平",
           "start_gregorian": 729,
           "end_gregorian": 749
         },
         {
           "name": "Enryaku",
-          "native": "\u5ef6\u66a6",
+          "native": "延暦",
           "start_gregorian": 782,
           "end_gregorian": 806
         },
         {
-          "name": "K\u014dnin",
-          "native": "\u5f18\u4ec1",
+          "name": "Kōnin",
+          "native": "弘仁",
           "start_gregorian": 810,
           "end_gregorian": 824
         },
         {
           "name": "Engi",
-          "native": "\u5ef6\u559c",
+          "native": "延喜",
           "start_gregorian": 901,
           "end_gregorian": 923
         },
         {
-          "name": "Kanpy\u014d",
-          "native": "\u5bdb\u5e73",
+          "name": "Kanpyō",
+          "native": "寛平",
           "start_gregorian": 889,
           "end_gregorian": 898
         },
         {
           "name": "Genryaku",
-          "native": "\u5143\u66a6",
+          "native": "元暦",
           "start_gregorian": 1184,
           "end_gregorian": 1185
         },
         {
           "name": "Bunji",
-          "native": "\u6587\u6cbb",
+          "native": "文治",
           "start_gregorian": 1185,
           "end_gregorian": 1190
         },
         {
-          "name": "Kenky\u016b",
-          "native": "\u5efa\u4e45",
+          "name": "Kenkyū",
+          "native": "建久",
           "start_gregorian": 1190,
           "end_gregorian": 1199
         },
         {
-          "name": "J\u014dky\u016b",
-          "native": "\u627f\u4e45",
+          "name": "Jōkyū",
+          "native": "承久",
           "start_gregorian": 1219,
           "end_gregorian": 1222
         },
         {
           "name": "Bun'ei",
-          "native": "\u6587\u6c38",
+          "native": "文永",
           "start_gregorian": 1264,
           "end_gregorian": 1275
         },
         {
-          "name": "K\u014dan",
-          "native": "\u5f18\u5b89",
+          "name": "Kōan",
+          "native": "弘安",
           "start_gregorian": 1278,
           "end_gregorian": 1288
         },
         {
-          "name": "Genk\u014d",
-          "native": "\u5143\u5f18",
+          "name": "Genkō",
+          "native": "元弘",
           "start_gregorian": 1331,
           "end_gregorian": 1334
         },
         {
           "name": "Kenmu",
-          "native": "\u5efa\u6b66",
+          "native": "建武",
           "start_gregorian": 1334,
           "end_gregorian": 1336
         },
         {
-          "name": "\u014cei",
-          "native": "\u5fdc\u6c38",
+          "name": "Ōei",
+          "native": "応永",
           "start_gregorian": 1394,
           "end_gregorian": 1428
         },
         {
-          "name": "\u014cnin",
-          "native": "\u5fdc\u4ec1",
+          "name": "Ōnin",
+          "native": "応仁",
           "start_gregorian": 1467,
           "end_gregorian": 1469
         },
         {
-          "name": "Tensh\u014d",
-          "native": "\u5929\u6b63",
+          "name": "Tenshō",
+          "native": "天正",
           "start_gregorian": 1573,
           "end_gregorian": 1592
         },
         {
           "name": "Bunroku",
-          "native": "\u6587\u7984",
+          "native": "文禄",
           "start_gregorian": 1592,
           "end_gregorian": 1596
         },
         {
-          "name": "Keich\u014d",
-          "native": "\u6176\u9577",
+          "name": "Keichō",
+          "native": "慶長",
           "start_gregorian": 1596,
           "end_gregorian": 1615
         },
         {
           "name": "Genna",
-          "native": "\u5143\u548c",
+          "native": "元和",
           "start_gregorian": 1615,
           "end_gregorian": 1624
         },
         {
           "name": "Kan'ei",
-          "native": "\u5bdb\u6c38",
+          "native": "寛永",
           "start_gregorian": 1624,
           "end_gregorian": 1644
         },
         {
           "name": "Genroku",
-          "native": "\u5143\u7984",
+          "native": "元禄",
           "start_gregorian": 1688,
           "end_gregorian": 1704
         },
         {
-          "name": "Ky\u014dh\u014d",
-          "native": "\u4eab\u4fdd",
+          "name": "Kyōhō",
+          "native": "享保",
           "start_gregorian": 1716,
           "end_gregorian": 1736
         },
         {
           "name": "Kansei",
-          "native": "\u5bdb\u653f",
+          "native": "寛政",
           "start_gregorian": 1789,
           "end_gregorian": 1801
         },
         {
           "name": "Bunka",
-          "native": "\u6587\u5316",
+          "native": "文化",
           "start_gregorian": 1804,
           "end_gregorian": 1818
         },
         {
-          "name": "Tenp\u014d",
-          "native": "\u5929\u4fdd",
+          "name": "Tenpō",
+          "native": "天保",
           "start_gregorian": 1830,
           "end_gregorian": 1844
         },
         {
           "name": "Kaei",
-          "native": "\u5609\u6c38",
+          "native": "嘉永",
           "start_gregorian": 1848,
           "end_gregorian": 1854
         },
         {
           "name": "Ansei",
-          "native": "\u5b89\u653f",
+          "native": "安政",
           "start_gregorian": 1854,
           "end_gregorian": 1860
         },
         {
-          "name": "Bunky\u016b",
-          "native": "\u6587\u4e45",
+          "name": "Bunkyū",
+          "native": "文久",
           "start_gregorian": 1861,
           "end_gregorian": 1864
         },
         {
           "name": "Genji",
-          "native": "\u5143\u6cbb",
+          "native": "元治",
           "start_gregorian": 1864,
           "end_gregorian": 1865
         },
         {
-          "name": "Kei\u014d",
-          "native": "\u6176\u5fdc",
+          "name": "Keiō",
+          "native": "慶応",
           "start_gregorian": 1865,
           "end_gregorian": 1868
         },
         {
           "name": "Meiji",
-          "native": "\u660e\u6cbb",
+          "native": "明治",
           "start_gregorian": 1868,
           "end_gregorian": 1912,
           "entity_id": "east-asia.japan.modern.meiji"
         },
         {
-          "name": "Taish\u014d",
-          "native": "\u5927\u6b63",
+          "name": "Taishō",
+          "native": "大正",
           "start_gregorian": 1912,
           "end_gregorian": 1926,
           "entity_id": "east-asia.japan.modern.taisho"
         },
         {
-          "name": "Sh\u014dwa",
-          "native": "\u662d\u548c",
+          "name": "Shōwa",
+          "native": "昭和",
           "start_gregorian": 1926,
           "end_gregorian": 1989,
           "entity_id": "east-asia.japan.modern.showa"
         },
         {
           "name": "Heisei",
-          "native": "\u5e73\u6210",
+          "native": "平成",
           "start_gregorian": 1989,
           "end_gregorian": 2019,
           "entity_id": "east-asia.japan.modern.heisei"
         },
         {
           "name": "Reiwa",
-          "native": "\u4ee4\u548c",
+          "native": "令和",
           "start_gregorian": 2019,
           "end_gregorian": null,
           "entity_id": "east-asia.japan.modern.reiwa"
@@ -385,49 +385,49 @@
       "named_years": [
         {
           "name": "Jianyuan",
-          "native": "\u5efa\u5143",
+          "native": "建元",
           "start_gregorian": -140,
           "end_gregorian": -135,
           "notes": "First named Chinese era, under Emperor Wu of Han."
         },
         {
           "name": "Kaiyuan",
-          "native": "\u958b\u5143",
+          "native": "開元",
           "start_gregorian": 713,
           "end_gregorian": 741,
           "notes": "Golden age under Tang Xuanzong."
         },
         {
           "name": "Yongle",
-          "native": "\u6c38\u6a02",
+          "native": "永樂",
           "start_gregorian": 1403,
           "end_gregorian": 1424,
           "notes": "Ming Yongle Emperor."
         },
         {
           "name": "Kangxi",
-          "native": "\u5eb7\u7199",
+          "native": "康熙",
           "start_gregorian": 1662,
           "end_gregorian": 1722,
           "notes": "Qing Kangxi Emperor."
         },
         {
           "name": "Qianlong",
-          "native": "\u4e7e\u9686",
+          "native": "乾隆",
           "start_gregorian": 1736,
           "end_gregorian": 1796,
           "notes": "Qing Qianlong Emperor."
         },
         {
           "name": "Guangxu",
-          "native": "\u5149\u7dd2",
+          "native": "光緒",
           "start_gregorian": 1875,
           "end_gregorian": 1908,
           "notes": "Late Qing."
         },
         {
           "name": "Xuantong",
-          "native": "\u5ba3\u7d71",
+          "native": "宣統",
           "start_gregorian": 1909,
           "end_gregorian": 1912,
           "notes": "Last Qing era (Puyi)."
@@ -440,18 +440,18 @@
       "kind": "era-name",
       "epoch_year": 536,
       "direction": "forward",
-      "notes": "Korean states used their own regnal era names in Silla and again in the Korean Empire (1897\u20131910).",
+      "notes": "Korean states used their own regnal era names in Silla and again in the Korean Empire (1897–1910).",
       "named_years": [
         {
           "name": "Gwangmu",
-          "native": "\u5149\u6b66",
+          "native": "光武",
           "start_gregorian": 1897,
           "end_gregorian": 1907,
           "notes": "Emperor Gojong's Korean Empire era."
         },
         {
           "name": "Yunghui",
-          "native": "\u9686\u7199",
+          "native": "隆熙",
           "start_gregorian": 1907,
           "end_gregorian": 1910
         }
@@ -474,7 +474,7 @@
       "kind": "era-name",
       "epoch_year": 544,
       "direction": "forward",
-      "notes": "Vietnamese dynasties adopted a Chinese-style era-name system beginning with the Early L\u00fd (544). Emperors could have multiple."
+      "notes": "Vietnamese dynasties adopted a Chinese-style era-name system beginning with the Early Lý (544). Emperors could have multiple."
     },
     {
       "id": "egyptian-regnal",
@@ -490,7 +490,7 @@
       "kind": "solar",
       "epoch_year": 1792,
       "direction": "forward",
-      "notes": "Revolutionary calendar in use 1792\u20131806 (and briefly 1871). Year 1 began 22 Sept 1792; 12 months of 30 days plus 5 (or 6) 'complementary days'.",
+      "notes": "Revolutionary calendar in use 1792–1806 (and briefly 1871). Year 1 began 22 Sept 1792; 12 months of 30 days plus 5 (or 6) 'complementary days'.",
       "conversion": {
         "gregorian_offset": 1791
       }

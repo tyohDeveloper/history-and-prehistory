@@ -14,6 +14,29 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.3.0.0-app] — 2026-08-08
+
+### Changed
+
+- **Dating is per-boundary (Q-30, schema 3.0.0).** `datingOf` no longer applies
+  the start's method to the end. It was labelling a radiocarbon end as
+  argon-argon whenever the start was volcanic, invisibly, because the end had no
+  method of its own to carry. Four entities in the corpus genuinely differ at
+  each end.
+- `cosmogenic` added to `DatingMethod`, its BP sense and its display label.
+  Sterkfontein and Swartkrans rest on it and could not previously be recorded.
+- Build size baseline rebased to 122,646 bytes gzip, up 6.8 kB. That is content
+  — 31 entities with notes, alternatives and caveats, plus 46 source records —
+  not a code regression.
+
+### Fixed
+
+- The E2E version assertion pinned the previous release; updated with the data
+  track's move to 0.6.0.0 and the corpus to 1,448 entities.
+
+See [`docs/DATASET-CHANGELOG.md`](docs/DATASET-CHANGELOG.md) for the 0.6.0.0
+data release this ships alongside.
+
 ## [3.2.0.0-app] — 2026-08-08
 
 ### Added

@@ -23,8 +23,8 @@ DATA.mkdir(exist_ok=True)
 # ---- Versions --------------------------------------------------------------
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
-SCHEMA_VERSION = "2.0.0"
-DATASET_VERSION = "0.5.0.1"
+SCHEMA_VERSION = "3.0.0"
+DATASET_VERSION = "0.6.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -164,7 +164,7 @@ E("global.ce", "era", "CE (Common Era)", "global",
 # where it sits.
 E("global.paleolithic", "era", "Paleolithic (Old Stone Age)", "global.prehistory",
   start=-3300000, end=-10000, date_precision="approx", tier="foundational",
-  dating_method="argon-argon",
+  start_dating_method="argon-argon",
   summary="The long first chapter: stone tools, fire, and hunter-gatherer life, from the "
           "earliest knapped stone through the whole span of the genus Homo.",
   date_note="Starts at the earliest known stone tools \u2014 Lomekwi 3, c. 3.3 Ma \u2014 "
@@ -172,16 +172,16 @@ E("global.paleolithic", "era", "Paleolithic (Old Stone Age)", "global.prehistory
             "definitional argument; they are included here because the toolmaking record "
             "is continuous even where the taxonomy is not.")
 E("global.mesolithic", "era", "Mesolithic (Eurasia)", "global.prehistory", start=-10000, end=-5000,
-  tier="intermediate", dating_method="radiocarbon-calibrated", standing="consensus",
+  tier="intermediate", start_dating_method="radiocarbon-calibrated", standing="consensus",
   date_note="A Eurasian term. It has no counterpart in the Americas, sub-Saharan Africa "
             "or Australia, where the post-glacial sequence is described differently.")
 E("global.neolithic", "era", "Neolithic (New Stone Age)", "global.prehistory",
   start=-10000, end=-3300, tier="foundational",
-  dating_method="radiocarbon-calibrated", standing="consensus",
+  start_dating_method="radiocarbon-calibrated", standing="consensus",
   summary="Beginnings of agriculture, animal domestication, and permanent villages.")
 E("global.bronze-age", "era", "Bronze Age", "global",
   start=-3300, end=-1200, tier="foundational",
-  dating_method="calendar", standing="consensus",
+  start_dating_method="calendar", standing="consensus",
   start_year_min=-3500, start_year_max=-3000,
   end_year_min=-1200, end_year_max=-1150,
   start_precision="approx", end_precision="approx",
@@ -389,7 +389,7 @@ jp = "east-asia.japan"
 E(f"{jp}.jomon", "era", "Jōmon Period", jp,
   start=-14000, end=-300, tier="intermediate",
   native_name="縄文時代",
-  dating_method="radiocarbon-calibrated", standing="consensus",
+  start_dating_method="radiocarbon-calibrated", standing="consensus",
   summary="Hunter-gatherers who made pottery, settled in villages and grew rich on the sea "
           "— without ever taking up farming.",
   date_note="The phase framework is in calibrated years. The widely repeated start of "
@@ -1396,7 +1396,7 @@ E("americas.amazon-southern.mapuche", "era", "Mapuche / Araucanía", "americas.a
 
 E("oceania.australia.aboriginal", "era", "Aboriginal Australia", "oceania.australia",
   start=-65000, end=None, date_precision="approx", tier="foundational",
-  dating_method="luminescence", standing="consensus",
+  start_dating_method="luminescence", standing="consensus",
   summary="One of the longest continuous cultural traditions in human history.",
   date_note="The 65 ka arrival rests on optically stimulated luminescence at Madjedbebe, "
             "well beyond the radiocarbon range. 1788 is a colonial boundary, not an end: "
@@ -1408,7 +1408,7 @@ E("oceania.australia.commonwealth", "era", "Commonwealth of Australia", "oceania
 E("oceania.melanesia.lapita", "era", "Lapita Culture", "oceania.melanesia", start=-1501, end=-734,
   date_precision="approx", tier="intermediate",
   summary="An ancestral Austronesian seafaring culture that spread from the Bismarck Archipelago into Remote Oceania.",
-  dating_method="radiocarbon-calibrated", standing="majority",
+  start_dating_method="radiocarbon-calibrated", standing="majority",
   date_note="The Bismarck start is 3450-3350 cal BP and the Tonga/Samoa end is 2703-2683 cal BP. Marine-shell reservoir corrections are central to this chronology.",
   alternatives=[{"label": "Earlier shell-inclusive start", "standing": "minority", "start_year": -1601,
                  "end_year": -1501, "dating_method": "radiocarbon-calibrated",
@@ -1425,7 +1425,7 @@ E("oceania.micronesia.yap", "era", "Yapese Empire (Sawei)", "oceania.micronesia"
 E("oceania.polynesia.settlement", "era", "Polynesian Voyaging & Settlement", "oceania.polynesia",
   start=1025, end=1290, tier="foundational",
   summary="A rapid expansion from West to East Polynesia that reached remote islands, including Aotearoa, in the late thirteenth century.",
-  dating_method="radiocarbon-calibrated", standing="consensus",
+  start_dating_method="radiocarbon-calibrated", standing="consensus",
   date_note="A review of 1,434 radiocarbon dates supports 1025-1120 CE for East Polynesian settlement and 1230-1280 CE for Aotearoa, with modelled Rapa Nui about 1200 CE.",
   alternatives=[{"label": "Long chronology", "standing": "minority", "start_year": 300,
                  "end_year": 950, "dating_method": "radiocarbon-calibrated",
@@ -1589,7 +1589,7 @@ E("global.contemporary.covid", "event", "COVID-19 Pandemic", "global.contemporar
 # --- Bronze Age subdivisions and neolithic events ---
 E("global.neolithic.agricultural-revolution", "event", "Neolithic (Agricultural) Revolution", "global.neolithic",
   start=-10000, end=-4500, tier="foundational",
-  dating_method="radiocarbon-calibrated", standing="consensus",
+  start_dating_method="radiocarbon-calibrated", standing="consensus",
   start_precision="approx", end_precision="approx",
   aliases=["Neolithic Revolution", "First Agricultural Revolution"],
   summary="Independent transitions to farming and animal domestication in the Fertile Crescent, China, Mesoamerica, and elsewhere.")
@@ -1616,6 +1616,9 @@ _extend_prehistory(E, "global")
 
 from extensions_regional_prehistory import extend as _extend_regional_prehistory
 _extend_regional_prehistory(E, "global")
+
+from extensions_africa import extend as _extend_africa
+_extend_africa(E, "global")
 
 
 # =============================================================================
@@ -1831,6 +1834,17 @@ for e in entities:
     p = e.get("parent_id")
     if p and p not in seen:
         raise SystemExit(f"Missing parent for {e['id']}: {p}")
+
+# Q-30: per-boundary end dating. Runs after every extension has contributed,
+# so it sees the final corpus rather than a partial one. See tools/end_dating.py
+# for why this derives rather than inherits, and where it refuses to.
+from end_dating import apply_end_dating_methods  # noqa: E402
+
+_explicit, _derived, _unset = apply_end_dating_methods(entities)
+print(
+    f"End dating: {_explicit} explicit, {_derived} derived, {_unset} left unset "
+    f"(end rests on different science from the start)"
+)
 
 with open(DATA / "entities.json", "w") as f:
     json.dump(_envelope("entities", entities), f, indent=2, ensure_ascii=False)
@@ -3003,6 +3017,9 @@ sources = [
     },
 ]
 
+from extensions_africa import AFRICA_SOURCES  # noqa: E402
+sources.extend(AFRICA_SOURCES)
+
 with open(DATA / "sources.json", "w") as f:
     json.dump({"schema_version": SCHEMA_VERSION, "dataset_version": DATASET_VERSION,
                "generated_at": _GENERATED_AT, "sources": sources}, f, indent=2, ensure_ascii=False)
@@ -3028,6 +3045,12 @@ frames = [
     #
     # These are scale references rather than landmarks: nobody grew up knowing
     # when the Last Glacial Maximum was, so the anchor has to do more work.
+    {"id": "lucy", "name": "Lucy walks upright", "year": -3178051, "anchor_set": "deep-time",
+     "summary": "The Australopithecus afarensis skeleton from Hadar in Ethiopia. Bipedal, small-brained, and 600,000 years before anyone knapped a stone.",
+     "entity_id": "africa.prehistory.hadar"},
+    {"id": "laetoli-footprints", "name": "Oldest footprints", "year": -3658051, "anchor_set": "deep-time",
+     "summary": "Hominins walked across wet volcanic ash at Laetoli in Tanzania and the prints set. The oldest direct record of upright walking, older than any stone tool.",
+     "entity_id": "africa.prehistory.laetoli"},
     {"id": "first-stone-tools", "name": "First stone tools", "year": -3298051, "anchor_set": "deep-time",
      "summary": "The oldest known deliberately knapped stone, at Lomekwi 3 in Kenya. Half a million years before the oldest fossil of our own genus.",
      "entity_id": "global.prehistory.firsts.stone-knapping"},

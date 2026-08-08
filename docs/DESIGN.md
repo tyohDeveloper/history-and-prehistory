@@ -1587,16 +1587,22 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**13 open, 21 resolved.** Audited 2026-08-08; Q-33 and Q-34 added when the lens shipped.
+**12 open, 22 resolved.** Audited 2026-08-08; Q-33 and Q-34 added when the lens shipped, Q-30 resolved by the schema 3.0.0 boundary split.
 
-**Q-30. Should `dating_method` be per-boundary rather than per-entity?** One field
-cannot describe an entity whose start and end rest on different science.
-Neanderthals are uranium-series at 400 ka and radiocarbon at 40 ka. The current
-convention is that the field describes the START, because frame selection is
-computed from the start boundary, and a validator rule now enforces physical
-plausibility against it. That is a workaround. The disclosure model is already
-per-boundary (`BoundaryDating`), so the dataset is the layer that is behind.
-Related: Q-22, which is the same per-boundary problem for notes.
+**Q-30. Should `dating_method` be per-boundary rather than per-entity? RESOLVED —
+schema 3.0.0.** It should, and now is. `dating_method` is replaced by
+`start_dating_method` and `end_dating_method`. The end is not inherited from the
+start: an unrecorded end method reads as unknown rather than as a confident wrong
+answer, because silent inheritance is what produced the mislabelling. Four
+entities turn out to have genuinely different science at each end — Neanderthal
+Europe (uranium-series in, radiocarbon out), the Middle Stone Age, Rising Star
+and Sterkfontein. 104 ends carry a method, derived only where physically
+possible and left unset otherwise; see `tools/end_dating.py` for the rule and
+the refusals. The validator now checks BOTH boundaries against the radiocarbon
+ceiling, which is new reach rather than a port — an impossible end date was
+previously untestable because the end had no method of its own. Q-22 remains
+open: it is the same per-boundary problem for notes, and notes cannot be
+derived.
 
 ### Blocking — date model
 

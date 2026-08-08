@@ -66,7 +66,7 @@ function valueFor(
   year: number,
   min: number | undefined,
   max: number | undefined,
-  method: Entity["dating_method"],
+  method: Entity["start_dating_method"],
 ): YearValue {
   const v: YearValue = { consensus: point(year) };
   // In v2.1.0, *_year_min is the earlier end and *_year_max the later one.
@@ -98,7 +98,7 @@ export function datingOf(entity: Entity): EntityDates {
           entity.start_year,
           entity.start_year_min,
           entity.start_year_max,
-          entity.dating_method,
+          entity.start_dating_method,
         ),
         entity,
       ),
@@ -116,7 +116,11 @@ export function datingOf(entity: Entity): EntityDates {
           entity.end_year,
           entity.end_year_min,
           entity.end_year_max,
-          entity.dating_method,
+          // Q-30: the end carries its OWN method, and carries none when the
+          // dataset does not record one. Reusing the start's method here was
+          // the bug: it labelled a radiocarbon end as argon-argon whenever the
+          // start was volcanic, and did so invisibly.
+          entity.end_dating_method,
         ),
         entity,
       ),

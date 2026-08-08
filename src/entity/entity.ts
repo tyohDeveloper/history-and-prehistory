@@ -25,7 +25,8 @@ export type Precision =
 export type DatingMethodId =
   | "calendar" | "radiocarbon-calibrated" | "radiocarbon-uncalibrated"
   | "argon-argon" | "potassium-argon" | "luminescence" | "uranium-series"
-  | "esr" | "layer-counting" | "magnetostratigraphy" | "typological" | "unknown";
+  | "esr" | "cosmogenic" | "layer-counting" | "magnetostratigraphy"
+  | "typological" | "unknown";
 
 export type StandingId = "consensus" | "majority" | "minority" | "traditional" | "superseded";
 
@@ -66,7 +67,18 @@ export interface Entity {
   links?: { type: string; entity_id: string; note?: string }[];
   /* --- schema 1.1.0 (see 2.0.0 additions below) ------------------------------------------------------ */
   subkind?: string;
-  dating_method?: DatingMethodId;
+  /**
+   * Per-boundary dating (schema 3.0.0, resolving Q-30).
+   *
+   * One field cannot describe an entity whose boundaries rest on different
+   * science. Neanderthals appear at ~400 ka by uranium-series and disappear at
+   * ~40 ka by radiocarbon. The end is deliberately NOT inherited from the
+   * start: silent inheritance is what produced the mislabelling in the first
+   * place, so an unrecorded end method reads as unknown rather than as a
+   * confident wrong answer.
+   */
+  start_dating_method?: DatingMethodId;
+  end_dating_method?: DatingMethodId;
   standing?: StandingId;
   /** ISO date this dating was last checked. Live disputes only. */
   as_of?: string;

@@ -445,7 +445,7 @@ describe("dating method reaches the frame chooser", () => {
   const gobekli = {
     id: "g", name: "G", kind: "period", parent_id: null, tier: "foundational",
     start_year: -9530, end_year: -8000,
-    dating_method: "radiocarbon-calibrated",
+    start_dating_method: "radiocarbon-calibrated",
   } as unknown as Entity;
 
   it("carries the method onto the value", () => {
@@ -459,7 +459,7 @@ describe("dating method reaches the frame chooser", () => {
   });
 
   it("still leads a reckoned date in a calendar", () => {
-    const cyrus = { ...gobekli, start_year: -550, dating_method: "calendar" } as unknown as Entity;
+    const cyrus = { ...gobekli, start_year: -550, start_dating_method: "calendar" } as unknown as Entity;
     expect(suggestFrame(datingOf(cyrus).start!.primary.value)).toBe("calendar");
   });
 });
@@ -468,7 +468,7 @@ describe("the three senses of before-present", () => {
   const withMethod = (m: string, y = -8000) =>
     datingOf({
       id: "x", name: "X", kind: "period", parent_id: null, tier: "foundational",
-      start_year: y, end_year: null, dating_method: m,
+      start_year: y, end_year: null, start_dating_method: m,
     } as unknown as Entity).start!.primary.value;
 
   it("separates calibrated, uncalibrated and geological", () => {

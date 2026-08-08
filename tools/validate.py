@@ -156,8 +156,11 @@ for e in entities:
         warnings.append(f"entity {e['id']}: as_of set but there is no open dispute to re-check")
     # Rule 11: b2k belongs to ice-core dating.
     nd = e.get("native_date") or {}
-    if nd.get("calendar_id") == "b2k" and e.get("dating_method") not in ("layer-counting", None):
-        errors.append(f"entity {e['id']}: native_date in b2k but dating_method is {e.get('dating_method')}")
+    if nd.get("calendar_id") == "b2k" and e.get("start_dating_method") not in ("layer-counting", None):
+        errors.append(
+            f"entity {e['id']}: native_date in b2k but start_dating_method is "
+            f"{e.get('start_dating_method')}"
+        )
 
 # Rule 6: an uncited registry entry is dead weight.
 for sid in sorted(source_ids - cited):
@@ -245,15 +248,17 @@ for e in entities:
 # starting before that is not a debatable call, it is impossible.
 #
 # This caught six real entities, three of them authored by hand over previous
-# sessions. The cause is structural rather than careless: `dating_method` is a
+# sessions. The cause was structural rather than careless: `dating_method` was a
 # single per-entity field, but a long-lived entity has two boundaries dated by
 # different means. Neanderthals appear at 400 ka (uranium-series and
 # luminescence at Sima de los Huesos) and disappear at 40 ka (AMS radiocarbon).
-# Recording the end's method and letting it describe the start is the natural
-# mistake, and it is invisible until something renders the label.
+# Recording the end's method and letting it describe the start was the natural
+# mistake, and it was invisible until something rendered the label.
 #
-# The field drives frame selection, which is computed from the START boundary,
-# so the convention is that `dating_method` describes the start. See Q-30.
+# Q-30 RESOLVED (schema 3.0.0): the field is now per-boundary, so this check no
+# longer has to assume which boundary it is talking about. It runs on BOTH, and
+# the end check is new capability rather than a port -- an impossible end date
+# was previously unreachable, because the end had no method of its own to test.
 RADIOCARBON_CEILING_BP = 55_000  # generous; practical limit is nearer 50,000
 
 
@@ -262,16 +267,28 @@ def _bp(historical_year):
 
 
 for e in entities:
-    method = e.get("dating_method")
-    sy = e.get("start_year")
-    if method is None or sy is None or not str(method).startswith("radiocarbon"):
-        continue
-    if _bp(sy) > RADIOCARBON_CEILING_BP:
-        errors.append(
-            f"entity {e['id']}: dating_method '{method}' but start_year is "
-            f"{_bp(sy):,} BP, beyond the ~{RADIOCARBON_CEILING_BP:,} BP radiocarbon "
-            f"limit. Radiocarbon cannot date this. If the END is radiocarbon and the "
-            f"START is not, record the start's method and say so in date_note."
+    for boundary, method_field, year_field in (
+        ("start", "start_dating_method", "start_year"),
+        ("end", "end_dating_method", "end_year"),
+    ):
+        method = e.get(method_field)
+        y = e.get(year_field)
+        if method is None or y is None or not str(method).startswith("radiocarbon"):
+            continue
+        if _bp(y) > RADIOCARBON_CEILING_BP:
+            errors.append(
+                f"entity {e['id']}: {method_field} '{method}' but {year_field} is "
+                f"{_bp(y):,} BP, beyond the ~{RADIOCARBON_CEILING_BP:,} BP radiocarbon "
+                f"limit. Radiocarbon cannot date this {boundary} boundary."
+            )
+
+
+# ---- An end method without an end is a claim about nothing ------------------
+for e in entities:
+    if e.get("end_dating_method") is not None and e.get("end_year") is None:
+        warnings.append(
+            f"entity {e['id']}: end_dating_method set but end_year is null. "
+            f"There is no end boundary for it to describe."
         )
 
 
@@ -281,7 +298,10 @@ for e in entities:
 # That refusal only works if the method says so, and the whole hazard is that
 # published dates frequently do not.
 for e in entities:
-    if e.get("dating_method") != "radiocarbon-uncalibrated":
+    if "radiocarbon-uncalibrated" not in (
+        e.get("start_dating_method"),
+        e.get("end_dating_method"),
+    ):
         continue
     note = (e.get("date_note") or "").upper()
     if "UNCALIB" not in note:

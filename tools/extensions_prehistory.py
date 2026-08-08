@@ -70,7 +70,7 @@ def extend(E, glob):
     pre = f"{glob}.prehistory"
     E(pre, "era", "Human Prehistory", glob, start=-3300000, end=-3000,
       tier="foundational",
-      dating_method="argon-argon",
+      start_dating_method="argon-argon",
       standing="consensus",
       summary="From the earliest stone toolmaking to the first written records. Dated by "
               "measurement rather than reckoning, so quoted in years before present.",
@@ -102,7 +102,7 @@ def extend(E, glob):
     E(origins, "era", "Hominins", pre,
       start=ma(2.8), end=None, tier="foundational",
       start_year_min=ma(2.80), start_year_max=ma(2.75),
-      dating_method="argon-argon",
+      start_dating_method="argon-argon",
       standing="consensus",
       summary="Humans, proto-humans and near-humans: a dozen or so named species, most of "
               "which overlapped with others rather than succeeding them in a line.",
@@ -125,7 +125,7 @@ def extend(E, glob):
     TAXON("homo-habilis", "Homo habilis", origins, ma(2.4), ma(1.4), "foundational",
       summary="An early, small-brained human in Africa from about 2.4 to 1.4 million "
               "years ago, overlapping with other human species.",
-      dating_method="argon-argon", standing="consensus",
+      start_dating_method="argon-argon", standing="consensus",
       date_note="Whether the material forms one species, and whether it belongs in Homo "
                 "at all, is still argued. The late specimen KNM-ER 42703 is 1.44 Ma.",
       caveats=[{"kind": "contested-existence",
@@ -137,7 +137,7 @@ def extend(E, glob):
     TAXON("homo-rudolfensis", "Homo rudolfensis", origins, ma(1.9), ma(1.8), "specialist",
       summary="A flat-faced, big-toothed early human from Kenya about 1.9 million years "
               "ago whose place in the human genus is still argued over.",
-      dating_method="argon-argon", standing="minority",
+      start_dating_method="argon-argon", standing="minority",
       date_note="Type specimen KNM-ER 1470, Koobi Fora. Four hominin species coexisted in "
                 "the Turkana Basin between 2.0 and 1.5 Ma.",
       caveats=[{"kind": "contested-existence",
@@ -151,7 +151,7 @@ def extend(E, glob):
       summary="The first widely travelled human species, present from about 1.9 million "
               "years ago until roughly 110,000 years ago in Java.",
       end_year_min=ka(117), end_year_max=ka(108),
-      dating_method="uranium-series", standing="consensus",
+      start_dating_method="uranium-series", standing="consensus",
       date_note="Treated here sensu lato, including African material sometimes separated "
                 "as H. ergaster. The terminal Ngandong date rests on Bayesian modelling of "
                 "52 radiometric estimates.",
@@ -160,7 +160,7 @@ def extend(E, glob):
     TAXON("homo-antecessor", "Homo antecessor", origins, ka(857), ka(780), "specialist",
       summary="An early European human from a Spanish cave, about 800,000 years old, "
               "whose status as a separate species is still argued.",
-      dating_method="esr", standing="minority",
+      start_dating_method="esr", standing="minority",
       date_note="Gran Dolina level TD6 dates to 780-857 ka. The young limit is fixed by "
                 "reversed Matuyama polarity, which requires an age greater than 780 ka.",
       source_ids=[S_FALGUERES])
@@ -169,7 +169,7 @@ def extend(E, glob):
       summary="A large-brained Middle Pleistocene human in Europe, Africa and the Near "
               "East, roughly 700,000 to 200,000 years ago.",
       start_year_min=ma(1.3), start_year_max=ka(700),
-      dating_method="unknown", standing="consensus",
+      start_dating_method="unknown", standing="consensus",
       date_note="Range may reach 1.3 Ma if older Spanish and Italian material is included.",
       caveats=[{"kind": "misconception",
                 "text": "Functions partly as a catch-all for Middle Pleistocene humans; "
@@ -180,7 +180,7 @@ def extend(E, glob):
     TAXON("homo-naledi", "Homo naledi", origins, ka(335), ka(236), "intermediate",
       summary="A small-brained human found deep in a South African cave system, "
               "surprisingly recent at 335,000 to 236,000 years ago.",
-      dating_method="uranium-series", standing="consensus",
+      start_dating_method="uranium-series", standing="consensus",
       date_note="Its position in the human family tree is unresolved.",
       source_ids=[S_SMITHSONIAN])
 
@@ -188,7 +188,7 @@ def extend(E, glob):
       aliases=["Neanderthal"],
       summary="Cold-adapted humans across Europe and western Asia, from about 400,000 "
               "years ago until roughly 40,000 years ago.",
-      dating_method="unknown", standing="consensus",
+      start_dating_method="unknown", standing="consensus",
       date_note="No method is stated for the 400 ka appearance. The END is radiocarbon: the "
                 "associated Mousterian closes 41,030-39,260 cal BP by AMS with Bayesian "
                 "modelling across 40 sites. Radiocarbon cannot reach the start, so the two "
@@ -200,7 +200,7 @@ def extend(E, glob):
       summary="A human population known mainly from DNA, identified from fragments in a "
               "Siberian cave and traceable in living people.",
       end_year_min=ka(76), end_year_max=ka(52),
-      dating_method="unknown", standing="consensus",
+      start_dating_method="unknown", standing="consensus",
       date_note="Genetically unambiguous but with no formally accepted species name and "
                 "no type specimen in the conventional sense. The chronology is a Bayesian "
                 "model combining radiocarbon, uranium-series and luminescence ages, so no "
@@ -211,7 +211,7 @@ def extend(E, glob):
       aliases=["Flores hobbit"],
       summary="A small-bodied human on the Indonesian island of Flores, known from Liang "
               "Bua cave.",
-      dating_method="luminescence", standing="consensus",
+      start_dating_method="luminescence", standing="consensus",
       date_note="Skeletal remains to about 60 ka, associated artefacts from about 190 ka "
                 "and continuing to about 50 ka.",
       alternatives=[{
@@ -231,7 +231,7 @@ def extend(E, glob):
     TAXON("homo-luzonensis", "Homo luzonensis", origins, ka(134), None, "specialist",
       summary="A human species known from a handful of bones and teeth in a cave on "
               "Luzon, the Philippines.",
-      dating_method="uranium-series", standing="minority",
+      start_dating_method="uranium-series", standing="minority",
       end_precision="unknown",
       date_note="Minimum age revised upward to at least 134 ka in 2023. No "
                 "youngest-remains date is established; the original 67 ka metatarsal age "
@@ -242,7 +242,7 @@ def extend(E, glob):
       aliases=["Anatomically modern humans"],
       summary="Our own species, first recognisable in Africa around 300,000 years ago.",
       start_year_min=ka(349), start_year_max=ka(281),
-      dating_method="luminescence", standing="consensus",
+      start_dating_method="luminescence", standing="consensus",
       allow_outside_parent_dates=True,
       date_note="315 +/- 34 ka is the thermoluminescence age of heated flints with the "
                 "Jebel Irhoud hominins in Morocco. Which fossils count as H. sapiens is "
@@ -253,7 +253,7 @@ def extend(E, glob):
       aliases=["Dragon Man", "Harbin cranium"],
       summary="A single large skull from Harbin, China, whose identity was overturned by "
               "protein analysis in 2025.",
-      dating_method="uranium-series", standing="minority",
+      start_dating_method="uranium-series", standing="minority",
       end_precision="unknown",
       date_note="Known from one cranium with a minimum U-series age of about 146 ka, so "
                 "there is no species-level range.",
@@ -282,7 +282,7 @@ def extend(E, glob):
       summary="The earliest widely recognised stone tools: sharp flakes struck from "
               "pebble cores.",
       start_year_min=ma(2.618), start_year_max=ma(2.55),
-      dating_method="argon-argon", standing="consensus",
+      start_dating_method="argon-argon", standing="consensus",
       date_note="Usually given as 2.6-1.7 Ma. Older claims exist, but the 3.3 Ma Lomekwi 3 "
                 "tools are excluded by classifying them as Lomekwian, so the boundary is "
                 "definitional as much as evidential.",
@@ -292,7 +292,7 @@ def extend(E, glob):
       summary="The handaxe tradition: teardrop-shaped tools worked on both faces, made "
               "for well over a million years.",
       end_year_min=ka(250), end_year_max=ka(200),
-      dating_method="magnetostratigraphy", standing="consensus",
+      start_dating_method="magnetostratigraphy", standing="consensus",
       date_note="Earliest at Kokiselei 4, West Turkana, Kenya, at 1.76 Ma \u2014 about "
                 "350,000 years earlier than previously accepted. The end is diffuse rather "
                 "than dated.",
@@ -301,7 +301,7 @@ def extend(E, glob):
     P("mousterian", "Mousterian Industry", paleo, ka(130), ka(40), "foundational",
       summary="The flake-tool tradition associated mainly with Neanderthals across Europe "
               "and western Asia.",
-      dating_method="unknown", standing="consensus",
+      start_dating_method="unknown", standing="consensus",
       date_note="Hard to separate from the latest Acheulean at the start, so the beginning "
                 "is definitional and no single method fixes it. The end differs by region "
                 "and by method, and is radiocarbon where it can be reached.",
@@ -311,7 +311,7 @@ def extend(E, glob):
       summary="A North African tradition marked by tanged points, made by early modern "
               "humans across the Sahara.",
       start_year_min=ka(154), start_year_max=ka(136),
-      dating_method="luminescence", standing="consensus",
+      start_dating_method="luminescence", standing="consensus",
       date_note="145 +/- 9 ka is the weighted-mean thermoluminescence age at El Mnasra. "
                 "The industry is defined by tool shape rather than by date, so its limits "
                 "move with the definition.",
@@ -320,7 +320,7 @@ def extend(E, glob):
     P("still-bay", "Still Bay Industry", paleo, ka(75.5), ka(67.8), "specialist",
       summary="A brief South African tradition of finely worked leaf-shaped points, an "
               "early flowering of complex technique.",
-      dating_method="luminescence", standing="consensus",
+      start_dating_method="luminescence", standing="consensus",
       date_note="Single-grain OSL makes this a short episode of under 5,000 years.",
       alternatives=[{
           "label": "Diepkloof thermoluminescence chronology",
@@ -335,7 +335,7 @@ def extend(E, glob):
     P("howiesons-poort", "Howiesons Poort Industry", paleo, ka(64.8), ka(59.5), "specialist",
       summary="A South African tradition of small backed blades, hafted as composite "
               "tools, lasting only a few thousand years.",
-      dating_method="luminescence", standing="consensus",
+      start_dating_method="luminescence", standing="consensus",
       date_note="Single-grain OSL makes this a tight horizon marker; ESR and TL at Klasies "
                 "River give a looser 50,000-60,000 years.",
       alternatives=[{
@@ -351,7 +351,7 @@ def extend(E, glob):
       summary="The sub-Saharan African tradition of small composite tools that continues "
               "into the historical period.",
       start_year_min=ka(44.2), start_year_max=ka(42.5),
-      dating_method="radiocarbon-calibrated", standing="consensus",
+      start_dating_method="radiocarbon-calibrated", standing="consensus",
       date_note="Border Cave gives 44.2-43.0 cal BP for the earliest layer. There is no "
                 "real end date: the Later Stone Age runs on into recorded history, and the "
                 "value here is a convention for the tree rather than a finding.",
@@ -360,7 +360,7 @@ def extend(E, glob):
     P("chatelperronian", "Ch\u00e2telperronian Industry", paleo, bp(43760), bp(39220), "specialist",
       summary="A short-lived western European tradition made during the overlap between "
               "Neanderthals and modern humans.",
-      dating_method="radiocarbon-calibrated", standing="consensus",
+      start_dating_method="radiocarbon-calibrated", standing="consensus",
       date_note="In Cantabria it shows no chronological overlap with the local Mousterian, "
                 "which complicates the usual reading of it as a Neanderthal response to "
                 "arriving modern humans.",
@@ -371,7 +371,7 @@ def extend(E, glob):
               "earliest cave art and figurines.",
       start_year_min=bp(43300), start_year_max=bp(40500),
       end_year_min=bp(34600), end_year_max=bp(33100),
-      dating_method="radiocarbon-calibrated", standing="consensus",
+      start_dating_method="radiocarbon-calibrated", standing="consensus",
       date_note="Arrival dates differ sharply between regional models, from about 43 cal "
                 "ka BP in southern Iberia to later elsewhere.",
       alternatives=[{
@@ -388,14 +388,14 @@ def extend(E, glob):
               "Europe through the coldest part of the Ice Age.",
       start_year_min=bp(35340), start_year_max=bp(33595),
       end_year_min=bp(26390), end_year_max=bp(24230),
-      dating_method="radiocarbon-calibrated", standing="consensus",
+      start_dating_method="radiocarbon-calibrated", standing="consensus",
       date_note="Bayesian boundaries from the Adriatic basin; regional models differ.",
       source_ids=[S_MARIN])
 
     P("solutrean", "Solutrean Industry", paleo, bp(25000), bp(19000), "specialist",
       summary="An Iberian and French tradition known for slender, finely pressure-flaked "
               "laurel-leaf points.",
-      dating_method="radiocarbon-calibrated", standing="consensus",
+      start_dating_method="radiocarbon-calibrated", standing="consensus",
       date_note="Bayesian analysis does not confirm the traditional ordering of the "
                 "internal phases, so the sub-sequence is less secure than the overall span.",
       source_ids=[S_CASCALHEIRA])
@@ -404,7 +404,7 @@ def extend(E, glob):
       summary="The late Ice Age tradition of Lascaux and Altamira, ending as the glaciers "
               "retreated.",
       start_year_min=bp(21211), start_year_max=bp(17988),
-      dating_method="radiocarbon-calibrated", standing="consensus",
+      start_dating_method="radiocarbon-calibrated", standing="consensus",
       date_note="Preceded by the Badegoulian at 23,092-20,792 cal BP. Regional phase "
                 "models disagree on the internal sequence.",
       source_ids=[S_MARIN])
@@ -420,7 +420,7 @@ def extend(E, glob):
       summary="Monumental enclosures raised by people who were not yet farming, in "
               "southeastern Anatolia.",
       start_year_min=-9745, start_year_max=-9314,
-      dating_method="radiocarbon-calibrated", standing="consensus",
+      start_dating_method="radiocarbon-calibrated", standing="consensus",
       date_note="Only 11 radiocarbon dates exist. The Layer III/II/I scheme has been "
                 "abandoned for at least eight phases, so phase labels in older sources do "
                 "not map cleanly.",
@@ -429,7 +429,7 @@ def extend(E, glob):
     P("monte-verde", "Monte Verde II", paleo, -14500, -14000, "intermediate",
       summary="A settlement in southern Chile whose age broke the Clovis-first model of "
               "the peopling of the Americas.",
-      dating_method="radiocarbon-calibrated", standing="consensus",
+      start_dating_method="radiocarbon-calibrated", standing="consensus",
       as_of="2026-06-30",
       date_note="Under active challenge: a March 2026 reanalysis proposed a Holocene age, "
                 "roughly thirty specialists rebutted it in May, and the authors replied in "
@@ -460,7 +460,7 @@ def extend(E, glob):
     E(firsts, "era", "Behavioural Firsts", pre, start=-3390000, end=None,
       tier="foundational",
       allow_outside_parent_dates=True,
-      dating_method="argon-argon",
+      start_dating_method="argon-argon",
       summary="The earliest known evidence for each human behaviour \u2014 toolmaking, fire, "
               "pigment, burial, art, seafaring. Each date is a floor, not an estimate.",
       date_note="Starts with the contested Dikika cut marks at 3.39 Ma, which is older than "
@@ -472,7 +472,7 @@ def extend(E, glob):
       summary="The first deliberate shaping of stone into tools \u2014 the behaviour this app "
               "uses to mark where human prehistory begins.",
       start_year_min=ma(3.44), start_year_max=ma(3.31),
-      dating_method="argon-argon", standing="consensus",
+      start_dating_method="argon-argon", standing="consensus",
       date_note="THE SCOPE FLOOR, defined as a behaviour rather than as a site. Lomekwi 3 is "
                 "the present evidence, not the definition: the artefacts lie above the Toroto "
                 "Tuff at 3.31 +/- 0.02 Ma, within the Mammoth reverse subchron. If an older "
@@ -497,7 +497,7 @@ def extend(E, glob):
     FIRST("butchery", "Butchery of Animals", firsts, ma(2.6), "intermediate",
       summary="Cutting meat from bone with stone tools, which opened a food source that "
               "had been out of reach.",
-      dating_method="argon-argon", standing="majority",
+      start_dating_method="argon-argon", standing="majority",
       date_note="The secure record begins 2.6-2.5 Ma at Gona and Bouri, Ethiopia. A claim "
                 "for 3.39 Ma at Dikika is the older candidate and is not accepted.",
       alternatives=[{
@@ -519,7 +519,7 @@ def extend(E, glob):
       summary="Keeping and using fire on purpose, which changed diet, safety and how far "
               "north people could live.",
       start_year_min=ma(1.27), start_year_max=ka(810),
-      dating_method="magnetostratigraphy", standing="majority",
+      start_dating_method="magnetostratigraphy", standing="majority",
       date_note="Wonderwerk Cave Stratum 10 is the standard secure minimum, bracketed by "
                 "cosmogenic burial ages of 1.27 +/- 0.19 and 0.98 +/- 0.19 Ma. Older claims "
                 "exist and the field has not settled.",
@@ -542,7 +542,7 @@ def extend(E, glob):
     FIRST("cooking", "Cooking of Food", firsts, ka(780), "intermediate",
       summary="Applying controlled heat to food, evidenced by fish teeth heated to a "
               "temperature that implies cooking rather than burning.",
-      dating_method="magnetostratigraphy", standing="consensus",
+      start_dating_method="magnetostratigraphy", standing="consensus",
       date_note="Gesher Benot Ya'aqov, from eight sequential horizons correlated to marine "
                 "isotope stages 18-20. Note the long gap between the earliest fire and the "
                 "earliest cooking: the two are not the same behaviour.",
@@ -552,7 +552,7 @@ def extend(E, glob):
       aliases=["Ochre use"],
       summary="Collecting and working coloured earth, the earliest hint of decoration or "
               "marking.",
-      dating_method="argon-argon", standing="consensus",
+      start_dating_method="argon-argon", standing="consensus",
       date_note="Secure from about 300 ka in both Africa and Europe. Between 1.5 Ma and "
                 "300 ka the evidence is sparse and equivocal. Kapthurin GnJh-15 in Kenya is "
                 "the earliest well-dated assemblage at 0.284 +/- 0.012 Ma.",
@@ -569,7 +569,7 @@ def extend(E, glob):
       summary="Placing the dead somewhere on purpose rather than leaving them where they "
               "fell.",
       start_year_min=ka(448), start_year_max=ka(427),
-      dating_method="uranium-series", standing="majority",
+      start_dating_method="uranium-series", standing="majority",
       date_note="Sima de los Huesos in Spain holds over 7,000 bones from at least 29 "
                 "individuals, a minimum age since the dated speleothem formed directly on "
                 "the deposit. Whether accumulation counts as burial is the argument. Qafzeh "
@@ -600,7 +600,7 @@ def extend(E, glob):
       summary="Shells pierced and strung to be worn, which means signalling something "
               "about yourself to other people.",
       start_year_min=ka(171), start_year_max=ka(120),
-      dating_method="uranium-series", standing="majority",
+      start_dating_method="uranium-series", standing="majority",
       date_note="Bizmoune Cave, Morocco: 33 pierced Tritia gibbosula shells, dated by "
                 "uranium-series on a speleothem to 142,290 +29,300/-22,060 years at 2 sigma. "
                 "Explicitly a minimum. Single-grain OSL on the same layer gives ages as "
@@ -619,7 +619,7 @@ def extend(E, glob):
       summary="Deliberate cross-hatched patterns cut into ochre \u2014 marks that mean "
               "something without depicting anything.",
       start_year_min=ka(83), start_year_max=ka(71),
-      dating_method="luminescence", standing="consensus",
+      start_dating_method="luminescence", standing="consensus",
       date_note="Blombos Cave, South Africa: 77 +/- 6 ka by thermoluminescence on burnt "
                 "lithics for the engraved ochre, with a drawn cross-hatch in ochre crayon at "
                 "about 73 ka from the same site.",
@@ -637,7 +637,7 @@ def extend(E, glob):
       summary="Crossing open water on purpose, out of sight of the far shore, which "
               "requires planning and a built craft.",
       start_year_min=ka(71), start_year_max=ka(59.3),
-      dating_method="luminescence", standing="majority",
+      start_dating_method="luminescence", standing="majority",
       date_note="The colonisation of Sahul recorded at Madjedbebe, Australia: 65 +/- 6 ka at "
                 "95.4% by single-grain OSL with Bayesian modelling. Reaching Australia "
                 "required repeated open-water crossings, so the site dates the voyage as "
@@ -655,7 +655,7 @@ def extend(E, glob):
     FIRST("figurative-art", "Figurative Art", firsts, ka(51.2), "foundational",
       summary="Pictures of recognisable things \u2014 animals and people \u2014 rather than "
               "patterns.",
-      dating_method="uranium-series", standing="consensus",
+      start_dating_method="uranium-series", standing="consensus",
       date_note="A narrative scene at Leang Karampuang, Sulawesi: a warty pig with human "
                 "figures, dated by laser-ablation uranium-series on the overlying "
                 "carbonate. A minimum, since the art is older than the crust that formed on "
@@ -683,7 +683,7 @@ def extend(E, glob):
       summary="The oldest known stone toolkit: large, heavy cores and flakes struck with "
               "techniques unlike the later Oldowan.",
       start_year_min=ma(3.44), start_year_max=ma(3.31),
-      dating_method="argon-argon", standing="consensus",
+      start_dating_method="argon-argon", standing="consensus",
       date_note="Named from Lomekwi 3. Kept separate from the Oldowan because the knapping "
                 "technique differs, which is also why the Oldowan's 2.6 Ma start is a "
                 "definitional boundary rather than the start of toolmaking.",

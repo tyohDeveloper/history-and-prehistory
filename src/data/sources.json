@@ -1,12 +1,12 @@
 {
-  "schema_version": "2.0.0",
-  "dataset_version": "0.5.0.1",
-  "generated_at": "2026-08-08T04:26:06Z",
+  "schema_version": "3.0.0",
+  "dataset_version": "0.6.0.0",
+  "generated_at": "2026-08-08T19:20:20Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
       "kind": "scholarly",
-      "citation": "Dom\u00ednguez-Rodrigo & Alcal\u00e1 (2016), critique of the Lomekwi 3 context, PaleoAnthropology 2016:46-53",
+      "citation": "Domínguez-Rodrigo & Alcalá (2016), critique of the Lomekwi 3 context, PaleoAnthropology 2016:46-53",
       "url": "https://paleoanthro.org/media/journal/content/PA20160046.pdf",
       "note": "Minority: argues the assemblage is not demonstrably in primary context."
     },
@@ -19,7 +19,7 @@
     {
       "id": "dominguez-rodrigo-2010-dikika",
       "kind": "scholarly",
-      "citation": "Dom\u00ednguez-Rodrigo, Pickering & Bunn (2010), 'Configurational approach to identifying the earliest hominin butchers', PNAS 107:20929-20934",
+      "citation": "Domínguez-Rodrigo, Pickering & Bunn (2010), 'Configurational approach to identifying the earliest hominin butchers', PNAS 107:20929-20934",
       "url": "https://www.pnas.org/doi/10.1073/pnas.1013711107",
       "note": "Majority: argues the Dikika marks are trampling damage."
     },
@@ -62,7 +62,7 @@
     {
       "id": "smithsonian-qafzeh-burial",
       "kind": "scholarly",
-      "citation": "Smithsonian Human Origins \u2014 Qafzeh: oldest intentional burial",
+      "citation": "Smithsonian Human Origins — Qafzeh: oldest intentional burial",
       "url": "https://humanorigins.si.edu/evidence/behavior/burial/qafzeh-oldest-intentional-burial"
     },
     {
@@ -276,7 +276,7 @@
     {
       "id": "nhm-luzonensis",
       "kind": "reference",
-      "citation": "Natural History Museum, London \u2014 Homo luzonensis",
+      "citation": "Natural History Museum, London — Homo luzonensis",
       "url": "https://www.nhm.ac.uk/discover/homo-luzonensis-your-guide-to-the-species.html"
     },
     {
@@ -360,7 +360,7 @@
     {
       "id": "dietrich-2013-gobekli",
       "kind": "scholarly",
-      "citation": "Dietrich & Schmidt et al., radiocarbon chronology of G\u00f6bekli Tepe",
+      "citation": "Dietrich & Schmidt et al., radiocarbon chronology of Göbekli Tepe",
       "url": "https://www.dainst.blog/the-tepe-telegrams/"
     },
     {
@@ -413,7 +413,7 @@
     {
       "id": "garcia-diez-2013-altamira",
       "kind": "scholarly",
-      "citation": "Garc\u00eda-Diez et al. (2013), Altamira uranium-series dates",
+      "citation": "García-Diez et al. (2013), Altamira uranium-series dates",
       "url": "https://cir.cenieh.es/bitstream/20.500.12136/420/1/Uranium%20series%20dating%20reveals%20a%20long%20sequence%20of%20rock%20art%20at%20Altamira%20Cave%20(Santillana%20del%20Mar,%20Cantabria)_Garc%C3%ADa-Diez_et_al_2013.pdf"
     },
     {
@@ -455,7 +455,7 @@
     {
       "id": "taylor-2021-botai",
       "kind": "scholarly",
-      "citation": "Taylor and Barr\u00f3n-Ortiz (2021), Botai horse management",
+      "citation": "Taylor and Barrón-Ortiz (2021), Botai horse management",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8018961/"
     },
     {
@@ -485,13 +485,13 @@
     {
       "id": "matsumoto-2017-jomon",
       "kind": "scholarly",
-      "citation": "Matsumoto, Habu and Matsui (2017), J\u014dmon chronology",
+      "citation": "Matsumoto, Habu and Matsui (2017), Jōmon chronology",
       "url": "https://junkohabu.com/wp-content/uploads/2018/02/matsumoto-habumatsui-2017.pdf"
     },
     {
       "id": "keally-jomon-dates",
       "kind": "scholarly",
-      "citation": "Keally, J\u014dmon radiocarbon dates",
+      "citation": "Keally, Jōmon radiocarbon dates",
       "url": "http://www.t-net.ne.jp/~keally/Chronologies/jomon-dates.html"
     },
     {
@@ -691,6 +691,315 @@
       "kind": "scholarly",
       "citation": "Wilmshurst et al. (2011), Polynesian settlement chronology",
       "url": "https://faculty.washington.edu/plape/pacificarchaut12/Wilmshurst%20et%20al%202010.pdf"
+    },
+    {
+      "id": "mcdougall-1985-koobi-fora",
+      "kind": "scholarly",
+      "citation": "McDougall (1985), 'K-Ar and 40Ar/39Ar dating of the hominid-bearing Pliocene-Pleistocene sequence at Koobi Fora, Lake Turkana, northern Kenya', GSA Bulletin 96(2):159",
+      "url": "https://pubs.geoscienceworld.org/gsa/gsabulletin/article-abstract/96/2/159/191263/K-Ar-and-40Ar-39Ar-dating-of-the-hominid-bearing",
+      "note": "Tuff framework: Moiti 4.10+/-0.07 Ma, KBS 1.88+/-0.02 Ma, Silbo 0.74+/-0.01 Ma."
+    },
+    {
+      "id": "brown-1985-turkana-boy",
+      "kind": "scholarly",
+      "citation": "Brown, Harris, Leakey & Walker (1985), 'Early Homo erectus skeleton from west Lake Turkana, Kenya', Nature 316:788-792",
+      "url": "https://doi.org/10.1038/316788a0"
+    },
+    {
+      "id": "granger-2015-sterkfontein",
+      "kind": "scholarly",
+      "citation": "Granger, Gibbon, Kuman, Clarke, Bruxelles & Caffee (2015), 'New cosmogenic burial ages for Sterkfontein Member 2 Australopithecus and Member 5 Oldowan', Nature 522:85-88",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25830884/",
+      "note": "Little Foot 3.67+/-0.16 Ma by 26Al/10Be isochron burial dating."
+    },
+    {
+      "id": "granger-2022-sterkfontein-m4",
+      "kind": "scholarly",
+      "citation": "Granger et al. (2022), cosmogenic dating of Sterkfontein Member 4, PNAS",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35759668/",
+      "note": "Member 4 at 3.41-3.49 Ma; Jacovec Cavern 3.61+/-0.09 Ma."
+    },
+    {
+      "id": "pickering-2020-sterkfontein-m4",
+      "kind": "scholarly",
+      "citation": "Pickering & Herries (2020), 'A new multidisciplinary age of 2.61-2.07 Ma for the Sterkfontein Member 4 australopiths'",
+      "url": "https://opal.latrobe.edu.au/articles/chapter/A_new_multidisciplinary_age_of_2_61_2_07_Ma_for_the_Sterkfontein_Member_4_australopiths/28432415",
+      "note": "Competing chronology: U-Pb, ESR and palaeomagnetism combined."
+    },
+    {
+      "id": "walker-2006-stw573-upb",
+      "kind": "scholarly",
+      "citation": "Walker, Pickering & Kramers, 'U-Pb Isotopic Age of the StW 573 Hominid from Sterkfontein, South Africa', Science",
+      "url": "https://www.science.org/doi/10.1126/science.1132916",
+      "note": "Competing U-Pb flowstone ages of 2.17+/-0.17 Ma for Little Foot."
+    },
+    {
+      "id": "kuman-2021-swartkrans",
+      "kind": "scholarly",
+      "citation": "Kuman et al. (2021), 'A new absolute date from Swartkrans Cave for the oldest occurrences of Paranthropus robustus and Oldowan stone tools in South Africa'",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34020297/"
+    },
+    {
+      "id": "granger-2014-swartkrans",
+      "kind": "scholarly",
+      "citation": "Granger et al. (2014), 'Cosmogenic nuclide burial dating of hominin-bearing Pleistocene cave deposits at Swartkrans, South Africa', Quaternary Geochronology 24:10",
+      "url": "https://ui.adsabs.harvard.edu/abs/2014QuGeo..24...10G/abstract"
+    },
+    {
+      "id": "dirks-2017-rising-star",
+      "kind": "scholarly",
+      "citation": "Dirks, Roberts, Hilbert-Wolf et al. (2017), 'The age of Homo naledi and associated sediments in the Rising Star Cave, South Africa', eLife 6:e24231",
+      "url": "https://elifesciences.org/articles/24231"
+    },
+    {
+      "id": "iho-asu-lucy",
+      "kind": "institutional",
+      "citation": "Institute of Human Origins, Arizona State University, 'About Lucy'",
+      "url": "https://iho.asu.edu/aboutLucy",
+      "note": "Gives 'just less than 3.18 million years'; argon-argon on Kada Hadar tuffs."
+    },
+    {
+      "id": "masao-2016-laetoli",
+      "kind": "scholarly",
+      "citation": "Masao et al. (2016), 'New footprints from Laetoli (Tanzania) provide evidence for marked body size variation in Australopithecus afarensis', eLife",
+      "url": "https://elifesciences.org/articles/19568",
+      "note": "3.66 Ma for Sites G and S, following the Deino (2011) recalibration."
+    },
+    {
+      "id": "richter-2017-jebel-irhoud",
+      "kind": "scholarly",
+      "citation": "Richter, Grun, Joannes-Boyau et al. (2017), 'The age of the hominin fossils from Jebel Irhoud, Morocco, and the origins of the Middle Stone Age', Nature 546:293-296",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28593953/",
+      "note": "315+/-34 ka by thermoluminescence on heated flints."
+    },
+    {
+      "id": "hublin-2017-jebel-irhoud",
+      "kind": "scholarly",
+      "citation": "Hublin, Ben-Ncer, Bailey et al. (2017), 'New fossils from Jebel Irhoud (Morocco) and the pan-African origin of Homo sapiens', Nature 546:289-292",
+      "url": "https://doi.org/10.1038/nature22336"
+    },
+    {
+      "id": "berkeley-2003-herto",
+      "kind": "institutional",
+      "citation": "UC Berkeley news release (2003) on Homo sapiens idaltu, Middle Awash, Ethiopia",
+      "url": "https://newsarchive.berkeley.edu/news/media/releases/2003/06/11_idaltu.shtml",
+      "note": "160-154 ka by argon-argon with tephra correlation."
+    },
+    {
+      "id": "grun-2020-kabwe",
+      "kind": "scholarly",
+      "citation": "Grun, Pomeroy, Stringer et al. (2020), 'Dating the skull from Broken Hill, Zambia, and its position in human evolution', Nature 580:372-375",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32296179/",
+      "note": "299+/-25 ka, replacing the long-quoted ~500 ka figure."
+    },
+    {
+      "id": "clark-1994-bodo",
+      "kind": "scholarly",
+      "citation": "Clark, de Heinzelin, Schick et al. (1994), 'African Homo erectus: Old Radiometric Ages and Young Oldowan Assemblages in the Middle Awash Valley, Ethiopia', Science",
+      "url": "https://www.science.org/doi/10.1126/science.8009220",
+      "note": "Bodo weighted mean 0.64+/-0.03 Ma by laser-fusion 40Ar/39Ar."
+    },
+    {
+      "id": "semaw-1997-gona",
+      "kind": "scholarly",
+      "citation": "Semaw, Renne, Harris et al. (1997), '2.5-million-year-old stone tools from Gona, Ethiopia', Nature 385:333-336",
+      "url": "https://doi.org/10.1038/385333a0"
+    },
+    {
+      "id": "semaw-2003-gona-ogs",
+      "kind": "scholarly",
+      "citation": "Semaw et al. (2003), '2.6-Million-year-old stone tools and associated bones from OGS-6 and OGS-7, Gona, Afar, Ethiopia', Journal of Human Evolution",
+      "url": "https://scholarblogs.emory.edu/stoutlab/files/2013/07/Semaw-et-al-2003.pdf"
+    },
+    {
+      "id": "perini-2023-melka-kunture",
+      "kind": "scholarly",
+      "citation": "Perini et al. (2023), 'Isotopic insights into the Early Acheulean (1.95 Ma-1.66 Ma) high-elevation paleoenvironments at Melka Kunture', Archaeological and Anthropological Sciences",
+      "url": "https://link.springer.com/article/10.1007/s12520-023-01879-1",
+      "note": "Claims the earliest Acheulean technocomplex, on magnetostratigraphy."
+    },
+    {
+      "id": "melka-kunture-age-model-critique",
+      "kind": "scholarly",
+      "citation": "'Claims for 1.9-2.0 Ma old early Acheulian and Oldowan occupations at Melka Kunture are not supported by a robust age model'",
+      "url": "https://ouci.dntb.gov.ua/en/works/9ZQp3Pal/",
+      "note": "Directly disputes the 1.95 Ma claim."
+    },
+    {
+      "id": "morgan-2012-melka-kunture",
+      "kind": "scholarly",
+      "citation": "Morgan et al. (2012), argon-argon chronology for Gombore II, Melka Kunture",
+      "url": "https://www.melkakunture.it/biblio/download/Morgan-al-2012.pdf",
+      "note": "Gombore II bracketed 0.875+/-0.010 to 0.709+/-0.013 Ma."
+    },
+    {
+      "id": "deino-2018-olorgesailie",
+      "kind": "scholarly",
+      "citation": "Deino, Behrensmeyer, Brooks et al. (2018), 'Chronology of the Acheulean to Middle Stone Age transition in eastern Africa', Science 360",
+      "url": "https://www.science.org/doi/10.1126/science.aao2216"
+    },
+    {
+      "id": "barham-2023-kalambo",
+      "kind": "scholarly",
+      "citation": "Barham, Duller, Candy et al. (2023), 'Evidence for the earliest structural use of wood at least 476,000 years ago', Nature 622:107-111",
+      "url": "https://www.nature.com/articles/s41586-023-06557-9"
+    },
+    {
+      "id": "jacobs-2008-sibudu-post-hp",
+      "kind": "scholarly",
+      "citation": "Jacobs et al., 'New ages for the post-Howieson's Poort, late and final Middle Stone Age at Sibudu Cave, South Africa', Journal of Archaeological Science 35:1790-1807",
+      "url": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=6191&context=kip_articles",
+      "note": "Post-HP 58.5+/-1.4 ka, late MSA 47.7+/-1.4 ka, final MSA 38.6+/-1.9 ka."
+    },
+    {
+      "id": "asu-2025-pinnacle-point",
+      "kind": "institutional",
+      "citation": "Arizona State University (2025) on the high-resolution Pinnacle Point 5-6 chronology, Quaternary Science Reviews",
+      "url": "https://news.asu.edu/b/20250528-archaeologists-use-sediment-and-sunlight-date-important-site-south-african-coast"
+    },
+    {
+      "id": "pinnacle-point-2017-chronology",
+      "kind": "scholarly",
+      "citation": "Pinnacle Point 5-6 stratigraphic chronology (2017)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5371328/",
+      "note": "Unit ages from 96+/-6 ka down to 52+/-3 ka."
+    },
+    {
+      "id": "texier-2010-diepkloof",
+      "kind": "scholarly",
+      "citation": "Texier, Porraz, Parkington et al. (2010), 'A Howiesons Poort tradition of engraving ostrich eggshell containers dated to 60,000 years ago at Diepkloof Rock Shelter, South Africa', PNAS",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2851956/"
+    },
+    {
+      "id": "rifkin-2015-apollo-11",
+      "kind": "scholarly",
+      "citation": "Rifkin, Dayet, Queffelec et al. (2015), Apollo 11 Cave report, South African Archaeological Bulletin",
+      "url": "https://rhinoresourcecenter.com/wp-content/uploads/2026/01/Rifkinetal.2015Apollo11SAABReportfinalsmall.pdf",
+      "note": "AMS 29.0+/-0.4 ka BP and OSL 29.4+/-1.4 ka; calibration basis not stated."
+    },
+    {
+      "id": "ambrose-enkapune-ya-muto",
+      "kind": "institutional",
+      "citation": "University of Illinois release on Ambrose's Enkapune Ya Muto ostrich-eggshell beads",
+      "url": "https://www.eurekalert.org/news-releases/1016533",
+      "note": "Beads radiocarbon-dated to about 40,000 years; blade industry at least 46,000."
+    },
+    {
+      "id": "barton-2013-taforalt",
+      "kind": "scholarly",
+      "citation": "Barton, Bouzouggar, Hogue, Lee, Collcutt & Ditchfield (2013), 'Origins of the Iberomaurusian in NW Africa: new AMS radiocarbon dating of the Middle and Later Stone Age deposits at Taforalt Cave, Morocco', Journal of Human Evolution 65(3):266-281",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23891007/"
+    },
+    {
+      "id": "vandeloosdrecht-2018-taforalt",
+      "kind": "scholarly",
+      "citation": "van de Loosdrecht et al. (2018), supplementary material, 'Pleistocene North African genomes link Near Eastern and sub-Saharan African human populations', Science",
+      "url": "https://www.science.org/action/downloadSupplement?doi=10.1126/science.aar8380&file=aar8380_vandeloosdrecht_sm.pdf",
+      "note": "Seven directly dated Taforalt burials, 15,077 to 13,892 cal BP."
+    },
+    {
+      "id": "wendorf-1984-kubbaniya-cereals",
+      "kind": "scholarly",
+      "citation": "Wendorf, Schild, Close et al. (1984), 'New radiocarbon dates on the cereals from Wadi Kubbaniya', Science 225(4662):645-646",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17729851/",
+      "note": "Showed the celebrated cereal remains were modern contaminants."
+    },
+    {
+      "id": "ishango-dating-history",
+      "kind": "scholarly",
+      "citation": "Historical review of Ishango dating, noting volcanic disruption of the local carbon reservoir and absence of charcoal for cross-checking",
+      "url": "https://www.bibnum.education.fr/sites/default/files/64-ishango-answer.pdf",
+      "note": "Records a third figure of about 22,000 years, attributed to Alison Brooks."
+    },
+    {
+      "id": "gobero-2026-dental",
+      "kind": "scholarly",
+      "citation": "Early to Middle Holocene hunter-fisher-gatherers from the Green Sahara (Gobero, Niger): dental evidence for regional African affinities",
+      "url": "https://researchonline.ljmu.ac.uk/id/eprint/28668/7/Early%20to%20Middle%20Holocene%20Hunter%E2%80%90Fisher%E2%80%90Gatherers%20From%20the%20Green%20Sahara%20(Gobero,%20Niger)%20Dental%20Evidence%20for%20Regional%20African%20Affinities.pdf",
+      "note": "Kiffian 9.6-7.4 kBP, Tenerian 6.6-4.8 kBP, recalibrated to IntCal20."
+    },
+    {
+      "id": "linseele-2014-fayum",
+      "kind": "scholarly",
+      "citation": "Linseele, Marinova, Van Neer & Vermeersch (2014), 'New Archaeozoological Data from the Fayum Neolithic with a Critical Assessment of the Evidence for Early Stock Keeping in Egypt', PLOS ONE",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0108517"
+    },
+    {
+      "id": "fayum-lake-core-cereal",
+      "kind": "scholarly",
+      "citation": "'Earliest cereal cultivation in Egypt recorded in the Faiyum Oasis lake sediments', Geological Quarterly",
+      "url": "https://gq.pgi.gov.pl/article/view/33599",
+      "note": "About 7.8 cal ka BP from laminated lake sediment, radiocarbon and pollen."
+    },
+    {
+      "id": "esh-shaheinab-2024",
+      "kind": "scholarly",
+      "citation": "'Esh-Shaheinab: the archetype of the Sudanese Neolithic' (2024)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11527226/",
+      "note": "Early Khartoum dated 8800-8500 to 5000 BCE; Khartoum Neolithic 5,720-5,550 uncal BP."
+    },
+    {
+      "id": "jackes-lubell-capsian",
+      "kind": "scholarly",
+      "citation": "Jackes & Lubell, Capsian chronology, Journal of African Archaeology",
+      "url": "http://www.arts.uwaterloo.ca/~mkjackes/JASR%203a7.pdf",
+      "note": "Capsian dated between about 10,000 and 6,000 cal BP."
+    },
+    {
+      "id": "brass-2017-cattle-reassessment",
+      "kind": "scholarly",
+      "citation": "'Early North African Cattle Domestication and Its Ecological Setting: A Reassessment' (2017), Journal of World Prehistory",
+      "url": "https://link.springer.com/article/10.1007/s10963-017-9112-9",
+      "note": "Argues the early Holocene Bos at Nabta Playa were hunted aurochs, not domesticates."
+    },
+    {
+      "id": "edinburgh-african-cattle-genome",
+      "kind": "scholarly",
+      "citation": "'The mosaic genome of indigenous African cattle as a unique genetic resource for African pastoralism', University of Edinburgh",
+      "url": "https://www.pure.ed.ac.uk/ws/files/172727489/The_mosaic_genome_of_indigenous_African_cattle_as_a_unique_genetic_resource_for_African_pastoralism.pdf",
+      "note": "Oldest uncontroversial domestic cattle c. 5750-4550 BC at Nabta-Kiseiba."
+    },
+    {
+      "id": "manning-pearl-millet",
+      "kind": "scholarly",
+      "citation": "Manning & Fuller on pearl millet domestication in the Tilemsi Valley, Mali",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7937602/",
+      "note": "Charred grains and ceramic impressions c. 2500-2000 BC."
+    },
+    {
+      "id": "winchell-sorghum",
+      "kind": "scholarly",
+      "citation": "Winchell et al. (2017, 2018) and Beldados et al. (2018) on Butana Group sorghum, African Archaeological Review",
+      "url": "https://link.springer.com/article/10.1007/s10437-018-9314-2",
+      "note": "Domestication under way in eastern Sudan by the fourth millennium BC."
+    },
+    {
+      "id": "oup-bantu-expansion",
+      "kind": "scholarly",
+      "citation": "'The Bantu Expansion', Oxford Handbook chapter",
+      "url": "https://academic.oup.com/edited-volume/61663/chapter/553463850",
+      "note": "Proto-Bantu forms in the Grassfields between 6,000-7,000 and 4,000-5,000 years ago."
+    },
+    {
+      "id": "cambridge-2023-bantu",
+      "kind": "scholarly",
+      "citation": "'Moving histories: Bantu language expansions, eclectic economies and mobilities' (2023), Journal of African History",
+      "url": "https://www.cambridge.org/core/journals/journal-of-african-history/article/moving-histories-bantu-language-expansions-eclectic-economies-and-mobilities/F9F92F9C6A16A9633E75508E836C9C46",
+      "note": "Competing synthesis: proto-Bantu forms 3000-2000 BCE."
+    },
+    {
+      "id": "oup-nok-culture",
+      "kind": "scholarly",
+      "citation": "'The Archaeology of Nok Culture in Nigeria (2nd/1st Millennium BCE)', Oxford Handbook chapter",
+      "url": "https://academic.oup.com/edited-volume/61663/chapter/553397313",
+      "note": "Earliest Nok iron-smelting furnaces calibrated to about 800-550 BCE; notes the calibration plateau."
+    },
+    {
+      "id": "taruga-furnace-dates",
+      "kind": "scholarly",
+      "citation": "Published radiocarbon determinations for the Taruga iron-smelting furnaces",
+      "url": "http://www.diaspora.illinois.edu/news0311/news0311-5.pdf",
+      "note": "Four samples spanning 920 BCE to 280 BCE."
     }
   ]
 }

@@ -13,17 +13,20 @@ describe("dataset envelope", () => {
     //
     // Recorded here because 2.2.0 was itself mis-versioned: it re-parented
     // three top-level eras and dropped four ids under a minor bump.
-    expect(datasetVersion).toBe("0.5.0.1");
-    expect(schemaVersion).toBe("2.0.0");
+    // Schema 3.0.0 splits dating_method into start_dating_method /
+    // end_dating_method (Q-30). MAJOR because a consumer reading the old
+    // entity-level field now finds nothing at all.
+    expect(datasetVersion).toBe("0.6.0.0");
+    expect(schemaVersion).toBe("3.0.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1417);
+    expect(entities.length).toBe(1448);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
-    expect(referenceFrames.length).toBe(44);
+    expect(referenceFrames.length).toBe(46);
   });
 });
 
@@ -100,12 +103,46 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(113);
+    expect(cited.length).toBe(144);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.dating_method !== undefined).length).toBe(121);
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(23);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(152);
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
+  });
+
+  it("dates each boundary on its own evidence", () => {
+    // Q-30, resolved in schema 3.0.0. The end is no longer the start's method
+    // reused: 82 ends carry a method, and the two that DIFFER from their start
+    // are the cases the question was raised about -- a range whose ends rest on
+    // different science. The remainder are unset on purpose, because an end
+    // beyond radiocarbon's reach was never dated by the start's method and
+    // saying otherwise is the exact error the split exists to prevent.
+    const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
+    expect(withEnd.length).toBe(104);
+
+    const differing = entities
+      .filter(
+        (e) =>
+          e.end_dating_method !== undefined &&
+          e.end_dating_method !== e.start_dating_method,
+      )
+      .map((e) => e.id)
+      .sort();
+    // Four, and each is a range whose ends genuinely rest on different
+    // science: Neanderthals (uranium-series in, radiocarbon out), the Middle
+    // Stone Age (luminescence in, radiocarbon out), Rising Star (OSL in,
+    // US-ESR on teeth out) and Sterkfontein (cosmogenic in, U-Pb out). Under
+    // the old single field every one of these was mislabelled at one end.
+    expect(differing).toEqual([
+      "africa.prehistory.rising-star",
+      "africa.prehistory.sterkfontein",
+      "europe.prehistory.neanderthal-europe",
+      "global.paleolithic.middle-stone-age",
+    ]);
+
+    // An end method with no end boundary would describe nothing.
+    expect(withEnd.every((e) => e.end_year !== null)).toBe(true);
   });
 
   it("distinguishes an extant taxon from an undated end", () => {
@@ -195,7 +232,10 @@ describe("reference anchors reach the deep-time content", () => {
     const orphans = entities.filter(
       (e) => e.start_year !== null && e.start_year < earliest,
     );
-    // Only the contested Dikika claim and its container sit older.
+    // Two African sites hold deposits older than the oldest anchor: Turkana
+    // Basin bottoms out at 4.1 Ma and Sterkfontein at 3.67 Ma. Both are
+    // allow_outside_parent_dates, both are real, and the Laetoli anchor added
+    // with the Africa pass brought this back down from seven.
     expect(orphans.length).toBeLessThanOrEqual(3);
   });
 });
@@ -209,12 +249,22 @@ describe("dating method is physically capable of the date", () => {
     // end's method and letting it describe the start is the natural error.
     const CEILING_BP = 55_000;
     const bp = (y: number) => 1950 - (y < 0 ? y + 1 : y);
+    const beyondReach = (
+      method: string | undefined,
+      year: number | null,
+    ): boolean =>
+      typeof method === "string" &&
+      method.startsWith("radiocarbon") &&
+      year !== null &&
+      bp(year) > CEILING_BP;
+
+    // Both boundaries are checked now. The end check is new reach rather than
+    // a port: before schema 3.0.0 the end had no method of its own, so an
+    // impossible end date was literally untestable.
     const impossible = entities.filter(
       (e) =>
-        typeof e.dating_method === "string" &&
-        e.dating_method.startsWith("radiocarbon") &&
-        e.start_year !== null &&
-        bp(e.start_year) > CEILING_BP,
+        beyondReach(e.start_dating_method, e.start_year) ||
+        beyondReach(e.end_dating_method, e.end_year),
     );
     expect(impossible.map((e) => e.id)).toEqual([]);
   });
@@ -223,7 +273,8 @@ describe("dating method is physically capable of the date", () => {
     // The refusal to convert only helps if the entity says what it is.
     const undeclared = entities.filter(
       (e) =>
-        e.dating_method === "radiocarbon-uncalibrated" &&
+        (e.start_dating_method === "radiocarbon-uncalibrated" ||
+          e.end_dating_method === "radiocarbon-uncalibrated") &&
         !(e.date_note ?? "").toUpperCase().includes("UNCALIB"),
     );
     expect(undeclared.map((e) => e.id)).toEqual([]);

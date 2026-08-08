@@ -1,8 +1,24 @@
 {
-  "schema_version": "2.0.0",
-  "dataset_version": "0.5.0.1",
-  "generated_at": "2026-08-08T04:26:06Z",
+  "schema_version": "3.0.0",
+  "dataset_version": "0.6.0.0",
+  "generated_at": "2026-08-08T19:20:20Z",
   "frames": [
+    {
+      "id": "lucy",
+      "name": "Lucy walks upright",
+      "year": -3178051,
+      "anchor_set": "deep-time",
+      "summary": "The Australopithecus afarensis skeleton from Hadar in Ethiopia. Bipedal, small-brained, and 600,000 years before anyone knapped a stone.",
+      "entity_id": "africa.prehistory.hadar"
+    },
+    {
+      "id": "laetoli-footprints",
+      "name": "Oldest footprints",
+      "year": -3658051,
+      "anchor_set": "deep-time",
+      "summary": "Hominins walked across wet volcanic ash at Laetoli in Tanzania and the prints set. The oldest direct record of upright walking, older than any stone tool.",
+      "entity_id": "africa.prehistory.laetoli"
+    },
     {
       "id": "first-stone-tools",
       "name": "First stone tools",
@@ -104,7 +120,7 @@
       "name": "French Revolution",
       "year": 1789,
       "anchor_set": "western",
-      "summary": "Overthrew the French monarchy and ancien r\u00e9gime; template for modern political revolutions.",
+      "summary": "Overthrew the French monarchy and ancien régime; template for modern political revolutions.",
       "entity_id": "europe.western.france.revolution"
     },
     {
@@ -186,7 +202,7 @@
       "name": "Mongol Sack of Baghdad",
       "year": 1258,
       "anchor_set": "islamic",
-      "summary": "H\u00fcleg\u00fc Khan's Mongols destroyed Baghdad and ended the Abbasid Caliphate; a symbolic close to the Islamic Golden Age.",
+      "summary": "Hülegü Khan's Mongols destroyed Baghdad and ended the Abbasid Caliphate; a symbolic close to the Islamic Golden Age.",
       "entity_id": "cross-regional.abbasid"
     },
     {
@@ -242,7 +258,7 @@
       "name": "Fall of Tenochtitlan",
       "year": 1521,
       "anchor_set": "americas",
-      "summary": "Spanish conquistadors under Cort\u00e9s, allied with Tlaxcala and other indigenous nations, took the Aztec capital.",
+      "summary": "Spanish conquistadors under Cortés, allied with Tlaxcala and other indigenous nations, took the Aztec capital.",
       "entity_id": "americas.mesoamerica.aztec.moctezuma2"
     },
     {
@@ -255,7 +271,7 @@
     },
     {
       "id": "polynesia-settlement",
-      "name": "Settlement of Aotearoa (M\u0101ori)",
+      "name": "Settlement of Aotearoa (Māori)",
       "year": 1280,
       "anchor_set": "oceanic",
       "summary": "Approximate date of first Polynesian settlement of New Zealand; last major landmass on Earth to be settled by humans.",

@@ -33,4 +33,10 @@ Final verification (all passed)
 - npx tsc --noEmit
 - npx vitest run  -> 8 files passed, 164 tests passed
 
-No git commit was created.
+No git commit was created for that pass; the work reached main inside a later commit.
+
+Superseded in part by the 0.6.0.0 African pass (see docs/DATASET-CHANGELOG.md and
+docs/africa-prehistory-research.md), which added 31 African entities and moved the
+dataset to per-boundary dating. The uncalibrated-radiocarbon records listed above
+remain accurate; three more were added by that pass (Enkapune Ya Muto, Wadi
+Kubbaniya, Ishango).

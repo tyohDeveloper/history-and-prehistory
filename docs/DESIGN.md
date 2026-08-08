@@ -1749,6 +1749,14 @@ losing both; it should come out once the lens has been used enough to trust.
 Decided enhancements waiting on time rather than on a decision. Unlike a `Q-n` item there is no
 open question here — if one turns up while building, it becomes a `Q-n` and moves to the register.
 
+- **Sync the versioning rule into the project wiki.** `docs/CODING-STANDARDS.md` §12 now carries
+  four-part versioning, but the wiki page it derives from
+  (`concepts/repository-conventions.md`) still says "Semantic versioning for anything tagged and
+  released" — while citing OmniUnit's `v5.0.0.0`, a four-part version, as its example. The wiki has
+  contradicted itself on this point for a while; the repo is now the correct copy and the wiki is
+  the stale one, which is the reverse of the usual direction. Could not be pushed on 2026-08-08
+  because the Project CLI was disabled for that session.
+
 - **"Open Wikipedia" button on the readout.** Links to
   `https://en.wikipedia.org/w/index.php?search={topic}`, where `{topic}` is the entity shown in the
   lower panel. Two things to settle at build time rather than now: the offline guarantee means this

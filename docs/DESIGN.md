@@ -11,9 +11,9 @@ to read well one at a time. Revisit that choice when the register stops changing
 |---|---|
 | Branch | Merged to `main`. `calendar-layer` retained but no longer ahead. |
 | Wired into the UI | Multi-calendar readout, calendar picker, and the display-range layer. Disclosure and focus view are not. |
-| Tests | 162 unit + 20 browser |
-| Artifact | 95.5 kB gzip |
-| Dataset | v3.0.0 on schema 2.0.0. 1,345 entities. Scope floor is behavioural, at 3.3 Ma. |
+| Tests | 166 unit + 20 browser |
+| Artifact | 108.9 kB gzip |
+| Dataset | v3.1.0 on schema 2.0.0. 1,417 entities. Prehistory attached in all ten regions. |
 | Replit | Repo is loaded there but dormant by choice; no commits from it yet |
 | Last reviewed | 2026-08-07 |
 
@@ -1149,6 +1149,79 @@ Dataset 3.0.0 moves the prehistory ids.
 Recorded honestly: **2.2.0 was itself mis-versioned.** It re-parented three
 top-level eras and dropped four ids under a minor bump. 3.0.0 absorbs that.
 
+## Regional prehistory (gap analysis \u00a74.2)
+
+All ten regions now have a prehistory branch. 1,345 \u2192 1,417 entities, every date
+carrying a fetched source.
+
+**Industries stay on the global Paleolithic spine** and cross-parent into their
+region, because an industry is not owned by a modern country. G\u00f6bekli Tepe moved
+to `west-asia.prehistory` and cross-parents back into `global.neolithic`, which
+is what `cross_parent_ids` is for.
+
+### Seven entities store uncalibrated radiocarbon
+
+Jericho, 'Ain Ghazal, Lascaux, Hongshan, the Hoabinhian, Yangtze rice and Cactus
+Hill. This is the payoff for the three-senses work: the app refuses to give any
+of them a calendar reading.
+
+Jericho is the sharpest case. The familiar "tower built c. 8300 BC" is an
+uncalibrated figure, and the source never labels it. Checked against calibrated
+estimates for the same stages it runs 500\u2013900 years young, so the tower is
+roughly a **millennium older** in calendar terms than the usual number implies.
+Its stage table is also internally inconsistent \u2014 Stage V is older than Stage III
+despite being stratigraphically later.
+
+'Ain Ghazal is the same trap with both numbers in circulation: 6750 \u00b1 80 BC
+uncalibrated against 7580 \u00b1 110 BC calibrated for the same statues.
+
+### Two validator rules, and what they caught
+
+**Radiocarbon claimed beyond its range is impossible, not debatable.** Carbon
+decays out of usable range by ~50 kyr. The rule caught six entities \u2014 *three of
+them authored by hand in earlier sessions of this project*.
+
+The cause is structural rather than careless, and it is worth stating plainly:
+**`dating_method` is one field per entity, but a long-lived entity has two
+boundaries dated by different means.** Neanderthals appear at 400 ka by
+uranium-series and luminescence at Sima de los Huesos, and disappear at 40 ka by
+AMS radiocarbon. Recording the end's method and letting it describe the whole
+entity is the natural mistake. It stays invisible until something renders the
+label, which is exactly what happened. Logged as Q-30.
+
+**Uncalibrated radiocarbon must be declared in `date_note`.** The refusal to
+convert only protects the reader if the entity says what it is, and the entire
+hazard is that published sources frequently do not.
+
+Both rules were verified by reintroducing the bugs into a copy of the data and
+confirming they fire, rather than by assuming a passing run means a working
+check \u2014 four dead-code findings in this project argue for the stronger test.
+
+### Reference anchors reached 0.35% of the dataset
+
+The eight anchor sets are cultural traditions and none begins before the
+Holocene, so 42 entities older than 10,000 BCE had nothing to orient against. A
+`deep-time` set now runs from the first stone tools to the start of the
+Holocene; coverage 0.35% \u2192 97.3%.
+
+These anchors work differently from the others. "Fall of Rome" is a landmark the
+reader already holds; nobody grew up knowing when the Last Glacial Maximum was,
+so a deep-time anchor has to supply the scale as well as the position.
+
+### Smaller corrections
+
+- `global.mesolithic` is now "Mesolithic (Eurasia)". Its `date_note` already
+  said the term has no counterpart in the Americas, sub-Saharan Africa or
+  Australia, while the name went on claiming otherwise.
+- Aboriginal Australia is open-ended. 1788 is a colonial boundary, not the end
+  of a tradition that continues.
+- `ReferenceFrame` did not declare `year`; it fell through the index signature
+  as `unknown`, so arithmetic on it did not type-check. Fine while nothing read
+  the field.
+- The visual check caught four entities rendering "\u2013 present" that were not
+  ongoing, and Border Cave asserting a 2.0 ka end that was a placeholder
+  convention of mine rather than a finding.
+
 ## Focus and context (requirement 10)
 
 The described behavior — focus large, falling away with perspective compression — is
@@ -1419,7 +1492,16 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**14 open, 15 resolved.** Audited 2026-08-07.
+**15 open, 15 resolved.** Audited 2026-08-07.
+
+**Q-30. Should `dating_method` be per-boundary rather than per-entity?** One field
+cannot describe an entity whose start and end rest on different science.
+Neanderthals are uranium-series at 400 ka and radiocarbon at 40 ka. The current
+convention is that the field describes the START, because frame selection is
+computed from the start boundary, and a validator rule now enforces physical
+plausibility against it. That is a workaround. The disclosure model is already
+per-boundary (`BoundaryDating`), so the dataset is the layer that is behind.
+Related: Q-22, which is the same per-boundary problem for notes.
 
 ### Blocking — date model
 
@@ -1528,10 +1610,11 @@ Nothing below exists yet. Roughly in dependency order:
 - **Ambiguity-preserving date input.** Entering a date in any calendar, with candidate chips.
 - **Disclosure UI.** Marker, popover, and the a11y contract in the render section above.
 - **Focus+context view.** The second view beside the Miller columns.
-- **Schema changes.** Optional `subkind`, fuzzy anchors, `dating_method`, `standing`, `asOf`,
+- ~~**Schema changes.**~~ Done in schema 1.1.0 and 2.0.0.
+- **Schema changes (remaining).** Per-boundary `dating_method` (Q-30),
   and the source registry — none are in `entity.schema.json` yet.
-- **Validator rules.** Eleven are specified above; none are implemented in `tools/validate.py`.
-- **Prehistory content.** Five pilot entities exist; the ten regional attach points from the gap
+- **Validator rules.** Eleven are specified above; two are now implemented in `tools/validate.py` (radiocarbon plausibility, uncalibrated declaration).
+- ~~**Prehistory content.**~~ Done: all ten regional attach points are populated. What remains is the gap
   analysis do not. This is now the largest single body of remaining work.
 
 `Q-10` no longer gates any of it. The next largest item is prehistory content, followed by

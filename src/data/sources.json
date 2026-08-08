@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.13.0.0",
-  "generated_at": "2026-08-08T22:49:10Z",
+  "dataset_version": "0.14.0.0",
+  "generated_at": "2026-08-08T23:17:38Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2143,6 +2143,225 @@
       "citation": "Tata Institute of Fundamental Research radiocarbon date list (TF series), Radiocarbon (1965)",
       "url": "https://journals.uair.arizona.edu/index.php/radiocarbon/article/viewFile/3302/2894",
       "note": "The original published lab table behind the Burzahom chronology."
+    },
+    {
+      "id": "frontiers-2023-chinese-radiocarbon",
+      "kind": "scholarly",
+      "citation": "'Radiocarbon dating and its applications in Chinese archaeology', Frontiers in Earth Science 11 (2023)",
+      "url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1064717/full"
+    },
+    {
+      "id": "pnas-2009-north-china-millet",
+      "kind": "scholarly",
+      "citation": "Lu et al., 'Earliest domestication of common millet in East Asia', PNAS 106 (2009)",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.0903375106"
+    },
+    {
+      "id": "pnas-2012-early-millet-use",
+      "kind": "scholarly",
+      "citation": "'Early millet use in northern China', PNAS 109 (2012)",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1115430109"
+    },
+    {
+      "id": "zhao-oxford-millet-critique",
+      "kind": "scholarly",
+      "citation": "Oxford doctoral thesis reporting Zhao's (2011) critique of the earliest Cishan millet dates",
+      "url": "https://ora.ox.ac.uk/objects/uuid:b265f3b2-402a-46fc-ba13-bee750c9a185/files/rbk1289975",
+      "note": "Calls the earliest Lu et al. dates 'highly controversial' on sample-context grounds, and gives 5670-5610 BCE as the earliest DIRECT date on millet grains, at Xinglongwa."
+    },
+    {
+      "id": "antiquity-northeast-china-sequence",
+      "kind": "scholarly",
+      "citation": "Antiquity supplementary material, northeast China cultural sequence",
+      "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0003598X20002367/resource/name/S0003598X20002367sup001.pdf"
+    },
+    {
+      "id": "bayesian-chronology-neolithic-china",
+      "kind": "scholarly",
+      "citation": "Bayesian chronological modelling of Chinese Neolithic cultures, Journal of Archaeological Science: Reports",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X16305648"
+    },
+    {
+      "id": "ucl-hemudu-review",
+      "kind": "scholarly",
+      "citation": "Fuller et al., Hemudu review (University College London)",
+      "url": "http://www.homepages.ucl.ac.uk/~tcrndfu/articles/Hemudu%20review.pdf"
+    },
+    {
+      "id": "zheng-2021-hemudu-paleomagnetic",
+      "kind": "scholarly",
+      "citation": "Zheng et al. (2021), paleomagnetic chronology of the Hemudu culture",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0031018221000821"
+    },
+    {
+      "id": "current-anthropology-yangtze-rice",
+      "kind": "scholarly",
+      "citation": "Current Anthropology, on the establishment of rice agriculture in the middle Yangtze",
+      "url": "https://www.journals.uchicago.edu/doi/full/10.1086%2F659308"
+    },
+    {
+      "id": "shijiahe-ams-chronology",
+      "kind": "scholarly",
+      "citation": "AMS chronology of the Shijiahe culture (PMC, 2017)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5438134/"
+    },
+    {
+      "id": "mei-china-central-asia-bronze",
+      "kind": "scholarly",
+      "citation": "Mei, 'China, Central Asia and the Bronze Age' (British Academy)",
+      "url": "https://www.thebritishacademy.ac.uk/documents/3098/Mei-China-central-asia-bronze-age.pdf"
+    },
+    {
+      "id": "mogou-bioarchaeology-antiquity",
+      "kind": "scholarly",
+      "citation": "'The Mogou bioarchaeology project', Antiquity",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/mogou-bioarchaeology-project-exploring-health-in-the-chinese-bronze-age/53F1F32DA8EB7B3E5FC73F86F5C9ACAE"
+    },
+    {
+      "id": "pnas-2017-liangzhu-hydraulic",
+      "kind": "scholarly",
+      "citation": "Liu et al., 'Earliest hydraulic enterprise in China, 5,100 years ago', PNAS 114 (2017)",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1710516114",
+      "note": "AMS on grass in the dam sandbags. The dams predate most of the walled city."
+    },
+    {
+      "id": "liangzhu-complex-society-antiquity",
+      "kind": "scholarly",
+      "citation": "'The emergence of complex society in China: the case of Liangzhu', Antiquity",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/emergence-of-complex-society-in-china-the-case-of-liangzhu/0D4FD61E9460755CED69047FAD7FA2AD",
+      "note": "Proposes Liangzhu 'may be the earliest state society in East Asia.'"
+    },
+    {
+      "id": "unesco-liangzhu-inscription",
+      "kind": "reference",
+      "citation": "UNESCO World Heritage Committee, Decision 43COM 8B.15, Baku, 6 July 2019",
+      "url": "https://whc.unesco.org/en/list/1592/documents/"
+    },
+    {
+      "id": "li-liu-2009-xia-erlitou-debate",
+      "kind": "scholarly",
+      "citation": "Li Liu, 'Academic freedom, political correctness, and early civilisation in Chinese archaeology: the debate on Xia-Erlitou relations', Antiquity 83 (2009)",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/academic-freedom-political-correctness-and-early-civilisation-in-chinese-archaeology-the-debate-on-xiaerlitou-relations/C5AB38AAD524216D82B9B31F713F6D22",
+      "note": "'Most scholars in the West have reservations regarding interpretations identifying Erlitou with the material culture of an early dynasty.'"
+    },
+    {
+      "id": "chen-chun-erlitou-xia-dispute",
+      "kind": "scholarly",
+      "citation": "Chen Chun, 'Erlitou and Xia: A Dispute between Chinese and Overseas Scholars'",
+      "url": "https://www.sociostudies.org/journal/articles/1843103/",
+      "note": "Sets out all three positions, including Bagley's point that Shang oracle bones show no sign of a Xia concept and the name first appears in Zhou texts."
+    },
+    {
+      "id": "lawler-science-founding-dynasty",
+      "kind": "press",
+      "citation": "Lawler, 'Founding Dynasty or Myth?', Science (2009)",
+      "url": "https://www.andrewlawler.com/scimag2010jandynasty/",
+      "note": "Reports Wu Xiaohong's 2007 dates pushing Erlitou's start later, to c. 1750 BCE."
+    },
+    {
+      "id": "escholarship-erlitou-wiggle-match",
+      "kind": "scholarly",
+      "citation": "UC eScholarship, citing Qiu, Cai & Zhang (2006) wiggle-matched dates for Erlitou",
+      "url": "https://escholarship.org/content/qt9df4w6kn/qt9df4w6kn_noSplash_a8c2cbb73ce509220814d06ba4327e0f.pdf"
+    },
+    {
+      "id": "wu-2012-xianrendong-pottery",
+      "kind": "scholarly",
+      "citation": "Wu et al., 'Early Pottery at 20,000 Years Ago in Xianrendong Cave, China', Science 336 (2012)",
+      "url": "https://www.science.org/doi/10.1126/science.1218643"
+    },
+    {
+      "id": "yanshina-2019-earliest-pottery",
+      "kind": "scholarly",
+      "citation": "Yanshina, on the age of the earliest South China pottery, Kunstkamera (2019)",
+      "url": "https://journal.kunstkamera.ru/en/archive/2019_3/yanshina_ov_o_vozraste_drevnejshej_keramiki_yuzhnogo_kitaya",
+      "note": "The dates 'have an obscure context, contradict the TL-datings of the ceramics themselves, and are in poor agreement with the paleoclimatic data.'"
+    },
+    {
+      "id": "kuzmin-origins-of-pottery-east-asia",
+      "kind": "scholarly",
+      "citation": "Kuzmin, 'The origins of pottery in East Asia and neighbouring regions'",
+      "url": "https://core.ac.uk/download/pdf/287445762.pdf",
+      "note": "'The claim for earlier pottery in South China at the Xianrendong Cave, supposedly dated to ca. 20,000 cal BP, cannot be substantiated.'"
+    },
+    {
+      "id": "boaretto-2009-yuchanyan",
+      "kind": "scholarly",
+      "citation": "Boaretto et al., 'Radiocarbon dating of charcoal and bone collagen associated with early pottery at Yuchanyan Cave', PNAS 106 (2009)",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.0900539106"
+    },
+    {
+      "id": "keally-radiocarbon-east-asia",
+      "kind": "scholarly",
+      "citation": "Keally, on early pottery chronology in East Asia, Radiocarbon (University of Arizona)",
+      "url": "https://journals.uair.arizona.edu/index.php/radiocarbon/article/viewFile/4273/3698"
+    },
+    {
+      "id": "tianyuan-cave-radiocarbon",
+      "kind": "scholarly",
+      "citation": "Late Pleistocene East Asian radiocarbon comparison table, Radiocarbon (University of Arizona)",
+      "url": "https://journals.uair.arizona.edu/index.php/radiocarbon/article/viewFile/16936/pdf"
+    },
+    {
+      "id": "cambridge-koreanic-farming-dispersal",
+      "kind": "scholarly",
+      "citation": "'Archaeolinguistic evidence for the farming/language dispersal of Koreanic', Evolutionary Human Sciences",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CE1DF81011ED49CED531AA6475959157/S2513843X20000493a.pdf/archaeolinguistic-evidence-for-the-farminglanguage-dispersal-of-koreanic.pdf"
+    },
+    {
+      "id": "current-anthropology-korea-foraging",
+      "kind": "scholarly",
+      "citation": "'The Transition from Foraging to Farming in Prehistoric Korea', Current Anthropology 52:S4",
+      "url": "https://www.journals.uchicago.edu/doi/full/10.1086/658488"
+    },
+    {
+      "id": "stevens-fuller-agriculture-east-asia",
+      "kind": "scholarly",
+      "citation": "Stevens & Fuller, 'The spread of agriculture in eastern Asia' (UCL Discovery)",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10052010/1/Stevens_Fuller_Agricultural%20Bases%20in%20East%20Asia%20final%20ms.pdf"
+    },
+    {
+      "id": "kyushu-initial-spread-agriculture",
+      "kind": "scholarly",
+      "citation": "'The Initial Spread of Early Agriculture into Northeast Asia', Asian Archaeology 3 (Kyushu University)",
+      "url": "https://api.lib.kyushu-u.ac.jp/opac_download_md/1812318/Asian%20Archaeology%20Vol.3.pdf"
+    },
+    {
+      "id": "hanyang-middle-mumun-isotopes",
+      "kind": "scholarly",
+      "citation": "'Direct isotopic evidence for human millet consumption in the Middle Mumun period' (Hanyang University)",
+      "url": "https://scholarworks.bwise.kr/hanyang/bitstream/2021.sw.hanyang/173162/1/Direct%20isotopic%20evidence%20for%20human%20millet%20consumption%20in%20the%20Middle%20Mumun%20period%20Implication%20and%20importance%20of%20millets%20in%20early%20agriculture%20on%20the%20Korean%20Peninsula.pdf"
+    },
+    {
+      "id": "bale-mumun-thesis",
+      "kind": "scholarly",
+      "citation": "Bale, doctoral thesis on the Mumun Pottery Period (University of Toronto)",
+      "url": "https://tspace.library.utoronto.ca/bitstream/1807/31685/1/Bale_Martin_T_201111_PhD_thesis.pdf"
+    },
+    {
+      "id": "habu-2008-sannai-maruyama",
+      "kind": "scholarly",
+      "citation": "Habu, on Sannai Maruyama, Antiquity (2008)",
+      "url": "https://junkohabu.com/wp-content/uploads/2017/04/habu2008-antiquity.pdf"
+    },
+    {
+      "id": "plos-2016-jomon-population",
+      "kind": "scholarly",
+      "citation": "'Regional population dynamics in Jomon Japan', PLOS ONE (2016)",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0154809",
+      "note": "Summed radiocarbon probability over 1,598 Late and 1,462 Final Jomon dates."
+    },
+    {
+      "id": "shoda-2010-yayoi-dating",
+      "kind": "scholarly",
+      "citation": "Shoda, 'Radiocarbon and archaeology in Japan and Korea: what has changed because of the Yayoi dating controversy?', Radiocarbon 52 (2010)",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/957FA42A4A7A4F3E8E3DA575246B8367/S0033822200045471a.pdf/radiocarbon-and-archaeology-in-japan-and-korea-what-has-changed-because-of-the-yayoi-dating-controversy.pdf"
+    },
+    {
+      "id": "shoda-seaa-yayoi-controversy",
+      "kind": "scholarly",
+      "citation": "Shoda, 'A Comment on the Yayoi Period Dating Controversy', Bulletin of the Society for East Asian Archaeology 1",
+      "url": "https://www.seaa-web.org/sites/default/files/publications/bseaa-1/BSEAA1-Shoda.pdf"
     },
     {
       "id": "masson-altyn-depe-summary",

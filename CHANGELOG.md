@@ -14,6 +14,19 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.12.0.0-app] — 2026-08-08
+
+### Changed
+
+- `tools/coverage.py` now also excludes NAVIGATION eras from the childless
+  report. `east-asia.prehistory` spans 14,000–300 BCE holding nothing, and the
+  report called it the single biggest gap in the dataset — while Jomon sat
+  fully subdivided under Japan and the Chinese Neolithic under China, exactly
+  where that node's own summary says they belong. It is a cross-link, not a
+  container. Acting on the report as written would have duplicated 1,500 years
+  of existing coverage.
+- Ships dataset 0.14.0.0. Build size baseline rebased to 193,218 bytes gzip.
+
 ## [3.11.1.0-app] — 2026-08-08
 
 ### Removed

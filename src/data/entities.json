@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.13.0.0",
-  "generated_at": "2026-08-08T22:49:10Z",
+  "dataset_version": "0.14.0.0",
+  "generated_at": "2026-08-08T23:17:38Z",
   "entities": [
     {
       "id": "global",
@@ -21768,6 +21768,561 @@
         "radiocarbon-1965-tf-series"
       ],
       "summary": "A Kashmir valley site of pit dwellings cut into loess, with a Neolithic sequence running into a megalithic phase."
+    },
+    {
+      "id": "east-asia.china.late-pleistocene",
+      "kind": "era",
+      "name": "Late Pleistocene China",
+      "parent_id": "east-asia.china",
+      "start_year": -40000,
+      "end_year": -10551,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "A container era. The span runs from the earliest directly dated modern human in the region to the start of the Neolithic sequence; each entry below carries its own dating.",
+      "source_ids": [
+        "tianyuan-cave-radiocarbon"
+      ],
+      "summary": "China before farming: the earliest modern human remains in the region, and foragers making pottery thousands of years before any crop."
+    },
+    {
+      "id": "east-asia.china.late-pleistocene.tianyuan",
+      "kind": "period",
+      "name": "Tianyuan Cave",
+      "parent_id": "east-asia.china.late-pleistocene",
+      "start_year": -38990,
+      "end_year": -36170,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "34,430+/-510 BP uncalibrated on the femur, calibrating to 38,120-40,940 cal BP.",
+      "source_ids": [
+        "tianyuan-cave-radiocarbon"
+      ],
+      "summary": "A femur near Beijing from one of the earliest directly dated modern humans in East Asia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.late-pleistocene.xianrendong",
+      "kind": "period",
+      "name": "Xianrendong Cave",
+      "parent_id": "east-asia.china.late-pleistocene",
+      "start_year": -18050,
+      "end_year": -13750,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "minority",
+      "date_precision": "disputed",
+      "date_note": "Ten AMS dates put the lowest sherd-bearing levels at 20,000-19,000 cal BP, which would be 2,000-3,000 years older than any other pottery known. Two independent re-analyses dispute this. The range authored here is Kuzmin's more conservative re-derivation; the Science figure is carried below.",
+      "alternatives": [
+        {
+          "label": "Pottery at 20,000-19,000 cal BP",
+          "standing": "minority",
+          "start_year": -18050,
+          "end_year": -17050,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "The original Science claim, from the excavating team. Peer-reviewed, and disputed by two later peer-reviewed re-analyses.",
+          "source_ids": [
+            "wu-2012-xianrendong-pottery"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Reported almost everywhere as settled. It is not: specialists argue the dates have obscure context, conflict with the TL dates on the ceramics, and disagree with the palaeoclimate.",
+          "source_ids": [
+            "yanshina-2019-earliest-pottery",
+            "kuzmin-origins-of-pottery-east-asia"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "wu-2012-xianrendong-pottery",
+        "yanshina-2019-earliest-pottery",
+        "kuzmin-origins-of-pottery-east-asia"
+      ],
+      "summary": "A Jiangxi cave holding what may be the oldest pottery in the world, made by foragers during the Last Glacial Maximum — if the dates hold."
+    },
+    {
+      "id": "east-asia.china.late-pleistocene.yuchanyan",
+      "kind": "period",
+      "name": "Yuchanyan Cave",
+      "parent_id": "east-asia.china.late-pleistocene",
+      "start_year": -16350,
+      "end_year": -13480,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The 2009 study dates the pottery to 18,300-15,430 cal BP, with the most secure earliest estimate at 18,300-17,500 cal BP. It was built around dating the association itself rather than the layer, which is why it is preferred here over the older lab results.",
+      "alternatives": [
+        {
+          "label": "Older lab results, c. 17,200-14,700 cal BP",
+          "standing": "superseded",
+          "start_year": -15250,
+          "end_year": -12750,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Zhao and Wu's 2000 figures, calibrated. Younger than the dedicated 2009 study and based on less controlled associations.",
+          "source_ids": [
+            "keally-radiocarbon-east-asia"
+          ]
+        }
+      ],
+      "source_ids": [
+        "boaretto-2009-yuchanyan",
+        "keally-radiocarbon-east-asia",
+        "frontiers-2023-chinese-radiocarbon"
+      ],
+      "summary": "A Hunan cave with early pottery and wild rice, dated by a study designed specifically to get the chronology right.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.cishan",
+      "kind": "period",
+      "name": "Cishan Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -6050,
+      "end_year": -5050,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The contested part is not the culture but its earliest millet. Three AMS dates were reported at 10,400-10,100 cal BP, which would put broomcorn millet cultivation near 10,000 BP.",
+      "alternatives": [
+        {
+          "label": "Millet cultivation from c. 10,400 cal BP",
+          "standing": "minority",
+          "note": "Zhao's critique argues the samples' archaeological context does not support the claim. The earliest DIRECT date on millet grains anywhere in the region is 5670-5610 BCE, at Xinglongwa.",
+          "source_ids": [
+            "pnas-2009-north-china-millet",
+            "zhao-oxford-millet-critique"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The very early millet dates are widely repeated as the origin of north Chinese agriculture. They are described in the literature as highly controversial on sample-context grounds.",
+          "source_ids": [
+            "zhao-oxford-millet-critique"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "pnas-2009-north-china-millet",
+        "pnas-2012-early-millet-use",
+        "zhao-oxford-millet-critique"
+      ],
+      "summary": "A north China millet culture whose storage pits produced the claim that cereal farming here began at the Pleistocene boundary.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.xinglongwa",
+      "kind": "period",
+      "name": "Xinglongwa Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -6200,
+      "end_year": -5400,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Flourishes after 8.2 ka cal BP in the regional sequence. Its significance for dating is the direct AMS date on millet grains, 5670-5610 BCE — the conservative anchor against which the disputed Cishan claims are measured.",
+      "source_ids": [
+        "zhao-oxford-millet-critique",
+        "antiquity-northeast-china-sequence"
+      ],
+      "summary": "A northeast China culture of planned villages, jade working, and the earliest millet grains anywhere to be dated directly rather than by context.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.dawenkou",
+      "kind": "period",
+      "name": "Dawenkou Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -4300,
+      "end_year": -2600,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Conventionally 4300-2600 BCE in three phases. A Bayesian re-modelling puts the onset at 4500-3900 BCE and the end considerably later, at 2100-1800 BCE; the two schemes differ by centuries at both ends.",
+      "source_ids": [
+        "bayesian-chronology-neolithic-china"
+      ],
+      "summary": "An eastern China culture of elaborate burials and incised pottery marks sometimes discussed, carefully, in relation to later Chinese writing."
+    },
+    {
+      "id": "east-asia.china.neolithic.hemudu",
+      "kind": "period",
+      "name": "Hemudu Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -5000,
+      "end_year": -4000,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Radiocarbon places first occupation about 5000-4900 BCE and the main village ending about 4600 BCE. An independent paleomagnetic chronology gives a start near 7000 cal BP, which agrees once units are reconciled but rests on an entirely different method.",
+      "alternatives": [
+        {
+          "label": "Paleomagnetic chronology, from c. 7000 cal BP",
+          "standing": "minority",
+          "start_year": -5050,
+          "end_year": -3050,
+          "dating_method": "magnetostratigraphy",
+          "note": "Zheng et al. 2021, derived from sediment magnetism rather than radiocarbon.",
+          "source_ids": [
+            "zheng-2021-hemudu-paleomagnetic"
+          ]
+        }
+      ],
+      "source_ids": [
+        "ucl-hemudu-review",
+        "zheng-2021-hemudu-paleomagnetic"
+      ],
+      "summary": "A waterlogged lower Yangtze site that preserved wooden mortise-and-tenon architecture and some of the earliest cultivated rice.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.daxi",
+      "kind": "period",
+      "name": "Daxi Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -4450,
+      "end_year": -3350,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Full rice agriculture is established in the middle Yangtze in this period, about 6400-5300 BP. Fortification at Chengtoushan appears as early as 6400-6100 cal BP.",
+      "source_ids": [
+        "current-anthropology-yangtze-rice"
+      ],
+      "summary": "A middle Yangtze culture with some of the earliest walled settlements in China, at Chengtoushan.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.shijiahe",
+      "kind": "period",
+      "name": "Shijiahe Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -2900,
+      "end_year": -2050,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "AMS phases: early 4850-4400 cal BP, middle 4400-4200, late 4200-4000. Rice grains from Shijiahe contexts date to 2580-2340 and 2480-2280 cal BC.",
+      "source_ids": [
+        "shijiahe-ams-chronology"
+      ],
+      "summary": "A middle Yangtze late Neolithic culture of walled settlements and rice, contemporary with Longshan further north.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.qijia",
+      "kind": "period",
+      "name": "Qijia Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -2200,
+      "end_year": -1600,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Credible academic sources give ranges from about 2400/2250 BCE to as late as 1400 BCE for different sub-sites and phases. The Mogou site specifically dates to 1750-1400 BC. This is real heterogeneity within the culture rather than a dating error, and no single range represents the whole.",
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "mei-china-central-asia-bronze",
+        "mogou-bioarchaeology-antiquity"
+      ],
+      "summary": "A northwest culture straddling the Neolithic and Bronze Age, central to arguments about how metallurgy reached China."
+    },
+    {
+      "id": "east-asia.china.neolithic.liangzhu.liangzhu-dams",
+      "kind": "period",
+      "name": "The Liangzhu Hydraulic System",
+      "parent_id": "east-asia.china.neolithic.liangzhu",
+      "start_year": -3250,
+      "end_year": -2650,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "AMS on grass from the sandbags used in construction, plus associated charcoal. High dams begin about 5200-4800 cal BP and low dams and levees about 5000-4800 cal BP — both before most of the walled city itself, which dates to 4900-4600 cal BP. The waterworks came first.",
+      "source_ids": [
+        "pnas-2017-liangzhu-hydraulic",
+        "liangzhu-complex-society-antiquity",
+        "unesco-liangzhu-inscription"
+      ],
+      "summary": "Eleven dams and levees around the Liangzhu city, the earliest large-scale water management known anywhere.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.legendary.erlitou",
+      "kind": "period",
+      "name": "Erlitou",
+      "parent_id": "east-asia.china.legendary",
+      "start_year": -1750,
+      "end_year": -1520,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Wiggle-matched radiocarbon compresses the occupation to roughly 1750-1520 BCE, about two centuries. The date has moved repeatedly: broadly 2100-1300 BC on 20th-century radiocarbon, 1880-1520 BC from the Xia-Shang-Zhou Chronology Project, about 1900-1500 BC in the general literature, and later still after Wu Xiaohong's 2007 work on lower-layer samples. There is also a middle position: Liu Li and Chen Xingcan read phase II as state-level organisation but prefer the neutral label 'the Erlitou State', on the grounds that Chinese scholarship has spent too much effort on dynastic labelling and too little on craft production and settlement patterns.",
+      "alternatives": [
+        {
+          "label": "Erlitou is the Xia dynasty",
+          "standing": "minority",
+          "note": "Held by most Chinese scholars and some overseas. The Chronology Project assigned all four Erlitou phases to Xia and dated Xia's start to c. 2070 BCE.",
+          "source_ids": [
+            "chen-chun-erlitou-xia-dispute",
+            "li-liu-2009-xia-erlitou-debate"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Most overseas scholars hold that Erlitou cannot be identified as Xia without contemporaneous writing. Shang oracle bones show no sign of a Xia concept; the name first appears in Zhou texts.",
+          "source_ids": [
+            "chen-chun-erlitou-xia-dispute",
+            "li-liu-2009-xia-erlitou-debate"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "li-liu-2009-xia-erlitou-debate",
+        "chen-chun-erlitou-xia-dispute",
+        "lawler-science-founding-dynasty",
+        "escholarship-erlitou-wiggle-match"
+      ],
+      "summary": "A large early Bronze Age centre in Henan with palace foundations and bronze workshops, and the site the entire Xia argument is actually about."
+    },
+    {
+      "id": "east-asia.korea.chulmun",
+      "kind": "era",
+      "name": "Chulmun Period",
+      "parent_id": "east-asia.korea",
+      "start_year": -6000,
+      "end_year": -1500,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Schemes disagree on both ends. A four-phase calendar scheme runs 7500-1300 BC; a three-phase cal BP scheme runs 7500-3400 cal BP; another source puts the Korean Neolithic's start near 10,000 BP. The range here is a conservative middle of the published schemes, not an average of them.",
+      "source_ids": [
+        "cambridge-koreanic-farming-dispersal",
+        "current-anthropology-korea-foraging"
+      ],
+      "summary": "Korea's Neolithic: comb-patterned pottery, coastal foraging, and the slow arrival of millet from northeast China.",
+      "aliases": [
+        "Jeulmun pottery period"
+      ]
+    },
+    {
+      "id": "east-asia.korea.chulmun.chulmun-millet",
+      "kind": "period",
+      "name": "Arrival of Millet in Korea",
+      "parent_id": "east-asia.korea.chulmun",
+      "start_year": -3640,
+      "end_year": -2970,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The earliest secure direct AMS date on a millet grain is 3640-3370 cal BC. Corroborating grains date to 3520, 3360 and 2970 cal BC. A 2025 Bayesian estimate gives a much wider 90% interval of 5772-3490 cal BCE, which is an uncertainty range and not a claim of an earlier arrival.",
+      "source_ids": [
+        "stevens-fuller-agriculture-east-asia",
+        "kyushu-initial-spread-agriculture"
+      ],
+      "summary": "Foxtail and broomcorn millet reach the peninsula from northeast China, Korea's first cultivated cereals and some two millennia before rice.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.korea.mumun",
+      "kind": "era",
+      "name": "Mumun Period",
+      "parent_id": "east-asia.korea",
+      "start_year": -1500,
+      "end_year": -300,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Commonly given as 1500-300 BC, with early Mumun 1500-800 BC and middle Mumun 800-400 BC. Three directly AMS-dated middle Mumun individuals fall at 770-410 cal BC.",
+      "source_ids": [
+        "hanyang-middle-mumun-isotopes",
+        "bale-mumun-thesis",
+        "cambridge-koreanic-farming-dispersal"
+      ],
+      "summary": "Korea's Bronze Age transition: undecorated pottery, megalithic burial, and the arrival of paddy rice from the Liaodong route.",
+      "aliases": [
+        "Mumun pottery period"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.korea.mumun.mumun-rice",
+      "kind": "period",
+      "name": "Arrival of Rice in Korea",
+      "parent_id": "east-asia.korea.mumun",
+      "start_year": -1500,
+      "end_year": -1000,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Associated with the start of Mumun around 1500 BCE, or about 1300 BCE on an archaeolinguistic reading. The earliest directly dated rice grains, from Oun-1 at Jinju, are calibrated two different ways from the SAME samples: 2860-1320 cal BC by one treatment and 1950-1000 cal BC by another.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Claims of Pleistocene rice in Korea, such as Sorori at 17,000-13,000 BP, describe disputed 'quasi-rice' and are not evidence of cultivation.",
+          "source_ids": [
+            "cambridge-koreanic-farming-dispersal"
+          ]
+        }
+      ],
+      "source_ids": [
+        "cambridge-koreanic-farming-dispersal",
+        "stevens-fuller-agriculture-east-asia"
+      ],
+      "summary": "Paddy rice reaches Korea by a Shandong-Liaodong route, the agricultural change that would shortly cross to Japan and begin the Yayoi."
+    },
+    {
+      "id": "east-asia.japan.jomon.sannai-maruyama",
+      "kind": "period",
+      "name": "Sannai Maruyama",
+      "parent_id": "east-asia.japan.jomon",
+      "start_year": -3950,
+      "end_year": -2350,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Occupied about 5900-4300 cal BP, corroborated across four independently published sources.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Its scale is often read as implying agriculture. The economy was foraging-based, which is precisely why the site matters for arguments about sedentism without farming.",
+          "source_ids": [
+            "habu-2008-sannai-maruyama"
+          ]
+        }
+      ],
+      "source_ids": [
+        "habu-2008-sannai-maruyama"
+      ],
+      "summary": "A large, long-lived Jomon settlement with monumental timber posts and long-distance exchange, built by people who were not farmers.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.japan.jomon.jomon-decline",
+      "kind": "period",
+      "name": "The Late Jomon Population Decline",
+      "parent_id": "east-asia.japan.jomon",
+      "start_year": -2470,
+      "end_year": -1250,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Summed radiocarbon probability over 1,598 Late Jomon dates (4420-3220 cal BP) and 1,462 Final Jomon dates (3220-2300 cal BP) shows decline and plateau, with regional troughs at 3900-3800 cal BP in Kanto and 3800-3500 cal BP in Aomori and Hokkaido.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Koyama's often-quoted population figures are site-density extrapolations, not counts derived from dated remains. The radiocarbon curve is the citable evidence for the timing.",
+          "source_ids": [
+            "plos-2016-jomon-population"
+          ]
+        }
+      ],
+      "source_ids": [
+        "plos-2016-jomon-population"
+      ],
+      "summary": "A sustained demographic contraction across the Japanese archipelago, centuries before wet rice arrived.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.japan.yayoi.yayoi-redating",
+      "kind": "event",
+      "name": "The Yayoi Redating Controversy",
+      "parent_id": "east-asia.japan.yayoi",
+      "start_year": -1000,
+      "end_year": -400,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "The traditional start was the 5th-4th century BCE. In May 2003 the National Museum of Japanese History dated charred residue on pottery and argued for the 10th century BCE. Positions since: no earlier than the 9th century (Miyamoto); no earlier than the 8th (Takesue, Shoda); outright rejection and retention of the 5th (Takakura, Hashiguchi). By 2010 most Japanese archaeologists had accepted the direction of the shift without agreeing on its size.",
+      "alternatives": [
+        {
+          "label": "10th century BCE (NMJH, 2003)",
+          "standing": "minority",
+          "start_year": -1000,
+          "end_year": -901,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "The original proposal, from AMS dates on charred residue. Supported in direction by paddy-field dating in northern Kyushu.",
+          "source_ids": [
+            "shoda-seaa-yayoi-controversy"
+          ]
+        },
+        {
+          "label": "9th-8th century BCE",
+          "standing": "majority",
+          "start_year": -900,
+          "end_year": -701,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Miyamoto allows no earlier than the 9th century; Takesue and Shoda no earlier than the 8th, on cross-dating rather than AMS.",
+          "source_ids": [
+            "shoda-2010-yayoi-dating"
+          ]
+        },
+        {
+          "label": "Traditional 5th century BCE",
+          "standing": "superseded",
+          "start_year": -500,
+          "end_year": -401,
+          "dating_method": "typological",
+          "note": "The pre-2003 consensus, retained by Takakura and Hashiguchi, who rejected the redating outright.",
+          "source_ids": [
+            "shoda-seaa-yayoi-controversy"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not a dispute about whether AMS dating works. The criticisms are that the redating altered the type-definitions it depended on, and that the pottery itself was misidentified.",
+          "source_ids": [
+            "shoda-2010-yayoi-dating",
+            "shoda-seaa-yayoi-controversy"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "shoda-2010-yayoi-dating",
+        "shoda-seaa-yayoi-controversy"
+      ],
+      "summary": "In 2003 a national museum used AMS dating to move the start of the Yayoi back five centuries, and the field has still not settled where it lands."
     },
     {
       "id": "central-asia.prehistory.namazga",

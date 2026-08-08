@@ -26,6 +26,12 @@ The childless report had been present the whole time behind a flag nobody
 passed. It now runs by default, because a report that must be asked for is a
 report that gets missed.
 
+It also has to know what is NOT a container. Two kinds of node have no children
+because they should not: a synthesis era describing a process, and a navigation
+era cross-linking entities that live elsewhere. Both were reported as gaps until
+they were excluded, and the second one sent a whole research pass after East
+Asian prehistory that was already in the dataset under Japan and China.
+
 Reigns are reported separately throughout. A dynasty with forty kings is forty
 entities and close to zero additional coverage of a period, so mixing them in
 makes a well-covered century look like a well-covered world.
@@ -155,12 +161,23 @@ def print_childless(entities):
     def is_synthesis(e):
         return bool(e.get("caveats")) and e["kind"] == "era"
 
+    # A navigation era is a cross-link, not a container. `east-asia.prehistory`
+    # spans 14,000-300 BCE and holds nothing, and this report called it the
+    # single biggest gap in the dataset -- while Jomon sat fully subdivided
+    # under Japan and the Chinese Neolithic under China, exactly where the
+    # node's own summary says they belong. Chasing that "gap" would have
+    # duplicated 1,500 years of existing coverage. They are recognised by
+    # saying so in `date_note`, which `prehistory_crosslinks.py` writes.
+    def is_navigation(e):
+        return "navigation era" in (e.get("date_note") or "").lower()
+
     empty = [
         e for e in entities
         if e["kind"] in ("era", "period")
         and kids.get(e["id"], 0) == 0
         and e.get("start_year") is not None
         and not is_synthesis(e)
+        and not is_navigation(e)
     ]
     eras = [e for e in empty if e["kind"] == "era"]
 

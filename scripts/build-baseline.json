@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 184817,
+  "gzipBytes": 193218,
   "recordedAt": "2026-08-08",
-  "note": "v3.11.1.0 with the on-screen handoff URL removed. Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.12.0.0 + the Chinese Neolithic filled in, Korean prehistory, and Erlitou (data 0.14.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

@@ -1,5 +1,90 @@
 # Changelog
 
+## 0.14.0.0 — Erlitou, Korean prehistory, and the Chinese Neolithic filled in (2026-08-08)
+
+Twenty entities. This pass started from a false positive and is more useful for
+having done so.
+
+### The gap report was wrong, and the tool is fixed
+
+`east-asia.prehistory` was named the dataset's biggest hole: 13,700 years, no
+children. It is a navigation era. Its own summary says Jomon and the Chinese
+Neolithic "also sit in their own national sequences, where they belong" — and
+they did, Jomon in six subdivided phases under Japan and six cultures under
+China. A research pass went out to fill a gap that was not there.
+
+What the CORRECTED report showed was three real gaps of quite different shape:
+
+- **Korea had no prehistory at all.** Eight children under `east-asia.korea`,
+  every one of them a state, the earliest Gojoseon at 2333 BCE. No Chulmun, no
+  Mumun, no arrival of millet or rice. An entire peninsula began in the Bronze
+  Age.
+- **`east-asia.china.legendary` was childless across 3,400 years** — the node
+  that carries the Xia — while Erlitou, the site the Xia argument is actually
+  about, was not in the dataset at all.
+- The Chinese Neolithic had six cultures and was missing most of the rest.
+
+### Added — Erlitou and the Xia question
+
+Parented under `legendary`, deliberately, so the evidence sits next to the
+tradition rather than in a separate wing of the tree.
+
+The identification is not adjudicated. Most Chinese scholars read Erlitou as
+Xia; most overseas scholars hold it cannot be confirmed without contemporaneous
+writing; a middle position prefers "the Erlitou State". All three ship, with
+their standings, and the dataset picks no winner.
+
+Worth noting that the empirical driver here is not ideology but re-dating.
+Erlitou's span has moved later and narrower across at least three episodes —
+from 2100–1300 BC on early radiocarbon, to 1880–1520 from the Chronology
+Project, to roughly 1750–1520 on wiggle-matching — travelling from a
+comfortable fit with textual Xia dates toward a range that begins near the
+traditional END of Xia. Erlitou is authored with
+`allow_outside_parent_dates` because it outlasts the legendary era, which is
+the dispute rather than an error.
+
+### Added — Korea
+
+Chulmun and Mumun as eras, plus the arrival of millet (earliest secure direct
+AMS date on a grain, 3640–3370 cal BC) and of rice. The rice entry carries a
+clean demonstration of why calibration must be stated: the SAME Oun-1 grain
+samples are published as 2860–1320 cal BC by one treatment and 1950–1000 cal BC
+by another.
+
+### Added — China and Japan
+
+Cishan, Xinglongwa, Dawenkou, Hemudu, Daxi, Shijiahe and Qijia. The Liangzhu
+hydraulic system as a child of the existing Liangzhu entity — the dams were
+built BEFORE most of the walled city. A new `late-pleistocene` era, because
+terminal-Pleistocene pottery does not belong under an era called Neolithic:
+Tianyuan Cave, Xianrendong and Yuchanyan.
+
+Xianrendong's famous 20,000 cal BP pottery ships as `minority` with a
+misconception caveat. The Science paper is peer-reviewed and so are both
+re-analyses disputing it. Yuchanyan, which an earlier pass declined to author
+because sources conflicted, is authored now on the dedicated 2009 PNAS study,
+with the older lab results carried as `superseded`.
+
+For Japan: Sannai Maruyama, the Late Jomon population decline, and the 2003
+Yayoi redating controversy as an event carrying four competing start dates from
+the 10th to the 5th century BCE. It starts before its own parent period, which
+is the entire point.
+
+### A test caught a misuse of `alternatives`
+
+Erlitou was first authored with two interpretive alternatives — "is Xia" and
+"the Erlitou State" — and the duplicate-alternative test added in 0.10.0.0
+rejected it. The test keys on `standing|start_year|end_year`, and two undated
+minority alternatives are indistinguishable under that key. It was right to:
+`alternatives` is a DATE structure, and to a reader two undated entries at the
+same standing read as the same claim asserted twice. The middle position moved
+into `date_note`.
+
+### Counts
+
+1,563 → 1,583 entities. 331 → 366 sources. 258 → 278 cited. 272 → 292 with a
+start dating method, 209 → 229 with an end one.
+
 ## 0.13.0.0 — The Indus subdivided, and the Southern Neolithic (2026-08-08)
 
 `south-asia.indus` held 3300–1300 BCE as a single entity with no children. Seventeen

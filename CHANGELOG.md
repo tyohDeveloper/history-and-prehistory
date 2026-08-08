@@ -69,6 +69,9 @@ no network requests.
   with no code improved, which is the standards checker falling to the rule it exists to enforce.
 - 32 literal `\uXXXX` sequences in `docs/DESIGN.md`, written by an edit that put JSON-escaped text
   into markdown.
+- Replit's generated directories (`.config/`, `.upm/`, `.pythonlibs/` and friends) were not
+  gitignored, so a Replit workspace went dirty on startup and its git integration refused to pull
+  — reported as a merge failure rather than as untracked files.
 
 ### Known limitations
 

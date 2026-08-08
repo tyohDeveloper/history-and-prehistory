@@ -10,6 +10,8 @@ npm run dev       # dev server, 0.0.0.0:5000
 npm run build     # typecheck -> unit tests -> bundle -> minify -> verify
 npm run test:e2e  # Playwright against the built artifact over file://
 npm run validate:data
+npm run release -- --app v3.1.1.1     # bump app version, tag, push
+npm run release -- --data v0.5.0.1    # bump dataset version, tag, push
 ```
 
 `npm run build` must pass before anything is considered done. CI runs the identical command.
@@ -40,6 +42,28 @@ CI; it does not ship.
 - New test ID means updating `scripts/testid-manifest.json` in the same change.
 - Bundle size is baselined in `scripts/build-baseline.json`; >5% gzip growth fails the build.
 - Terse commit messages, decomposed commits.
+
+## Releases (`npm run release`)
+
+Two independent version tracks, each with its own tag convention (`scripts/release.mjs`):
+
+| Track | Where it lives | Tag format | Example |
+|---|---|---|---|
+| App | `package.json` `version` | `{id}-app` | `npm run release -- --app v3.1.1.1` → tag `v3.1.1.1-app` |
+| Data | `dataset_version` in all five `src/data/*.json` + `DATASET_VERSION` in `tools/build_data.py` | `{id}-data` | `npm run release -- --data v0.5.0.1` → tag `v0.5.0.1-data` |
+
+Both can be bumped in one invocation. The script commits, creates annotated tags, and pushes
+commit + tags to `origin`. Safety: refuses on a dirty working tree and if the tag already exists.
+
+The data **tag id** and the **file version** are separately specifiable — historically they have
+not matched (tag `v0.5.0`, file `5.0.0.1`). By default the file version is the tag id minus the
+leading `v`; pass `--data-version 5.0.0.2` to write a different value into the files.
+Use `--dry-run` to preview without touching anything.
+
+Data releases are gated: the script fails fast if `DATASET_VERSION` in `tools/build_data.py`
+already disagrees with the committed JSON, and it runs `npm run validate:data` after stamping the
+new version — on failure it reverts the edits and creates no commit or tag (`--no-verify` skips
+the validation run, not the baseline check).
 
 ## Branches
 

@@ -12,7 +12,6 @@
   --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", "Noto Sans", "Noto Sans JP", "Noto Sans Devanagari",
     "Noto Sans Arabic", sans-serif;
-  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
 
 * { box-sizing: border-box; }
@@ -47,7 +46,7 @@ header h1 {
   letter-spacing: 0.02em;
 }
 header .version {
-  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
   font-size: 11px;
   color: var(--ink-faint);
 }
@@ -127,7 +126,6 @@ input[type="search"]:focus-visible, select:focus-visible {
 }
 .row-years {
   flex: 0 0 auto;
-  font-family: var(--mono);
   font-variant-numeric: tabular-nums;
   font-size: 11px;
   color: var(--ink-faint);
@@ -154,7 +152,6 @@ input[type="search"]:focus-visible, select:focus-visible {
   color: var(--ink-dim);
 }
 .readout .range {
-  font-family: var(--mono);
   font-variant-numeric: tabular-nums;
   font-size: 13px;
   color: var(--accent);
@@ -169,7 +166,7 @@ input[type="search"]:focus-visible, select:focus-visible {
   font-size: 12px;
 }
 .readout dt { color: var(--ink-faint); }
-.readout dd { margin: 0; font-family: var(--mono); }
+.readout dd { margin: 0; font-variant-numeric: tabular-nums; }
 
 .empty { padding: 16px; color: var(--ink-faint); font-size: 13px; }
 
@@ -220,7 +217,6 @@ footer a { color: var(--ink-dim); }
   gap: 8px;
 }
 .cal-value {
-  font-family: var(--mono);
   font-variant-numeric: tabular-nums;
   color: var(--ink);
 }

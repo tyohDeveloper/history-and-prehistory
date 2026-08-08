@@ -22,6 +22,6 @@ export default defineConfig({
     cssCodeSplit: false,
     target: "es2022",
   },
-  server: { host: "0.0.0.0", port: 5000 },
-  preview: { host: "0.0.0.0", port: 5000 },
+  server: { host: "0.0.0.0", port: 5000, allowedHosts: true },
+  preview: { host: "0.0.0.0", port: 5000, allowedHosts: true },
 });

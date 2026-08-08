@@ -5,7 +5,7 @@ import { buildIndex } from "../src/entity/tree";
 const idx = buildIndex(entities);
 
 describe("dataset envelope", () => {
-  it("is v3.1.0 on schema 2.0.0", () => {
+  it("is v5.0.0.1 on schema 2.0.0", () => {
     // MAJOR on both. Schema 2.0.0 adds the taxon and threshold kinds, so a
     // consumer switching exhaustively on kind breaks. Dataset 3.0.0 moves the
     // prehistory ids (origins -> hominins) and re-parents the stone ages, so
@@ -13,7 +13,7 @@ describe("dataset envelope", () => {
     //
     // Recorded here because 2.2.0 was itself mis-versioned: it re-parented
     // three top-level eras and dropped four ids under a minor bump.
-    expect(datasetVersion).toBe("3.1.0");
+    expect(datasetVersion).toBe("5.0.0.1");
     expect(schemaVersion).toBe("2.0.0");
   });
 

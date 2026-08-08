@@ -10,9 +10,10 @@ to read well one at a time. Revisit that choice when the register stops changing
 | | |
 |---|---|
 | Branch | Merged to `main`. `calendar-layer` retained but no longer ahead. |
-| Wired into the UI | Multi-calendar readout and calendar picker. Disclosure and focus view are not. |
-| Tests | 145 unit + 16 browser |
-| Artifact | 85.6 kB gzip |
+| Wired into the UI | Multi-calendar readout, calendar picker, and the display-range layer. Disclosure and focus view are not. |
+| Tests | 151 unit + 19 browser |
+| Artifact | 91.1 kB gzip |
+| Dataset | 1,333 entities. Prehistory branch authored from sourced research. |
 | Replit | Repo is loaded there but dormant by choice; no commits from it yet |
 | Last reviewed | 2026-08-07 |
 
@@ -987,6 +988,63 @@ extrapolating. Monte Verde renders its live-dispute note and shows Islamic as "b
 
 **Dataset 2.1.0 → 2.2.0, schema 1.0.0 → 1.1.0, 1,305 → 1,310 entities. Artifact 84.2 → 85.6 kB.**
 
+## The prehistory branch, and what building it exposed
+
+Twenty-four entities authored from sourced research (`homo-research.md`): twelve *Homo* species
+and twelve stone-tool industries, every value carrying the URL it came from.
+
+### Species and industries are separate branches
+
+`global.prehistory.origins` holds the taxa; `global.paleolithic` holds the industries. The
+temptation is to nest industries under their makers, and it is wrong twice over: the Mousterian
+outlived some of the people who made it, and several industries cross species. A taxon is not a
+period. *H. sapiens* is extant and would otherwise have to be filed inside an era that ended.
+
+### The root stays at 3.3 Ma
+
+Prehistory begins with the earliest knapped stone at Lomekwi 3, which predates the genus by half a
+million years. Genus *Homo* is a node *inside* prehistory, anchored at 2.80–2.75 Ma on LD 350-1
+from Ledi-Geraru, with the dissenting reading (that the mandible cannot be securely assigned to
+*Homo*) recorded as an alternative rather than dropped. The toolmaking record does not break at the
+taxonomic boundary, so the tree should not either.
+
+### Building it broke three things in the display layer
+
+None of these were visible before there was deep-time content to render.
+
+**The chrono layer was not connected.** The readout called `tree.formatRange`, which prints the
+stored year with a CE/BCE suffix. The origin of the genus rendered as `2798051 BCE` — a
+year-precise position in a calendar that did not exist, on a date whose real uncertainty is tens of
+thousands of years. `src/lib/displayRange.ts` is now the join between an `Entity` and the frame
+layer.
+
+**The provenance rule was dead code.** `suggestFrame` reads `v.method`, and the dataset adapter
+never copied `dating_method` onto the value. So the entire provenance-driven rule — the §"When does
+a date switch to BP?" decision — never fired on a single real entity, and only the pre-Holocene age
+backstop was doing any work. That backstop is precisely the age-based heuristic this design
+rejected, so the app was silently running the rule it was written to avoid. Göbekli Tepe is the
+case that exposes it: a radiocarbon date at 11,480 BP, just under the 11,700 backstop, falling
+through to a calendar reading it should never have had.
+
+The lesson generalises. A rule that is stated in prose, implemented, and unit-tested against
+synthetic values can still be disconnected from every real input. The unit tests passed throughout.
+
+**A range needs one unit, but not always.** Quoting both ends in the older end's unit reads best —
+`2.4 Ma – 1.4 Ma` — but applied unconditionally it turns Human Prehistory into `3.3 Ma – 0.0 Ma`, a
+two-million-year span rendered as zero. The shared unit is used only where the younger end is at
+least 1 in it; otherwise each end takes its own and the explicit labels carry the meaning
+(`3.3 Ma – 4,950 BP`).
+
+### `end_year: null` was two claims wearing one face
+
+For *H. sapiens* it means extant. For *H. luzonensis* it means the youngest remains have never been
+dated — the species certainly ended, we cannot say when. Both rendered as "present", which put a
+hominin known from a handful of foot bones among the living. `end_precision: "unknown"` separates
+them.
+
+This is the same shape as the `overlaps-parent` finding in the gap analysis: a nullable field
+doing double duty, where one of the two meanings is an assertion nobody intended to make.
+
 ## Focus and context (requirement 10)
 
 The described behavior — focus large, falling away with perspective compression — is
@@ -1242,7 +1300,25 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**14 open, 13 resolved.** Audited 2026-08-07.
+**15 open, 13 resolved.** Audited 2026-08-07.
+
+### Q-29. Should the fuzz-ratio fallback decide the frame for archaeological eras?
+
+Now that `dating_method` actually reaches `suggestFrame`, the fallback branch (step 4: relative
+uncertainty as a proxy for provenance) only runs where the method is unmarked — which is still most
+of the dataset. It produces defensible but visually jarring results among siblings: the Bronze Age
+leads in BP (±300 yr on 5,250 BP is 5.7%, over the 5% threshold) while the Iron Age directly beside
+it leads in BCE.
+
+Both readings are individually right by the rule. Side by side in one column they look like a bug.
+
+Options: author `dating_method` on the archaeological eras so the proxy stops deciding; raise the
+threshold; or accept the inconsistency as honest. The first is the most work and the most correct —
+the proxy exists because the method was unknown, and the fix for an unknown is to go find out.
+
+Related: Q-17, which found the neighbouring broad-range marker was also dead code. Two of the four
+disclosure heuristics have now turned out not to run on real data, which suggests auditing the
+other two.
 
 ### Blocking — date model
 

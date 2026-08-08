@@ -1492,7 +1492,7 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**14 open, 17 resolved.** Audited 2026-08-08.
+**15 open, 17 resolved.** Audited 2026-08-08.
 
 **Q-30. Should `dating_method` be per-boundary rather than per-entity?** One field
 cannot describe an entity whose start and end rest on different science.
@@ -1577,6 +1577,36 @@ whole surface rather than a plumbing slip.
 It blocks `Q-23` and `Q-24`, which cannot be settled without something to settle them on. Open
 sub-questions: marker in the tree row or only in the readout; popover or inline expansion; whether
 source lists belong with the claim or in one footer. The a11y contract is already specified above.
+
+**Q-32. How is the §3 granularity debt paid down, and when does the checker become a gate?**
+`docs/CODING-STANDARDS.md` arrived from the Replit side declaring itself binding, with hard limits
+enforced by CI. It postdates this codebase, so nothing here was written against it. `tools/
+check_standards.py` sizes the debt rather than guessing at it \u2014 **18 violations**:
+
+| Rule | Count | Worst cases |
+|---|---|---|
+| 3.3 file length by layer | 5 | `calendars/registry.ts` 310/100, `chrono/year.ts` 295/100, `main.ts` 385/250 |
+| 3.1 exported body \u2264 20 lines | 5 | `readYear` 74, `displayRange` 44, `datingOf` 34 |
+| 3.2 one function export per PURE file | 8 | `chrono/year.ts` has 23, `tree.ts` 9, `chrono/bp.ts` 8 |
+
+Two of these are mine from this week (`displayRange`, and `bp.ts` at 129/100), so this is not
+purely inherited.
+
+The checker reports and does not gate, because gating today would simply fail the build. §16.1 is
+explicit that a checker scoped to the compliant part is decoration, so the checker covers all of
+`src/` including the view. §16.2 says extract misplaced logic before splitting on line count, which
+matters here: `chrono/year.ts` is large because it holds the branded-type layer, the disclosure
+model and the caveat vocabulary in one file \u2014 three responsibilities, not one long one. Splitting it
+by size would redistribute the violation.
+
+Open: whether to take the §11 route (dated, owned, expiring exceptions in
+`.architecture-exceptions.json`) for the inherited files and comply strictly for new code, or to do
+the decomposition first. The second is honest but is a substantial refactor of working, tested code
+with 166 unit and 20 browser tests to keep green.
+
+Note also that the in-repo standards file declares itself a *derived copy* of the project wiki page
+`concepts/coding-architecture-standards`, and the wiki snapshot in this workspace predates it, so I
+cannot confirm the two agree.
 
 ### Non-blocking
 

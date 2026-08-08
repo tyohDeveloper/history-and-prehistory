@@ -51,15 +51,28 @@ function point(historicalYear: number): FuzzyPoint {
   return { year: isoFromHistorical(asHistorical(historicalYear)) };
 }
 
+/**
+ * `method` must be carried onto the value, not left on the entity.
+ *
+ * The frame rule is provenance-driven: a measured date leads in BP and a
+ * reckoned one leads in a calendar (see `suggestFrame`). `suggestFrame` reads
+ * `v.method`, so dropping it here silently disables the whole rule and leaves
+ * only the pre-Holocene age backstop — which is precisely the age-based
+ * heuristic the design rejected. Göbekli Tepe is the case that exposes it: a
+ * radiocarbon date at 11,480 BP, just under the 11,700 backstop, so it fell
+ * through to a calendar reading it should never have had.
+ */
 function valueFor(
   year: number,
   min: number | undefined,
   max: number | undefined,
+  method: Entity["dating_method"],
 ): YearValue {
   const v: YearValue = { consensus: point(year) };
   // In v2.1.0, *_year_min is the earlier end and *_year_max the later one.
   if (min !== undefined) v.earliest = point(min);
   if (max !== undefined) v.latest = point(max);
+  if (method !== undefined) v.method = method;
   return v;
 }
 
@@ -81,7 +94,12 @@ export function datingOf(entity: Entity): EntityDates {
   if (entity.start_year !== null) {
     const start: BoundaryDating = {
       primary: claimFor(
-        valueFor(entity.start_year, entity.start_year_min, entity.start_year_max),
+        valueFor(
+          entity.start_year,
+          entity.start_year_min,
+          entity.start_year_max,
+          entity.dating_method,
+        ),
         entity,
       ),
     };
@@ -94,7 +112,12 @@ export function datingOf(entity: Entity): EntityDates {
   if (entity.end_year !== null) {
     result.end = {
       primary: claimFor(
-        valueFor(entity.end_year, entity.end_year_min, entity.end_year_max),
+        valueFor(
+          entity.end_year,
+          entity.end_year_min,
+          entity.end_year_max,
+          entity.dating_method,
+        ),
         entity,
       ),
     };

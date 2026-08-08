@@ -116,8 +116,21 @@ export function formatYear(y: number | null): string {
   return y < 0 ? `${Math.abs(y)} BCE` : `${y} CE`;
 }
 
+/**
+ * A missing end year means two different things and they must not read alike.
+ *
+ * For Homo sapiens it means *extant*. For Homo luzonensis it means the youngest
+ * remains have never been dated — the species certainly ended, we just cannot
+ * say when. Rendering both as "present" would assert that a hominin known from
+ * a handful of foot bones is still walking around.
+ *
+ * `end_precision: "unknown"` is what separates them.
+ */
 export function formatRange(e: Entity): string {
   const start = formatYear(e.start_year);
-  if (e.end_year === null) return e.start_year === null ? "—" : `${start} – present`;
+  if (e.end_year === null) {
+    if (e.start_year === null) return "—";
+    return e.end_precision === "unknown" ? `${start} – unknown` : `${start} – present`;
+  }
   return `${start} – ${formatYear(e.end_year)}`;
 }

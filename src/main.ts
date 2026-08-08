@@ -1,9 +1,9 @@
 import "./style.css";
 import { datasetVersion, entities } from "./lib/dataset";
+import { displayRange } from "./lib/displayRange";
 import {
   buildIndex,
   childrenOf,
-  formatRange,
   pathTo,
   searchEntities,
   visibleAtTier,
@@ -100,7 +100,7 @@ function renderRow(e: Entity, depth: number, isSelected: boolean): HTMLElement {
       role: "option",
       "aria-selected": String(isSelected),
       "data-testid": `option-tree-node-${e.id}`,
-      title: `${KIND_LABEL[e.kind]} · ${formatRange(e)}`,
+          title: `${KIND_LABEL[e.kind]} · ${displayRange(e).text}`,
     },
     el("span", { class: "glyph", "aria-hidden": "true" }, GLYPH[e.kind]),
     el("span", { class: "row-name" }, e.name),
@@ -214,7 +214,8 @@ function renderReadout(): HTMLElement {
   if (e.native_name !== undefined) {
     box.append(el("p", { class: "native", dir: "auto", "data-testid": "text-readout-native" }, e.native_name));
   }
-  box.append(el("div", { class: "range", "data-testid": "text-readout-range" }, formatRange(e)));
+    const range = displayRange(e);
+  box.append(el("div", { class: "range", "data-testid": "text-readout-range" }, range.text));
   if (e.summary !== undefined) {
     box.append(el("p", { class: "summary" }, e.summary));
   }

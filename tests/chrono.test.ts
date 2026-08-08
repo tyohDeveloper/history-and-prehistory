@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { bpFromYear, formatBp, formatBpRange, resolveFrame, suggestFrame, yearFromBp } from "../src/lib/chrono/bp";
+import { datingOf } from "../src/lib/chrono/fromEntity";
+import type { Entity } from "../src/lib/types";
 import {
   allClaims,
   asHistorical,
@@ -432,5 +434,31 @@ describe("date regime boundary", () => {
     for (const y of [bce(5508), bce(3760), bce(3114), bce(2637), bce(776), ce(622), ce(1912)]) {
       expect(isDateRegime(y)).toBe(true);
     }
+  });
+});
+
+describe("dating method reaches the frame chooser", () => {
+  // Regression: the adapter built YearValues without `method`, so
+  // suggestFrame's provenance rule never fired on a real entity and only the
+  // pre-Holocene age backstop was doing any work.
+  const gobekli = {
+    id: "g", name: "G", kind: "period", parent_id: null, tier: "foundational",
+    start_year: -9530, end_year: -8000,
+    dating_method: "radiocarbon-calibrated",
+  } as unknown as Entity;
+
+  it("carries the method onto the value", () => {
+    expect(datingOf(gobekli).start?.primary.value.method).toBe("radiocarbon-calibrated");
+  });
+
+  it("leads a radiocarbon date in BP even inside the Holocene backstop", () => {
+    // 11,480 BP is below the 11,700 backstop, so only the method can decide.
+    const v = datingOf(gobekli).start!.primary.value;
+    expect(suggestFrame(v)).toBe("bp");
+  });
+
+  it("still leads a reckoned date in a calendar", () => {
+    const cyrus = { ...gobekli, start_year: -550, dating_method: "historical-record" } as unknown as Entity;
+    expect(suggestFrame(datingOf(cyrus).start!.primary.value)).toBe("calendar");
   });
 });

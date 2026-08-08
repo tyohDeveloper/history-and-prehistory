@@ -65,6 +65,9 @@ export function yearFromBp(bp: number, datum: Datum = "bp"): IsoYear {
 
 export type BpUnit = "yr" | "ka" | "Ma";
 
+/** Years per unit. Exported so callers can test whether a value fits a unit. */
+export const BP_UNIT_DIVISOR: Record<BpUnit, number> = { yr: 1, ka: 1_000, Ma: 1_000_000 };
+
 export function bpUnitFor(bp: number): BpUnit {
   const magnitude = Math.abs(bp);
   if (magnitude >= 1_000_000) return "Ma";
@@ -85,7 +88,7 @@ function formatMagnitude(bp: number, unit: BpUnit, uncertainty?: number): string
   if (unit === "yr") {
     return Math.round(roundToUncertainty(bp, uncertainty)).toLocaleString("en-US");
   }
-  const divisor = unit === "Ma" ? 1_000_000 : 1_000;
+  const divisor = BP_UNIT_DIVISOR[unit];
   const scaled = bp / divisor;
   const scaledUncertainty = uncertainty === undefined ? undefined : uncertainty / divisor;
   // Show enough decimals to resolve the uncertainty, capped at two.
@@ -104,6 +107,15 @@ function formatMagnitude(bp: number, unit: BpUnit, uncertainty?: number): string
 export interface BpFormatOptions {
   /** Append the unit label. Default true. */
   withUnit?: boolean;
+  /**
+   * Force the unit instead of choosing one from the value's own magnitude.
+   *
+   * A range must be quoted in a single unit. Left to itself, each end picks
+   * its own, and Göbekli Tepe comes out as "11.5 ka – 9,949 BP" — two units in
+   * one range, which reads as a change of subject rather than a span. The
+   * caller picks the unit from the older end and passes it for both.
+   */
+  unit?: BpUnit;
 }
 
 /**
@@ -122,7 +134,7 @@ export function formatBp(
     // back to plain CE rather than inventing a label.
     return `${(year as number).toLocaleString("en-US")} CE`;
   }
-  const unit = bpUnitFor(bp);
+  const unit = options.unit ?? bpUnitFor(bp);
   const magnitude = formatMagnitude(bp, unit, uncertainty);
   if (options.withUnit === false) return magnitude;
   return unit === "yr" ? `${magnitude} ${DATUM_LABEL[datum]}` : `${magnitude} ${unit}`;

@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "dataset_version": "3.1.0",
+  "dataset_version": "5.0.0.1",
   "generated_at": "2026-08-08T04:26:06Z",
   "entities": [
     {
@@ -450,7 +450,7 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "summary": "Empires spanning multiple regions — cross-linked here for convenience.",
+      "summary": "Empires spanning multiple regions \u2014 cross-linked here for convenience.",
       "date_precision": "unknown"
     },
     {
@@ -486,7 +486,7 @@
       "tier": "foundational",
       "dating_method": "argon-argon",
       "summary": "The long first chapter: stone tools, fire, and hunter-gatherer life, from the earliest knapped stone through the whole span of the genus Homo.",
-      "date_note": "Starts at the earliest known stone tools — Lomekwi 3, c. 3.3 Ma — which predate the genus Homo. Whether those count as Oldowan is a definitional argument; they are included here because the toolmaking record is continuous even where the taxonomy is not."
+      "date_note": "Starts at the earliest known stone tools \u2014 Lomekwi 3, c. 3.3 Ma \u2014 which predate the genus Homo. Whether those count as Oldowan is a definitional argument; they are included here because the toolmaking record is continuous even where the taxonomy is not."
     },
     {
       "id": "global.mesolithic",
@@ -894,7 +894,7 @@
     {
       "id": "africa.nile.egypt.sip.dyn15-hyksos",
       "kind": "period",
-      "name": "15th Dynasty — Hyksos",
+      "name": "15th Dynasty \u2014 Hyksos",
       "parent_id": "africa.nile.egypt.sip",
       "start_year": -1650,
       "end_year": -1550,
@@ -1063,7 +1063,7 @@
     {
       "id": "africa.nile.egypt.tip.dyn25-kushite",
       "kind": "period",
-      "name": "25th Dynasty — Kushite (Nubian)",
+      "name": "25th Dynasty \u2014 Kushite (Nubian)",
       "parent_id": "africa.nile.egypt.tip",
       "start_year": -744,
       "end_year": -656,
@@ -1107,7 +1107,7 @@
     {
       "id": "africa.nile.egypt.late-period.dyn26-saite",
       "kind": "period",
-      "name": "26th Dynasty — Saite Renaissance",
+      "name": "26th Dynasty \u2014 Saite Renaissance",
       "parent_id": "africa.nile.egypt.late-period",
       "start_year": -664,
       "end_year": -525,
@@ -1117,7 +1117,7 @@
     {
       "id": "africa.nile.egypt.late-period.dyn27-persian1",
       "kind": "period",
-      "name": "27th Dynasty — First Persian",
+      "name": "27th Dynasty \u2014 First Persian",
       "parent_id": "africa.nile.egypt.late-period",
       "start_year": -525,
       "end_year": -404,
@@ -1187,7 +1187,7 @@
       "aliases": [
         "Nubia"
       ],
-      "summary": "Nubian civilization south of Egypt with capitals successively at Kerma, Napata, and Meroë.",
+      "summary": "Nubian civilization south of Egypt with capitals successively at Kerma, Napata, and Mero\u00eb.",
       "date_precision": "approx"
     },
     {
@@ -1217,7 +1217,7 @@
       "parent_id": "africa.nile.kush",
       "start_year": -270,
       "end_year": 350,
-      "summary": "Meroë as capital; Meroitic script still undeciphered.",
+      "summary": "Mero\u00eb as capital; Meroitic script still undeciphered.",
       "tier": "intermediate",
       "date_precision": "approx"
     },
@@ -1283,16 +1283,16 @@
     {
       "id": "east-asia.japan.jomon",
       "kind": "era",
-      "name": "Jōmon Period",
+      "name": "J\u014dmon Period",
       "parent_id": "east-asia.japan",
       "start_year": -14000,
       "end_year": -300,
       "tier": "intermediate",
-      "native_name": "縄文時代",
+      "native_name": "\u7e04\u6587\u6642\u4ee3",
       "dating_method": "radiocarbon-calibrated",
       "standing": "consensus",
-      "summary": "Hunter-gatherers who made pottery, settled in villages and grew rich on the sea — without ever taking up farming.",
-      "date_note": "The phase framework is in calibrated years. The widely repeated start of '13,000 BCE' is an UNCALIBRATED radiocarbon number presented as a calendar date; the earliest Japanese pottery at Ōdai Yamamoto I is 13,480-12,680 BP uncalibrated, which calibrates to 16,140-14,920 cal BP.",
+      "summary": "Hunter-gatherers who made pottery, settled in villages and grew rich on the sea \u2014 without ever taking up farming.",
+      "date_note": "The phase framework is in calibrated years. The widely repeated start of '13,000 BCE' is an UNCALIBRATED radiocarbon number presented as a calendar date; the earliest Japanese pottery at \u014cdai Yamamoto I is 13,480-12,680 BP uncalibrated, which calibrates to 16,140-14,920 cal BP.",
       "caveats": [
         {
           "kind": "misconception",
@@ -1316,7 +1316,7 @@
       "start_year": -300,
       "end_year": 300,
       "tier": "intermediate",
-      "native_name": "弥生時代",
+      "native_name": "\u5f25\u751f\u6642\u4ee3",
       "date_precision": "approx"
     },
     {
@@ -1327,7 +1327,7 @@
       "start_year": 300,
       "end_year": 538,
       "tier": "intermediate",
-      "native_name": "古墳時代",
+      "native_name": "\u53e4\u58b3\u6642\u4ee3",
       "summary": "Age of keyhole-shaped tumulus tombs.",
       "date_precision": "approx"
     },
@@ -1339,7 +1339,7 @@
       "start_year": 538,
       "end_year": 710,
       "tier": "intermediate",
-      "native_name": "飛鳥時代",
+      "native_name": "\u98db\u9ce5\u6642\u4ee3",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -1353,7 +1353,7 @@
       "start_year": 710,
       "end_year": 794,
       "tier": "intermediate",
-      "native_name": "奈良時代",
+      "native_name": "\u5948\u826f\u6642\u4ee3",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -1367,7 +1367,7 @@
       "start_year": 794,
       "end_year": 1185,
       "tier": "foundational",
-      "native_name": "平安時代",
+      "native_name": "\u5e73\u5b89\u6642\u4ee3",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -1382,7 +1382,7 @@
       "start_year": 1185,
       "end_year": 1333,
       "tier": "foundational",
-      "native_name": "鎌倉時代",
+      "native_name": "\u938c\u5009\u6642\u4ee3",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -1397,33 +1397,33 @@
       "start_year": 1333,
       "end_year": 1336,
       "tier": "specialist",
-      "native_name": "建武の新政",
+      "native_name": "\u5efa\u6b66\u306e\u65b0\u653f",
       "date_precision": "approx"
     },
     {
       "id": "east-asia.japan.muromachi",
       "kind": "era",
-      "name": "Muromachi / Nanboku-chō Period",
+      "name": "Muromachi / Nanboku-ch\u014d Period",
       "parent_id": "east-asia.japan",
       "start_year": 1336,
       "end_year": 1573,
       "tier": "foundational",
-      "native_name": "室町時代",
+      "native_name": "\u5ba4\u753a\u6642\u4ee3",
       "calendar_ids": [
         "japanese-nengo"
       ],
       "date_precision": "approx",
-      "summary": "Ashikaga shōgunate; culturally rich but politically fragmenting into the Sengoku warring-states era."
+      "summary": "Ashikaga sh\u014dgunate; culturally rich but politically fragmenting into the Sengoku warring-states era."
     },
     {
       "id": "east-asia.japan.azuchi-momoyama",
       "kind": "era",
-      "name": "Azuchi–Momoyama Period",
+      "name": "Azuchi\u2013Momoyama Period",
       "parent_id": "east-asia.japan",
       "start_year": 1573,
       "end_year": 1603,
       "tier": "foundational",
-      "native_name": "安土桃山時代",
+      "native_name": "\u5b89\u571f\u6843\u5c71\u6642\u4ee3",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -1462,7 +1462,7 @@
       "start_year": 1603,
       "end_year": 1868,
       "tier": "foundational",
-      "native_name": "江戸時代",
+      "native_name": "\u6c5f\u6238\u6642\u4ee3",
       "aliases": [
         "Tokugawa Period"
       ],
@@ -1494,7 +1494,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "summary": "From the Meiji Restoration to the present. One nengō per emperor.",
+      "summary": "From the Meiji Restoration to the present. One neng\u014d per emperor.",
       "date_precision": "approx"
     },
     {
@@ -1504,7 +1504,7 @@
       "parent_id": "east-asia.japan.modern",
       "start_year": 1868,
       "end_year": 1912,
-      "native_name": "明治",
+      "native_name": "\u660e\u6cbb",
       "tier": "foundational",
       "summary": "Meiji Restoration and rapid modernization. Emperor Meiji (Mutsuhito).",
       "calendar_ids": [
@@ -1515,13 +1515,13 @@
     {
       "id": "east-asia.japan.modern.taisho",
       "kind": "period",
-      "name": "Taishō",
+      "name": "Taish\u014d",
       "parent_id": "east-asia.japan.modern",
       "start_year": 1912,
       "end_year": 1926,
-      "native_name": "大正",
+      "native_name": "\u5927\u6b63",
       "tier": "foundational",
-      "summary": "Democratic reform era; Emperor Taishō (Yoshihito).",
+      "summary": "Democratic reform era; Emperor Taish\u014d (Yoshihito).",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -1530,13 +1530,13 @@
     {
       "id": "east-asia.japan.modern.showa",
       "kind": "period",
-      "name": "Shōwa",
+      "name": "Sh\u014dwa",
       "parent_id": "east-asia.japan.modern",
       "start_year": 1926,
       "end_year": 1989,
-      "native_name": "昭和",
+      "native_name": "\u662d\u548c",
       "tier": "foundational",
-      "summary": "Longest modern era. Emperor Shōwa (Hirohito). Spans militarism, WWII, and postwar boom.",
+      "summary": "Longest modern era. Emperor Sh\u014dwa (Hirohito). Spans militarism, WWII, and postwar boom.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -1549,7 +1549,7 @@
       "parent_id": "east-asia.japan.modern",
       "start_year": 1989,
       "end_year": 2019,
-      "native_name": "平成",
+      "native_name": "\u5e73\u6210",
       "tier": "foundational",
       "summary": "Emperor Akihito. Ended by voluntary abdication.",
       "calendar_ids": [
@@ -1564,7 +1564,7 @@
       "parent_id": "east-asia.japan.modern",
       "start_year": 2019,
       "end_year": null,
-      "native_name": "令和",
+      "native_name": "\u4ee4\u548c",
       "tier": "foundational",
       "summary": "Current era. Emperor Naruhito.",
       "calendar_ids": [
@@ -1579,7 +1579,7 @@
       "parent_id": "east-asia.japan.asuka",
       "start_year": 645,
       "end_year": 650,
-      "native_name": "大化",
+      "native_name": "\u5927\u5316",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1593,7 +1593,7 @@
       "parent_id": "east-asia.japan.asuka",
       "start_year": 650,
       "end_year": 654,
-      "native_name": "白雉",
+      "native_name": "\u767d\u96c9",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1603,11 +1603,11 @@
     {
       "id": "east-asia.japan.asuka.shucho",
       "kind": "period",
-      "name": "Shuchō",
+      "name": "Shuch\u014d",
       "parent_id": "east-asia.japan.asuka",
       "start_year": 686,
       "end_year": 686,
-      "native_name": "朱鳥",
+      "native_name": "\u6731\u9ce5",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1617,11 +1617,11 @@
     {
       "id": "east-asia.japan.asuka.taiho",
       "kind": "period",
-      "name": "Taihō",
+      "name": "Taih\u014d",
       "parent_id": "east-asia.japan.asuka",
       "start_year": 701,
       "end_year": 704,
-      "native_name": "大宝",
+      "native_name": "\u5927\u5b9d",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1635,7 +1635,7 @@
       "parent_id": "east-asia.japan.asuka",
       "start_year": 704,
       "end_year": 708,
-      "native_name": "慶雲",
+      "native_name": "\u6176\u96f2",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1645,18 +1645,18 @@
     {
       "id": "east-asia.japan.nara.wado",
       "kind": "period",
-      "name": "Wadō",
+      "name": "Wad\u014d",
       "parent_id": "east-asia.japan.nara",
       "start_year": 708,
       "end_year": 715,
-      "native_name": "和銅",
+      "native_name": "\u548c\u9285",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
       ],
       "date_precision": "approx",
       "allow_outside_parent_dates": true,
-      "date_note": "Nengō began 708 in Asuka, continued into Nara (710)."
+      "date_note": "Neng\u014d began 708 in Asuka, continued into Nara (710)."
     },
     {
       "id": "east-asia.japan.nara.reiki",
@@ -1665,7 +1665,7 @@
       "parent_id": "east-asia.japan.nara",
       "start_year": 715,
       "end_year": 717,
-      "native_name": "霊亀",
+      "native_name": "\u970a\u4e80",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1675,11 +1675,11 @@
     {
       "id": "east-asia.japan.nara.yoro",
       "kind": "period",
-      "name": "Yōrō",
+      "name": "Y\u014dr\u014d",
       "parent_id": "east-asia.japan.nara",
       "start_year": 717,
       "end_year": 724,
-      "native_name": "養老",
+      "native_name": "\u990a\u8001",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1693,7 +1693,7 @@
       "parent_id": "east-asia.japan.nara",
       "start_year": 724,
       "end_year": 729,
-      "native_name": "神亀",
+      "native_name": "\u795e\u4e80",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1703,11 +1703,11 @@
     {
       "id": "east-asia.japan.nara.tenpyo",
       "kind": "period",
-      "name": "Tenpyō",
+      "name": "Tenpy\u014d",
       "parent_id": "east-asia.japan.nara",
       "start_year": 729,
       "end_year": 749,
-      "native_name": "天平",
+      "native_name": "\u5929\u5e73",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1717,11 +1717,11 @@
     {
       "id": "east-asia.japan.nara.tenpyo-kanpo",
       "kind": "period",
-      "name": "Tenpyō-kanpō",
+      "name": "Tenpy\u014d-kanp\u014d",
       "parent_id": "east-asia.japan.nara",
       "start_year": 749,
       "end_year": 749,
-      "native_name": "天平感宝",
+      "native_name": "\u5929\u5e73\u611f\u5b9d",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1731,11 +1731,11 @@
     {
       "id": "east-asia.japan.nara.tenpyo-shoho",
       "kind": "period",
-      "name": "Tenpyō-shōhō",
+      "name": "Tenpy\u014d-sh\u014dh\u014d",
       "parent_id": "east-asia.japan.nara",
       "start_year": 749,
       "end_year": 757,
-      "native_name": "天平勝宝",
+      "native_name": "\u5929\u5e73\u52dd\u5b9d",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1745,11 +1745,11 @@
     {
       "id": "east-asia.japan.nara.tenpyo-hoji",
       "kind": "period",
-      "name": "Tenpyō-hōji",
+      "name": "Tenpy\u014d-h\u014dji",
       "parent_id": "east-asia.japan.nara",
       "start_year": 757,
       "end_year": 765,
-      "native_name": "天平宝字",
+      "native_name": "\u5929\u5e73\u5b9d\u5b57",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1759,11 +1759,11 @@
     {
       "id": "east-asia.japan.nara.tenpyo-jingo",
       "kind": "period",
-      "name": "Tenpyō-jingo",
+      "name": "Tenpy\u014d-jingo",
       "parent_id": "east-asia.japan.nara",
       "start_year": 765,
       "end_year": 767,
-      "native_name": "天平神護",
+      "native_name": "\u5929\u5e73\u795e\u8b77",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1777,7 +1777,7 @@
       "parent_id": "east-asia.japan.nara",
       "start_year": 767,
       "end_year": 770,
-      "native_name": "神護景雲",
+      "native_name": "\u795e\u8b77\u666f\u96f2",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1787,11 +1787,11 @@
     {
       "id": "east-asia.japan.nara.hoki",
       "kind": "period",
-      "name": "Hōki",
+      "name": "H\u014dki",
       "parent_id": "east-asia.japan.nara",
       "start_year": 770,
       "end_year": 781,
-      "native_name": "宝亀",
+      "native_name": "\u5b9d\u4e80",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1801,11 +1801,11 @@
     {
       "id": "east-asia.japan.nara.ten-o",
       "kind": "period",
-      "name": "Ten'ō",
+      "name": "Ten'\u014d",
       "parent_id": "east-asia.japan.nara",
       "start_year": 781,
       "end_year": 782,
-      "native_name": "天応",
+      "native_name": "\u5929\u5fdc",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1819,23 +1819,23 @@
       "parent_id": "east-asia.japan.nara",
       "start_year": 782,
       "end_year": 806,
-      "native_name": "延暦",
+      "native_name": "\u5ef6\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
       ],
       "date_precision": "approx",
       "allow_outside_parent_dates": true,
-      "date_note": "Nengō 782-806 spans the Nara-Heian boundary (794)."
+      "date_note": "Neng\u014d 782-806 spans the Nara-Heian boundary (794)."
     },
     {
       "id": "east-asia.japan.heian.daido",
       "kind": "period",
-      "name": "Daidō",
+      "name": "Daid\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 806,
       "end_year": 810,
-      "native_name": "大同",
+      "native_name": "\u5927\u540c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1845,11 +1845,11 @@
     {
       "id": "east-asia.japan.heian.konin",
       "kind": "period",
-      "name": "Kōnin",
+      "name": "K\u014dnin",
       "parent_id": "east-asia.japan.heian",
       "start_year": 810,
       "end_year": 824,
-      "native_name": "弘仁",
+      "native_name": "\u5f18\u4ec1",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1859,11 +1859,11 @@
     {
       "id": "east-asia.japan.heian.tencho",
       "kind": "period",
-      "name": "Tenchō",
+      "name": "Tench\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 824,
       "end_year": 834,
-      "native_name": "天長",
+      "native_name": "\u5929\u9577",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1873,11 +1873,11 @@
     {
       "id": "east-asia.japan.heian.jowa-heian",
       "kind": "period",
-      "name": "Jōwa",
+      "name": "J\u014dwa",
       "parent_id": "east-asia.japan.heian",
       "start_year": 834,
       "end_year": 848,
-      "native_name": "承和",
+      "native_name": "\u627f\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1887,11 +1887,11 @@
     {
       "id": "east-asia.japan.heian.kasho-heian",
       "kind": "period",
-      "name": "Kashō",
+      "name": "Kash\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 848,
       "end_year": 851,
-      "native_name": "嘉祥",
+      "native_name": "\u5609\u7965",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1905,7 +1905,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 851,
       "end_year": 854,
-      "native_name": "仁寿",
+      "native_name": "\u4ec1\u5bff",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1915,11 +1915,11 @@
     {
       "id": "east-asia.japan.heian.saiko",
       "kind": "period",
-      "name": "Saikō",
+      "name": "Saik\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 854,
       "end_year": 857,
-      "native_name": "斉衡",
+      "native_name": "\u6589\u8861",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1933,7 +1933,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 857,
       "end_year": 859,
-      "native_name": "天安",
+      "native_name": "\u5929\u5b89",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1943,11 +1943,11 @@
     {
       "id": "east-asia.japan.heian.jogan",
       "kind": "period",
-      "name": "Jōgan",
+      "name": "J\u014dgan",
       "parent_id": "east-asia.japan.heian",
       "start_year": 859,
       "end_year": 877,
-      "native_name": "貞観",
+      "native_name": "\u8c9e\u89b3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1957,11 +1957,11 @@
     {
       "id": "east-asia.japan.heian.gangyo",
       "kind": "period",
-      "name": "Gangyō",
+      "name": "Gangy\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 877,
       "end_year": 885,
-      "native_name": "元慶",
+      "native_name": "\u5143\u6176",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1975,7 +1975,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 885,
       "end_year": 889,
-      "native_name": "仁和",
+      "native_name": "\u4ec1\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1985,11 +1985,11 @@
     {
       "id": "east-asia.japan.heian.kanpyo-heian",
       "kind": "period",
-      "name": "Kanpyō",
+      "name": "Kanpy\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 889,
       "end_year": 898,
-      "native_name": "寛平",
+      "native_name": "\u5bdb\u5e73",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -1999,11 +1999,11 @@
     {
       "id": "east-asia.japan.heian.shotai",
       "kind": "period",
-      "name": "Shōtai",
+      "name": "Sh\u014dtai",
       "parent_id": "east-asia.japan.heian",
       "start_year": 898,
       "end_year": 901,
-      "native_name": "昌泰",
+      "native_name": "\u660c\u6cf0",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2017,7 +2017,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 901,
       "end_year": 923,
-      "native_name": "延喜",
+      "native_name": "\u5ef6\u559c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2027,11 +2027,11 @@
     {
       "id": "east-asia.japan.heian.encho",
       "kind": "period",
-      "name": "Enchō",
+      "name": "Ench\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 923,
       "end_year": 931,
-      "native_name": "延長",
+      "native_name": "\u5ef6\u9577",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2041,11 +2041,11 @@
     {
       "id": "east-asia.japan.heian.johei",
       "kind": "period",
-      "name": "Jōhei",
+      "name": "J\u014dhei",
       "parent_id": "east-asia.japan.heian",
       "start_year": 931,
       "end_year": 938,
-      "native_name": "承平",
+      "native_name": "\u627f\u5e73",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2055,11 +2055,11 @@
     {
       "id": "east-asia.japan.heian.tengyo",
       "kind": "period",
-      "name": "Tengyō",
+      "name": "Tengy\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 938,
       "end_year": 947,
-      "native_name": "天慶",
+      "native_name": "\u5929\u6176",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2073,7 +2073,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 947,
       "end_year": 957,
-      "native_name": "天暦",
+      "native_name": "\u5929\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2087,7 +2087,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 957,
       "end_year": 961,
-      "native_name": "天徳",
+      "native_name": "\u5929\u5fb3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2097,11 +2097,11 @@
     {
       "id": "east-asia.japan.heian.owa",
       "kind": "period",
-      "name": "Ōwa",
+      "name": "\u014cwa",
       "parent_id": "east-asia.japan.heian",
       "start_year": 961,
       "end_year": 964,
-      "native_name": "応和",
+      "native_name": "\u5fdc\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2111,11 +2111,11 @@
     {
       "id": "east-asia.japan.heian.koho",
       "kind": "period",
-      "name": "Kōhō",
+      "name": "K\u014dh\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 964,
       "end_year": 968,
-      "native_name": "康保",
+      "native_name": "\u5eb7\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2129,7 +2129,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 968,
       "end_year": 970,
-      "native_name": "安和",
+      "native_name": "\u5b89\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2143,7 +2143,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 970,
       "end_year": 974,
-      "native_name": "天禄",
+      "native_name": "\u5929\u7984",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2157,7 +2157,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 974,
       "end_year": 976,
-      "native_name": "天延",
+      "native_name": "\u5929\u5ef6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2167,11 +2167,11 @@
     {
       "id": "east-asia.japan.heian.jogen-heian1",
       "kind": "period",
-      "name": "Jōgen",
+      "name": "J\u014dgen",
       "parent_id": "east-asia.japan.heian",
       "start_year": 976,
       "end_year": 978,
-      "native_name": "貞元",
+      "native_name": "\u8c9e\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2185,7 +2185,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 978,
       "end_year": 983,
-      "native_name": "天元",
+      "native_name": "\u5929\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2199,7 +2199,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 983,
       "end_year": 985,
-      "native_name": "永観",
+      "native_name": "\u6c38\u89b3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2213,7 +2213,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 985,
       "end_year": 987,
-      "native_name": "寛和",
+      "native_name": "\u5bdb\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2227,7 +2227,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 987,
       "end_year": 989,
-      "native_name": "永延",
+      "native_name": "\u6c38\u5ef6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2241,7 +2241,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 989,
       "end_year": 990,
-      "native_name": "永祚",
+      "native_name": "\u6c38\u795a",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2251,11 +2251,11 @@
     {
       "id": "east-asia.japan.heian.shoryaku",
       "kind": "period",
-      "name": "Shōryaku",
+      "name": "Sh\u014dryaku",
       "parent_id": "east-asia.japan.heian",
       "start_year": 990,
       "end_year": 995,
-      "native_name": "正暦",
+      "native_name": "\u6b63\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2265,11 +2265,11 @@
     {
       "id": "east-asia.japan.heian.chotoku",
       "kind": "period",
-      "name": "Chōtoku",
+      "name": "Ch\u014dtoku",
       "parent_id": "east-asia.japan.heian",
       "start_year": 995,
       "end_year": 999,
-      "native_name": "長徳",
+      "native_name": "\u9577\u5fb3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2279,11 +2279,11 @@
     {
       "id": "east-asia.japan.heian.choho-heian",
       "kind": "period",
-      "name": "Chōhō",
+      "name": "Ch\u014dh\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 999,
       "end_year": 1004,
-      "native_name": "長保",
+      "native_name": "\u9577\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2293,11 +2293,11 @@
     {
       "id": "east-asia.japan.heian.kanko",
       "kind": "period",
-      "name": "Kankō",
+      "name": "Kank\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1004,
       "end_year": 1012,
-      "native_name": "寛弘",
+      "native_name": "\u5bdb\u5f18",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2307,11 +2307,11 @@
     {
       "id": "east-asia.japan.heian.chowa",
       "kind": "period",
-      "name": "Chōwa",
+      "name": "Ch\u014dwa",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1012,
       "end_year": 1017,
-      "native_name": "長和",
+      "native_name": "\u9577\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2325,7 +2325,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1017,
       "end_year": 1021,
-      "native_name": "寛仁",
+      "native_name": "\u5bdb\u4ec1",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2339,7 +2339,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1021,
       "end_year": 1024,
-      "native_name": "治安",
+      "native_name": "\u6cbb\u5b89",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2353,7 +2353,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1024,
       "end_year": 1028,
-      "native_name": "万寿",
+      "native_name": "\u4e07\u5bff",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2363,11 +2363,11 @@
     {
       "id": "east-asia.japan.heian.chogen-heian",
       "kind": "period",
-      "name": "Chōgen",
+      "name": "Ch\u014dgen",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1028,
       "end_year": 1037,
-      "native_name": "長元",
+      "native_name": "\u9577\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2377,11 +2377,11 @@
     {
       "id": "east-asia.japan.heian.choryaku",
       "kind": "period",
-      "name": "Chōryaku",
+      "name": "Ch\u014dryaku",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1037,
       "end_year": 1040,
-      "native_name": "長暦",
+      "native_name": "\u9577\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2391,11 +2391,11 @@
     {
       "id": "east-asia.japan.heian.chokyu-heian",
       "kind": "period",
-      "name": "Chōkyū",
+      "name": "Ch\u014dky\u016b",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1040,
       "end_year": 1044,
-      "native_name": "長久",
+      "native_name": "\u9577\u4e45",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2409,7 +2409,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1044,
       "end_year": 1046,
-      "native_name": "寛徳",
+      "native_name": "\u5bdb\u5fb3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2419,11 +2419,11 @@
     {
       "id": "east-asia.japan.heian.eisho-heian1",
       "kind": "period",
-      "name": "Eishō",
+      "name": "Eish\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1046,
       "end_year": 1053,
-      "native_name": "永承",
+      "native_name": "\u6c38\u627f",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2437,7 +2437,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1053,
       "end_year": 1058,
-      "native_name": "天喜",
+      "native_name": "\u5929\u559c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2447,11 +2447,11 @@
     {
       "id": "east-asia.japan.heian.kohei",
       "kind": "period",
-      "name": "Kōhei",
+      "name": "K\u014dhei",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1058,
       "end_year": 1065,
-      "native_name": "康平",
+      "native_name": "\u5eb7\u5e73",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2465,7 +2465,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1065,
       "end_year": 1069,
-      "native_name": "治暦",
+      "native_name": "\u6cbb\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2475,11 +2475,11 @@
     {
       "id": "east-asia.japan.heian.enkyu",
       "kind": "period",
-      "name": "Enkyū",
+      "name": "Enky\u016b",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1069,
       "end_year": 1074,
-      "native_name": "延久",
+      "native_name": "\u5ef6\u4e45",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2489,11 +2489,11 @@
     {
       "id": "east-asia.japan.heian.joho",
       "kind": "period",
-      "name": "Jōhō",
+      "name": "J\u014dh\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1074,
       "end_year": 1077,
-      "native_name": "承保",
+      "native_name": "\u627f\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2503,11 +2503,11 @@
     {
       "id": "east-asia.japan.heian.joryaku",
       "kind": "period",
-      "name": "Jōryaku",
+      "name": "J\u014dryaku",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1077,
       "end_year": 1081,
-      "native_name": "承暦",
+      "native_name": "\u627f\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2517,11 +2517,11 @@
     {
       "id": "east-asia.japan.heian.eiho",
       "kind": "period",
-      "name": "Eihō",
+      "name": "Eih\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1081,
       "end_year": 1084,
-      "native_name": "永保",
+      "native_name": "\u6c38\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2531,11 +2531,11 @@
     {
       "id": "east-asia.japan.heian.otoku",
       "kind": "period",
-      "name": "Ōtoku",
+      "name": "\u014ctoku",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1084,
       "end_year": 1087,
-      "native_name": "応徳",
+      "native_name": "\u5fdc\u5fb3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2549,7 +2549,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1087,
       "end_year": 1094,
-      "native_name": "寛治",
+      "native_name": "\u5bdb\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2559,11 +2559,11 @@
     {
       "id": "east-asia.japan.heian.kaho",
       "kind": "period",
-      "name": "Kahō",
+      "name": "Kah\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1094,
       "end_year": 1096,
-      "native_name": "嘉保",
+      "native_name": "\u5609\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2573,11 +2573,11 @@
     {
       "id": "east-asia.japan.heian.eicho",
       "kind": "period",
-      "name": "Eichō",
+      "name": "Eich\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1096,
       "end_year": 1097,
-      "native_name": "永長",
+      "native_name": "\u6c38\u9577",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2587,11 +2587,11 @@
     {
       "id": "east-asia.japan.heian.jotoku",
       "kind": "period",
-      "name": "Jōtoku",
+      "name": "J\u014dtoku",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1097,
       "end_year": 1099,
-      "native_name": "承徳",
+      "native_name": "\u627f\u5fb3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2601,11 +2601,11 @@
     {
       "id": "east-asia.japan.heian.kowa-heian",
       "kind": "period",
-      "name": "Kōwa",
+      "name": "K\u014dwa",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1099,
       "end_year": 1104,
-      "native_name": "康和",
+      "native_name": "\u5eb7\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2615,11 +2615,11 @@
     {
       "id": "east-asia.japan.heian.choji",
       "kind": "period",
-      "name": "Chōji",
+      "name": "Ch\u014dji",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1104,
       "end_year": 1106,
-      "native_name": "長治",
+      "native_name": "\u9577\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2629,11 +2629,11 @@
     {
       "id": "east-asia.japan.heian.kajo-heian",
       "kind": "period",
-      "name": "Kajō",
+      "name": "Kaj\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1106,
       "end_year": 1108,
-      "native_name": "嘉承",
+      "native_name": "\u5609\u627f",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2647,7 +2647,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1108,
       "end_year": 1110,
-      "native_name": "天仁",
+      "native_name": "\u5929\u4ec1",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2661,7 +2661,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1110,
       "end_year": 1113,
-      "native_name": "天永",
+      "native_name": "\u5929\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2671,11 +2671,11 @@
     {
       "id": "east-asia.japan.heian.eikyu",
       "kind": "period",
-      "name": "Eikyū",
+      "name": "Eiky\u016b",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1113,
       "end_year": 1118,
-      "native_name": "永久",
+      "native_name": "\u6c38\u4e45",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2689,7 +2689,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1118,
       "end_year": 1120,
-      "native_name": "元永",
+      "native_name": "\u5143\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2699,11 +2699,11 @@
     {
       "id": "east-asia.japan.heian.hoan",
       "kind": "period",
-      "name": "Hōan",
+      "name": "H\u014dan",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1120,
       "end_year": 1124,
-      "native_name": "保安",
+      "native_name": "\u4fdd\u5b89",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2717,7 +2717,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1124,
       "end_year": 1126,
-      "native_name": "天治",
+      "native_name": "\u5929\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2731,7 +2731,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1126,
       "end_year": 1131,
-      "native_name": "大治",
+      "native_name": "\u5927\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2741,11 +2741,11 @@
     {
       "id": "east-asia.japan.heian.tensho-heian",
       "kind": "period",
-      "name": "Tenshō",
+      "name": "Tensh\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1131,
       "end_year": 1132,
-      "native_name": "天承",
+      "native_name": "\u5929\u627f",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2755,11 +2755,11 @@
     {
       "id": "east-asia.japan.heian.chosho",
       "kind": "period",
-      "name": "Chōshō",
+      "name": "Ch\u014dsh\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1132,
       "end_year": 1135,
-      "native_name": "長承",
+      "native_name": "\u9577\u627f",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2769,11 +2769,11 @@
     {
       "id": "east-asia.japan.heian.hoen",
       "kind": "period",
-      "name": "Hōen",
+      "name": "H\u014den",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1135,
       "end_year": 1141,
-      "native_name": "保延",
+      "native_name": "\u4fdd\u5ef6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2787,7 +2787,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1141,
       "end_year": 1142,
-      "native_name": "永治",
+      "native_name": "\u6c38\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2797,11 +2797,11 @@
     {
       "id": "east-asia.japan.heian.koji-heian",
       "kind": "period",
-      "name": "Kōji",
+      "name": "K\u014dji",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1142,
       "end_year": 1144,
-      "native_name": "康治",
+      "native_name": "\u5eb7\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2811,11 +2811,11 @@
     {
       "id": "east-asia.japan.heian.ten-yo",
       "kind": "period",
-      "name": "Ten'yō",
+      "name": "Ten'y\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1144,
       "end_year": 1145,
-      "native_name": "天養",
+      "native_name": "\u5929\u990a",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2825,11 +2825,11 @@
     {
       "id": "east-asia.japan.heian.kyuan",
       "kind": "period",
-      "name": "Kyūan",
+      "name": "Ky\u016ban",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1145,
       "end_year": 1151,
-      "native_name": "久安",
+      "native_name": "\u4e45\u5b89",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2843,7 +2843,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1151,
       "end_year": 1154,
-      "native_name": "仁平",
+      "native_name": "\u4ec1\u5e73",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2853,11 +2853,11 @@
     {
       "id": "east-asia.japan.heian.kyuju",
       "kind": "period",
-      "name": "Kyūju",
+      "name": "Ky\u016bju",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1154,
       "end_year": 1156,
-      "native_name": "久寿",
+      "native_name": "\u4e45\u5bff",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2867,11 +2867,11 @@
     {
       "id": "east-asia.japan.heian.hogen",
       "kind": "period",
-      "name": "Hōgen",
+      "name": "H\u014dgen",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1156,
       "end_year": 1159,
-      "native_name": "保元",
+      "native_name": "\u4fdd\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2885,7 +2885,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1159,
       "end_year": 1160,
-      "native_name": "平治",
+      "native_name": "\u5e73\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2899,7 +2899,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1160,
       "end_year": 1161,
-      "native_name": "永暦",
+      "native_name": "\u6c38\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2909,11 +2909,11 @@
     {
       "id": "east-asia.japan.heian.oho",
       "kind": "period",
-      "name": "Ōhō",
+      "name": "\u014ch\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1161,
       "end_year": 1163,
-      "native_name": "応保",
+      "native_name": "\u5fdc\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2923,11 +2923,11 @@
     {
       "id": "east-asia.japan.heian.chokan",
       "kind": "period",
-      "name": "Chōkan",
+      "name": "Ch\u014dkan",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1163,
       "end_year": 1165,
-      "native_name": "長寛",
+      "native_name": "\u9577\u5bdb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2941,7 +2941,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1165,
       "end_year": 1166,
-      "native_name": "永万",
+      "native_name": "\u6c38\u4e07",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2955,7 +2955,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1166,
       "end_year": 1169,
-      "native_name": "仁安",
+      "native_name": "\u4ec1\u5b89",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2965,11 +2965,11 @@
     {
       "id": "east-asia.japan.heian.kao",
       "kind": "period",
-      "name": "Kaō",
+      "name": "Ka\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1169,
       "end_year": 1171,
-      "native_name": "嘉応",
+      "native_name": "\u5609\u5fdc",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2979,11 +2979,11 @@
     {
       "id": "east-asia.japan.heian.joan",
       "kind": "period",
-      "name": "Jōan",
+      "name": "J\u014dan",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1171,
       "end_year": 1175,
-      "native_name": "承安",
+      "native_name": "\u627f\u5b89",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -2997,7 +2997,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1175,
       "end_year": 1177,
-      "native_name": "安元",
+      "native_name": "\u5b89\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3007,11 +3007,11 @@
     {
       "id": "east-asia.japan.heian.jisho",
       "kind": "period",
-      "name": "Jishō",
+      "name": "Jish\u014d",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1177,
       "end_year": 1181,
-      "native_name": "治承",
+      "native_name": "\u6cbb\u627f",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3021,11 +3021,11 @@
     {
       "id": "east-asia.japan.heian.yowa",
       "kind": "period",
-      "name": "Yōwa",
+      "name": "Y\u014dwa",
       "parent_id": "east-asia.japan.heian",
       "start_year": 1181,
       "end_year": 1182,
-      "native_name": "養和",
+      "native_name": "\u990a\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3039,7 +3039,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1182,
       "end_year": 1185,
-      "native_name": "寿永",
+      "native_name": "\u5bff\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3053,7 +3053,7 @@
       "parent_id": "east-asia.japan.heian",
       "start_year": 1184,
       "end_year": 1185,
-      "native_name": "元暦",
+      "native_name": "\u5143\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3067,7 +3067,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1185,
       "end_year": 1190,
-      "native_name": "文治",
+      "native_name": "\u6587\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3077,11 +3077,11 @@
     {
       "id": "east-asia.japan.kamakura.kenkyu",
       "kind": "period",
-      "name": "Kenkyū",
+      "name": "Kenky\u016b",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1190,
       "end_year": 1199,
-      "native_name": "建久",
+      "native_name": "\u5efa\u4e45",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3091,11 +3091,11 @@
     {
       "id": "east-asia.japan.kamakura.shoji",
       "kind": "period",
-      "name": "Shōji",
+      "name": "Sh\u014dji",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1199,
       "end_year": 1201,
-      "native_name": "正治",
+      "native_name": "\u6b63\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3109,7 +3109,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1201,
       "end_year": 1204,
-      "native_name": "建仁",
+      "native_name": "\u5efa\u4ec1",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3119,11 +3119,11 @@
     {
       "id": "east-asia.japan.kamakura.genkyu",
       "kind": "period",
-      "name": "Genkyū",
+      "name": "Genky\u016b",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1204,
       "end_year": 1206,
-      "native_name": "元久",
+      "native_name": "\u5143\u4e45",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3137,7 +3137,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1206,
       "end_year": 1207,
-      "native_name": "建永",
+      "native_name": "\u5efa\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3147,11 +3147,11 @@
     {
       "id": "east-asia.japan.kamakura.jogen-kamakura",
       "kind": "period",
-      "name": "Jōgen",
+      "name": "J\u014dgen",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1207,
       "end_year": 1211,
-      "native_name": "承元",
+      "native_name": "\u627f\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3165,7 +3165,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1211,
       "end_year": 1213,
-      "native_name": "建暦",
+      "native_name": "\u5efa\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3175,11 +3175,11 @@
     {
       "id": "east-asia.japan.kamakura.kenpo",
       "kind": "period",
-      "name": "Kenpō",
+      "name": "Kenp\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1213,
       "end_year": 1219,
-      "native_name": "建保",
+      "native_name": "\u5efa\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3189,11 +3189,11 @@
     {
       "id": "east-asia.japan.kamakura.jokyu",
       "kind": "period",
-      "name": "Jōkyū",
+      "name": "J\u014dky\u016b",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1219,
       "end_year": 1222,
-      "native_name": "承久",
+      "native_name": "\u627f\u4e45",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3203,11 +3203,11 @@
     {
       "id": "east-asia.japan.kamakura.joo-kamakura",
       "kind": "period",
-      "name": "Jōō",
+      "name": "J\u014d\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1222,
       "end_year": 1224,
-      "native_name": "貞応",
+      "native_name": "\u8c9e\u5fdc",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3221,7 +3221,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1224,
       "end_year": 1225,
-      "native_name": "元仁",
+      "native_name": "\u5143\u4ec1",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3235,7 +3235,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1225,
       "end_year": 1227,
-      "native_name": "嘉禄",
+      "native_name": "\u5609\u7984",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3249,7 +3249,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1227,
       "end_year": 1229,
-      "native_name": "安貞",
+      "native_name": "\u5b89\u8c9e",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3263,7 +3263,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1229,
       "end_year": 1232,
-      "native_name": "寛喜",
+      "native_name": "\u5bdb\u559c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3273,11 +3273,11 @@
     {
       "id": "east-asia.japan.kamakura.joei",
       "kind": "period",
-      "name": "Jōei",
+      "name": "J\u014dei",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1232,
       "end_year": 1233,
-      "native_name": "貞永",
+      "native_name": "\u8c9e\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3291,7 +3291,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1233,
       "end_year": 1234,
-      "native_name": "天福",
+      "native_name": "\u5929\u798f",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3305,7 +3305,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1234,
       "end_year": 1235,
-      "native_name": "文暦",
+      "native_name": "\u6587\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3319,7 +3319,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1235,
       "end_year": 1238,
-      "native_name": "嘉禎",
+      "native_name": "\u5609\u798e",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3333,7 +3333,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1238,
       "end_year": 1239,
-      "native_name": "暦仁",
+      "native_name": "\u66a6\u4ec1",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3343,11 +3343,11 @@
     {
       "id": "east-asia.japan.kamakura.en-o",
       "kind": "period",
-      "name": "En'ō",
+      "name": "En'\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1239,
       "end_year": 1240,
-      "native_name": "延応",
+      "native_name": "\u5ef6\u5fdc",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3361,7 +3361,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1240,
       "end_year": 1243,
-      "native_name": "仁治",
+      "native_name": "\u4ec1\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3375,7 +3375,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1243,
       "end_year": 1247,
-      "native_name": "寛元",
+      "native_name": "\u5bdb\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3385,11 +3385,11 @@
     {
       "id": "east-asia.japan.kamakura.hoji",
       "kind": "period",
-      "name": "Hōji",
+      "name": "H\u014dji",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1247,
       "end_year": 1249,
-      "native_name": "宝治",
+      "native_name": "\u5b9d\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3399,11 +3399,11 @@
     {
       "id": "east-asia.japan.kamakura.kencho",
       "kind": "period",
-      "name": "Kenchō",
+      "name": "Kench\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1249,
       "end_year": 1256,
-      "native_name": "建長",
+      "native_name": "\u5efa\u9577",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3413,11 +3413,11 @@
     {
       "id": "east-asia.japan.kamakura.kogen",
       "kind": "period",
-      "name": "Kōgen",
+      "name": "K\u014dgen",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1256,
       "end_year": 1257,
-      "native_name": "康元",
+      "native_name": "\u5eb7\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3427,11 +3427,11 @@
     {
       "id": "east-asia.japan.kamakura.shoka",
       "kind": "period",
-      "name": "Shōka",
+      "name": "Sh\u014dka",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1257,
       "end_year": 1259,
-      "native_name": "正嘉",
+      "native_name": "\u6b63\u5609",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3441,11 +3441,11 @@
     {
       "id": "east-asia.japan.kamakura.shogen",
       "kind": "period",
-      "name": "Shōgen",
+      "name": "Sh\u014dgen",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1259,
       "end_year": 1260,
-      "native_name": "正元",
+      "native_name": "\u6b63\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3455,11 +3455,11 @@
     {
       "id": "east-asia.japan.kamakura.bun-o",
       "kind": "period",
-      "name": "Bun'ō",
+      "name": "Bun'\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1260,
       "end_year": 1261,
-      "native_name": "文応",
+      "native_name": "\u6587\u5fdc",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3469,11 +3469,11 @@
     {
       "id": "east-asia.japan.kamakura.kocho",
       "kind": "period",
-      "name": "Kōchō",
+      "name": "K\u014dch\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1261,
       "end_year": 1264,
-      "native_name": "弘長",
+      "native_name": "\u5f18\u9577",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3487,7 +3487,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1264,
       "end_year": 1275,
-      "native_name": "文永",
+      "native_name": "\u6587\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3501,7 +3501,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1275,
       "end_year": 1278,
-      "native_name": "建治",
+      "native_name": "\u5efa\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3511,11 +3511,11 @@
     {
       "id": "east-asia.japan.kamakura.koan-kamakura",
       "kind": "period",
-      "name": "Kōan",
+      "name": "K\u014dan",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1278,
       "end_year": 1288,
-      "native_name": "弘安",
+      "native_name": "\u5f18\u5b89",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3525,11 +3525,11 @@
     {
       "id": "east-asia.japan.kamakura.shoo",
       "kind": "period",
-      "name": "Shōō",
+      "name": "Sh\u014d\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1288,
       "end_year": 1293,
-      "native_name": "正応",
+      "native_name": "\u6b63\u5fdc",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3543,7 +3543,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1293,
       "end_year": 1299,
-      "native_name": "永仁",
+      "native_name": "\u6c38\u4ec1",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3553,11 +3553,11 @@
     {
       "id": "east-asia.japan.kamakura.shoan",
       "kind": "period",
-      "name": "Shōan",
+      "name": "Sh\u014dan",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1299,
       "end_year": 1302,
-      "native_name": "正安",
+      "native_name": "\u6b63\u5b89",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3571,7 +3571,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1302,
       "end_year": 1303,
-      "native_name": "乾元",
+      "native_name": "\u4e7e\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3585,7 +3585,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1303,
       "end_year": 1306,
-      "native_name": "嘉元",
+      "native_name": "\u5609\u5143",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3599,7 +3599,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1306,
       "end_year": 1308,
-      "native_name": "徳治",
+      "native_name": "\u5fb3\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3609,11 +3609,11 @@
     {
       "id": "east-asia.japan.kamakura.enkyo-kamakura",
       "kind": "period",
-      "name": "Enkyō",
+      "name": "Enky\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1308,
       "end_year": 1311,
-      "native_name": "延慶",
+      "native_name": "\u5ef6\u6176",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3623,11 +3623,11 @@
     {
       "id": "east-asia.japan.kamakura.ocho",
       "kind": "period",
-      "name": "Ōchō",
+      "name": "\u014cch\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1311,
       "end_year": 1312,
-      "native_name": "応長",
+      "native_name": "\u5fdc\u9577",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3637,11 +3637,11 @@
     {
       "id": "east-asia.japan.kamakura.showa-kamakura",
       "kind": "period",
-      "name": "Shōwa",
+      "name": "Sh\u014dwa",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1312,
       "end_year": 1317,
-      "native_name": "正和",
+      "native_name": "\u6b63\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3651,11 +3651,11 @@
     {
       "id": "east-asia.japan.kamakura.bunpo",
       "kind": "period",
-      "name": "Bunpō",
+      "name": "Bunp\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1317,
       "end_year": 1319,
-      "native_name": "文保",
+      "native_name": "\u6587\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3665,11 +3665,11 @@
     {
       "id": "east-asia.japan.kamakura.gen-o",
       "kind": "period",
-      "name": "Gen'ō",
+      "name": "Gen'\u014d",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1319,
       "end_year": 1321,
-      "native_name": "元応",
+      "native_name": "\u5143\u5fdc",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3679,11 +3679,11 @@
     {
       "id": "east-asia.japan.kamakura.genko-kamakura1",
       "kind": "period",
-      "name": "Genkō (元亨)",
+      "name": "Genk\u014d (\u5143\u4ea8)",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1321,
       "end_year": 1324,
-      "native_name": "元亨",
+      "native_name": "\u5143\u4ea8",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3693,11 +3693,11 @@
     {
       "id": "east-asia.japan.kamakura.shochu",
       "kind": "period",
-      "name": "Shōchū",
+      "name": "Sh\u014dch\u016b",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1324,
       "end_year": 1326,
-      "native_name": "正中",
+      "native_name": "\u6b63\u4e2d",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3711,7 +3711,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1326,
       "end_year": 1329,
-      "native_name": "嘉暦",
+      "native_name": "\u5609\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3725,7 +3725,7 @@
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1329,
       "end_year": 1332,
-      "native_name": "元徳",
+      "native_name": "\u5143\u5fb3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3735,18 +3735,18 @@
     {
       "id": "east-asia.japan.kamakura.genko-kamakura2",
       "kind": "period",
-      "name": "Genkō (元弘)",
+      "name": "Genk\u014d (\u5143\u5f18)",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1331,
       "end_year": 1334,
-      "native_name": "元弘",
+      "native_name": "\u5143\u5f18",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
       ],
       "date_precision": "approx",
       "allow_outside_parent_dates": true,
-      "date_note": "Nengō 1331-1334 spans the Kamakura-Kenmu boundary (1333)."
+      "date_note": "Neng\u014d 1331-1334 spans the Kamakura-Kenmu boundary (1333)."
     },
     {
       "id": "east-asia.japan.kenmu.kenmu-era",
@@ -3755,7 +3755,7 @@
       "parent_id": "east-asia.japan.kenmu",
       "start_year": 1334,
       "end_year": 1336,
-      "native_name": "建武",
+      "native_name": "\u5efa\u6b66",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -3769,9 +3769,9 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1336,
       "end_year": 1340,
-      "native_name": "延元",
+      "native_name": "\u5ef6\u5143",
       "tier": "specialist",
-      "summary": "Southern Court nengō during the Nanboku-chō schism.",
+      "summary": "Southern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3780,13 +3780,13 @@
     {
       "id": "east-asia.japan.muromachi.kokoku",
       "kind": "period",
-      "name": "Kōkoku",
+      "name": "K\u014dkoku",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1340,
       "end_year": 1347,
-      "native_name": "興国",
+      "native_name": "\u8208\u56fd",
       "tier": "specialist",
-      "summary": "Southern Court nengō during the Nanboku-chō schism.",
+      "summary": "Southern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3795,13 +3795,13 @@
     {
       "id": "east-asia.japan.muromachi.shohei",
       "kind": "period",
-      "name": "Shōhei",
+      "name": "Sh\u014dhei",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1347,
       "end_year": 1370,
-      "native_name": "正平",
+      "native_name": "\u6b63\u5e73",
       "tier": "specialist",
-      "summary": "Southern Court nengō during the Nanboku-chō schism.",
+      "summary": "Southern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3814,9 +3814,9 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1370,
       "end_year": 1372,
-      "native_name": "建徳",
+      "native_name": "\u5efa\u5fb3",
       "tier": "specialist",
-      "summary": "Southern Court nengō during the Nanboku-chō schism.",
+      "summary": "Southern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3825,13 +3825,13 @@
     {
       "id": "east-asia.japan.muromachi.bunchu",
       "kind": "period",
-      "name": "Bunchū",
+      "name": "Bunch\u016b",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1372,
       "end_year": 1375,
-      "native_name": "文中",
+      "native_name": "\u6587\u4e2d",
       "tier": "specialist",
-      "summary": "Southern Court nengō during the Nanboku-chō schism.",
+      "summary": "Southern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3844,9 +3844,9 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1375,
       "end_year": 1381,
-      "native_name": "天授",
+      "native_name": "\u5929\u6388",
       "tier": "specialist",
-      "summary": "Southern Court nengō during the Nanboku-chō schism.",
+      "summary": "Southern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3855,13 +3855,13 @@
     {
       "id": "east-asia.japan.muromachi.kowa-nanboku",
       "kind": "period",
-      "name": "Kōwa",
+      "name": "K\u014dwa",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1381,
       "end_year": 1384,
-      "native_name": "弘和",
+      "native_name": "\u5f18\u548c",
       "tier": "specialist",
-      "summary": "Southern Court nengō during the Nanboku-chō schism.",
+      "summary": "Southern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3870,13 +3870,13 @@
     {
       "id": "east-asia.japan.muromachi.genchu",
       "kind": "period",
-      "name": "Genchū",
+      "name": "Gench\u016b",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1384,
       "end_year": 1392,
-      "native_name": "元中",
+      "native_name": "\u5143\u4e2d",
       "tier": "specialist",
-      "summary": "Southern Court nengō during the Nanboku-chō schism.",
+      "summary": "Southern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3885,30 +3885,30 @@
     {
       "id": "east-asia.japan.muromachi.shokei",
       "kind": "period",
-      "name": "Shōkei",
+      "name": "Sh\u014dkei",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1332,
       "end_year": 1333,
-      "native_name": "正慶",
+      "native_name": "\u6b63\u6176",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
       "date_precision": "approx",
       "allow_outside_parent_dates": true,
-      "date_note": "Northern-Court nengō predating the formal Muromachi start (1336)."
+      "date_note": "Northern-Court neng\u014d predating the formal Muromachi start (1336)."
     },
     {
       "id": "east-asia.japan.muromachi.ryakuo",
       "kind": "period",
-      "name": "Ryakuō",
+      "name": "Ryaku\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1338,
       "end_year": 1342,
-      "native_name": "暦応",
+      "native_name": "\u66a6\u5fdc",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3917,13 +3917,13 @@
     {
       "id": "east-asia.japan.muromachi.koei",
       "kind": "period",
-      "name": "Kōei",
+      "name": "K\u014dei",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1342,
       "end_year": 1345,
-      "native_name": "康永",
+      "native_name": "\u5eb7\u6c38",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3932,13 +3932,13 @@
     {
       "id": "east-asia.japan.muromachi.jowa-nanboku",
       "kind": "period",
-      "name": "Jōwa",
+      "name": "J\u014dwa",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1345,
       "end_year": 1350,
-      "native_name": "貞和",
+      "native_name": "\u8c9e\u548c",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3947,13 +3947,13 @@
     {
       "id": "east-asia.japan.muromachi.kanno",
       "kind": "period",
-      "name": "Kannō",
+      "name": "Kann\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1350,
       "end_year": 1352,
-      "native_name": "観応",
+      "native_name": "\u89b3\u5fdc",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3966,9 +3966,9 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1352,
       "end_year": 1356,
-      "native_name": "文和",
+      "native_name": "\u6587\u548c",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3981,9 +3981,9 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1356,
       "end_year": 1361,
-      "native_name": "延文",
+      "native_name": "\u5ef6\u6587",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -3992,13 +3992,13 @@
     {
       "id": "east-asia.japan.muromachi.koan-nanboku",
       "kind": "period",
-      "name": "Kōan",
+      "name": "K\u014dan",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1361,
       "end_year": 1362,
-      "native_name": "康安",
+      "native_name": "\u5eb7\u5b89",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -4007,13 +4007,13 @@
     {
       "id": "east-asia.japan.muromachi.joji",
       "kind": "period",
-      "name": "Jōji",
+      "name": "J\u014dji",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1362,
       "end_year": 1368,
-      "native_name": "貞治",
+      "native_name": "\u8c9e\u6cbb",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -4022,13 +4022,13 @@
     {
       "id": "east-asia.japan.muromachi.oan",
       "kind": "period",
-      "name": "Ōan",
+      "name": "\u014can",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1368,
       "end_year": 1375,
-      "native_name": "応安",
+      "native_name": "\u5fdc\u5b89",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -4041,9 +4041,9 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1375,
       "end_year": 1379,
-      "native_name": "永和",
+      "native_name": "\u6c38\u548c",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -4052,13 +4052,13 @@
     {
       "id": "east-asia.japan.muromachi.koryaku",
       "kind": "period",
-      "name": "Kōryaku",
+      "name": "K\u014dryaku",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1379,
       "end_year": 1381,
-      "native_name": "康暦",
+      "native_name": "\u5eb7\u66a6",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -4071,9 +4071,9 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1381,
       "end_year": 1384,
-      "native_name": "永徳",
+      "native_name": "\u6c38\u5fb3",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -4086,9 +4086,9 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1384,
       "end_year": 1387,
-      "native_name": "至徳",
+      "native_name": "\u81f3\u5fb3",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -4101,9 +4101,9 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1387,
       "end_year": 1389,
-      "native_name": "嘉慶",
+      "native_name": "\u5609\u6176",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -4112,13 +4112,13 @@
     {
       "id": "east-asia.japan.muromachi.koo",
       "kind": "period",
-      "name": "Kōō",
+      "name": "K\u014d\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1389,
       "end_year": 1390,
-      "native_name": "康応",
+      "native_name": "\u5eb7\u5fdc",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -4131,9 +4131,9 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1390,
       "end_year": 1394,
-      "native_name": "明徳",
+      "native_name": "\u660e\u5fb3",
       "tier": "specialist",
-      "summary": "Northern Court nengō during the Nanboku-chō schism.",
+      "summary": "Northern Court neng\u014d during the Nanboku-ch\u014d schism.",
       "calendar_ids": [
         "japanese-nengo"
       ],
@@ -4142,11 +4142,11 @@
     {
       "id": "east-asia.japan.muromachi.oei",
       "kind": "period",
-      "name": "Ōei",
+      "name": "\u014cei",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1394,
       "end_year": 1428,
-      "native_name": "応永",
+      "native_name": "\u5fdc\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4156,11 +4156,11 @@
     {
       "id": "east-asia.japan.muromachi.shocho",
       "kind": "period",
-      "name": "Shōchō",
+      "name": "Sh\u014dch\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1428,
       "end_year": 1429,
-      "native_name": "正長",
+      "native_name": "\u6b63\u9577",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4170,11 +4170,11 @@
     {
       "id": "east-asia.japan.muromachi.eikyo",
       "kind": "period",
-      "name": "Eikyō",
+      "name": "Eiky\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1429,
       "end_year": 1441,
-      "native_name": "永享",
+      "native_name": "\u6c38\u4eab",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4188,7 +4188,7 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1441,
       "end_year": 1444,
-      "native_name": "嘉吉",
+      "native_name": "\u5609\u5409",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4202,7 +4202,7 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1444,
       "end_year": 1449,
-      "native_name": "文安",
+      "native_name": "\u6587\u5b89",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4212,11 +4212,11 @@
     {
       "id": "east-asia.japan.muromachi.hotoku",
       "kind": "period",
-      "name": "Hōtoku",
+      "name": "H\u014dtoku",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1449,
       "end_year": 1452,
-      "native_name": "宝徳",
+      "native_name": "\u5b9d\u5fb3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4226,11 +4226,11 @@
     {
       "id": "east-asia.japan.muromachi.kyotoku",
       "kind": "period",
-      "name": "Kyōtoku",
+      "name": "Ky\u014dtoku",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1452,
       "end_year": 1455,
-      "native_name": "享徳",
+      "native_name": "\u4eab\u5fb3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4240,11 +4240,11 @@
     {
       "id": "east-asia.japan.muromachi.kosho",
       "kind": "period",
-      "name": "Kōshō",
+      "name": "K\u014dsh\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1455,
       "end_year": 1457,
-      "native_name": "康正",
+      "native_name": "\u5eb7\u6b63",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4254,11 +4254,11 @@
     {
       "id": "east-asia.japan.muromachi.choroku",
       "kind": "period",
-      "name": "Chōroku",
+      "name": "Ch\u014droku",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1457,
       "end_year": 1460,
-      "native_name": "長禄",
+      "native_name": "\u9577\u7984",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4268,11 +4268,11 @@
     {
       "id": "east-asia.japan.muromachi.kansho",
       "kind": "period",
-      "name": "Kanshō",
+      "name": "Kansh\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1460,
       "end_year": 1466,
-      "native_name": "寛正",
+      "native_name": "\u5bdb\u6b63",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4282,11 +4282,11 @@
     {
       "id": "east-asia.japan.muromachi.bunsho",
       "kind": "period",
-      "name": "Bunshō",
+      "name": "Bunsh\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1466,
       "end_year": 1467,
-      "native_name": "文正",
+      "native_name": "\u6587\u6b63",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4296,11 +4296,11 @@
     {
       "id": "east-asia.japan.muromachi.onin",
       "kind": "period",
-      "name": "Ōnin",
+      "name": "\u014cnin",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1467,
       "end_year": 1469,
-      "native_name": "応仁",
+      "native_name": "\u5fdc\u4ec1",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4314,7 +4314,7 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1469,
       "end_year": 1487,
-      "native_name": "文明",
+      "native_name": "\u6587\u660e",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4324,11 +4324,11 @@
     {
       "id": "east-asia.japan.muromachi.chokyo",
       "kind": "period",
-      "name": "Chōkyō",
+      "name": "Ch\u014dky\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1487,
       "end_year": 1489,
-      "native_name": "長享",
+      "native_name": "\u9577\u4eab",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4342,7 +4342,7 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1489,
       "end_year": 1492,
-      "native_name": "延徳",
+      "native_name": "\u5ef6\u5fb3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4352,11 +4352,11 @@
     {
       "id": "east-asia.japan.muromachi.meio",
       "kind": "period",
-      "name": "Meiō",
+      "name": "Mei\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1492,
       "end_year": 1501,
-      "native_name": "明応",
+      "native_name": "\u660e\u5fdc",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4370,7 +4370,7 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1501,
       "end_year": 1504,
-      "native_name": "文亀",
+      "native_name": "\u6587\u4e80",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4380,11 +4380,11 @@
     {
       "id": "east-asia.japan.muromachi.eisho-muromachi",
       "kind": "period",
-      "name": "Eishō",
+      "name": "Eish\u014d",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1504,
       "end_year": 1521,
-      "native_name": "永正",
+      "native_name": "\u6c38\u6b63",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4398,7 +4398,7 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1521,
       "end_year": 1528,
-      "native_name": "大永",
+      "native_name": "\u5927\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4408,11 +4408,11 @@
     {
       "id": "east-asia.japan.muromachi.kyoroku",
       "kind": "period",
-      "name": "Kyōroku",
+      "name": "Ky\u014droku",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1528,
       "end_year": 1532,
-      "native_name": "享禄",
+      "native_name": "\u4eab\u7984",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4426,7 +4426,7 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1532,
       "end_year": 1555,
-      "native_name": "天文",
+      "native_name": "\u5929\u6587",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4436,11 +4436,11 @@
     {
       "id": "east-asia.japan.muromachi.koji-muromachi",
       "kind": "period",
-      "name": "Kōji",
+      "name": "K\u014dji",
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1555,
       "end_year": 1558,
-      "native_name": "弘治",
+      "native_name": "\u5f18\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4454,7 +4454,7 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1558,
       "end_year": 1570,
-      "native_name": "永禄",
+      "native_name": "\u6c38\u7984",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4468,7 +4468,7 @@
       "parent_id": "east-asia.japan.muromachi",
       "start_year": 1570,
       "end_year": 1573,
-      "native_name": "元亀",
+      "native_name": "\u5143\u4e80",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4478,11 +4478,11 @@
     {
       "id": "east-asia.japan.azuchi-momoyama.tensho-azuchi",
       "kind": "period",
-      "name": "Tenshō",
+      "name": "Tensh\u014d",
       "parent_id": "east-asia.japan.azuchi-momoyama",
       "start_year": 1573,
       "end_year": 1592,
-      "native_name": "天正",
+      "native_name": "\u5929\u6b63",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4496,7 +4496,7 @@
       "parent_id": "east-asia.japan.azuchi-momoyama",
       "start_year": 1592,
       "end_year": 1596,
-      "native_name": "文禄",
+      "native_name": "\u6587\u7984",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4506,18 +4506,18 @@
     {
       "id": "east-asia.japan.azuchi-momoyama.keicho",
       "kind": "period",
-      "name": "Keichō",
+      "name": "Keich\u014d",
       "parent_id": "east-asia.japan.azuchi-momoyama",
       "start_year": 1596,
       "end_year": 1615,
-      "native_name": "慶長",
+      "native_name": "\u6176\u9577",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
       ],
       "date_precision": "approx",
       "allow_outside_parent_dates": true,
-      "date_note": "Nengō 1596-1615 spans Azuchi-Momoyama into early Edo."
+      "date_note": "Neng\u014d 1596-1615 spans Azuchi-Momoyama into early Edo."
     },
     {
       "id": "east-asia.japan.edo.genna",
@@ -4526,7 +4526,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1615,
       "end_year": 1624,
-      "native_name": "元和",
+      "native_name": "\u5143\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4540,7 +4540,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1624,
       "end_year": 1644,
-      "native_name": "寛永",
+      "native_name": "\u5bdb\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4550,11 +4550,11 @@
     {
       "id": "east-asia.japan.edo.shoho",
       "kind": "period",
-      "name": "Shōhō",
+      "name": "Sh\u014dh\u014d",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1644,
       "end_year": 1648,
-      "native_name": "正保",
+      "native_name": "\u6b63\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4568,7 +4568,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1648,
       "end_year": 1652,
-      "native_name": "慶安",
+      "native_name": "\u6176\u5b89",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4578,11 +4578,11 @@
     {
       "id": "east-asia.japan.edo.joo-edo",
       "kind": "period",
-      "name": "Jōō",
+      "name": "J\u014d\u014d",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1652,
       "end_year": 1655,
-      "native_name": "承応",
+      "native_name": "\u627f\u5fdc",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4596,7 +4596,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1655,
       "end_year": 1658,
-      "native_name": "明暦",
+      "native_name": "\u660e\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4610,7 +4610,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1658,
       "end_year": 1661,
-      "native_name": "万治",
+      "native_name": "\u4e07\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4624,7 +4624,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1661,
       "end_year": 1673,
-      "native_name": "寛文",
+      "native_name": "\u5bdb\u6587",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4634,11 +4634,11 @@
     {
       "id": "east-asia.japan.edo.enpo",
       "kind": "period",
-      "name": "Enpō",
+      "name": "Enp\u014d",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1673,
       "end_year": 1681,
-      "native_name": "延宝",
+      "native_name": "\u5ef6\u5b9d",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4652,7 +4652,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1681,
       "end_year": 1684,
-      "native_name": "天和",
+      "native_name": "\u5929\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4662,11 +4662,11 @@
     {
       "id": "east-asia.japan.edo.jokyo",
       "kind": "period",
-      "name": "Jōkyō",
+      "name": "J\u014dky\u014d",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1684,
       "end_year": 1688,
-      "native_name": "貞享",
+      "native_name": "\u8c9e\u4eab",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4680,7 +4680,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1688,
       "end_year": 1704,
-      "native_name": "元禄",
+      "native_name": "\u5143\u7984",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4690,11 +4690,11 @@
     {
       "id": "east-asia.japan.edo.hoei",
       "kind": "period",
-      "name": "Hōei",
+      "name": "H\u014dei",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1704,
       "end_year": 1711,
-      "native_name": "宝永",
+      "native_name": "\u5b9d\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4704,11 +4704,11 @@
     {
       "id": "east-asia.japan.edo.shotoku-edo",
       "kind": "period",
-      "name": "Shōtoku",
+      "name": "Sh\u014dtoku",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1711,
       "end_year": 1716,
-      "native_name": "正徳",
+      "native_name": "\u6b63\u5fb3",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4718,11 +4718,11 @@
     {
       "id": "east-asia.japan.edo.kyoho",
       "kind": "period",
-      "name": "Kyōhō",
+      "name": "Ky\u014dh\u014d",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1716,
       "end_year": 1736,
-      "native_name": "享保",
+      "native_name": "\u4eab\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4736,7 +4736,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1736,
       "end_year": 1741,
-      "native_name": "元文",
+      "native_name": "\u5143\u6587",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4746,11 +4746,11 @@
     {
       "id": "east-asia.japan.edo.kanpo",
       "kind": "period",
-      "name": "Kanpō",
+      "name": "Kanp\u014d",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1741,
       "end_year": 1744,
-      "native_name": "寛保",
+      "native_name": "\u5bdb\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4760,11 +4760,11 @@
     {
       "id": "east-asia.japan.edo.enkyo-edo",
       "kind": "period",
-      "name": "Enkyō",
+      "name": "Enky\u014d",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1744,
       "end_year": 1748,
-      "native_name": "延享",
+      "native_name": "\u5ef6\u4eab",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4778,7 +4778,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1748,
       "end_year": 1751,
-      "native_name": "寛延",
+      "native_name": "\u5bdb\u5ef6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4788,11 +4788,11 @@
     {
       "id": "east-asia.japan.edo.horeki",
       "kind": "period",
-      "name": "Hōreki",
+      "name": "H\u014dreki",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1751,
       "end_year": 1764,
-      "native_name": "宝暦",
+      "native_name": "\u5b9d\u66a6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4806,7 +4806,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1764,
       "end_year": 1772,
-      "native_name": "明和",
+      "native_name": "\u660e\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4820,7 +4820,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1772,
       "end_year": 1781,
-      "native_name": "安永",
+      "native_name": "\u5b89\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4834,7 +4834,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1781,
       "end_year": 1789,
-      "native_name": "天明",
+      "native_name": "\u5929\u660e",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4848,7 +4848,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1789,
       "end_year": 1801,
-      "native_name": "寛政",
+      "native_name": "\u5bdb\u653f",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4858,11 +4858,11 @@
     {
       "id": "east-asia.japan.edo.kyowa",
       "kind": "period",
-      "name": "Kyōwa",
+      "name": "Ky\u014dwa",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1801,
       "end_year": 1804,
-      "native_name": "享和",
+      "native_name": "\u4eab\u548c",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4876,7 +4876,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1804,
       "end_year": 1818,
-      "native_name": "文化",
+      "native_name": "\u6587\u5316",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4890,7 +4890,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1818,
       "end_year": 1830,
-      "native_name": "文政",
+      "native_name": "\u6587\u653f",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4900,11 +4900,11 @@
     {
       "id": "east-asia.japan.edo.tenpo-edo",
       "kind": "period",
-      "name": "Tenpō",
+      "name": "Tenp\u014d",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1830,
       "end_year": 1844,
-      "native_name": "天保",
+      "native_name": "\u5929\u4fdd",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4914,11 +4914,11 @@
     {
       "id": "east-asia.japan.edo.koka",
       "kind": "period",
-      "name": "Kōka",
+      "name": "K\u014dka",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1844,
       "end_year": 1848,
-      "native_name": "弘化",
+      "native_name": "\u5f18\u5316",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4932,7 +4932,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1848,
       "end_year": 1854,
-      "native_name": "嘉永",
+      "native_name": "\u5609\u6c38",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4946,7 +4946,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1854,
       "end_year": 1860,
-      "native_name": "安政",
+      "native_name": "\u5b89\u653f",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4960,7 +4960,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1860,
       "end_year": 1861,
-      "native_name": "万延",
+      "native_name": "\u4e07\u5ef6",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4970,11 +4970,11 @@
     {
       "id": "east-asia.japan.edo.bunkyu",
       "kind": "period",
-      "name": "Bunkyū",
+      "name": "Bunky\u016b",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1861,
       "end_year": 1864,
-      "native_name": "文久",
+      "native_name": "\u6587\u4e45",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4988,7 +4988,7 @@
       "parent_id": "east-asia.japan.edo",
       "start_year": 1864,
       "end_year": 1865,
-      "native_name": "元治",
+      "native_name": "\u5143\u6cbb",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -4998,11 +4998,11 @@
     {
       "id": "east-asia.japan.edo.keio",
       "kind": "period",
-      "name": "Keiō",
+      "name": "Kei\u014d",
       "parent_id": "east-asia.japan.edo",
       "start_year": 1865,
       "end_year": 1868,
-      "native_name": "慶応",
+      "native_name": "\u6176\u5fdc",
       "tier": "specialist",
       "calendar_ids": [
         "japanese-nengo"
@@ -5027,7 +5027,7 @@
       "start_year": -1600,
       "end_year": -1046,
       "tier": "foundational",
-      "native_name": "商朝",
+      "native_name": "\u5546\u671d",
       "summary": "First historically confirmed Chinese dynasty. Oracle bones; bronze ritual vessels.",
       "date_precision": "approx"
     },
@@ -5039,7 +5039,7 @@
       "start_year": -1046,
       "end_year": -256,
       "tier": "foundational",
-      "native_name": "周朝",
+      "native_name": "\u5468\u671d",
       "summary": "Longest dynasty in Chinese history. Split into Western and Eastern (Spring-Autumn + Warring States).",
       "date_precision": "approx"
     },
@@ -5095,7 +5095,7 @@
       "start_year": -221,
       "end_year": -206,
       "tier": "foundational",
-      "native_name": "秦朝",
+      "native_name": "\u79e6\u671d",
       "summary": "First unified imperial state.",
       "date_precision": "approx"
     },
@@ -5118,7 +5118,7 @@
       "start_year": -206,
       "end_year": 220,
       "tier": "foundational",
-      "native_name": "漢朝",
+      "native_name": "\u6f22\u671d",
       "summary": "Classical Chinese empire; namesake of the Han Chinese ethnicity.",
       "date_precision": "approx"
     },
@@ -5182,9 +5182,9 @@
       "start_year": 220,
       "end_year": 280,
       "tier": "foundational",
-      "native_name": "三國",
+      "native_name": "\u4e09\u570b",
       "date_precision": "approx",
-      "summary": "Wei, Shu, and Wu — the era of the Romance of the Three Kingdoms."
+      "summary": "Wei, Shu, and Wu \u2014 the era of the Romance of the Three Kingdoms."
     },
     {
       "id": "east-asia.china.jin",
@@ -5214,7 +5214,7 @@
       "start_year": 581,
       "end_year": 618,
       "tier": "intermediate",
-      "native_name": "隋朝",
+      "native_name": "\u968b\u671d",
       "date_precision": "approx"
     },
     {
@@ -5225,7 +5225,7 @@
       "start_year": 618,
       "end_year": 907,
       "tier": "foundational",
-      "native_name": "唐朝",
+      "native_name": "\u5510\u671d",
       "summary": "Golden age of Chinese poetry and cosmopolitan trade.",
       "date_precision": "approx"
     },
@@ -5278,7 +5278,7 @@
       "start_year": 960,
       "end_year": 1279,
       "tier": "foundational",
-      "native_name": "宋朝",
+      "native_name": "\u5b8b\u671d",
       "summary": "Economic and technological golden age: printing, gunpowder, compass, paper money.",
       "date_precision": "approx"
     },
@@ -5310,7 +5310,7 @@
       "start_year": 1271,
       "end_year": 1370,
       "tier": "foundational",
-      "native_name": "元朝",
+      "native_name": "\u5143\u671d",
       "date_note": "Yuan formally ended in 1368 when the Ming took Beijing; Huizong ruled from Mongolia until 1370 (Northern Yuan).",
       "summary": "Mongol-ruled China under the descendants of Genghis Khan.",
       "cross_parent_ids": [
@@ -5353,7 +5353,7 @@
       "start_year": 1368,
       "end_year": 1644,
       "tier": "foundational",
-      "native_name": "明朝",
+      "native_name": "\u660e\u671d",
       "summary": "Restored Han Chinese rule; Zheng He's voyages; Forbidden City built.",
       "date_precision": "approx"
     },
@@ -5386,7 +5386,7 @@
       "start_year": 1644,
       "end_year": 1912,
       "tier": "foundational",
-      "native_name": "清朝",
+      "native_name": "\u6e05\u671d",
       "summary": "Manchu-ruled last imperial dynasty.",
       "date_precision": "approx"
     },
@@ -5527,7 +5527,7 @@
       "end_year": 1945,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "Japanese annexation of Korea (1910–1945); ended by WWII."
+      "summary": "Japanese annexation of Korea (1910\u20131945); ended by WWII."
     },
     {
       "id": "east-asia.korea.divided",
@@ -6364,7 +6364,7 @@
     {
       "id": "europe.mediterranean.rome.empire.nerva-antonine",
       "kind": "period",
-      "name": "Nerva–Antonine Dynasty",
+      "name": "Nerva\u2013Antonine Dynasty",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 96,
       "end_year": 192,
@@ -6625,7 +6625,7 @@
       "end_year": 1603,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "House that ruled England 1485–1603 including Henry VIII and Elizabeth I."
+      "summary": "House that ruled England 1485\u20131603 including Henry VIII and Elizabeth I."
     },
     {
       "id": "europe.western.england.tudor.henry8",
@@ -6795,7 +6795,7 @@
       "end_year": 1918,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "Unified German state 1871–1918 under the Hohenzollerns; collapsed at the end of WWI."
+      "summary": "Unified German state 1871\u20131918 under the Hohenzollerns; collapsed at the end of WWI."
     },
     {
       "id": "europe.central.weimar",
@@ -6967,7 +6967,7 @@
       "end_year": 1991,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "Union of Soviet Socialist Republics (USSR); communist superpower 1922–1991."
+      "summary": "Union of Soviet Socialist Republics (USSR); communist superpower 1922\u20131991."
     },
     {
       "id": "europe.eastern.soviet.lenin",
@@ -7124,7 +7124,7 @@
     {
       "id": "central-asia.mongol-empire.ogedei",
       "kind": "reign",
-      "name": "Ögedei Khan",
+      "name": "\u00d6gedei Khan",
       "parent_id": "central-asia.mongol-empire",
       "start_year": 1229,
       "end_year": 1241,
@@ -7134,7 +7134,7 @@
     {
       "id": "central-asia.mongol-empire.mongke",
       "kind": "reign",
-      "name": "Möngke Khan",
+      "name": "M\u00f6ngke Khan",
       "parent_id": "central-asia.mongol-empire",
       "start_year": 1251,
       "end_year": 1259,
@@ -7402,7 +7402,7 @@
       "end_year": 1526,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "Muslim sultanates ruling northern India from Delhi (1206–1526)."
+      "summary": "Muslim sultanates ruling northern India from Delhi (1206\u20131526)."
     },
     {
       "id": "south-asia.vijayanagara",
@@ -7498,7 +7498,7 @@
       "end_year": 1947,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "Direct British Crown rule of India, 1858–1947."
+      "summary": "Direct British Crown rule of India, 1858\u20131947."
     },
     {
       "id": "south-asia.independence",
@@ -7567,7 +7567,7 @@
     {
       "id": "southeast-asia.mainland.dai-viet",
       "kind": "era",
-      "name": "Đại Việt",
+      "name": "\u0110\u1ea1i Vi\u1ec7t",
       "parent_id": "southeast-asia.mainland",
       "start_year": 939,
       "end_year": 1804,
@@ -7813,7 +7813,7 @@
     {
       "id": "africa.west.kanem-bornu",
       "kind": "era",
-      "name": "Kanem–Bornu Empire",
+      "name": "Kanem\u2013Bornu Empire",
       "parent_id": "africa.west",
       "start_year": 700,
       "end_year": 1900,
@@ -8055,7 +8055,7 @@
     {
       "id": "americas.mesoamerica.zapotec",
       "kind": "era",
-      "name": "Zapotec (Monte Albán)",
+      "name": "Zapotec (Monte Alb\u00e1n)",
       "parent_id": "americas.mesoamerica",
       "start_year": -500,
       "end_year": 800,
@@ -8124,7 +8124,7 @@
     {
       "id": "americas.mesoamerica.purepecha",
       "kind": "era",
-      "name": "Purépecha (Tarascan) Empire",
+      "name": "Pur\u00e9pecha (Tarascan) Empire",
       "parent_id": "americas.mesoamerica",
       "start_year": 1300,
       "end_year": 1530,
@@ -8227,7 +8227,7 @@
     {
       "id": "americas.andes.chavin",
       "kind": "era",
-      "name": "Chavín",
+      "name": "Chav\u00edn",
       "parent_id": "americas.andes",
       "start_year": -900,
       "end_year": -200,
@@ -8277,7 +8277,7 @@
     {
       "id": "americas.andes.chimu",
       "kind": "era",
-      "name": "Chimú (Chimor)",
+      "name": "Chim\u00fa (Chimor)",
       "parent_id": "americas.andes",
       "start_year": 900,
       "end_year": 1470,
@@ -8361,7 +8361,7 @@
     {
       "id": "americas.intermediate.taino",
       "kind": "era",
-      "name": "Taíno Chiefdoms",
+      "name": "Ta\u00edno Chiefdoms",
       "parent_id": "americas.intermediate",
       "start_year": 1200,
       "end_year": 1500,
@@ -8381,7 +8381,7 @@
     {
       "id": "americas.amazon-southern.mapuche",
       "kind": "era",
-      "name": "Mapuche / Araucanía",
+      "name": "Mapuche / Araucan\u00eda",
       "parent_id": "americas.amazon-southern",
       "start_year": 1000,
       "end_year": 1883,
@@ -8415,7 +8415,7 @@
       "end_year": 1901,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "British colonial period in Australia, 1788–1901."
+      "summary": "British colonial period in Australia, 1788\u20131901."
     },
     {
       "id": "oceania.australia.commonwealth",
@@ -8522,7 +8522,7 @@
     {
       "id": "oceania.polynesia.tui-tonga",
       "kind": "era",
-      "name": "Tuʻi Tonga Empire",
+      "name": "Tu\u02bbi Tonga Empire",
       "parent_id": "oceania.polynesia",
       "start_year": 950,
       "end_year": 1865,
@@ -8554,7 +8554,7 @@
     {
       "id": "oceania.polynesia.hawaii.liliuokalani",
       "kind": "reign",
-      "name": "Queen Liliʻuokalani",
+      "name": "Queen Lili\u02bbuokalani",
       "parent_id": "oceania.polynesia.hawaii",
       "start_year": 1891,
       "end_year": 1893,
@@ -8574,13 +8574,13 @@
     {
       "id": "oceania.polynesia.aotearoa",
       "kind": "era",
-      "name": "Māori Aotearoa",
+      "name": "M\u0101ori Aotearoa",
       "parent_id": "oceania.polynesia",
       "start_year": 1250,
       "end_year": 1840,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "Māori settlement and society of New Zealand before 1840."
+      "summary": "M\u0101ori settlement and society of New Zealand before 1840."
     },
     {
       "id": "oceania.polynesia.new-zealand",
@@ -8631,7 +8631,7 @@
       "start_year": 1346,
       "end_year": 1353,
       "tier": "foundational",
-      "summary": "Bubonic plague pandemic that killed 30–60% of Europe's population and swept Asia and North Africa.",
+      "summary": "Bubonic plague pandemic that killed 30\u201360% of Europe's population and swept Asia and North Africa.",
       "date_precision": "approx"
     },
     {
@@ -8665,7 +8665,7 @@
       "end_year": 1918,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "World War I — the first industrialized total war; ended four empires."
+      "summary": "World War I \u2014 the first industrialized total war; ended four empires."
     },
     {
       "id": "cross-regional.ww2",
@@ -8676,7 +8676,7 @@
       "end_year": 1945,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "World War II — the deadliest conflict in human history; ended with the atomic bombings of Japan."
+      "summary": "World War II \u2014 the deadliest conflict in human history; ended with the atomic bombings of Japan."
     },
     {
       "id": "cross-regional.cold-war",
@@ -8687,7 +8687,7 @@
       "end_year": 1991,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "US–USSR geopolitical rivalry, 1947–1991; defined the second half of the 20th century."
+      "summary": "US\u2013USSR geopolitical rivalry, 1947\u20131991; defined the second half of the 20th century."
     },
     {
       "id": "europe.renaissance",
@@ -8724,7 +8724,7 @@
       "start_year": 1450,
       "end_year": 1600,
       "tier": "intermediate",
-      "summary": "Renaissance north of the Alps: Erasmus, Dürer, van Eyck, printing revolution.",
+      "summary": "Renaissance north of the Alps: Erasmus, D\u00fcrer, van Eyck, printing revolution.",
       "date_precision": "approx"
     },
     {
@@ -8831,7 +8831,7 @@
         "Partition of Africa",
         "Colonization of Africa"
       ],
-      "summary": "European colonial partition of Africa, formalized by the Berlin Conference (1884–85).",
+      "summary": "European colonial partition of Africa, formalized by the Berlin Conference (1884\u201385).",
       "date_precision": "approx"
     },
     {
@@ -8897,7 +8897,7 @@
       "start_year": 1815,
       "end_year": 1815,
       "tier": "foundational",
-      "summary": "Napoleon's final defeat at the hands of Wellington and Blücher; end of the Napoleonic era.",
+      "summary": "Napoleon's final defeat at the hands of Wellington and Bl\u00fccher; end of the Napoleonic era.",
       "date_precision": "approx"
     },
     {
@@ -8956,7 +8956,7 @@
       "start_year": 1962,
       "end_year": 1962,
       "tier": "foundational",
-      "summary": "Thirteen-day nuclear standoff between the US and USSR over Soviet missiles in Cuba — the closest the Cold War came to nuclear war.",
+      "summary": "Thirteen-day nuclear standoff between the US and USSR over Soviet missiles in Cuba \u2014 the closest the Cold War came to nuclear war.",
       "date_precision": "approx"
     },
     {
@@ -9018,7 +9018,7 @@
       "aliases": [
         "Global War on Terrorism"
       ],
-      "summary": "US-led military campaign following 9/11; wars in Afghanistan (2001–2021) and Iraq (2003–2011).",
+      "summary": "US-led military campaign following 9/11; wars in Afghanistan (2001\u20132021) and Iraq (2003\u20132011).",
       "date_precision": "approx"
     },
     {
@@ -10347,7 +10347,7 @@
     {
       "id": "east-asia.china.han.western.lu-empress",
       "kind": "reign",
-      "name": "Empress Dowager Lü",
+      "name": "Empress Dowager L\u00fc",
       "parent_id": "east-asia.china.han.western",
       "start_year": -188,
       "end_year": -180,
@@ -10757,7 +10757,7 @@
     {
       "id": "east-asia.china.tang.xuanzong-later",
       "kind": "reign",
-      "name": "Emperor Xuānzong (later)",
+      "name": "Emperor Xu\u0101nzong (later)",
       "parent_id": "east-asia.china.tang",
       "start_year": 846,
       "end_year": 859,
@@ -10994,7 +10994,7 @@
     {
       "id": "east-asia.china.yuan.chengzong-yuan",
       "kind": "reign",
-      "name": "Temür Khan (Chengzong)",
+      "name": "Tem\u00fcr Khan (Chengzong)",
       "parent_id": "east-asia.china.yuan",
       "start_year": 1294,
       "end_year": 1307,
@@ -11004,7 +11004,7 @@
     {
       "id": "east-asia.china.yuan.wuzong-yuan",
       "kind": "reign",
-      "name": "Külüg Khan (Wuzong)",
+      "name": "K\u00fcl\u00fcg Khan (Wuzong)",
       "parent_id": "east-asia.china.yuan",
       "start_year": 1307,
       "end_year": 1311,
@@ -11034,7 +11034,7 @@
     {
       "id": "east-asia.china.yuan.taiding",
       "kind": "reign",
-      "name": "Yesün Temür (Taiding)",
+      "name": "Yes\u00fcn Tem\u00fcr (Taiding)",
       "parent_id": "east-asia.china.yuan",
       "start_year": 1323,
       "end_year": 1328,
@@ -11054,7 +11054,7 @@
     {
       "id": "east-asia.china.yuan.wenzong-yuan",
       "kind": "reign",
-      "name": "Tugh Temür (Wenzong)",
+      "name": "Tugh Tem\u00fcr (Wenzong)",
       "parent_id": "east-asia.china.yuan",
       "start_year": 1328,
       "end_year": 1332,
@@ -11084,7 +11084,7 @@
     {
       "id": "east-asia.china.yuan.huizong-yuan",
       "kind": "reign",
-      "name": "Toghon Temür (Huizong)",
+      "name": "Toghon Tem\u00fcr (Huizong)",
       "parent_id": "east-asia.china.yuan",
       "start_year": 1333,
       "end_year": 1370,
@@ -12649,8 +12649,8 @@
       "start_year": 1192,
       "end_year": 1199,
       "tier": "foundational",
-      "summary": "Founder of the Kamakura bakufu and Japan's first shōgun in the enduring sense.",
-      "native_name": "源頼朝",
+      "summary": "Founder of the Kamakura bakufu and Japan's first sh\u014dgun in the enduring sense.",
+      "native_name": "\u6e90\u983c\u671d",
       "date_precision": "approx"
     },
     {
@@ -12661,8 +12661,8 @@
       "start_year": 1202,
       "end_year": 1203,
       "tier": "intermediate",
-      "summary": "Deposed by the Hōjō regents.",
-      "native_name": "源頼家",
+      "summary": "Deposed by the H\u014dj\u014d regents.",
+      "native_name": "\u6e90\u983c\u5bb6",
       "date_precision": "approx"
     },
     {
@@ -12673,31 +12673,31 @@
       "start_year": 1203,
       "end_year": 1219,
       "tier": "intermediate",
-      "summary": "Last Minamoto shōgun; a noted waka poet, assassinated at Tsurugaoka Hachiman-gū.",
-      "native_name": "源實朝",
+      "summary": "Last Minamoto sh\u014dgun; a noted waka poet, assassinated at Tsurugaoka Hachiman-g\u016b.",
+      "native_name": "\u6e90\u5be6\u671d",
       "date_precision": "approx"
     },
     {
       "id": "east-asia.japan.kamakura.shogun-yoritsune",
       "kind": "reign",
-      "name": "Kujō Yoritsune",
+      "name": "Kuj\u014d Yoritsune",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1226,
       "end_year": 1244,
       "tier": "specialist",
-      "summary": "First Sekke shōgun; installed as a child by the Hōjō regents.",
-      "native_name": "九条頼経",
+      "summary": "First Sekke sh\u014dgun; installed as a child by the H\u014dj\u014d regents.",
+      "native_name": "\u4e5d\u6761\u983c\u7d4c",
       "date_precision": "approx"
     },
     {
       "id": "east-asia.japan.kamakura.shogun-yoritsugu",
       "kind": "reign",
-      "name": "Kujō Yoritsugu",
+      "name": "Kuj\u014d Yoritsugu",
       "parent_id": "east-asia.japan.kamakura",
       "start_year": 1244,
       "end_year": 1252,
       "tier": "specialist",
-      "native_name": "九条頼嘆",
+      "native_name": "\u4e5d\u6761\u983c\u5606",
       "date_precision": "approx"
     },
     {
@@ -12708,8 +12708,8 @@
       "start_year": 1252,
       "end_year": 1266,
       "tier": "specialist",
-      "summary": "First imperial-prince (Miya) shōgun.",
-      "native_name": "宗尊親王",
+      "summary": "First imperial-prince (Miya) sh\u014dgun.",
+      "native_name": "\u5b97\u5c0a\u89aa\u738b",
       "date_precision": "approx"
     },
     {
@@ -12720,7 +12720,7 @@
       "start_year": 1266,
       "end_year": 1289,
       "tier": "specialist",
-      "native_name": "惟康親王",
+      "native_name": "\u60df\u5eb7\u89aa\u738b",
       "date_precision": "approx"
     },
     {
@@ -12731,7 +12731,7 @@
       "start_year": 1289,
       "end_year": 1308,
       "tier": "specialist",
-      "native_name": "久明親王",
+      "native_name": "\u4e45\u660e\u89aa\u738b",
       "date_precision": "approx"
     },
     {
@@ -12742,8 +12742,8 @@
       "start_year": 1308,
       "end_year": 1333,
       "tier": "intermediate",
-      "summary": "Last Kamakura shōgun; deposed when the bakufu fell to Emperor Go-Daigo's forces.",
-      "native_name": "守邦親王",
+      "summary": "Last Kamakura sh\u014dgun; deposed when the bakufu fell to Emperor Go-Daigo's forces.",
+      "native_name": "\u5b88\u90a6\u89aa\u738b",
       "date_precision": "approx"
     },
     {
@@ -12755,7 +12755,7 @@
       "end_year": 1358,
       "tier": "foundational",
       "summary": "Founder of the Ashikaga bakufu; installed the Northern Court against Emperor Go-Daigo.",
-      "native_name": "足利尊氏",
+      "native_name": "\u8db3\u5229\u5c0a\u6c0f",
       "date_precision": "approx"
     },
     {
@@ -12766,7 +12766,7 @@
       "start_year": 1358,
       "end_year": 1367,
       "tier": "specialist",
-      "native_name": "足利義詮",
+      "native_name": "\u8db3\u5229\u7fa9\u8a6e",
       "date_precision": "approx"
     },
     {
@@ -12778,7 +12778,7 @@
       "end_year": 1394,
       "tier": "foundational",
       "summary": "Reunified the Northern and Southern Courts (1392); built Kinkaku-ji, the Golden Pavilion.",
-      "native_name": "足利義満",
+      "native_name": "\u8db3\u5229\u7fa9\u6e80",
       "date_precision": "approx"
     },
     {
@@ -12789,7 +12789,7 @@
       "start_year": 1394,
       "end_year": 1423,
       "tier": "specialist",
-      "native_name": "足利義持",
+      "native_name": "\u8db3\u5229\u7fa9\u6301",
       "date_precision": "approx"
     },
     {
@@ -12800,7 +12800,7 @@
       "start_year": 1423,
       "end_year": 1425,
       "tier": "specialist",
-      "native_name": "足利義量",
+      "native_name": "\u8db3\u5229\u7fa9\u91cf",
       "date_precision": "approx"
     },
     {
@@ -12812,7 +12812,7 @@
       "end_year": 1441,
       "tier": "intermediate",
       "summary": "Assassinated by Akamatsu Mitsusuke at the Kakitsu Incident.",
-      "native_name": "足利義教",
+      "native_name": "\u8db3\u5229\u7fa9\u6559",
       "date_precision": "approx"
     },
     {
@@ -12823,7 +12823,7 @@
       "start_year": 1442,
       "end_year": 1443,
       "tier": "specialist",
-      "native_name": "足利義勝",
+      "native_name": "\u8db3\u5229\u7fa9\u52dd",
       "date_precision": "approx"
     },
     {
@@ -12834,8 +12834,8 @@
       "start_year": 1449,
       "end_year": 1473,
       "tier": "foundational",
-      "summary": "Aesthete-shōgun; built Ginkaku-ji. His succession dispute triggered the Ōnin War (1467).",
-      "native_name": "足利義政",
+      "summary": "Aesthete-sh\u014dgun; built Ginkaku-ji. His succession dispute triggered the \u014cnin War (1467).",
+      "native_name": "\u8db3\u5229\u7fa9\u653f",
       "date_precision": "approx"
     },
     {
@@ -12846,7 +12846,7 @@
       "start_year": 1473,
       "end_year": 1489,
       "tier": "specialist",
-      "native_name": "足利義尚",
+      "native_name": "\u8db3\u5229\u7fa9\u5c1a",
       "date_precision": "approx"
     },
     {
@@ -12857,8 +12857,8 @@
       "start_year": 1490,
       "end_year": 1493,
       "tier": "specialist",
-      "summary": "Deposed, later restored (1508–1521); dates given are of first tenure.",
-      "native_name": "足利義材",
+      "summary": "Deposed, later restored (1508\u20131521); dates given are of first tenure.",
+      "native_name": "\u8db3\u5229\u7fa9\u6750",
       "date_precision": "approx"
     },
     {
@@ -12869,7 +12869,7 @@
       "start_year": 1494,
       "end_year": 1508,
       "tier": "specialist",
-      "native_name": "足利義澄",
+      "native_name": "\u8db3\u5229\u7fa9\u6f84",
       "date_precision": "approx"
     },
     {
@@ -12880,8 +12880,8 @@
       "start_year": 1508,
       "end_year": 1521,
       "tier": "specialist",
-      "summary": "Second tenure after being restored to the shōgunate.",
-      "native_name": "足利義材",
+      "summary": "Second tenure after being restored to the sh\u014dgunate.",
+      "native_name": "\u8db3\u5229\u7fa9\u6750",
       "date_precision": "approx"
     },
     {
@@ -12892,7 +12892,7 @@
       "start_year": 1521,
       "end_year": 1546,
       "tier": "specialist",
-      "native_name": "足利義晴",
+      "native_name": "\u8db3\u5229\u7fa9\u6674",
       "date_precision": "approx"
     },
     {
@@ -12904,7 +12904,7 @@
       "end_year": 1565,
       "tier": "intermediate",
       "summary": "Renowned swordsman; killed defending himself against Matsunaga and Miyoshi forces.",
-      "native_name": "足利義輝",
+      "native_name": "\u8db3\u5229\u7fa9\u8f1d",
       "date_precision": "approx"
     },
     {
@@ -12916,7 +12916,7 @@
       "end_year": 1568,
       "tier": "specialist",
       "summary": "Reigned only a few months and never entered Kyoto.",
-      "native_name": "足利義栗",
+      "native_name": "\u8db3\u5229\u7fa9\u6817",
       "date_precision": "approx"
     },
     {
@@ -12927,8 +12927,8 @@
       "start_year": 1568,
       "end_year": 1573,
       "tier": "intermediate",
-      "summary": "Last Ashikaga shōgun; expelled from Kyoto by Oda Nobunaga.",
-      "native_name": "足利義昭",
+      "summary": "Last Ashikaga sh\u014dgun; expelled from Kyoto by Oda Nobunaga.",
+      "native_name": "\u8db3\u5229\u7fa9\u662d",
       "date_precision": "approx"
     },
     {
@@ -12940,7 +12940,7 @@
       "end_year": 1623,
       "tier": "intermediate",
       "summary": "Consolidated Tokugawa authority; enforced the persecution of Christians.",
-      "native_name": "徳川秀忠",
+      "native_name": "\u5fb3\u5ddd\u79c0\u5fe0",
       "date_precision": "approx"
     },
     {
@@ -12952,7 +12952,7 @@
       "end_year": 1651,
       "tier": "foundational",
       "summary": "Sealed Japan under sakoku isolation policies; suppressed the Shimabara Rebellion.",
-      "native_name": "徳川家光",
+      "native_name": "\u5fb3\u5ddd\u5bb6\u5149",
       "date_precision": "approx"
     },
     {
@@ -12963,7 +12963,7 @@
       "start_year": 1651,
       "end_year": 1680,
       "tier": "specialist",
-      "native_name": "徳川家綱",
+      "native_name": "\u5fb3\u5ddd\u5bb6\u7db1",
       "date_precision": "approx"
     },
     {
@@ -12974,8 +12974,8 @@
       "start_year": 1680,
       "end_year": 1709,
       "tier": "intermediate",
-      "summary": "Known for the eccentric Shōrui Awaremi no Rei (compassion for living things) edicts.",
-      "native_name": "徳川綱吉",
+      "summary": "Known for the eccentric Sh\u014drui Awaremi no Rei (compassion for living things) edicts.",
+      "native_name": "\u5fb3\u5ddd\u7db1\u5409",
       "date_precision": "approx"
     },
     {
@@ -12986,7 +12986,7 @@
       "start_year": 1709,
       "end_year": 1712,
       "tier": "specialist",
-      "native_name": "徳川家宣",
+      "native_name": "\u5fb3\u5ddd\u5bb6\u5ba3",
       "date_precision": "approx"
     },
     {
@@ -12997,8 +12997,8 @@
       "start_year": 1713,
       "end_year": 1716,
       "tier": "specialist",
-      "summary": "Died a child; ended the direct main line, opening the succession to the Kishū branch.",
-      "native_name": "徳川家繼",
+      "summary": "Died a child; ended the direct main line, opening the succession to the Kish\u016b branch.",
+      "native_name": "\u5fb3\u5ddd\u5bb6\u7e7c",
       "date_precision": "approx"
     },
     {
@@ -13009,8 +13009,8 @@
       "start_year": 1716,
       "end_year": 1745,
       "tier": "foundational",
-      "summary": "Enacted the Kyōhō Reforms; permitted the study of Dutch/Western texts.",
-      "native_name": "徳川吉宗",
+      "summary": "Enacted the Ky\u014dh\u014d Reforms; permitted the study of Dutch/Western texts.",
+      "native_name": "\u5fb3\u5ddd\u5409\u5b97",
       "date_precision": "approx"
     },
     {
@@ -13021,7 +13021,7 @@
       "start_year": 1745,
       "end_year": 1760,
       "tier": "specialist",
-      "native_name": "徳川家重",
+      "native_name": "\u5fb3\u5ddd\u5bb6\u91cd",
       "date_precision": "approx"
     },
     {
@@ -13033,7 +13033,7 @@
       "end_year": 1786,
       "tier": "specialist",
       "summary": "Reign dominated by chamberlain Tanuma Okitsugu's controversial commercial policies.",
-      "native_name": "徳川家治",
+      "native_name": "\u5fb3\u5ddd\u5bb6\u6cbb",
       "date_precision": "approx"
     },
     {
@@ -13044,8 +13044,8 @@
       "start_year": 1787,
       "end_year": 1837,
       "tier": "intermediate",
-      "summary": "Longest-reigning Tokugawa shōgun; Kansei Reforms under Matsudaira Sadanobu early in his reign.",
-      "native_name": "徳川家斉",
+      "summary": "Longest-reigning Tokugawa sh\u014dgun; Kansei Reforms under Matsudaira Sadanobu early in his reign.",
+      "native_name": "\u5fb3\u5ddd\u5bb6\u6589",
       "date_precision": "approx"
     },
     {
@@ -13057,7 +13057,7 @@
       "end_year": 1853,
       "tier": "intermediate",
       "summary": "On his deathbed when Perry's Black Ships arrived (1853).",
-      "native_name": "徳川家慶",
+      "native_name": "\u5fb3\u5ddd\u5bb6\u6176",
       "date_precision": "approx"
     },
     {
@@ -13069,7 +13069,7 @@
       "end_year": 1858,
       "tier": "intermediate",
       "summary": "Signed the Harris Treaty opening Japan to foreign trade.",
-      "native_name": "徳川家定",
+      "native_name": "\u5fb3\u5ddd\u5bb6\u5b9a",
       "date_precision": "approx"
     },
     {
@@ -13081,7 +13081,7 @@
       "end_year": 1866,
       "tier": "intermediate",
       "summary": "Reigned during the bakumatsu crisis; died young in Osaka.",
-      "native_name": "徳川家茂",
+      "native_name": "\u5fb3\u5ddd\u5bb6\u8302",
       "date_precision": "approx"
     },
     {
@@ -13092,8 +13092,8 @@
       "start_year": 1866,
       "end_year": 1867,
       "tier": "foundational",
-      "summary": "Last shōgun of Japan; resigned power to the Meiji Emperor in the Taisei Hōkan (1867).",
-      "native_name": "徳川慶喜",
+      "summary": "Last sh\u014dgun of Japan; resigned power to the Meiji Emperor in the Taisei H\u014dkan (1867).",
+      "native_name": "\u5fb3\u5ddd\u6176\u559c",
       "date_precision": "approx"
     },
     {
@@ -13294,7 +13294,7 @@
       "start_year": -165,
       "end_year": -130,
       "tier": "foundational",
-      "summary": "Greatest Indo-Greek king; the Buddhist king Milinda of the Milindapañha dialogues.",
+      "summary": "Greatest Indo-Greek king; the Buddhist king Milinda of the Milindapa\u00f1ha dialogues.",
       "aliases": [
         "Milinda"
       ],
@@ -13427,7 +13427,7 @@
       "end_year": 647,
       "tier": "foundational",
       "summary": "Buddhist emperor of Kannauj; his court was described by the Chinese pilgrim Xuanzang.",
-      "native_name": "हर्षवर्धन",
+      "native_name": "\u0939\u0930\u094d\u0937\u0935\u0930\u094d\u0927\u0928",
       "date_precision": "approx"
     },
     {
@@ -13686,7 +13686,7 @@
       "aliases": [
         "Early Western Chalukyas"
       ],
-      "summary": "Deccan dynasty that dominated south-central India during the 6th–8th centuries.",
+      "summary": "Deccan dynasty that dominated south-central India during the 6th\u20138th centuries.",
       "date_precision": "approx"
     },
     {
@@ -13753,7 +13753,7 @@
       "end_year": 1240,
       "tier": "foundational",
       "summary": "First female Muslim ruler of the subcontinent; daughter of Iltutmish.",
-      "native_name": "رضیہ سلطانہ",
+      "native_name": "\u0631\u0636\u06cc\u06c1 \u0633\u0644\u0637\u0627\u0646\u06c1",
       "date_precision": "approx"
     },
     {
@@ -14147,7 +14147,7 @@
       "end_year": 1289,
       "tier": "foundational",
       "summary": "Female monarch who ruled as king in her own right; consolidated Kakatiya power.",
-      "native_name": "రుద్రమదేవి",
+      "native_name": "\u0c30\u0c41\u0c26\u0c4d\u0c30\u0c2e\u0c26\u0c47\u0c35\u0c3f",
       "date_precision": "approx"
     },
     {
@@ -14319,7 +14319,7 @@
       "end_year": 1680,
       "tier": "foundational",
       "summary": "Founder of the Maratha Empire; revolutionary military organizer who challenged the Mughals.",
-      "native_name": "छत्रपती शिवाजी महाराज",
+      "native_name": "\u091b\u0924\u094d\u0930\u092a\u0924\u0940 \u0936\u093f\u0935\u093e\u091c\u0940 \u092e\u0939\u093e\u0930\u093e\u091c",
       "date_precision": "approx"
     },
     {
@@ -14440,7 +14440,7 @@
       "end_year": 1839,
       "tier": "foundational",
       "summary": "Founder of the Sikh Empire; the 'Lion of Punjab'.",
-      "native_name": "ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ",
+      "native_name": "\u0a2e\u0a39\u0a3e\u0a30\u0a3e\u0a1c\u0a3e \u0a30\u0a23\u0a1c\u0a40\u0a24 \u0a38\u0a3f\u0a70\u0a18",
       "date_precision": "approx"
     },
     {
@@ -14515,7 +14515,7 @@
       "end_year": 1799,
       "tier": "foundational",
       "summary": "The 'Tiger of Mysore'; killed defending Seringapatam against the British.",
-      "native_name": "ٹیپو سلطان",
+      "native_name": "\u0679\u06cc\u067e\u0648 \u0633\u0644\u0637\u0627\u0646",
       "date_precision": "approx"
     },
     {
@@ -14757,7 +14757,7 @@
         "Mohandas K. Gandhi",
         "Mahatma"
       ],
-      "native_name": "महात्मा गांधी",
+      "native_name": "\u092e\u0939\u093e\u0924\u094d\u092e\u093e \u0917\u093e\u0902\u0927\u0940",
       "date_precision": "approx",
       "allow_outside_parent_dates": true,
       "date_note": "Gandhi's political leadership began in 1915, three decades before Independence; his date range starts before the parent's 1947 for historiographic reasons."
@@ -14774,7 +14774,7 @@
       "aliases": [
         "Quaid-e-Azam"
       ],
-      "native_name": "محمد علی جناح",
+      "native_name": "\u0645\u062d\u0645\u062f \u0639\u0644\u06cc \u062c\u0646\u0627\u062d",
       "date_precision": "approx",
       "allow_outside_parent_dates": true,
       "date_note": "Jinnah's political leadership began in 1913; his date range starts before the parent's 1947 for historiographic reasons."
@@ -14788,7 +14788,7 @@
       "end_year": 1956,
       "tier": "foundational",
       "summary": "Chief architect of the Indian Constitution; leader of the Dalit civil rights movement.",
-      "native_name": "भीमराव रामजी आंबेडकर",
+      "native_name": "\u092d\u0940\u092e\u0930\u093e\u0935 \u0930\u093e\u092e\u091c\u0940 \u0906\u0902\u092c\u0947\u0921\u0915\u0930",
       "date_precision": "approx",
       "allow_outside_parent_dates": true,
       "date_note": "Ambedkar's political leadership began in 1927; his date range starts before the parent's 1947 for historiographic reasons."
@@ -14829,7 +14829,7 @@
       "end_year": 1964,
       "tier": "foundational",
       "summary": "First Prime Minister of India; led non-aligned foreign policy and state-led industrialization.",
-      "native_name": "जवाहरलाल नेहरू",
+      "native_name": "\u091c\u0935\u093e\u0939\u0930\u0932\u093e\u0932 \u0928\u0947\u0939\u0930\u0942",
       "date_precision": "approx"
     },
     {
@@ -15086,7 +15086,7 @@
       "end_year": 1539,
       "tier": "foundational",
       "summary": "Founder of Sikhism.",
-      "native_name": "ਗੁਰੂ ਨਾਨਕ",
+      "native_name": "\u0a17\u0a41\u0a30\u0a42 \u0a28\u0a3e\u0a28\u0a15",
       "date_precision": "approx"
     },
     {
@@ -15109,7 +15109,7 @@
       "end_year": 1941,
       "tier": "foundational",
       "summary": "Bengali polymath; first non-European Nobel laureate in Literature (1913). Composed the national anthems of India and Bangladesh.",
-      "native_name": "রবীন্দ্রনাথ ঠাকুর",
+      "native_name": "\u09b0\u09ac\u09c0\u09a8\u09cd\u09a6\u09cd\u09b0\u09a8\u09be\u09a5 \u09a0\u09be\u0995\u09c1\u09b0",
       "date_precision": "approx"
     },
     {
@@ -15123,7 +15123,7 @@
       "dating_method": "argon-argon",
       "standing": "consensus",
       "summary": "From the earliest stone toolmaking to the first written records. Dated by measurement rather than reckoning, so quoted in years before present.",
-      "date_note": "SCOPE GATE. This app begins where human-like BEHAVIOUR begins, not where a taxon does. The floor is the earliest knapped stone — currently Lomekwi 3 at 3.3 Ma, which predates the oldest Homo fossil by about 500,000 years. A taxonomic floor would exclude the oldest instance of the very behaviour this app exists to track, and taxonomy is the least stable line available: H. habilis placement is disputed and the Ledi-Geraru mandible is unnamed. Knapping is the line rather than tool use, because tool use extends to chimpanzees and orangutans and so runs past the ~7 Ma common ancestor, which would make any floor arbitrary. The end is diachronous: writing appears at different times in different regions.",
+      "date_note": "SCOPE GATE. This app begins where human-like BEHAVIOUR begins, not where a taxon does. The floor is the earliest knapped stone \u2014 currently Lomekwi 3 at 3.3 Ma, which predates the oldest Homo fossil by about 500,000 years. A taxonomic floor would exclude the oldest instance of the very behaviour this app exists to track, and taxonomy is the least stable line available: H. habilis placement is disputed and the Ledi-Geraru mandible is unnamed. Knapping is the line rather than tool use, because tool use extends to chimpanzees and orangutans and so runs past the ~7 Ma common ancestor, which would make any floor arbitrary. The end is diachronous: writing appears at different times in different regions.",
       "caveats": [
         {
           "kind": "misconception",
@@ -15510,7 +15510,7 @@
       "end_year_max": -198051,
       "dating_method": "magnetostratigraphy",
       "standing": "consensus",
-      "date_note": "Earliest at Kokiselei 4, West Turkana, Kenya, at 1.76 Ma — about 350,000 years earlier than previously accepted. The end is diffuse rather than dated.",
+      "date_note": "Earliest at Kokiselei 4, West Turkana, Kenya, at 1.76 Ma \u2014 about 350,000 years earlier than previously accepted. The end is diffuse rather than dated.",
       "source_ids": [
         "lepre-2011-kokiselei"
       ],
@@ -15636,7 +15636,7 @@
     {
       "id": "global.paleolithic.chatelperronian",
       "kind": "period",
-      "name": "Châtelperronian Industry",
+      "name": "Ch\u00e2telperronian Industry",
       "parent_id": "global.paleolithic",
       "start_year": -41811,
       "end_year": -37271,
@@ -15746,7 +15746,7 @@
     {
       "id": "west-asia.prehistory.gobekli-tepe",
       "kind": "period",
-      "name": "Göbekli Tepe",
+      "name": "G\u00f6bekli Tepe",
       "parent_id": "west-asia.prehistory",
       "start_year": -9530,
       "end_year": -8000,
@@ -15763,7 +15763,7 @@
         "dietrich-2013-gobekli"
       ],
       "summary": "Monumental enclosures raised by people who were not yet farming, in southeastern Anatolia.",
-      "native_name": "Göbekli Tepe",
+      "native_name": "G\u00f6bekli Tepe",
       "date_precision": "approx"
     },
     {
@@ -15808,7 +15808,7 @@
       "tier": "foundational",
       "allow_outside_parent_dates": true,
       "dating_method": "argon-argon",
-      "summary": "The earliest known evidence for each human behaviour — toolmaking, fire, pigment, burial, art, seafaring. Each date is a floor, not an estimate.",
+      "summary": "The earliest known evidence for each human behaviour \u2014 toolmaking, fire, pigment, burial, art, seafaring. Each date is a floor, not an estimate.",
       "date_note": "Starts with the contested Dikika cut marks at 3.39 Ma, which is older than the app's 3.3 Ma floor because the floor tracks the oldest ACCEPTED behaviour and Dikika is not accepted.",
       "date_precision": "approx"
     },
@@ -15851,7 +15851,7 @@
         "dominguez-rodrigo-2016-lomekwi"
       ],
       "date_precision": "minimum",
-      "summary": "The first deliberate shaping of stone into tools — the behaviour this app uses to mark where human prehistory begins.",
+      "summary": "The first deliberate shaping of stone into tools \u2014 the behaviour this app uses to mark where human prehistory begins.",
       "aliases": [
         "Lomekwian",
         "Earliest lithic technology"
@@ -16110,7 +16110,7 @@
         "henshilwood-2018-blombos-drawing"
       ],
       "date_precision": "minimum",
-      "summary": "Deliberate cross-hatched patterns cut into ochre — marks that mean something without depicting anything."
+      "summary": "Deliberate cross-hatched patterns cut into ochre \u2014 marks that mean something without depicting anything."
     },
     {
       "id": "global.prehistory.firsts.seafaring",
@@ -16182,7 +16182,7 @@
         "oktaviana-2024-sulawesi"
       ],
       "date_precision": "minimum",
-      "summary": "Pictures of recognisable things — animals and people — rather than patterns."
+      "summary": "Pictures of recognisable things \u2014 animals and people \u2014 rather than patterns."
     },
     {
       "id": "global.paleolithic.lomekwian",
@@ -16510,7 +16510,7 @@
     {
       "id": "west-asia.prehistory.catalhoyuk",
       "kind": "period",
-      "name": "Çatalhöyük",
+      "name": "\u00c7atalh\u00f6y\u00fck",
       "parent_id": "west-asia.prehistory",
       "start_year": -7100,
       "end_year": -5865,
@@ -16524,7 +16524,7 @@
         "orton-catalhoyuk"
       ],
       "summary": "A densely packed Anatolian town of mud-brick houses entered through the roof, with wall paintings and burials beneath the floors.",
-      "native_name": "Çatalhöyük",
+      "native_name": "\u00c7atalh\u00f6y\u00fck",
       "date_precision": "approx"
     },
     {
@@ -16612,7 +16612,7 @@
       "aliases": [
         "Tell es-Sultan"
       ],
-      "native_name": "أريحا",
+      "native_name": "\u0623\u0631\u064a\u062d\u0627",
       "date_precision": "approx"
     },
     {
@@ -16625,7 +16625,7 @@
       "tier": "intermediate",
       "dating_method": "radiocarbon-uncalibrated",
       "standing": "majority",
-      "date_note": "STORED AS UNCALIBRATED RADIOCARBON for the statue horizon. Grissom gives 6750 +/- 80 BC uncalibrated against 7580 +/- 110 BC calibrated for the same material — an 830-year gap, and both numbers circulate widely. Site dates are mixed; the two late aceramic phases cannot be separated radiometrically at all.",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON for the statue horizon. Grissom gives 6750 +/- 80 BC uncalibrated against 7580 +/- 110 BC calibrated for the same material \u2014 an 830-year gap, and both numbers circulate widely. Site dates are mixed; the two late aceramic phases cannot be separated radiometrically at all.",
       "source_ids": [
         "grissom-ain-ghazal",
         "ppnd-ain-ghazal"
@@ -16643,7 +16643,7 @@
       "tier": "foundational",
       "dating_method": "uranium-series",
       "standing": "consensus",
-      "date_note": "A navigation era. The early boundary follows the oldest securely dated Neanderthal evidence at Sima de los Huesos, which is uranium-series and luminescence work — radiocarbon reaches nowhere near it.",
+      "date_note": "A navigation era. The early boundary follows the oldest securely dated Neanderthal evidence at Sima de los Huesos, which is uranium-series and luminescence work \u2014 radiocarbon reaches nowhere near it.",
       "source_ids": [
         "arsuaga-2014-sima",
         "higham-2014-neanderthal"
@@ -16661,7 +16661,7 @@
       "tier": "foundational",
       "dating_method": "uranium-series",
       "standing": "consensus",
-      "date_note": "The 430 ka start is a minimum bound from Sima de los Huesos, dated by uranium-series and luminescence. The end is the 41,030-39,260 cal BP Mousterian boundary, which IS radiocarbon — the two ends of this range rest on different methods, and only one of them is datable by carbon.",
+      "date_note": "The 430 ka start is a minimum bound from Sima de los Huesos, dated by uranium-series and luminescence. The end is the 41,030-39,260 cal BP Mousterian boundary, which IS radiocarbon \u2014 the two ends of this range rest on different methods, and only one of them is datable by carbon.",
       "alternatives": [
         {
           "label": "Older Sima chronology",
@@ -16900,14 +16900,14 @@
     {
       "id": "europe.prehistory.otzi",
       "kind": "period",
-      "name": "Ötzi",
+      "name": "\u00d6tzi",
       "parent_id": "europe.prehistory",
       "start_year": -3370,
       "end_year": -3100,
       "tier": "intermediate",
       "dating_method": "radiocarbon-calibrated",
       "standing": "consensus",
-      "date_note": "Radiocarbon places Ötzi's death in the late fourth millennium BC; this range records the published calibrated interval rather than treating a death as a long period.",
+      "date_note": "Radiocarbon places \u00d6tzi's death in the late fourth millennium BC; this range records the published calibrated interval rather than treating a death as a long period.",
       "source_ids": [
         "kutschera-otzi"
       ],
@@ -17049,7 +17049,7 @@
     {
       "id": "east-asia.japan.jomon.incipient",
       "kind": "period",
-      "name": "Incipient Jōmon",
+      "name": "Incipient J\u014dmon",
       "parent_id": "east-asia.japan.jomon",
       "start_year": -14051,
       "end_year": -9051,
@@ -17072,13 +17072,13 @@
         "matsumoto-2017-jomon",
         "keally-jomon-dates"
       ],
-      "summary": "The earliest Jōmon stage, marked by some of the world's oldest securely dated pottery.",
+      "summary": "The earliest J\u014dmon stage, marked by some of the world's oldest securely dated pottery.",
       "date_precision": "approx"
     },
     {
       "id": "east-asia.japan.jomon.initial",
       "kind": "period",
-      "name": "Initial Jōmon",
+      "name": "Initial J\u014dmon",
       "parent_id": "east-asia.japan.jomon",
       "start_year": -9051,
       "end_year": -5051,
@@ -17089,13 +17089,13 @@
       "source_ids": [
         "matsumoto-2017-jomon"
       ],
-      "summary": "A long early Jōmon stage when pottery traditions diversified across the Japanese islands.",
+      "summary": "A long early J\u014dmon stage when pottery traditions diversified across the Japanese islands.",
       "date_precision": "approx"
     },
     {
       "id": "east-asia.japan.jomon.early",
       "kind": "period",
-      "name": "Early Jōmon",
+      "name": "Early J\u014dmon",
       "parent_id": "east-asia.japan.jomon",
       "start_year": -5051,
       "end_year": -3351,
@@ -17106,13 +17106,13 @@
       "source_ids": [
         "matsumoto-2017-jomon"
       ],
-      "summary": "A Jōmon stage of growing regional diversity in settlements and pottery styles.",
+      "summary": "A J\u014dmon stage of growing regional diversity in settlements and pottery styles.",
       "date_precision": "approx"
     },
     {
       "id": "east-asia.japan.jomon.middle",
       "kind": "period",
-      "name": "Middle Jōmon",
+      "name": "Middle J\u014dmon",
       "parent_id": "east-asia.japan.jomon",
       "start_year": -3351,
       "end_year": -2451,
@@ -17123,30 +17123,30 @@
       "source_ids": [
         "matsumoto-2017-jomon"
       ],
-      "summary": "A Jōmon stage known for large settlements and elaborate pottery in several regions.",
+      "summary": "A J\u014dmon stage known for large settlements and elaborate pottery in several regions.",
       "date_precision": "approx"
     },
     {
       "id": "east-asia.japan.jomon.late",
       "kind": "period",
-      "name": "Late Jōmon",
+      "name": "Late J\u014dmon",
       "parent_id": "east-asia.japan.jomon",
       "start_year": -2451,
       "end_year": -1351,
       "tier": "intermediate",
       "dating_method": "radiocarbon-calibrated",
       "standing": "majority",
-      "date_note": "The national framework gives 4,400-3,300 calibrated BP; the Jōmon-to-Yayoi transition occurred earlier in Kyushu than in northern Honshu.",
+      "date_note": "The national framework gives 4,400-3,300 calibrated BP; the J\u014dmon-to-Yayoi transition occurred earlier in Kyushu than in northern Honshu.",
       "source_ids": [
         "matsumoto-2017-jomon"
       ],
-      "summary": "A later Jōmon stage before the regionally staggered transition to Yayoi farming communities.",
+      "summary": "A later J\u014dmon stage before the regionally staggered transition to Yayoi farming communities.",
       "date_precision": "approx"
     },
     {
       "id": "east-asia.japan.jomon.final",
       "kind": "period",
-      "name": "Final Jōmon",
+      "name": "Final J\u014dmon",
       "parent_id": "east-asia.japan.jomon",
       "start_year": -1351,
       "end_year": -351,
@@ -17157,7 +17157,7 @@
       "source_ids": [
         "matsumoto-2017-jomon"
       ],
-      "summary": "The final Jōmon stage, ending at different times in different parts of Japan.",
+      "summary": "The final J\u014dmon stage, ending at different times in different parts of Japan.",
       "date_precision": "approx"
     },
     {
@@ -17886,7 +17886,7 @@
       "tier": "foundational",
       "dating_method": "luminescence",
       "standing": "majority",
-      "date_note": "Single-grain OSL dates the lowest artefact-bearing deposit to 65 ± 6 ka. This is a light-based age, not radiocarbon, and the locality remains culturally meaningful.",
+      "date_note": "Single-grain OSL dates the lowest artefact-bearing deposit to 65 \u00b1 6 ka. This is a light-based age, not radiocarbon, and the locality remains culturally meaningful.",
       "caveats": [
         {
           "kind": "contested-existence",
@@ -17912,7 +17912,7 @@
       "tier": "foundational",
       "dating_method": "luminescence",
       "standing": "consensus",
-      "date_note": "Current consensus dates the burials to 40 ± 2 ka and local occupation to 50-46 ka from 25 optical ages. These are not radiocarbon dates.",
+      "date_note": "Current consensus dates the burials to 40 \u00b1 2 ka and local occupation to 50-46 ka from 25 optical ages. These are not radiocarbon dates.",
       "alternatives": [
         {
           "label": "Thorne 1999 age",
@@ -17920,7 +17920,7 @@
           "start_year": -60051,
           "end_year": -54051,
           "dating_method": "uranium-series",
-          "note": "A 1999 U-series/ESR and OSL study claimed 62 ± 6 ka for Mungo Man; it was superseded by the 2003 optical chronology.",
+          "note": "A 1999 U-series/ESR and OSL study claimed 62 \u00b1 6 ka for Mungo Man; it was superseded by the 2003 optical chronology.",
           "source_ids": [
             "bowler-2003-mungo"
           ]
@@ -17929,7 +17929,7 @@
       "caveats": [
         {
           "kind": "misconception",
-          "text": "The popular 62 ka age for Mungo Man is superseded; the current 40 ± 2 ka result comes from later OSL dating of the lunette sediments.",
+          "text": "The popular 62 ka age for Mungo Man is superseded; the current 40 \u00b1 2 ka result comes from later OSL dating of the lunette sediments.",
           "source_ids": [
             "bowler-2003-mungo"
           ]

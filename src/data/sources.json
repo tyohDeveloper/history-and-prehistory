@@ -1,12 +1,12 @@
 {
   "schema_version": "2.0.0",
-  "dataset_version": "3.1.0",
+  "dataset_version": "5.0.0.1",
   "generated_at": "2026-08-08T04:26:06Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
       "kind": "scholarly",
-      "citation": "Domínguez-Rodrigo & Alcalá (2016), critique of the Lomekwi 3 context, PaleoAnthropology 2016:46-53",
+      "citation": "Dom\u00ednguez-Rodrigo & Alcal\u00e1 (2016), critique of the Lomekwi 3 context, PaleoAnthropology 2016:46-53",
       "url": "https://paleoanthro.org/media/journal/content/PA20160046.pdf",
       "note": "Minority: argues the assemblage is not demonstrably in primary context."
     },
@@ -19,7 +19,7 @@
     {
       "id": "dominguez-rodrigo-2010-dikika",
       "kind": "scholarly",
-      "citation": "Domínguez-Rodrigo, Pickering & Bunn (2010), 'Configurational approach to identifying the earliest hominin butchers', PNAS 107:20929-20934",
+      "citation": "Dom\u00ednguez-Rodrigo, Pickering & Bunn (2010), 'Configurational approach to identifying the earliest hominin butchers', PNAS 107:20929-20934",
       "url": "https://www.pnas.org/doi/10.1073/pnas.1013711107",
       "note": "Majority: argues the Dikika marks are trampling damage."
     },
@@ -62,7 +62,7 @@
     {
       "id": "smithsonian-qafzeh-burial",
       "kind": "scholarly",
-      "citation": "Smithsonian Human Origins — Qafzeh: oldest intentional burial",
+      "citation": "Smithsonian Human Origins \u2014 Qafzeh: oldest intentional burial",
       "url": "https://humanorigins.si.edu/evidence/behavior/burial/qafzeh-oldest-intentional-burial"
     },
     {
@@ -276,7 +276,7 @@
     {
       "id": "nhm-luzonensis",
       "kind": "reference",
-      "citation": "Natural History Museum, London — Homo luzonensis",
+      "citation": "Natural History Museum, London \u2014 Homo luzonensis",
       "url": "https://www.nhm.ac.uk/discover/homo-luzonensis-your-guide-to-the-species.html"
     },
     {
@@ -360,7 +360,7 @@
     {
       "id": "dietrich-2013-gobekli",
       "kind": "scholarly",
-      "citation": "Dietrich & Schmidt et al., radiocarbon chronology of Göbekli Tepe",
+      "citation": "Dietrich & Schmidt et al., radiocarbon chronology of G\u00f6bekli Tepe",
       "url": "https://www.dainst.blog/the-tepe-telegrams/"
     },
     {
@@ -413,7 +413,7 @@
     {
       "id": "garcia-diez-2013-altamira",
       "kind": "scholarly",
-      "citation": "García-Diez et al. (2013), Altamira uranium-series dates",
+      "citation": "Garc\u00eda-Diez et al. (2013), Altamira uranium-series dates",
       "url": "https://cir.cenieh.es/bitstream/20.500.12136/420/1/Uranium%20series%20dating%20reveals%20a%20long%20sequence%20of%20rock%20art%20at%20Altamira%20Cave%20(Santillana%20del%20Mar,%20Cantabria)_Garc%C3%ADa-Diez_et_al_2013.pdf"
     },
     {
@@ -455,7 +455,7 @@
     {
       "id": "taylor-2021-botai",
       "kind": "scholarly",
-      "citation": "Taylor and Barrón-Ortiz (2021), Botai horse management",
+      "citation": "Taylor and Barr\u00f3n-Ortiz (2021), Botai horse management",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8018961/"
     },
     {
@@ -485,13 +485,13 @@
     {
       "id": "matsumoto-2017-jomon",
       "kind": "scholarly",
-      "citation": "Matsumoto, Habu and Matsui (2017), Jōmon chronology",
+      "citation": "Matsumoto, Habu and Matsui (2017), J\u014dmon chronology",
       "url": "https://junkohabu.com/wp-content/uploads/2018/02/matsumoto-habumatsui-2017.pdf"
     },
     {
       "id": "keally-jomon-dates",
       "kind": "scholarly",
-      "citation": "Keally, Jōmon radiocarbon dates",
+      "citation": "Keally, J\u014dmon radiocarbon dates",
       "url": "http://www.t-net.ne.jp/~keally/Chronologies/jomon-dates.html"
     },
     {

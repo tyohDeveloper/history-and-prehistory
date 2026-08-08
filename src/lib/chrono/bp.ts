@@ -203,10 +203,13 @@ export function formatBpRange(v: YearValue): string {
 /**
  * Which frame *leads* for a value, and who decides.
  *
- * BP and calendar reckoning are exactly interconvertible, so this is a display
- * decision, never a storage one. Any date can be shown either way — someone
- * reading about Cyrus may legitimately want BP, and nothing should stop them.
- * So the automatic choice is a *default*, and the user preference wins.
+ * BP and calendar reckoning are interconvertible for every method here except
+ * one, so this is a display decision, never a storage one. Someone reading
+ * about Cyrus may legitimately want BP, and nothing should stop them. The
+ * automatic choice is a *default* and the user preference normally wins.
+ *
+ * The exception is uncalibrated radiocarbon, where no calendar equivalent
+ * exists to be shown. See `isCalendarConvertible` and `resolveFrame`.
  *
  * The automatic choice is driven by provenance rather than age. Stonehenge
  * (c. 2500 BCE) is a radiocarbon date and leads in BP; Alexander is fixed by
@@ -258,10 +261,14 @@ export function suggestFrame(v: YearValue): DisplayFrame {
 /**
  * The frame actually used, given a user preference.
  *
- * An explicit preference always wins, including against the pre-Holocene
- * backstop. Showing 3.3 Ma as a BCE year is not useful, but it is not our
- * place to refuse — and the secondary line keeps the other frame visible
- * either way.
+ * An explicit preference beats the automatic choice, including the
+ * pre-Holocene backstop. Showing 3.3 Ma as a BCE year is not useful, but it is
+ * not our place to refuse a conversion that exists — and the secondary line
+ * keeps the other frame visible either way.
+ *
+ * There is exactly one conversion that does NOT exist, and it is the one case
+ * where preference loses. Do not restore "preference always wins" here: this
+ * docstring previously claimed it, four lines above the code that refuses.
  */
 export function resolveFrame(v: YearValue, preference: FramePreference = "auto"): DisplayFrame {
   // The one case where preference does not win. An uncalibrated radiocarbon

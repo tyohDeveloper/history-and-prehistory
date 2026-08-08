@@ -1492,7 +1492,7 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**15 open, 15 resolved.** Audited 2026-08-07.
+**14 open, 17 resolved.** Audited 2026-08-08.
 
 **Q-30. Should `dating_method` be per-boundary rather than per-entity?** One field
 cannot describe an entity whose start and end rest on different science.
@@ -1542,19 +1542,41 @@ with a `native_name` might search better on the matching language edition, but i
 from script is unreliable (Han characters span at least three). Options: English only, offer both
 with the native search on English Wikipedia, or add an explicit `wiki_lang` field.
 
-**Q-18. Is the frame preference global, per-entity, or both?** A global "always BP" toggle is
-simple. A per-entity override is more precise but adds state the URL fragment would have to carry.
 
-**Q-23. What happens when an `asOf` goes stale?** A date-stamped open dispute is only honest while
+
+**Q-23. What happens when an `asOf` goes stale?** Now concrete: exactly one entity carries one
+(`global.paleolithic.monte-verde`, `as_of` 2026-06-30, 39 days old at the time of writing) and its
+dispute moved twice in three months. Cheapest honest answer is a validator warning past a
+threshold, since a date-stamped dispute that nobody re-checks is worse than an undated one.
+Original framing: A date-stamped open dispute is only honest while
 someone re-checks it. Options: surface the age in the UI ("last checked 2026-06"), fail a build
 check past some horizon, or accept drift. Nothing is decided.
 
-**Q-24. Should `revised` claims show by default or stay behind the popover?** They are settled, so
+**Q-24. Should `revised` claims show by default or stay behind the popover?** Now sized: of 44
+authored alternatives, **8** are `superseded` \u2014 small enough that either choice is cheap. Note the
+asymmetry the content revealed: `superseded` claims can wait behind a popover, but the 14
+`misconception` caveats cannot, because they exist to correct a belief the reader arrives holding
+(the *floresiensis* 12,000-year date, figurative art starting in Europe, the J\u014dmon "13,000 BCE").
+A claim nobody believes is optional; a claim everybody believes is not. Original framing: They are settled, so
 inline display is arguably noise — but the whole reason to keep them is that readers arrive
 holding the old number and need to collide with it.
 
-**Q-22. Who reviews the 33 flagged boundary attachments?** Migration cannot infer which boundary an
-entity-level note belongs to. The flag is set; the pass is not scheduled.
+**Q-22. Who reviews the flagged boundary attachments, and can it stop being a one-off?**
+Migration cannot infer which boundary an entity-level note belongs to. Originally 33 entities; now
+**37**, because it grows with every content pass \u2014 which is the real finding. A scheduled review
+never catches up with authoring, so this needs to be a rule at author time rather than a pass.
+Same shape as `Q-30`: both are per-entity fields standing in for per-boundary facts.
+
+**Q-31. What is the disclosure surface, and where does it live?** The disclosure model is built and
+tested in `src/lib/chrono/year.ts` \u2014 `disclosureReasons`, `rollupDisclosure`, `entityCaveats`,
+`allClaims` \u2014 and `src/main.ts` calls none of them. So **44 rival claims, 27 caveats and 113 source
+lists are authored and unreachable**; only `date_note` renders. This is the largest instance in the
+project of the pattern that has already produced four dead-code findings, and unlike those it is a
+whole surface rather than a plumbing slip.
+
+It blocks `Q-23` and `Q-24`, which cannot be settled without something to settle them on. Open
+sub-questions: marker in the tree row or only in the readout; popover or inline expansion; whether
+source lists belong with the claim or in one footer. The a11y contract is already specified above.
 
 ### Non-blocking
 
@@ -1565,11 +1587,28 @@ populated only on East Asian entities.
 **Q-13. What does calendar input resolve to?** Typing `AH 897` — select the matching node, filter
 the tree, or just display the conversion?
 
-**Q-15. Is prehistory a separate branch or interleaved?** Affects whether the readout switches
-frames per node or the app has a mode.
+
 
 ### Resolved
 
+- ~~`Q-29` Should the fuzz-ratio fallback decide the frame for archaeological eras?~~ — no, and
+  the threshold was left alone. The proxy exists because the method is unknown, and the fix for an
+  unknown is to find out: `dating_method` is now authored on the Bronze Age, Mesolithic, Neolithic,
+  agricultural revolution and Aboriginal Australia. No entity now selects BP on the proxy alone.
+  The proxy still covers the 1,253 entities with no dating signal, but decides nothing visible.
+- ~~`Q-15` Is prehistory a separate branch or interleaved?~~ \u2014 **both**, and it did not need a
+  mode switch. There is a global spine (41 entities: taxa, industries, thresholds) and a regional
+  branch in each of nine regions (56 entities), joined by `cross_parent_ids` where an entity
+  genuinely belongs in two places. The readout does not switch behaviour at a boundary because
+  frame selection is per entity and driven by provenance, so a radiocarbon date in the Neolithic
+  and an Ar/Ar date at 3.3 Ma are handled by the same code path.
+- ~~`Q-18` Is the frame preference global, per-entity, or both?~~ \u2014 **both, with one case that
+  overrides any preference.** `resolveFrame(value, preference)` takes `"auto" | "bp" | "calendar"`
+  per call, so a global default and a per-entity override are the same mechanism. Building it
+  surfaced the constraint that settles the question: an uncalibrated radiocarbon age has no
+  calendar equivalent, so `"calendar"` is not a preference there but a request for a number that
+  does not exist, and it is refused. What remains is a UI control, which is work rather than an
+  open question.
 - ~~`Q-10` Builder helpers and schema~~ — done. Shared `tools/builders.py` with a schema-derived
   allowlist, schema 1.1.0, source registry, five validator rules, and a five-entity prehistory
   pilot proving the chain end to end.

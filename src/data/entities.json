@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.0.0",
-  "dataset_version": "0.11.0.0",
-  "generated_at": "2026-08-08T22:13:11Z",
+  "schema_version": "3.1.0",
+  "dataset_version": "0.12.0.0",
+  "generated_at": "2026-08-08T22:23:57Z",
   "entities": [
     {
       "id": "global",
@@ -692,7 +692,9 @@
       "tier": "foundational",
       "date_precision": "traditional",
       "summary": "Legendary unifier of Upper and Lower Egypt. Dates and identity as Menes are partly traditional.",
-      "standing": "traditional"
+      "standing": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn2",
@@ -5470,7 +5472,9 @@
       "end_year": -108,
       "date_precision": "traditional",
       "tier": "specialist",
-      "standing": "traditional"
+      "standing": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received"
     },
     {
       "id": "east-asia.korea.three-kingdoms",
@@ -5579,7 +5583,9 @@
       "date_precision": "traditional",
       "tier": "foundational",
       "summary": "Legendary king of Uruk; hero of the eponymous epic.",
-      "standing": "traditional"
+      "standing": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received"
     },
     {
       "id": "west-asia.mesopotamia.akkadian",
@@ -5730,6 +5736,8 @@
       "date_precision": "traditional",
       "tier": "foundational",
       "standing": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
       "summary": "Traditional second king of Israel; united the northern and southern kingdoms."
     },
     {
@@ -5742,6 +5750,8 @@
       "date_precision": "traditional",
       "tier": "foundational",
       "standing": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
       "summary": "Traditional builder of the First Temple in Jerusalem."
     },
     {
@@ -6272,7 +6282,9 @@
       "tier": "intermediate",
       "date_precision": "traditional",
       "summary": "Seven legendary kings from Romulus to Tarquin the Proud.",
-      "standing": "traditional"
+      "standing": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received"
     },
     {
       "id": "europe.mediterranean.rome.republic",
@@ -11764,7 +11776,9 @@
       "tier": "intermediate",
       "date_precision": "traditional",
       "summary": "Traditionally the earliest named female pharaoh; historicity debated.",
-      "standing": "traditional"
+      "standing": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received"
     },
     {
       "id": "africa.nile.egypt.middle-kingdom.dyn11.intef-i",
@@ -21314,8 +21328,8 @@
       "end_year": -1500,
       "tier": "foundational",
       "allow_outside_parent_dates": true,
-      "start_dating_method": "typological",
-      "end_dating_method": "typological",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
       "standing": "traditional",
       "date_precision": "traditional",
       "date_note": "RECEIVED FRAMEWORK, NOT A DATED ONE. The phases in general circulation are Namazga I 4800-4000, II 4000-3500, III 3500-3000, IV 3000-2500, V 2500-2200 and VI 2200-1500 BCE, and competing bracket sets exist for most of them. They descend from Masson's Soviet-era ceramic typology; no published radiocarbon table for Namazga-depe itself supports them. Where independent dating does exist it disagrees: modern reassessments compress the Namazga V urban phase into roughly 2400-1950 or 2250-1700 BCE, and one report gives C14 dates for a single final Namazga VI layer scattering from 1884 to 818 BC. Use the phase names to talk to the literature; do not use these numbers as dates.",
@@ -21367,8 +21381,8 @@
       "start_year": -2100,
       "end_year": -1650,
       "tier": "specialist",
-      "start_dating_method": "typological",
-      "end_dating_method": "typological",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
       "standing": "traditional",
       "date_precision": "traditional",
       "date_note": "Dated by its Namazga V pottery, so it inherits that sequence's problem entirely. The excavator's own figures — Early Namazga V c. 2100-1850 BC, Late c. 1850-1650 — are typological. No modern radiocarbon programme for the site was locatable, so nothing here is independent of the ceramic framework.",

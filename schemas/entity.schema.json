@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://history-picker.local/schemas/entity.schema.json",
   "title": "Historical Entity",
-  "description": "A node in the hierarchical history tree. Regions, Eras, Periods, Reigns, Events, Taxa and Thresholds all share this shape. Parent/child links form the tree. Schema 3.0.0 replaces the single `dating_method` with per-boundary `start_dating_method` / `end_dating_method`, resolving Q-30; consumers reading `dating_method` at entity level will find nothing, hence the MAJOR bump. Within `alternatives`, `dating_method` is retained and correct, because an alternative is a claim about a single boundary. Schema 2.0.0 added the 'taxon' and 'threshold' kinds and the 'minimum' date precision, and restructured prehistory ids. Schema 1.1.0 added subkind, dating_method, standing, as_of, native_date, alternatives, caveats and source_ids.",
+  "description": "A node in the hierarchical history tree. Regions, Eras, Periods, Reigns, Events, Taxa and Thresholds all share this shape. Parent/child links form the tree. Schema 3.1.0 adds the `received` dating method for dates handed down by tradition rather than measured or attested. Schema 3.0.0 replaces the single `dating_method` with per-boundary `start_dating_method` / `end_dating_method`, resolving Q-30; consumers reading `dating_method` at entity level will find nothing, hence the MAJOR bump. Within `alternatives`, `dating_method` is retained and correct, because an alternative is a claim about a single boundary. Schema 2.0.0 added the 'taxon' and 'threshold' kinds and the 'minimum' date precision, and restructured prehistory ids. Schema 1.1.0 added subkind, dating_method, standing, as_of, native_date, alternatives, caveats and source_ids.",
   "type": "object",
   "required": [
     "id",
@@ -356,7 +356,7 @@
     },
     "start_dating_method": {
       "type": "string",
-      "description": "How the START boundary's date was arrived at. Orthogonal to precision: a calibrated radiocarbon date and an attested king-list date can share a precision while being entirely different kinds of claim. Selects whether the readout leads in BP or in calendar reckoning, which is computed from the start. Schema 3.0.0 split the former single `dating_method` into per-boundary fields (Q-30): one field cannot describe an entity whose boundaries rest on different science.",
+      "description": "How the START boundary's date was arrived at. Orthogonal to precision: a calibrated radiocarbon date and an attested king-list date can share a precision while being entirely different kinds of claim. Selects whether the readout leads in BP or in calendar reckoning, which is computed from the start. Schema 3.0.0 split the former single `dating_method` into per-boundary fields (Q-30): one field cannot describe an entity whose boundaries rest on different science. Schema 3.1.0 adds `received`, for a date arrived at by transmission rather than by measurement or attestation: Rome's 753 BCE from the annalists, Narmer's 3100 from king-lists, the Namazga phase brackets from Masson's ceramic typology. Before it, such entities carried no method at all, because calling them `typological` or `unknown` misdescribed a date whose provenance is in fact perfectly well known — it is just not evidence.",
       "enum": [
         "calendar",
         "radiocarbon-calibrated",
@@ -369,13 +369,14 @@
         "layer-counting",
         "cosmogenic",
         "magnetostratigraphy",
+        "received",
         "typological",
         "unknown"
       ]
     },
     "end_dating_method": {
       "type": "string",
-      "description": "How the END boundary's date was arrived at, when it differs from the start. Neanderthals appear at ~400 ka by uranium-series and disappear at ~40 ka by radiocarbon; recording one method for both is the error this field exists to prevent. Omit when the end is undated or the method is unrecorded -- it is NOT inherited from the start, because silently inheriting is what produced the mislabelling.",
+      "description": "How the END boundary's date was arrived at, when it differs from the start. Neanderthals appear at ~400 ka by uranium-series and disappear at ~40 ka by radiocarbon; recording one method for both is the error this field exists to prevent. Omit when the end is undated or the method is unrecorded -- it is NOT inherited from the start, because silently inheriting is what produced the mislabelling. Schema 3.1.0 adds `received`, for a date arrived at by transmission rather than by measurement or attestation: Rome's 753 BCE from the annalists, Narmer's 3100 from king-lists, the Namazga phase brackets from Masson's ceramic typology. Before it, such entities carried no method at all, because calling them `typological` or `unknown` misdescribed a date whose provenance is in fact perfectly well known — it is just not evidence.",
       "enum": [
         "calendar",
         "radiocarbon-calibrated",
@@ -388,6 +389,7 @@
         "layer-counting",
         "cosmogenic",
         "magnetostratigraphy",
+        "received",
         "typological",
         "unknown"
       ]
@@ -495,7 +497,7 @@
           },
           "dating_method": {
             "type": "string",
-            "description": "How the date was arrived at. Orthogonal to `date_precision`, which is about resolution: a calibrated radiocarbon date and an attested king-list date can share a precision while being entirely different kinds of claim. Also selects whether the readout leads in BP or in calendar reckoning.",
+            "description": "How the date was arrived at. Orthogonal to `date_precision`, which is about resolution: a calibrated radiocarbon date and an attested king-list date can share a precision while being entirely different kinds of claim. Also selects whether the readout leads in BP or in calendar reckoning. Schema 3.1.0 adds `received`, for a date arrived at by transmission rather than by measurement or attestation: Rome's 753 BCE from the annalists, Narmer's 3100 from king-lists, the Namazga phase brackets from Masson's ceramic typology. Before it, such entities carried no method at all, because calling them `typological` or `unknown` misdescribed a date whose provenance is in fact perfectly well known — it is just not evidence.",
             "enum": [
               "calendar",
               "radiocarbon-calibrated",
@@ -508,6 +510,7 @@
               "layer-counting",
               "cosmogenic",
               "magnetostratigraphy",
+              "received",
               "typological",
               "unknown"
             ]

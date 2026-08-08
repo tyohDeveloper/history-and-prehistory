@@ -109,6 +109,14 @@ export type DatingMethod =
   /** Ice-core and varve annual layer counting. Reports a maximum counting error. */
   | "layer-counting"
   | "magnetostratigraphy"
+  /**
+   * Handed down rather than derived: Rome's 753 BCE from the annalists, the
+   * Namazga phase brackets from Masson's typology. Distinct from `typological`,
+   * where someone is actively dating material by its style, and from
+   * `unknown`, where the provenance is genuinely lost. Here the provenance is
+   * perfectly well known — it simply is not evidence.
+   */
+  | "received"
   | "typological"
   | "unknown";
 
@@ -349,7 +357,12 @@ export function uncertaintyOf(v: YearValue): number | undefined {
  * As a complement, a method added to the enum later defaults to "measured",
  * which is the safe direction: it leads to BP, which is always expressible.
  */
-const CALENDAR_METHODS: ReadonlySet<DatingMethod> = new Set(["calendar", "unknown"]);
+// `received` sits here because it is emphatically not scientific dating: no
+// instrument produced it. Leaving it out would make isScientificDating() claim
+// Rome's 753 BCE was measured.
+const CALENDAR_METHODS: ReadonlySet<DatingMethod> = new Set([
+  "calendar", "received", "unknown",
+]);
 
 /**
  * Which of the three senses of "before present" a method produces.
@@ -431,6 +444,7 @@ export const DATING_METHOD_LABEL: Record<DatingMethod, string> = {
   cosmogenic: "Cosmogenic nuclide burial dating",
   "layer-counting": "Annual layer counting",
   magnetostratigraphy: "Magnetostratigraphy",
+  received: "Received tradition",
   typological: "Typological / stylistic",
   unknown: "Unknown",
 };

@@ -3,7 +3,7 @@ import { datasetVersion, entities, sourceById } from "./dataset/dataset";
 import { displayRange } from "./chrono/displayRange";
 import { contextNeighbours } from "./focus/contextNeighbours";
 import { datingOf } from "./chrono/fromEntity";
-import { isCalendarConvertible } from "./chrono/year";
+import { DATING_METHOD_LABEL, isCalendarConvertible } from "./chrono/year";
 import {
   buildIndex,
   childrenOf,
@@ -286,6 +286,17 @@ function renderReadout(): HTMLElement {
   fact("Detail tier", e.tier);
   fact("Identifier", e.id);
   if (e.date_precision !== undefined) fact("Date precision", e.date_precision);
+  const sm = e.start_dating_method;
+  const em = e.end_dating_method;
+  if (sm !== undefined) {
+    // Q-30 exists because one field could not describe an entity whose start
+    // and end rest on different science. Where they do, say both.
+    fact(
+      em !== undefined && em !== sm ? "Dated by (start)" : "Dated by",
+      DATING_METHOD_LABEL[sm],
+    );
+  }
+  if (em !== undefined && em !== sm) fact("Dated by (end)", DATING_METHOD_LABEL[em]);
   if (e.date_note !== undefined) {
     const dd = el("dd", { dir: "auto" }, e.date_note);
     const mark = citationMarker(e.source_ids, citationOrder(e));

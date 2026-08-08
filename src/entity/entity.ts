@@ -26,7 +26,7 @@ export type DatingMethodId =
   | "calendar" | "radiocarbon-calibrated" | "radiocarbon-uncalibrated"
   | "argon-argon" | "potassium-argon" | "luminescence" | "uranium-series"
   | "esr" | "cosmogenic" | "layer-counting" | "magnetostratigraphy"
-  | "typological" | "unknown";
+  | "received" | "typological" | "unknown";
 
 export type StandingId = "consensus" | "majority" | "minority" | "traditional" | "superseded";
 

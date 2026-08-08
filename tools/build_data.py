@@ -23,8 +23,8 @@ DATA.mkdir(exist_ok=True)
 # ---- Versions --------------------------------------------------------------
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
-SCHEMA_VERSION = "3.0.0"
-DATASET_VERSION = "0.11.0.0"
+SCHEMA_VERSION = "3.1.0"
+DATASET_VERSION = "0.12.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 

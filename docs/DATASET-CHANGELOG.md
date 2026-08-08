@@ -1,5 +1,41 @@
 # Changelog
 
+## 0.12.0.0 — The `received` dating method (schema 3.1.0) (2026-08-08)
+
+0.11.0.0 recorded a schema gap rather than papering over it: `dating_method` had
+no value for a date arrived at by transmission. Rome's 753 BCE comes from the
+annalists, Narmer's 3100 from king-lists, the Namazga brackets from Masson's
+ceramic typology. Calling any of them `typological` would have described someone
+actively dating material by its style, and `unknown` would have claimed the
+provenance was lost — when in fact it is perfectly well known. It just is not
+evidence.
+
+### Added — `received`
+
+Schema 3.1.0 adds `received` to the dating-method enum, on all three fields that
+carry one. Nine entities now use it: Rome's Kingdom, Gojoseon, Gilgamesh, David,
+Solomon, Narmer, Nitocris, the Namazga Sequence and Altyn-Depe.
+
+It is deliberately distinct from its two neighbours. `typological` is an active
+method — someone is dating material by its style now. `unknown` means the
+provenance is lost. `received` means the provenance is known and is a chain of
+transmission rather than a measurement.
+
+`received` also joins `CALENDAR_METHODS`, so the app does not report a handed-
+down date as scientifically dated.
+
+### Why the enum grew rather than the guard relaxing
+
+The 0.11.0.0 test for `standing: "traditional"` could only check the precision
+field, with a comment explaining that requiring a method was impossible. That
+clause is now enforced: a traditional standing requires `date_precision:
+"traditional"` AND `start_dating_method: "received"`. The loophole closes.
+
+### Counts
+
+1,546 entities unchanged. 248 → 255 with a start dating method, 185 → 192 with
+an end one. Schema 3.0.0 → 3.1.0.
+
 ## 0.11.0.0 — Received conventions (2026-08-08)
 
 0.10.0.0 left the Namazga sequence out because its phase brackets trace to

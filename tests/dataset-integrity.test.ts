@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { calendars, datasetVersion, entities, referenceFrames, schemaVersion, themes } from "../src/dataset/dataset";
 import { buildIndex } from "../src/entity/tree";
+import { datingOf } from "../src/chrono/fromEntity";
+import { isScientificDating } from "../src/chrono/year";
 
 const idx = buildIndex(entities);
 
@@ -16,8 +18,8 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.11.0.0");
-    expect(schemaVersion).toBe("3.0.0");
+    expect(datasetVersion).toBe("0.12.0.0");
+    expect(schemaVersion).toBe("3.1.0");
   });
 
   it("has the expected collection sizes", () => {
@@ -107,7 +109,7 @@ describe("gap-analysis baseline", () => {
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(248);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(255);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -119,7 +121,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(185);
+    expect(withEnd.length).toBe(192);
 
     const differing = entities
       .filter(
@@ -430,22 +432,31 @@ describe("Central Asia and the Austronesian world", () => {
     const n = entities.find((e) => e.id === "central-asia.prehistory.namazga")!;
     expect(n.standing).toBe("traditional");
     expect(n.date_precision).toBe("traditional");
-    expect(n.start_dating_method).toBe("typological");
+    expect(n.start_dating_method).toBe("received");
     expect(n.date_note).toMatch(/RECEIVED FRAMEWORK, NOT A DATED ONE/);
   });
 
   it("does not let `traditional` become a loophole", () => {
-    // A received convention must declare itself as one in the precision field
-    // too, since that is what the readout banner and the picker dagger key off.
+    // A received convention must declare itself in all three fields: the
+    // standing, the precision the banner and picker dagger key off, and now the
+    // method that says how the date was arrived at.
     //
-    // This deliberately does NOT require a dating method. The enum has no value
-    // for "arrived at by ancient tradition" — Rome's 753 BCE comes from the
-    // annalists and Narmer's 3100 from Egyptian king-lists, and calling either
-    // `typological` would misdescribe it. That is a real schema gap, recorded
-    // here rather than papered over with a wrong value.
+    // The method clause was impossible in 0.11.0.0 — the enum had no value for
+    // "handed down", and calling Rome's 753 BCE `typological` or `unknown`
+    // would have misdescribed a date whose provenance is perfectly well known.
+    // Schema 3.1.0 adds `received` and the gap closes.
     for (const e of entities.filter((x) => x.standing === "traditional")) {
       expect(e.date_precision, `${e.id} precision`).toBe("traditional");
+      expect(e.start_dating_method, `${e.id} method`).toBe("received");
     }
+  });
+
+  it("does not treat a received date as scientifically dated", () => {
+    // isScientificDating() keys off the method, so `received` has to sit with
+    // calendar and unknown or the app would claim Rome's 753 BCE was measured.
+    const rome = entities.find((e) => e.id === "europe.mediterranean.rome.kingdom")!;
+    expect(rome.start_dating_method).toBe("received");
+    expect(isScientificDating(datingOf(rome).start!.primary.value)).toBe(false);
   });
 
   it("keeps Kelteminar off the traditional list, because it has a citation", () => {

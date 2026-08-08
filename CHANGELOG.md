@@ -14,6 +14,32 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.10.0.0-app] — 2026-08-08
+
+### Added
+
+- **How a date was arrived at is now shown.** 248 entities carried
+  `start_dating_method` and nothing rendered it — the same gap as caveats and
+  citations before them, and arguably the worst of the three, since the method
+  is what separates "we measured this" from "this was handed down". A `Dated by`
+  row now appears in the readout, splitting into `Dated by (start)` and
+  `Dated by (end)` where the two boundaries rest on different science, which is
+  the whole reason Q-30 split the field in schema 3.0.0.
+- `received` as a dating method (schema 3.1.0) — see the dataset changelog.
+
+### Fixed
+
+- `main.ts` had grown its own copy of `DATING_METHOD_LABEL` before the existing
+  one in `chrono/year.ts` was noticed. Removed; the canonical map is imported.
+  This is the divergence `builders.py` was written to stop, reappearing.
+- `received` is registered in `CALENDAR_METHODS`, so `isScientificDating()` does
+  not claim Rome's 753 BCE was measured by an instrument.
+
+### Changed
+
+- Ships dataset 0.12.0.0 and schema 3.1.0.
+- Build size baseline rebased to 177,797 bytes gzip.
+
 ## [3.9.0.0-app] — 2026-08-08
 
 ### Added

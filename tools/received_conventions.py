@@ -70,6 +70,13 @@ def extend(E, entities):
         e = by_id.get(eid)
         if e is not None:
             e["standing"] = "traditional"
+            # Schema 3.1.0. These previously carried no dating method at all,
+            # because none of the enum values described how the date was
+            # actually arrived at. Their provenance is not unknown — it is
+            # annalists and king-lists — it is just not evidence.
+            e.setdefault("start_dating_method", "received")
+            if e.get("end_year") is not None:
+                e.setdefault("end_dating_method", "received")
 
     pre = "central-asia.prehistory"
 
@@ -80,7 +87,7 @@ def extend(E, entities):
         summary="The six-phase framework that every account of Central Asian prehistory is "
                 "written in, and which rests on pottery typology rather than radiocarbon.",
         aliases=["Namazga I-VI", "Namazga-depe sequence"],
-        start_dating_method="typological", end_dating_method="typological",
+        start_dating_method="received", end_dating_method="received",
         standing="traditional", date_precision="traditional",
         date_note="RECEIVED FRAMEWORK, NOT A DATED ONE. The phases in general circulation are "
                   "Namazga I 4800-4000, II 4000-3500, III 3500-3000, IV 3000-2500, V 2500-2200 "
@@ -119,7 +126,7 @@ def extend(E, entities):
     P("altyn-depe", "Altyn-Depe", pre, -2100, -1650, "specialist",
       summary="A walled town of the Namazga culture with a stepped tower, craft quarters and "
               "trade reaching Mundigak and Shahr-i Sokhta.",
-      start_dating_method="typological", end_dating_method="typological",
+      start_dating_method="received", end_dating_method="received",
       standing="traditional", date_precision="traditional",
       date_note="Dated by its Namazga V pottery, so it inherits that sequence's problem "
                 "entirely. The excavator's own figures — Early Namazga V c. 2100-1850 BC, Late "

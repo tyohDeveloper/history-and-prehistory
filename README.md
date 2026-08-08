@@ -5,7 +5,8 @@ Ships as **one HTML file** that runs offline from `file://`, stores nothing, and
 
 Planned home: **`history.tyoh.app`** — the History member of the [tyoh.app tools family](#the-tyohapp-family).
 
-> **Status:** app **v0.5.0**, dataset **v3.1.0** (1,417 entities, 114 sources, schema 2.0.0).
+> **Status:** app **v0.5.0** ([changelog](CHANGELOG.md)), dataset **v3.1.0**
+> (1,417 entities, 114 sources, schema 2.0.0).
 > App and dataset are versioned independently and the header shows both.
 > The Miller-column picker, the prehistory extension back to 3.3 Ma, the multi-calendar readout,
 > and the focus+context lens are in place. Calendar *input* — the multi-script grammar — is the

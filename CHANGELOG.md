@@ -1,0 +1,89 @@
+# Changelog
+
+App releases. The dataset is versioned independently — see
+[`docs/DATASET-CHANGELOG.md`](docs/DATASET-CHANGELOG.md). The header shows both.
+
+Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); this project uses
+[semantic versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
+this release.
+
+## [0.5.0] — 2026-08-08
+
+First tagged release. Versions 0.2.0 through 0.4.0 never existed: `package.json` sat at `0.1.0`
+from the first commit while the work below landed, so this changelog starts here rather than
+inventing a release history to fill the gap.
+
+Ships as one self-contained HTML file that runs offline from `file://`, stores nothing, and makes
+no network requests.
+
+### Added
+
+- **Miller-column picker** over 1,417 entities, with a detail-tier filter and diacritic-folded
+  search.
+- **Multi-calendar readout** — 21 dating systems, including the full Japanese nengō sequence.
+  Built on `temporal-polyfill`, with a Julian-day conversion layer.
+- **Prehistory back to 3.3 Ma**, scoped by a behavioural gate — the earliest lithic tool shaping
+  (Lomekwi 3) rather than membership in genus *Homo*. Adds 12 hominin taxa, 12 stone-tool
+  industries, and 10 behavioural thresholds.
+- **Regional prehistory** for all ten regions.
+- **Focus+context lens** — a degree-of-interest ranking beside the columns that surfaces
+  contemporaries the column view cannot reach. Focused on a Heian nengō it finds Song China and
+  Goryeo Korea. Distance is density-normalized, which is what lets one formula work across a
+  dataset whose entity density spans six orders of magnitude. A detail budget replaces the tier
+  filter as the amount control.
+- **Disclosure model** — per-boundary dating, named uncertainty reasons, entity caveats, rival
+  claims, and a 114-work source registry. Authored and validated; see Known limitations.
+- **Research handoff links**, generated rather than curated.
+- **44 reference anchor dates** extending into deep time.
+- **Build gates** — single-file and offline-safe verification, XML well-formedness, a coverage-
+  enforced test-ID manifest, and a gzip size baseline that fails the build on >5% growth.
+- **CI** running the same build, Playwright, and the Python dataset validator on every push.
+
+### Changed
+
+- **Internals moved to ISO astronomical years** (Q-27). The dataset keeps historical numbering and
+  the crossing happens exactly once, in `fromEntity.ts`. The hazard was that every wrong answer
+  looks plausible — −753 and −752 are both believable for the founding of Rome, so an off-by-one
+  survives review indefinitely. A convention would not have held; a type boundary does.
+- **The native cultural date is authoritative**; ISO is the index, not the source of truth.
+- **Dates render in the frame their provenance calls for**, driven by dating method rather than by
+  age. Three senses of BP are distinguished — `cal BP`, `¹⁴C BP`, and informal `ago`.
+- **Uncalibrated radiocarbon is refused rather than converted.** Seven entities carry it; turning
+  a `¹⁴C BP` figure into a calendar year without a calibration curve would fabricate precision.
+- **Schema 1.0.0 → 2.0.0**, adding the `taxon` and `threshold` kinds and `date_precision: minimum`.
+- **Directories under `src/` name domains, not layers.** `src/lib` was eliminated and `types.ts`
+  split by domain, clearing §3.8 and §3.9 of the coding standards.
+
+### Fixed
+
+- `eraYear` read off a Gregorian conversion returned 2900.
+- Uncertainty denominator and duplicate uncertainty markers.
+- `dating_method` never reached `suggestFrame`, so a field authored on five entities decided
+  nothing.
+- `NON_CALENDAR_METHODS` was missing 4 of 10 methods.
+- `check_standards.py` silently stopped covering renamed directories — violations fell from 20 to 8
+  with no code improved, which is the standards checker falling to the rule it exists to enforce.
+- 32 literal `\uXXXX` sequences in `docs/DESIGN.md`, written by an edit that put JSON-escaped text
+  into markdown.
+
+### Known limitations
+
+- **Calendar input is not built.** The multi-script input grammar is the last unbuilt requirement.
+- **The disclosure surface is authored but unreachable** (Q-31) — 44 rival claims across 42
+  entities, 27 caveats, 3 misconceptions and 113 per-entity source lists exist in the data and are
+  never read by `src/main.ts`. Of the disclosure fields only `date_note` reaches the screen, on 151
+  entities. The 114-work source registry ships as IDs, not citations.
+- **Two controls over "how much"** (Q-34): the detail-tier select and the lens budget both ship and
+  can disagree.
+- **The lens weights are provisional** (Q-33) — checked against four sampled foci, not tuned.
+- **`dating_method` is per-entity but dating is per-boundary** (Q-30). Neanderthals are
+  uranium-series at 400 ka and radiocarbon at 40 ka; one field cannot say that.
+
+These are why this release is `0.5.0` and not `1.0.0`.
+
+[Unreleased]: https://github.com/tyohDeveloper/history-and-prehistory/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/tyohDeveloper/history-and-prehistory/releases/tag/v0.5.0

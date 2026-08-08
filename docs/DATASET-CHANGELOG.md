@@ -1,5 +1,81 @@
 # Changelog
 
+## 0.13.0.0 — The Indus subdivided, and the Southern Neolithic (2026-08-08)
+
+`south-asia.indus` held 3300–1300 BCE as a single entity with no children. Seventeen
+entities now fill it in, and a second South Asian Neolithic joins the dataset.
+
+### Added — the Indus Civilisation
+
+Three phases (Kot Dijian, Mature, Late) on the Harappa test-trench sequence,
+which rests on more than seventy radiocarbon dates at the type site and is where
+the familiar 2600–1900 BCE bracket actually comes from. Five sites: Harappa,
+Mohenjo-daro, Dholavira, Lothal, Rakhigarhi. Then the Indus script, the
+deurbanisation, and the Ghaggar-Hakra question.
+
+**The Rakhigarhi genome** is authored as an event in its own right. One woman,
+I6113, the only one of 61 skeletal samples to yield usable DNA, with no steppe
+and no Anatolian farmer ancestry — and a misconception caveat, because the
+result was widely reported as disproving Indo-Aryan migration and does not. Its
+companion, **the arrival of steppe ancestry** at roughly 1900–1500 BCE, is
+authored separately. Both findings are correct and mutually consistent; the
+tension is entirely between the papers and the coverage of them.
+
+Note what the genome entity's date note says: five attempts to directly date the
+individual failed on carbon-to-nitrogen ratio. She is dated by seven charcoal
+samples from the habitation area. There is no calibrated date for the woman
+herself, and the dataset says so rather than quietly borrowing the context date.
+
+### Added — the Southern Neolithic
+
+A genuinely separate centre in the South Deccan that the dataset had nothing on:
+the era, the ashmounds (mounds of burnt cattle dung, formed in under two
+centuries between 1950 and 1750 BC), and the indigenous domestication of
+browntop and foxtail millet with mung bean and horsegram. Plus Burzahom in
+Kashmir.
+
+### A 1964 paper is not a live dispute
+
+The research returned Agrawal's 550-year Harappan span, 2300–1750 BC, as a
+competing modern chronology. It is *Science* 143(3609), 28 February 1964 —
+uncalibrated radiocarbon published three years before Suess released the first
+calibration curve, which is exactly why it runs short. It ships as
+`superseded`, not as an alternative of equal footing, and a test enforces that.
+It is kept rather than dropped because the figure still circulates and a reader
+who meets it is owed the explanation.
+
+This is the Monte Verde failure class again: a date in a frame that misleads
+when lifted out of it.
+
+### Deliberately NOT authored
+
+**Kalibangan** has real published dates, but this pass could only reach them
+through an exam-cramming site and a course handout. **Ganweriwala** is barely
+excavated and its one circulating date traces to Wikipedia. **Ochre Coloured
+Pottery** and **Painted Grey Ware** have genuinely scattered chronologies —
+PGW proposals span 2600 to 1200 BCE and the disagreement is partly
+methodological, Libby versus Cambridge half-lives, which is not something a
+midpoint can fix.
+
+The **2026 Mohenjo-daro re-dating** IS included, but as an `alternative` with
+`minority` standing, because it currently rests on press reporting of a
+technical briefing rather than a published paper.
+
+### A schema gap, recorded not papered over
+
+Four caveats wanted kinds the schema does not have — `method` (this figure is
+uncalibrated), `sourcing` (this rests on a press report), `dispute` (still
+open), `scope` (one sample cannot carry this claim). The enum offers only
+`misconception`, `naming-confusion` and `contested-existence`. Rather than
+mislabel them, their text moved into `date_note`, which is uncapped and
+rendered. The gap is real and is written down here, which is how `received`
+started in 0.12.0.0.
+
+### Counts
+
+1,546 → 1,563 entities. 308 → 331 sources. 241 → 258 cited entities. 255 → 272
+with a start dating method, 192 → 209 with an end one.
+
 ## 0.12.0.0 — The `received` dating method (schema 3.1.0) (2026-08-08)
 
 0.11.0.0 recorded a schema gap rather than papering over it: `dating_method` had

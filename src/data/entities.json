@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.12.0.0",
-  "generated_at": "2026-08-08T22:23:57Z",
+  "dataset_version": "0.13.0.0",
+  "generated_at": "2026-08-08T22:49:10Z",
   "entities": [
     {
       "id": "global",
@@ -21318,6 +21318,456 @@
         "australian-population-curve-2013"
       ],
       "summary": "More people, more sites and far more backed artefacts across Australia, tracking the onset of a more variable climate."
+    },
+    {
+      "id": "south-asia.indus.kot-diji",
+      "kind": "period",
+      "name": "Kot Dijian Phase",
+      "parent_id": "south-asia.indus",
+      "start_year": -2800,
+      "end_year": -2600,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "From the Harappa test-trench sequence, which rests on more than seventy radiocarbon dates at the type site. Urbanism does not begin at 2600 BCE; it is already underway here.",
+      "source_ids": [
+        "harappa-test-trench-chronology",
+        "kenoyer-2008-indus-cities"
+      ],
+      "summary": "The Early Harappan phase in which the first city walls, the first writing and the first standardised crafts appear, before the mature cities.",
+      "aliases": [
+        "Early Harappan"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.indus.mature",
+      "kind": "period",
+      "name": "Mature Harappan Phase",
+      "parent_id": "south-asia.indus",
+      "start_year": -2600,
+      "end_year": -1900,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Subdivided at Harappa into 3A (2600-2450), 3B (2450-2200) and 3C (2200-1900 cal BC). A Cambridge scheme starts the preceding Early Harappan at 3200 rather than 3300 BC; the difference is not resolved here. Note that older Indus figures are often uncalibrated; calibration alone moves some site chronologies by centuries, so check the frame before comparing.",
+      "alternatives": [
+        {
+          "label": "Shorter chronology, 2300-1750 BC",
+          "standing": "superseded",
+          "start_year": -2300,
+          "end_year": -1750,
+          "dating_method": "radiocarbon-uncalibrated",
+          "note": "Agrawal's 550-year span, from Science in February 1964. Uncalibrated, and published three years before the first calibration curve, which is why it runs short.",
+          "source_ids": [
+            "agrawal-1964-shorter-chronology"
+          ]
+        }
+      ],
+      "source_ids": [
+        "harappa-test-trench-chronology",
+        "kenoyer-2008-indus-cities",
+        "agrawal-1964-shorter-chronology"
+      ],
+      "summary": "The urban centuries: Mohenjo-daro and Harappa at full extent, with standardised weights, fired-brick drainage and long-distance trade.",
+      "aliases": [
+        "Integration Era",
+        "Harappan Phase"
+      ]
+    },
+    {
+      "id": "south-asia.indus.late",
+      "kind": "period",
+      "name": "Late Harappan Phase",
+      "parent_id": "south-asia.indus",
+      "start_year": -1800,
+      "end_year": -1300,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "A transitional phase runs 1900-1800 cal BC between the mature and late periods at Harappa.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not a collapse into emptiness. Population shifted east and settlement continued; what ends is the standardised urban system, not occupation of the region.",
+          "source_ids": [
+            "giosan-2018-indus-neoglacial"
+          ]
+        }
+      ],
+      "source_ids": [
+        "harappa-test-trench-chronology",
+        "kenoyer-2008-indus-cities"
+      ],
+      "summary": "The post-urban centuries. The cities empty and the standardised material culture dissolves into regional styles, but settlement does not stop.",
+      "aliases": [
+        "Localization Era",
+        "Post-urban Harappan"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.indus.harappa",
+      "kind": "period",
+      "name": "Harappa",
+      "parent_id": "south-asia.indus",
+      "start_year": -3300,
+      "end_year": -1300,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The sequence that anchors the whole field's chronology: Ravi/Hakra 3300-2800, Kot Dijian 2800-2600, Harappan 2600-1900, transitional 1900-1800, Late Harappan 1800-1300 cal BC.",
+      "source_ids": [
+        "harappa-test-trench-chronology"
+      ],
+      "summary": "The type site, and the best-dated one: a continuous sequence from the Ravi phase to Cemetery H, excavated 1986-1996.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.indus.mohenjo-daro",
+      "kind": "period",
+      "name": "Mohenjo-daro",
+      "parent_id": "south-asia.indus",
+      "start_year": -2600,
+      "end_year": -1900,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "The site's earliest levels sit below the water table and cannot be reached, so its own radiocarbon record is much thinner than Harappa's. The 2026 re-dating below is press reporting of a technical briefing rather than a published paper, with no lab numbers or calibration details released.",
+      "alternatives": [
+        {
+          "label": "Perimeter wall built 2708-2576 cal BCE",
+          "standing": "minority",
+          "start_year": -2708,
+          "end_year": -2576,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "New dates from the 2025-26 Sindh programme would put the first city wall in the Kot Dijian phase, and reassign the structure Wheeler found in 1950 from a flood bund to a defensive wall.",
+          "source_ids": [
+            "dawn-2026-mohenjo-daro",
+            "archaeology-2026-mohenjo-daro"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "harappa-test-trench-chronology",
+        "dawn-2026-mohenjo-daro",
+        "archaeology-2026-mohenjo-daro"
+      ],
+      "summary": "The largest mature Harappan city, with the Great Bath, the citadel mound and a fired-brick drainage system running the length of its streets."
+    },
+    {
+      "id": "south-asia.indus.dholavira",
+      "kind": "period",
+      "name": "Dholavira",
+      "parent_id": "south-asia.indus",
+      "start_year": -3000,
+      "end_year": -1450,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Bisht's excavation report divides the site into seven stages from about 3000 to 1450 BCE. A 2020 radiocarbon study instead runs the occupation from roughly 5500 to 3800 years BP, with collapse at 4300-4100 BP at the onset of the Meghalayan drought. The two do not fully reconcile, largely because the 2020 study reports 'years BP' without saying whether it is calibrated.",
+      "source_ids": [
+        "sengupta-2020-dholavira"
+      ],
+      "summary": "A city in a desert with no perennial water, which survived on sixteen reservoirs covering a fifth of its walled area."
+    },
+    {
+      "id": "south-asia.indus.lothal",
+      "kind": "period",
+      "name": "Lothal",
+      "parent_id": "south-asia.indus",
+      "start_year": -2600,
+      "end_year": -1900,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Dates follow the mature Harappan bracket. The disputed structure is the basin, not the chronology. Still open: the 2024 paper arguing for the dockyard says in its own abstract that the function remains unresolved.",
+      "alternatives": [
+        {
+          "label": "The basin is a reservoir, not a dock",
+          "standing": "minority",
+          "note": "Leshnik argued in 1968 that it held drinking or irrigation water and that ship draught requirements were never met. Possehl noted the absence of a hinterland and of shipbuilding remains.",
+          "source_ids": [
+            "leshnik-1968-lothal-dock"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "leshnik-1968-lothal-dock",
+        "gupta-2024-lothal-geomorphology"
+      ],
+      "summary": "A small Gujarat settlement with a large baked-brick basin that has been argued over for sixty years: dockyard, or reservoir?",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.indus.rakhigarhi",
+      "kind": "period",
+      "name": "Rakhigarhi",
+      "parent_id": "south-asia.indus",
+      "start_year": -2616,
+      "end_year": -2000,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "AMS dates on charcoal at 20.6 m and 9.1 m depth give 2616+/-73 and 2273+/-38 cal BCE. The cemetery is dated 2500-2000 BCE.",
+      "source_ids": [
+        "kumar-rakhigarhi-radiocarbon",
+        "shinde-2019-rakhigarhi-genome"
+      ],
+      "summary": "The largest Harappan site by area, and the source of the only ancient genome yet recovered from within the civilisation.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.indus.rakhigarhi-genome",
+      "kind": "event",
+      "name": "The Rakhigarhi Genome",
+      "parent_id": "south-asia.indus",
+      "start_year": -2800,
+      "end_year": -2300,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Dated by association, not directly. Five attempts to radiocarbon-date the individual's own remains failed on carbon-to-nitrogen ratio, so the only anchor is seven charcoal dates from the habitation area, 2800-2300 BCE. There is no calibrated date for the woman herself. The authors caution that one genome cannot characterise a cosmopolitan civilisation, and that a fitting model need not be the true source population.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Widely reported as disproving Indo-Aryan migration. It does not. It shows no steppe ancestry in one mature-period individual, which the companion paper agrees with.",
+          "source_ids": [
+            "shinde-2019-rakhigarhi-genome",
+            "narasimhan-2019-south-central-asia"
+          ]
+        }
+      ],
+      "source_ids": [
+        "shinde-2019-rakhigarhi-genome",
+        "kumar-rakhigarhi-radiocarbon"
+      ],
+      "summary": "A single woman's DNA, recovered after 61 attempts, showed the Harappans carried no steppe ancestry and no Anatolian farmer ancestry."
+    },
+    {
+      "id": "south-asia.steppe-ancestry",
+      "kind": "period",
+      "name": "Arrival of Steppe Ancestry in South Asia",
+      "parent_id": "south-asia",
+      "start_year": -1900,
+      "end_year": -1500,
+      "tier": "intermediate",
+      "start_dating_method": "unknown",
+      "end_dating_method": "unknown",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Not an excavated date but a genetic admixture estimate: in Swat individuals the relevant mixture dates to a 95% interval of roughly 1900-1500 BCE, 26 generations before they lived. Steppe ancestry is undetectable in South Asia before 2000 BCE. This dates a population mixture, not a language or an invasion; the authors state the path by which the ancestry arrived is uncertain, and some archaeologists see too few material-culture links between the Central Steppe and South Asia to accept a connection at all.",
+      "source_ids": [
+        "narasimhan-2019-south-central-asia"
+      ],
+      "summary": "The window in which steppe pastoralist ancestry entered South Asia, after the Harappan cities had already emptied."
+    },
+    {
+      "id": "south-asia.indus.deurbanisation",
+      "kind": "period",
+      "name": "Harappan Deurbanisation",
+      "parent_id": "south-asia.indus",
+      "start_year": -2200,
+      "end_year": -1900,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "An Arabian Sea isotope record shows rainfall and Indus discharge dropping abruptly at 4.2 ka, with the sharpest change at 4.1 ka. A 2023 study resolves this into a 230-year run of drought pulses centred at 4.19, 4.11 and 4.02 ka.",
+      "alternatives": [
+        {
+          "label": "Gradual decline from about 2500 BCE",
+          "standing": "minority",
+          "start_year": -2500,
+          "end_year": -1300,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Giosan and colleagues argue the monsoon weakened progressively rather than failing at one moment, and that a separate winter-monsoon decline around 1300-1000 BCE affected the late phase as well.",
+          "source_ids": [
+            "giosan-2018-indus-neoglacial"
+          ]
+        }
+      ],
+      "source_ids": [
+        "climate-of-the-past-2019-indus",
+        "nature-ceenv-2023-drought-pulses",
+        "giosan-2018-indus-neoglacial"
+      ],
+      "summary": "The cities are abandoned over roughly three centuries as the monsoon weakens and inundation agriculture stops paying."
+    },
+    {
+      "id": "south-asia.indus.ghaggar-hakra",
+      "kind": "period",
+      "name": "The Ghaggar-Hakra Question",
+      "parent_id": "south-asia.indus",
+      "start_year": -3000,
+      "end_year": -1400,
+      "tier": "specialist",
+      "start_dating_method": "unknown",
+      "end_dating_method": "unknown",
+      "standing": "minority",
+      "date_precision": "disputed",
+      "date_note": "Isotope work on Rann of Kachchh cores puts the last Himalayan glacier-fed river reaching the sea at roughly 10,000 years ago, which is several millennia before the Harappan period. Proposed desiccation dates for the later monsoon-fed channel range from the mid-4th millennium BCE to 1400 BCE. The timing is unresolved and consequential: a pre-Harappan drying cannot have caused a collapse that had not happened yet.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The river did not vanish overnight. The described process is a centuries-long shrinkage from a perennial glacier-fed river to an intermittent monsoon-fed one.",
+          "source_ids": [
+            "dave-2017-ghaggar-hakra"
+          ]
+        }
+      ],
+      "source_ids": [
+        "dave-2017-ghaggar-hakra"
+      ],
+      "summary": "Whether a great river dried and took the cities with it. The geology says the big glacier-fed river was already gone long before the cities existed.",
+      "aliases": [
+        "Sarasvati question"
+      ]
+    },
+    {
+      "id": "south-asia.indus.script",
+      "kind": "period",
+      "name": "The Indus Script",
+      "parent_id": "south-asia.indus",
+      "start_year": -2800,
+      "end_year": -1900,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Earliest writing is attested in the Kot Dijian phase at Harappa, 2800-2600 BCE, with potter's marks earlier still. The developed script runs through the mature period to about 1900 BCE. The writing question is still open after twenty years: the most recent work finds the corpus sits between the linguistic and non-linguistic baselines, matching neither.",
+      "alternatives": [
+        {
+          "label": "Not a writing system",
+          "standing": "minority",
+          "note": "Farmer, Sproat and Witzel argued in 2004 that inscriptions are too short and that no scribal class or writing equipment has been found. Rao replied that entropy resembles language.",
+          "source_ids": [
+            "farmer-sproat-witzel-2004",
+            "rao-2009-entropic-evidence",
+            "sproat-2010-indus-critique"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "harappa-oldest-indus-writing",
+        "farmer-sproat-witzel-2004",
+        "rao-2009-entropic-evidence",
+        "sproat-2010-indus-critique"
+      ],
+      "summary": "Undeciphered, and still argued over at a more basic level: whether the signs encode language at all.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.southern-neolithic",
+      "kind": "era",
+      "name": "Southern Neolithic",
+      "parent_id": "south-asia",
+      "start_year": -2500,
+      "end_year": -1000,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Three phases in the Allchin framework: 2500-2000, 2000-1600 and 1600-1000 BC. A second published scheme gives 2300-1800 and 1800-1200 cal BC for the later two. Both are in use; they are not averaged here.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not among the world's early Neolithic transitions, and not the earliest in South Asia. It begins in the 3rd millennium BC, well after the northwest.",
+          "source_ids": [
+            "boivin-fuller-korisettar-south-deccan"
+          ]
+        }
+      ],
+      "source_ids": [
+        "inflibnet-southern-neolithic-india",
+        "fuller-2001-southern-neolithic",
+        "boivin-fuller-korisettar-south-deccan"
+      ],
+      "summary": "A separate Neolithic in the South Deccan, built on cattle, native millets and enormous mounds of burnt dung."
+    },
+    {
+      "id": "south-asia.southern-neolithic.ashmounds",
+      "kind": "period",
+      "name": "The Ashmounds",
+      "parent_id": "south-asia.southern-neolithic",
+      "start_year": -1950,
+      "end_year": -1750,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "AMS dates and stratigraphy at the Sanganakallu complex put ash formation between 1950 and 1750 BC, over perhaps less than 200 years. Village activity then continued on top of the mounds for another 500-700 years. That the deposits are burnt dung is chemically settled; why the dung was burned is not, with proposals from disease control in pens to ritual. Only some mounds are dated: Kudatini and Budihal are placed by settlement typology rather than radiocarbon, so no dates are stated for them.",
+      "source_ids": [
+        "inflibnet-southern-neolithic-india",
+        "fuller-2001-southern-neolithic"
+      ],
+      "summary": "Mounds of burnt cattle dung, some many metres high, built up by repeated firing of cattle pens over less than two centuries.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.southern-neolithic.millets",
+      "kind": "period",
+      "name": "South Indian Millet Domestication",
+      "parent_id": "south-asia.southern-neolithic",
+      "start_year": -2500,
+      "end_year": -1000,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "The staples are Brachiaria ramosa and Setaria, both native South Indian species, present with mung bean and horsegram from the earliest levels. African pearl millet and finger millet arrive later, as introductions.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "An early claim that sorghum straw appears in ashmound slag near Kudatini is rejected by later systematic archaeobotany, which found no sorghum at all.",
+          "source_ids": [
+            "fuller-2001-southern-neolithic"
+          ]
+        }
+      ],
+      "source_ids": [
+        "fuller-2001-southern-neolithic",
+        "inflibnet-southern-neolithic-india"
+      ],
+      "summary": "Browntop and foxtail millet with mung bean and horsegram, argued to be domesticated in peninsular India rather than introduced."
+    },
+    {
+      "id": "south-asia.prehistory.burzahom",
+      "kind": "period",
+      "name": "Burzahom",
+      "parent_id": "south-asia.prehistory",
+      "start_year": -3000,
+      "end_year": -1000,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Eight charcoal dates run at TIFR in 1965-66, MASCA-calibrated, give an aceramic phase about 3000-2850 BCE, early ceramic 2850-2550, late ceramic 2550-1700, and a megalithic phase 1500-1000 BCE. The raw TF-series figures are uncalibrated and use a 5730-year half-life; mixing them with the MASCA-calibrated boundaries shifts the site by centuries.",
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "radiocarbon-1965-tf-series"
+      ],
+      "summary": "A Kashmir valley site of pit dwellings cut into loess, with a Neolithic sequence running into a megalithic phase."
     },
     {
       "id": "central-asia.prehistory.namazga",

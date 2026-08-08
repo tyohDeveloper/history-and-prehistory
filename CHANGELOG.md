@@ -14,6 +14,29 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.11.0.0-app] — 2026-08-08
+
+### Changed
+
+- `tools/coverage.py` now prints the childless-node report by DEFAULT rather
+  than behind `--childless`. The region-by-band matrix cannot see a structural
+  gap: a two-thousand-year era with no children counts as one entity in one
+  band, exactly like a node that is properly subdivided. The Indus Civilisation
+  sat undifferentiated for ten releases while the South Asia row looked merely
+  thin. The report existed the whole time; nobody passed the flag. A report that
+  must be asked for is a report that gets missed.
+- The same report now excludes synthesis eras — a node with caveats and no
+  children is a concept, not an empty container, and listing "The Anatolian
+  Farmer Turnover" as a gap sends the next pass after work that should not be
+  done.
+- Ships dataset 0.13.0.0. Build size baseline rebased to 184,848 bytes gzip.
+
+### Added
+
+- Two tests that pin the structural fix: the widest previously-childless eras
+  must keep their children, and the 1964 Harappan chronology must ship as
+  `superseded` rather than as a live rival.
+
 ## [3.10.0.0-app] — 2026-08-08
 
 ### Added

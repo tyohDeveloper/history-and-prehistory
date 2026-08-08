@@ -18,14 +18,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.12.0.0");
+    expect(datasetVersion).toBe("0.13.0.0");
     expect(schemaVersion).toBe("3.1.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1546);
+    expect(entities.length).toBe(1563);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -105,11 +105,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(241);
+    expect(cited.length).toBe(258);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(255);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(272);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -121,7 +121,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(192);
+    expect(withEnd.length).toBe(209);
 
     const differing = entities
       .filter(
@@ -449,6 +449,31 @@ describe("Central Asia and the Austronesian world", () => {
       expect(e.date_precision, `${e.id} precision`).toBe("traditional");
       expect(e.start_dating_method, `${e.id} method`).toBe("received");
     }
+  });
+
+  it("keeps the widest eras subdivided", () => {
+    // The region-by-band matrix cannot see a childless block: two thousand
+    // years of Indus Civilisation with no children counted as one entity in
+    // one band, exactly like a node that was properly subdivided. It sat that
+    // way for ten releases. These are the eras that gap-hunting has since
+    // filled, pinned so they cannot quietly empty out again.
+    const withKids = new Set(entities.map((e) => e.parent_id).filter(Boolean));
+    for (const id of [
+      "south-asia.indus",
+      "global.neolithic.agricultural-revolution",
+    ]) {
+      expect(entities.some((e) => e.id === id), `${id} exists`).toBe(true);
+      expect(withKids.has(id), `${id} has children`).toBe(true);
+    }
+  });
+
+  it("does not present a pre-calibration date as a live rival", () => {
+    // Agrawal's 550-year Harappan span is Science, February 1964 -- three
+    // years before the first calibration curve. It reads like a competing
+    // modern chronology and is not one, so it ships as `superseded`.
+    const mature = entities.find((e) => e.id === "south-asia.indus.mature")!;
+    const alt = mature.alternatives!.find((a) => a.dating_method === "radiocarbon-uncalibrated")!;
+    expect(alt.standing).toBe("superseded");
   });
 
   it("does not treat a received date as scientifically dated", () => {

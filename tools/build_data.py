@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.1.0"
-DATASET_VERSION = "0.12.0.0"
+DATASET_VERSION = "0.13.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1638,7 +1638,9 @@ _extend_central_asia(E, entities)
 
 # Reads the finished corpus to enrich Ban Chiang and Lapita in place.
 from extensions_seasia_oceania import extend as _extend_seasia_oceania
+from extensions_indus import extend as _extend_indus
 _extend_seasia_oceania(E, entities)
+_extend_indus(E, entities)
 
 # Marks received conventions across the corpus, so it runs after every module
 # that could author one.
@@ -3063,7 +3065,9 @@ sources.extend(AMERICAS_SOURCES)
 from extensions_central_asia import CENTRAL_ASIA_SOURCES  # noqa: E402
 sources.extend(CENTRAL_ASIA_SOURCES)
 from extensions_seasia_oceania import SEASIA_OCEANIA_SOURCES  # noqa: E402
+from extensions_indus import INDUS_SOURCES  # noqa: E402
 sources.extend(SEASIA_OCEANIA_SOURCES)
+sources.extend(INDUS_SOURCES)
 from received_conventions import RECEIVED_CONVENTION_SOURCES  # noqa: E402
 sources.extend(RECEIVED_CONVENTION_SOURCES)
 

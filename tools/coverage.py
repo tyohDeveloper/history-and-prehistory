@@ -17,15 +17,23 @@ attribute. Entities have exactly one start year but a date RANGE, so slicing on
 the entities most worth having. This report counts by START year for that
 reason, and `--spanning` prints the straddlers a naive cut would have lost.
 
+The matrix alone is not enough, which took a missed gap to learn. A childless
+era spanning two thousand years counts as ONE entity in ONE band, exactly like a
+node that is properly subdivided -- so the Indus Valley Civilisation sat in the
+dataset as a single undifferentiated block, 3300-1300 BCE with no children at
+all, while the South Asia row looked merely thin rather than structurally empty.
+The childless report had been present the whole time behind a flag nobody
+passed. It now runs by default, because a report that must be asked for is a
+report that gets missed.
+
 Reigns are reported separately throughout. A dynasty with forty kings is forty
 entities and close to zero additional coverage of a period, so mixing them in
 makes a well-covered century look like a well-covered world.
 
 Usage
 -----
-    python3 tools/coverage.py                # region x band matrix
+    python3 tools/coverage.py                # matrix + structural gaps
     python3 tools/coverage.py --spanning     # entities straddling each boundary
-    python3 tools/coverage.py --childless    # nodes with no children
     python3 tools/coverage.py --all
 """
 
@@ -139,11 +147,20 @@ def print_childless(entities):
         end = e.get("end_year")
         return (end - e["start_year"]) if end is not None else 0
 
+    # A synthesis era describes a process rather than containing a sequence --
+    # "The Anatolian Farmer Turnover" has nothing to subdivide and reporting it
+    # as a gap sends the next pass after work that should not be done. They are
+    # recognised by having no children AND carrying caveats, which is what a
+    # concept node exists to hold.
+    def is_synthesis(e):
+        return bool(e.get("caveats")) and e["kind"] == "era"
+
     empty = [
         e for e in entities
         if e["kind"] in ("era", "period")
         and kids.get(e["id"], 0) == 0
         and e.get("start_year") is not None
+        and not is_synthesis(e)
     ]
     eras = [e for e in empty if e["kind"] == "era"]
 
@@ -167,7 +184,6 @@ def print_childless(entities):
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--spanning", action="store_true")
-    ap.add_argument("--childless", action="store_true")
     ap.add_argument("--all", action="store_true")
     args = ap.parse_args()
 
@@ -179,10 +195,12 @@ def main() -> int:
     print_matrix(matrix(entities, include_reigns=True),
                  "Same, INCLUDING reigns (shows where ruler lists inflate the picture)")
 
+    # Not behind a flag. The matrix cannot see a childless block, and this is
+    # the report that actually names the next thing to work on.
+    print_childless(entities)
+
     if args.spanning or args.all:
         print_spanning(entities)
-    if args.childless or args.all:
-        print_childless(entities)
     return 0
 
 

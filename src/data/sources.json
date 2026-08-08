@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.12.0.0",
-  "generated_at": "2026-08-08T22:23:57Z",
+  "dataset_version": "0.13.0.0",
+  "generated_at": "2026-08-08T22:49:10Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -1994,6 +1994,155 @@
       "citation": "Debating Lapita: Distribution, Chronology, Society and Subsistence (ANU Press, open access)",
       "url": "https://library.oapen.org/bitstream/id/a0ef75fa-3f03-4d94-b680-70cb781c03a5/book%20(1).pdf",
       "note": "Other groups favour a later start of 3300-3200 cal BP."
+    },
+    {
+      "id": "harappa-test-trench-chronology",
+      "kind": "scholarly",
+      "citation": "Harappa Archaeological Research Project (Kenoyer & Meadow), 'Test Trench Chronology', harappa.com",
+      "url": "https://www.harappa.com/beas/test-trench-chronology",
+      "note": "Site-anchored sequence from more than seventy radiocarbon dates at Harappa. This, not any textbook, is where the familiar 2600-1900 BCE bracket comes from."
+    },
+    {
+      "id": "kenoyer-2008-indus-cities",
+      "kind": "scholarly",
+      "citation": "Kenoyer, 'Indus Urbanism: New Perspectives on its Origin and Character' (Sackler Colloquium, 2008)",
+      "url": "https://www.harappa.com/sites/default/files/pdf/Kenoyer2008%20Indus%20Cities%20Sackler%20Colloquiumfinalrevised.pdf",
+      "note": "'Initial urban development in the Indus region began between approximately 2800 and 2600 BC during Early Harappan Kot Diji phase.'"
+    },
+    {
+      "id": "agrawal-1964-shorter-chronology",
+      "kind": "scholarly",
+      "citation": "Agrawal, 'Harappa Culture: New Evidence for a Shorter Chronology', Science 143(3609), 28 February 1964",
+      "url": "https://www.science.org/doi/10.1126/science.143.3609.950",
+      "note": "'Radiocarbon dates suggest a total time spread of 550 years, from about 2300 to 1750 B.C.' Uncalibrated, and published before calibration curves existed."
+    },
+    {
+      "id": "dawn-2026-mohenjo-daro",
+      "kind": "press",
+      "citation": "Dawn, 'Fresh studies trace Mohenjo Daro's urban roots to 3300 BC', 25 March 2026",
+      "url": "https://www.dawn.com/news/1985048",
+      "note": "Press report of a technical briefing. No peer-reviewed paper had appeared as of this check."
+    },
+    {
+      "id": "archaeology-2026-mohenjo-daro",
+      "kind": "press",
+      "citation": "Archaeology Magazine, 'New Dates Push Back Occupation of Mohenjo-daro', 6 April 2026",
+      "url": "https://archaeology.org/news/2026/04/06/new-dates-push-back-occupation-of-mohenjo-daro/"
+    },
+    {
+      "id": "shinde-2019-rakhigarhi-genome",
+      "kind": "scholarly",
+      "citation": "Shinde, Narasimhan, Rohland et al., 'An Ancient Harappan Genome Lacks Ancestry from Steppe Pastoralists or Iranian Farmers', Cell 179 (2019)",
+      "url": "https://reich.hms.harvard.edu/sites/reich.hms.harvard.edu/files/inline-files/2019_Cell_ShindeNarasimhan_Rakhigarhi_0.pdf",
+      "note": "One individual, I6113. Of 61 skeletal samples attempted, only she yielded usable DNA."
+    },
+    {
+      "id": "narasimhan-2019-south-central-asia",
+      "kind": "scholarly",
+      "citation": "Narasimhan, Patterson, Moorjani et al., 'The formation of human populations in South and Central Asia', Science 365 (2019)",
+      "url": "https://reich.hms.harvard.edu/sites/reich.hms.harvard.edu/files/inline-files/eaat7487.full_.pdf",
+      "note": "The companion paper. States plainly that 'the path by which this ancestry arrived in South Asia is uncertain.'"
+    },
+    {
+      "id": "kumar-rakhigarhi-radiocarbon",
+      "kind": "scholarly",
+      "citation": "Kumar et al., AMS radiocarbon dates from Rakhigarhi (Inter University Accelerator Centre, Delhi)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5821334/"
+    },
+    {
+      "id": "leshnik-1968-lothal-dock",
+      "kind": "scholarly",
+      "citation": "Leshnik, 'The Harappan Port at Lothal: Another View', American Anthropologist 70 (1968)",
+      "url": "https://safarmer.com/Indo-Eurasian/Leshnik.pdf",
+      "note": "The original argument that the basin was a reservoir rather than a dock."
+    },
+    {
+      "id": "gupta-2024-lothal-geomorphology",
+      "kind": "scholarly",
+      "citation": "Gupta, Prabhakar & Jain, Journal of Archaeological Science 170 (October 2024)",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305440324001146",
+      "note": "Argues for the dockyard reading, while stating that 'the debate surrounding the function of this structure remains unresolved.'"
+    },
+    {
+      "id": "sengupta-2020-dholavira",
+      "kind": "scholarly",
+      "citation": "Sengupta et al., 'Did the Harappan settlement of Dholavira (India) collapse during the onset of Meghalayan stage drought?', Journal of Quaternary Science 35 (2020)",
+      "url": "https://ui.adsabs.harvard.edu/abs/2020JQS....35..382S"
+    },
+    {
+      "id": "climate-of-the-past-2019-indus",
+      "kind": "scholarly",
+      "citation": "Climate of the Past 15 (2019), NE Arabian Sea oxygen-isotope record",
+      "url": "https://cp.copernicus.org/articles/15/73/2019/cp-15-73-2019.pdf"
+    },
+    {
+      "id": "nature-ceenv-2023-drought-pulses",
+      "kind": "scholarly",
+      "citation": "Communications Earth & Environment (2023), drought pulses at 4.19, 4.11 and 4.02 ka",
+      "url": "https://www.nature.com/articles/s43247-023-00763-z"
+    },
+    {
+      "id": "giosan-2018-indus-neoglacial",
+      "kind": "scholarly",
+      "citation": "Giosan et al., 'Neoglacial climate anomalies and the Harappan metamorphosis', Climate of the Past 14 (2018)",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10047870/7/Goisan_Indus-NeoGlacial_cp-14-1669-2018.pdf"
+    },
+    {
+      "id": "dave-2017-ghaggar-hakra",
+      "kind": "scholarly",
+      "citation": "Dave et al., 'A million-year-old river in the Thar', Scientific Reports 7 (2017)",
+      "url": "https://www.nature.com/articles/s41598-017-05745-8",
+      "note": "Nd/Sr isotopes on Rann of Kachchh cores: a Himalayan glacier-fed river reached the sea until roughly 10,000 years ago, well before the Harappan period."
+    },
+    {
+      "id": "farmer-sproat-witzel-2004",
+      "kind": "scholarly",
+      "citation": "Farmer, Sproat & Witzel, 'The Collapse of the Indus-Script Thesis', Electronic Journal of Vedic Studies 11(2), 2004",
+      "url": "https://etana.org/node/7709"
+    },
+    {
+      "id": "rao-2009-entropic-evidence",
+      "kind": "scholarly",
+      "citation": "Rao, Yadav, Vahia et al., 'Entropic Evidence for Linguistic Structure in the Indus Script', Science 324 (2009)",
+      "url": "https://www.science.org/doi/10.1126/science.1170391"
+    },
+    {
+      "id": "sproat-2010-indus-critique",
+      "kind": "scholarly",
+      "citation": "Sproat, 'Ancient Symbols, Computational Linguistics, and the Reviewing Practices of the General Science Journals', Computational Linguistics 36(4), 2010",
+      "url": "https://aclanthology.org/J10-4017.pdf"
+    },
+    {
+      "id": "harappa-oldest-indus-writing",
+      "kind": "scholarly",
+      "citation": "Harappa Archaeological Research Project, 'How old is the oldest ancient Indus writing?'",
+      "url": "https://www.harappa.com/answers/how-old-oldest-ancient-indus-writing"
+    },
+    {
+      "id": "fuller-2001-southern-neolithic",
+      "kind": "scholarly",
+      "citation": "Fuller, 'Ashmounds and hilltop villages: the search for early agriculture in southern India' (EASAA 2001)",
+      "url": "https://www.homepages.ucl.ac.uk/~tcrndfu/articles/EASAA2001a.pdf"
+    },
+    {
+      "id": "inflibnet-southern-neolithic-india",
+      "kind": "reference",
+      "citation": "'The Southern Neolithic of India', INFLIBNET e-PG Pathshala chapter",
+      "url": "https://ebooks.inflibnet.ac.in/icp02/chapter/87/"
+    },
+    {
+      "id": "boivin-fuller-korisettar-south-deccan",
+      "kind": "scholarly",
+      "citation": "Boivin, Fuller & Korisettar, on the South Deccan Neolithic (Max Planck Society repository)",
+      "url": "https://pure.mpg.de/rest/items/item_2248630/component/file_2248629/content",
+      "note": "Places the South Deccan Neolithic 'sometime in the 3rd millennium BC' -- explicitly not among the world's earliest, nor the earliest in South Asia."
+    },
+    {
+      "id": "radiocarbon-1965-tf-series",
+      "kind": "scholarly",
+      "citation": "Tata Institute of Fundamental Research radiocarbon date list (TF series), Radiocarbon (1965)",
+      "url": "https://journals.uair.arizona.edu/index.php/radiocarbon/article/viewFile/3302/2894",
+      "note": "The original published lab table behind the Burzahom chronology."
     },
     {
       "id": "masson-altyn-depe-summary",

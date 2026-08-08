@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 177797,
+  "gzipBytes": 184848,
   "recordedAt": "2026-08-08",
-  "note": "v3.10.0.0 + the received dating method and its rendering (data 0.12.0.0, schema 3.1.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.11.0.0 + the Indus Civilisation subdivided and the Southern Neolithic added (data 0.13.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

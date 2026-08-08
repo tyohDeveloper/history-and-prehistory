@@ -5,9 +5,12 @@ Ships as **one HTML file** that runs offline from `file://`, stores nothing, and
 
 Planned home: **`history.tyoh.app`** — the History member of the [tyoh.app tools family](#the-tyohapp-family).
 
-> **Status:** v0.1.0 baseline. The v2.1.0 dataset (1,305 entities) and the Miller-column picker
-> are in place. The prehistory extension, multi-calendar readout, and multi-script input grammar
-> are not built yet. See [`docs/gap-analysis-v2.1.0.md`](docs/gap-analysis-v2.1.0.md) for the roadmap.
+> **Status:** dataset **v3.1.0** (1,417 entities, 114 sources, schema 2.0.0). The Miller-column
+> picker, the prehistory extension back to 3.3 Ma, the multi-calendar readout, and the
+> focus+context lens are in place. The multi-script input grammar is not built yet.
+> [`docs/DESIGN.md`](docs/DESIGN.md) is the living design doc and carries the open-item register;
+> [`docs/gap-analysis-v2.1.0.md`](docs/gap-analysis-v2.1.0.md) is the original roadmap and is now
+> largely historical.
 
 ## Quickstart
 
@@ -21,6 +24,28 @@ npm run validate:data  # JSON Schema + referential integrity (needs python3 + js
 
 `npm run build` writes a single self-contained `dist/public/index.html`. Open it directly in a
 browser — no server needed.
+
+### Running on Replit
+
+The repo carries a working [`.replit`](.replit); importing it needs no configuration.
+
+- **Modules** `nodejs-20` and `python-3.12`. Python is only needed for `npm run validate:data` and
+  the `tools/` generators — the app builds and runs without it.
+- **Run** is `npm run dev`. Vite binds `0.0.0.0:5000` to match the port mapping (`5000` → `80`) —
+  a default `localhost` bind is not reachable from the Replit webview. The bind is set in
+  `vite.config.ts` as well as in the `dev`/`preview` script flags, so running `npx vite` directly
+  works too.
+- **Deployment** is `static`, publishing `dist/public` after `npm run build`. There is no server
+  to run in production — the build output is one file.
+
+Two things that are not automatic:
+
+- `npm run test:e2e` needs browsers first: `npx playwright install chromium`. The unit tests and
+  the build need no such step.
+- `npm run validate:data` needs `jsonschema` in the Python environment.
+
+Verified from a clean clone on 2026-08-08: `npm install`, `npm run dev`, and `npm run build` all
+succeed on Node 20 with no configuration changes.
 
 ## What it does
 
@@ -37,12 +62,13 @@ browser — no server needed.
 
 | | |
 |---|---|
-| Version | 2.1.0 (schema 1.0.0) |
-| Entities | 1,305 — 43 regions, 248 eras, 343 periods, 643 reigns, 28 events |
-| Tiers | 337 foundational · 416 intermediate · 552 specialist |
+| Version | 3.1.0 (schema 2.0.0) |
+| Entities | 1,417 — 643 reigns, 422 periods, 259 eras, 43 regions, 28 events, 12 taxa, 10 thresholds |
+| Tiers | 386 foundational · 469 intermediate · 562 specialist |
 | Calendars | 21 dating systems, including the full Japanese nengō sequence |
 | Themes | 16 cross-cutting collections |
-| Reference frames | 37 novice-friendly anchor dates |
+| Reference frames | 44 novice-friendly anchor dates |
+| Sources | 114 cited works |
 
 Authoritative sources are `schemas/` (JSON Schema) and `tools/` (Python generators + validator).
 `src/data/*.json` is generated output, committed so the build is reproducible without Python.
@@ -79,12 +105,15 @@ fresh tab (`rel="noopener noreferrer"`).
 
 ```
 src/
-  main.ts               UI layer — rendering and event wiring
+  main.ts               VIEW — the only view file: rendering and event wiring
   style.css
-  lib/
-    types.ts            Entity/Calendar/Theme types mirroring schemas/
-    dataset.ts          Build-time inlined data (no runtime fetch)
-    tree.ts             Pure functions: index, path, search, tier, formatting
+  calendars/            Calendar registry, conversion, and selection
+  chrono/               Year parsing, BP senses, display ranges
+  temporal/             Temporal API shim and Julian-day conversion
+  entity/               Entity types; tree index, path, search, formatting
+  dataset/              Build-time inlined data (no runtime fetch)
+  focus/                Degree-of-interest scoring for the focus+context lens
+  research/             Research handoff records
   data/*.json           Generated dataset, inlined at build time
 schemas/*.json          JSON Schema — the authoritative data contract
 tools/                  Python dataset generators and validator
@@ -104,8 +133,11 @@ docs/                   Gap analysis, dataset changelog, model-council reviews
 TypeScript (strict) · Vite · `vite-plugin-singlefile` · Vitest · Playwright ·
 `html-minifier-terser` · GitHub Actions.
 
+Directories under `src/` name domains, not layers — there is no `lib/`, `utils/`, or `helpers/`.
+`docs/CODING-STANDARDS.md` §3.8 makes this binding and `tools/check_standards.py` measures it.
+
 No UI framework. The picker is a tree renderer over a static dataset — a framework would cost
-bundle budget that the 1,305-entity dataset needs, and would not remove any real complexity.
+bundle budget that the 1,417-entity dataset needs, and would not remove any real complexity.
 Reconsider only if the UI grows genuine client-side routing or heavy shared state.
 
 ## Contributing
@@ -125,7 +157,7 @@ Bundle size is baselined. If a change grows gzip by more than 5%, the build fail
 |---|---|---|
 | `tyoh.app` | Hub / launcher | Planned |
 | `units.tyoh.app` | [OmniUnitConverter-Calculator](https://github.com/tyohDeveloper/OmniUnitConverter-Calculator) | Currently at apex; scheduled to move |
-| `history.tyoh.app` | **History & Prehistory** (this repo) | v0.1.0 baseline |
+| `history.tyoh.app` | **History & Prehistory** (this repo) | In development — dataset v3.1.0, picker and lens working |
 | `earth-cosmos.tyoh.app` | Deep Time — cosmology, geology, evolution | Planned |
 | `decay.tyoh.app` | Nuclear, particle, and atomic timescales | Planned |
 

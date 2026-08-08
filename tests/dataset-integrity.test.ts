@@ -14,8 +14,9 @@ describe("dataset envelope", () => {
   });
 
   it("has the expected collection sizes", () => {
-    // 1,305 historical entities plus the five-entity prehistory pilot.
-    expect(entities.length).toBe(1310);
+    // 1,305 historical entities plus the prehistory branch: the genus Homo,
+    // the stone-tool industries, and two sites.
+    expect(entities.length).toBe(1333);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(37);
@@ -91,17 +92,28 @@ describe("gap-analysis baseline", () => {
   // These assertions track docs/gap-analysis-v2.1.0.md. They are designed to
   // FAIL when a gap closes, so a partial backfill cannot drift unnoticed --
   // update the number in the same commit that closes it.
-  it("now cites sources on the prehistory pilot", () => {
+  it("cites sources across the prehistory branch", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
-    // field. Closing that (Q-10) is what made these five possible.
+    // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(4);
-    expect(cited.every((e) => e.id.startsWith("global.prehistory"))).toBe(true);
+    expect(cited.length).toBe(27);
   });
 
-  it("now carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.dating_method !== undefined).length).toBe(4);
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(5);
+  it("carries dating methods and uncertainty bounds", () => {
+    expect(entities.filter((e) => e.dating_method !== undefined).length).toBe(29);
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(13);
+  });
+
+  it("distinguishes an extant taxon from an undated end", () => {
+    // end_year null means "extant" for H. sapiens and "never dated" for
+    // H. luzonensis. Conflating them would put a hominin known from foot
+    // bones among the living.
+    const sapiens = entities.find((e) => e.id === "global.prehistory.origins.homo-sapiens");
+    const luzon = entities.find((e) => e.id === "global.prehistory.origins.homo-luzonensis");
+    expect(sapiens?.end_year).toBeNull();
+    expect(sapiens?.end_precision).toBeUndefined();
+    expect(luzon?.end_year).toBeNull();
+    expect(luzon?.end_precision).toBe("unknown");
   });
 
   it("has calendar_ids on only 267 entities", () => {

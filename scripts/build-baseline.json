@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 87698,
+  "gzipBytes": 93324,
   "recordedAt": "2026-08-07",
-  "note": "v0.2.1: adds the schema 1.1.0 prehistory pilot (5 entities) and the source registry on top of the polyfill and conversion layer."
+  "note": "v0.3.0: genus Homo and stone-tool industry branches (1,333 entities), plus the provenance-driven display-range layer."
 }

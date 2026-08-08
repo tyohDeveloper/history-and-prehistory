@@ -129,3 +129,21 @@ describe("compareEntities", () => {
     expect(compareEntities(a, b)).toBeGreaterThan(0);
   });
 });
+
+describe("an absent end year means two different things", () => {
+  it("renders an extant taxon as present", () => {
+    expect(formatRange(mk({ id: "sapiens", start_year: -313050, end_year: null }))).toContain(
+      "present",
+    );
+  });
+
+  it("renders an undated end as unknown, not present", () => {
+    // H. luzonensis certainly ended; the youngest remains have never been
+    // dated. "present" would assert it is still walking around.
+    expect(
+      formatRange(
+        mk({ id: "luzonensis", start_year: -132050, end_year: null, end_precision: "unknown" }),
+      ),
+    ).toContain("unknown");
+  });
+});

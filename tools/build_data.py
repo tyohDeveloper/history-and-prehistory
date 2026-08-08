@@ -157,10 +157,25 @@ E("global.ce", "era", "CE (Common Era)", "global",
   start=1, end=None, tier="foundational",
   summary="The 'Common Era' convention for years from year 1 onward. Equivalent to AD.")
 
-E("global.paleolithic", "era", "Paleolithic (Old Stone Age)", "global",
-  start=-3300000, end=-10000, date_precision="approx", tier="foundational")
-E("global.mesolithic", "era", "Mesolithic", "global", start=-10000, end=-5000, tier="intermediate")
-E("global.neolithic", "era", "Neolithic (New Stone Age)", "global",
+# The three stone ages hang under Human Prehistory rather than beside it.
+# They were siblings of it in v2.1.0, which meant two parallel prehistory
+# branches covering the same span. Ids are unchanged, so nothing needs a
+# redirect: the id records where an entity was minted, the parent records
+# where it sits.
+E("global.paleolithic", "era", "Paleolithic (Old Stone Age)", "global.prehistory",
+  start=-3300000, end=-10000, date_precision="approx", tier="foundational",
+  dating_method="argon-argon",
+  summary="The long first chapter: stone tools, fire, and hunter-gatherer life, from the "
+          "earliest knapped stone through the whole span of the genus Homo.",
+  date_note="Starts at the earliest known stone tools \u2014 Lomekwi 3, c. 3.3 Ma \u2014 "
+            "which predate the genus Homo. Whether those count as Oldowan is a "
+            "definitional argument; they are included here because the toolmaking record "
+            "is continuous even where the taxonomy is not.")
+E("global.mesolithic", "era", "Mesolithic", "global.prehistory", start=-10000, end=-5000,
+  tier="intermediate",
+  date_note="A Eurasian term. It has no counterpart in the Americas, sub-Saharan Africa "
+            "or Australia, where the post-glacial sequence is described differently.")
+E("global.neolithic", "era", "Neolithic (New Stone Age)", "global.prehistory",
   start=-10000, end=-3300, tier="foundational",
   summary="Beginnings of agriculture, animal domestication, and permanent villages.")
 E("global.bronze-age", "era", "Bronze Age", "global",
@@ -2259,6 +2274,127 @@ themes = [
 # substance of the claim. See docs/DESIGN.md, "Sources: the exception".
 
 sources = [
+    {
+        "id": "smithsonian-human-origins",
+        "kind": "reference",
+        "citation": "Smithsonian National Museum of Natural History, Human Origins Program",
+        "url": "https://humanorigins.si.edu/evidence/human-fossils/species",
+    },
+    {
+        "id": "villmoare-2015-ledi-geraru",
+        "kind": "scholarly",
+        "citation": "Villmoare et al. (2015), 'Early Homo at 2.8 Ma from Ledi-Geraru, Afar, Ethiopia', Science",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25739410/",
+    },
+    {
+        "id": "hawks-2015-ledi-geraru-dissent",
+        "kind": "scholarly",
+        "citation": "Hawks, de Ruiter & Berger (2015), comment on the attribution of LD 350-1 to Homo",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26089505/",
+        "note": "Minority position: argues LD 350-1 cannot be unequivocally assigned to Homo.",
+    },
+    {
+        "id": "nature-2025-gurumaha-tuff",
+        "kind": "scholarly",
+        "citation": "Nature (2025), Ar/Ar constraint on the Gurumaha Tuff, 2.782 +/- 0.006 Ma",
+        "url": "https://www.nature.com/articles/s41586-025-09390-4",
+    },
+    {
+        "id": "rizal-2020-ngandong",
+        "kind": "scholarly",
+        "citation": "Rizal et al. (2020), 'Last appearance of Homo erectus at Ngandong, Java, 117,000-108,000 years ago', Nature",
+        "url": "https://www.nature.com/articles/s41586-019-1863-2",
+    },
+    {
+        "id": "falgueres-gran-dolina",
+        "kind": "scholarly",
+        "citation": "Falgueres et al., ESR/U-series chronology of Gran Dolina TD6, Atapuerca",
+        "url": "https://hal.science/hal-01911095",
+    },
+    {
+        "id": "douka-2019-denisova",
+        "kind": "scholarly",
+        "citation": "Douka et al. (2019), 'Age estimates for hominin fossils and the onset of the Upper Palaeolithic at Denisova Cave', Nature",
+        "url": "https://www.nature.com/articles/s41586-018-0870-z",
+    },
+    {
+        "id": "nhm-luzonensis",
+        "kind": "reference",
+        "citation": "Natural History Museum, London — Homo luzonensis",
+        "url": "https://www.nhm.ac.uk/discover/homo-luzonensis-your-guide-to-the-species.html",
+    },
+    {
+        "id": "hublin-2017-jebel-irhoud",
+        "kind": "scholarly",
+        "citation": "Hublin et al. (2017), 'New fossils from Jebel Irhoud, Morocco and the pan-African origin of Homo sapiens', Nature",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28593953/",
+    },
+    {
+        "id": "ji-2021-homo-longi",
+        "kind": "scholarly",
+        "citation": "Ji et al. (2021), description of the Harbin cranium as Homo longi, The Innovation",
+        "url": "https://www.cell.com/the-innovation/fulltext/S2666-6758(21)00057-9",
+    },
+    {
+        "id": "fu-2025-harbin-proteome",
+        "kind": "scholarly",
+        "citation": "Fu et al. (2025), palaeoproteomic analysis placing the Harbin cranium with Denisova 3",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40531192/",
+    },
+    {
+        "id": "lepre-2011-kokiselei",
+        "kind": "scholarly",
+        "citation": "Lepre et al. (2011), 'An earlier origin for the Acheulian', Nature",
+        "url": "https://www.nature.com/articles/nature10372",
+    },
+    {
+        "id": "marin-arroyo-2018-cantabria",
+        "kind": "scholarly",
+        "citation": "Marin-Arroyo et al. (2018), chronology of the Middle to Upper Palaeolithic transition in Cantabrian Spain, PLOS ONE",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0194708",
+    },
+    {
+        "id": "banks-2013-aurignacian",
+        "kind": "scholarly",
+        "citation": "Banks et al. (2013), Proto-Aurignacian and Early Aurignacian chronology",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23245623/",
+    },
+    {
+        "id": "rios-garaizar-2022-chatelperronian",
+        "kind": "scholarly",
+        "citation": "Rios-Garaizar et al. (2022), Chatelperronian chronology in southwest Europe, PLOS ONE",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265219",
+    },
+    {
+        "id": "cascalheira-2015-solutrean",
+        "kind": "scholarly",
+        "citation": "Cascalheira & Bicho (2015), Bayesian analysis of the Solutrean sequence, PLOS ONE",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0122560",
+    },
+    {
+        "id": "wurz-2013-msa",
+        "kind": "scholarly",
+        "citation": "Wurz (2013), 'Technological trends in the Middle Stone Age of South Africa', Current Anthropology",
+        "url": "https://www.journals.uchicago.edu/doi/10.1086/673283",
+    },
+    {
+        "id": "jacobs-2008-msa",
+        "kind": "scholarly",
+        "citation": "Jacobs et al. (2008), 'Ages for the Middle Stone Age of southern Africa', Science",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18974351/",
+    },
+    {
+        "id": "villa-2012-border-cave",
+        "kind": "scholarly",
+        "citation": "Villa et al. (2012), 'Border Cave and the beginning of the Later Stone Age in South Africa', PNAS",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.1202629109",
+    },
+    {
+        "id": "plos-2022-el-mnasra",
+        "kind": "scholarly",
+        "citation": "PLOS ONE (2022), chronology of the Aterian at El Mnasra, Morocco",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0261282",
+    },
     {
         "id": "braun-2019-bokol-dora",
         "kind": "scholarly",

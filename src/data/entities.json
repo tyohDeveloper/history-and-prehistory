@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "dataset_version": "2.2.0",
-  "generated_at": "2026-08-08T00:14:29Z",
+  "generated_at": "2026-08-08T02:00:33Z",
   "entities": [
     {
       "id": "global",
@@ -479,28 +479,31 @@
       "id": "global.paleolithic",
       "kind": "era",
       "name": "Paleolithic (Old Stone Age)",
-      "parent_id": "global",
+      "parent_id": "global.prehistory",
       "start_year": -3300000,
       "end_year": -10000,
       "date_precision": "approx",
       "tier": "foundational",
-      "summary": "Old Stone Age. Human evolution and hunter-gatherer societies before the invention of agriculture."
+      "dating_method": "argon-argon",
+      "summary": "The long first chapter: stone tools, fire, and hunter-gatherer life, from the earliest knapped stone through the whole span of the genus Homo.",
+      "date_note": "Starts at the earliest known stone tools — Lomekwi 3, c. 3.3 Ma — which predate the genus Homo. Whether those count as Oldowan is a definitional argument; they are included here because the toolmaking record is continuous even where the taxonomy is not."
     },
     {
       "id": "global.mesolithic",
       "kind": "era",
       "name": "Mesolithic",
-      "parent_id": "global",
+      "parent_id": "global.prehistory",
       "start_year": -10000,
       "end_year": -5000,
       "tier": "intermediate",
+      "date_note": "A Eurasian term. It has no counterpart in the Americas, sub-Saharan Africa or Australia, where the post-glacial sequence is described differently.",
       "date_precision": "approx"
     },
     {
       "id": "global.neolithic",
       "kind": "era",
       "name": "Neolithic (New Stone Age)",
-      "parent_id": "global",
+      "parent_id": "global.prehistory",
       "start_year": -10000,
       "end_year": -3300,
       "tier": "foundational",
@@ -15048,66 +15051,244 @@
       "start_year": -3300000,
       "end_year": -3000,
       "tier": "foundational",
-      "summary": "From the first stone tools to the earliest written records. Dated by measurement rather than reckoning, so quoted in years before present.",
-      "date_note": "End is diachronous: writing appears at different times in different regions.",
+      "dating_method": "argon-argon",
+      "summary": "From the earliest stone tools to the first written records. Dated by measurement rather than reckoning, so quoted in years before present.",
+      "date_note": "Begins with the earliest knapped stone at 3.3 Ma, which predates the genus Homo: the toolmaking record runs continuously across that taxonomic boundary. Ends diachronously, as writing appears at different times in different regions.",
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.oldowan",
-      "kind": "period",
-      "name": "Oldowan Industry",
+      "id": "global.prehistory.origins",
+      "kind": "era",
+      "name": "The Genus Homo",
       "parent_id": "global.prehistory",
-      "start_year": -2600000,
-      "end_year": -1700000,
+      "start_year": -2798051,
+      "end_year": null,
       "tier": "foundational",
-      "start_year_min": -2618000,
-      "start_year_max": -2550000,
+      "start_year_min": -2798051,
+      "start_year_max": -2748051,
       "dating_method": "argon-argon",
       "standing": "consensus",
-      "date_note": "Lomekwi 3 tools at 3.3 Ma are excluded by classifying them as Lomekwian rather than Oldowan, so the boundary is definitional as much as evidential.",
-      "source_ids": [
-        "braun-2019-bokol-dora"
+      "summary": "Our own genus: a dozen or so named species, most of which overlapped with others rather than succeeding them in a line.",
+      "allow_outside_parent_dates": true,
+      "date_note": "The earliest fossil attributed to Homo is LD 350-1 from Ledi-Geraru, Ethiopia, at 2.80-2.75 Ma, constrained by the Gurumaha Tuff at 2.782 +/- 0.006 Ma. The genus is ongoing, so it outlasts prehistory rather than ending with it.",
+      "alternatives": [
+        {
+          "label": "LD 350-1 not assignable to Homo",
+          "standing": "minority",
+          "start_year": -2798051,
+          "dating_method": "argon-argon",
+          "note": "Argues the mandible cannot be unequivocally attributed to Homo, which would leave the genus with no securely dated fossil this early.",
+          "source_ids": [
+            "hawks-2015-ledi-geraru-dissent"
+          ]
+        }
       ],
-      "summary": "The earliest widely recognised stone tool industry, defined by simple flakes struck from cores.",
+      "source_ids": [
+        "villmoare-2015-ledi-geraru",
+        "nature-2025-gurumaha-tuff",
+        "hawks-2015-ledi-geraru-dissent"
+      ],
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.gobekli-tepe",
+      "id": "global.prehistory.origins.homo-habilis",
       "kind": "period",
-      "name": "Göbekli Tepe",
-      "parent_id": "global.prehistory",
-      "start_year": -9530,
-      "end_year": -8000,
+      "name": "Homo habilis",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -2398051,
+      "end_year": -1398051,
       "tier": "foundational",
-      "start_year_min": -9745,
-      "start_year_max": -9314,
+      "dating_method": "argon-argon",
+      "standing": "consensus",
+      "date_note": "Whether the material forms one species, and whether it belongs in Homo at all, is still argued. The late specimen KNM-ER 42703 is 1.44 Ma.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Some researchers would move this material out of Homo entirely, which would change where our genus begins.",
+          "source_ids": [
+            "smithsonian-human-origins"
+          ]
+        }
+      ],
+      "source_ids": [
+        "smithsonian-human-origins"
+      ],
+      "summary": "An early, small-brained human in Africa from about 2.4 to 1.4 million years ago, overlapping with other human species.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.origins.homo-rudolfensis",
+      "kind": "period",
+      "name": "Homo rudolfensis",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -1898051,
+      "end_year": -1798051,
+      "tier": "specialist",
+      "dating_method": "argon-argon",
+      "standing": "minority",
+      "date_note": "Type specimen KNM-ER 1470, Koobi Fora. Four hominin species coexisted in the Turkana Basin between 2.0 and 1.5 Ma.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Some researchers assign this material to Homo habilis rather than to a separate species.",
+          "source_ids": [
+            "smithsonian-human-origins"
+          ]
+        }
+      ],
+      "source_ids": [
+        "smithsonian-human-origins"
+      ],
+      "summary": "A flat-faced, big-toothed early human from Kenya about 1.9 million years ago whose place in the human genus is still argued over.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.origins.homo-erectus",
+      "kind": "period",
+      "name": "Homo erectus",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -1888051,
+      "end_year": -108051,
+      "tier": "foundational",
+      "end_year_min": -115051,
+      "end_year_max": -106051,
+      "dating_method": "uranium-series",
+      "standing": "consensus",
+      "date_note": "Treated here sensu lato, including African material sometimes separated as H. ergaster. The terminal Ngandong date rests on Bayesian modelling of 52 radiometric estimates.",
+      "source_ids": [
+        "smithsonian-human-origins",
+        "rizal-2020-ngandong"
+      ],
+      "summary": "The first widely travelled human species, present from about 1.9 million years ago until roughly 110,000 years ago in Java.",
+      "aliases": [
+        "Homo ergaster",
+        "Java Man",
+        "Peking Man"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.origins.homo-antecessor",
+      "kind": "period",
+      "name": "Homo antecessor",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -855051,
+      "end_year": -778051,
+      "tier": "specialist",
+      "dating_method": "esr",
+      "standing": "minority",
+      "date_note": "Gran Dolina level TD6 dates to 780-857 ka. The young limit is fixed by reversed Matuyama polarity, which requires an age greater than 780 ka.",
+      "source_ids": [
+        "falgueres-gran-dolina"
+      ],
+      "summary": "An early European human from a Spanish cave, about 800,000 years old, whose status as a separate species is still argued.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.origins.homo-heidelbergensis",
+      "kind": "period",
+      "name": "Homo heidelbergensis",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -698051,
+      "end_year": -198051,
+      "tier": "intermediate",
+      "start_year_min": -1298051,
+      "start_year_max": -698051,
+      "dating_method": "unknown",
+      "standing": "consensus",
+      "date_note": "Range may reach 1.3 Ma if older Spanish and Italian material is included.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Functions partly as a catch-all for Middle Pleistocene humans; several proposed splits would dismantle it.",
+          "source_ids": [
+            "smithsonian-human-origins"
+          ]
+        }
+      ],
+      "source_ids": [
+        "smithsonian-human-origins"
+      ],
+      "summary": "A large-brained Middle Pleistocene human in Europe, Africa and the Near East, roughly 700,000 to 200,000 years ago.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.origins.homo-naledi",
+      "kind": "period",
+      "name": "Homo naledi",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -333051,
+      "end_year": -234051,
+      "tier": "intermediate",
+      "dating_method": "uranium-series",
+      "standing": "consensus",
+      "date_note": "Its position in the human family tree is unresolved.",
+      "source_ids": [
+        "smithsonian-human-origins"
+      ],
+      "summary": "A small-brained human found deep in a South African cave system, surprisingly recent at 335,000 to 236,000 years ago.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.origins.homo-neanderthalensis",
+      "kind": "period",
+      "name": "Homo neanderthalensis",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -398051,
+      "end_year": -38051,
+      "tier": "foundational",
       "dating_method": "radiocarbon-calibrated",
       "standing": "consensus",
-      "date_note": "Only 11 radiocarbon dates exist. Kinzel and Clare abandoned the Layer III/II/I scheme for at least eight phases, so phase labels in older sources do not map cleanly.",
+      "date_note": "The extinction date is not uniform across the range; the associated Mousterian ends 41,030-39,260 cal BP.",
       "source_ids": [
-        "dietrich-2013-gobekli"
+        "smithsonian-human-origins",
+        "marin-arroyo-2018-cantabria"
       ],
-      "summary": "Monumental enclosures built by pre-agricultural communities in southeastern Anatolia, overturning the assumption that monuments require farming.",
-      "native_name": "Göbekli Tepe",
+      "summary": "Cold-adapted humans across Europe and western Asia, from about 400,000 years ago until roughly 40,000 years ago.",
+      "aliases": [
+        "Neanderthal"
+      ],
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.homo-floresiensis",
+      "id": "global.prehistory.origins.denisovans",
+      "kind": "period",
+      "name": "Denisovans",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -193051,
+      "end_year": -50051,
+      "tier": "intermediate",
+      "end_year_min": -74051,
+      "end_year_max": -50051,
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Genetically unambiguous but with no formally accepted species name and no type specimen in the conventional sense.",
+      "source_ids": [
+        "douka-2019-denisova"
+      ],
+      "summary": "A human population known mainly from DNA, identified from fragments in a Siberian cave and traceable in living people.",
+      "aliases": [
+        "Denisova hominin"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.origins.homo-floresiensis",
       "kind": "period",
       "name": "Homo floresiensis",
-      "parent_id": "global.prehistory",
-      "start_year": -100000,
-      "end_year": -50000,
+      "parent_id": "global.prehistory.origins",
+      "start_year": -98051,
+      "end_year": -58051,
       "tier": "intermediate",
       "dating_method": "luminescence",
       "standing": "consensus",
-      "date_note": "Youngest skeletal remains around 60 ka, with artefacts to about 50 ka.",
+      "date_note": "Skeletal remains to about 60 ka, associated artefacts from about 190 ka and continuing to about 50 ka.",
       "alternatives": [
         {
           "label": "Original 2004 chronology",
           "standing": "superseded",
-          "start_year": -18000,
-          "end_year": -12000,
+          "start_year": -16051,
+          "end_year": -10051,
           "dating_method": "radiocarbon-calibrated",
           "note": "Withdrawn in 2016: the dated deposits proved to be a younger unit unconformably overlying the remains.",
           "source_ids": [
@@ -15127,17 +15308,384 @@
       "source_ids": [
         "sutikna-2016-flores"
       ],
-      "summary": "A small-bodied hominin known from Liang Bua cave on Flores, Indonesia.",
+      "summary": "A small-bodied human on the Indonesian island of Flores, known from Liang Bua cave.",
       "aliases": [
         "Flores hobbit"
       ],
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.monte-verde",
+      "id": "global.prehistory.origins.homo-luzonensis",
+      "kind": "period",
+      "name": "Homo luzonensis",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -132051,
+      "end_year": null,
+      "tier": "specialist",
+      "dating_method": "uranium-series",
+      "standing": "minority",
+      "end_precision": "unknown",
+      "date_note": "Minimum age revised upward to at least 134 ka in 2023. No youngest-remains date is established; the original 67 ka metatarsal age is now read as a minimum from the dating method rather than a true age.",
+      "source_ids": [
+        "nhm-luzonensis"
+      ],
+      "summary": "A human species known from a handful of bones and teeth in a cave on Luzon, the Philippines."
+    },
+    {
+      "id": "global.prehistory.origins.homo-sapiens",
+      "kind": "period",
+      "name": "Homo sapiens",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -313051,
+      "end_year": null,
+      "tier": "foundational",
+      "start_year_min": -347051,
+      "start_year_max": -279051,
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "allow_outside_parent_dates": true,
+      "date_note": "315 +/- 34 ka is the thermoluminescence age of heated flints with the Jebel Irhoud hominins in Morocco. Which fossils count as H. sapiens is itself part of the disagreement about the date.",
+      "source_ids": [
+        "hublin-2017-jebel-irhoud"
+      ],
+      "summary": "Our own species, first recognisable in Africa around 300,000 years ago.",
+      "aliases": [
+        "Anatomically modern humans"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.origins.homo-longi",
+      "kind": "period",
+      "name": "Homo longi",
+      "parent_id": "global.prehistory.origins",
+      "start_year": -144051,
+      "end_year": null,
+      "tier": "specialist",
+      "dating_method": "uranium-series",
+      "standing": "minority",
+      "end_precision": "unknown",
+      "date_note": "Known from one cranium with a minimum U-series age of about 146 ka, so there is no species-level range.",
+      "alternatives": [
+        {
+          "label": "Harbin cranium is Denisovan",
+          "standing": "majority",
+          "start_year": -144051,
+          "dating_method": "uranium-series",
+          "note": "Palaeoproteomic analysis in 2025 recovered 95 endogenous proteins and clustered the specimen with Denisova 3.",
+          "source_ids": [
+            "fu-2025-harbin-proteome"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Named as a new species in 2021; 2025 protein evidence indicates the specimen is a Denisovan.",
+          "source_ids": [
+            "fu-2025-harbin-proteome"
+          ]
+        }
+      ],
+      "source_ids": [
+        "ji-2021-homo-longi",
+        "fu-2025-harbin-proteome"
+      ],
+      "summary": "A single large skull from Harbin, China, whose identity was overturned by protein analysis in 2025.",
+      "aliases": [
+        "Dragon Man",
+        "Harbin cranium"
+      ]
+    },
+    {
+      "id": "global.paleolithic.oldowan",
+      "kind": "period",
+      "name": "Oldowan Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -2598051,
+      "end_year": -1698051,
+      "tier": "foundational",
+      "start_year_min": -2616051,
+      "start_year_max": -2548051,
+      "dating_method": "argon-argon",
+      "standing": "consensus",
+      "date_note": "Usually given as 2.6-1.7 Ma. Older claims exist, but the 3.3 Ma Lomekwi 3 tools are excluded by classifying them as Lomekwian, so the boundary is definitional as much as evidential.",
+      "source_ids": [
+        "braun-2019-bokol-dora"
+      ],
+      "summary": "The earliest widely recognised stone tools: sharp flakes struck from pebble cores.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.acheulean",
+      "kind": "period",
+      "name": "Acheulean Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -1758051,
+      "end_year": -198051,
+      "tier": "foundational",
+      "end_year_min": -248051,
+      "end_year_max": -198051,
+      "dating_method": "magnetostratigraphy",
+      "standing": "consensus",
+      "date_note": "Earliest at Kokiselei 4, West Turkana, Kenya, at 1.76 Ma — about 350,000 years earlier than previously accepted. The end is diffuse rather than dated.",
+      "source_ids": [
+        "lepre-2011-kokiselei"
+      ],
+      "summary": "The handaxe tradition: teardrop-shaped tools worked on both faces, made for well over a million years.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.mousterian",
+      "kind": "period",
+      "name": "Mousterian Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -128051,
+      "end_year": -38051,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Hard to separate from the latest Acheulean at the start, so the beginning is definitional. The end differs by region and by method.",
+      "source_ids": [
+        "marin-arroyo-2018-cantabria"
+      ],
+      "summary": "The flake-tool tradition associated mainly with Neanderthals across Europe and western Asia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.aterian",
+      "kind": "period",
+      "name": "Aterian Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -143051,
+      "end_year": -38051,
+      "tier": "intermediate",
+      "start_year_min": -152051,
+      "start_year_max": -134051,
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "date_note": "145 +/- 9 ka is the weighted-mean thermoluminescence age at El Mnasra. The industry is defined by tool shape rather than by date, so its limits move with the definition.",
+      "source_ids": [
+        "plos-2022-el-mnasra"
+      ],
+      "summary": "A North African tradition marked by tanged points, made by early modern humans across the Sahara.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.still-bay",
+      "kind": "period",
+      "name": "Still Bay Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -73551,
+      "end_year": -65851,
+      "tier": "specialist",
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "date_note": "Single-grain OSL makes this a short episode of under 5,000 years.",
+      "alternatives": [
+        {
+          "label": "Diepkloof thermoluminescence chronology",
+          "standing": "minority",
+          "start_year": -107051,
+          "dating_method": "luminescence",
+          "note": "TL at Diepkloof puts the Still Bay some 35,000 years earlier than the single-grain OSL chronology.",
+          "source_ids": [
+            "wurz-2013-msa"
+          ]
+        }
+      ],
+      "source_ids": [
+        "wurz-2013-msa",
+        "jacobs-2008-msa"
+      ],
+      "summary": "A brief South African tradition of finely worked leaf-shaped points, an early flowering of complex technique.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.howiesons-poort",
+      "kind": "period",
+      "name": "Howiesons Poort Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -62851,
+      "end_year": -57551,
+      "tier": "specialist",
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "date_note": "Single-grain OSL makes this a tight horizon marker; ESR and TL at Klasies River give a looser 50,000-60,000 years.",
+      "alternatives": [
+        {
+          "label": "Klasies River ESR/TL chronology",
+          "standing": "minority",
+          "start_year": -58051,
+          "end_year": -48051,
+          "dating_method": "esr",
+          "note": "Looser and younger than the single-grain OSL horizon.",
+          "source_ids": [
+            "wurz-2013-msa"
+          ]
+        }
+      ],
+      "source_ids": [
+        "wurz-2013-msa",
+        "jacobs-2008-msa"
+      ],
+      "summary": "A South African tradition of small backed blades, hafted as composite tools, lasting only a few thousand years.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.later-stone-age",
+      "kind": "period",
+      "name": "Later Stone Age",
+      "parent_id": "global.paleolithic",
+      "start_year": -42051,
+      "end_year": -10051,
+      "tier": "intermediate",
+      "start_year_min": -42251,
+      "start_year_max": -40551,
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Border Cave gives 44.2-43.0 cal BP for the earliest layer. There is no real end date: the Later Stone Age runs on into recorded history, and the value here is a convention for the tree rather than a finding.",
+      "source_ids": [
+        "villa-2012-border-cave"
+      ],
+      "summary": "The sub-Saharan African tradition of small composite tools that continues into the historical period.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.chatelperronian",
+      "kind": "period",
+      "name": "Châtelperronian Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -41811,
+      "end_year": -37271,
+      "tier": "specialist",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "In Cantabria it shows no chronological overlap with the local Mousterian, which complicates the usual reading of it as a Neanderthal response to arriving modern humans.",
+      "source_ids": [
+        "rios-garaizar-2022-chatelperronian",
+        "marin-arroyo-2018-cantabria"
+      ],
+      "summary": "A short-lived western European tradition made during the overlap between Neanderthals and modern humans.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.aurignacian",
+      "kind": "period",
+      "name": "Aurignacian Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -41351,
+      "end_year": -31151,
+      "tier": "foundational",
+      "start_year_min": -41351,
+      "start_year_max": -38551,
+      "end_year_min": -32651,
+      "end_year_max": -31151,
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Arrival dates differ sharply between regional models, from about 43 cal ka BP in southern Iberia to later elsewhere.",
+      "alternatives": [
+        {
+          "label": "Banks et al. 2013 phase model",
+          "standing": "majority",
+          "start_year": -39551,
+          "end_year": -35951,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Proto-Aurignacian 41.5-39.9 k cal BP, Early Aurignacian 39.8-37.9 k cal BP.",
+          "source_ids": [
+            "banks-2013-aurignacian"
+          ]
+        }
+      ],
+      "source_ids": [
+        "marin-arroyo-2018-cantabria",
+        "banks-2013-aurignacian"
+      ],
+      "summary": "The first widespread modern-human tradition in Europe, associated with the earliest cave art and figurines.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.gravettian",
+      "kind": "period",
+      "name": "Gravettian Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -33391,
+      "end_year": -22281,
+      "tier": "intermediate",
+      "start_year_min": -33391,
+      "start_year_max": -31646,
+      "end_year_min": -24441,
+      "end_year_max": -22281,
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Bayesian boundaries from the Adriatic basin; regional models differ.",
+      "source_ids": [
+        "marin-arroyo-2018-cantabria"
+      ],
+      "summary": "The tradition of the Venus figurines and mammoth-bone dwellings, spanning Europe through the coldest part of the Ice Age.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.solutrean",
+      "kind": "period",
+      "name": "Solutrean Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -23051,
+      "end_year": -17051,
+      "tier": "specialist",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Bayesian analysis does not confirm the traditional ordering of the internal phases, so the sub-sequence is less secure than the overall span.",
+      "source_ids": [
+        "cascalheira-2015-solutrean"
+      ],
+      "summary": "An Iberian and French tradition known for slender, finely pressure-flaked laurel-leaf points.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.magdalenian",
+      "kind": "period",
+      "name": "Magdalenian Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -19262,
+      "end_year": -12661,
+      "tier": "intermediate",
+      "start_year_min": -19262,
+      "start_year_max": -16039,
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Preceded by the Badegoulian at 23,092-20,792 cal BP. Regional phase models disagree on the internal sequence.",
+      "source_ids": [
+        "marin-arroyo-2018-cantabria"
+      ],
+      "summary": "The late Ice Age tradition of Lascaux and Altamira, ending as the glaciers retreated.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.neolithic.gobekli-tepe",
+      "kind": "period",
+      "name": "Göbekli Tepe",
+      "parent_id": "global.neolithic",
+      "start_year": -9530,
+      "end_year": -8000,
+      "tier": "foundational",
+      "start_year_min": -9745,
+      "start_year_max": -9314,
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Only 11 radiocarbon dates exist. The Layer III/II/I scheme has been abandoned for at least eight phases, so phase labels in older sources do not map cleanly.",
+      "source_ids": [
+        "dietrich-2013-gobekli"
+      ],
+      "summary": "Monumental enclosures raised by people who were not yet farming, in southeastern Anatolia.",
+      "native_name": "Göbekli Tepe",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.monte-verde",
       "kind": "period",
       "name": "Monte Verde II",
-      "parent_id": "global.prehistory",
+      "parent_id": "global.paleolithic",
       "start_year": -14500,
       "end_year": -14000,
       "tier": "intermediate",
@@ -15162,7 +15710,7 @@
         "dillehay-1997-monte-verde",
         "surovell-2026-monte-verde"
       ],
-      "summary": "A settlement site in southern Chile whose age broke the Clovis-first model of the peopling of the Americas.",
+      "summary": "A settlement in southern Chile whose age broke the Clovis-first model of the peopling of the Americas.",
       "date_precision": "approx"
     }
   ]

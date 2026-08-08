@@ -19,7 +19,7 @@ test("boots offline from file:// with no network requests", async ({ page }) => 
 
 test("shows the version stamp and entity count", async ({ page }) => {
   await expect(page.getByTestId("text-app-version")).toContainText("data 2.2.0");
-  await expect(page.getByTestId("panel-footer-root")).toContainText("1,310 entities");
+  await expect(page.getByTestId("panel-footer-root")).toContainText("1,333 entities");
 });
 
 test("drills Region -> Era -> Period through the columns", async ({ page }) => {
@@ -126,14 +126,45 @@ test("still stores nothing across a reload", async ({ page }) => {
   await expect(page.getByTestId("text-calendar-hebrew")).toHaveCount(0);
 });
 
-test("reaches the prehistory pilot and its deep-time dates", async ({ page }) => {
-  // The five pilot entities are what proves Q-10 is unblocked end to end:
-  // authored with schema 1.1.0 fields, validated, and reaching the UI.
+test("renders deep time in Ma and ka, not seven-digit BCE", async ({ page }) => {
+  // The naive formatter would print the origin of the genus as "2798051 BCE":
+  // a year-precise position in a calendar that did not exist.
   await page.getByTestId("option-tree-node-global").click();
   await page.getByTestId("option-tree-node-global.prehistory").click();
-  await expect(page.getByTestId("option-tree-node-global.prehistory.oldowan")).toBeVisible();
-  await page.getByTestId("option-tree-node-global.prehistory.oldowan").click();
-  await expect(page.getByTestId("text-readout-name")).toHaveText("Oldowan Industry");
+  await page.getByTestId("option-tree-node-global.prehistory.origins").click();
+  await expect(page.getByTestId("text-readout-range")).toContainText("Ma");
+  await expect(page.getByTestId("text-readout-range")).not.toContainText("BCE");
+});
+
+test("quotes a range in one unit where both ends fit it", async ({ page }) => {
+  await page.getByTestId("option-tree-node-global").click();
+  await page.getByTestId("option-tree-node-global.prehistory").click();
+  await page.getByTestId("option-tree-node-global.paleolithic").click();
+  await page.getByTestId("option-tree-node-global.paleolithic.magdalenian").click();
+  // Not "21.2 ka - 14,610 BP".
+  await expect(page.getByTestId("text-readout-range")).toHaveText(/^[\d.,]+ ka \u2013 [\d.,]+ ka$/);
+});
+
+test("reaches the genus Homo branch", async ({ page }) => {
+  await page.getByTestId("option-tree-node-global").click();
+  await page.getByTestId("option-tree-node-global.prehistory").click();
+  await page.getByTestId("option-tree-node-global.prehistory.origins").click();
+  await page.getByTestId("option-tree-node-global.prehistory.origins.homo-sapiens").click();
+  await expect(page.getByTestId("text-readout-name")).toHaveText("Homo sapiens");
+  // Extant, so the range says present rather than a date.
+  await expect(page.getByTestId("text-readout-range")).toContainText("present");
+});
+
+test("says unknown, not present, when an end was never dated", async ({ page }) => {
+  // H. luzonensis is specialist tier and hidden at the default detail level.
+  await page.getByTestId("select-detail-tier").selectOption("specialist");
+  await page.getByTestId("option-tree-node-global").click();
+  await page.getByTestId("option-tree-node-global.prehistory").click();
+  await page.getByTestId("option-tree-node-global.prehistory.origins").click();
+  const luzon = page.getByTestId("option-tree-node-global.prehistory.origins.homo-luzonensis");
+  await luzon.scrollIntoViewIfNeeded();
+  await luzon.click();
+  await expect(page.getByTestId("text-readout-range")).toContainText("unknown");
 });
 
 test("shows no calendar reading for a deep-time date", async ({ page }) => {
@@ -142,6 +173,7 @@ test("shows no calendar reading for a deep-time date", async ({ page }) => {
   await page.goto("index.html#cal=common,islamic");
   await page.getByTestId("option-tree-node-global").click();
   await page.getByTestId("option-tree-node-global.prehistory").click();
-  await page.getByTestId("option-tree-node-global.prehistory.oldowan").click();
+  await page.getByTestId("option-tree-node-global.paleolithic").click();
+  await page.getByTestId("option-tree-node-global.paleolithic.oldowan").click();
   await expect(page.getByTestId("panel-calendar-readout")).toContainText("before calendars");
 });

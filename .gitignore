@@ -6,3 +6,19 @@ test-results/
 *.tar.gz
 __pycache__/
 .venv/
+
+# Replit workspace artifacts.
+#
+# Replit generates these inside the checkout. Left untracked they make the
+# tree permanently dirty, and Replit's git integration will not pull or merge
+# over a dirty tree - which surfaces as "cannot merge" rather than as the
+# untracked-files problem it actually is.
+.config/
+.upm/
+.cache/
+.local/
+.pythonlibs/
+.breakpoints
+.replit_history
+replit_zip_error_log.txt
+attached_assets/

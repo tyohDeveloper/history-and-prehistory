@@ -42,6 +42,12 @@ The repo carries a working [`.replit`](.replit); importing it needs no configura
 - **Deployment** is `static`, publishing `dist/public` after `npm run build`. There is no server
   to run in production — the build output is one file.
 
+If Replit reports a merge or pull problem, check the branch first: the workspace must be on
+`main`. `calendar-layer` is a stale branch, fully merged and 28 commits behind — a workspace
+sitting on it cannot fast-forward. Replit's generated directories (`.config/`, `.upm/`,
+`.pythonlibs/`) are gitignored so they cannot leave the tree dirty, which Replit reports as a
+merge failure rather than as untracked files.
+
 Two things that are not automatic:
 
 - `npm run test:e2e` needs browsers first: `npx playwright install chromium`. The unit tests and

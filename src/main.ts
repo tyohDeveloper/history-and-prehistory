@@ -1,5 +1,5 @@
 import "./style.css";
-import { datasetVersion, entities } from "./dataset/dataset";
+import { datasetVersion, entities, sourceById } from "./dataset/dataset";
 import { displayRange } from "./chrono/displayRange";
 import { contextNeighbours } from "./focus/contextNeighbours";
 import { datingOf } from "./chrono/fromEntity";
@@ -13,6 +13,7 @@ import {
 } from "./entity/tree";
 import { formatYear } from "./entity/tree";
 import type { CaveatKindId, Entity, EntityKind, StandingId, Tier } from "./entity/entity";
+import type { Source } from "./dataset/dataset";
 import { readYearIn, type CalendarReading } from "./calendars/convert";
 import { CALENDARS, getCalendar } from "./calendars/registry";
 import { parseSelection, serializeSelection, toggleCalendar } from "./calendars/selection";
@@ -41,6 +42,13 @@ const STANDING_LABEL: Record<StandingId, string> = {
   // commonest way a history reference misleads.
   traditional: "Traditional date",
   superseded: "Superseded",
+};
+
+const SOURCE_KIND_LABEL: Record<Source["kind"], string> = {
+  scholarly: "Peer-reviewed",
+  institutional: "Institutional",
+  reference: "Reference",
+  news: "News",
 };
 
 const CAVEAT_LABEL: Record<CaveatKindId, string> = {
@@ -263,7 +271,12 @@ function renderReadout(): HTMLElement {
   fact("Detail tier", e.tier);
   fact("Identifier", e.id);
   if (e.date_precision !== undefined) fact("Date precision", e.date_precision);
-  if (e.date_note !== undefined) fact("Dating note", e.date_note);
+  if (e.date_note !== undefined) {
+    const dd = el("dd", { dir: "auto" }, e.date_note);
+    const mark = citationMarker(e.source_ids, citationOrder(e));
+    if (mark !== null) dd.append(" ", mark);
+    dl.append(el("dt", {}, "Dating note"), dd);
+  }
   if (e.aliases !== undefined && e.aliases.length > 0) fact("Also known as", e.aliases.join(", "));
   if (e.calendar_ids !== undefined && e.calendar_ids.length > 0) {
     fact("Calendars", e.calendar_ids.join(", "));
@@ -272,13 +285,105 @@ function renderReadout(): HTMLElement {
   if (e.capital !== undefined) fact("Capital", e.capital);
   if (e.as_of !== undefined) fact("Dispute last checked", e.as_of);
   box.append(dl);
-  const caveats = renderCaveats(e);
+  const order = citationOrder(e);
+  const caveats = renderCaveats(e, order);
   if (caveats !== null) box.append(caveats);
-  const alternatives = renderAlternatives(e);
+  const alternatives = renderAlternatives(e, order);
   if (alternatives !== null) box.append(alternatives);
   const calendars = renderCalendarRows(e);
   if (calendars !== null) box.append(calendars);
-  box.append(renderHandoff(e));
+  const sources = renderSources(order);
+  if (sources !== null) box.append(sources);
+  box.append(renderHandoff(e, order.length > 0));
+  return box;
+}
+
+/**
+ * The order citations are numbered in for one entity.
+ *
+ * Numbering is per-entity rather than global. A global scheme would give the
+ * reader "[147]" on a panel showing three sources, which tells them nothing
+ * and invites them to look for 146 others.
+ *
+ * Order follows the panel: the entity's own sources, then its caveats', then
+ * its alternatives'. A source cited twice keeps its first number.
+ */
+function citationOrder(entity: Entity): string[] {
+  const seen: string[] = [];
+  const push = (ids: readonly string[] | undefined): void => {
+    for (const id of ids ?? []) {
+      // A dangling id would otherwise be numbered and then render as an empty
+      // row in the source list, which reads as a missing citation rather than
+      // as the data error it is.
+      if (!seen.includes(id) && sourceById.has(id)) seen.push(id);
+    }
+  };
+  push(entity.source_ids);
+  for (const c of entity.caveats ?? []) push(c.source_ids);
+  for (const a of entity.alternatives ?? []) push(a.source_ids);
+  return seen;
+}
+
+/** `[1]`, `[2,3]` — or nothing, rather than an empty bracket. */
+function citationMarker(ids: readonly string[] | undefined, order: string[]): HTMLElement | null {
+  const ns = (ids ?? [])
+    .map((id) => order.indexOf(id))
+    .filter((i) => i >= 0)
+    .map((i) => i + 1);
+  if (ns.length === 0) return null;
+  return el("sup", { class: "cite" }, `[${[...new Set(ns)].sort((a, b) => a - b).join(",")}]`);
+}
+
+/**
+ * The sources themselves.
+ *
+ * Until 3.6.0.0 the readout showed none of these, and the handoff carried a
+ * line saying the dates were "a starting point, not a citation" — accurate at
+ * the time, and the reason a dataset with 175 cited entities read like an
+ * uncited one.
+ *
+ * The URL is rendered as selectable text as well as a link, for the same
+ * reason the research handoff does it: opened from a file:// path with no
+ * network, the link goes nowhere and the reader's fallback is to write the
+ * address down. ARCHITECTURE.md §10 permits exactly this — "named external
+ * references cited in a readout" — and requires the link text be descriptive,
+ * so the citation is the link and the bare URL is not.
+ */
+function renderSources(order: string[]): HTMLElement | null {
+  if (order.length === 0) return null;
+  const box = el("div", { class: "sources", "data-testid": "panel-sources-root" });
+  box.append(el("div", { class: "sources-head" }, "Sources"));
+  const list = el("ol", { class: "source-list" });
+  for (const id of order) {
+    const src = sourceById.get(id);
+    if (src === undefined) continue;
+    const li = el("li", { class: "source", "data-testid": `item-source-${id}` });
+    if (src.url !== undefined) {
+      li.append(
+        el(
+          "a",
+          {
+            class: "source-cite",
+            href: src.url,
+            target: "_blank",
+            rel: "noopener noreferrer",
+          },
+          src.citation,
+        ),
+      );
+    } else {
+      li.append(el("span", { class: "source-cite", dir: "auto" }, src.citation));
+    }
+    li.append(el("span", { class: `source-kind source-${src.kind}` }, SOURCE_KIND_LABEL[src.kind]));
+    if (src.url !== undefined) {
+      li.append(el("code", { class: "source-url" }, src.url));
+    }
+    if (src.note !== undefined) {
+      li.append(el("p", { class: "source-note", dir: "auto" }, src.note));
+    }
+    list.append(li);
+  }
+  box.append(list);
   return box;
 }
 
@@ -293,7 +398,7 @@ function renderReadout(): HTMLElement {
  * They sit above the calendar readout deliberately. A misconception about what
  * a date *means* is worth more than the same date expressed in four calendars.
  */
-function renderCaveats(entity: Entity): HTMLElement | null {
+function renderCaveats(entity: Entity, order: string[]): HTMLElement | null {
   const items = entity.caveats ?? [];
   if (items.length === 0) return null;
   const box = el("div", { class: "caveats", "data-testid": "panel-caveats-root" });
@@ -301,7 +406,10 @@ function renderCaveats(entity: Entity): HTMLElement | null {
   const grid = el("div", { class: "caveat-grid" });
   for (const c of items) {
     grid.append(el("span", { class: `caveat-kind caveat-${c.kind}` }, CAVEAT_LABEL[c.kind]));
-    grid.append(el("span", { class: "caveat-text", dir: "auto" }, c.text));
+    const text = el("span", { class: "caveat-text", dir: "auto" }, c.text);
+    const mark = citationMarker(c.source_ids, order);
+    if (mark !== null) text.append(" ", mark);
+    grid.append(text);
   }
   box.append(grid);
   return box;
@@ -318,7 +426,7 @@ function renderCaveats(entity: Entity): HTMLElement | null {
  * The entity's own standing is shown alongside, so a `superseded` alternative
  * reads as history-of-the-field rather than as a live competitor.
  */
-function renderAlternatives(entity: Entity): HTMLElement | null {
+function renderAlternatives(entity: Entity, order: string[]): HTMLElement | null {
   const items = entity.alternatives ?? [];
   if (items.length === 0) return null;
   const box = el("div", { class: "alts", "data-testid": "panel-alternatives-root" });
@@ -328,6 +436,8 @@ function renderAlternatives(entity: Entity): HTMLElement | null {
     const head = el("div", { class: "alt-head" });
     head.append(el("span", { class: "alt-label", dir: "auto" }, a.label));
     head.append(el("span", { class: `alt-standing alt-${a.standing}` }, STANDING_LABEL[a.standing]));
+    const mark = citationMarker(a.source_ids, order);
+    if (mark !== null) head.append(mark);
     row.append(head);
     const span = altRange(a);
     if (span !== null) row.append(el("span", { class: "alt-range" }, span));
@@ -363,7 +473,7 @@ function altRange(a: NonNullable<Entity["alternatives"]>[number]): string | null
  * descriptive text, no tracking parameters. Nothing here is fetched by the
  * app, so the footer's "no network requests" claim still holds.
  */
-function renderHandoff(entity: Entity): HTMLElement {
+function renderHandoff(entity: Entity, cited: boolean): HTMLElement {
   const box = el("div", { class: "handoff", "data-testid": "panel-handoff-root" });
   box.append(el("div", { class: "handoff-head" }, "Start your research"));
   for (const t of handoffTargets(entity, index, { ambiguous })) {
@@ -388,7 +498,9 @@ function renderHandoff(entity: Entity): HTMLElement {
     el(
       "p",
       { class: "handoff-note" },
-      "Dates here are a starting point, not a citation. Verify before relying on them.",
+      cited
+        ? "The sources above are where this date comes from. This search is for everything else."
+        : "This date is not yet sourced in the dataset. Treat it as a starting point and verify it.",
     ),
   );
   return box;

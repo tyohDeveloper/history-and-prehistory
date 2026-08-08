@@ -5,6 +5,7 @@ import entitiesFile from "../data/entities.json";
 import calendarsFile from "../data/calendars.json";
 import themesFile from "../data/themes.json";
 import framesFile from "../data/reference-frames.json";
+import sourcesFile from "../data/sources.json";
 
 import type { Entity } from "../entity/entity";
 
@@ -12,6 +13,17 @@ export const entities = entitiesFile.entities as unknown as Entity[];
 export const calendars = calendarsFile.calendars as unknown as Calendar[];
 export const themes = themesFile.themes as unknown as Theme[];
 export const referenceFrames = framesFile.frames as unknown as ReferenceFrame[];
+export const sources = sourcesFile.sources as unknown as Source[];
+
+/**
+ * Sources by id, for the readout's citation markers.
+ *
+ * Built once at module load rather than searched per render: every entity in
+ * the picker path would otherwise scan 203 records for each of its citations.
+ */
+export const sourceById: ReadonlyMap<string, Source> = new Map(
+  sources.map((s) => [s.id, s]),
+);
 
 export const datasetVersion: string = entitiesFile.dataset_version;
 export const schemaVersion: string = entitiesFile.schema_version;
@@ -23,6 +35,19 @@ export const schemaVersion: string = entitiesFile.schema_version;
  * These four were previously in a file called `types.ts`, which §3.8 prohibits
  * by name: it described the file's shape rather than what it owns.
  */
+
+/**
+ * A citation. `note` says why the source matters — most often that it is a
+ * minority position, or that it revises an earlier date — which is the part a
+ * reader cannot recover from the citation string alone.
+ */
+export interface Source {
+  id: string;
+  kind: "scholarly" | "institutional" | "reference" | "news";
+  citation: string;
+  url?: string;
+  note?: string;
+}
 
 export interface Calendar {
   id: string;

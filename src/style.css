@@ -515,3 +515,81 @@ footer a { color: var(--ink-dim); }
   color: var(--ink-faint);
   overflow-wrap: anywhere;
 }
+
+/* --- Citations -------------------------------------------------------------
+   Numbered per entity, not globally: "[147]" on a panel showing three sources
+   tells the reader nothing and implies 146 others are hiding somewhere. */
+
+.cite {
+  font-size: 9px;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  margin-left: 1px;
+  white-space: nowrap;
+}
+
+.sources {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.sources-head {
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 6px;
+}
+.source-list {
+  margin: 0;
+  padding-left: 20px;
+  max-width: 82ch;
+}
+.source {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.source::marker {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.source-cite {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+a.source-cite:hover { color: var(--accent); border-bottom-color: var(--accent); }
+a.source-cite:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.source-kind {
+  margin-left: 7px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+/* Peer-reviewed is the default and needs no emphasis; the others are the ones
+   a reader should weigh differently, so only they are marked. */
+.source-news,
+.source-reference { color: var(--accent); }
+
+/* Offline, the link above goes nowhere and this is the only way to recover the
+   address. Same contract as the research handoff. */
+.source-url {
+  display: block;
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 1.45;
+  color: var(--ink-faint);
+  user-select: all;
+  overflow-wrap: anywhere;
+}
+.source-note {
+  margin: 3px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-dim);
+  overflow-wrap: anywhere;
+}

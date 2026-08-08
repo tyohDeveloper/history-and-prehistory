@@ -24,7 +24,7 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // The two tracks had been asserted the wrong way round since the renumbering:
   // v0.5.0 is the DATA version and 3.1.0 was the APP version. The test was
   // failing for that reason, not because the header was wrong.
-  await expect(page.getByTestId("text-app-version")).toContainText("v3.5.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("v3.6.0.0");
   await expect(page.getByTestId("text-app-version")).toContainText("data 0.8.0.0");
   await expect(page.getByTestId("panel-footer-root")).toContainText("1,480 entities");
 });
@@ -328,4 +328,67 @@ test("omits the range when a rival claim is not about dates", async ({ page }) =
   await page.getByTestId("input-search-query").fill("Neolithic Transition");
   await page.getByTestId("list-search-results").getByRole("option").first().click();
   await expect(page.getByTestId("panel-alternatives-root").locator(".alt-range")).toHaveCount(0);
+});
+
+test("renders the sources a date rests on, numbered per entity", async ({ page }) => {
+  await page.getByTestId("input-search-query").fill("Neolithic Transition");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+
+  const sources = page.getByTestId("panel-sources-root");
+  await expect(sources).toContainText("Quaternary Science Reviews");
+  await expect(sources).toContainText("Peer-reviewed");
+
+  // The citation link is the descriptive text, per ARCHITECTURE.md §10, and the
+  // bare URL is separate so it survives being opened offline.
+  const cite = sources.locator("a.source-cite").first();
+  await expect(cite).toHaveAttribute("target", "_blank");
+  await expect(cite).toHaveAttribute("rel", "noopener noreferrer");
+  await expect(sources.locator(".source-url").first()).toContainText("sciencedirect.com");
+});
+
+test("numbers citations per entity rather than globally", async ({ page }) => {
+  // A global scheme would show "[147]" on a panel listing three sources.
+  await page.getByTestId("input-search-query").fill("Horse Domestication");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+  const marks = await page.locator(".cite").allTextContents();
+  expect(marks.length).toBeGreaterThan(0);
+  for (const m of marks) {
+    for (const n of m.replace(/[[\]]/g, "").split(",")) {
+      expect(Number(n)).toBeLessThanOrEqual(4);
+    }
+  }
+});
+
+test("ties a caveat to the source that backs it", async ({ page }) => {
+  await page.getByTestId("input-search-query").fill("Neolithic Transition");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+  // The "contested centres" caveat rests on the Harlan/Vavilov/Purugganan
+  // review, which must be reachable from the caveat by its number.
+  const caveats = page.getByTestId("panel-caveats-root");
+  await expect(caveats.locator(".cite")).toHaveCount(2);
+});
+
+test("says so when a date is not sourced, instead of implying it is", async ({ page }) => {
+  // The handoff used to claim, on every entity, that dates were "not a
+  // citation". That is now only true of the uncited ones.
+  await page.getByTestId("option-tree-node-europe").click();
+  const handoff = page.getByTestId("panel-handoff-root");
+  await expect(handoff).toContainText("not yet sourced");
+
+  await page.getByTestId("input-search-query").fill("Neolithic Transition");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+  await expect(page.getByTestId("panel-handoff-root")).toContainText(
+    "sources above are where this date comes from",
+  );
+});
+
+test("makes no network request when rendering citations", async ({ page }) => {
+  const external: string[] = [];
+  page.on("request", (r) => {
+    if (!r.url().startsWith("file://")) external.push(r.url());
+  });
+  await page.getByTestId("input-search-query").fill("Neolithic Transition");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+  await expect(page.getByTestId("panel-sources-root")).toBeVisible();
+  expect(external).toEqual([]);
 });

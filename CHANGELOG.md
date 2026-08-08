@@ -14,6 +14,38 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.6.0.0-app] — 2026-08-08
+
+### Added
+
+- **Source citations are rendered.** 175 entities carried `source_ids` pointing
+  at 203 source records, and the app showed none of them — it told every reader,
+  on every entity, that its dates were "a starting point, not a citation". That
+  was true only because nothing rendered the citations that existed.
+  - A numbered `Sources` block per entity: citation as the link text (§10
+    requires descriptive text, never a bare URL), the source kind, the URL as
+    selectable text for offline use, and the source's own note where it has one
+    — usually the part explaining that a source is a minority position or
+    revises an earlier date.
+  - Superscript markers tie each caveat and each competing date to the specific
+    source backing it, so "Botai is superseded" is checkable rather than
+    asserted.
+  - Numbering is **per entity**, not global. A global scheme would print "[147]"
+    on a panel showing three sources and imply 146 more were hidden.
+  - Non-peer-reviewed kinds (`reference`, `news`) are marked in accent;
+    peer-reviewed is the default and is left unemphasised.
+  - The research handoff no longer claims a date is uncited when it is. It now
+    says the opposite for the 175 entities that are sourced, and keeps the
+    warning for the 1,305 that are not.
+
+### Changed
+
+- `src/data/sources.json` now enters the bundle. Build size baseline rebased to
+  148,460 bytes gzip, +17.3 kB. That is the cost of the data, not a code
+  regression, and it was a deliberate call — the full file rather than a
+  trimmed id/citation/url lookup, because `kind` and `note` are worth the extra
+  3 kB.
+
 ## [3.5.0.0-app] — 2026-08-08
 
 ### Added

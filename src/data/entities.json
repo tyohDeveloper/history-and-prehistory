@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
   "dataset_version": "3.0.0",
-  "generated_at": "2026-08-08T03:30:26Z",
+  "generated_at": "2026-08-08T03:45:37Z",
   "entities": [
     {
       "id": "global",
@@ -491,7 +491,7 @@
     {
       "id": "global.mesolithic",
       "kind": "era",
-      "name": "Mesolithic",
+      "name": "Mesolithic (Eurasia)",
       "parent_id": "global.prehistory",
       "start_year": -10000,
       "end_year": -5000,

@@ -112,11 +112,29 @@ export interface Theme {
   entity_ids: string[];
   [k: string]: unknown;
 }
+/**
+ * A novice orientation anchor: "the Acheulean is about this old".
+ *
+ * `year` was previously absent from this interface and fell through the index
+ * signature as `unknown`, so arithmetic on it did not type-check. The stub was
+ * adequate while nothing read the field.
+ */
 export interface ReferenceFrame {
   id: string;
   name: string;
-  anchor_set?: string;
-  [k: string]: unknown;
+  /** Historical Gregorian year, negative for BCE. */
+  year: number;
+  end_year?: number;
+  /**
+   * `deep-time` is not a culture. The other sets are traditions a reader might
+   * already know; before the Holocene there is no such tradition, so those
+   * anchors supply scale instead of familiarity.
+   */
+  anchor_set?:
+    | "western" | "east-asian" | "islamic" | "south-asian"
+    | "african" | "americas" | "oceanic" | "global" | "deep-time";
+  summary?: string;
+  entity_id?: string;
 }
 
 export interface DataFile<T> {

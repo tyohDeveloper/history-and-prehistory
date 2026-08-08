@@ -171,7 +171,7 @@ E("global.paleolithic", "era", "Paleolithic (Old Stone Age)", "global.prehistory
             "which predate the genus Homo. Whether those count as Oldowan is a "
             "definitional argument; they are included here because the toolmaking record "
             "is continuous even where the taxonomy is not.")
-E("global.mesolithic", "era", "Mesolithic", "global.prehistory", start=-10000, end=-5000,
+E("global.mesolithic", "era", "Mesolithic (Eurasia)", "global.prehistory", start=-10000, end=-5000,
   tier="intermediate", dating_method="radiocarbon-calibrated", standing="consensus",
   date_note="A Eurasian term. It has no counterpart in the Americas, sub-Saharan Africa "
             "or Australia, where the post-glacial sequence is described differently.")
@@ -2566,6 +2566,37 @@ print(f"Wrote themes.json — {len(themes)} themes")
 # =============================================================================
 
 frames = [
+    # Deep-time anchors.
+    #
+    # The other eight sets are cultural traditions and none of them reaches
+    # before the Holocene, so 42 entities older than 10,000 BCE had no anchor
+    # at all - the set covered 0.35% of the dataset's span. A reader looking at
+    # the Acheulean got no help placing it.
+    #
+    # These are scale references rather than landmarks: nobody grew up knowing
+    # when the Last Glacial Maximum was, so the anchor has to do more work.
+    {"id": "first-stone-tools", "name": "First stone tools", "year": -3298051, "anchor_set": "deep-time",
+     "summary": "The oldest known deliberately knapped stone, at Lomekwi 3 in Kenya. Half a million years before the oldest fossil of our own genus.",
+     "entity_id": "global.prehistory.firsts.stone-knapping"},
+    {"id": "first-homo", "name": "First Homo fossil", "year": -2798051, "anchor_set": "deep-time",
+     "summary": "The oldest fossil attributed to our genus, from Ledi-Geraru in Ethiopia.",
+     "entity_id": "global.prehistory.hominins"},
+    {"id": "first-fire", "name": "Controlled fire", "year": -998051, "anchor_set": "deep-time",
+     "summary": "The earliest secure evidence of fire kept and used on purpose, at Wonderwerk Cave in South Africa.",
+     "entity_id": "global.prehistory.firsts.controlled-fire"},
+    {"id": "first-sapiens", "name": "First Homo sapiens", "year": -313050, "anchor_set": "deep-time",
+     "summary": "The earliest fossils of our own species, from Jebel Irhoud in Morocco. Roughly a tenth of the way back to the first stone tools.",
+     "entity_id": "global.prehistory.hominins.homo-sapiens"},
+    {"id": "neanderthal-extinction", "name": "Neanderthals disappear", "year": -38051, "anchor_set": "deep-time",
+     "summary": "The last traces of Neanderthals, after some 360,000 years across Europe and western Asia.",
+     "entity_id": "global.prehistory.hominins.homo-neanderthalensis"},
+    {"id": "last-glacial-maximum", "name": "Last Glacial Maximum", "year": -24050, "anchor_set": "deep-time",
+     "summary": "The coldest point of the last Ice Age, when ice sheets reached their greatest extent and sea level was about 120 m lower than today.",
+     "entity_id": "global.paleolithic"},
+    {"id": "holocene-start", "name": "Start of the Holocene", "year": -9750, "anchor_set": "deep-time",
+     "summary": "The end of the last Ice Age and the start of the present geological epoch, 11,700 years before 1950. Farming begins within two thousand years of it, nearly everywhere independently.",
+     "entity_id": "global.neolithic"},
+
     # Western anchors
     {"id": "life-jesus", "name": "Life of Jesus", "year": -4, "end_year": 30, "anchor_set": "western",
      "summary": "Traditional dates for the life of Jesus of Nazareth."},

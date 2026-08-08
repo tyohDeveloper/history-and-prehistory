@@ -1,8 +1,64 @@
 {
   "schema_version": "2.0.0",
   "dataset_version": "3.0.0",
-  "generated_at": "2026-08-08T03:30:26Z",
+  "generated_at": "2026-08-08T03:45:37Z",
   "frames": [
+    {
+      "id": "first-stone-tools",
+      "name": "First stone tools",
+      "year": -3298051,
+      "anchor_set": "deep-time",
+      "summary": "The oldest known deliberately knapped stone, at Lomekwi 3 in Kenya. Half a million years before the oldest fossil of our own genus.",
+      "entity_id": "global.prehistory.firsts.stone-knapping"
+    },
+    {
+      "id": "first-homo",
+      "name": "First Homo fossil",
+      "year": -2798051,
+      "anchor_set": "deep-time",
+      "summary": "The oldest fossil attributed to our genus, from Ledi-Geraru in Ethiopia.",
+      "entity_id": "global.prehistory.hominins"
+    },
+    {
+      "id": "first-fire",
+      "name": "Controlled fire",
+      "year": -998051,
+      "anchor_set": "deep-time",
+      "summary": "The earliest secure evidence of fire kept and used on purpose, at Wonderwerk Cave in South Africa.",
+      "entity_id": "global.prehistory.firsts.controlled-fire"
+    },
+    {
+      "id": "first-sapiens",
+      "name": "First Homo sapiens",
+      "year": -313050,
+      "anchor_set": "deep-time",
+      "summary": "The earliest fossils of our own species, from Jebel Irhoud in Morocco. Roughly a tenth of the way back to the first stone tools.",
+      "entity_id": "global.prehistory.hominins.homo-sapiens"
+    },
+    {
+      "id": "neanderthal-extinction",
+      "name": "Neanderthals disappear",
+      "year": -38051,
+      "anchor_set": "deep-time",
+      "summary": "The last traces of Neanderthals, after some 360,000 years across Europe and western Asia.",
+      "entity_id": "global.prehistory.hominins.homo-neanderthalensis"
+    },
+    {
+      "id": "last-glacial-maximum",
+      "name": "Last Glacial Maximum",
+      "year": -24050,
+      "anchor_set": "deep-time",
+      "summary": "The coldest point of the last Ice Age, when ice sheets reached their greatest extent and sea level was about 120 m lower than today.",
+      "entity_id": "global.paleolithic"
+    },
+    {
+      "id": "holocene-start",
+      "name": "Start of the Holocene",
+      "year": -9750,
+      "anchor_set": "deep-time",
+      "summary": "The end of the last Ice Age and the start of the present geological epoch, 11,700 years before 1950. Farming begins within two thousand years of it, nearly everywhere independently.",
+      "entity_id": "global.neolithic"
+    },
     {
       "id": "life-jesus",
       "name": "Life of Jesus",

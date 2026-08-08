@@ -23,7 +23,7 @@ describe("dataset envelope", () => {
     expect(entities.length).toBe(1345);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
-    expect(referenceFrames.length).toBe(37);
+    expect(referenceFrames.length).toBe(44);
   });
 });
 
@@ -178,5 +178,24 @@ describe("the behavioural gate", () => {
     const old = byId.get("global.paleolithic.oldowan");
     expect(lom!.start_year!).toBeLessThan(old!.start_year!);
     expect(old!.start_year! - lom!.start_year!).toBeGreaterThan(600000);
+  });
+});
+
+describe("reference anchors reach the deep-time content", () => {
+  it("has anchors before the Holocene", () => {
+    // Was a real gap: the eight cultural anchor sets all start in the
+    // Holocene, so 42 entities older than 10,000 BCE had nothing to orient
+    // against. The set covered 0.35% of the dataset's span.
+    const deep = referenceFrames.filter((f) => f.anchor_set === "deep-time");
+    expect(deep.length).toBeGreaterThanOrEqual(7);
+  });
+
+  it("leaves almost nothing older than its earliest anchor", () => {
+    const earliest = Math.min(...referenceFrames.map((f) => f.year));
+    const orphans = entities.filter(
+      (e) => e.start_year !== null && e.start_year < earliest,
+    );
+    // Only the contested Dikika claim and its container sit older.
+    expect(orphans.length).toBeLessThanOrEqual(3);
   });
 });

@@ -4,19 +4,33 @@
   "title": "Reference Frame (Anchor)",
   "description": "Well-known anchor points novices can use to orient themselves in time ('Fall of Rome', 'Meiji Restoration', 'Life of Buddha').",
   "type": "object",
-  "required": ["id", "name", "year", "anchor_set", "summary"],
+  "required": [
+    "id",
+    "name",
+    "year",
+    "anchor_set",
+    "summary"
+  ],
   "additionalProperties": false,
   "properties": {
     "id": {
       "type": "string",
       "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$"
     },
-    "name": { "type": "string", "minLength": 1 },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
     "year": {
       "type": "integer",
       "description": "Anchoring year (proleptic Gregorian). Use start year for ranges; add end_year for spans."
     },
-    "end_year": { "type": ["integer", "null"] },
+    "end_year": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
     "anchor_set": {
       "type": "string",
       "enum": [
@@ -27,8 +41,10 @@
         "african",
         "americas",
         "oceanic",
-        "global"
-      ]
+        "global",
+        "deep-time"
+      ],
+      "description": " 'deep-time' covers anchors before the Holocene, where no cultural tradition applies and the reader needs a scale reference rather than a familiar landmark."
     },
     "summary": {
       "type": "string",

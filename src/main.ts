@@ -519,10 +519,15 @@ function altRange(a: NonNullable<Entity["alternatives"]>[number]): string | null
  * The research handoff.
  *
  * The link is generated from the entity rather than authored, so every entity
- * has one — see `research/handoff`. The URL is also rendered as selectable
- * text, because opened offline the link goes nowhere and the user's fallback
- * is to write the search down and run it later. That is the module's stated
- * offline contract, and it only holds if the URL is actually on screen.
+ * has one — see `research/handoff`.
+ *
+ * The URL used to be printed underneath as selectable text, on the reasoning
+ * that a user on a `file://` path has a dead link and needs something to copy.
+ * That reasoning was sound and the result was still wrong: a percent-encoded
+ * search URL is noise on every entity, and the link label already says exactly
+ * where the button goes. The offline fallback now lives only in `researchNote`,
+ * which writes the same URL into a downloadable text file — the right place for
+ * it, since that is what an offline user can actually keep.
  *
  * ARCHITECTURE.md §10: user-initiated, new tab, `rel="noopener noreferrer"`,
  * descriptive text, no tracking parameters. Nothing here is fetched by the
@@ -544,9 +549,6 @@ function renderHandoff(entity: Entity, cited: boolean): HTMLElement {
         },
         t.label,
       ),
-    );
-    box.append(
-      el("code", { class: "handoff-url", "data-testid": `text-handoff-url-${t.id}` }, t.displayUrl),
     );
   }
   box.append(

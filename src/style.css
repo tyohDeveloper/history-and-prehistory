@@ -421,15 +421,6 @@ footer a { color: var(--ink-dim); }
 
 /* The offline fallback: selectable, wrapping, never truncated. A URL the
    user cannot read in full is not a fallback. */
-.handoff-url {
-  display: block;
-  margin-top: 5px;
-  font-size: 11px;
-  line-height: 1.45;
-  color: var(--ink-faint);
-  user-select: all;
-  overflow-wrap: anywhere;
-}
 .handoff-note {
   margin: 8px 0 0;
   max-width: 68ch;

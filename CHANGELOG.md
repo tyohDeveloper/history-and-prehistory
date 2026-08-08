@@ -14,6 +14,19 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.11.1.0-app] — 2026-08-08
+
+### Removed
+
+- The Wikipedia search URL is no longer printed under the handoff button. It
+  was there for a real reason — opened from a `file://` path the link is dead,
+  and the user's fallback is to copy the search down — but a percent-encoded
+  URL on every single entity is noise, and the button label already says where
+  it goes. The offline fallback stays in `researchNote`, which writes the same
+  URL into a downloadable text file. That is the right home for it: an offline
+  user can keep a file, and cannot keep a line of screen text.
+- The e2e test now asserts the URL is ABSENT, so this cannot quietly come back.
+
 ## [3.11.0.0-app] — 2026-08-08
 
 ### Changed

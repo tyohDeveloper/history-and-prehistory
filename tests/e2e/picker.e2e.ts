@@ -24,7 +24,7 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // The two tracks had been asserted the wrong way round since the renumbering:
   // v0.5.0 is the DATA version and 3.1.0 was the APP version. The test was
   // failing for that reason, not because the header was wrong.
-  await expect(page.getByTestId("text-app-version")).toContainText("v3.11.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("v3.11.1.0");
   await expect(page.getByTestId("text-app-version")).toContainText("data 0.13.0.0");
   await expect(page.getByTestId("panel-footer-root")).toContainText("1,563 entities");
 });
@@ -270,10 +270,11 @@ test("offers a generated Wikipedia handoff for the selected entity", async ({ pa
   await expect(link).toHaveAttribute("target", "_blank");
   await expect(link).toHaveAttribute("rel", "noopener noreferrer");
 
-  // The offline fallback: the URL is on screen as text, not only in the href.
-  await expect(page.getByTestId("text-handoff-url-wikipedia")).toContainText(
-    "en.wikipedia.org/w/index.php?search=Japan",
-  );
+  // The URL is deliberately NOT printed on screen. It was, until a percent-
+  // encoded search string on every entity proved to be pure noise. The offline
+  // fallback moved into the downloadable research note, which is where a user
+  // without a network can actually keep it.
+  await expect(page.getByTestId("text-handoff-url-wikipedia")).toHaveCount(0);
 });
 
 test("disambiguates a repeated name in the handoff query", async ({ page }) => {

@@ -14,6 +14,23 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.13.0.0-app] — 2026-08-08
+
+### Changed
+
+- `tools/coverage.py` now reports EMPTY REGIONS first, above everything else.
+  `west-asia.anatolia` held nothing at all — no Hittites, no Troy, no Lydia —
+  and the childless-node report could not see it, because that report only ever
+  examined eras and periods. The single worst kind of gap the dataset can have
+  was invisible in the report built to find gaps.
+- Ships dataset 0.15.0.0. Build size baseline rebased to 203,186 bytes gzip.
+  The size ceiling correctly failed the build before the rebase.
+
+### Added
+
+- Two tests: every `region` must have children, and no entity may state a
+  chronology-scheme-dependent date without naming the scheme.
+
 ## [3.12.0.0-app] — 2026-08-08
 
 ### Changed

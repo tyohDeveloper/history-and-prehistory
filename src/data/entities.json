@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.14.0.0",
-  "generated_at": "2026-08-08T23:17:38Z",
+  "dataset_version": "0.15.0.0",
+  "generated_at": "2026-08-08T23:52:59Z",
   "entities": [
     {
       "id": "global",
@@ -5627,7 +5627,11 @@
       "start_year": -2000,
       "end_year": -1600,
       "tier": "foundational",
-      "date_precision": "approx",
+      "date_precision": "disputed",
+      "date_note": "Middle Chronology, like every date in this era and the Kassite era that follows it. The whole 2nd-millennium Mesopotamian sequence shifts together depending on which chronology is adopted; see Hammurabi's reign for the detail.",
+      "source_ids": [
+        "isac-dating-fall-of-babylon"
+      ],
       "summary": "Amorite dynasty of Babylon; Hammurabi's law code."
     },
     {
@@ -5639,7 +5643,37 @@
       "end_year": -1750,
       "tier": "foundational",
       "summary": "Famous for the Code of Hammurabi, one of the earliest surviving law codes.",
-      "date_precision": "approx"
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "These are Middle Chronology dates, which is the usual default but only one of four schemes in use. The High, Low and Ultra-Low chronologies place the same reign progressively later or earlier, across a spread of roughly 120 years. There is no independent dating here: the sequence rests on king-lists anchored to the Venus Tablet of Ammi-saduqa, whose observations are astronomically periodic and so fit several real years equally well.",
+      "alternatives": [
+        {
+          "label": "Low Chronology, c. 1728-1686 BC",
+          "standing": "minority",
+          "start_year": -1728,
+          "end_year": -1686,
+          "dating_method": "calendar",
+          "note": "One of the lower readings of the same Venus observations.",
+          "source_ids": [
+            "isac-dating-fall-of-babylon"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Quoted almost everywhere as simply Hammurabi's dates. Sources differing by decades are usually not in error; they have chosen a different chronology.",
+          "source_ids": [
+            "isac-dating-fall-of-babylon"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "isac-dating-fall-of-babylon"
+      ]
     },
     {
       "id": "west-asia.mesopotamia.kassite",
@@ -22323,6 +22357,693 @@
         "shoda-seaa-yayoi-controversy"
       ],
       "summary": "In 2003 a national museum used AMS dating to move the start of the Yayoi back five centuries, and the field has still not settled where it lands."
+    },
+    {
+      "id": "west-asia.prehistory.late-chalcolithic-mesopotamia.uruk-period",
+      "kind": "era",
+      "name": "Uruk Period",
+      "parent_id": "west-asia.prehistory.late-chalcolithic-mesopotamia",
+      "start_year": -4000,
+      "end_year": -3100,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Four frameworks are in circulation and disagree: CDLI gives 4000-3000 BC on stratigraphy; ARCANE gives Early and Middle Uruk 4200-3800 and Late Uruk 3800-3000 on calibrated radiocarbon; ISAC's LC scheme gives Middle Uruk 3700-3400 and Late Uruk 3400-3100; Unicode's script phases run 3500-3000. They are not averaged here.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Older literature dates Uruk IVa as late as 2815 BC. ARCANE notes those figures rest on uncalibrated or incorrect readings; the calibrated cluster is around 3450 BC.",
+          "source_ids": [
+            "sallaberger-schrakamp-2015-arcane"
+          ]
+        }
+      ],
+      "source_ids": [
+        "cdli-uruk-warka",
+        "sallaberger-schrakamp-2015-arcane",
+        "isac-surezha-lc-chronology",
+        "unicode-2019-proto-cuneiform"
+      ],
+      "summary": "The centuries in which southern Mesopotamia produced the first cities, the first bureaucracy, and the first writing."
+    },
+    {
+      "id": "west-asia.prehistory.late-chalcolithic-mesopotamia.uruk-period.uruk-city",
+      "kind": "period",
+      "name": "Uruk",
+      "parent_id": "west-asia.prehistory.late-chalcolithic-mesopotamia.uruk-period",
+      "start_year": -4000,
+      "end_year": -3100,
+      "tier": "foundational",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Sizes are from archaeological survey, not radiocarbon. Uruk grows from under 10 ha before the period to about 70 ha at its start and about 100 ha at its end, reaching roughly 400 ha in the Early Dynastic period.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Figures of 250 to 600 hectares and populations of 40,000 circulate widely. Only the CDLI survey figures trace to an institution, and no population estimate traces to anything.",
+          "source_ids": [
+            "cdli-uruk-warka"
+          ]
+        }
+      ],
+      "source_ids": [
+        "cdli-uruk-warka"
+      ],
+      "summary": "The first city: about 100 hectares by the end of the period, holding more than half the settled area of southern Mesopotamia around it.",
+      "aliases": [
+        "Warka",
+        "Unug"
+      ]
+    },
+    {
+      "id": "west-asia.prehistory.late-chalcolithic-mesopotamia.uruk-period.uruk-expansion",
+      "kind": "period",
+      "name": "The Uruk Expansion",
+      "parent_id": "west-asia.prehistory.late-chalcolithic-mesopotamia.uruk-period",
+      "start_year": -3700,
+      "end_year": -3100,
+      "tier": "intermediate",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Dated by the appearance and disappearance of southern Mesopotamian material at northern sites, not independently. Four readings are current: colonisation, peaceful trade, displaced migration, and rejection of the whole model in favour of independent northern development.",
+      "alternatives": [
+        {
+          "label": "Not an expansion: independent northern development",
+          "standing": "minority",
+          "note": "Holds that northern complexity arose on its own and the shared material reflects contact rather than any southern system.",
+          "source_ids": [
+            "cdli-late-uruk-period"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "cdli-late-uruk-period",
+        "sallaberger-schrakamp-2015-arcane"
+      ],
+      "summary": "Uruk material culture appears across Syria and into Anatolia, and scholars have argued for forty years about what that means."
+    },
+    {
+      "id": "west-asia.prehistory.late-chalcolithic-mesopotamia.uruk-period.proto-cuneiform",
+      "kind": "period",
+      "name": "Proto-Cuneiform",
+      "parent_id": "west-asia.prehistory.late-chalcolithic-mesopotamia.uruk-period",
+      "start_year": -3350,
+      "end_year": -3000,
+      "tier": "foundational",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Dated to Uruk IV and III script phases, c. 3350-3000 BC. The basis is stratigraphic inference plus palaeography, not excavation context: nearly 5,000 archaic tablets came out of rubbish and fill deposits beneath Level III construction, so they must predate it, and no tablets occur below Level IV. Sign-form evolution does the rest of the work. Writing outlasts the Uruk period proper, continuing into Jemdet Nasr.",
+      "allow_outside_parent_dates": true,
+      "alternatives": [
+        {
+          "label": "Descended from clay accounting tokens",
+          "standing": "minority",
+          "note": "Schmandt-Besserat's model: tokens, then sealed clay envelopes, then numerical tablets, then writing. Popular, and under sustained statistical attack.",
+          "source_ids": [
+            "zimansky-1993-before-writing-review",
+            "bennison-chapman-2023-tokens"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The earliest tablets were not found in use-contexts. They came from rubbish and fill, so their date is inferred from the layers above them and from sign shapes.",
+          "source_ids": [
+            "cdli-late-uruk-period"
+          ]
+        },
+        {
+          "kind": "misconception",
+          "text": "Tokens were not replaced by writing. They continue in use alongside tablets, seals and tags into the 1st millennium BC.",
+          "source_ids": [
+            "bennison-chapman-2023-tokens"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "antiquity-2025-seals-and-signs",
+        "cdli-late-uruk-period",
+        "cdli-uruk-warka",
+        "unicode-2019-proto-cuneiform",
+        "zimansky-1993-before-writing-review",
+        "bennison-chapman-2023-tokens"
+      ],
+      "summary": "The earliest known writing: numerals and word-signs pressed into clay at Uruk, used almost entirely for accounting."
+    },
+    {
+      "id": "west-asia.prehistory.late-chalcolithic-mesopotamia.jemdet-nasr",
+      "kind": "period",
+      "name": "Jemdet Nasr Period",
+      "parent_id": "west-asia.prehistory.late-chalcolithic-mesopotamia",
+      "start_year": -3200,
+      "end_year": -2900,
+      "tier": "intermediate",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "reading-jemdet-nasr",
+        "unicode-2019-proto-cuneiform"
+      ],
+      "summary": "The short period between Uruk and the Early Dynastic, in which writing spreads beyond Uruk and becomes recognisably cuneiform."
+    },
+    {
+      "id": "west-asia.iran.elam.proto-elamite",
+      "kind": "period",
+      "name": "Proto-Elamite",
+      "parent_id": "west-asia.iran.elam",
+      "start_year": -3300,
+      "end_year": -2900,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Roughly 3300-2900 BCE. Precision beyond that is not currently achievable: the relevant radiocarbon dates fall on a plateau in the calibration curve, which is a physical limit rather than a shortage of samples. The tablet sub-phases are relative only. It begins slightly before the Elam era node, which starts at the conventional 3200 BCE.",
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "cambridge-elements-proto-elamite"
+      ],
+      "summary": "Southwestern Iran's own writing system, invented within a century or two of Mesopotamia's and still undeciphered.",
+      "aliases": [
+        "Susa III"
+      ]
+    },
+    {
+      "id": "west-asia.iran.elam.linear-elamite",
+      "kind": "period",
+      "name": "Linear Elamite",
+      "parent_id": "west-asia.iran.elam",
+      "start_year": -2300,
+      "end_year": -1880,
+      "tier": "intermediate",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Dated by the royal names appearing in the texts. The core corpus is often given as 2100-1900 BC; the 2022 decipherment paper uses 2300-1880 BCE.",
+      "alternatives": [
+        {
+          "label": "Not descended from Proto-Elamite",
+          "standing": "minority",
+          "note": "Dahl argues later scribes deliberately built an archaising script from recovered Proto-Elamite tablets, as differentiation from Mesopotamia, rather than inheriting one.",
+          "source_ids": [
+            "dahl-schismogenesis-linear-elamite"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Widely reported as deciphered. Acceptance is qualified rather than universal, and no fetched source reports a consensus statement.",
+          "source_ids": [
+            "desset-2022-linear-elamite",
+            "dahl-schismogenesis-linear-elamite"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "desset-2022-linear-elamite",
+        "dahl-schismogenesis-linear-elamite"
+      ],
+      "summary": "A later Iranian script, claimed in 2022 to have been deciphered as the oldest purely phonographic writing known."
+    },
+    {
+      "id": "west-asia.iran.elam.old-elamite",
+      "kind": "era",
+      "name": "Old Elamite Period",
+      "parent_id": "west-asia.iran.elam",
+      "start_year": -2400,
+      "end_year": -1450,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Two incompatible schemes are in current use. The dates here follow Gasche et al.'s short chronology as used by Encyclopaedia Iranica, 2400-1450 BCE. The traditional scheme labels the same span 'Old Elamite' at 2700-1500 BCE. Reconstruction rests on a Babylonian king-list tablet found at Susa listing twelve Awan then twelve Simashkean kings.",
+      "source_ids": [
+        "iranica-susa-elamite-period"
+      ],
+      "summary": "Elam's first documented dynasties — Awan, Simaški, Sukkalmah — locked in alternating war and marriage with Akkad, Ur and Babylon.",
+      "aliases": [
+        "Paleo-Elamite"
+      ]
+    },
+    {
+      "id": "west-asia.iran.elam.middle-elamite",
+      "kind": "era",
+      "name": "Middle Elamite Period",
+      "parent_id": "west-asia.iran.elam",
+      "start_year": -1450,
+      "end_year": -1050,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Iranica's short chronology gives 1450-1050 BCE, UNESCO gives 1400-1100, and other reference works give 1500-1100. Three institutional sources, three ranges, not reconciled and not averaged.",
+      "source_ids": [
+        "iranica-susa-elamite-period",
+        "unesco-tchogha-zanbil"
+      ],
+      "summary": "Elam at its most powerful, building Chogha Zanbil and carrying Babylonian monuments home as loot — including the Code of Hammurabi.",
+      "aliases": [
+        "Meso-Elamite"
+      ]
+    },
+    {
+      "id": "west-asia.iran.elam.middle-elamite.chogha-zanbil",
+      "kind": "period",
+      "name": "Chogha Zanbil",
+      "parent_id": "west-asia.iran.elam.middle-elamite",
+      "start_year": -1250,
+      "end_year": -640,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "century",
+      "allow_outside_parent_dates": true,
+      "date_note": "Founded about 1250 BCE by Untash-Napirisha and destroyed by Ashurbanipal about 640 BCE. The ziggurat was 105.2 m per side and about 53 m tall; 24.75 m survives.",
+      "alternatives": [
+        {
+          "label": "Untash-Napirisha reigned c. 1340-1300 BCE",
+          "standing": "minority",
+          "start_year": -1340,
+          "end_year": -1300,
+          "dating_method": "calendar",
+          "note": "Follows from Iranica's cross-date to Burnaburiaš II. UNESCO instead gives 1275-1240. Which is right depends on which Kassite king the Berlin Letter means.",
+          "source_ids": [
+            "iranica-susa-elamite-period"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "unesco-tchogha-zanbil",
+        "iranica-susa-elamite-period"
+      ],
+      "summary": "A royal city built around the best-preserved ziggurat in Iran, abandoned unfinished with thousands of unused bricks still on site.",
+      "aliases": [
+        "Dur-Untash",
+        "Tchogha Zanbil"
+      ]
+    },
+    {
+      "id": "west-asia.iran.elam.neo-elamite",
+      "kind": "era",
+      "name": "Neo-Elamite Period",
+      "parent_id": "west-asia.iran.elam",
+      "start_year": -1050,
+      "end_year": -539,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Potts gives 1000-539 BC and Iranica 1050-539. The internal boundaries differ more: the Neo-Elamite I/II line is placed at 744, 770 or 743 BC depending on the scholar. Susa fell to Ashurbanipal in 646 BC and the period ends with Cyrus in 539.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Elamite history here is written almost entirely from Assyrian royal inscriptions and Babylonian chronicles. Iranica calls the reconstruction a prisoner of those sources.",
+          "source_ids": [
+            "iranica-susa-elamite-period",
+            "potts-2015-neo-elamite"
+          ]
+        }
+      ],
+      "source_ids": [
+        "potts-2015-neo-elamite",
+        "iranica-susa-elamite-period"
+      ],
+      "summary": "Elam's last independent centuries, spent largely in coalition against Assyria, and known mostly through Assyrian accounts of defeating it."
+    },
+    {
+      "id": "west-asia.iran.elam.susa",
+      "kind": "period",
+      "name": "Susa",
+      "parent_id": "west-asia.iran.elam",
+      "start_year": -4200,
+      "end_year": -539,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "century",
+      "allow_outside_parent_dates": true,
+      "date_note": "Remains span 4200 BCE to the Islamic period; Acropolis buildings date to at least 4000 BCE. Iranica frames the specifically Elamite phase as 2400-539 BCE, which is the range that matches this entity's parent.",
+      "source_ids": [
+        "france-culture-susa-6000-years",
+        "iranica-susa-elamite-period"
+      ],
+      "summary": "Occupied for six thousand years, capital of Elam, and the place the Code of Hammurabi was found — because the Elamites took it there.",
+      "aliases": [
+        "Shush",
+        "Šuš"
+      ]
+    },
+    {
+      "id": "west-asia.anatolia.hittites",
+      "kind": "era",
+      "name": "The Hittites",
+      "parent_id": "west-asia.anatolia",
+      "start_year": -1650,
+      "end_year": -1180,
+      "tier": "foundational",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "About 1650-1190 BCE. The basis is textual — royal annals and the Telipinu Proclamation, cross-referenced to Mesopotamian synchronisms — not radiocarbon, so the whole sequence shifts with whichever Mesopotamian chronology is adopted.",
+      "source_ids": [
+        "brill-hittite-civilisation"
+      ],
+      "summary": "An Anatolian empire that fought Egypt to a draw at Kadesh and left the oldest surviving international peace treaty."
+    },
+    {
+      "id": "west-asia.anatolia.hittites.hittite-old-kingdom",
+      "kind": "period",
+      "name": "Hittite Old Kingdom",
+      "parent_id": "west-asia.anatolia.hittites",
+      "start_year": -1650,
+      "end_year": -1500,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "The Middle Kingdom that follows is deliberately not authored: the literature describes it as an ill-defined dark age between Telipinu and Suppiluliuma I and declines to bound it.",
+      "source_ids": [
+        "brill-hittite-civilisation"
+      ],
+      "summary": "Hattusa becomes the capital and Hittite armies reach Babylon."
+    },
+    {
+      "id": "west-asia.anatolia.hittites.sack-of-babylon",
+      "kind": "event",
+      "name": "Mursili I Sacks Babylon",
+      "parent_id": "west-asia.anatolia.hittites",
+      "start_year": -1595,
+      "end_year": null,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "1595 BCE on the Middle Chronology, which is the usual default. The competing schemes put it at 1736, 1651, 1587, 1531 or 1499 BCE — a spread of 237 years. Nothing about this event is independently dated; it is a king-list synchronism.",
+      "alternatives": [
+        {
+          "label": "Long Chronology, 1651 BCE",
+          "standing": "minority",
+          "start_year": -1651,
+          "dating_method": "calendar",
+          "note": "Favoured by some astronomical reconstructions of the Venus Tablet.",
+          "source_ids": [
+            "isac-dating-fall-of-babylon"
+          ]
+        },
+        {
+          "label": "Short Chronology, 1531 BCE",
+          "standing": "minority",
+          "start_year": -1531,
+          "dating_method": "calendar",
+          "note": "One of the lower readings of the same Venus observations.",
+          "source_ids": [
+            "isac-dating-fall-of-babylon"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "1595 BCE is quoted almost everywhere as simply the date. It is one scheme's answer to a periodic astronomical record that fits several real years equally well.",
+          "source_ids": [
+            "isac-dating-fall-of-babylon"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "isac-dating-fall-of-babylon",
+        "brill-hittite-civilisation"
+      ],
+      "summary": "A Hittite raid ends Hammurabi's dynasty, and the date it happened is the hinge the whole Bronze Age chronology turns on."
+    },
+    {
+      "id": "west-asia.anatolia.hittites.hattusa",
+      "kind": "period",
+      "name": "Hattusa",
+      "parent_id": "west-asia.anatolia.hittites",
+      "start_year": -1650,
+      "end_year": -1180,
+      "tier": "intermediate",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Hattusa is usually said to have been burned at the empire's end. German Archaeological Institute evidence does not support violent destruction; buildings were deliberately emptied first.",
+          "source_ids": [
+            "brill-hittite-civilisation"
+          ]
+        }
+      ],
+      "source_ids": [
+        "brill-hittite-civilisation"
+      ],
+      "summary": "The Hittite capital, source of the royal archives, and — contrary to the story everyone tells — probably not sacked."
+    },
+    {
+      "id": "west-asia.anatolia.hittites.kadesh",
+      "kind": "event",
+      "name": "Battle of Kadesh",
+      "parent_id": "west-asia.anatolia.hittites",
+      "start_year": -1274,
+      "end_year": null,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Year 5 of Ramesses II, which is 1274 BCE on the Egyptian Low Chronology and about twenty years earlier on the High. The treaty follows in his Year 21, usually 1259 BCE.",
+      "source_ids": [
+        "brill-hittite-civilisation"
+      ],
+      "summary": "Hittites and Egyptians fight the best-documented battle of the Bronze Age to a stalemate, then sign a treaty a copy of which hangs at the UN."
+    },
+    {
+      "id": "west-asia.anatolia.hittites.hittite-collapse",
+      "kind": "period",
+      "name": "Collapse of the Hittite Empire",
+      "parent_id": "west-asia.anatolia.hittites",
+      "start_year": -1200,
+      "end_year": -1180,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "decade",
+      "date_note": "The political collapse is dated textually. The drought is not: tree-ring widths and stable carbon isotopes in Gordion juniper place a severe multi-year dry event at 1198-1196 BCE, which is a far more precise date than anything in the political record it is being matched to.",
+      "source_ids": [
+        "cornell-2023-hittite-drought",
+        "brill-hittite-civilisation"
+      ],
+      "summary": "The empire dissolves in the first quarter of the 12th century, during a drought that tree rings date to three specific years."
+    },
+    {
+      "id": "west-asia.anatolia.neo-hittite",
+      "kind": "era",
+      "name": "Neo-Hittite States",
+      "parent_id": "west-asia.anatolia",
+      "start_year": -1180,
+      "end_year": -708,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "The end is unusually well dated because Assyria recorded each annexation: Til Barsip 856, Arpad 740, Patin 738, Damascus 732, Hamath 720, Carchemish 717, Malatya 712, Gurgum 711, and Kummuh last in 708 BCE.",
+      "source_ids": [
+        "bryce-absorption-by-assyria"
+      ],
+      "summary": "Luwian- and Aramaic-speaking successor kingdoms that kept Hittite hieroglyphs alive for four centuries after the empire died.",
+      "aliases": [
+        "Syro-Hittite states"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.anatolia.mitanni",
+      "kind": "era",
+      "name": "Mitanni",
+      "parent_id": "west-asia.anatolia",
+      "start_year": -1600,
+      "end_year": -1260,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Published ranges run from 1650-1275 to 1500-1360 BCE. Its foundation is anchored relative to the sack of Babylon — one or two generations before it — so the uncertainty is inherited wholesale from the Mesopotamian chronology problem rather than being about Mitanni at all.",
+      "source_ids": [
+        "novak-2007-mittani-chronology"
+      ],
+      "summary": "A Hurrian kingdom of northern Syria, rival and then in-law to both Egypt and Hatti, which left the world's oldest horse-training manual."
+    },
+    {
+      "id": "west-asia.anatolia.urartu",
+      "kind": "era",
+      "name": "Urartu",
+      "parent_id": "west-asia.anatolia",
+      "start_year": -840,
+      "end_year": -590,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Dated from Urartian royal inscriptions synchronised to Assyrian annals. Sarduri I's reign is given as 844-828, 840-830, 835-825 or 834-828 BCE across reputable sources. The collapse date could not be confirmed against a fetched source and the end year here should be treated as approximate.",
+      "source_ids": [
+        "met-urartu"
+      ],
+      "summary": "An Iron Age kingdom around Lake Van, Assyria's most persistent northern rival, built on fortresses and irrigation."
+    },
+    {
+      "id": "west-asia.anatolia.phrygia",
+      "kind": "era",
+      "name": "Phrygia",
+      "parent_id": "west-asia.anatolia",
+      "start_year": -900,
+      "end_year": -540,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_note": "Midas appears as Mita of Mushki in Sargon II's annals in 717 and 709 BCE, so he is a historically attested king rather than only a legend. Gordion's absolute chronology rests on a tree-ring sequence whose end date has been revised repeatedly: 751 BCE on a decadal wiggle-match in 2010, then 745 +/- 4 BCE on annual radiocarbon in 2020.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The Midas Mound Tumulus is not Midas's tomb. Its timber dates to about 740 BCE and Assyrian records show Midas still alive in 709.",
+          "source_ids": [
+            "penn-digital-gordion-midas",
+            "pearson-2020-gordion-dendro"
+          ]
+        }
+      ],
+      "source_ids": [
+        "penn-digital-gordion-midas",
+        "met-phrygia-gordion-midas",
+        "pearson-2020-gordion-dendro",
+        "pearson-reply-gordion-745bc"
+      ],
+      "summary": "An Anatolian kingdom centred on Gordion whose king Midas turns out to be documented in Assyrian records.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.anatolia.lydia",
+      "kind": "era",
+      "name": "Lydia",
+      "parent_id": "west-asia.anatolia",
+      "start_year": -680,
+      "end_year": -546,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "century",
+      "source_ids": [
+        "british-museum-money-gallery",
+        "oeaw-early-lydian-coinage"
+      ],
+      "summary": "A western Anatolian kingdom rich enough on electrum to invent coined money, ending when Cyrus took Sardis."
+    },
+    {
+      "id": "west-asia.anatolia.lydia.coinage",
+      "kind": "event",
+      "name": "The Invention of Coinage",
+      "parent_id": "west-asia.anatolia.lydia",
+      "start_year": -650,
+      "end_year": null,
+      "tier": "foundational",
+      "start_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "About 650 BCE. The basis is numismatic rather than scientific: hoard finds, chiefly the foundation deposit under the Temple of Artemis at Ephesus, combined with die and style sequencing.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Croesus did not invent coinage. Electrum coin began under Alyattes or earlier; Croesus introduced a bimetallic pure gold and silver standard a century later.",
+          "source_ids": [
+            "british-museum-money-gallery",
+            "oeaw-early-lydian-coinage"
+          ]
+        }
+      ],
+      "source_ids": [
+        "british-museum-money-gallery",
+        "oeaw-early-lydian-coinage"
+      ],
+      "summary": "Struck electrum pieces of guaranteed weight appear in Lydia, and money stops having to be weighed out."
+    },
+    {
+      "id": "west-asia.anatolia.troy",
+      "kind": "period",
+      "name": "Troy",
+      "parent_id": "west-asia.anatolia",
+      "start_year": -3000,
+      "end_year": 500,
+      "tier": "foundational",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Levels I to IX span roughly 3000 BCE to 500 CE. The basis is ceramic cross-dating to Mycenaean imports, supported by over 160 radiocarbon measurements, but the site's own published table warns that precise absolute dates are not always possible. Troy VIIa's destruction is bracketed to 1260-1240 BCE on imported pottery.",
+      "alternatives": [
+        {
+          "label": "Homeric Troy is level VI, not VIIa",
+          "standing": "minority",
+          "start_year": -1750,
+          "end_year": -1300,
+          "dating_method": "typological",
+          "note": "VI has the monumental fortifications but appears to end in an earthquake. VIIa is a poorer rebuild showing crowding and a violent destruction, which is why Blegen preferred it.",
+          "source_ids": [
+            "britannica-troy",
+            "oxford-anatolian-chronology"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Whether any Trojan War happened at all, as against a poetic composite of several conflicts, is a separate and equally unresolved question.",
+          "source_ids": [
+            "oxford-anatolian-chronology"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "britannica-troy",
+        "oxford-anatolian-chronology"
+      ],
+      "summary": "Nine cities stacked on one mound at Hisarlik, one of which may or may not be Homer's.",
+      "aliases": [
+        "Ilion",
+        "Hisarlik"
+      ]
     },
     {
       "id": "central-asia.prehistory.namazga",

@@ -181,6 +181,22 @@ def print_childless(entities):
     ]
     eras = [e for e in empty if e["kind"] == "era"]
 
+    # An empty REGION outranks anything else and was invisible here until
+    # `west-asia.anatolia` turned up holding nothing at all -- no Hittites, no
+    # Troy, no Lydia -- while the report happily listed 1,200-year eras. The
+    # filter only looked at era/period, so the single worst kind of gap in the
+    # dataset could not appear in the report designed to find gaps.
+    empty_regions = [
+        e for e in entities
+        if e["kind"] == "region" and kids.get(e["id"], 0) == 0
+    ]
+    print("\nEMPTY REGIONS -- a region with nothing in it")
+    print("-" * 72)
+    for e in sorted(empty_regions, key=lambda x: x["id"]):
+        print(f"  {e['id']}")
+    if not empty_regions:
+        print("  (none)")
+
     print("\nChildless ERAS -- an era exists to contain things")
     print("-" * 72)
     for e in sorted(eras, key=span, reverse=True)[:15]:
@@ -195,7 +211,8 @@ def print_childless(entities):
     for e in sorted(holo, key=span, reverse=True)[:10]:
         print(f"  {span(e):>9,} yr  {e['start_year']:>8}..{str(e.get('end_year')):<7} {e['id']}")
 
-    print(f"\n  {len(eras)} childless eras, {len(empty)} childless era/period nodes overall.")
+    print(f"\n  {len(empty_regions)} empty regions, {len(eras)} childless eras, "
+          f"{len(empty)} childless era/period nodes overall.")
 
 
 def main() -> int:

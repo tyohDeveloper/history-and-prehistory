@@ -18,14 +18,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.14.0.0");
+    expect(datasetVersion).toBe("0.15.0.0");
     expect(schemaVersion).toBe("3.1.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1583);
+    expect(entities.length).toBe(1608);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -105,11 +105,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(278);
+    expect(cited.length).toBe(305);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(292);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(318);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -121,7 +121,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(229);
+    expect(withEnd.length).toBe(252);
 
     const differing = entities
       .filter(
@@ -131,16 +131,25 @@ describe("gap-analysis baseline", () => {
       )
       .map((e) => e.id)
       .sort();
-    // Four, and each is a range whose ends genuinely rest on different
-    // science: Neanderthals (uranium-series in, radiocarbon out), the Middle
+    // Six, and each is a range whose ends genuinely rest on different
+    // evidence: Neanderthals (uranium-series in, radiocarbon out), the Middle
     // Stone Age (luminescence in, radiocarbon out), Rising Star (OSL in,
     // US-ESR on teeth out) and Sterkfontein (cosmogenic in, U-Pb out). Under
     // the old single field every one of these was mislabelled at one end.
+    //
+    // The last two cross the boundary the other way, from science into
+    // history. Susa's earliest occupation is radiocarbon-dated and its end is
+    // Cyrus taking the city in 539 BCE, which is a calendar date from written
+    // record. Phrygia's start comes off the Gordion tree-ring sequence and its
+    // end is typological. Recording either with one method would claim a
+    // precision, or a kind of evidence, that only one end of the range has.
     expect(differing).toEqual([
       "africa.prehistory.rising-star",
       "africa.prehistory.sterkfontein",
       "europe.prehistory.neanderthal-europe",
       "global.paleolithic.middle-stone-age",
+      "west-asia.anatolia.phrygia",
+      "west-asia.iran.elam.susa",
     ]);
 
     // An end method with no end boundary would describe nothing.
@@ -474,6 +483,35 @@ describe("Central Asia and the Austronesian world", () => {
     const mature = entities.find((e) => e.id === "south-asia.indus.mature")!;
     const alt = mature.alternatives!.find((a) => a.dating_method === "radiocarbon-uncalibrated")!;
     expect(alt.standing).toBe("superseded");
+  });
+
+  it("never states a chronology-scheme date as a bare fact", () => {
+    // Hammurabi shipped as 1792-1750 for ten releases with no note, no
+    // standing and no source. Those are Middle Chronology dates; the rival
+    // schemes move the same reign by up to 120 years, and the whole 2nd
+    // millennium moves with it. A date that depends on choosing a scheme has
+    // to say so, or it is Monte Verde again.
+    for (const id of [
+      "west-asia.mesopotamia.old-babylonian",
+      "west-asia.mesopotamia.old-babylonian.hammurabi",
+      "west-asia.anatolia.hittites.sack-of-babylon",
+    ]) {
+      const e = entities.find((x) => x.id === id)!;
+      expect(e, `${id} exists`).toBeDefined();
+      expect(e.date_precision, `${id} precision`).toBe("disputed");
+      expect(/[Cc]hronology/.test(e.date_note ?? ""), `${id} names the scheme`).toBe(true);
+    }
+  });
+
+  it("keeps every region populated", () => {
+    // west-asia.anatolia was an empty region node -- no Hittites, no Troy, no
+    // Lydia -- and the childless-node report could not see it, because that
+    // report only examined eras and periods. An empty region is the worst gap
+    // the dataset can have, so it is now checked here as well as reported.
+    const withKids = new Set(entities.map((e) => e.parent_id).filter(Boolean));
+    for (const r of entities.filter((e) => e.kind === "region")) {
+      expect(withKids.has(r.id), `${r.id} is empty`).toBe(true);
+    }
   });
 
   it("does not treat a received date as scientifically dated", () => {

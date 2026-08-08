@@ -1,5 +1,92 @@
 # Changelog
 
+## 0.15.0.0 — Uruk, Elam, Anatolia, and Hammurabi's missing frame (2026-08-08)
+
+Twenty-five entities, and one long-standing bug fixed.
+
+### The bug: a chronology quoted as a fact
+
+Hammurabi has shipped since the beginning as 1792–1750 BCE with no note, no
+standing, and no source. Those are **Middle Chronology** dates. Three rival
+schemes are in active use and they move the same reign across a spread of about
+120 years, taking the entire 2nd-millennium Mesopotamian sequence with them.
+There is no independent dating underneath: it rests on king-lists anchored to
+the Venus Tablet of Ammi-saduqa, whose observations are astronomically periodic
+and therefore fit several real years equally well.
+
+This is the Monte Verde failure class exactly — a number quoted without the
+frame that produced it — and it was sitting on one of the most recognisable
+dates in the dataset. Hammurabi and the Old Babylonian era now carry the frame,
+and a test forbids any chronology-dependent date from omitting it. The same
+treatment is applied to the sack of Babylon, whose six proposed dates span 237
+years.
+
+### Anatolia was an empty region
+
+`west-asia.anatolia` existed as a node containing nothing. No Hittites, no
+Troy, no Lydia, no Urartu. It now has the Hittites (Old Kingdom, Hattusa,
+Kadesh, the collapse, and the Neo-Hittite successor states with their
+Assyrian-recorded annexation dates), Mitanni, Urartu, Phrygia, Lydia, the
+invention of coinage, and Troy.
+
+Two things worth pulling out. The **Hattusa "sack" never happened** as usually
+told — German Archaeological Institute evidence does not support violent
+destruction, and the buildings were deliberately emptied first. And the
+**collapse drought is dated far more precisely than the collapse**: tree rings
+and carbon isotopes give 1198–1196 BCE, three named years, against a political
+record that manages "first quarter of the 12th century".
+
+### The Uruk period, which was entirely absent
+
+The dataset went from Ubaid straight to the Early Dynastic at 2900 BCE,
+skipping the first cities and the invention of writing. The container era was
+already there, describing itself as "the sequence that ends with the first
+cities and the first writing", and holding nothing.
+
+Now: the Uruk period, the city, the Uruk expansion, proto-cuneiform, and Jemdet
+Nasr.
+
+Chronology is authored from ARCANE's calibrated radiocarbon rather than the
+round numbers, with the four competing frameworks named and not averaged.
+ARCANE also notes that the widely quoted early figures for Uruk IVa rest on
+uncalibrated readings — the same error this dataset made with Monte Verde,
+found here in the published literature.
+
+Uruk's size is left at CDLI's 100 hectares. Figures from 250 to 600 ha
+circulate; only CDLI's traces to an institution. No population figure is
+authored at all, because none of the widely repeated ones trace to anything.
+
+The **token hypothesis is not authored as the origin of writing**. It is the
+popular account and it is under specific statistical attack: Zimansky showed
+that only 18% of claimed token subtypes have more than four members and that
+the "sheep" token has fifteen attestations in total. It ships as a contested
+alternative, with a second caveat noting tokens were never replaced by writing
+at all — they continue alongside it into the 1st millennium BC.
+
+### Elam subdivided
+
+Proto-Elamite, Linear Elamite, Old, Middle and Neo-Elamite, Chogha Zanbil, and
+Susa. Proto-Elamite's date note records a limit worth knowing: precision beyond
+"3300–2900" is not achievable because the relevant dates sit on a plateau in
+the calibration curve. That is a physical constraint, not a shortage of samples.
+
+The 2022 Linear Elamite decipherment ships as a claim with qualified
+acceptance, alongside Dahl's counter-model that the script was deliberately
+archaised rather than inherited.
+
+### Deliberately NOT authored
+
+Eridu (founding date untraceable to the excavation report); the Hittite Middle
+Kingdom (the literature calls it an ill-defined dark age and declines to bound
+it, so this does too); Urartu's collapse date; and **all of pre-Islamic
+Arabia** — Dilmun, Saba, the Nabataeans, the Marib Dam — whose research is
+archived in `docs/anatolia-arabia-research.md` and is the obvious next pass.
+
+### Counts
+
+1,583 → 1,608 entities. 366 → 396 sources. 278 → 305 cited. 292 → 318 with a
+start dating method, 229 → 252 with an end one.
+
 ## 0.14.0.0 — Erlitou, Korean prehistory, and the Chinese Neolithic filled in (2026-08-08)
 
 Twenty entities. This pass started from a false positive and is more useful for

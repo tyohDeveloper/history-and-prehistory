@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 193218,
+  "gzipBytes": 203186,
   "recordedAt": "2026-08-08",
-  "note": "v3.12.0.0 + the Chinese Neolithic filled in, Korean prehistory, and Erlitou (data 0.14.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.13.0.0 + the Uruk period, Elam subdivided, and Anatolia populated (data 0.15.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

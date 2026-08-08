@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.1.0"
-DATASET_VERSION = "0.14.0.0"
+DATASET_VERSION = "0.15.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -880,10 +880,40 @@ E(f"{mes}.akkadian", "era", "Akkadian Empire", mes, start=-2334, end=-2154, tier
   summary="First empire in world history.")
 E(f"{mes}.akkadian.sargon", "reign", "Sargon of Akkad", f"{mes}.akkadian", start=-2334, end=-2279, tier="foundational")
 E(f"{mes}.ur3", "era", "Ur III (Neo-Sumerian)", mes, start=-2112, end=-2004, tier="intermediate")
-E(f"{mes}.old-babylonian", "era", "Old Babylonian Empire", mes, start=-2000, end=-1600, tier="foundational")
+E(f"{mes}.old-babylonian", "era", "Old Babylonian Empire", mes, start=-2000, end=-1600, tier="foundational",
+  date_precision="disputed",
+  date_note="Middle Chronology, like every date in this era and the Kassite era that follows "
+            "it. The whole 2nd-millennium Mesopotamian sequence shifts together depending on "
+            "which chronology is adopted; see Hammurabi's reign for the detail.",
+  source_ids=["isac-dating-fall-of-babylon"])
+# 1792-1750 shipped here for ten releases as a bare fact. It is the MIDDLE
+# CHRONOLOGY figure, and the competing schemes move it by up to 120 years --
+# the same failure class as Monte Verde, a number quoted without the frame that
+# produced it. Everything from Ur III to the Kassites moves with it.
 E(f"{mes}.old-babylonian.hammurabi", "reign", "Hammurabi", f"{mes}.old-babylonian",
   start=-1792, end=-1750, tier="foundational",
-  summary="Famous for the Code of Hammurabi, one of the earliest surviving law codes.")
+  summary="Famous for the Code of Hammurabi, one of the earliest surviving law codes.",
+  start_dating_method="calendar", end_dating_method="calendar",
+  standing="majority", date_precision="disputed",
+  date_note="These are Middle Chronology dates, which is the usual default but only one of "
+            "four schemes in use. The High, Low and Ultra-Low chronologies place the same "
+            "reign progressively later or earlier, across a spread of roughly 120 years. "
+            "There is no independent dating here: the sequence rests on king-lists anchored "
+            "to the Venus Tablet of Ammi-saduqa, whose observations are astronomically "
+            "periodic and so fit several real years equally well.",
+  alternatives=[
+      {"label": "Low Chronology, c. 1728-1686 BC", "standing": "minority",
+       "start_year": -1728, "end_year": -1686, "dating_method": "calendar",
+       "note": "One of the lower readings of the same Venus observations.",
+       "source_ids": ["isac-dating-fall-of-babylon"]},
+  ],
+  caveats=[{"kind": "misconception",
+            "text": "Quoted almost everywhere as simply Hammurabi's dates. Sources differing "
+                    "by decades are usually not in error; they have chosen a different "
+                    "chronology.",
+            "source_ids": ["isac-dating-fall-of-babylon"]}],
+  as_of="2026-08-08",
+  source_ids=["isac-dating-fall-of-babylon"])
 E(f"{mes}.kassite", "era", "Kassite Babylon", mes, start=-1595, end=-1155, tier="specialist")
 E(f"{mes}.assyrian", "era", "Assyrian Empires", mes, start=-2025, end=-609, tier="foundational")
 E(f"{mes}.assyrian.middle", "period", "Middle Assyrian Empire", f"{mes}.assyrian", start=-1365, end=-1050)
@@ -1640,9 +1670,11 @@ _extend_central_asia(E, entities)
 from extensions_seasia_oceania import extend as _extend_seasia_oceania
 from extensions_indus import extend as _extend_indus
 from extensions_east_asia import extend as _extend_east_asia
+from extensions_west_asia import extend as _extend_west_asia
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
+_extend_west_asia(E, entities)
 
 # Marks received conventions across the corpus, so it runs after every module
 # that could author one.
@@ -3069,9 +3101,11 @@ sources.extend(CENTRAL_ASIA_SOURCES)
 from extensions_seasia_oceania import SEASIA_OCEANIA_SOURCES  # noqa: E402
 from extensions_indus import INDUS_SOURCES  # noqa: E402
 from extensions_east_asia import EAST_ASIA_SOURCES  # noqa: E402
+from extensions_west_asia import WEST_ASIA_SOURCES  # noqa: E402
 sources.extend(SEASIA_OCEANIA_SOURCES)
 sources.extend(INDUS_SOURCES)
 sources.extend(EAST_ASIA_SOURCES)
+sources.extend(WEST_ASIA_SOURCES)
 from received_conventions import RECEIVED_CONVENTION_SOURCES  # noqa: E402
 sources.extend(RECEIVED_CONVENTION_SOURCES)
 

@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.14.0.0",
-  "generated_at": "2026-08-08T23:17:38Z",
+  "dataset_version": "0.15.0.0",
+  "generated_at": "2026-08-08T23:52:59Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2362,6 +2362,196 @@
       "kind": "scholarly",
       "citation": "Shoda, 'A Comment on the Yayoi Period Dating Controversy', Bulletin of the Society for East Asian Archaeology 1",
       "url": "https://www.seaa-web.org/sites/default/files/publications/bseaa-1/BSEAA1-Shoda.pdf"
+    },
+    {
+      "id": "cdli-uruk-warka",
+      "kind": "scholarly",
+      "citation": "Cuneiform Digital Library Initiative, 'Uruk (modern Warka)'",
+      "url": "https://cdli.ox.ac.uk/wiki/doku.php?id=uruk_mod._warka",
+      "note": "States plainly that it does NOT assign absolute calendar dates to the individual Eanna levels, only their stratigraphic order."
+    },
+    {
+      "id": "cdli-late-uruk-period",
+      "kind": "scholarly",
+      "citation": "Cuneiform Digital Library Initiative, 'The Late Uruk Period'",
+      "url": "https://cdli.ox.ac.uk/wiki/doku.php?id=the_late_uruk_period"
+    },
+    {
+      "id": "sallaberger-schrakamp-2015-arcane",
+      "kind": "scholarly",
+      "citation": "Sallaberger & Schrakamp, ARCANE Vol. 1: Associated Regional Chronologies for the Ancient Near East (2015)",
+      "url": "https://www.assyriologie.uni-muenchen.de/personen/professoren/sallaberger/publ_sallaberger/wasa_schrakamp_2015_arcane1.pdf",
+      "note": "Uruk IVa Temple C samples cluster at cal. 3510-3370 BC. Notes that older quoted figures for Uruk IVa rest on uncalibrated or incorrect readings."
+    },
+    {
+      "id": "isac-surezha-lc-chronology",
+      "kind": "scholarly",
+      "citation": "Institute for the Study of Ancient Cultures (Chicago), Surezha excavation report",
+      "url": "https://isac.uchicago.edu/sites/default/files/uploads/shared/docs/ar/11-20/13-14/ar2013-14_Surezha.pdf"
+    },
+    {
+      "id": "unicode-2019-proto-cuneiform",
+      "kind": "reference",
+      "citation": "Unicode Technical Report on Proto-Cuneiform (2019)",
+      "url": "https://www.unicode.org/L2/L2019/19284-proto-cuneiform.pdf"
+    },
+    {
+      "id": "antiquity-2025-seals-and-signs",
+      "kind": "scholarly",
+      "citation": "'Seals and signs: tracing the origins of writing in ancient South-west Asia', Antiquity (2025)",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/seals-and-signs-tracing-the-origins-of-writing-in-ancient-southwest-asia/B3C2D400F3F80A7A0162D9035C9C2804"
+    },
+    {
+      "id": "zimansky-1993-before-writing-review",
+      "kind": "scholarly",
+      "citation": "Zimansky, review of Schmandt-Besserat's 'Before Writing', Journal of Field Archaeology (1993)",
+      "url": "https://kieranhealy.org/files/misc/jfa93.pdf",
+      "note": "Only 18% of claimed token subtypes have more than four members, and the 'sheep' token has fifteen attestations across all periods."
+    },
+    {
+      "id": "bennison-chapman-2023-tokens",
+      "kind": "scholarly",
+      "citation": "Bennison-Chapman, Bulletin of the American Society of Overseas Research 390 (2023)",
+      "url": "https://www.journals.uchicago.edu/doi/10.1086/727776",
+      "note": "Calls the 'writing replaced tokens' narrative a gross oversimplification; tokens continue alongside writing into the 1st millennium BC."
+    },
+    {
+      "id": "reading-jemdet-nasr",
+      "kind": "reference",
+      "citation": "University of Reading, Jemdet Nasr period",
+      "url": "https://www.reading.ac.uk/ure/subject/mesopotamia.php"
+    },
+    {
+      "id": "isac-dating-fall-of-babylon",
+      "kind": "scholarly",
+      "citation": "Institute for the Study of Ancient Cultures (Chicago), 'Dating the Fall of Babylon'",
+      "url": "https://isac.uchicago.edu/dating-fall-babylon",
+      "note": "The Venus Tablet of Ammi-saduqa is astronomically periodic, so it fits several real years. That is where the High/Middle/Low/Ultra-Low split comes from."
+    },
+    {
+      "id": "cambridge-elements-proto-elamite",
+      "kind": "scholarly",
+      "citation": "Cambridge Elements, 'Proto-Elamite'",
+      "url": "https://www.cambridge.org/core/elements/protoelamite/3684B7262E21A8B6AF8657D948A5B1A6",
+      "note": "Precision is limited by a plateau in the calibration curve — a physical limit, not a shortage of samples."
+    },
+    {
+      "id": "desset-2022-linear-elamite",
+      "kind": "scholarly",
+      "citation": "Desset, Tabibzadeh, Kervran, Basello & Marchesi, 'The Decipherment of Linear Elamite Writing', Zeitschrift für Assyriologie 112 (2022)",
+      "url": "https://orbi.uliege.be/handle/2268/334018?wpmobileexternal=true"
+    },
+    {
+      "id": "dahl-schismogenesis-linear-elamite",
+      "kind": "scholarly",
+      "citation": "Dahl, on Linear Elamite and schismogenesis (Oxford ORA)",
+      "url": "https://ora.ox.ac.uk/objects/uuid:51adb1c2-61de-438c-9b29-125addf3d2a1/files/r6w924c626",
+      "note": "Argues the Proto-Elamite resemblance is deliberate archaising by later scribes, not descent."
+    },
+    {
+      "id": "iranica-susa-elamite-period",
+      "kind": "scholarly",
+      "citation": "Encyclopaedia Iranica, 'Susa ii. History during the Elamite period'",
+      "url": "https://www.iranicaonline.org/articles/susa-ii-history-during-the-elamite-period/",
+      "note": "Follows the short chronology of Gasche et al. (1998). Notes Elamite history is 'to some extent a prisoner of the Assyrian royal inscriptions'."
+    },
+    {
+      "id": "unesco-tchogha-zanbil",
+      "kind": "reference",
+      "citation": "UNESCO World Heritage Centre, 'Tchogha Zanbil'",
+      "url": "https://whc.unesco.org/en/list/113/"
+    },
+    {
+      "id": "potts-2015-neo-elamite",
+      "kind": "scholarly",
+      "citation": "Potts, 'The Neo-Elamite period', in The Archaeology of Elam (Cambridge, 2015)",
+      "url": "https://www.cambridge.org/core/books/abs/archaeology-of-elam/neoelamite-period/054799B680BFE4F9897D0F521CAA46E8"
+    },
+    {
+      "id": "france-culture-susa-6000-years",
+      "kind": "reference",
+      "citation": "French Ministry of Culture, 'Susa: 6,000 years of history'",
+      "url": "https://archeologie.culture.gouv.fr/jacques-morgan/en/susa-6000-years-history"
+    },
+    {
+      "id": "brill-hittite-civilisation",
+      "kind": "scholarly",
+      "citation": "Brill, chapter on Hittite civilisation",
+      "url": "https://brill.com/display/book/9789004548633/BP000005.xml",
+      "note": "Reports that current German Archaeological Institute evidence does NOT support violent destruction at Hattusa; buildings were deliberately emptied."
+    },
+    {
+      "id": "cornell-2023-hittite-drought",
+      "kind": "press",
+      "citation": "Cornell Chronicle, 'Rare drought coincided with Hittite empire collapse' (February 2023)",
+      "url": "https://news.cornell.edu/stories/2023/02/rare-drought-coincided-hittite-empire-collapse",
+      "note": "Tree-ring width plus stable carbon isotopes in Gordion juniper give a severe drought at 1198-1196 BCE."
+    },
+    {
+      "id": "bryce-absorption-by-assyria",
+      "kind": "scholarly",
+      "citation": "Bryce, 'Absorption by Assyria (8th century)', Oxford Academic",
+      "url": "https://academic.oup.com/book/9649/chapter/156739759"
+    },
+    {
+      "id": "novak-2007-mittani-chronology",
+      "kind": "scholarly",
+      "citation": "Novák, 'Mittani Empire and the Question of Absolute Chronology' (Heidelberg, 2007)",
+      "url": "https://archiv.ub.uni-heidelberg.de/propylaeumdok/1295/1/Novak_Mittani_Empire_2007.pdf"
+    },
+    {
+      "id": "met-urartu",
+      "kind": "reference",
+      "citation": "Metropolitan Museum of Art, 'Urartu'",
+      "url": "https://www.metmuseum.org/essays/urartu"
+    },
+    {
+      "id": "penn-digital-gordion-midas",
+      "kind": "scholarly",
+      "citation": "Penn Museum, Digital Gordion",
+      "url": "https://www.penn.museum/sites/gordion/articles/myth-religion/320-2/"
+    },
+    {
+      "id": "met-phrygia-gordion-midas",
+      "kind": "reference",
+      "citation": "Metropolitan Museum of Art, 'Phrygia, Gordion, and King Midas in the Late Eighth Century B.C.'",
+      "url": "https://www.metmuseum.org/essays/phrygia-gordion-and-king-midas-in-the-late-eighth-century-b-c"
+    },
+    {
+      "id": "british-museum-money-gallery",
+      "kind": "reference",
+      "citation": "British Museum, Money Gallery (Room 68) gallery guide",
+      "url": "https://www.britishmuseum.org/sites/default/files/2021-05/Money_Gallery_LPG_2020_Room_68.pdf"
+    },
+    {
+      "id": "oeaw-early-lydian-coinage",
+      "kind": "scholarly",
+      "citation": "Austrian Academy of Sciences, 'Early Lydian Coinage and Chronology'",
+      "url": "https://www.oeaw.ac.at/en/oeai/research/classical-studies/numismatics/early-lydian-coinage-and-chronology"
+    },
+    {
+      "id": "pearson-2020-gordion-dendro",
+      "kind": "scholarly",
+      "citation": "Pearson et al., 'Annual radiocarbon record indicates 16th century BCE date for the Thera eruption' and the Gordion sequence, PNAS 117 (2020)",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1917445117"
+    },
+    {
+      "id": "pearson-reply-gordion-745bc",
+      "kind": "scholarly",
+      "citation": "Pearson et al., 'Reply to Manning: Dating of the Gordion tree-ring sequence still stands within a year of 745 BC', PNAS",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7414178/"
+    },
+    {
+      "id": "oxford-anatolian-chronology",
+      "kind": "scholarly",
+      "citation": "Oxford Handbook of Ancient Anatolia, chronology chapter",
+      "url": "https://academic.oup.com/edited-volume/36332/chapter/318715466?searchresult=1"
+    },
+    {
+      "id": "britannica-troy",
+      "kind": "reference",
+      "citation": "Encyclopaedia Britannica, 'Troy (ancient city, Turkey)'",
+      "url": "https://www.britannica.com/place/Troy-ancient-city-Turkey"
     },
     {
       "id": "masson-altyn-depe-summary",

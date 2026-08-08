@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
-  "dataset_version": "3.0.0",
-  "generated_at": "2026-08-08T03:45:37Z",
+  "dataset_version": "3.1.0",
+  "generated_at": "2026-08-08T04:26:06Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -113,6 +113,116 @@
       "kind": "scholarly",
       "citation": "Joordens et al. (2015), 'Homo erectus at Trinil on Java used shells for tool production and engraving', Nature",
       "url": "https://www.nature.com/articles/nature13962"
+    },
+    {
+      "id": "deino-2012-olduvai",
+      "kind": "scholarly",
+      "citation": "Deino (2012), 40Ar/39Ar dating of Olduvai Gorge Beds I-II",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22809744/"
+    },
+    {
+      "id": "vidal-2022-omo",
+      "kind": "scholarly",
+      "citation": "Vidal et al. (2022), 'Age of the oldest known Homo sapiens from eastern Africa', Nature",
+      "url": "https://www.nature.com/articles/s41586-021-04275-8"
+    },
+    {
+      "id": "bader-2022-msa",
+      "kind": "scholarly",
+      "citation": "Bader et al. (2022), the Middle Stone Age of southern Africa",
+      "url": "https://www.hadw-bw.de/sites/default/files/documents/Bader%20et%20al.%202022_MSA%20of%20South%20Africa.pdf"
+    },
+    {
+      "id": "jacobs-2006-blombos",
+      "kind": "scholarly",
+      "citation": "Jacobs et al. (2006), single-grain OSL ages for Blombos Cave, Journal of Human Evolution",
+      "url": "http://in-africa.org/wp-content/uploads/2012/12/Jacobs-et-al-2006-JHE-OSL-dates-for-Blombos.pdf"
+    },
+    {
+      "id": "klasies-river-guide",
+      "kind": "scholarly",
+      "citation": "Klasies River Mouth site guide, Stellenbosch University",
+      "url": "http://academic.sun.ac.za/archaeology/krguide2001.pdf"
+    },
+    {
+      "id": "backwell-2018-border-cave",
+      "kind": "scholarly",
+      "citation": "Backwell et al. (2018), the Border Cave sequence, Journal of Field Archaeology",
+      "url": "https://hal.science/hal-04722241v1/file/Backwell%20et%20al_Border%20Cave%20chapter.pdf"
+    },
+    {
+      "id": "mcgee-2017-ahp",
+      "kind": "scholarly",
+      "citation": "McGee & deMenocal (2017), the African Humid Period",
+      "url": "https://www.ldeo.columbia.edu/~peter/site/Home_files/McGee.deMenocal2017.pdf"
+    },
+    {
+      "id": "wendorf-1998-nabta",
+      "kind": "scholarly",
+      "citation": "Wendorf & Schild (1998), Nabta Playa and its role in Northeastern African prehistory",
+      "url": "https://www.kar.zcu.cz/studium/materialy/egy/texty-pro-studenty-2012/NabtaPlaya.pdf"
+    },
+    {
+      "id": "malville-1998-nabta",
+      "kind": "scholarly",
+      "citation": "Malville et al. (1998), megaliths and Neolithic astronomy in southern Egypt, Nature 392:488-491",
+      "url": "https://www.nature.com/articles/33131"
+    },
+    {
+      "id": "ppnd-summary",
+      "kind": "scholarly",
+      "citation": "Benz, Platform for Neolithic Radiocarbon Dates (PPND) chronology summary, ex oriente",
+      "url": "https://www.exoriente.org/associated_projects/ppnd_summary.php"
+    },
+    {
+      "id": "oxford-natufian",
+      "kind": "scholarly",
+      "citation": "Nilsson Stutz et al., the Natufian, Oxford Handbook",
+      "url": "https://academic.oup.com/edited-volume/59635/chapter/505050944"
+    },
+    {
+      "id": "orton-catalhoyuk",
+      "kind": "scholarly",
+      "citation": "Orton et al., 'A tale of two tells': dating Catalhoyuk West",
+      "url": "https://eprints.whiterose.ac.uk/id/eprint/132693/1/tale_of_two_tells_dating_the_catalhoyuk_west_mound.pdf"
+    },
+    {
+      "id": "halaf-chronology",
+      "kind": "scholarly",
+      "citation": "Halaf and Late Neolithic chronology of northern Mesopotamia, DergiPark",
+      "url": "https://dergipark.org.tr/en/download/article-file/1184094"
+    },
+    {
+      "id": "beyond-the-ubaid",
+      "kind": "scholarly",
+      "citation": "Carter & Philip (eds), Beyond the Ubaid, Oriental Institute SAOC 63",
+      "url": "https://isac.uchicago.edu/sites/default/files/uploads/shared/docs/saoc63.pdf"
+    },
+    {
+      "id": "bar-yosef-jericho",
+      "kind": "scholarly",
+      "citation": "Bar-Yosef, the walls of Jericho: an alternative interpretation",
+      "url": "https://dash.harvard.edu/server/api/core/bitstreams/7312037d-1ce8-6bd4-e053-0100007fdf3b/content",
+      "note": "Stage dates are UNCALIBRATED radiocarbon and are not labelled as such in the source."
+    },
+    {
+      "id": "ppnd-jericho",
+      "kind": "scholarly",
+      "citation": "PPND site entry for Jericho / Tell es-Sultan, ex oriente",
+      "url": "https://www.exoriente.org/associated_projects/ppnd_site.php?s=36"
+    },
+    {
+      "id": "grissom-ain-ghazal",
+      "kind": "scholarly",
+      "citation": "Grissom, the statues of 'Ain Ghazal, Smithsonian",
+      "url": "https://repository.si.edu/server/api/core/bitstreams/73bd63c6-4d5d-42a0-a679-b530a8d81b88/content",
+      "note": "Gives uncalibrated 6750 +/- 80 BC and the calibrated equivalent 7580 +/- 110 BC."
+    },
+    {
+      "id": "ppnd-ain-ghazal",
+      "kind": "scholarly",
+      "citation": "PPND site entry for 'Ain Ghazal, ex oriente",
+      "url": "https://www.exoriente.org/associated_projects/ppnd_site.php?s=10"
     },
     {
       "id": "harmand-2015-lomekwi",
@@ -269,6 +379,318 @@
       "kind": "scholarly",
       "citation": "Surovell et al. (2026), reanalysis proposing a Holocene age for Monte Verde II, Science",
       "note": "Minority position. Rebutted by ~30 specialists in May 2026; authors replied June 2026."
+    },
+    {
+      "id": "arsuaga-2014-sima",
+      "kind": "scholarly",
+      "citation": "Arsuaga et al. (2014), Sima de los Huesos",
+      "url": "https://cnrs.hal.science/hal-03739291/document"
+    },
+    {
+      "id": "higham-2014-neanderthal",
+      "kind": "scholarly",
+      "citation": "Higham et al. (2014), Neanderthal disappearance",
+      "url": "https://www.nature.com/articles/nature13621"
+    },
+    {
+      "id": "quiles-2016-chauvet",
+      "kind": "scholarly",
+      "citation": "Quiles et al. (2016), Chauvet Cave chronology",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1523158113"
+    },
+    {
+      "id": "pettitt-bahn-2015-chauvet",
+      "kind": "scholarly",
+      "citation": "Pettitt and Bahn (2015), alternative Chauvet chronology",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/an-alternative-chronology-for-the-art-of-chauvet-cave/723AB31F4E88629A2B7323BDD4845450"
+    },
+    {
+      "id": "culture-gouv-lascaux",
+      "kind": "scholarly",
+      "citation": "French Ministry of Culture, dating Lascaux",
+      "url": "https://archeologie.culture.gouv.fr/lascaux/en/dating-figures-lascaux"
+    },
+    {
+      "id": "garcia-diez-2013-altamira",
+      "kind": "scholarly",
+      "citation": "García-Diez et al. (2013), Altamira uranium-series dates",
+      "url": "https://cir.cenieh.es/bitstream/20.500.12136/420/1/Uranium%20series%20dating%20reveals%20a%20long%20sequence%20of%20rock%20art%20at%20Altamira%20Cave%20(Santillana%20del%20Mar,%20Cantabria)_Garc%C3%ADa-Diez_et_al_2013.pdf"
+    },
+    {
+      "id": "jakucs-2016-lbk",
+      "kind": "scholarly",
+      "citation": "Jakucs et al. (2016), LBK chronology",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5040754/"
+    },
+    {
+      "id": "schulz-paulsson-2019-megaliths",
+      "kind": "scholarly",
+      "citation": "Schulz Paulsson (2019), megalith chronology",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1813268116"
+    },
+    {
+      "id": "darvill-2012-stonehenge",
+      "kind": "scholarly",
+      "citation": "Darvill et al. (2012), Stonehenge chronology",
+      "url": "https://eprints.bournemouth.ac.uk/20587/1/Antiquity%202012%20(Stonehenge%20Remodelled).pdf"
+    },
+    {
+      "id": "papac-2021-corded-ware",
+      "kind": "scholarly",
+      "citation": "Papac et al. (2021), Corded Ware genomics and dates",
+      "url": "https://www.stephanschiffels.de/pdfs/Papac2021-up.pdf"
+    },
+    {
+      "id": "olalde-2018-beaker",
+      "kind": "scholarly",
+      "citation": "Olalde et al. (2018), Bell Beaker phenomenon",
+      "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/56097393/OlaldeEtalN2018TheBeakerPhenomenon.pdf"
+    },
+    {
+      "id": "kutschera-otzi",
+      "kind": "scholarly",
+      "citation": "Kutschera, radiocarbon dating of the Iceman",
+      "url": "https://www2.chemistry.msu.edu/courses/cem485/lectures/icemanage.pdf"
+    },
+    {
+      "id": "taylor-2021-botai",
+      "kind": "scholarly",
+      "citation": "Taylor and Barrón-Ortiz (2021), Botai horse management",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8018961/"
+    },
+    {
+      "id": "poliakov-2023-afanasievo",
+      "kind": "scholarly",
+      "citation": "Poliakov, Svyatko and Stepanova, Afanasievo chronology review",
+      "url": "https://pureadmin.qub.ac.uk/ws/portalfiles/portal/203637844/ReviewOf.pdf"
+    },
+    {
+      "id": "grigoriev-2021-andronovo",
+      "kind": "scholarly",
+      "citation": "Grigoriev (2021), Andronovo problem",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/opar-2020-0123/html?lang=en"
+    },
+    {
+      "id": "lamberg-karlovsky-bmac",
+      "kind": "scholarly",
+      "citation": "Lamberg-Karlovsky, BMAC chronology",
+      "url": "https://repositorio.uam.es/bitstream/handle/10486/660123/3902.pdf?isAllowed=y&sequence=1"
+    },
+    {
+      "id": "lazaridis-2025-yamnaya",
+      "kind": "scholarly",
+      "citation": "Lazaridis et al. (2025), genetic origin of Indo-Europeans",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11922553/"
+    },
+    {
+      "id": "matsumoto-2017-jomon",
+      "kind": "scholarly",
+      "citation": "Matsumoto, Habu and Matsui (2017), Jōmon chronology",
+      "url": "https://junkohabu.com/wp-content/uploads/2018/02/matsumoto-habumatsui-2017.pdf"
+    },
+    {
+      "id": "keally-jomon-dates",
+      "kind": "scholarly",
+      "citation": "Keally, Jōmon radiocarbon dates",
+      "url": "http://www.t-net.ne.jp/~keally/Chronologies/jomon-dates.html"
+    },
+    {
+      "id": "zhang-2013-peiligang",
+      "kind": "scholarly",
+      "citation": "Zhang et al. (2013), Peiligang chronology",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3524165/"
+    },
+    {
+      "id": "frontiers-2021-yangshao",
+      "kind": "scholarly",
+      "citation": "Frontiers (2021), Yangshao chronology",
+      "url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2021.662391/full"
+    },
+    {
+      "id": "cass-hongshan",
+      "kind": "scholarly",
+      "citation": "Chinese Academy of Social Sciences, Hongshan chronology",
+      "url": "http://kaogu.cssn.cn/ywb/research_work/other_topics/201411/W020180124632420705403.pdf"
+    },
+    {
+      "id": "haidai-longshan",
+      "kind": "scholarly",
+      "citation": "Haidai, Longshan chronology",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X16305648"
+    },
+    {
+      "id": "liu-2017-liangzhu",
+      "kind": "scholarly",
+      "citation": "Liu et al. (2017), Liangzhu chronology",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1710516114"
+    },
+    {
+      "id": "zhang-1999-jiahu",
+      "kind": "scholarly",
+      "citation": "Zhang et al. (1999), Jiahu bone flutes",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16862110/"
+    },
+    {
+      "id": "mutin-2025-mehrgarh",
+      "kind": "scholarly",
+      "citation": "Mutin et al. (2025), re-dating Mehrgarh",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12000376/"
+    },
+    {
+      "id": "sarkar-2016-bhirrana",
+      "kind": "scholarly",
+      "citation": "Sarkar et al. (2016), Bhirrana chronology",
+      "url": "https://www.nature.com/articles/srep26555"
+    },
+    {
+      "id": "asi-bhirrana-review",
+      "kind": "scholarly",
+      "citation": "Archaeological Survey of India, Bhirrana review",
+      "url": "https://cdnbbsr.s3waas.gov.in/s3a70dc40477bc2adceef4d2c90f47eb82/uploads/2023/02/2023021535.pdf"
+    },
+    {
+      "id": "kenoyer-2000-ravi",
+      "kind": "scholarly",
+      "citation": "Kenoyer (2000), Ravi Phase at Harappa",
+      "url": "https://www.harappa.com/sites/default/files/pdf/Kenoyer2000_The%20Ravi%20Phase%20A%20New%20Cultural%20Manifestation%20at%20H.pdf"
+    },
+    {
+      "id": "patel-agnihotri-lahuradewa",
+      "kind": "scholarly",
+      "citation": "Patel and Agnihotri, Lahuradewa environmental record",
+      "url": "https://palaeontologicalsociety.in/vol67_1/10.%20JPSI-IBSV-Patel-Agnihotri.pdf"
+    },
+    {
+      "id": "forestier-2013-hoabinhian",
+      "kind": "scholarly",
+      "citation": "Forestier et al. (2013), Hoabinhian chronology",
+      "url": "https://sciencepress.mnhn.fr/sites/default/files/articles/pdf/comptes-rendus-palevol2013v12f1a06.pdf"
+    },
+    {
+      "id": "ji-2016-hoabinhian",
+      "kind": "scholarly",
+      "citation": "Ji et al. (2016), early Hoabinhian chronology",
+      "url": "https://os.pennds.org/archaeobib_filestore/pdf_articles/QI/2016_400_Jietal.pdf"
+    },
+    {
+      "id": "higham-2015-ban-chiang",
+      "kind": "scholarly",
+      "citation": "Higham et al. (2015), Ban Chiang chronology",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4575132/"
+    },
+    {
+      "id": "barker-2007-niah",
+      "kind": "scholarly",
+      "citation": "Barker et al. (2007), Niah Cave chronology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17161859/"
+    },
+    {
+      "id": "zheng-2016-rice",
+      "kind": "scholarly",
+      "citation": "Zheng et al. (2016), early rice cultivation",
+      "url": "https://www.nature.com/articles/srep28136"
+    },
+    {
+      "id": "pico-2022-beringia",
+      "kind": "scholarly",
+      "citation": "Pico et al. (2022), Beringia coastal route",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2206742119"
+    },
+    {
+      "id": "waters-2019-preclovis",
+      "kind": "scholarly",
+      "citation": "Waters et al. (2019), pre-Clovis occupation",
+      "url": "https://www.science.org/doi/10.1126/science.aat5447"
+    },
+    {
+      "id": "bennett-2021-white-sands",
+      "kind": "scholarly",
+      "citation": "Bennett et al. (2021), White Sands footprints",
+      "url": "https://www.science.org/doi/10.1126/science.abg7586"
+    },
+    {
+      "id": "pigati-2023-white-sands",
+      "kind": "scholarly",
+      "citation": "Pigati et al. (2023), White Sands independent chronology",
+      "url": "https://www.science.org/doi/10.1126/science.adh5007"
+    },
+    {
+      "id": "madsen-2022-white-sands",
+      "kind": "scholarly",
+      "citation": "Madsen et al. (2022), White Sands reservoir critique",
+      "url": "https://www.science.org/doi/10.1126/science.abm6987"
+    },
+    {
+      "id": "waters-2020-clovis",
+      "kind": "scholarly",
+      "citation": "Waters (2020), Clovis age range",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33087355/"
+    },
+    {
+      "id": "waters-stafford-2007-clovis",
+      "kind": "scholarly",
+      "citation": "Waters and Stafford (2007), Clovis radiocarbon re-dating",
+      "url": "https://liberalarts.tamu.edu/wp-content/uploads/sites/14/2019/09/Waters-and-Stafford-Clovis-Dating.pdf"
+    },
+    {
+      "id": "buchanan-2021-folsom",
+      "kind": "scholarly",
+      "citation": "Buchanan et al. (2021), Folsom chronology",
+      "url": "http://marcusjhamilton.weebly.com/uploads/2/5/5/3/25533140/buchanan_et_al_2021.pdf"
+    },
+    {
+      "id": "cambridge-paleoindian-archaic",
+      "kind": "scholarly",
+      "citation": "Cambridge, Paleoindian and Archaic periods",
+      "url": "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/C86E356FC4CC78806D2E1B92E2A4F869/9781139017831c54_p923-942_CBO.pdf/paleoindian_and_archaic_periods_in_north_america.pdf"
+    },
+    {
+      "id": "nps-archaic",
+      "kind": "scholarly",
+      "citation": "National Park Service, Archaic Period",
+      "url": "https://www.nps.gov/articles/archaic-period.htm"
+    },
+    {
+      "id": "encyclopedia-virginia-cactus-hill",
+      "kind": "scholarly",
+      "citation": "Encyclopedia Virginia, Cactus Hill",
+      "url": "https://encyclopediavirginia.org/entries/cactus-hill-archaeological-site/"
+    },
+    {
+      "id": "jenkins-paisley-geochronology",
+      "kind": "scholarly",
+      "citation": "Jenkins et al., Paisley Caves geochronology",
+      "url": "https://pages.uoregon.edu/ftrock/pdfs/jenkins_geochronology.pdf"
+    },
+    {
+      "id": "bradshaw-2021-sahul",
+      "kind": "scholarly",
+      "citation": "Bradshaw et al. (2021), Sahul occupation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8085232/"
+    },
+    {
+      "id": "bowler-2003-mungo",
+      "kind": "scholarly",
+      "citation": "Bowler et al. (2003), Lake Mungo chronology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12594511/"
+    },
+    {
+      "id": "ahrc-aboriginal-history",
+      "kind": "scholarly",
+      "citation": "Australian Human Rights Commission, Aboriginal history",
+      "url": "https://bth.humanrights.gov.au/significance/historical-context-ancient-history"
+    },
+    {
+      "id": "specht-lapita",
+      "kind": "scholarly",
+      "citation": "Specht, Lapita chronology",
+      "url": "https://press-files.anu.edu.au/downloads/press/p61051/pdf/ch0327.pdf"
+    },
+    {
+      "id": "wilmshurst-2011-polynesia",
+      "kind": "scholarly",
+      "citation": "Wilmshurst et al. (2011), Polynesian settlement chronology",
+      "url": "https://faculty.washington.edu/plape/pacificarchaut12/Wilmshurst%20et%20al%202010.pdf"
     }
   ]
 }

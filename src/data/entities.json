@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
-  "dataset_version": "3.0.0",
-  "generated_at": "2026-08-08T03:45:37Z",
+  "dataset_version": "3.1.0",
+  "generated_at": "2026-08-08T04:26:06Z",
   "entities": [
     {
       "id": "global",
@@ -1289,7 +1289,23 @@
       "end_year": -300,
       "tier": "intermediate",
       "native_name": "縄文時代",
-      "summary": "Hunter-gatherer culture famous for cord-marked pottery.",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "summary": "Hunter-gatherers who made pottery, settled in villages and grew rich on the sea — without ever taking up farming.",
+      "date_note": "The phase framework is in calibrated years. The widely repeated start of '13,000 BCE' is an UNCALIBRATED radiocarbon number presented as a calendar date; the earliest Japanese pottery at Ōdai Yamamoto I is 13,480-12,680 BP uncalibrated, which calibrates to 16,140-14,920 cal BP.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The familiar '13,000 BCE' start is an uncalibrated radiocarbon figure read as a calendar year. Calibrated, the earliest pottery is some 3,000 years older.",
+          "source_ids": [
+            "keally-jomon-dates"
+          ]
+        }
+      ],
+      "source_ids": [
+        "matsumoto-2017-jomon",
+        "keally-jomon-dates"
+      ],
       "date_precision": "approx"
     },
     {
@@ -8378,13 +8394,17 @@
       "name": "Aboriginal Australia",
       "parent_id": "oceania.australia",
       "start_year": -65000,
-      "end_year": 1788,
+      "end_year": null,
       "date_precision": "approx",
       "tier": "foundational",
       "dating_method": "luminescence",
       "standing": "consensus",
       "summary": "One of the longest continuous cultural traditions in human history.",
-      "date_note": "The 65 ka arrival rests on optically stimulated luminescence at Madjedbebe, well beyond the radiocarbon range. The 1788 end is a colonial boundary, not an end to the tradition."
+      "date_note": "The 65 ka arrival rests on optically stimulated luminescence at Madjedbebe, well beyond the radiocarbon range. 1788 is a colonial boundary, not an end: Aboriginal cultures and traditions continue to the present.",
+      "source_ids": [
+        "clarkson-2017-madjedbebe",
+        "ahrc-aboriginal-history"
+      ]
     },
     {
       "id": "oceania.australia.colonial",
@@ -8413,11 +8433,30 @@
       "kind": "era",
       "name": "Lapita Culture",
       "parent_id": "oceania.melanesia",
-      "start_year": -1500,
-      "end_year": 500,
+      "start_year": -1501,
+      "end_year": -734,
+      "date_precision": "approx",
       "tier": "intermediate",
-      "summary": "Ancestral Austronesian seafarers whose descendants settled most of Remote Oceania.",
-      "date_precision": "approx"
+      "summary": "An ancestral Austronesian seafaring culture that spread from the Bismarck Archipelago into Remote Oceania.",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The Bismarck start is 3450-3350 cal BP and the Tonga/Samoa end is 2703-2683 cal BP. Marine-shell reservoir corrections are central to this chronology.",
+      "alternatives": [
+        {
+          "label": "Earlier shell-inclusive start",
+          "standing": "minority",
+          "start_year": -1601,
+          "end_year": -1501,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Shell-inclusive dates can extend the start to about 3550 cal BP after reservoir correction.",
+          "source_ids": [
+            "specht-lapita"
+          ]
+        }
+      ],
+      "source_ids": [
+        "specht-lapita"
+      ]
     },
     {
       "id": "oceania.melanesia.fijian-chiefdoms",
@@ -8455,10 +8494,29 @@
       "kind": "era",
       "name": "Polynesian Voyaging & Settlement",
       "parent_id": "oceania.polynesia",
-      "start_year": -1000,
-      "end_year": 1300,
+      "start_year": 1025,
+      "end_year": 1290,
       "tier": "foundational",
-      "summary": "Austronesian seafarers reached Tonga, Samoa, Hawaii, Aotearoa, and Rapa Nui by 1300 CE.",
+      "summary": "A rapid expansion from West to East Polynesia that reached remote islands, including Aotearoa, in the late thirteenth century.",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "A review of 1,434 radiocarbon dates supports 1025-1120 CE for East Polynesian settlement and 1230-1280 CE for Aotearoa, with modelled Rapa Nui about 1200 CE.",
+      "alternatives": [
+        {
+          "label": "Long chronology",
+          "standing": "minority",
+          "start_year": 300,
+          "end_year": 950,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Earlier shell-inclusive chronologies placed the eastern expansion as early as 300 CE, but are superseded by short-lived samples.",
+          "source_ids": [
+            "wilmshurst-2011-polynesia"
+          ]
+        }
+      ],
+      "source_ids": [
+        "wilmshurst-2011-polynesia"
+      ],
       "date_precision": "approx"
     },
     {
@@ -15261,9 +15319,9 @@
       "start_year": -398051,
       "end_year": -38051,
       "tier": "foundational",
-      "dating_method": "radiocarbon-calibrated",
+      "dating_method": "unknown",
       "standing": "consensus",
-      "date_note": "The extinction date is not uniform across the range; the associated Mousterian ends 41,030-39,260 cal BP.",
+      "date_note": "No method is stated for the 400 ka appearance. The END is radiocarbon: the associated Mousterian closes 41,030-39,260 cal BP by AMS with Bayesian modelling across 40 sites. Radiocarbon cannot reach the start, so the two boundaries rest on different evidence.",
       "source_ids": [
         "smithsonian-human-origins",
         "marin-arroyo-2018-cantabria"
@@ -15284,9 +15342,9 @@
       "tier": "intermediate",
       "end_year_min": -74051,
       "end_year_max": -50051,
-      "dating_method": "radiocarbon-calibrated",
+      "dating_method": "unknown",
       "standing": "consensus",
-      "date_note": "Genetically unambiguous but with no formally accepted species name and no type specimen in the conventional sense.",
+      "date_note": "Genetically unambiguous but with no formally accepted species name and no type specimen in the conventional sense. The chronology is a Bayesian model combining radiocarbon, uranium-series and luminescence ages, so no single method describes it; radiocarbon alone cannot reach 195 ka.",
       "source_ids": [
         "douka-2019-denisova"
       ],
@@ -15467,9 +15525,9 @@
       "start_year": -128051,
       "end_year": -38051,
       "tier": "foundational",
-      "dating_method": "radiocarbon-calibrated",
+      "dating_method": "unknown",
       "standing": "consensus",
-      "date_note": "Hard to separate from the latest Acheulean at the start, so the beginning is definitional. The end differs by region and by method.",
+      "date_note": "Hard to separate from the latest Acheulean at the start, so the beginning is definitional and no single method fixes it. The end differs by region and by method, and is radiocarbon where it can be reached.",
       "source_ids": [
         "marin-arroyo-2018-cantabria"
       ],
@@ -15686,13 +15744,16 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.neolithic.gobekli-tepe",
+      "id": "west-asia.prehistory.gobekli-tepe",
       "kind": "period",
       "name": "Göbekli Tepe",
-      "parent_id": "global.neolithic",
+      "parent_id": "west-asia.prehistory",
       "start_year": -9530,
       "end_year": -8000,
       "tier": "foundational",
+      "cross_parent_ids": [
+        "global.neolithic"
+      ],
       "start_year_min": -9745,
       "start_year_max": -9314,
       "dating_method": "radiocarbon-calibrated",
@@ -16141,6 +16202,1743 @@
         "dominguez-rodrigo-2016-lomekwi"
       ],
       "summary": "The oldest known stone toolkit: large, heavy cores and flakes struck with techniques unlike the later Oldowan.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.paleolithic.middle-stone-age",
+      "kind": "period",
+      "name": "Middle Stone Age",
+      "parent_id": "global.paleolithic",
+      "start_year": -298051,
+      "end_year": -28051,
+      "tier": "foundational",
+      "cross_parent_ids": [
+        "africa.prehistory"
+      ],
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "date_note": "Roughly 300-30 ka, about 270,000 years. The end is regionally staggered. Radiocarbon only reaches the terminal MSA; everything older rests on OSL, TL, ESR and uranium-series, whose ages are quoted as 'BP' but are not radiocarbon and need no calibration.",
+      "alternatives": [
+        {
+          "label": "Jacobs & Roberts maximum-age chronology",
+          "standing": "minority",
+          "start_year": -298051,
+          "end_year": -28051,
+          "dating_method": "luminescence",
+          "note": "Single-grain OSL compresses the diagnostic sub-industries into brief horizons; TL and ESR readings stretch them.",
+          "source_ids": [
+            "bader-2022-msa"
+          ]
+        }
+      ],
+      "source_ids": [
+        "bader-2022-msa"
+      ],
+      "summary": "The long African toolmaking tradition during which our own species appeared, and with it pigment, beads and engraving.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "africa.prehistory",
+      "kind": "era",
+      "name": "African Prehistory",
+      "parent_id": "africa",
+      "start_year": -3298051,
+      "end_year": -3000,
+      "tier": "foundational",
+      "dating_method": "argon-argon",
+      "standing": "consensus",
+      "date_note": "Africa holds the whole span. The hominin species themselves sit under Human Prehistory rather than here, because a species is not a region's property; this branch holds African sites and cultures.",
+      "summary": "The continent where the human story begins, and where it stays for most of its length.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "africa.prehistory.olduvai-gorge",
+      "kind": "period",
+      "name": "Olduvai Gorge",
+      "parent_id": "africa.prehistory",
+      "start_year": -2036050,
+      "end_year": -798051,
+      "tier": "foundational",
+      "start_year_min": -2041051,
+      "start_year_max": -2031051,
+      "dating_method": "argon-argon",
+      "standing": "consensus",
+      "date_note": "Bed I begins immediately above the Naabi Ignimbrite at 2.038 +/- 0.005 Ma. The sequence runs up through Beds II to IV. Among the best-constrained chronologies in African prehistory, with errors of a few thousand years.",
+      "source_ids": [
+        "deino-2012-olduvai"
+      ],
+      "summary": "A Tanzanian ravine cutting through two million years of deposits, the site that made early human archaeology a dated science.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "africa.prehistory.omo-kibish",
+      "kind": "period",
+      "name": "Omo Kibish",
+      "parent_id": "africa.prehistory",
+      "start_year": -231051,
+      "end_year": null,
+      "tier": "intermediate",
+      "end_precision": "unknown",
+      "start_year_min": -253051,
+      "start_year_max": -209051,
+      "dating_method": "argon-argon",
+      "standing": "consensus",
+      "date_note": "Omo I is older than 233 +/- 22 ka, dated by single-crystal Ar/Ar on sanidine from the overlying KHS Tuff. A minimum: no robust maximum age exists. The date changed in 2022 because the anchoring tephra was reidentified, not because the method improved.",
+      "source_ids": [
+        "vidal-2022-omo"
+      ],
+      "summary": "The Ethiopian site of Omo I, for decades the oldest known fossil of our own species."
+    },
+    {
+      "id": "africa.prehistory.blombos-cave",
+      "kind": "period",
+      "name": "Blombos Cave",
+      "parent_id": "africa.prehistory",
+      "start_year": -96951,
+      "end_year": -65851,
+      "tier": "foundational",
+      "start_year_min": -101451,
+      "start_year_max": -92451,
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "date_note": "Occupation from 98.9 +/- 4.5 ka to a sterile hiatus sand at 67.8 +/- 4.2 ka, on single-grain OSL. TL on burnt lithics agrees within error.",
+      "source_ids": [
+        "jacobs-2006-blombos",
+        "bader-2022-msa"
+      ],
+      "summary": "A South African cave holding engraved ochre, shell beads and the oldest known drawing.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "africa.prehistory.klasies-river",
+      "kind": "period",
+      "name": "Klasies River Mouth",
+      "parent_id": "africa.prehistory",
+      "start_year": -108051,
+      "end_year": -48051,
+      "tier": "intermediate",
+      "dating_method": "uranium-series",
+      "standing": "consensus",
+      "date_note": "Base dated by uranium-disequilibrium to about 110 ka, the LBS member corresponding to the Last Interglacial. The top of the MSA sequence is beyond the radiocarbon limit, so 50 ka is a floor rather than an end.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "The chronology is broadly accepted; what is argued is whether the fragmentary human remains are fully modern.",
+          "source_ids": [
+            "klasies-river-guide"
+          ]
+        }
+      ],
+      "source_ids": [
+        "klasies-river-guide",
+        "bader-2022-msa"
+      ],
+      "summary": "A South African cave sequence with some of the earliest anatomically modern human remains outside East Africa.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "africa.prehistory.border-cave",
+      "kind": "period",
+      "name": "Border Cave",
+      "parent_id": "africa.prehistory",
+      "start_year": -198051,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "end_precision": "unknown",
+      "dating_method": "esr",
+      "standing": "majority",
+      "date_note": "The 200 ka start rests on ESR. The Early Later Stone Age horizon is 44.2-43.0 ka cal BP by AMS radiocarbon. Occupation continues into the Holocene, so the end here is a convention.",
+      "alternatives": [
+        {
+          "label": "Conventional Later Stone Age onset",
+          "standing": "majority",
+          "start_year": -20051,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Villa and Beaumont put the LSA onset here at 44-42 ka cal BP, roughly 20,000 years earlier than the conventional figure elsewhere.",
+          "source_ids": [
+            "villa-2012-border-cave"
+          ]
+        }
+      ],
+      "source_ids": [
+        "backwell-2018-border-cave",
+        "villa-2012-border-cave"
+      ],
+      "summary": "A South African site whose sequence runs from the Middle Stone Age into the present, including the earliest Later Stone Age toolkit."
+    },
+    {
+      "id": "africa.prehistory.green-sahara",
+      "kind": "period",
+      "name": "Green Sahara",
+      "parent_id": "africa.prehistory",
+      "start_year": -12551,
+      "end_year": -3051,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Onset about 14.5 ka with the Bolling-Allerod warming. Termination is time-transgressive rather than a single event: the northern and eastern Sahara dried after 8-7 ka while other areas stayed wet.",
+      "alternatives": [
+        {
+          "label": "Abrupt termination",
+          "standing": "minority",
+          "start_year": -3551,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "deMenocal's marine-core reading has the end as an abrupt step; reanalyses argue for a gradual, regionally staggered dry-down.",
+          "source_ids": [
+            "mcgee-2017-ahp"
+          ]
+        }
+      ],
+      "source_ids": [
+        "mcgee-2017-ahp"
+      ],
+      "summary": "The window when the Sahara held lakes, rivers and grassland, and people lived across what is now the largest hot desert on Earth.",
+      "aliases": [
+        "African Humid Period"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "africa.prehistory.nabta-playa",
+      "kind": "period",
+      "name": "Nabta Playa",
+      "parent_id": "africa.prehistory",
+      "start_year": -8851,
+      "end_year": -4251,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Early Neolithic from 10,800 cal BP; abandoned to hyperaridity at about 6,200 cal BP as the Green Sahara ended.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "The cultural chronology is reasonably settled. The claim that the megaliths are astronomically aligned is not.",
+          "source_ids": [
+            "malville-1998-nabta"
+          ]
+        }
+      ],
+      "source_ids": [
+        "wendorf-1998-nabta",
+        "malville-1998-nabta"
+      ],
+      "summary": "A seasonal lake basin in the Egyptian Sahara with cattle burials and a megalithic circle, occupied while the desert was green.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory",
+      "kind": "era",
+      "name": "West Asian Prehistory",
+      "parent_id": "west-asia",
+      "start_year": -13000,
+      "end_year": -3800,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "From the Natufian to the end of the Ubaid. Much of the older literature quotes uncalibrated radiocarbon without saying so, which makes published dates for this region roughly a millennium too young when read as calendar years.",
+      "summary": "Where farming, villages and monumental building appear first, and hand off to Sumer.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.natufian",
+      "kind": "period",
+      "name": "Natufian Culture",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -13000,
+      "end_year": -10000,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Early Natufian 13,000-11,500 cal BC, Late Natufian to about 10,000 cal BC.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Often said the Younger Dryas cold snap forced the Natufians into farming. Rejected: no moisture decline, no biome retreat, and the Early-to-Late shift predates it.",
+          "source_ids": [
+            "oxford-natufian"
+          ]
+        }
+      ],
+      "source_ids": [
+        "oxford-natufian",
+        "ppnd-summary"
+      ],
+      "summary": "Hunter-gatherers of the Levant who settled in one place, built stone houses and buried their dead with ornaments, before anyone farmed.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.ppna",
+      "kind": "period",
+      "name": "Pre-Pottery Neolithic A",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -9800,
+      "end_year": -8800,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "9800/9700 to 8800/8700 cal BC in the PPND scheme, from about 800 compiled radiocarbon dates.",
+      "source_ids": [
+        "ppnd-summary"
+      ],
+      "summary": "The first farming villages, before pottery: round houses, stored grain and communal building.",
+      "aliases": [
+        "PPNA"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.ppnb",
+      "kind": "period",
+      "name": "Pre-Pottery Neolithic B",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -8600,
+      "end_year": -6900,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "8600 to about 6900 cal BC, the end marked with a question mark in the source. The PPNA/PPNB boundary is a typological convention, and it may be a dating artefact: three of PPND's internal breaks fall on steep slopes and plateaus in the calibration curve rather than on changes in settlement.",
+      "source_ids": [
+        "ppnd-summary"
+      ],
+      "summary": "Rectangular houses, plastered skulls and the first fully domesticated herds of sheep and goats.",
+      "aliases": [
+        "PPNB"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.catalhoyuk",
+      "kind": "period",
+      "name": "Çatalhöyük",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -7100,
+      "end_year": -5865,
+      "tier": "foundational",
+      "end_year_min": -5975,
+      "end_year_max": -5865,
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "East Mound from about 7100 cal BC; occupation ceases 5975-5865 cal BC at 95% probability, from 33 AMS determinations on short-life samples. Mellaart's original 1960s estimate of c. 7100 BC held up against Bayesian modelling.",
+      "source_ids": [
+        "orton-catalhoyuk"
+      ],
+      "summary": "A densely packed Anatolian town of mud-brick houses entered through the roof, with wall paintings and burials beneath the floors.",
+      "native_name": "Çatalhöyük",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.halaf",
+      "kind": "period",
+      "name": "Halaf Culture",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -6100,
+      "end_year": -5300,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Proto-Halaf from 6100 cal BC, Early Halaf proper from 5950, Late Halaf ending 5300 cal BC, followed by a Halaf-Ubaid transition.",
+      "alternatives": [
+        {
+          "label": "Later Halaf end",
+          "standing": "minority",
+          "start_year": -6100,
+          "end_year": -5100,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Roughly two centuries later than the conventional 5300 cal BC end.",
+          "source_ids": [
+            "beyond-the-ubaid"
+          ]
+        }
+      ],
+      "source_ids": [
+        "halaf-chronology",
+        "beyond-the-ubaid"
+      ],
+      "summary": "Northern Mesopotamian villages known for finely painted polychrome pottery traded over long distances.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.ubaid",
+      "kind": "period",
+      "name": "Ubaid Period",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -6500,
+      "end_year": -3800,
+      "tier": "foundational",
+      "dating_method": "typological",
+      "standing": "majority",
+      "date_note": "Southern Mesopotamia about 6500-3800 BC counting Ubaid 0; the northern sequence is different, roughly 5300-4300 BC. Hands off to the Uruk period. Rests mainly on ceramic seriation rather than a dense radiocarbon series.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "No single agreed phase table exists. The term means different things north and south, and published schemes disagree by 300-900 years per boundary.",
+          "source_ids": [
+            "beyond-the-ubaid"
+          ]
+        }
+      ],
+      "source_ids": [
+        "beyond-the-ubaid"
+      ],
+      "summary": "The long southern Mesopotamian prelude to cities: irrigation, temples on platforms, and the settlement pattern Sumer inherits.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.jericho-neolithic",
+      "kind": "period",
+      "name": "Neolithic Jericho",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -8300,
+      "end_year": -7300,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-uncalibrated",
+      "standing": "majority",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON. The familiar 'tower built c. 8300 BC' is an uncalibrated figure that the source never labels as such. Compared against calibrated estimates for the same stages it runs 500-900 years too young, so the tower is roughly a millennium older in calendar terms than the usual number suggests. The stage dates are also internally inconsistent: Stage V is older than Stage III despite being later.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Kenyon read the wall and tower as defensive. Bar-Yosef argues they were flood protection and a ritual structure, which would make this not a fortification at all.",
+          "source_ids": [
+            "bar-yosef-jericho"
+          ]
+        }
+      ],
+      "source_ids": [
+        "bar-yosef-jericho",
+        "ppnd-jericho"
+      ],
+      "summary": "The oldest known town wall and stone tower, built by people who farmed but had not yet made pottery.",
+      "aliases": [
+        "Tell es-Sultan"
+      ],
+      "native_name": "أريحا",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.ain-ghazal",
+      "kind": "period",
+      "name": "'Ain Ghazal",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -8400,
+      "end_year": -6600,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-uncalibrated",
+      "standing": "majority",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON for the statue horizon. Grissom gives 6750 +/- 80 BC uncalibrated against 7580 +/- 110 BC calibrated for the same material — an 830-year gap, and both numbers circulate widely. Site dates are mixed; the two late aceramic phases cannot be separated radiometrically at all.",
+      "source_ids": [
+        "grissom-ain-ghazal",
+        "ppnd-ain-ghazal"
+      ],
+      "summary": "A large Jordanian village of the pre-pottery Neolithic, known for lime plaster statues among the oldest large human figures ever made.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory",
+      "kind": "era",
+      "name": "European Prehistory",
+      "parent_id": "europe",
+      "start_year": -453051,
+      "end_year": -1500,
+      "tier": "foundational",
+      "dating_method": "uranium-series",
+      "standing": "consensus",
+      "date_note": "A navigation era. The early boundary follows the oldest securely dated Neanderthal evidence at Sima de los Huesos, which is uranium-series and luminescence work — radiocarbon reaches nowhere near it.",
+      "source_ids": [
+        "arsuaga-2014-sima",
+        "higham-2014-neanderthal"
+      ],
+      "summary": "The deep human past of Europe, from Neanderthals and cave art to farming, monuments, and metal-age cultures.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.neanderthal-europe",
+      "kind": "period",
+      "name": "Neanderthal Europe",
+      "parent_id": "europe.prehistory",
+      "start_year": -428051,
+      "end_year": -37311,
+      "tier": "foundational",
+      "dating_method": "uranium-series",
+      "standing": "consensus",
+      "date_note": "The 430 ka start is a minimum bound from Sima de los Huesos, dated by uranium-series and luminescence. The end is the 41,030-39,260 cal BP Mousterian boundary, which IS radiocarbon — the two ends of this range rest on different methods, and only one of them is datable by carbon.",
+      "alternatives": [
+        {
+          "label": "Older Sima chronology",
+          "standing": "superseded",
+          "start_year": -598051,
+          "end_year": -398051,
+          "dating_method": "uranium-series",
+          "note": "Earlier speleothem work placed the Sima hominins at roughly 400-600 ka; later work made them about 100,000 years younger.",
+          "source_ids": [
+            "arsuaga-2014-sima"
+          ]
+        }
+      ],
+      "cross_parent_ids": [
+        "central-asia.prehistory"
+      ],
+      "source_ids": [
+        "arsuaga-2014-sima",
+        "higham-2014-neanderthal"
+      ],
+      "summary": "Neanderthals lived across Europe for hundreds of thousands of years before disappearing after a period of overlap with modern humans.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.chauvet",
+      "kind": "period",
+      "name": "Chauvet Cave Art",
+      "parent_id": "europe.prehistory",
+      "start_year": -35051,
+      "end_year": -25951,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The calibrated radiocarbon model places art and occupation in two phases between about 37 and 28 thousand years ago.",
+      "alternatives": [
+        {
+          "label": "Stylistic late chronology",
+          "standing": "minority",
+          "start_year": -20051,
+          "end_year": -16051,
+          "dating_method": "typological",
+          "note": "Some scholars date the black drawings to the Solutrean or Gravettian from style, fauna, and stratigraphy rather than charcoal dates.",
+          "source_ids": [
+            "pettitt-bahn-2015-chauvet"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The debate is radiocarbon versus stylistic dating, not a claim that the cave paintings are fake or undated.",
+          "source_ids": [
+            "quiles-2016-chauvet",
+            "pettitt-bahn-2015-chauvet"
+          ]
+        }
+      ],
+      "source_ids": [
+        "quiles-2016-chauvet",
+        "pettitt-bahn-2015-chauvet"
+      ],
+      "summary": "Artists made charcoal drawings in this French cave during two Upper Paleolithic visits.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.lascaux",
+      "kind": "period",
+      "name": "Lascaux Cave Art",
+      "parent_id": "europe.prehistory",
+      "start_year": -19551,
+      "end_year": -19051,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-uncalibrated",
+      "standing": "majority",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON because the official account mixes conventional BP measurements with calendar-like ranges without consistently labelling them. Do not convert this entry automatically.",
+      "alternatives": [
+        {
+          "label": "Earlier antler chronology",
+          "standing": "superseded",
+          "start_year": -22051,
+          "end_year": -21051,
+          "dating_method": "radiocarbon-uncalibrated",
+          "note": "Late-1990s AMS antler results supported a roughly 24,000-23,000 BP attribution before the newer LAsCO programme.",
+          "source_ids": [
+            "culture-gouv-lascaux"
+          ]
+        }
+      ],
+      "source_ids": [
+        "culture-gouv-lascaux"
+      ],
+      "summary": "This French cave's famous animal paintings were made during a short Upper Paleolithic occupation.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.altamira",
+      "kind": "period",
+      "name": "Altamira Cave Art",
+      "parent_id": "europe.prehistory",
+      "start_year": -33601,
+      "end_year": -13255,
+      "tier": "foundational",
+      "dating_method": "uranium-series",
+      "standing": "majority",
+      "date_note": "The oldest bound is a uranium-series minimum age on calcite over art; the younger black-painting boundary is calibrated radiocarbon.",
+      "alternatives": [
+        {
+          "label": "Downward U-series revision",
+          "standing": "minority",
+          "start_year": -37051,
+          "end_year": -33051,
+          "dating_method": "uranium-series",
+          "note": "A methodological critique argues uranium loss or thorium correction could make the oldest Cantabrian calcite ages too old.",
+          "source_ids": [
+            "garcia-diez-2013-altamira"
+          ]
+        }
+      ],
+      "source_ids": [
+        "garcia-diez-2013-altamira"
+      ],
+      "summary": "People added painted and engraved images to Altamira in northern Spain over a very long span.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.lbk",
+      "kind": "period",
+      "name": "Linear Pottery Culture (LBK)",
+      "parent_id": "europe.prehistory",
+      "start_year": -5500,
+      "end_year": -4900,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Bayesian models put the formative start shortly before 5500 cal BC; the conventional 4900 BC ending remains a useful broad boundary rather than a fully modelled terminus.",
+      "source_ids": [
+        "jakucs-2016-lbk"
+      ],
+      "summary": "Europe's first farmers built long timber houses and made band-decorated pottery across a wide central-European belt.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.megalithic",
+      "kind": "period",
+      "name": "Atlantic Megalithic Tradition",
+      "parent_id": "europe.prehistory",
+      "start_year": -4794,
+      "end_year": -1500,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The first monuments are modelled in the late fifth millennium BC. Later Mediterranean revivals mean the tradition did not end as one clean event.",
+      "source_ids": [
+        "schulz-paulsson-2019-megaliths"
+      ],
+      "summary": "Communities built large stone tombs and monuments along Atlantic and Mediterranean coasts.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.stonehenge",
+      "kind": "period",
+      "name": "Stonehenge Construction",
+      "parent_id": "europe.prehistory",
+      "start_year": -3000,
+      "end_year": -1520,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Bayesian modelling dates the first earthwork to 3000-2920 cal BC and the final recorded construction activity to about 1520 cal BC.",
+      "alternatives": [
+        {
+          "label": "Alternative stone-setting order",
+          "standing": "minority",
+          "start_year": -2600,
+          "end_year": -2000,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Competing Bayesian models reorder parts of the sarsen and bluestone sequence within the same broad construction interval.",
+          "source_ids": [
+            "darvill-2012-stonehenge"
+          ]
+        }
+      ],
+      "source_ids": [
+        "darvill-2012-stonehenge"
+      ],
+      "summary": "Stonehenge was built and changed in several stages over roughly fifteen centuries.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.corded-ware",
+      "kind": "period",
+      "name": "Corded Ware Culture",
+      "parent_id": "europe.prehistory",
+      "start_year": -2900,
+      "end_year": -2000,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The broad span is regionally variable. Bohemian direct dates establish an early presence by 2900 BCE, while different regions end centuries apart.",
+      "alternatives": [
+        {
+          "label": "Swiss short chronology",
+          "standing": "minority",
+          "start_year": -2750,
+          "end_year": -2400,
+          "dating_method": "calendar",
+          "note": "Swiss lake-settlement tree-ring dates restrict Corded Ware there to a shorter 2750-2400 BC span.",
+          "source_ids": [
+            "papac-2021-corded-ware"
+          ]
+        }
+      ],
+      "source_ids": [
+        "papac-2021-corded-ware"
+      ],
+      "summary": "A wide European culture known for cord-marked pots and single graves spread from the Rhine to the Baltic.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.bell-beaker",
+      "kind": "period",
+      "name": "Bell Beaker Culture",
+      "parent_id": "europe.prehistory",
+      "start_year": -2750,
+      "end_year": -1800,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The conventional 2750-1800 BC span summarizes a regionally uneven archaeological and genetic transformation.",
+      "source_ids": [
+        "olalde-2018-beaker"
+      ],
+      "summary": "Bell-shaped drinking vessels, new burial customs, and large population movements reshaped much of western Europe.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.otzi",
+      "kind": "period",
+      "name": "Ötzi",
+      "parent_id": "europe.prehistory",
+      "start_year": -3370,
+      "end_year": -3100,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Radiocarbon places Ötzi's death in the late fourth millennium BC; this range records the published calibrated interval rather than treating a death as a long period.",
+      "source_ids": [
+        "kutschera-otzi"
+      ],
+      "summary": "The naturally preserved body of a man who died in the Alps gives a close view of Copper Age life.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory",
+      "kind": "era",
+      "name": "Central Asian Prehistory",
+      "parent_id": "central-asia",
+      "start_year": -298051,
+      "end_year": -1400,
+      "tier": "foundational",
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "date_note": "This navigation era begins with the Denisova Cave sequence and ends after the latest Bronze Age tradition included here.",
+      "source_ids": [
+        "douka-2019-denisova",
+        "lazaridis-2025-yamnaya"
+      ],
+      "summary": "The deep history of Inner Asia, including early hominins, horse herding, and the Bronze Age steppe networks.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.denisova-cave",
+      "kind": "period",
+      "name": "Denisova Cave",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -298051,
+      "end_year": -3351,
+      "tier": "foundational",
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "date_note": "The cave sequence combines luminescence, radiocarbon, uranium-series, and genetic evidence; the earliest occupation may reach about 300 ka.",
+      "source_ids": [
+        "douka-2019-denisova"
+      ],
+      "summary": "A Siberian cave with a long record of Neanderthals, Denisovans, and modern humans.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.botai",
+      "kind": "period",
+      "name": "Botai Culture",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -3700,
+      "end_year": -3100,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Botai dates to the fourth millennium BC. Evidence for horse milking and management is strong, but its horses are not the ancestors of modern domestic horses.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Botai horse use does not make Botai the direct source of modern domestic horses; ancient-DNA work overturned that popular claim in 2018.",
+          "source_ids": [
+            "taylor-2021-botai"
+          ]
+        }
+      ],
+      "source_ids": [
+        "taylor-2021-botai"
+      ],
+      "summary": "A northern Kazakh settlement tradition famous for early intensive use of horses.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.afanasievo",
+      "kind": "period",
+      "name": "Afanasievo Culture",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -3100,
+      "end_year": -2500,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The culture's third-millennium BC range is based on a refined radiocarbon chronology for the Altai-Sayan region.",
+      "source_ids": [
+        "poliakov-2023-afanasievo"
+      ],
+      "summary": "An early pastoral culture of the Altai and Minusinsk Basin with strong ties to western steppe populations.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.andronovo",
+      "kind": "period",
+      "name": "Andronovo Culture",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -1900,
+      "end_year": -1400,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The label covers related regional traditions whose exact limits vary; this stores the broad nineteenth-to-fifteenth-century BC frame.",
+      "source_ids": [
+        "grigoriev-2021-andronovo"
+      ],
+      "summary": "A Bronze Age network of steppe communities extending across Kazakhstan and southern Siberia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.bmac",
+      "kind": "period",
+      "name": "Bactria-Margiana Archaeological Complex",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -2200,
+      "end_year": -1700,
+      "tier": "intermediate",
+      "dating_method": "typological",
+      "standing": "majority",
+      "date_note": "The conventional 2200-1700 BC frame summarizes a complex whose individual oasis sequences do not all begin or end together.",
+      "source_ids": [
+        "lamberg-karlovsky-bmac"
+      ],
+      "summary": "An oasis-based Bronze Age culture of Central Asia known for planned settlements, irrigation, and long-distance exchange.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.yamnaya",
+      "kind": "period",
+      "name": "Yamnaya Horizon",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -3300,
+      "end_year": -2350,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The horizon is conventionally dated to about 3300-2350 BC; new genome-wide work refines its internal formation and spread.",
+      "cross_parent_ids": [
+        "europe.prehistory"
+      ],
+      "source_ids": [
+        "lazaridis-2025-yamnaya"
+      ],
+      "summary": "Mobile pastoral communities of the Pontic-Caspian steppe whose movements had major effects across Europe and Asia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.japan.jomon.incipient",
+      "kind": "period",
+      "name": "Incipient Jōmon",
+      "parent_id": "east-asia.japan.jomon",
+      "start_year": -14051,
+      "end_year": -9051,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The national framework gives 16,000-11,000 calibrated BP. Regional boundaries can differ substantially.",
+      "allow_outside_parent_dates": true,
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The popular '13,000 BCE' beginning repeats raw uncalibrated radiocarbon as a calendar date; the secure pottery range is about 16,140-14,920 cal BP.",
+          "source_ids": [
+            "matsumoto-2017-jomon",
+            "keally-jomon-dates"
+          ]
+        }
+      ],
+      "source_ids": [
+        "matsumoto-2017-jomon",
+        "keally-jomon-dates"
+      ],
+      "summary": "The earliest Jōmon stage, marked by some of the world's oldest securely dated pottery.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.japan.jomon.initial",
+      "kind": "period",
+      "name": "Initial Jōmon",
+      "parent_id": "east-asia.japan.jomon",
+      "start_year": -9051,
+      "end_year": -5051,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The national framework gives 11,000-7,000 calibrated BP; local sequences are not synchronous.",
+      "source_ids": [
+        "matsumoto-2017-jomon"
+      ],
+      "summary": "A long early Jōmon stage when pottery traditions diversified across the Japanese islands.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.japan.jomon.early",
+      "kind": "period",
+      "name": "Early Jōmon",
+      "parent_id": "east-asia.japan.jomon",
+      "start_year": -5051,
+      "end_year": -3351,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The national framework gives 7,000-5,300 calibrated BP, while regional pottery phases have different boundaries.",
+      "source_ids": [
+        "matsumoto-2017-jomon"
+      ],
+      "summary": "A Jōmon stage of growing regional diversity in settlements and pottery styles.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.japan.jomon.middle",
+      "kind": "period",
+      "name": "Middle Jōmon",
+      "parent_id": "east-asia.japan.jomon",
+      "start_year": -3351,
+      "end_year": -2451,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The national framework gives 5,300-4,400 calibrated BP; large regional AMS programmes refine this differently by area.",
+      "source_ids": [
+        "matsumoto-2017-jomon"
+      ],
+      "summary": "A Jōmon stage known for large settlements and elaborate pottery in several regions.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.japan.jomon.late",
+      "kind": "period",
+      "name": "Late Jōmon",
+      "parent_id": "east-asia.japan.jomon",
+      "start_year": -2451,
+      "end_year": -1351,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The national framework gives 4,400-3,300 calibrated BP; the Jōmon-to-Yayoi transition occurred earlier in Kyushu than in northern Honshu.",
+      "source_ids": [
+        "matsumoto-2017-jomon"
+      ],
+      "summary": "A later Jōmon stage before the regionally staggered transition to Yayoi farming communities.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.japan.jomon.final",
+      "kind": "period",
+      "name": "Final Jōmon",
+      "parent_id": "east-asia.japan.jomon",
+      "start_year": -1351,
+      "end_year": -351,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The framework gives 3,300 to 2,500/2,300 calibrated BP, so the stored end uses the later 2,300 BP national bound.",
+      "source_ids": [
+        "matsumoto-2017-jomon"
+      ],
+      "summary": "The final Jōmon stage, ending at different times in different parts of Japan.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic",
+      "kind": "era",
+      "name": "Chinese Neolithic",
+      "parent_id": "east-asia.china",
+      "start_year": -10551,
+      "end_year": -1700,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "This navigation era uses the widest dated process in this group, Yangtze rice domestication, as its early edge and the Longshan horizon as its late edge.",
+      "source_ids": [
+        "zheng-2016-rice",
+        "haidai-longshan"
+      ],
+      "summary": "The long transition in China from foraging to farming villages, regional cultures, towns, and large waterworks.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.peiligang",
+      "kind": "period",
+      "name": "Peiligang Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -7051,
+      "end_year": -5051,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The core source explicitly gives 9,000-7,000 calibrated years BP; a commonly repeated 5500-4900 BC type-site range does not state its calibration.",
+      "source_ids": [
+        "zhang-2013-peiligang"
+      ],
+      "summary": "An early farming culture of the central Henan plain, associated with millet cultivation and small villages.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.yangshao",
+      "kind": "period",
+      "name": "Yangshao Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -5000,
+      "end_year": -3000,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The conventional 5000-3000 BC framework is widely used, but Chinese bare-BP chronologies and regional Bayesian models produce a later start in some areas.",
+      "alternatives": [
+        {
+          "label": "Shangluo Bayesian chronology",
+          "standing": "minority",
+          "start_year": -4200,
+          "end_year": -2900,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "A regional Bayesian model places Yangshao at about 4200-2900 BC, later and shorter than the conventional span.",
+          "source_ids": [
+            "frontiers-2021-yangshao"
+          ]
+        }
+      ],
+      "source_ids": [
+        "frontiers-2021-yangshao"
+      ],
+      "summary": "A major painted-pottery farming tradition of the middle Yellow River valley.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.hongshan",
+      "kind": "period",
+      "name": "Hongshan Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -4551,
+      "end_year": -2851,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-uncalibrated",
+      "standing": "majority",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON / UNLABELLED BP. The available sources give only bare BP or 'years ago' dates, and Chinese practice commonly reports radiocarbon that way. Do not convert automatically.",
+      "alternatives": [
+        {
+          "label": "Classic Hongshan range",
+          "standing": "superseded",
+          "start_year": -4051,
+          "end_year": -3051,
+          "dating_method": "radiocarbon-uncalibrated",
+          "note": "The older standard places Hongshan at 6,000-5,000 BP; 2025 Zhengjiagou work extends the end to 4,800 years ago.",
+          "source_ids": [
+            "cass-hongshan"
+          ]
+        }
+      ],
+      "source_ids": [
+        "cass-hongshan"
+      ],
+      "summary": "A jade-working and temple-building culture of the West Liao River region in northeast China.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.longshan",
+      "kind": "period",
+      "name": "Longshan Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -2600,
+      "end_year": -1900,
+      "tier": "intermediate",
+      "dating_method": "typological",
+      "standing": "majority",
+      "date_note": "The conventional 2600-1900 BC sequence is archaeological and broad; Bayesian analysis finds overlapping regional traditions rather than a single clean succession.",
+      "alternatives": [
+        {
+          "label": "Haidai Bayesian chronology",
+          "standing": "minority",
+          "start_year": -2900,
+          "end_year": -1700,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Haidai modelling places the start boundary at 2900-2500 BC and the end at 2100-1700 BC, with cultural overlap.",
+          "source_ids": [
+            "haidai-longshan"
+          ]
+        }
+      ],
+      "source_ids": [
+        "haidai-longshan"
+      ],
+      "summary": "A late Neolithic tradition of black pottery, walled settlements, and regional change in the Yellow River basin.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.liangzhu",
+      "kind": "period",
+      "name": "Liangzhu Culture",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -3351,
+      "end_year": -2351,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Direct dates on annual plants in dam construction give this culture a particularly strong calibrated chronology of 5,300-4,300 cal BP.",
+      "source_ids": [
+        "liu-2017-liangzhu"
+      ],
+      "summary": "A Yangtze-delta society with a walled centre, jade traditions, and major dams and waterways.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.china.neolithic.jiahu",
+      "kind": "period",
+      "name": "Jiahu",
+      "parent_id": "east-asia.china.neolithic",
+      "start_year": -7051,
+      "end_year": -5851,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The calibrated site span is about 9,000-7,800 cal BP; a second source renders the occupation as 7000-5700 BC without stating its calibration.",
+      "source_ids": [
+        "zhang-1999-jiahu"
+      ],
+      "summary": "An early Henan village known for rice, bone flutes, and much-debated incised marks.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.prehistory",
+      "kind": "era",
+      "name": "South Asian Prehistory",
+      "parent_id": "south-asia",
+      "start_year": -8950,
+      "end_year": -1500,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The era begins with the Lahuradewa environmental sequence. Some attached sites continue later, so their genuine overlap is explicitly allowed.",
+      "source_ids": [
+        "patel-agnihotri-lahuradewa"
+      ],
+      "summary": "Early farming, rice cultivation, and pre-urban settlement traditions across South Asia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.prehistory.mehrgarh",
+      "kind": "period",
+      "name": "Mehrgarh",
+      "parent_id": "south-asia.prehistory",
+      "start_year": -5250,
+      "end_year": -4650,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "A 2025 programme directly dating tooth enamel places the aceramic cemetery at 5250-4650 cal BCE, about two thousand years younger than the familiar textbook start.",
+      "alternatives": [
+        {
+          "label": "Classic early Mehrgarh chronology",
+          "standing": "traditional",
+          "start_year": -7000,
+          "end_year": -4650,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "The older chronology begins the aceramic Neolithic around 7000 BCE and gives it a multi-millennial duration.",
+          "source_ids": [
+            "mutin-2025-mehrgarh"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The often repeated 7000 BCE start is not the current direct-dating result; the 2025 tooth-enamel model makes the earliest phase roughly 2,000 years younger.",
+          "source_ids": [
+            "mutin-2025-mehrgarh"
+          ]
+        }
+      ],
+      "source_ids": [
+        "mutin-2025-mehrgarh"
+      ],
+      "summary": "A key early farming settlement in the Indus borderlands whose oldest phase has been radically re-dated.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.prehistory.bhirrana",
+      "kind": "period",
+      "name": "Bhirrana",
+      "parent_id": "south-asia.prehistory",
+      "start_year": -4000,
+      "end_year": -850,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The mainstream regional reading begins occupation in the fourth millennium BCE. The much older 9.5 ka sequence is an actively disputed extrapolation.",
+      "alternatives": [
+        {
+          "label": "Long Bhirrana chronology",
+          "standing": "minority",
+          "start_year": -7551,
+          "end_year": -851,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Sarkar and colleagues propose a Hakra phase from about 9.5 to 8 ka BP and occupation continuing to about 2.8 ka BP.",
+          "source_ids": [
+            "sarkar-2016-bhirrana"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "asi-bhirrana-review",
+        "sarkar-2016-bhirrana"
+      ],
+      "summary": "A Haryana settlement with a disputed claim to extraordinarily early South Asian occupation.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.prehistory.ravi",
+      "kind": "period",
+      "name": "Early Harappan Ravi Phase",
+      "parent_id": "south-asia.prehistory",
+      "start_year": -3300,
+      "end_year": -2800,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The published AMS table distinguishes raw BP measurements from its calibrated BC column and gives the phase a broad 3300-2800 BC frame.",
+      "source_ids": [
+        "kenoyer-2000-ravi"
+      ],
+      "summary": "The earliest well-dated phase at Harappa, before the later urban Indus city.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.prehistory.lahuradewa",
+      "kind": "period",
+      "name": "Lahuradewa",
+      "parent_id": "south-asia.prehistory",
+      "start_year": -8950,
+      "end_year": null,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The environmental record begins about 10,899 cal BP and continues to the present. Archaeologists debate whether the earliest rice was domesticated or cultivated wild rice.",
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "patel-agnihotri-lahuradewa"
+      ],
+      "summary": "A lake-margin site in the middle Ganges plain with very early rice evidence and a long environmental sequence.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory",
+      "kind": "era",
+      "name": "Southeast Asian Prehistory",
+      "parent_id": "southeast-asia",
+      "start_year": -44051,
+      "end_year": -500,
+      "tier": "foundational",
+      "dating_method": "unknown",
+      "standing": "majority",
+      "date_note": "This navigation era includes both explicitly uncalibrated conventional Hoabinhian dates and later calibrated chronologies. It cannot be read as one homogeneous dating programme.",
+      "source_ids": [
+        "forestier-2013-hoabinhian",
+        "higham-2015-ban-chiang"
+      ],
+      "summary": "The long prehistory of mainland and island Southeast Asia, including cave traditions, metal-age communities, and early human remains.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory.hoabinhian",
+      "kind": "period",
+      "name": "Hoabinhian",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -21051,
+      "end_year": -1751,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-uncalibrated",
+      "standing": "majority",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON. The conventional 23,000-3,700 BP chronology is explicitly published as non-calibrated; it must not be converted to calendar dates automatically.",
+      "alternatives": [
+        {
+          "label": "Xiaodong early chronology",
+          "standing": "minority",
+          "start_year": -41551,
+          "end_year": -6000,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "A Yunnan rockshelter claim extends Hoabinhian to 43.5 ka and proposes a southern-China homeland.",
+          "source_ids": [
+            "ji-2016-hoabinhian"
+          ]
+        }
+      ],
+      "source_ids": [
+        "forestier-2013-hoabinhian",
+        "ji-2016-hoabinhian"
+      ],
+      "summary": "A long-lived cave and rockshelter tool tradition of mainland Southeast Asia, often identified by worked pebble tools.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory.ban-chiang",
+      "kind": "period",
+      "name": "Ban Chiang",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -1600,
+      "end_year": -505,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Directly dating human bone collagen puts the first burial phase at 1600-1450 BC and the bronze transition at 1050-955 BC; later deposits reach the Iron Age.",
+      "alternatives": [
+        {
+          "label": "Old long chronology",
+          "standing": "superseded",
+          "start_year": -3600,
+          "end_year": -1600,
+          "dating_method": "radiocarbon-uncalibrated",
+          "note": "The old model put the early Bronze Age at 3600 BC, based on charcoal and crushed-potsherd material now known to bias ages old.",
+          "source_ids": [
+            "higham-2015-ban-chiang"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Ban Chiang did not show bronze metallurgy from 3600 BC: direct bone-collagen dating revised the key transition to 1050-955 BC.",
+          "source_ids": [
+            "higham-2015-ban-chiang"
+          ]
+        }
+      ],
+      "source_ids": [
+        "higham-2015-ban-chiang"
+      ],
+      "summary": "A northeast Thai burial site central to the re-dating of Southeast Asian bronze metallurgy.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory.niah",
+      "kind": "period",
+      "name": "Niah Caves Deep Skull",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -44051,
+      "end_year": -32051,
+      "tier": "intermediate",
+      "dating_method": "uranium-series",
+      "standing": "majority",
+      "date_note": "Re-excavation and direct U-series work support a 46-34 ka bracket; a direct cranial U-series age near 35 ka may be an underestimate.",
+      "alternatives": [
+        {
+          "label": "Intrusive Neolithic burial",
+          "standing": "superseded",
+          "start_year": -6000,
+          "end_year": -2000,
+          "dating_method": "typological",
+          "note": "Earlier critics argued that the skull had intruded from younger Neolithic deposits rather than belonging to the Pleistocene layer.",
+          "source_ids": [
+            "barker-2007-niah"
+          ]
+        }
+      ],
+      "source_ids": [
+        "barker-2007-niah"
+      ],
+      "summary": "A human skull from Borneo's Niah Caves, now accepted as Late Pleistocene rather than a later burial.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory.yangtze-rice",
+      "kind": "period",
+      "name": "Yangtze Rice Domestication",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -10551,
+      "end_year": -5051,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-uncalibrated",
+      "standing": "majority",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON / CALIBRATION-UNSTATED BP. The main study prints bare BP values and Chinese practice often uses uncalibrated BP; do not convert automatically.",
+      "alternatives": [
+        {
+          "label": "Early cultivation reading",
+          "standing": "majority",
+          "start_year": -7451,
+          "end_year": -7051,
+          "dating_method": "radiocarbon-uncalibrated",
+          "note": "A Chinese archaeology review places cultivation at Shangshan and Hehuashan around 9,400-9,000 BP and warns that such BP is usually uncalibrated.",
+          "source_ids": [
+            "zheng-2016-rice"
+          ]
+        }
+      ],
+      "source_ids": [
+        "zheng-2016-rice"
+      ],
+      "summary": "A gradual process in the lower Yangtze in which managed wild rice became fully domesticated rice.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory",
+      "kind": "era",
+      "name": "Americas Prehistory",
+      "parent_id": "americas",
+      "start_year": -34051,
+      "end_year": 500,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "This navigation era starts with the re-formed Bering land bridge and extends through regionally late Archaic traditions. Some sites continue beyond it and are marked accordingly.",
+      "source_ids": [
+        "pico-2022-beringia",
+        "nps-archaic"
+      ],
+      "summary": "The earliest peopling of the Americas and the long sequence of regional traditions that followed.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.beringia",
+      "kind": "period",
+      "name": "Bering Land Bridge",
+      "parent_id": "americas.prehistory",
+      "start_year": -34051,
+      "end_year": -9051,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Sea-level work indicates the strait was open until about 35.7 ka and the last land bridge was flooded between about 13 and 11 ka.",
+      "source_ids": [
+        "pico-2022-beringia"
+      ],
+      "summary": "The dry land connection that intermittently linked Siberia and Alaska during the last ice age.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.pre-clovis",
+      "kind": "period",
+      "name": "Pre-Clovis Horizon",
+      "parent_id": "americas.prehistory",
+      "start_year": -14051,
+      "end_year": -11451,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Most accepted evidence falls around 16,000-15,000 years ago. Claims before the last glacial maximum remain contested rather than forming one settled horizon.",
+      "alternatives": [
+        {
+          "label": "Pre-LGM long chronology",
+          "standing": "minority",
+          "start_year": -22051,
+          "end_year": -15551,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Some claimed sites would push occupation before 20 ka, but the combined genetic and archaeological synthesis does not accept that depth.",
+          "source_ids": [
+            "waters-2019-preclovis"
+          ]
+        }
+      ],
+      "source_ids": [
+        "waters-2019-preclovis"
+      ],
+      "summary": "The broad label for accepted American sites older than the Clovis tool tradition.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.white-sands",
+      "kind": "period",
+      "name": "White Sands Footprints",
+      "parent_id": "americas.prehistory",
+      "start_year": -21051,
+      "end_year": -19051,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The original aquatic-seed dates of about 23-21 ka were independently supported by terrestrial pollen radiocarbon and quartz OSL, but objections remain active.",
+      "alternatives": [
+        {
+          "label": "Hard-water reservoir objection",
+          "standing": "minority",
+          "start_year": -14051,
+          "end_year": -11051,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Critics argue aquatic seeds could be 7,000-10,000 years too old because they used ancient dissolved carbon from lake water.",
+          "source_ids": [
+            "madsen-2022-white-sands"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "The dispute has three rounds: 2021 aquatic-seed dates, a 2022 reservoir objection, and 2023 pollen plus OSL confirmation that critics still question.",
+          "source_ids": [
+            "bennett-2021-white-sands",
+            "madsen-2022-white-sands",
+            "pigati-2023-white-sands"
+          ]
+        }
+      ],
+      "source_ids": [
+        "bennett-2021-white-sands",
+        "pigati-2023-white-sands",
+        "madsen-2022-white-sands"
+      ],
+      "summary": "Human footprints in New Mexico that may date to the height of the last ice age.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.clovis",
+      "kind": "period",
+      "name": "Clovis Culture",
+      "parent_id": "americas.prehistory",
+      "start_year": -11101,
+      "end_year": -10801,
+      "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "The modern calibrated range is about 13,050-12,750 cal BP. The underlying laboratory ages and older famous ranges are uncalibrated radiocarbon, not calendar dates.",
+      "alternatives": [
+        {
+          "label": "Traditional long Clovis",
+          "standing": "superseded",
+          "start_year": -9551,
+          "end_year": -8951,
+          "dating_method": "radiocarbon-uncalibrated",
+          "note": "The former 11,500-10,900 radiocarbon-year BP span was compressed by Waters and Stafford's 2007 reassessment.",
+          "source_ids": [
+            "waters-stafford-2007-clovis"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Clovis was not a millennium-long 11,500-10,900 BCE culture: Waters and Stafford compressed the raw radiocarbon chronology, and calibration shifts it about two millennia older.",
+          "source_ids": [
+            "waters-2020-clovis",
+            "waters-stafford-2007-clovis"
+          ]
+        }
+      ],
+      "source_ids": [
+        "waters-2020-clovis",
+        "waters-stafford-2007-clovis"
+      ],
+      "summary": "A short-lived North American tradition of distinctive fluted stone points.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.folsom",
+      "kind": "period",
+      "name": "Folsom Culture",
+      "parent_id": "americas.prehistory",
+      "start_year": -10961,
+      "end_year": -10176,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "IntCal20 Bayesian modelling gives a 95% span from 12,910-12,750 to 12,430-12,125 cal BP.",
+      "source_ids": [
+        "buchanan-2021-folsom"
+      ],
+      "summary": "A bison-hunting tradition that followed Clovis across much of the North American plains.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.paleoindian",
+      "kind": "period",
+      "name": "Paleoindian Period",
+      "parent_id": "americas.prehistory",
+      "start_year": -11251,
+      "end_year": -9501,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The continental bracket is about 13,200-11,450 cal BP, although regional period labels and boundaries vary.",
+      "source_ids": [
+        "cambridge-paleoindian-archaic"
+      ],
+      "summary": "A broad North American label for the earliest widespread post-ice-age traditions, including Clovis and Folsom.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.archaic",
+      "kind": "period",
+      "name": "Archaic Period",
+      "parent_id": "americas.prehistory",
+      "start_year": -8500,
+      "end_year": 500,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The period has no single continental end: one synthesis ends it about 3200 cal BP, while the Southwest carries it as late as AD 500.",
+      "source_ids": [
+        "nps-archaic",
+        "cambridge-paleoindian-archaic"
+      ],
+      "summary": "A long, regionally varied North American period of adapting to post-ice-age environments, broad diets, and later early farming.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "americas.prehistory.cactus-hill",
+      "kind": "period",
+      "name": "Cactus Hill",
+      "parent_id": "americas.prehistory",
+      "start_year": -18051,
+      "end_year": null,
+      "tier": "specialist",
+      "end_precision": "unknown",
+      "dating_method": "radiocarbon-uncalibrated",
+      "standing": "minority",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON / CALIBRATION-UNSTATED. Available sources report 18,000-20,000 years ago but do not identify a calibration basis; the site sequence continues to contact.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "The deepest Cactus Hill layer is not part of the settled pre-Clovis chronology; the state's defensible claim is only 'more than 15,000 years ago.'",
+          "source_ids": [
+            "encyclopedia-virginia-cactus-hill"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "encyclopedia-virginia-cactus-hill"
+      ],
+      "summary": "A Virginia sand-dune site with a possible stone-tool layer below a Clovis level."
+    },
+    {
+      "id": "americas.prehistory.paisley-caves",
+      "kind": "period",
+      "name": "Paisley Caves",
+      "parent_id": "americas.prehistory",
+      "start_year": -12351,
+      "end_year": null,
+      "tier": "intermediate",
+      "end_precision": "unknown",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Human evidence reaches about 14,300 cal BP, while the cave deposits continue through historic contact. Dates and human attribution have unusually extensive testing.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "The concern is whether soluble DNA and lipids moved into older layers; later fecal-lipid work supports the early human attribution.",
+          "source_ids": [
+            "jenkins-paisley-geochronology"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "jenkins-paisley-geochronology"
+      ],
+      "summary": "Oregon caves with early human coprolites, basketry, and a Western Stemmed stone-point tradition."
+    },
+    {
+      "id": "oceania.australia.aboriginal.sahul",
+      "kind": "period",
+      "name": "Sahul",
+      "parent_id": "oceania.australia.aboriginal",
+      "start_year": -73051,
+      "end_year": -10051,
+      "tier": "intermediate",
+      "dating_method": "luminescence",
+      "standing": "majority",
+      "date_note": "Human entry is modelled between about 65 and 50 ka, with a 75 ka model option. Postglacial sea rise broke the landmass apart; Bass Strait flooded about 12 ka.",
+      "alternatives": [
+        {
+          "label": "Genetic short chronology",
+          "standing": "minority",
+          "start_year": -45051,
+          "end_year": -10051,
+          "dating_method": "unknown",
+          "note": "A genetic and archaeological short chronology places Australian arrival near 47 ka rather than the archaeological long chronology.",
+          "source_ids": [
+            "bradshaw-2021-sahul"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "bradshaw-2021-sahul"
+      ],
+      "summary": "The ice-age landmass that joined Australia, Tasmania, and New Guinea when sea levels were lower.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "oceania.australia.aboriginal.madjedbebe",
+      "kind": "period",
+      "name": "Madjedbebe",
+      "parent_id": "oceania.australia.aboriginal",
+      "start_year": -63051,
+      "end_year": null,
+      "tier": "foundational",
+      "dating_method": "luminescence",
+      "standing": "majority",
+      "date_note": "Single-grain OSL dates the lowest artefact-bearing deposit to 65 ± 6 ka. This is a light-based age, not radiocarbon, and the locality remains culturally meaningful.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "The challenge is not the OSL measurement itself but whether termites and other disturbance moved artefacts down into older sands.",
+          "source_ids": [
+            "clarkson-2017-madjedbebe"
+          ]
+        }
+      ],
+      "source_ids": [
+        "clarkson-2017-madjedbebe"
+      ],
+      "summary": "A rock shelter on Mirarr Country in Arnhem Land with very early stone tools and other evidence of occupation.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "oceania.australia.aboriginal.lake-mungo",
+      "kind": "period",
+      "name": "Lake Mungo",
+      "parent_id": "oceania.australia.aboriginal",
+      "start_year": -48051,
+      "end_year": -38051,
+      "tier": "foundational",
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "date_note": "Current consensus dates the burials to 40 ± 2 ka and local occupation to 50-46 ka from 25 optical ages. These are not radiocarbon dates.",
+      "alternatives": [
+        {
+          "label": "Thorne 1999 age",
+          "standing": "superseded",
+          "start_year": -60051,
+          "end_year": -54051,
+          "dating_method": "uranium-series",
+          "note": "A 1999 U-series/ESR and OSL study claimed 62 ± 6 ka for Mungo Man; it was superseded by the 2003 optical chronology.",
+          "source_ids": [
+            "bowler-2003-mungo"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The popular 62 ka age for Mungo Man is superseded; the current 40 ± 2 ka result comes from later OSL dating of the lunette sediments.",
+          "source_ids": [
+            "bowler-2003-mungo"
+          ]
+        }
+      ],
+      "source_ids": [
+        "bowler-2003-mungo"
+      ],
+      "summary": "The Willandra Lakes locality of Mungo Lady and Mungo Man, two of Australia's oldest known human burials.",
       "date_precision": "approx"
     }
   ]

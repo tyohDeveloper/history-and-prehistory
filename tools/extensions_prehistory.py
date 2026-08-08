@@ -188,9 +188,11 @@ def extend(E, glob):
       aliases=["Neanderthal"],
       summary="Cold-adapted humans across Europe and western Asia, from about 400,000 "
               "years ago until roughly 40,000 years ago.",
-      dating_method="radiocarbon-calibrated", standing="consensus",
-      date_note="The extinction date is not uniform across the range; the associated "
-                "Mousterian ends 41,030-39,260 cal BP.",
+      dating_method="unknown", standing="consensus",
+      date_note="No method is stated for the 400 ka appearance. The END is radiocarbon: the "
+                "associated Mousterian closes 41,030-39,260 cal BP by AMS with Bayesian "
+                "modelling across 40 sites. Radiocarbon cannot reach the start, so the two "
+                "boundaries rest on different evidence.",
       source_ids=[S_SMITHSONIAN, S_MARIN])
 
     TAXON("denisovans", "Denisovans", origins, ka(195), ka(52), "intermediate",
@@ -198,9 +200,11 @@ def extend(E, glob):
       summary="A human population known mainly from DNA, identified from fragments in a "
               "Siberian cave and traceable in living people.",
       end_year_min=ka(76), end_year_max=ka(52),
-      dating_method="radiocarbon-calibrated", standing="consensus",
+      dating_method="unknown", standing="consensus",
       date_note="Genetically unambiguous but with no formally accepted species name and "
-                "no type specimen in the conventional sense.",
+                "no type specimen in the conventional sense. The chronology is a Bayesian "
+                "model combining radiocarbon, uranium-series and luminescence ages, so no "
+                "single method describes it; radiocarbon alone cannot reach 195 ka.",
       source_ids=[S_DOUKA])
 
     TAXON("homo-floresiensis", "Homo floresiensis", origins, ka(100), ka(60), "intermediate",
@@ -297,9 +301,10 @@ def extend(E, glob):
     P("mousterian", "Mousterian Industry", paleo, ka(130), ka(40), "foundational",
       summary="The flake-tool tradition associated mainly with Neanderthals across Europe "
               "and western Asia.",
-      dating_method="radiocarbon-calibrated", standing="consensus",
+      dating_method="unknown", standing="consensus",
       date_note="Hard to separate from the latest Acheulean at the start, so the beginning "
-                "is definitional. The end differs by region and by method.",
+                "is definitional and no single method fixes it. The end differs by region "
+                "and by method, and is radiocarbon where it can be reached.",
       source_ids=[S_MARIN])
 
     P("aterian", "Aterian Industry", paleo, ka(145), ka(40), "intermediate",
@@ -407,7 +412,10 @@ def extend(E, glob):
     # =========================================================================
     # SITES — placed under the era they belong to, not under prehistory flat
     # =========================================================================
-    P("gobekli-tepe", "G\u00f6bekli Tepe", f"{glob}.neolithic", -9530, -8000, "foundational",
+    # Primary parent is the region; it stays visible under the global Neolithic
+    # through cross_parent_ids, which is what that field is for.
+    P("gobekli-tepe", "G\u00f6bekli Tepe", "west-asia.prehistory", -9530, -8000, "foundational",
+      cross_parent_ids=[f"{glob}.neolithic"],
       native="G\u00f6bekli Tepe",
       summary="Monumental enclosures raised by people who were not yet farming, in "
               "southeastern Anatolia.",

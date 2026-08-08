@@ -5,7 +5,7 @@ import { buildIndex } from "../src/lib/tree";
 const idx = buildIndex(entities);
 
 describe("dataset envelope", () => {
-  it("is v3.0.0 on schema 2.0.0", () => {
+  it("is v3.1.0 on schema 2.0.0", () => {
     // MAJOR on both. Schema 2.0.0 adds the taxon and threshold kinds, so a
     // consumer switching exhaustively on kind breaks. Dataset 3.0.0 moves the
     // prehistory ids (origins -> hominins) and re-parents the stone ages, so
@@ -13,14 +13,14 @@ describe("dataset envelope", () => {
     //
     // Recorded here because 2.2.0 was itself mis-versioned: it re-parented
     // three top-level eras and dropped four ids under a minor bump.
-    expect(datasetVersion).toBe("3.0.0");
+    expect(datasetVersion).toBe("3.1.0");
     expect(schemaVersion).toBe("2.0.0");
   });
 
   it("has the expected collection sizes", () => {
-    // 1,305 historical entities plus the prehistory branch: hominins,
-    // stone-tool industries, behavioural thresholds, and sites.
-    expect(entities.length).toBe(1345);
+    // The generated corpus includes the historical baseline, the prehistory
+    // branch, and the regional prehistory chronology extensions.
+    expect(entities.length).toBe(1417);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(44);
@@ -100,12 +100,12 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(39);
+    expect(cited.length).toBe(113);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.dating_method !== undefined).length).toBe(46);
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(20);
+    expect(entities.filter((e) => e.dating_method !== undefined).length).toBe(121);
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(23);
   });
 
   it("distinguishes an extant taxon from an undated end", () => {
@@ -197,5 +197,35 @@ describe("reference anchors reach the deep-time content", () => {
     );
     // Only the contested Dikika claim and its container sit older.
     expect(orphans.length).toBeLessThanOrEqual(3);
+  });
+});
+
+describe("dating method is physically capable of the date", () => {
+  it("never claims radiocarbon beyond its range", () => {
+    // Caught six real entities, three authored by hand across earlier
+    // sessions. dating_method is one field but a long-lived entity has two
+    // boundaries dated by different means: Neanderthals appear at 400 ka by
+    // uranium-series and disappear at 40 ka by radiocarbon. Recording the
+    // end's method and letting it describe the start is the natural error.
+    const CEILING_BP = 55_000;
+    const bp = (y: number) => 1950 - (y < 0 ? y + 1 : y);
+    const impossible = entities.filter(
+      (e) =>
+        typeof e.dating_method === "string" &&
+        e.dating_method.startsWith("radiocarbon") &&
+        e.start_year !== null &&
+        bp(e.start_year) > CEILING_BP,
+    );
+    expect(impossible.map((e) => e.id)).toEqual([]);
+  });
+
+  it("declares uncalibrated radiocarbon in the note", () => {
+    // The refusal to convert only helps if the entity says what it is.
+    const undeclared = entities.filter(
+      (e) =>
+        e.dating_method === "radiocarbon-uncalibrated" &&
+        !(e.date_note ?? "").toUpperCase().includes("UNCALIB"),
+    );
+    expect(undeclared.map((e) => e.id)).toEqual([]);
   });
 });

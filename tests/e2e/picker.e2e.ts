@@ -18,8 +18,8 @@ test("boots offline from file:// with no network requests", async ({ page }) => 
 });
 
 test("shows the version stamp and entity count", async ({ page }) => {
-  await expect(page.getByTestId("text-app-version")).toContainText("data 3.0.0");
-  await expect(page.getByTestId("panel-footer-root")).toContainText("1,345 entities");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 3.1.0");
+  await expect(page.getByTestId("panel-footer-root")).toContainText("1,417 entities");
 });
 
 test("drills Region -> Era -> Period through the columns", async ({ page }) => {

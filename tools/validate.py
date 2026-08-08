@@ -237,6 +237,59 @@ for e in entities:
         )
 
 
+
+# ---- Dating method must be physically capable of the date -------------------
+#
+# Radiocarbon decays out of usable range by about 50,000 years; nothing older
+# can be dated by it at all. So `dating_method: radiocarbon-*` on an entity
+# starting before that is not a debatable call, it is impossible.
+#
+# This caught six real entities, three of them authored by hand over previous
+# sessions. The cause is structural rather than careless: `dating_method` is a
+# single per-entity field, but a long-lived entity has two boundaries dated by
+# different means. Neanderthals appear at 400 ka (uranium-series and
+# luminescence at Sima de los Huesos) and disappear at 40 ka (AMS radiocarbon).
+# Recording the end's method and letting it describe the start is the natural
+# mistake, and it is invisible until something renders the label.
+#
+# The field drives frame selection, which is computed from the START boundary,
+# so the convention is that `dating_method` describes the start. See Q-30.
+RADIOCARBON_CEILING_BP = 55_000  # generous; practical limit is nearer 50,000
+
+
+def _bp(historical_year):
+    return 1950 - (historical_year + 1 if historical_year < 0 else historical_year)
+
+
+for e in entities:
+    method = e.get("dating_method")
+    sy = e.get("start_year")
+    if method is None or sy is None or not str(method).startswith("radiocarbon"):
+        continue
+    if _bp(sy) > RADIOCARBON_CEILING_BP:
+        errors.append(
+            f"entity {e['id']}: dating_method '{method}' but start_year is "
+            f"{_bp(sy):,} BP, beyond the ~{RADIOCARBON_CEILING_BP:,} BP radiocarbon "
+            f"limit. Radiocarbon cannot date this. If the END is radiocarbon and the "
+            f"START is not, record the start's method and say so in date_note."
+        )
+
+
+# ---- Uncalibrated radiocarbon must be declared, not implied -----------------
+#
+# An uncalibrated age is not a calendar date and the app refuses to convert it.
+# That refusal only works if the method says so, and the whole hazard is that
+# published dates frequently do not.
+for e in entities:
+    if e.get("dating_method") != "radiocarbon-uncalibrated":
+        continue
+    note = (e.get("date_note") or "").upper()
+    if "UNCALIB" not in note:
+        warnings.append(
+            f"entity {e['id']}: stored as uncalibrated radiocarbon but date_note does "
+            f"not say so. A reader seeing the raw number will read it as a calendar date."
+        )
+
 # ---- Missing-summary warnings ----------------------------------------------
 for e in entities:
     if e.get("tier") == "foundational" and not e.get("summary") and e.get("kind") != "region":

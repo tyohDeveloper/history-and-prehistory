@@ -35,7 +35,6 @@
     "vitest": "^4.1.10"
   },
   "dependencies": {
-    "@replit/connectors-sdk": "^0.4.2",
     "temporal-polyfill": "^1.0.3"
   }
 }

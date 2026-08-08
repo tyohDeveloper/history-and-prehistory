@@ -5,18 +5,22 @@ import { buildIndex } from "../src/lib/tree";
 const idx = buildIndex(entities);
 
 describe("dataset envelope", () => {
-  it("is v2.2.0 on schema 1.1.0", () => {
-    // 1.1.0 adds subkind, dating_method, standing, as_of, native_date,
-    // alternatives, caveats and source_ids. All optional, so every 1.0.0
-    // document remains valid.
-    expect(datasetVersion).toBe("2.2.0");
-    expect(schemaVersion).toBe("1.1.0");
+  it("is v3.0.0 on schema 2.0.0", () => {
+    // MAJOR on both. Schema 2.0.0 adds the taxon and threshold kinds, so a
+    // consumer switching exhaustively on kind breaks. Dataset 3.0.0 moves the
+    // prehistory ids (origins -> hominins) and re-parents the stone ages, so
+    // a consumer addressing by id breaks too.
+    //
+    // Recorded here because 2.2.0 was itself mis-versioned: it re-parented
+    // three top-level eras and dropped four ids under a minor bump.
+    expect(datasetVersion).toBe("3.0.0");
+    expect(schemaVersion).toBe("2.0.0");
   });
 
   it("has the expected collection sizes", () => {
-    // 1,305 historical entities plus the prehistory branch: the genus Homo,
-    // the stone-tool industries, and two sites.
-    expect(entities.length).toBe(1333);
+    // 1,305 historical entities plus the prehistory branch: hominins,
+    // stone-tool industries, behavioural thresholds, and sites.
+    expect(entities.length).toBe(1345);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(37);
@@ -96,20 +100,20 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(27);
+    expect(cited.length).toBe(39);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.dating_method !== undefined).length).toBe(29);
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(13);
+    expect(entities.filter((e) => e.dating_method !== undefined).length).toBe(46);
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(20);
   });
 
   it("distinguishes an extant taxon from an undated end", () => {
     // end_year null means "extant" for H. sapiens and "never dated" for
     // H. luzonensis. Conflating them would put a hominin known from foot
     // bones among the living.
-    const sapiens = entities.find((e) => e.id === "global.prehistory.origins.homo-sapiens");
-    const luzon = entities.find((e) => e.id === "global.prehistory.origins.homo-luzonensis");
+    const sapiens = entities.find((e) => e.id === "global.prehistory.hominins.homo-sapiens");
+    const luzon = entities.find((e) => e.id === "global.prehistory.hominins.homo-luzonensis");
     expect(sapiens?.end_year).toBeNull();
     expect(sapiens?.end_precision).toBeUndefined();
     expect(luzon?.end_year).toBeNull();
@@ -124,5 +128,55 @@ describe("gap-analysis baseline", () => {
     const regions = entities.filter((e) => e.kind === "region");
     expect(regions.length).toBe(43);
     expect(regions.filter((e) => e.summary !== undefined).length).toBe(6);
+  });
+});
+
+describe("the behavioural gate", () => {
+  const byId = new Map(entities.map((e) => [e.id, e]));
+
+  it("floors the app at 3.3 Ma, older than the oldest Homo fossil", () => {
+    // The floor is behavioural. Lomekwi 3 knapping predates Ledi-Geraru by
+    // ~500 kyr, so a taxonomic floor would exclude the oldest instance of the
+    // behaviour the app exists to track.
+    const pre = byId.get("global.prehistory");
+    const homo = byId.get("global.prehistory.hominins");
+    expect(pre?.start_year).toBe(-3300000);
+    expect(homo!.start_year!).toBeGreaterThan(pre!.start_year!);
+  });
+
+  it("names the hominin branch for its contents, not for the scope rule", () => {
+    expect(byId.get("global.prehistory.hominins")?.name).toBe("Hominins");
+    expect(byId.has("global.prehistory.origins")).toBe(false);
+  });
+
+  it("models the floor as a behaviour with the site as evidence", () => {
+    // If an older knapping site is accepted the date moves and scope does not.
+    const k = byId.get("global.prehistory.firsts.stone-knapping");
+    expect(k?.kind).toBe("threshold");
+    expect(k?.date_precision).toBe("minimum");
+    expect(k?.start_year).toBe(-3298051);
+  });
+
+  it("gives every threshold a minimum precision and no end", () => {
+    const t = entities.filter((e) => e.kind === "threshold");
+    expect(t.length).toBeGreaterThanOrEqual(10);
+    for (const e of t) {
+      expect(e.date_precision).toBe("minimum");
+      expect(e.end_year).toBeNull();
+    }
+  });
+
+  it("keeps species as taxa, not periods", () => {
+    const sp = entities.filter((e) => e.parent_id === "global.prehistory.hominins");
+    expect(sp.length).toBe(12);
+    expect(sp.every((e) => e.kind === "taxon")).toBe(true);
+  });
+
+  it("keeps the Lomekwian distinct from the Oldowan", () => {
+    // 700 kyr apart, so the extension is real rather than a relabel.
+    const lom = byId.get("global.paleolithic.lomekwian");
+    const old = byId.get("global.paleolithic.oldowan");
+    expect(lom!.start_year!).toBeLessThan(old!.start_year!);
+    expect(old!.start_year! - lom!.start_year!).toBeGreaterThan(600000);
   });
 });

@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.1.0",
-  "dataset_version": "2.2.0",
-  "generated_at": "2026-08-08T02:58:02Z",
+  "schema_version": "2.0.0",
+  "dataset_version": "3.0.0",
+  "generated_at": "2026-08-08T03:30:26Z",
   "entities": [
     {
       "id": "global",
@@ -15735,6 +15735,412 @@
         "surovell-2026-monte-verde"
       ],
       "summary": "A settlement in southern Chile whose age broke the Clovis-first model of the peopling of the Americas.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.firsts",
+      "kind": "era",
+      "name": "Behavioural Firsts",
+      "parent_id": "global.prehistory",
+      "start_year": -3390000,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "dating_method": "argon-argon",
+      "summary": "The earliest known evidence for each human behaviour — toolmaking, fire, pigment, burial, art, seafaring. Each date is a floor, not an estimate.",
+      "date_note": "Starts with the contested Dikika cut marks at 3.39 Ma, which is older than the app's 3.3 Ma floor because the floor tracks the oldest ACCEPTED behaviour and Dikika is not accepted.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.firsts.stone-knapping",
+      "kind": "threshold",
+      "name": "Stone Knapping",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -3298051,
+      "end_year": null,
+      "tier": "foundational",
+      "start_year_min": -3438051,
+      "start_year_max": -3308051,
+      "dating_method": "argon-argon",
+      "standing": "consensus",
+      "date_note": "THE SCOPE FLOOR, defined as a behaviour rather than as a site. Lomekwi 3 is the present evidence, not the definition: the artefacts lie above the Toroto Tuff at 3.31 +/- 0.02 Ma, within the Mammoth reverse subchron. If an older knapping site is accepted, this date moves and the app's scope does not change. Predates the oldest Homo fossil by about 500,000 years, which is why the floor is behavioural and not taxonomic.",
+      "alternatives": [
+        {
+          "label": "Assemblage not in primary context",
+          "standing": "minority",
+          "start_year": -3268051,
+          "dating_method": "argon-argon",
+          "note": "Argues the stratigraphic association with the dated tuff is not established. Offers no alternative date; the implied age is essentially the same. The excavators replied in 2019.",
+          "source_ids": [
+            "dominguez-rodrigo-2016-lomekwi"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "A minority reads the flakes as naturally fractured stone rather than deliberate knapping.",
+          "source_ids": [
+            "dominguez-rodrigo-2016-lomekwi"
+          ]
+        }
+      ],
+      "source_ids": [
+        "harmand-2015-lomekwi",
+        "dominguez-rodrigo-2016-lomekwi"
+      ],
+      "date_precision": "minimum",
+      "summary": "The first deliberate shaping of stone into tools — the behaviour this app uses to mark where human prehistory begins.",
+      "aliases": [
+        "Lomekwian",
+        "Earliest lithic technology"
+      ]
+    },
+    {
+      "id": "global.prehistory.firsts.butchery",
+      "kind": "threshold",
+      "name": "Butchery of Animals",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -2598051,
+      "end_year": null,
+      "tier": "intermediate",
+      "dating_method": "argon-argon",
+      "standing": "majority",
+      "date_note": "The secure record begins 2.6-2.5 Ma at Gona and Bouri, Ethiopia. A claim for 3.39 Ma at Dikika is the older candidate and is not accepted.",
+      "alternatives": [
+        {
+          "label": "Dikika cut marks",
+          "standing": "minority",
+          "start_year": -3388051,
+          "dating_method": "argon-argon",
+          "note": "Marks on two bones claimed as butchery before 3.39 Ma. Critics read them as trampling: 96% of experimental trampling grooves are broad and open, against 4% of genuine cut marks.",
+          "source_ids": [
+            "mcpherron-2010-dikika",
+            "dominguez-rodrigo-2010-dikika"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "The 3.39 Ma Dikika claim is widely read as trampling damage rather than butchery.",
+          "source_ids": [
+            "dominguez-rodrigo-2010-dikika"
+          ]
+        }
+      ],
+      "source_ids": [
+        "mcpherron-2010-dikika",
+        "dominguez-rodrigo-2010-dikika"
+      ],
+      "date_precision": "minimum",
+      "summary": "Cutting meat from bone with stone tools, which opened a food source that had been out of reach."
+    },
+    {
+      "id": "global.prehistory.firsts.controlled-fire",
+      "kind": "threshold",
+      "name": "Controlled Use of Fire",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -998051,
+      "end_year": null,
+      "tier": "foundational",
+      "start_year_min": -1268051,
+      "start_year_max": -808051,
+      "dating_method": "magnetostratigraphy",
+      "standing": "majority",
+      "date_note": "Wonderwerk Cave Stratum 10 is the standard secure minimum, bracketed by cosmogenic burial ages of 1.27 +/- 0.19 and 0.98 +/- 0.19 Ma. Older claims exist and the field has not settled.",
+      "alternatives": [
+        {
+          "label": "Wonderwerk Stratum 11",
+          "standing": "minority",
+          "start_year": -1788051,
+          "end_year": -1068051,
+          "dating_method": "magnetostratigraphy",
+          "note": "A 2026 reanalysis pushes burning at the same cave back to 1.79-1.07 Ma.",
+          "source_ids": [
+            "plos-2026-wonderwerk-st11"
+          ]
+        },
+        {
+          "label": "Gesher Benot Ya'aqov",
+          "standing": "majority",
+          "start_year": -788051,
+          "dating_method": "magnetostratigraphy",
+          "note": "The best-evidenced repeated hearth use, fixed by the Matuyama-Brunhes reversal at 0.79 Ma. Younger than Wonderwerk but less contested.",
+          "source_ids": [
+            "zohar-2022-cooking"
+          ]
+        }
+      ],
+      "source_ids": [
+        "berna-2012-wonderwerk",
+        "plos-2026-wonderwerk-st11"
+      ],
+      "date_precision": "minimum",
+      "summary": "Keeping and using fire on purpose, which changed diet, safety and how far north people could live."
+    },
+    {
+      "id": "global.prehistory.firsts.cooking",
+      "kind": "threshold",
+      "name": "Cooking of Food",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -778051,
+      "end_year": null,
+      "tier": "intermediate",
+      "dating_method": "magnetostratigraphy",
+      "standing": "consensus",
+      "date_note": "Gesher Benot Ya'aqov, from eight sequential horizons correlated to marine isotope stages 18-20. Note the long gap between the earliest fire and the earliest cooking: the two are not the same behaviour.",
+      "source_ids": [
+        "zohar-2022-cooking"
+      ],
+      "date_precision": "minimum",
+      "summary": "Applying controlled heat to food, evidenced by fish teeth heated to a temperature that implies cooking rather than burning."
+    },
+    {
+      "id": "global.prehistory.firsts.pigment-use",
+      "kind": "threshold",
+      "name": "Use of Pigment",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -298051,
+      "end_year": null,
+      "tier": "intermediate",
+      "dating_method": "argon-argon",
+      "standing": "consensus",
+      "date_note": "Secure from about 300 ka in both Africa and Europe. Between 1.5 Ma and 300 ka the evidence is sparse and equivocal. Kapthurin GnJh-15 in Kenya is the earliest well-dated assemblage at 0.284 +/- 0.012 Ma.",
+      "alternatives": [
+        {
+          "label": "Olorgesailie worked pigment",
+          "standing": "majority",
+          "start_year": -318051,
+          "end_year": -303051,
+          "dating_method": "argon-argon",
+          "note": "Described as the oldest clearly worked pigment.",
+          "source_ids": [
+            "brooks-2018-olorgesailie"
+          ]
+        }
+      ],
+      "source_ids": [
+        "deino-2002-kapthurin",
+        "brooks-2018-olorgesailie"
+      ],
+      "date_precision": "minimum",
+      "summary": "Collecting and working coloured earth, the earliest hint of decoration or marking.",
+      "aliases": [
+        "Ochre use"
+      ]
+    },
+    {
+      "id": "global.prehistory.firsts.deliberate-burial",
+      "kind": "threshold",
+      "name": "Deliberate Burial",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -428051,
+      "end_year": null,
+      "tier": "foundational",
+      "start_year_min": -446051,
+      "start_year_max": -425051,
+      "dating_method": "uranium-series",
+      "standing": "majority",
+      "date_note": "Sima de los Huesos in Spain holds over 7,000 bones from at least 29 individuals, a minimum age since the dated speleothem formed directly on the deposit. Whether accumulation counts as burial is the argument. Qafzeh in Israel at 90-100 ka is the earliest undisputed grave.",
+      "alternatives": [
+        {
+          "label": "Qafzeh, earliest undisputed grave",
+          "standing": "consensus",
+          "start_year": -98051,
+          "end_year": -88051,
+          "dating_method": "luminescence",
+          "note": "A modern-human burial with fallow-deer antlers placed on the chest, cut into bedrock. Thermoluminescence on burnt flint.",
+          "source_ids": [
+            "valladas-1988-qafzeh",
+            "smithsonian-qafzeh-burial"
+          ]
+        },
+        {
+          "label": "Homo naledi burial claim",
+          "standing": "minority",
+          "start_year": -333051,
+          "end_year": -137051,
+          "dating_method": "esr",
+          "note": "A 2023 claim of deliberate burial by a small-brained hominin at Rising Star, formally rebutted and not accepted.",
+          "source_ids": [
+            "smithsonian-human-origins"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Whether the Sima accumulation is burial or another process is unresolved; the Homo naledi claim is rejected by most reviewers.",
+          "source_ids": [
+            "arnold-2014-sima"
+          ]
+        }
+      ],
+      "source_ids": [
+        "arnold-2014-sima",
+        "valladas-1988-qafzeh"
+      ],
+      "date_precision": "minimum",
+      "summary": "Placing the dead somewhere on purpose rather than leaving them where they fell."
+    },
+    {
+      "id": "global.prehistory.firsts.shell-beads",
+      "kind": "threshold",
+      "name": "Personal Ornaments",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -140051,
+      "end_year": null,
+      "tier": "intermediate",
+      "start_year_min": -169051,
+      "start_year_max": -118051,
+      "dating_method": "uranium-series",
+      "standing": "majority",
+      "date_note": "Bizmoune Cave, Morocco: 33 pierced Tritia gibbosula shells, dated by uranium-series on a speleothem to 142,290 +29,300/-22,060 years at 2 sigma. Explicitly a minimum. Single-grain OSL on the same layer gives ages as young as 57,800 +/- 7,200, which is unresolved.",
+      "alternatives": [
+        {
+          "label": "Bizmoune OSL chronology",
+          "standing": "minority",
+          "start_year": -55851,
+          "dating_method": "luminescence",
+          "note": "Optically stimulated luminescence on layer 4c returns a far younger age than the uranium-series speleothem date.",
+          "source_ids": [
+            "sehasseh-2021-bizmoune"
+          ]
+        }
+      ],
+      "source_ids": [
+        "sehasseh-2021-bizmoune"
+      ],
+      "date_precision": "minimum",
+      "summary": "Shells pierced and strung to be worn, which means signalling something about yourself to other people.",
+      "aliases": [
+        "Shell beads"
+      ]
+    },
+    {
+      "id": "global.prehistory.firsts.symbolic-engraving",
+      "kind": "threshold",
+      "name": "Abstract Engraving",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -75051,
+      "end_year": null,
+      "tier": "intermediate",
+      "start_year_min": -81051,
+      "start_year_max": -69051,
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "date_note": "Blombos Cave, South Africa: 77 +/- 6 ka by thermoluminescence on burnt lithics for the engraved ochre, with a drawn cross-hatch in ochre crayon at about 73 ka from the same site.",
+      "alternatives": [
+        {
+          "label": "Trinil engraved shell",
+          "standing": "minority",
+          "start_year": -538051,
+          "end_year": -428051,
+          "dating_method": "argon-argon",
+          "note": "A zigzag engraved on a freshwater mussel shell from Java, attributed to Homo erectus. If accepted it moves this threshold back by 350,000 years.",
+          "source_ids": [
+            "joordens-2015-trinil"
+          ]
+        }
+      ],
+      "source_ids": [
+        "henshilwood-2002-blombos",
+        "henshilwood-2018-blombos-drawing"
+      ],
+      "date_precision": "minimum",
+      "summary": "Deliberate cross-hatched patterns cut into ochre — marks that mean something without depicting anything."
+    },
+    {
+      "id": "global.prehistory.firsts.seafaring",
+      "kind": "threshold",
+      "name": "Intentional Seafaring",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -63051,
+      "end_year": null,
+      "tier": "foundational",
+      "start_year_min": -69051,
+      "start_year_max": -57351,
+      "dating_method": "luminescence",
+      "standing": "majority",
+      "date_note": "The colonisation of Sahul recorded at Madjedbebe, Australia: 65 +/- 6 ka at 95.4% by single-grain OSL with Bayesian modelling. Reaching Australia required repeated open-water crossings, so the site dates the voyage as well as the landfall.",
+      "alternatives": [
+        {
+          "label": "Sceptical reading of the Madjedbebe chronology",
+          "standing": "minority",
+          "start_year": -55051,
+          "end_year": -47051,
+          "dating_method": "luminescence",
+          "note": "Critics read the same OSL data as about 53 +/- 4 ka, arguing artefacts moved down through the sand.",
+          "source_ids": [
+            "clarkson-2018-reply"
+          ]
+        }
+      ],
+      "source_ids": [
+        "clarkson-2017-madjedbebe",
+        "clarkson-2018-reply"
+      ],
+      "date_precision": "minimum",
+      "summary": "Crossing open water on purpose, out of sight of the far shore, which requires planning and a built craft."
+    },
+    {
+      "id": "global.prehistory.firsts.figurative-art",
+      "kind": "threshold",
+      "name": "Figurative Art",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -49251,
+      "end_year": null,
+      "tier": "foundational",
+      "dating_method": "uranium-series",
+      "standing": "consensus",
+      "date_note": "A narrative scene at Leang Karampuang, Sulawesi: a warty pig with human figures, dated by laser-ablation uranium-series on the overlying carbonate. A minimum, since the art is older than the crust that formed on it. The 2024 laser-ablation method also pushed the neighbouring Leang Bulu' Sipong 4 scene from 44 ka to about 48 ka.",
+      "alternatives": [
+        {
+          "label": "European Upper Palaeolithic art",
+          "standing": "majority",
+          "start_year": -35051,
+          "end_year": -31551,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Chauvet's first occupation is 37,000-33,500 cal BP and the Hohle Fels ivory figurine at least 35,000 years old. Long taken as the earliest figurative art until the Sulawesi dates.",
+          "source_ids": [
+            "oktaviana-2024-sulawesi"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Often said to begin in Ice Age Europe. The oldest known figurative art is in Indonesia and predates Chauvet by some 14,000 years.",
+          "source_ids": [
+            "oktaviana-2024-sulawesi"
+          ]
+        }
+      ],
+      "source_ids": [
+        "oktaviana-2024-sulawesi"
+      ],
+      "date_precision": "minimum",
+      "summary": "Pictures of recognisable things — animals and people — rather than patterns."
+    },
+    {
+      "id": "global.paleolithic.lomekwian",
+      "kind": "period",
+      "name": "Lomekwian Industry",
+      "parent_id": "global.paleolithic",
+      "start_year": -3298051,
+      "end_year": -2598051,
+      "tier": "specialist",
+      "start_year_min": -3438051,
+      "start_year_max": -3308051,
+      "dating_method": "argon-argon",
+      "standing": "consensus",
+      "date_note": "Named from Lomekwi 3. Kept separate from the Oldowan because the knapping technique differs, which is also why the Oldowan's 2.6 Ma start is a definitional boundary rather than the start of toolmaking.",
+      "source_ids": [
+        "harmand-2015-lomekwi",
+        "dominguez-rodrigo-2016-lomekwi"
+      ],
+      "summary": "The oldest known stone toolkit: large, heavy cores and flakes struck with techniques unlike the later Oldowan.",
       "date_precision": "approx"
     }
   ]

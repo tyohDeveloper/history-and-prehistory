@@ -1,20 +1,124 @@
 {
-  "schema_version": "1.1.0",
-  "dataset_version": "2.2.0",
-  "generated_at": "2026-08-08T02:58:02Z",
+  "schema_version": "2.0.0",
+  "dataset_version": "3.0.0",
+  "generated_at": "2026-08-08T03:30:26Z",
   "sources": [
+    {
+      "id": "dominguez-rodrigo-2016-lomekwi",
+      "kind": "scholarly",
+      "citation": "Domínguez-Rodrigo & Alcalá (2016), critique of the Lomekwi 3 context, PaleoAnthropology 2016:46-53",
+      "url": "https://paleoanthro.org/media/journal/content/PA20160046.pdf",
+      "note": "Minority: argues the assemblage is not demonstrably in primary context."
+    },
+    {
+      "id": "mcpherron-2010-dikika",
+      "kind": "scholarly",
+      "citation": "McPherron et al. (2010), 'Evidence for stone-tool-assisted consumption of animal tissues before 3.39 million years ago at Dikika, Ethiopia', Nature",
+      "url": "https://www.nature.com/articles/nature09248"
+    },
+    {
+      "id": "dominguez-rodrigo-2010-dikika",
+      "kind": "scholarly",
+      "citation": "Domínguez-Rodrigo, Pickering & Bunn (2010), 'Configurational approach to identifying the earliest hominin butchers', PNAS 107:20929-20934",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1013711107",
+      "note": "Majority: argues the Dikika marks are trampling damage."
+    },
+    {
+      "id": "berna-2012-wonderwerk",
+      "kind": "scholarly",
+      "citation": "Berna et al. (2012), 'Microstratigraphic evidence of in situ fire in the Acheulean strata of Wonderwerk Cave, South Africa', PNAS",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1117620109"
+    },
+    {
+      "id": "plos-2026-wonderwerk-st11",
+      "kind": "scholarly",
+      "citation": "PLOS ONE (2026), evidence for burning in Wonderwerk Stratum 11, 1.79-1.07 Ma",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0347480"
+    },
+    {
+      "id": "deino-2002-kapthurin",
+      "kind": "scholarly",
+      "citation": "Deino & McBrearty (2002), 40Ar/39Ar dating of the Kapthurin Formation, Baringo, Kenya, Journal of Human Evolution",
+      "url": "http://in-africa.org/wp-content/uploads/2012/12/Deino-McBrearty-2002-JHE-date-of-Kapthurin.pdf"
+    },
+    {
+      "id": "brooks-2018-olorgesailie",
+      "kind": "scholarly",
+      "citation": "Brooks et al. (2018), long-distance stone transport and pigment use in the Middle Stone Age, Science",
+      "url": "https://www.science.org/doi/10.1126/science.aao2646"
+    },
+    {
+      "id": "arnold-2014-sima",
+      "kind": "scholarly",
+      "citation": "Arnold et al. (2014), luminescence dating and palaeomagnetic age constraint on the hominins from Sima de los Huesos, Atapuerca",
+      "url": "https://cir.cenieh.es/bitstream/20.500.12136/315/1/Luminescence%20dating%20and%20palaeomagnetic%20age%20constraint%20on%20hominins%20from%20Sima%20de%20los%20Huesos,%20Atapuerca,%20Spain_Arnold_et_al_2014.pdf"
+    },
+    {
+      "id": "valladas-1988-qafzeh",
+      "kind": "scholarly",
+      "citation": "Valladas et al. (1988), thermoluminescence dating of Mousterian burials at Qafzeh, Israel, Nature 331:614",
+      "url": "https://www.nature.com/articles/331614a0"
+    },
+    {
+      "id": "smithsonian-qafzeh-burial",
+      "kind": "scholarly",
+      "citation": "Smithsonian Human Origins — Qafzeh: oldest intentional burial",
+      "url": "https://humanorigins.si.edu/evidence/behavior/burial/qafzeh-oldest-intentional-burial"
+    },
+    {
+      "id": "oktaviana-2024-sulawesi",
+      "kind": "scholarly",
+      "citation": "Oktaviana et al. (2024), 'Narrative cave art in Indonesia by 51,200 years ago', Nature",
+      "url": "https://www.nature.com/articles/s41586-024-07541-7"
+    },
+    {
+      "id": "henshilwood-2002-blombos",
+      "kind": "scholarly",
+      "citation": "Henshilwood et al. (2002), 'Emergence of modern human behavior: Middle Stone Age engravings from South Africa', Science",
+      "url": "https://www.science.org/doi/10.1126/science.1067575"
+    },
+    {
+      "id": "henshilwood-2018-blombos-drawing",
+      "kind": "scholarly",
+      "citation": "Henshilwood et al. (2018), 'An abstract drawing from the 73,000-year-old levels at Blombos Cave, South Africa', Nature 562:115-118",
+      "url": "https://www.nature.com/articles/s41586-018-0514-3"
+    },
+    {
+      "id": "sehasseh-2021-bizmoune",
+      "kind": "scholarly",
+      "citation": "Sehasseh et al. (2021), 'Early Middle Stone Age personal ornaments from Bizmoune Cave, Essaouira, Morocco', Science Advances",
+      "url": "https://www.science.org/doi/10.1126/sciadv.abi8620"
+    },
+    {
+      "id": "clarkson-2017-madjedbebe",
+      "kind": "scholarly",
+      "citation": "Clarkson et al. (2017), 'Human occupation of northern Australia by 65,000 years ago', Nature",
+      "url": "https://faculty.washington.edu/bmarwick/PDFs/Clarkson_Jacobs_Marwick_2017.pdf"
+    },
+    {
+      "id": "clarkson-2018-reply",
+      "kind": "scholarly",
+      "citation": "Clarkson et al. (2018), reply to critiques of the Madjedbebe chronology, Australian Archaeology",
+      "url": "http://faculty.washington.edu/bmarwick/PDFs/Clarkson-Roberts-Jacobs-Marwick-et-al-2018-AA-reply.pdf",
+      "note": "Records the sceptical reading of about 53 ka."
+    },
+    {
+      "id": "zohar-2022-cooking",
+      "kind": "scholarly",
+      "citation": "Zohar et al. (2022), 'Evidence for the cooking of fish 780,000 years ago at Gesher Benot Ya'aqov, Israel', Nature Ecology & Evolution",
+      "url": "https://www.nature.com/articles/s41559-022-01910-z"
+    },
+    {
+      "id": "joordens-2015-trinil",
+      "kind": "scholarly",
+      "citation": "Joordens et al. (2015), 'Homo erectus at Trinil on Java used shells for tool production and engraving', Nature",
+      "url": "https://www.nature.com/articles/nature13962"
+    },
     {
       "id": "harmand-2015-lomekwi",
       "kind": "scholarly",
       "citation": "Harmand et al. (2015), '3.3-million-year-old stone tools from Lomekwi 3, West Turkana, Kenya', Nature",
       "url": "https://www.nature.com/articles/nature14464"
-    },
-    {
-      "id": "domalain-2017-lomekwi-critique",
-      "kind": "scholarly",
-      "citation": "Critiques of the Lomekwi 3 assemblage as naturally fractured stone (geofacts)",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/28460736/",
-      "note": "Minority position: questions whether the Lomekwi 3 flakes are deliberately knapped."
     },
     {
       "id": "smithsonian-human-origins",

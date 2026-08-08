@@ -18,8 +18,8 @@ test("boots offline from file:// with no network requests", async ({ page }) => 
 });
 
 test("shows the version stamp and entity count", async ({ page }) => {
-  await expect(page.getByTestId("text-app-version")).toContainText("data 2.2.0");
-  await expect(page.getByTestId("panel-footer-root")).toContainText("1,333 entities");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 3.0.0");
+  await expect(page.getByTestId("panel-footer-root")).toContainText("1,345 entities");
 });
 
 test("drills Region -> Era -> Period through the columns", async ({ page }) => {
@@ -131,7 +131,7 @@ test("renders deep time in Ma and ka, not seven-digit BCE", async ({ page }) => 
   // a year-precise position in a calendar that did not exist.
   await page.getByTestId("option-tree-node-global").click();
   await page.getByTestId("option-tree-node-global.prehistory").click();
-  await page.getByTestId("option-tree-node-global.prehistory.origins").click();
+  await page.getByTestId("option-tree-node-global.prehistory.hominins").click();
   await expect(page.getByTestId("text-readout-range")).toContainText("Ma");
   await expect(page.getByTestId("text-readout-range")).not.toContainText("BCE");
 });
@@ -141,15 +141,18 @@ test("quotes a range in one unit where both ends fit it", async ({ page }) => {
   await page.getByTestId("option-tree-node-global.prehistory").click();
   await page.getByTestId("option-tree-node-global.paleolithic").click();
   await page.getByTestId("option-tree-node-global.paleolithic.magdalenian").click();
-  // Not "21.2 ka - 14,610 BP".
-  await expect(page.getByTestId("text-readout-range")).toHaveText(/^[\d.,]+ ka \u2013 [\d.,]+ ka$/);
+  // One unit AND one suffix for the whole range: "21.2 - 14.6 ka cal BP".
+  // Not "21.2 ka - 14,610 BP", and not "21.2 ka cal BP - 14.6 ka cal BP".
+  await expect(page.getByTestId("text-readout-range")).toHaveText(
+    /^[\d.,]+ \u2013 [\d.,]+ ka cal BP$/,
+  );
 });
 
-test("reaches the genus Homo branch", async ({ page }) => {
+test("reaches the hominin branch", async ({ page }) => {
   await page.getByTestId("option-tree-node-global").click();
   await page.getByTestId("option-tree-node-global.prehistory").click();
-  await page.getByTestId("option-tree-node-global.prehistory.origins").click();
-  await page.getByTestId("option-tree-node-global.prehistory.origins.homo-sapiens").click();
+  await page.getByTestId("option-tree-node-global.prehistory.hominins").click();
+  await page.getByTestId("option-tree-node-global.prehistory.hominins.homo-sapiens").click();
   await expect(page.getByTestId("text-readout-name")).toHaveText("Homo sapiens");
   // Extant, so the range says present rather than a date.
   await expect(page.getByTestId("text-readout-range")).toContainText("present");
@@ -160,8 +163,8 @@ test("says unknown, not present, when an end was never dated", async ({ page }) 
   await page.getByTestId("select-detail-tier").selectOption("specialist");
   await page.getByTestId("option-tree-node-global").click();
   await page.getByTestId("option-tree-node-global.prehistory").click();
-  await page.getByTestId("option-tree-node-global.prehistory.origins").click();
-  const luzon = page.getByTestId("option-tree-node-global.prehistory.origins.homo-luzonensis");
+  await page.getByTestId("option-tree-node-global.prehistory.hominins").click();
+  const luzon = page.getByTestId("option-tree-node-global.prehistory.hominins.homo-luzonensis");
   await luzon.scrollIntoViewIfNeeded();
   await luzon.click();
   await expect(page.getByTestId("text-readout-range")).toContainText("unknown");
@@ -176,4 +179,17 @@ test("shows no calendar reading for a deep-time date", async ({ page }) => {
   await page.getByTestId("option-tree-node-global.paleolithic").click();
   await page.getByTestId("option-tree-node-global.paleolithic.oldowan").click();
   await expect(page.getByTestId("panel-calendar-readout")).toContainText("before calendars");
+});
+
+test("shows the behavioural floor as a threshold, not a site", async ({ page }) => {
+  await page.getByTestId("option-tree-node-global").click();
+  await page.getByTestId("option-tree-node-global.prehistory").click();
+  await page.getByTestId("option-tree-node-global.prehistory.firsts").click();
+  const k = page.getByTestId("option-tree-node-global.prehistory.firsts.stone-knapping");
+  await k.scrollIntoViewIfNeeded();
+  await k.click();
+  await expect(page.getByTestId("text-readout-name")).toHaveText("Stone Knapping");
+  await expect(page.getByTestId("list-readout-facts")).toContainText("Earliest known");
+  // One-sided: a floor with no end, not an interval.
+  await expect(page.getByTestId("text-readout-range")).toContainText("3.3 Ma");
 });

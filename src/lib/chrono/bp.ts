@@ -142,20 +142,39 @@ export function formatBp(
   const unit = options.unit ?? bpUnitFor(bp);
   const magnitude = formatMagnitude(bp, unit, uncertainty);
   if (options.withUnit === false) return magnitude;
-  // The suffix carries the sense, not just the datum: "cal BP" and "14C BP"
-  // share the 1950 datum but are different quantities, and a geological age
-  // was never referenced to 1950 at all.
-  const sense = options.sense;
+  return `${magnitude} ${bpSuffix(unit, options.sense, datum)}`;
+}
+
+/**
+ * What follows the number: unit plus the sense of "before present".
+ *
+ * Kept separate from `formatBp` because a range needs the suffix ONCE, not on
+ * both ends. "3.3 Ma ago \u2013 2.6 Ma ago" repeats itself; "3.3 \u2013 2.6 Ma ago" does
+ * not. Callers formatting a range pass `withUnit: false` for both ends and
+ * append this themselves.
+ */
+export function bpSuffix(
+  unit: BpUnit,
+  sense: BpSense | undefined,
+  datum: Datum = "bp",
+): string {
+  // b2k is quoted as such whatever the method: the source's datum wins.
+  if (datum === "b2k") return unit === "yr" ? DATUM_LABEL.b2k : `${unit} b2k`;
+  const s = sense ?? "calendar";
   if (unit === "yr") {
-    const label =
-      sense === undefined || sense === "calendar"
-        ? DATUM_LABEL[datum]
-        : datum === "b2k"
-          ? DATUM_LABEL[datum]
-          : BP_SENSE_LABEL[sense];
-    return `${magnitude} ${label}`;
+    // "4,949 ago" is not English. A bare count needs the noun.
+    return s === "geological" ? "years ago" : BP_SENSE_LABEL[s];
   }
-  return sense === "geological" ? `${magnitude} ${unit} ago` : `${magnitude} ${unit}`;
+  switch (s) {
+    case "geological":
+      return `${unit} ago`;
+    case "cal":
+      return `${unit} cal BP`;
+    case "radiocarbon":
+      return `${unit} \u00B9\u2074C BP`;
+    default:
+      return unit;
+  }
 }
 
 /**

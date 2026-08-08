@@ -179,10 +179,15 @@ function shortRange(e: Entity): string {
   if (e.start_dating_method === "radiocarbon-uncalibrated") {
     return displayRange(e).text.replace(/\s+/g, "\u2009");
   }
-  if (t === null) return `${magnitude(s)}${s < 0 ? "\u2009BCE" : ""}${DASH}`;
-  if (s < 0 && t < 0) return `${magnitude(s)}${DASH}${magnitude(t)}\u2009BCE`;
-  if (s < 0 && t >= 0) return `${magnitude(s)}\u2009BCE${DASH}${magnitude(t)}\u2009CE`;
-  return `${magnitude(s)}${DASH}${magnitude(t)}`;
+  // A received convention rendered identically to a Bayesian-modelled date is
+  // the same failure as converting uncalibrated ages: the column is where most
+  // reading happens, and a caveat one click away does not reach it. The dagger
+  // is the conventional "there is a note" mark and costs one character.
+  const dagger = e.standing === "traditional" ? "\u2009\u2020" : "";
+  if (t === null) return `${magnitude(s)}${s < 0 ? "\u2009BCE" : ""}${DASH}${dagger}`;
+  if (s < 0 && t < 0) return `${magnitude(s)}${DASH}${magnitude(t)}\u2009BCE${dagger}`;
+  if (s < 0 && t >= 0) return `${magnitude(s)}\u2009BCE${DASH}${magnitude(t)}\u2009CE${dagger}`;
+  return `${magnitude(s)}${DASH}${magnitude(t)}${dagger}`;
 }
 
 function renderColumns(): HTMLElement {
@@ -267,6 +272,8 @@ function renderReadout(): HTMLElement {
   }
     const range = displayRange(e);
   box.append(el("div", { class: "range", "data-testid": "text-readout-range" }, range.text));
+  const banner = renderStandingBanner(e);
+  if (banner !== null) box.append(banner);
   if (e.summary !== undefined) {
     box.append(el("p", { class: "summary" }, e.summary));
   }
@@ -303,6 +310,35 @@ function renderReadout(): HTMLElement {
   const sources = renderSources(order);
   if (sources !== null) box.append(sources);
   box.append(renderHandoff(e, order.length > 0));
+  return box;
+}
+
+/**
+ * A lead warning for dates the evidence does not establish.
+ *
+ * Some frameworks are worth carrying even though their numbers are not
+ * findings — the Namazga sequence organises the whole of Central Asian
+ * prehistory, and a reader who looks it up and finds nothing learns less than
+ * one who finds it labelled. But that only works if the label leads. Put this
+ * in the caveats block below the fact list and the scanning reader takes the
+ * date at face value and never reaches it.
+ *
+ * `traditional` is the schema's existing word for this and, until now, nothing
+ * used it: Rome's 753 BCE carried `date_precision: "traditional"` but no
+ * standing, and rendered identically to a radiocarbon date.
+ */
+function renderStandingBanner(entity: Entity): HTMLElement | null {
+  if (entity.standing !== "traditional") return null;
+  const box = el("div", { class: "standing-banner", "data-testid": "panel-standing-banner" });
+  box.append(el("span", { class: "standing-banner-mark", "aria-hidden": "true" }, "\u2020"));
+  box.append(
+    el(
+      "span",
+      {},
+      "Received convention, not a finding. Shown because it is widely cited; " +
+        "the evidence does not establish it.",
+    ),
+  );
   return box;
 }
 

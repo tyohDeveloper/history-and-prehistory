@@ -16,14 +16,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.10.0.0");
+    expect(datasetVersion).toBe("0.11.0.0");
     expect(schemaVersion).toBe("3.0.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1543);
+    expect(entities.length).toBe(1546);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -103,11 +103,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(238);
+    expect(cited.length).toBe(241);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(245);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(248);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -119,7 +119,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(182);
+    expect(withEnd.length).toBe(185);
 
     const differing = entities
       .filter(
@@ -422,11 +422,38 @@ describe("Central Asia and the Austronesian world", () => {
     expect(band.length).toBeGreaterThanOrEqual(2);
   });
 
-  it("does not author Namazga or Kelteminar", () => {
-    // Namazga is the region's standard framework and its phase brackets are
-    // quoted everywhere, but they trace to Soviet typology rather than to any
-    // published radiocarbon table. Kelteminar has no primary dataset at all.
-    expect(entities.some((e) => /namazga|kelteminar|altyn/i.test(e.id))).toBe(false);
+  it("carries Namazga as a received convention, not as dates", () => {
+    // 0.10.0.0 left this out because its phase brackets trace to Soviet
+    // typology rather than to any radiocarbon table. 0.11.0.0 includes it
+    // under `standing: "traditional"`, which is only defensible because that
+    // standing now leads the readout and marks the picker gutter.
+    const n = entities.find((e) => e.id === "central-asia.prehistory.namazga")!;
+    expect(n.standing).toBe("traditional");
+    expect(n.date_precision).toBe("traditional");
+    expect(n.start_dating_method).toBe("typological");
+    expect(n.date_note).toMatch(/RECEIVED FRAMEWORK, NOT A DATED ONE/);
+  });
+
+  it("does not let `traditional` become a loophole", () => {
+    // A received convention must declare itself as one in the precision field
+    // too, since that is what the readout banner and the picker dagger key off.
+    //
+    // This deliberately does NOT require a dating method. The enum has no value
+    // for "arrived at by ancient tradition" — Rome's 753 BCE comes from the
+    // annalists and Narmer's 3100 from Egyptian king-lists, and calling either
+    // `typological` would misdescribe it. That is a real schema gap, recorded
+    // here rather than papered over with a wrong value.
+    for (const e of entities.filter((x) => x.standing === "traditional")) {
+      expect(e.date_precision, `${e.id} precision`).toBe("traditional");
+    }
+  });
+
+  it("keeps Kelteminar off the traditional list, because it has a citation", () => {
+    // Different case: a peer-reviewed source does give it a millennium-scale
+    // range. Thin, but sourced — so it is a minority claim, not a convention.
+    const k = entities.find((e) => e.id === "central-asia.prehistory.kelteminar")!;
+    expect(k.standing).toBe("minority");
+    expect(k.date_precision).toBe("millennium");
   });
 
   it("keeps three rival Seima-Turbino chronologies apart", () => {

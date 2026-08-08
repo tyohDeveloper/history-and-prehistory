@@ -24,9 +24,9 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // The two tracks had been asserted the wrong way round since the renumbering:
   // v0.5.0 is the DATA version and 3.1.0 was the APP version. The test was
   // failing for that reason, not because the header was wrong.
-  await expect(page.getByTestId("text-app-version")).toContainText("v3.8.0.0");
-  await expect(page.getByTestId("text-app-version")).toContainText("data 0.10.0.0");
-  await expect(page.getByTestId("panel-footer-root")).toContainText("1,543 entities");
+  await expect(page.getByTestId("text-app-version")).toContainText("v3.9.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 0.11.0.0");
+  await expect(page.getByTestId("panel-footer-root")).toContainText("1,546 entities");
 });
 
 test("drills Region -> Era -> Period through the columns", async ({ page }) => {
@@ -391,4 +391,40 @@ test("makes no network request when rendering citations", async ({ page }) => {
   await page.getByTestId("list-search-results").getByRole("option").first().click();
   await expect(page.getByTestId("panel-sources-root")).toBeVisible();
   expect(external).toEqual([]);
+});
+
+test("marks a received convention in the picker, not just in the panel", async ({ page }) => {
+  // A caveat below the fact list does not reach a reader who scans the date
+  // and moves on. Rome's 753 BCE used to render identically to a Bayesian
+  // radiocarbon range.
+  await page.getByTestId("input-search-query").fill("Roman Kingdom");
+  const row = page.getByTestId("list-search-results").getByRole("option").first();
+  await expect(row).toContainText("\u2020");
+
+  await row.click();
+  const banner = page.getByTestId("panel-standing-banner");
+  await expect(banner).toContainText("Received convention, not a finding");
+});
+
+test("quotes a received convention in calendar years, never in BP", async ({ page }) => {
+  // BP is the idiom of radiometric measurement. Rendering a pottery-typology
+  // convention as "6,749 BP" lends it authority and invents a digit.
+  await page.getByTestId("input-search-query").fill("Namazga");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+  const range = page.getByTestId("text-readout-range");
+  await expect(range).toContainText("4800 BCE");
+  await expect(range).not.toContainText("BP");
+});
+
+test("leads with the warning, above the summary", async ({ page }) => {
+  await page.getByTestId("input-search-query").fill("Namazga");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+  const order = await page.evaluate(() => {
+    const root = document.querySelector('[data-testid="panel-readout-root"]')!;
+    return [...root.children].map((c) => c.getAttribute("data-testid") ?? c.className);
+  });
+  const banner = order.indexOf("panel-standing-banner");
+  const facts = order.indexOf("list-readout-facts");
+  expect(banner).toBeGreaterThan(-1);
+  expect(banner).toBeLessThan(facts);
 });

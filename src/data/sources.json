@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
-  "dataset_version": "0.10.0.0",
-  "generated_at": "2026-08-08T22:03:06Z",
+  "dataset_version": "0.11.0.0",
+  "generated_at": "2026-08-08T22:13:11Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -1994,6 +1994,13 @@
       "citation": "Debating Lapita: Distribution, Chronology, Society and Subsistence (ANU Press, open access)",
       "url": "https://library.oapen.org/bitstream/id/a0ef75fa-3f03-4d94-b680-70cb781c03a5/book%20(1).pdf",
       "note": "Other groups favour a later start of 3300-3200 cal BP."
+    },
+    {
+      "id": "masson-altyn-depe-summary",
+      "kind": "reference",
+      "citation": "Masson's 1969 excavation summary for Altyn-Depe, trenches 7-9 (BibBase record)",
+      "url": "https://bibbase.org/network/publication/masson-summary-1969",
+      "note": "Gives Early and Late Namazga V phases for the site; a bibliographic record of the field report rather than the report itself."
     }
   ]
 }

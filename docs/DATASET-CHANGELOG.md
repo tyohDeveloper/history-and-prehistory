@@ -1,5 +1,53 @@
 # Changelog
 
+## 0.11.0.0 — Received conventions (2026-08-08)
+
+0.10.0.0 left the Namazga sequence out because its phase brackets trace to
+Soviet-era ceramic typology rather than to any published radiocarbon table.
+That was right on the sourcing rule and wrong on the outcome: Namazga organises
+every account of Central Asian prehistory, and a reader who looks it up and
+finds nothing learns less than one who finds it clearly labelled.
+
+This release adds it under `standing: "traditional"` — and that is only
+defensible because the app now leads with the label rather than burying it. A
+dagger marks the range in the picker gutter and a banner sits above the summary
+in the readout. Without that, adding unsourced brackets would just have been a
+quiet dilution of the rule.
+
+### Added
+
+- **Namazga Sequence**, 4800-1500 BCE, `traditional`. The date note carries all
+  six phase brackets, the competing sets, and the reason not to trust any of
+  them: modern reassessments compress Namazga V into 2400-1950 or 2250-1700
+  BCE, and one report gives C14 dates for a single final Namazga VI layer
+  scattering from 1884 to 818 BC.
+- **Altyn-Depe**, 2100-1650 BCE, `traditional`. Dated by its Namazga V pottery,
+  so it inherits that sequence's problem entirely.
+- **Kelteminar**, 6000-3000 BCE — deliberately NOT traditional. A peer-reviewed
+  source does give it a millennium-scale range, so it is a thinly sourced
+  minority claim rather than a convention. The distinction is the point.
+
+### Changed
+
+Seven entities that were already received conventions but declared it only
+through `date_precision` now carry `standing: "traditional"` as well: Rome's
+Kingdom, Gojoseon, Gilgamesh, David, Solomon, Narmer and Nitocris. Romulus
+Augustulus is deliberately excluded — his deposition in 476 is attested, and the
+`traditional` precision there marks the "fall of Rome" convention rather than a
+legendary date for the man.
+
+### A schema gap, recorded not papered over
+
+`dating_method` has no value for "arrived at by ancient tradition". Rome's 753
+BCE comes from the annalists and Narmer's 3100 from king-lists; calling either
+`typological` would misdescribe it, so those entities have no dating method and
+the guard test explicitly does not require one.
+
+### Counts
+
+1,543 → 1,546 entities. 238 → 241 cited. 307 → 308 sources. Schema unchanged at
+3.0.0.
+
 ## 0.10.0.0 — Central Asia, the Austronesian expansion, Oceania (2026-08-08)
 
 The three thinnest regions. `tools/coverage.py` found Central Asia with nothing

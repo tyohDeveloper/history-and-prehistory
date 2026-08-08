@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
-  "dataset_version": "0.10.0.0",
-  "generated_at": "2026-08-08T22:03:06Z",
+  "dataset_version": "0.11.0.0",
+  "generated_at": "2026-08-08T22:13:11Z",
   "entities": [
     {
       "id": "global",
@@ -691,7 +691,8 @@
       "end_year": -3080,
       "tier": "foundational",
       "date_precision": "traditional",
-      "summary": "Legendary unifier of Upper and Lower Egypt. Dates and identity as Menes are partly traditional."
+      "summary": "Legendary unifier of Upper and Lower Egypt. Dates and identity as Menes are partly traditional.",
+      "standing": "traditional"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn2",
@@ -5468,7 +5469,8 @@
       "start_year": -2333,
       "end_year": -108,
       "date_precision": "traditional",
-      "tier": "specialist"
+      "tier": "specialist",
+      "standing": "traditional"
     },
     {
       "id": "east-asia.korea.three-kingdoms",
@@ -5576,7 +5578,8 @@
       "end_year": -2600,
       "date_precision": "traditional",
       "tier": "foundational",
-      "summary": "Legendary king of Uruk; hero of the eponymous epic."
+      "summary": "Legendary king of Uruk; hero of the eponymous epic.",
+      "standing": "traditional"
     },
     {
       "id": "west-asia.mesopotamia.akkadian",
@@ -5726,6 +5729,7 @@
       "end_year": -970,
       "date_precision": "traditional",
       "tier": "foundational",
+      "standing": "traditional",
       "summary": "Traditional second king of Israel; united the northern and southern kingdoms."
     },
     {
@@ -5737,6 +5741,7 @@
       "end_year": -931,
       "date_precision": "traditional",
       "tier": "foundational",
+      "standing": "traditional",
       "summary": "Traditional builder of the First Temple in Jerusalem."
     },
     {
@@ -6266,7 +6271,8 @@
       "end_year": -509,
       "tier": "intermediate",
       "date_precision": "traditional",
-      "summary": "Seven legendary kings from Romulus to Tarquin the Proud."
+      "summary": "Seven legendary kings from Romulus to Tarquin the Proud.",
+      "standing": "traditional"
     },
     {
       "id": "europe.mediterranean.rome.republic",
@@ -11757,7 +11763,8 @@
       "end_year": -2181,
       "tier": "intermediate",
       "date_precision": "traditional",
-      "summary": "Traditionally the earliest named female pharaoh; historicity debated."
+      "summary": "Traditionally the earliest named female pharaoh; historicity debated.",
+      "standing": "traditional"
     },
     {
       "id": "africa.nile.egypt.middle-kingdom.dyn11.intef-i",
@@ -21297,6 +21304,79 @@
         "australian-population-curve-2013"
       ],
       "summary": "More people, more sites and far more backed artefacts across Australia, tracking the onset of a more variable climate."
+    },
+    {
+      "id": "central-asia.prehistory.namazga",
+      "kind": "era",
+      "name": "Namazga Sequence",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -4800,
+      "end_year": -1500,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "traditional",
+      "date_precision": "traditional",
+      "date_note": "RECEIVED FRAMEWORK, NOT A DATED ONE. The phases in general circulation are Namazga I 4800-4000, II 4000-3500, III 3500-3000, IV 3000-2500, V 2500-2200 and VI 2200-1500 BCE, and competing bracket sets exist for most of them. They descend from Masson's Soviet-era ceramic typology; no published radiocarbon table for Namazga-depe itself supports them. Where independent dating does exist it disagrees: modern reassessments compress the Namazga V urban phase into roughly 2400-1950 or 2250-1700 BCE, and one report gives C14 dates for a single final Namazga VI layer scattering from 1884 to 818 BC. Use the phase names to talk to the literature; do not use these numbers as dates.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "These phase brackets are a typological convention, not measurements. Treating Namazga V as a dated period rather than a pottery style is the standard error.",
+          "source_ids": [
+            "monjukli-depe-bayesian"
+          ]
+        }
+      ],
+      "source_ids": [
+        "monjukli-depe-bayesian",
+        "unesco-sarazm-dossier"
+      ],
+      "summary": "The six-phase framework that every account of Central Asian prehistory is written in, and which rests on pottery typology rather than radiocarbon.",
+      "aliases": [
+        "Namazga I-VI",
+        "Namazga-depe sequence"
+      ]
+    },
+    {
+      "id": "central-asia.prehistory.kelteminar",
+      "kind": "period",
+      "name": "Kelteminar Culture",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -6000,
+      "end_year": -3000,
+      "tier": "specialist",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "minority",
+      "date_precision": "millennium",
+      "date_note": "A peer-reviewed source places Kelteminar in the sixth to fourth millennia BC in general terms, and that is the whole of the defensible dating. No site-level radiocarbon dataset with lab numbers was locatable for any Kelteminar site, and the field disagrees about the culture's geographic and temporal boundaries — the authors of that paper decline to label their own 9200-7800 cal BP material at Toda-1 Cave as Kelteminar for that reason.",
+      "source_ids": [
+        "pnas-2025-central-asia-barley"
+      ],
+      "summary": "Hunter-fisher-gatherers of the Aral basin and the Amu Darya delta, in contact with the farming villages to their south.",
+      "aliases": [
+        "Kel'teminar"
+      ]
+    },
+    {
+      "id": "central-asia.prehistory.altyn-depe",
+      "kind": "period",
+      "name": "Altyn-Depe",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -2100,
+      "end_year": -1650,
+      "tier": "specialist",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "traditional",
+      "date_precision": "traditional",
+      "date_note": "Dated by its Namazga V pottery, so it inherits that sequence's problem entirely. The excavator's own figures — Early Namazga V c. 2100-1850 BC, Late c. 1850-1650 — are typological. No modern radiocarbon programme for the site was locatable, so nothing here is independent of the ceramic framework.",
+      "source_ids": [
+        "masson-altyn-depe-summary",
+        "monjukli-depe-bayesian"
+      ],
+      "summary": "A walled town of the Namazga culture with a stepped tower, craft quarters and trade reaching Mundigak and Shahr-i Sokhta."
     },
     {
       "id": "west-asia.prehistory.epipalaeolithic",

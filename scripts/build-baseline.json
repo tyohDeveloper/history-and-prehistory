@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 176186,
+  "gzipBytes": 176130,
   "recordedAt": "2026-08-08",
-  "note": "v3.8.0.0 + Central Asia, the Austronesian expansion and Oceania (data 0.10.0.0). Content: 24 entities and 46 sources. Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.9.0.0 + received-convention marking and the Namazga sequence (data 0.11.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

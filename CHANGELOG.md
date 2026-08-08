@@ -14,6 +14,40 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.9.0.0-app] — 2026-08-08
+
+### Added
+
+- **Received conventions are now visible as such.** `standing: "traditional"`
+  has been in the schema since 3.0.0, described there as covering dates that
+  "are not findings, and presenting them with the same weight as measured or
+  attested dates is the commonest way a history reference misleads". Nothing
+  used it. Rome's 753 BCE carried `date_precision: "traditional"` and no
+  standing, and rendered in the picker identically to a Bayesian radiocarbon
+  range.
+  - A dagger on the range in the column gutter, which is where most reading
+    happens.
+  - A banner at the top of the readout, above the summary: "Received
+    convention, not a finding. Shown because it is widely cited; the evidence
+    does not establish it."
+  - Nine entities now carry it — Rome's Kingdom, Gojoseon, Gilgamesh, David,
+    Solomon, Narmer, Nitocris, and the two new Central Asian entries.
+
+### Fixed
+
+- **A received convention is no longer quoted in BP.** BP is the idiom of
+  radiometric measurement; rendering a pottery-typology bracket as "6,749 BP"
+  lends it authority it does not have and invents a digit — 4800 BCE has two
+  significant figures, 6,749 BP appears to have four. On `auto` these now stay
+  in calendar reckoning. An explicit user preference still wins.
+
+### Changed
+
+- Ships dataset 0.11.0.0: the Namazga sequence, Kelteminar and Altyn-Depe.
+- Build size baseline rebased to 176,130 bytes gzip.
+
+See [`docs/DATASET-CHANGELOG.md`](docs/DATASET-CHANGELOG.md) for 0.11.0.0.
+
 ## [3.8.0.0-app] — 2026-08-08
 
 ### Added

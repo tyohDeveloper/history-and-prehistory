@@ -59,7 +59,15 @@ export function displayRange(e: Entity, preference: FramePreference = "auto"): D
   const startValue = dates.start?.primary.value;
   if (startValue === undefined) return { text: naiveRange(e), frame: "calendar" };
 
-  const frame = resolveFrame(startValue, preference);
+  // BP is the idiom of radiometric measurement, and quoting a received
+  // convention in it lends the convention that authority — "4800 BCE" becomes
+  // "6,749 BP", which reads as measured and gains a digit it never had. When
+  // the user has asked for a frame they get it; on `auto` a traditional date
+  // stays in the calendar reckoning it was actually handed down in.
+  const frame =
+    preference === "auto" && e.standing === "traditional"
+      ? "calendar"
+      : resolveFrame(startValue, preference);
 
   if (frame === "calendar") {
     if (isThreshold(e)) return { text: `from ${formatYear(e.start_year)}`, frame };

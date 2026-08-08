@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.0.0"
-DATASET_VERSION = "0.10.0.0"
+DATASET_VERSION = "0.11.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1640,6 +1640,11 @@ _extend_central_asia(E, entities)
 from extensions_seasia_oceania import extend as _extend_seasia_oceania
 _extend_seasia_oceania(E, entities)
 
+# Marks received conventions across the corpus, so it runs after every module
+# that could author one.
+from received_conventions import extend as _extend_received
+_extend_received(E, entities)
+
 # Must run last: it reads the finished corpus to derive its spans and to attach
 # cross-parent links to entities other modules created.
 from extensions_ages import extend as _extend_ages
@@ -3059,6 +3064,8 @@ from extensions_central_asia import CENTRAL_ASIA_SOURCES  # noqa: E402
 sources.extend(CENTRAL_ASIA_SOURCES)
 from extensions_seasia_oceania import SEASIA_OCEANIA_SOURCES  # noqa: E402
 sources.extend(SEASIA_OCEANIA_SOURCES)
+from received_conventions import RECEIVED_CONVENTION_SOURCES  # noqa: E402
+sources.extend(RECEIVED_CONVENTION_SOURCES)
 
 with open(DATA / "sources.json", "w") as f:
     json.dump({"schema_version": SCHEMA_VERSION, "dataset_version": DATASET_VERSION,

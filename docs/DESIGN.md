@@ -1239,10 +1239,10 @@ hyperbolic plane grows exponentially with radius, and trees grow exponentially w
 fisheye *calendar* is not hypothetical either — DateLens applied the same distortion to date grids
 ([Bederson et al.](https://www.microsoft.com/en-us/research/wp-content/uploads/2004/03/tochidatelens.pdf)).
 
-**The part that matters for this app:** the `API` term in Furnas's function is already authored.
-The dataset's `tier` field — 337 foundational, 416 intermediate, 552 specialist across all 1,305
-entities — is exactly a priori importance. It was built for progressive disclosure, which is the
-filtering special case of the same idea. So a degree-of-interest view needs no new per-entity data:
+**The part that matters for this app:** the `API` term has a candidate already authored. The
+dataset's `tier` field — 386 foundational, 469 intermediate, 562 specialist across 1,417 entities —
+was built for progressive disclosure, which is the filtering special case of the same idea. So a
+degree-of-interest view needs no new per-entity data:
 
 \[ \mathrm{DOI}(x \mid f) = w_t \cdot \mathrm{tier}(x) - w_d \cdot D(f, x) \]
 
@@ -1275,7 +1275,102 @@ and uninformative, so structural proximity should dominate. In dense modern hist
 plenty of temporal neighbours, so the temporal term can carry more weight. The blend weights may
 themselves want to be density-dependent rather than constant.
 
-Open: whether the distortion is geometric or typographic (`Q-7`), and what sets the focus (`Q-8`).
+### Design pass, 2026-08-08
+
+`tools/prototype_doi.py` scores the real dataset rather than reasoning about it. It is not shipped;
+its job was to find out whether the function above selects a sensible neighbourhood before any of it
+is written in TypeScript. It disproved three things, two of them written on this page.
+
+**Measurements that drive everything below.** Entity density spans six orders of magnitude — 0.001
+per thousand years in deep time against 680 in the last century. Local median gap between entity
+midpoints runs 75,000 years to 1 year, a factor of 75,000. Any radius expressed in absolute years is
+wrong by four orders of magnitude at one end, which settles density-normalization as necessary
+rather than nice.
+
+**Disproved 1 — `tier` is not global a priori importance.** It is authored per branch: East Asia is
+70% specialist, Central Asia and Southeast Asia 0%, West Asia 3%. A "specialist" Japanese nengō and
+a "specialist" hominin are not comparable quantities; the field records how deeply its own branch
+was covered. Used raw as API it would dim East Asia for authoring reasons rather than importance
+reasons. It also correlates hard with depth (0% specialist at depth 0, 59% at depth 5), so using
+tier *and* depth double-counts one signal.
+
+It survives as **tier ranked within its sibling set**, which means the same thing in every branch.
+Where all siblings share a tier the rank returns neutral — the Heian period's 88 children are
+uniformly `specialist`, so the field carries no local information there and must not tilt the
+result either way.
+
+**Disproved 2 — Furnas's canonical `API = −depth` is wrong for this tree.** The first prototype run
+ranked "East Asia", "Global", "Europe" above every actual neighbour. Shallow nodes win on depth, and
+undated container nodes dodged the temporal penalty entirely. The trunk here is eleven region nodes
+that are permanently visible in the Miller columns anyway, so the lens adds nothing by surfacing
+them. API is the sibling-normalized tier alone, and undated containers are scaffolding rather than
+content: they are excluded from the lens.
+
+**Disproved 3 — midpoint distance is the wrong temporal metric.** A nengō sits wholly inside the
+Heian period, so the two overlap completely while their midpoints are nearly two centuries apart.
+Midpoint distance penalised a node for being contemporaneous with its own parent. The metric is
+**interval gap**: zero when the extents overlap, otherwise the space between them.
+
+Overlap alone then proved too generous — "CE (Common Era)" and "Middle Ages" trivially overlap a
+seven-year nengō and ranked as its temporal neighbours. An entity three hundred times longer than
+the focus is *containing* it, not keeping it company, so a **log span-mismatch penalty** was added.
+
+### Q-7 — the distortion is typographic and one-dimensional, not hyperbolic geometry
+
+A hyperbolic disk earns its keep because circumference grows exponentially with radius while trees
+grow exponentially with depth. That trade needs sibling *order* to be free, so children can be
+placed radially wherever there is room. **In this dataset sibling order is temporal and is itself
+the information.** The Heian period's 88 nengō are a strict sequence; fanning them around a disk
+destroys the one relationship a reader needs. Max branching is 88 and median 4 — the hyperbolic
+browser's strength is exactly where this dataset can least afford it.
+
+So: position stays monotonic in time, *space allocated per node* varies with DOI, and typography
+(size, weight, opacity) reinforces the allocation. That is DateLens, not the hyperbolic browser, and
+it is the right precedent. It also avoids teaching a second navigation paradigm alongside the Miller
+columns.
+
+### Q-8 — the selection is the focus; one focus, two ways to move it
+
+Two independent foci means two mental models and two things to keep in sync, and selection state is
+already persisted in the URL fragment. The focus is the selected node: temporal centre from its
+interval, tree distance measured from it. Moving the lens moves the selection, and selecting in the
+columns moves the lens.
+
+The "what else was happening then" case does not need a detached lens, which was the argument for
+one. The validated run answers it directly: focused on Kōhei (1058–1065), the lens surfaces the Song
+and Goryeo dynasties, the Abbasid Caliphate and the Chola Empire — contemporaries five hops away in
+the tree that Miller columns can never show. That is the whole payoff, and it falls out of the
+temporal term rather than needing separate machinery. Hover may preview a different focus, since
+hover is not state.
+
+### Q-9 — the fisheye replaces the tier control with a budget, which is not the same as removing it
+
+A hard tier filter and a soft DOI over the same variable double-count: a specialist node far from
+focus is penalised twice, once for being specialist and once for being distant. The Heian case shows
+the cost — a tier filter suppresses all 88 nengō uniformly, while DOI still ranks them by time.
+
+The control's *capability* should survive its *mechanism*. Today it is a three-step filter showing
+386 / 855 / 1,417 entities. It becomes a **detail budget**: the reader says roughly how much they
+want on screen, and DOI decides where to spend it. "Never show me specialist content anywhere" and
+"show me more near my focus" are different requests, and the budget serves the first while the lens
+serves the second.
+
+### The function, as validated
+
+\[ \mathrm{DOI}(x \mid f) = \lambda\,\mathrm{tier}_{\text{sib}}(x)
+   - \big[\, w_T \rho \cdot d_{\text{time}} + w_S (1-\rho) \cdot d_{\text{tree}}
+   + w_{\text{span}} \cdot d_{\text{span}} \,\big] \]
+
+`d_time` is `log1p(interval gap / local median gap)`; `d_tree` is hops through the lowest common
+ancestor; `d_span` is `|log10(span ratio)|`; `ρ` is a local-density term so structure dominates
+where temporal neighbours are 75,000 years away and time dominates where they are one year away.
+
+### Still open
+
+Weights (`λ`, `w_T`, `w_S`, `w_span`) are placeholders that produce good output on four sampled foci;
+they need tuning against more, and the tuning should be recorded rather than tacit. The default
+budget size is unpicked. And the focus node currently does not always rank first — it is pinned in
+the view rather than by the function, which is a display decision worth stating explicitly.
 
 ## Decisions taken (reversible, flagging for review)
 
@@ -1492,7 +1587,7 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**15 open, 17 resolved.** Audited 2026-08-08.
+**12 open, 20 resolved.** Audited 2026-08-08.
 
 **Q-30. Should `dating_method` be per-boundary rather than per-entity?** One field
 cannot describe an entity whose start and end rest on different science.
@@ -1509,21 +1604,6 @@ Related: Q-22, which is the same per-boundary problem for notes.
 Zhou begins fuzzily, are those the same fuzzy boundary authored once, or two independent ones that
 can contradict each other? Shared boundaries halve the authoring and remove a class of
 inconsistency, but they couple entities that may want independent sourcing.
-
-### Blocking — focus and context
-
-**Q-7. Is the distortion geometric or typographic?** True hyperbolic layout distorts positions and
-sizes continuously. A cheaper reading is that near-focus items get more space and larger type
-while distant ones shrink to a line or a tick — DateLens-style semantic zoom rather than a
-Poincaré disk. The cheap version is much easier to keep accessible and legible.
-
-**Q-8. What sets the focus?** The current tree selection, an independently draggable lens, or
-both? A lens that moves independently of selection is more powerful and adds a second piece of
-state the user has to understand.
-
-**Q-9. Does the fisheye subsume the detail-tier control?** If `tier` is the API term, the existing
-Essentials / Standard / Everything selector becomes a weight on that term rather than a filter.
-That could replace the control, or make it redundant, or confuse users who expect a filter.
 
 ### Blocking — data
 
@@ -1648,6 +1728,18 @@ the tree, or just display the conversion?
 
 ### Resolved
 
+- ~~`Q-7` Is the distortion geometric or typographic?~~ — **typographic, over a one-dimensional
+  ordered time axis.** A hyperbolic disk needs sibling order to be free so children can be placed
+  radially; here sibling order is temporal and is the information. The Heian period's 88 nengō are a
+  strict sequence, and max branching is 88 against a median of 4 — the hyperbolic browser's strength
+  lands exactly where this dataset can least afford it. DateLens is the precedent, not Lamping.
+- ~~`Q-8` What sets the focus?~~ — **the selection**, with the lens and the columns as two ways to
+  move one focus. Two foci means two mental models to keep in sync. The "what else was happening
+  then" case that argued for a detached lens is answered by the temporal term instead: focused on
+  Kōhei, the prototype surfaces Song, Goryeo, Abbasid and Chola five hops away.
+- ~~`Q-9` Does the fisheye subsume the detail-tier control?~~ — **it replaces the mechanism, not the
+  capability.** A hard tier filter and a soft DOI over the same variable double-count. The control
+  becomes a detail budget: the reader sets roughly how much to show, DOI decides where to spend it.
 - ~~`Q-29` Should the fuzz-ratio fallback decide the frame for archaeological eras?~~ — no, and
   the threshold was left alone. The proxy exists because the method is unknown, and the fix for an
   unknown is to find out: `dating_method` is now authored on the Bronze Age, Mesolithic, Neolithic,

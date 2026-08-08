@@ -11,9 +11,9 @@ to read well one at a time. Revisit that choice when the register stops changing
 |---|---|
 | Branch | Merged to `main`. `calendar-layer` retained but no longer ahead. |
 | Wired into the UI | Multi-calendar readout, calendar picker, and the display-range layer. Disclosure and focus view are not. |
-| Tests | 151 unit + 19 browser |
-| Artifact | 91.1 kB gzip |
-| Dataset | 1,333 entities. Prehistory branch authored from sourced research. |
+| Tests | 162 unit + 20 browser |
+| Artifact | 95.5 kB gzip |
+| Dataset | v3.0.0 on schema 2.0.0. 1,345 entities. Scope floor is behavioural, at 3.3 Ma. |
 | Replit | Repo is loaded there but dormant by choice; no commits from it yet |
 | Last reviewed | 2026-08-07 |
 
@@ -1045,6 +1045,110 @@ them.
 This is the same shape as the `overlaps-parent` finding in the gap analysis: a nullable field
 doing double duty, where one of the two meanings is an assertion nobody intended to make.
 
+## The scope floor is a behaviour (issue #1)
+
+Settled 2026-08-07. The app begins where human-like **behaviour** begins, not
+where a taxon does.
+
+Lomekwi 3 knapping at 3.3 Ma predates the oldest *Homo* fossil (Ledi-Geraru,
+2.8 Ma) by about 500,000 years, so a taxonomic floor would exclude the oldest
+instance of the very behaviour the app exists to track. Taxonomy is also the
+least stable line available: *H. habilis* placement is disputed and the
+Ledi-Geraru mandible is unnamed.
+
+**Knapping is the line, not tool use.** Tool use extends to chimpanzees and
+orangutans and therefore runs past the ~7 Ma common ancestor, which makes any
+floor arbitrary and turns this into a primatology timeline. Knapping is a
+manufacturing behaviour with a preservable record.
+
+### The gate is not a content filter
+
+The issue offered two options: retitle `origins` behaviourally and keep the
+twelve species, or move the species to Deep Time. Neither literal option was
+taken, because both rest on a conflation: **what sets the floor is not the same
+question as what the app may contain.** The app already holds regions, reigns
+and events, none of which are behaviours.
+
+So the gate lives on `global.prehistory`, in its `date_note`, and each branch is
+named for what it holds:
+
+| Node | Holds |
+|---|---|
+| `global.prehistory` | the scope rule itself |
+| `global.prehistory.hominins` | 12 species (was "The Genus Homo") |
+| `global.paleolithic` and successors | 13 industries |
+| `global.prehistory.firsts` | 10 behavioural thresholds |
+
+Species stay because the app is about humans, proto-humans and near-humans —
+that *is* the species list. Moving them to Deep Time would not relocate them so
+much as delete them: that app budgets ~200 clade FAD/LAD entries for all of
+life, so twelve *Homo* species would give our genus more resolution than all of
+Mammalia, and its own novice framing argues against that.
+
+### A threshold is not a period
+
+`kind: "threshold"` with `date_precision: "minimum"` is a new node type because
+`event` fits badly on three counts. An event is a bounded interval; a first is a
+one-sided bound that new evidence can only move older, with the behaviour
+continuing after it. The dispute shape differs too: for a period you argue about
+which chronology, for a first you argue whether the evidence counts at all —
+the Dikika cut marks are contested as trampling damage, not as a date. And it
+renders as a marker, not a bar.
+
+Rendering follows: "from 3.3 Ma ago", never "3.3 Ma ago \u2013 present", which would
+read as an interval that happens to reach today.
+
+### Three senses of before-present
+
+The dataset could already express these through `dating_method`; only display
+and conversion needed the distinction.
+
+| Sense | Methods | Suffix | Convertible to CE/BCE? |
+|---|---|---|---|
+| calibrated | calibrated radiocarbon, layer counting | `cal BP` | yes |
+| radiocarbon | UNCALIBRATED radiocarbon | `\u00B9\u2074C BP` | **no** |
+| geological | Ar/Ar, K-Ar, U-series, OSL/TL, ESR, palaeomag | `ago` | yes |
+
+The middle row breaks a premise the frame model was built on. `resolveFrame`
+documented that "BP and calendar reckoning are exactly interconvertible, so this
+is a display decision" and that a user preference always wins. Uncalibrated
+\u00B9\u2074C years are not calendar years — the mapping is an empirical curve, not an
+offset — so there is no arithmetic that yields a BCE date from one. This is the
+single place the UI refuses rather than converts, and the only place an explicit
+preference is overridden. Note the research turned up the same trap in the
+literature: several U-series and TL ages are reported as "BP" without being
+radiocarbon at all.
+
+Geological ages are a milder case: never referenced to 1950, but at Ma scale
+that is a 0.00006% error. Numerically ignorable; the label must still not claim
+a datum the measurement lacks.
+
+### A fourth piece of dead code
+
+`NON_CALENDAR_METHODS` listed six of the ten non-calendar methods, omitting
+argon-argon, uranium-series, magnetostratigraphy and layer counting. So
+`isScientificDating` returned false for an Ar/Ar date. Nothing broke only
+because everything dated that way is old enough for the pre-Holocene backstop to
+reach the same answer by luck. It is now the complement of `{calendar,
+unknown}`, so a method added later defaults to measured — the safe direction,
+since BP is always expressible.
+
+That is three of four disclosure/frame heuristics found not to run on real data
+(Q-17, the `dating_method` plumbing, and this). The pattern is consistent: a
+rule stated in prose, implemented, and unit-tested against synthetic values can
+still be disconnected from every real input. Synthetic tests passed throughout
+all three.
+
+### Versioning
+
+MAJOR on both. Schema 2.0.0 adds two `kind` values, so any consumer switching
+exhaustively on kind breaks — which the TypeScript build demonstrated
+immediately by failing on two exhaustive `Record<EntityKind, string>` maps.
+Dataset 3.0.0 moves the prehistory ids.
+
+Recorded honestly: **2.2.0 was itself mis-versioned.** It re-parented three
+top-level eras and dropped four ids under a minor bump. 3.0.0 absorbs that.
+
 ## Focus and context (requirement 10)
 
 The described behavior — focus large, falling away with perspective compression — is
@@ -1168,6 +1272,21 @@ Open: whether the distortion is geometric or typographic (`Q-7`), and what sets 
 ## Measured answers to open items
 
 Four items were settled by measurement rather than by decision, 2026-08-07.
+
+### Q-29 — resolved by authoring the method instead of tuning the threshold
+
+The fuzz-ratio fallback was producing jarring results among siblings: the Bronze
+Age led in BP (\u00b1300 yr on 5,250 BP is 5.7%, over the 5% threshold) while the
+Iron Age beside it led in BCE. Both were right by the rule and looked like a bug
+side by side.
+
+The threshold was not touched. The proxy exists because the method is unknown,
+and the fix for an unknown is to find out: `dating_method` is now authored on
+the Bronze Age, the Mesolithic, the Neolithic, the agricultural revolution and
+Aboriginal Australia. **No entity now selects BP on the fuzz proxy alone.**
+
+The proxy stays for the 1,253 entities that still carry no dating signal, but it
+is no longer deciding anything visible.
 
 ### Q-16 — the polyfill costs 24 kB gzip, and it buys *input*, not display
 
@@ -1300,25 +1419,7 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**15 open, 13 resolved.** Audited 2026-08-07.
-
-### Q-29. Should the fuzz-ratio fallback decide the frame for archaeological eras?
-
-Now that `dating_method` actually reaches `suggestFrame`, the fallback branch (step 4: relative
-uncertainty as a proxy for provenance) only runs where the method is unmarked — which is still most
-of the dataset. It produces defensible but visually jarring results among siblings: the Bronze Age
-leads in BP (±300 yr on 5,250 BP is 5.7%, over the 5% threshold) while the Iron Age directly beside
-it leads in BCE.
-
-Both readings are individually right by the rule. Side by side in one column they look like a bug.
-
-Options: author `dating_method` on the archaeological eras so the proxy stops deciding; raise the
-threshold; or accept the inconsistency as honest. The first is the most work and the most correct —
-the proxy exists because the method was unknown, and the fix for an unknown is to go find out.
-
-Related: Q-17, which found the neighbouring broad-range marker was also dead code. Two of the four
-disclosure heuristics have now turned out not to run on real data, which suggests auditing the
-other two.
+**14 open, 15 resolved.** Audited 2026-08-07.
 
 ### Blocking — date model
 

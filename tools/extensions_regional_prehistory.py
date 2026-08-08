@@ -220,9 +220,13 @@ def extend(E, glob):
       summary="The window when the Sahara held lakes, rivers and grassland, and people "
               "lived across what is now the largest hot desert on Earth.",
       start_dating_method="radiocarbon-calibrated", standing="consensus",
-      date_note="Onset about 14.5 ka with the Bolling-Allerod warming. Termination is "
-                "time-transgressive rather than a single event: the northern and eastern "
-                "Sahara dried after 8-7 ka while other areas stayed wet.",
+      date_note="Onset about 14.5 ka with the Bolling-Allerod warming, at the end of "
+                "Heinrich Event 1. Termination is time-transgressive rather than a single "
+                "event: the northern and eastern Sahara dried after 8-7 ka while other "
+                "areas stayed wet, and parts of the Sahel, Arabia and East Africa stayed "
+                "wet until about the 4.2 ka event. Independent syntheses put the window at "
+                "14,800-5,500 and 14,500-5,000 years ago; the difference is framing rather "
+                "than disagreement.",
       alternatives=[{
           "label": "Abrupt termination",
           "standing": "minority",
@@ -231,19 +235,60 @@ def extend(E, glob):
           "note": "deMenocal's marine-core reading has the end as an abrupt step; "
                   "reanalyses argue for a gradual, regionally staggered dry-down.",
           "source_ids": [S_MCGEE]}],
-      source_ids=[S_MCGEE])
+      source_ids=[S_MCGEE, "shanahan-2012-ahp", "noaa-ahp-summary"])
 
     P("nabta-playa", "Nabta Playa", afr, ka(10.8), ka(6.2), "intermediate",
       summary="A seasonal lake basin in the Egyptian Sahara with cattle burials and a "
               "megalithic circle, occupied while the desert was green.",
-      start_dating_method="radiocarbon-calibrated", standing="majority",
+      start_dating_method="radiocarbon-calibrated",
+      end_dating_method="radiocarbon-calibrated", standing="majority",
       date_note="Early Neolithic from 10,800 cal BP; abandoned to hyperaridity at about "
-                "6,200 cal BP as the Green Sahara ended.",
+                "6,200 cal BP as the Green Sahara ended. MIND THE CALIBRATION: the "
+                "excavation literature reports the later ceremonial phases as bare "
+                "radiocarbon BP, not calibrated, and on that scale gives abandonment at "
+                "about 5,400 BP. The two numbers are the same event in two conventions, "
+                "not two readings of the evidence. The phase entries below carry the "
+                "uncalibrated figures as published rather than silently converting them.",
+      alternatives=[{
+          "label": "Uncalibrated radiocarbon framing",
+          "standing": "majority",
+          "start_year": bp(7500), "end_year": bp(5400),
+          "dating_method": "radiocarbon-uncalibrated",
+          "note": "Malville's Late-to-Terminal Neolithic span, published as raw BP.",
+          "source_ids": ["malville-nabta-playa"]}],
       caveats=[{"kind": "contested-existence",
                 "text": "The cultural chronology is reasonably settled. The claim that the "
                         "megaliths are astronomically aligned is not.",
-                "source_ids": [S_MALVILLE]}],
-      source_ids=[S_WENDORF, S_MALVILLE])
+                "source_ids": [S_MALVILLE]},
+               {"kind": "misconception",
+                "text": "Its early Holocene cattle bones are widely cited as independent "
+                        "African domestication; they are argued to be hunted wild aurochs.",
+                "source_ids": ["brass-2017-cattle-reassessment"]}],
+      source_ids=[S_WENDORF, S_MALVILLE, "malville-nabta-playa"])
+
+    # The phases, as published: uncalibrated, and said so. A single span hid
+    # that the site was occupied, abandoned in a drought, and reoccupied.
+    nabta = f"{afr}.nabta-playa"
+    for slug, name, s_bp, e_bp, note in [
+        ("middle-neolithic", "Nabta Middle Neolithic", 8100, 7600,
+         "Ends in a short but deep drought beginning about 7,600 BP and lasting roughly "
+         "a century."),
+        ("late-neolithic", "Nabta Late Neolithic", 7400, 6600,
+         "The cattle-burial phase."),
+        ("terminal-neolithic", "Nabta Terminal Neolithic", 6600, 5400,
+         "The megalith builders. Quarrying charcoal for the calendar circle clusters at "
+         "6,600-6,200 BP; the circle belongs to this phase, not to the site's founding."),
+    ]:
+        P(slug, name, nabta, bp(s_bp), bp(e_bp), "specialist",
+          # The parent's span is calibrated and these are not, so they run past
+          # it by construction. Flagged rather than "fixed" by converting, which
+          # would invent a calibration the published figures do not have.
+          allow_outside_parent_dates=True,
+          start_dating_method="radiocarbon-uncalibrated",
+          end_dating_method="radiocarbon-uncalibrated",
+          standing="majority",
+          date_note="STORED AS UNCALIBRATED RADIOCARBON, as published. " + note,
+          source_ids=["malville-nabta-playa"])
 
     # =========================================================================
     # WEST ASIA

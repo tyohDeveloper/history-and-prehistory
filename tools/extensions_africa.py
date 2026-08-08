@@ -89,6 +89,17 @@ S_OUP_NOK = "oup-nok-culture"
 S_TARUGA_FURNACES = "taruga-furnace-dates"
 
 AFRICA_SOURCES = [
+    {"id": "shanahan-2012-ahp", "kind": "scholarly",
+     "citation": "Shanahan, McKay, Hughen et al., 'The time-transgressive termination of the African Humid Period', Nature Geoscience",
+     "url": "https://www.whoi.edu/cms/files/shanahan12nat_220305.pdf",
+     "note": "About 14,800 to 5,500 years ago; termination explicitly time-transgressive."},
+    {"id": "noaa-ahp-summary", "kind": "institutional",
+     "citation": "NOAA National Centers for Environmental Information, 'End of the African Humid Period' (2021)",
+     "url": "https://www.ncei.noaa.gov/sites/default/files/2021-11/5%20End%20of%20the%20Africian%20Humid%20Period%20-Final_OCT%202021.pdf"},
+    {"id": "malville-nabta-playa", "kind": "scholarly",
+     "citation": "Malville et al., 'Astronomy at Nabta Playa, Egypt'",
+     "url": "https://sci-hub.se/tree/0d/9d/0d9d5f6a6886bcdabc6a0d081c704ab0.pdf",
+     "note": "Phase structure reported as raw radiocarbon BP: Middle Neolithic 8,100-7,600, Late 7,400-6,600, Terminal 6,600-5,400."},
     {"id": S_MCDOUGALL, "kind": "scholarly",
      "citation": "McDougall (1985), 'K-Ar and 40Ar/39Ar dating of the hominid-bearing Pliocene-Pleistocene sequence at Koobi Fora, Lake Turkana, northern Kenya', GSA Bulletin 96(2):159",
      "url": "https://pubs.geoscienceworld.org/gsa/gsabulletin/article-abstract/96/2/159/191263/K-Ar-and-40Ar-39Ar-dating-of-the-hominid-bearing",

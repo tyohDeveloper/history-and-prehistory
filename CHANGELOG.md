@@ -14,6 +14,17 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.4.0.0-app] — 2026-08-08
+
+### Changed
+
+- Ships dataset 0.7.0.0: regional Chalcolithic entries, the Levantine
+  Epipalaeolithic, and East Asian / Oceanian prehistory navigation. No app code
+  changed; the version moves because the shipped artifact does.
+- Build size baseline rebased to 125,780 bytes gzip. Content, not code.
+
+See [`docs/DATASET-CHANGELOG.md`](docs/DATASET-CHANGELOG.md) for 0.7.0.0.
+
 ## [3.3.0.0-app] — 2026-08-08
 
 ### Changed

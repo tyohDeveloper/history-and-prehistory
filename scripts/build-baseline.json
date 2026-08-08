@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 122646,
+  "gzipBytes": 125780,
   "recordedAt": "2026-08-08",
-  "note": "v3.3.0.0 + African prehistory depth (data 0.6.0.0). Up 6.8 kB gzip from 113,019: 31 new entities carrying date notes, alternatives and caveats, plus 46 source records. Deliberate rebaseline for content, not a code regression."
+  "note": "v3.4.0.0 + ages spine and regional navigation (data 0.7.0.0). Content growth from regional Chalcolithic, Levantine Epipalaeolithic and Nabta Playa phases."
 }

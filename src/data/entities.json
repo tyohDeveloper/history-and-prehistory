@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
-  "dataset_version": "0.6.0.0",
-  "generated_at": "2026-08-08T19:20:20Z",
+  "dataset_version": "0.7.0.0",
+  "generated_at": "2026-08-08T19:47:08Z",
   "entities": [
     {
       "id": "global",
@@ -533,6 +533,15 @@
       "start_precision": "approx",
       "end_precision": "approx",
       "date_note": "Regional Bronze Ages began at different dates; the collapse cluster is c. 1200-1150 BCE.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The clean 3300 BC seam with the Neolithic hides a regionally variable Copper Age; see the regional Chalcolithic entries.",
+          "source_ids": [
+            "roberts-copper-age-concept"
+          ]
+        }
+      ],
       "summary": "Age of bronze metallurgy, ending in the systemic Late Bronze Age Collapse c. 1200 BCE.",
       "end_dating_method": "calendar"
     },
@@ -1310,6 +1319,9 @@
         "keally-jomon-dates"
       ],
       "date_precision": "approx",
+      "cross_parent_ids": [
+        "east-asia.prehistory"
+      ],
       "end_dating_method": "radiocarbon-calibrated"
     },
     {
@@ -8460,6 +8472,9 @@
       ],
       "source_ids": [
         "specht-lapita"
+      ],
+      "cross_parent_ids": [
+        "oceania.prehistory"
       ],
       "end_dating_method": "radiocarbon-calibrated"
     },
@@ -16406,7 +16421,7 @@
       "tier": "foundational",
       "start_dating_method": "radiocarbon-calibrated",
       "standing": "consensus",
-      "date_note": "Onset about 14.5 ka with the Bolling-Allerod warming. Termination is time-transgressive rather than a single event: the northern and eastern Sahara dried after 8-7 ka while other areas stayed wet.",
+      "date_note": "Onset about 14.5 ka with the Bolling-Allerod warming, at the end of Heinrich Event 1. Termination is time-transgressive rather than a single event: the northern and eastern Sahara dried after 8-7 ka while other areas stayed wet, and parts of the Sahel, Arabia and East Africa stayed wet until about the 4.2 ka event. Independent syntheses put the window at 14,800-5,500 and 14,500-5,000 years ago; the difference is framing rather than disagreement.",
       "alternatives": [
         {
           "label": "Abrupt termination",
@@ -16420,7 +16435,9 @@
         }
       ],
       "source_ids": [
-        "mcgee-2017-ahp"
+        "mcgee-2017-ahp",
+        "shanahan-2012-ahp",
+        "noaa-ahp-summary"
       ],
       "summary": "The window when the Sahara held lakes, rivers and grassland, and people lived across what is now the largest hot desert on Earth.",
       "aliases": [
@@ -16438,8 +16455,22 @@
       "end_year": -4251,
       "tier": "intermediate",
       "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
       "standing": "majority",
-      "date_note": "Early Neolithic from 10,800 cal BP; abandoned to hyperaridity at about 6,200 cal BP as the Green Sahara ended.",
+      "date_note": "Early Neolithic from 10,800 cal BP; abandoned to hyperaridity at about 6,200 cal BP as the Green Sahara ended. MIND THE CALIBRATION: the excavation literature reports the later ceremonial phases as bare radiocarbon BP, not calibrated, and on that scale gives abandonment at about 5,400 BP. The two numbers are the same event in two conventions, not two readings of the evidence. The phase entries below carry the uncalibrated figures as published rather than silently converting them.",
+      "alternatives": [
+        {
+          "label": "Uncalibrated radiocarbon framing",
+          "standing": "majority",
+          "start_year": -5551,
+          "end_year": -3451,
+          "dating_method": "radiocarbon-uncalibrated",
+          "note": "Malville's Late-to-Terminal Neolithic span, published as raw BP.",
+          "source_ids": [
+            "malville-nabta-playa"
+          ]
+        }
+      ],
       "caveats": [
         {
           "kind": "contested-existence",
@@ -16447,15 +16478,76 @@
           "source_ids": [
             "malville-1998-nabta"
           ]
+        },
+        {
+          "kind": "misconception",
+          "text": "Its early Holocene cattle bones are widely cited as independent African domestication; they are argued to be hunted wild aurochs.",
+          "source_ids": [
+            "brass-2017-cattle-reassessment"
+          ]
         }
       ],
       "source_ids": [
         "wendorf-1998-nabta",
-        "malville-1998-nabta"
+        "malville-1998-nabta",
+        "malville-nabta-playa"
       ],
       "summary": "A seasonal lake basin in the Egyptian Sahara with cattle burials and a megalithic circle, occupied while the desert was green.",
-      "date_precision": "approx",
-      "end_dating_method": "radiocarbon-calibrated"
+      "date_precision": "approx"
+    },
+    {
+      "id": "africa.prehistory.nabta-playa.middle-neolithic",
+      "kind": "period",
+      "name": "Nabta Middle Neolithic",
+      "parent_id": "africa.prehistory.nabta-playa",
+      "start_year": -6151,
+      "end_year": -5651,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-uncalibrated",
+      "end_dating_method": "radiocarbon-uncalibrated",
+      "standing": "majority",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON, as published. Ends in a short but deep drought beginning about 7,600 BP and lasting roughly a century.",
+      "source_ids": [
+        "malville-nabta-playa"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "africa.prehistory.nabta-playa.late-neolithic",
+      "kind": "period",
+      "name": "Nabta Late Neolithic",
+      "parent_id": "africa.prehistory.nabta-playa",
+      "start_year": -5451,
+      "end_year": -4651,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-uncalibrated",
+      "end_dating_method": "radiocarbon-uncalibrated",
+      "standing": "majority",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON, as published. The cattle-burial phase.",
+      "source_ids": [
+        "malville-nabta-playa"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "africa.prehistory.nabta-playa.terminal-neolithic",
+      "kind": "period",
+      "name": "Nabta Terminal Neolithic",
+      "parent_id": "africa.prehistory.nabta-playa",
+      "start_year": -4651,
+      "end_year": -3451,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-uncalibrated",
+      "end_dating_method": "radiocarbon-uncalibrated",
+      "standing": "majority",
+      "date_note": "STORED AS UNCALIBRATED RADIOCARBON, as published. The megalith builders. Quarrying charcoal for the calendar circle clusters at 6,600-6,200 BP; the circle belongs to this phase, not to the site's founding.",
+      "source_ids": [
+        "malville-nabta-playa"
+      ],
+      "date_precision": "approx"
     },
     {
       "id": "west-asia.prehistory",
@@ -16498,6 +16590,9 @@
       ],
       "summary": "Hunter-gatherers of the Levant who settled in one place, built stone houses and buried their dead with ornaments, before anyone farmed.",
       "date_precision": "approx",
+      "cross_parent_ids": [
+        "west-asia.prehistory.epipalaeolithic"
+      ],
       "end_dating_method": "radiocarbon-calibrated"
     },
     {
@@ -17237,6 +17332,9 @@
       ],
       "summary": "The long transition in China from foraging to farming villages, regional cultures, towns, and large waterworks.",
       "date_precision": "approx",
+      "cross_parent_ids": [
+        "east-asia.prehistory"
+      ],
       "end_dating_method": "radiocarbon-calibrated"
     },
     {
@@ -17956,7 +18054,10 @@
         "bradshaw-2021-sahul"
       ],
       "summary": "The ice-age landmass that joined Australia, Tasmania, and New Guinea when sea levels were lower.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "oceania.prehistory"
+      ]
     },
     {
       "id": "oceania.australia.aboriginal.madjedbebe",
@@ -17982,7 +18083,10 @@
         "clarkson-2017-madjedbebe"
       ],
       "summary": "A rock shelter on Mirarr Country in Arnhem Land with very early stone tools and other evidence of occupation.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "oceania.prehistory"
+      ]
     },
     {
       "id": "oceania.australia.aboriginal.lake-mungo",
@@ -18021,7 +18125,10 @@
         "bowler-2003-mungo"
       ],
       "summary": "The Willandra Lakes locality of Mungo Lady and Mungo Man, two of Australia's oldest known human burials.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "oceania.prehistory"
+      ]
     },
     {
       "id": "global.prehistory.firsts.cut-marks",
@@ -18963,6 +19070,223 @@
         "taruga-furnace-dates"
       ],
       "summary": "Central Nigerian culture producing sub-Saharan Africa's earliest large-scale sculptural tradition, and some of its earliest iron smelting."
+    },
+    {
+      "id": "west-asia.prehistory.epipalaeolithic",
+      "kind": "era",
+      "name": "Epipalaeolithic (Levant)",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -23000,
+      "end_year": -10000,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Calibrated to IntCal20. Its end at 10,000 BC is exactly where 'Mesolithic (Eurasia)' starts, and that is the point: the two are largely the same idea under different regional naming traditions, not adjacent periods. This entry exists because the EARLY part, back to 23,000 BC, sits inside the Palaeolithic band where nothing else names it. Absolute figures vary by several centuries across calibration vintages.",
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Not a separate stage from the Mesolithic: the Near East, North Africa and southern Europe say Epipalaeolithic where northern Europe says Mesolithic.",
+          "source_ids": [
+            "oup-natufian-chapter"
+          ]
+        }
+      ],
+      "source_ids": [
+        "oup-natufian-chapter"
+      ],
+      "summary": "The long Levantine hunter-gatherer sequence between the Upper Palaeolithic and farming, ending where the Mesolithic begins.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.epipalaeolithic.kebaran",
+      "kind": "period",
+      "name": "Kebaran",
+      "parent_id": "west-asia.prehistory.epipalaeolithic",
+      "start_year": -23000,
+      "end_year": -16000,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The Oxford IntCal20 table gives 23,000-16,000 cal BC for the Early Epipalaeolithic as a whole. Kebaran-only figures differ across sources (c. 18,000-14,500 BP on the coast), and no single end date is settled.",
+      "source_ids": [
+        "oup-natufian-chapter",
+        "baryosef-natufian-columbia"
+      ],
+      "summary": "The Early Epipalaeolithic of the Levant: small mobile groups with microlithic toolkits, through the Last Glacial Maximum.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.epipalaeolithic.geometric-kebaran",
+      "kind": "period",
+      "name": "Geometric Kebaran",
+      "parent_id": "west-asia.prehistory.epipalaeolithic",
+      "start_year": -16000,
+      "end_year": -13000,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "16,000-13,000 cal BC, IntCal20.",
+      "source_ids": [
+        "oup-natufian-chapter"
+      ],
+      "summary": "The Middle Epipalaeolithic, named for its geometric microliths, between the Kebaran and the Natufian.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.prehistory.chalcolithic-balkans",
+      "kind": "era",
+      "name": "Chalcolithic (Southeast Europe)",
+      "parent_id": "europe.prehistory",
+      "start_year": -5000,
+      "end_year": -3700,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Copper minerals are worked from c. 6200 BC and native copper from c. 5500 BC, but the Chalcolithic proper begins with smelting at c. 5000 BC. Belovode in Serbia holds the earliest securely dated smelting anywhere, and specialists expect that status to move. There is no global Chalcolithic node, deliberately. Most of sub-Saharan Africa goes from stone straight to iron; China folds early copper into the Late Neolithic; the Americas never reached a continent-wide Bronze Age; and Australian archaeology has dropped three-age terminology altogether.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "A Copper Age is not a universal stage. Most of sub-Saharan Africa has none at all, moving from stone tools directly to iron.",
+          "source_ids": [
+            "killick-african-metallurgy"
+          ]
+        }
+      ],
+      "source_ids": [
+        "radivojevic-balkan-metallurgy",
+        "belovode-earliest-smelting",
+        "roberts-copper-age-concept",
+        "killick-african-metallurgy"
+      ],
+      "summary": "The Balkan Copper Age: the world's earliest known copper smelting, and the gold of the Varna cemetery.",
+      "aliases": [
+        "Copper Age",
+        "Eneolithic"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.chalcolithic",
+      "kind": "era",
+      "name": "Chalcolithic (Southern Levant)",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -4700,
+      "end_year": -3600,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "c. 4700/4500-3700/3600 cal BC is the most consistently defended range; some syntheses broaden it to 5000-3500 BC. Both internal boundaries are described in the literature as imprecisely dated, and whether the Chalcolithic overlaps Early Bronze I is disputed. There is no global Chalcolithic node, deliberately. Most of sub-Saharan Africa goes from stone straight to iron; China folds early copper into the Late Neolithic; the Americas never reached a continent-wide Bronze Age; and Australian archaeology has dropped three-age terminology altogether.",
+      "source_ids": [
+        "isac-chalcolithic-chronology",
+        "levant-chalcolithic-radiocarbon",
+        "roberts-copper-age-concept"
+      ],
+      "summary": "The southern Levantine Copper Age, with copper hoards, ossuary burial and the Ghassulian culture.",
+      "aliases": [
+        "Copper Age",
+        "Ghassulian"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.chalcolithic-anatolia",
+      "kind": "era",
+      "name": "Chalcolithic (Anatolia)",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -5500,
+      "end_year": -3000,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "c. 5500-3000 BC is the most commonly defended whole-period range, but at least three incompatible sub-periodizations are in active use for Central, Eastern and Western Anatolia, differing by centuries. Treat any single Anatolian figure with caution. There is no global Chalcolithic node, deliberately. Most of sub-Saharan Africa goes from stone straight to iron; China folds early copper into the Late Neolithic; the Americas never reached a continent-wide Bronze Age; and Australian archaeology has dropped three-age terminology altogether.",
+      "source_ids": [
+        "oup-anatolia-chalcolithic",
+        "roberts-copper-age-concept"
+      ],
+      "summary": "The Anatolian Copper Age, spanning the long interval between the Neolithic villages and the Early Bronze Age.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.prehistory.late-chalcolithic-mesopotamia",
+      "kind": "era",
+      "name": "Late Chalcolithic (Mesopotamia)",
+      "parent_id": "west-asia.prehistory",
+      "start_year": -4500,
+      "end_year": -3100,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "In Mesopotamian usage 'Chalcolithic' covers the pre-Bronze sequence, and the narrower Late Chalcolithic runs c. 4500-3100 BC. Note this ends 200 years AFTER the global Bronze Age node begins at 3300 BC: the regional Bronze Age does not start until Uruk closes. There is no global Chalcolithic node, deliberately. Most of sub-Saharan Africa goes from stone straight to iron; China folds early copper into the Late Neolithic; the Americas never reached a continent-wide Bronze Age; and Australian archaeology has dropped three-age terminology altogether.",
+      "source_ids": [
+        "surezha-late-chalcolithic",
+        "dalma-2025-chronology",
+        "roberts-copper-age-concept"
+      ],
+      "summary": "Terminal Ubaid through Late Uruk, the LC1-LC5 sequence that ends with the first cities and the first writing.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "south-asia.chalcolithic-south-asia",
+      "kind": "era",
+      "name": "Chalcolithic (South Asia)",
+      "parent_id": "south-asia",
+      "start_year": -3000,
+      "end_year": -700,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "No single pan-Indian range is defensible. These cultures run c. 3000/2600 BC to c. 700 BC and are CONTEMPORARY with, not prior to, mature Harappan Bronze Age urbanism elsewhere in the subcontinent — which is why no global Chalcolithic node can exist. Jorwe alone runs to c. 700 BC, inside the global Iron Age band. There is no global Chalcolithic node, deliberately. Most of sub-Saharan Africa goes from stone straight to iron; China folds early copper into the Late Neolithic; the Americas never reached a continent-wide Bronze Age; and Australian archaeology has dropped three-age terminology altogether.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not the stage between Neolithic and Bronze Age here: South Asian Chalcolithic cultures coexist with Bronze Age cities nearby.",
+          "source_ids": [
+            "ignou-south-asia-chalcolithic"
+          ]
+        }
+      ],
+      "source_ids": [
+        "ignou-south-asia-chalcolithic",
+        "roberts-copper-age-concept"
+      ],
+      "summary": "The Deccan and central Indian copper-using farming cultures — Kayatha, Ahar-Banas, Malwa and Jorwe — which are not a pre-Bronze stage at all.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "east-asia.prehistory",
+      "kind": "era",
+      "name": "East Asian Prehistory",
+      "parent_id": "east-asia",
+      "start_year": -14000,
+      "end_year": -300,
+      "tier": "foundational",
+      "date_precision": "approx",
+      "summary": "Jomon Japan and the Chinese Neolithic, gathered here for browsing. Both also sit in their own national sequences, where they belong.",
+      "date_note": "A navigation era. It makes no dating claim of its own: the span is the extent of the entries gathered under it, each of which carries its own dating and sources. Jomon's primary home stays under Japan, because it is Japan's founding era rather than a detachable prehistoric episode."
+    },
+    {
+      "id": "oceania.prehistory",
+      "kind": "era",
+      "name": "Oceanian Prehistory",
+      "parent_id": "oceania",
+      "start_year": -73051,
+      "end_year": -734,
+      "tier": "foundational",
+      "date_precision": "approx",
+      "summary": "The Pleistocene settlement of Sahul and the Lapita expansion into the Pacific, gathered here for browsing.",
+      "date_note": "A navigation era making no dating claim of its own. Aboriginal Australia is deliberately NOT gathered here: it has no end date because the traditions are living, and filing an ongoing culture under 'prehistory' would say something false. Its dated Pleistocene sites appear instead."
     }
   ]
 }

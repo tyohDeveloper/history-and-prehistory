@@ -1,5 +1,83 @@
 # Changelog
 
+## 0.7.0.0 — Ages spine and regional navigation (2026-08-08)
+
+### Added — Chalcolithic, regionally and never globally
+
+Research (`docs/ages-spine-research.md`) found the term is irreducibly
+regional: "there is no general agreement about what the Copper Age actually
+is." A global node would need to span c. 6500 BC to c. 700 BC, swallowing the
+Neolithic, the whole Bronze Age and part of the Iron Age, describing no real
+shared period. So this does NOT follow the "Mesolithic (Eurasia)" pattern,
+which works only because one qualifier covers one contiguous span.
+
+- Chalcolithic (Southeast Europe) 5000-3700 BC — earliest known copper smelting.
+- Chalcolithic (Southern Levant) 4700-3600 BC.
+- Chalcolithic (Anatolia) 5500-3000 BC, flagged for three incompatible
+  sub-periodizations in active use.
+- Late Chalcolithic (Mesopotamia) 4500-3100 BC — ends 200 years AFTER the global
+  Bronze Age node starts, which is the point.
+- Chalcolithic (South Asia) 3000-700 BC — contemporary with Harappan Bronze Age
+  urbanism, not prior to it.
+
+Each records where there is no Chalcolithic at all: most of sub-Saharan Africa
+goes stone straight to iron, China folds early copper into the Late Neolithic,
+the Americas never reached a continent-wide Bronze Age, and Australian
+archaeology dropped three-age terminology. A caveat on `global.bronze-age` notes
+that its clean 3300 BC seam hides this wedge.
+
+### Added — Epipalaeolithic, Levant only
+
+Deliberately not a global or Eurasian node: it would double-count "Mesolithic
+(Eurasia)", since the two are largely the same idea under different regional
+naming traditions. One entity is defensible because its early part is invisible
+under the current spine.
+
+- Epipalaeolithic (Levant) 23,000-10,000 BC, IntCal20. Ends exactly where the
+  Mesolithic node begins.
+- Kebaran 23,000-16,000 BC and Geometric Kebaran 16,000-13,000 BC.
+- The existing Natufian is the Late Epipalaeolithic and is cross-linked into it,
+  not moved: its id and its breadcrumb are unchanged.
+
+### Added — East Asian and Oceanian prehistory navigation
+
+Seven regions had a `.prehistory` era and two did not, so Jomon, the Chinese
+Neolithic, Sahul, Madjedbebe and Lake Mungo were unreachable by that route.
+Fixed with `cross_parent_ids` rather than re-parenting, so ids, primary parents,
+breadcrumbs and containment validation are all untouched.
+
+Two placements were left alone on purpose. Jomon stays under Japan because it is
+Japan's founding era, not a detachable prehistoric episode. Aboriginal Australia
+is NOT gathered under Oceanian Prehistory: it has no end date because the
+traditions are living, and filing an ongoing culture under "prehistory" would
+say something false. Only its dated Pleistocene sites appear.
+
+A null end is now read as UNDATED rather than ongoing when deriving these spans.
+Propagating Madjedbebe's null rendered Oceanian prehistory as "75.0 ka -
+present", which says the Pleistocene never ended.
+
+### Changed — Nabta Playa and Green Sahara
+
+Both already existed and were left in place in 0.6.0.0. Enriched here rather
+than duplicated:
+
+- **Nabta Playa** gains its three published phases (Middle, Late and Terminal
+  Neolithic) and a calibration warning. The site span is stated in CALIBRATED
+  years ending 6,200 cal BP, while the excavation literature publishes the
+  ceremonial phases as bare radiocarbon BP ending 5,400 BP. Same event, two
+  conventions. The phases carry the uncalibrated figures as published, flagged,
+  rather than being silently converted. Also gains the caveat that its early
+  Holocene cattle are argued to be hunted aurochs rather than domesticates.
+- **Green Sahara** gains two corroborating syntheses and the detail that parts
+  of the Sahel, Arabia and East Africa stayed wet until the 4.2 ka event.
+
+### Stats
+
+- **1,461 entities** (up from 1,448). **175 sources** (up from 160); 155
+  entities cite at least one.
+- All nine regions now have a prehistory branch.
+- **Validation:** OK, no errors, 0 warnings.
+
 ## 0.6.0.0 — African prehistory depth and per-boundary dating (2026-08-08)
 
 **Schema 3.0.0. Africa goes from 8 prehistory nodes to 37.**

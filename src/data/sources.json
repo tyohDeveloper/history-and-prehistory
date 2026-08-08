@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
-  "dataset_version": "0.6.0.0",
-  "generated_at": "2026-08-08T19:20:20Z",
+  "dataset_version": "0.7.0.0",
+  "generated_at": "2026-08-08T19:47:08Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -693,6 +693,26 @@
       "url": "https://faculty.washington.edu/plape/pacificarchaut12/Wilmshurst%20et%20al%202010.pdf"
     },
     {
+      "id": "shanahan-2012-ahp",
+      "kind": "scholarly",
+      "citation": "Shanahan, McKay, Hughen et al., 'The time-transgressive termination of the African Humid Period', Nature Geoscience",
+      "url": "https://www.whoi.edu/cms/files/shanahan12nat_220305.pdf",
+      "note": "About 14,800 to 5,500 years ago; termination explicitly time-transgressive."
+    },
+    {
+      "id": "noaa-ahp-summary",
+      "kind": "institutional",
+      "citation": "NOAA National Centers for Environmental Information, 'End of the African Humid Period' (2021)",
+      "url": "https://www.ncei.noaa.gov/sites/default/files/2021-11/5%20End%20of%20the%20Africian%20Humid%20Period%20-Final_OCT%202021.pdf"
+    },
+    {
+      "id": "malville-nabta-playa",
+      "kind": "scholarly",
+      "citation": "Malville et al., 'Astronomy at Nabta Playa, Egypt'",
+      "url": "https://sci-hub.se/tree/0d/9d/0d9d5f6a6886bcdabc6a0d081c704ab0.pdf",
+      "note": "Phase structure reported as raw radiocarbon BP: Middle Neolithic 8,100-7,600, Late 7,400-6,600, Terminal 6,600-5,400."
+    },
+    {
       "id": "mcdougall-1985-koobi-fora",
       "kind": "scholarly",
       "citation": "McDougall (1985), 'K-Ar and 40Ar/39Ar dating of the hominid-bearing Pliocene-Pleistocene sequence at Koobi Fora, Lake Turkana, northern Kenya', GSA Bulletin 96(2):159",
@@ -1000,6 +1020,87 @@
       "citation": "Published radiocarbon determinations for the Taruga iron-smelting furnaces",
       "url": "http://www.diaspora.illinois.edu/news0311/news0311-5.pdf",
       "note": "Four samples spanning 920 BCE to 280 BCE."
+    },
+    {
+      "id": "roberts-copper-age-concept",
+      "kind": "scholarly",
+      "citation": "Roberts, 'The Copper Age — A History of the Concept', Journal of World Prehistory",
+      "url": "https://link.springer.com/article/10.1007/s10963-019-09134-z",
+      "note": "States there is no general agreement about what the Copper Age is; the term is regionally contingent."
+    },
+    {
+      "id": "radivojevic-balkan-metallurgy",
+      "kind": "scholarly",
+      "citation": "'Early Balkan Metallurgy: Origins, Evolution and Society, 6200-3700 BC', Journal of World Prehistory",
+      "url": "https://link.springer.com/article/10.1007/s10963-021-09155-7",
+      "note": "Chalcolithic proper from c. 5000 BC; copper minerals used from 6200 BC, native copper from 5500 BC."
+    },
+    {
+      "id": "belovode-earliest-smelting",
+      "kind": "news",
+      "citation": "Science News, 'Serbian site may have hosted first copper makers' (Belovode, c. 5000 BC)",
+      "url": "https://www.sciencenews.org/article/serbian-site-may-have-hosted-first-copper-makers",
+      "note": "Quotes a British Museum archaeologist that the earliest-smelting status probably will not last."
+    },
+    {
+      "id": "isac-chalcolithic-chronology",
+      "kind": "scholarly",
+      "citation": "ISAC, University of Chicago, 'Introduction: Culture, Chronology and the Chalcolithic'",
+      "url": "https://isac.uchicago.edu/sites/default/files/uploads/shared/docs/intro_to_cultural_chronology_chalco.pdf",
+      "note": "Levantine internal boundaries described as imprecisely dated."
+    },
+    {
+      "id": "levant-chalcolithic-radiocarbon",
+      "kind": "scholarly",
+      "citation": "'The Chalcolithic Radiocarbon Record and Its Use in Southern Levantine Archaeology', Radiocarbon",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/chalcolithic-radiocarbon-record-and-its-use-in-southern-levantine-archaeology/17F5A00BDC7447EE70C2AA785B8CC246"
+    },
+    {
+      "id": "oup-anatolia-chalcolithic",
+      "kind": "scholarly",
+      "citation": "Oxford Handbook chapter on the Chalcolithic of Eastern Anatolia and the South Caucasus",
+      "url": "https://academic.oup.com/edited-volume/36332/chapter/318716798",
+      "note": "At least three incompatible Anatolian sub-periodizations are in active use."
+    },
+    {
+      "id": "surezha-late-chalcolithic",
+      "kind": "scholarly",
+      "citation": "ISAC, University of Chicago, Surezha excavation report with the LC1-LC5 sequence",
+      "url": "https://isac.uchicago.edu/sites/default/files/uploads/shared/docs/ar/11-20/13-14/ar2013-14_Surezha.pdf"
+    },
+    {
+      "id": "dalma-2025-chronology",
+      "kind": "scholarly",
+      "citation": "'Absolute Chronology of the Dalma Period in Northwestern Iran' (2025), Radiocarbon",
+      "url": "https://ora.ox.ac.uk/objects/uuid:45a3fcc2-4640-4850-a0f0-cbd8b69aefa0/files/rst74cs87p",
+      "note": "Refines the regional start to 5200/5100 BCE."
+    },
+    {
+      "id": "ignou-south-asia-chalcolithic",
+      "kind": "institutional",
+      "citation": "IGNOU / eGyanKosh, 'Chalcolithic Cultures' (Kayatha, Ahar-Banas, Malwa, Jorwe)",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/41362/1/Unit-3.pdf"
+    },
+    {
+      "id": "oup-natufian-chapter",
+      "kind": "scholarly",
+      "citation": "Oxford Handbook chapter on the Natufian, with IntCal20-calibrated Epipalaeolithic phases",
+      "url": "https://academic.oup.com/edited-volume/59635/chapter/505050944",
+      "note": "Early 23,000-16,000, Middle 16,000-13,000, Late (Natufian) 13,000-10,000 cal BC."
+    },
+    {
+      "id": "baryosef-natufian-columbia",
+      "kind": "scholarly",
+      "citation": "Bar-Yosef, 'The Natufian Culture in the Levant, Threshold to the Origins of Agriculture', Columbia University",
+      "url": "https://www.columbia.edu/itc/anthropology/v1007/baryo.pdf",
+      "note": "Kebaran c. 18,000-14,500 BP for the coastal Levant; end date varies across sources."
+    },
+    {
+      "id": "killick-african-metallurgy",
+      "kind": "scholarly",
+      "citation": "'Origins of African Metallurgies', Oxford Research Encyclopedias",
+      "url": "https://academic.oup.com/edited-volume/61643/chapter/539815102?guestAccessKey=",
+      "note": "Evidence for metallurgy in Niger before 1000 BC remains in doubt; most of sub-Saharan Africa goes stone to iron."
     }
   ]
 }

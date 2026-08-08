@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { MAX_SELECTED, parseSelection, serializeSelection, toggleCalendar } from "../src/lib/calendarSelection";
+import { MAX_SELECTED, parseSelection, serializeSelection, toggleCalendar } from "../src/calendars/selection";
 
 describe("selection lives in the URL, not in storage", () => {
   it("falls back to the default when the hash is absent or junk", () => {

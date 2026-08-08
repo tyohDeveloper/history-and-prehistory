@@ -2,7 +2,7 @@
 // This is the "pure library layer" the architecture standards require to
 // carry unit tests; the UI layer is exercised via Playwright instead.
 
-import type { Entity, Tier } from "./types";
+import type { Entity, Tier } from "./entity";
 
 export const TIER_ORDER: Record<Tier, number> = {
   foundational: 0,

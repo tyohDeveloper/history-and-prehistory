@@ -1,13 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { entities } from "../src/lib/dataset";
-import { buildIndex } from "../src/lib/tree";
+import { entities } from "../src/dataset/dataset";
+import { buildIndex } from "../src/entity/tree";
 import {
   ambiguousNames,
   handoffTargets,
   researchNote,
   searchQuery,
   wikipediaSearchUrl,
-} from "../src/lib/handoff";
+} from "../src/research/handoff";
 
 const index = buildIndex(entities);
 const ambiguous = ambiguousNames(entities);

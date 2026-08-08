@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { calendars, datasetVersion, entities, referenceFrames, schemaVersion, themes } from "../src/lib/dataset";
-import { buildIndex } from "../src/lib/tree";
+import { calendars, datasetVersion, entities, referenceFrames, schemaVersion, themes } from "../src/dataset/dataset";
+import { buildIndex } from "../src/entity/tree";
 
 const idx = buildIndex(entities);
 

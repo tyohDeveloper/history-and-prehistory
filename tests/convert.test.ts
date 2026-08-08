@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { readYear, readYearIn } from "../src/lib/calendars/convert";
-import { CALENDARS } from "../src/lib/calendars/registry";
-import { asIso, bce, ce } from "../src/lib/chrono/year";
+import { readYear, readYearIn } from "../src/calendars/convert";
+import { CALENDARS } from "../src/calendars/registry";
+import { asIso, bce, ce } from "../src/chrono/year";
 
 describe("a Gregorian year reads as a span", () => {
   it("spans two Islamic years, because the Hijri year does not start in January", () => {

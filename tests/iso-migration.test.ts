@@ -7,16 +7,16 @@
  * time; these tests check the conversion itself is right, against real data.
  */
 import { describe, expect, it } from "vitest";
-import { entities } from "../src/lib/dataset";
-import { datingOf } from "../src/lib/chrono/fromEntity";
+import { entities } from "../src/dataset/dataset";
+import { datingOf } from "../src/chrono/fromEntity";
 import {
   asHistorical,
   bce,
   ce,
   historicalFromIso,
   isoFromHistorical,
-} from "../src/lib/chrono/year";
-import { bpFromYear } from "../src/lib/chrono/bp";
+} from "../src/chrono/year";
+import { bpFromYear } from "../src/chrono/bp";
 
 describe("scheme conversion", () => {
   it("round-trips every dated boundary in the dataset", () => {

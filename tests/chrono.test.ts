@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { bpFromYear, formatBp, formatBpRange, resolveFrame, suggestFrame, yearFromBp } from "../src/lib/chrono/bp";
-import { datingOf } from "../src/lib/chrono/fromEntity";
-import { bpSenseOf, isCalendarConvertible, isScientificDating } from "../src/lib/chrono/year";
-import type { Entity } from "../src/lib/types";
+import { bpFromYear, formatBp, formatBpRange, resolveFrame, suggestFrame, yearFromBp } from "../src/chrono/bp";
+import { datingOf } from "../src/chrono/fromEntity";
+import { bpSenseOf, isCalendarConvertible, isScientificDating } from "../src/chrono/year";
+import type { Entity } from "../src/entity/entity";
 import {
   allClaims,
   asHistorical,
@@ -22,9 +22,9 @@ import {
   MAX_CAVEAT_LENGTH,
   supportOf,
   uncertaintyOf,
-} from "../src/lib/chrono/year";
-import type { BoundaryDating, DatingClaim, EntityCaveat, IsoYear } from "../src/lib/chrono/year";
-import type { YearValue } from "../src/lib/chrono/year";
+} from "../src/chrono/year";
+import type { BoundaryDating, DatingClaim, EntityCaveat, IsoYear } from "../src/chrono/year";
+import type { YearValue } from "../src/chrono/year";
 
 // The cases that drove the design. Named so a regression says which idea broke.
 const SEPT_11: YearValue = { consensus: { year: ce(2001) }, method: "calendar" };

@@ -32,11 +32,16 @@ repository has no such layer, and rules naming it are inert.
 
 | Layer role | This repository's paths |
 |---|---|
-| **VIEW** | `src/*.ts` top-level render and picker modules |
+| **VIEW** | `src/*.ts` — top-level render and picker modules only, not subdirectories |
 | **CONTROLLER** | *(unmapped — the app has no controller layer; the render modules call PURE directly)* |
 | **STATE** | *(unmapped — selection state is held in-memory by the render modules per the standalone-HTML5 no-persistence rule)* |
-| **PURE** | `src/lib/**` |
-| **PURE-CORE** | `src/lib/calendars/**`, `src/lib/chrono/**`, `src/lib/temporal/**` |
+| **PURE** | `src/<domain>/**` — `entity/`, `dataset/`, `research/` |
+| **PURE-CORE** | `src/calendars/**`, `src/chrono/**`, `src/temporal/**` |
+
+The mapping previously routed PURE to `src/lib/**`, which put a §3.8-prohibited
+shape name in the table that defines the layers — the path mapping enshrined a
+name the naming rule forbids. Directories now name domains, and the VIEW row is
+top-level `src/*.ts` only so a PURE file cannot sit loose beside `main.ts`.
 | **DATA** | `src/data/**`, `schemas/**` |
 
 **Target:** standalone single-file HTML5. The §15 standalone rules apply in full —

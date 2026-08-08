@@ -48,15 +48,15 @@ onto a calendar app; they change what a date *is* in the value model.
 
 | Module | Purpose |
 |---|---|
-| `src/lib/temporal/temporal.ts` | Source-selection shim re-exporting `temporal-polyfill/full`. Ported from OmniUnit unchanged in substance, so both apps make the same choice the same way. |
-| `src/lib/temporal/julianJdn.ts` | Fliegel–Van Flandern JDN converters for Julian and Revised Julian, which Temporal does not implement. Ported verbatim. |
-| `src/lib/calendars/registry.ts` | 26 calendars with validity horizons, primary/variant grouping, and per-calendar caveats. |
-| `src/lib/chrono/year.ts` | Branded `IsoYear`/`HistoricalYear` types and the four sanctioned crossings. The core model: three independently-fuzzy anchors, dating method and datum, claim standing, disclosure reasons and inference, entity caveats, rollup. |
-| `src/lib/chrono/bp.ts` | BP and b2k datums, `yr`/`ka`/`Ma` scaling, uncertainty-driven rounding, and frame selection with user override. |
-| `src/lib/chrono/fromEntity.ts` | Adapter from a v2.1.0 `Entity` into the model, so the migration map is executable rather than aspirational. Includes the one-time caveat classifier. |
-| `src/lib/calendars/convert.ts` | Reads an ISO year in any of the 26 calendars, as a span, with validity. |
-| `src/lib/calendarSelection.ts` | Calendar choice parsed from and written to `location.hash`. |
-| `src/lib/handoff.ts` | Generated Wikipedia search links with dataset-measured disambiguation, plus the exportable research note. |
+| `src/temporal/temporal.ts` | Source-selection shim re-exporting `temporal-polyfill/full`. Ported from OmniUnit unchanged in substance, so both apps make the same choice the same way. |
+| `src/temporal/julianJdn.ts` | Fliegel–Van Flandern JDN converters for Julian and Revised Julian, which Temporal does not implement. Ported verbatim. |
+| `src/calendars/registry.ts` | 26 calendars with validity horizons, primary/variant grouping, and per-calendar caveats. |
+| `src/chrono/year.ts` | Branded `IsoYear`/`HistoricalYear` types and the four sanctioned crossings. The core model: three independently-fuzzy anchors, dating method and datum, claim standing, disclosure reasons and inference, entity caveats, rollup. |
+| `src/chrono/bp.ts` | BP and b2k datums, `yr`/`ka`/`Ma` scaling, uncertainty-driven rounding, and frame selection with user override. |
+| `src/chrono/fromEntity.ts` | Adapter from a v2.1.0 `Entity` into the model, so the migration map is executable rather than aspirational. Includes the one-time caveat classifier. |
+| `src/calendars/convert.ts` | Reads an ISO year in any of the 26 calendars, as a span, with validity. |
+| `src/calendars/selection.ts` | Calendar choice parsed from and written to `location.hash`. |
+| `src/research/handoff.ts` | Generated Wikipedia search links with dataset-measured disambiguation, plus the exportable research note. |
 
 Tests: `tests/chrono.test.ts` (model), `tests/prehistory.test.ts` (eight real dating disputes),
 `tests/handoff.test.ts`, alongside the baseline `tree` and `dataset-integrity` suites.
@@ -471,7 +471,7 @@ just lacked a field that said what it meant.
 
 ### Measured against the real dataset
 
-The model is no longer hypothetical: `src/lib/chrono/fromEntity.ts` adapts a v2.1.0 `Entity` into
+The model is no longer hypothetical: `src/chrono/fromEntity.ts` adapts a v2.1.0 `Entity` into
 it, so the migration map above is executable and testable rather than aspirational. Running it
 over all 1,305 entities:
 
@@ -854,7 +854,7 @@ out exactly one year apart in BP despite there being no year zero between them i
 
 ## The conversion layer (built)
 
-`src/lib/calendars/convert.ts` reads an ISO year in any of the 26 calendars. This is the commit
+`src/calendars/convert.ts` reads an ISO year in any of the 26 calendars. This is the commit
 that imports `temporal-polyfill/full` and re-baselines the artifact.
 
 ### A reading is a span, and carries its own validity
@@ -1015,7 +1015,7 @@ None of these were visible before there was deep-time content to render.
 **The chrono layer was not connected.** The readout called `tree.formatRange`, which prints the
 stored year with a CE/BCE suffix. The origin of the genus rendered as `2798051 BCE` — a
 year-precise position in a calendar that did not exist, on a date whose real uncertainty is tens of
-thousands of years. `src/lib/displayRange.ts` is now the join between an `Entity` and the frame
+thousands of years. `src/chrono/displayRange.ts` is now the join between an `Entity` and the frame
 layer.
 
 **The provenance rule was dead code.** `suggestFrame` reads `v.method`, and the dataset adapter
@@ -1648,7 +1648,7 @@ never catches up with authoring, so this needs to be a rule at author time rathe
 Same shape as `Q-30`: both are per-entity fields standing in for per-boundary facts.
 
 **Q-31. What is the disclosure surface, and where does it live?** The disclosure model is built and
-tested in `src/lib/chrono/year.ts` \u2014 `disclosureReasons`, `rollupDisclosure`, `entityCaveats`,
+tested in `src/chrono/year.ts` \u2014 `disclosureReasons`, `rollupDisclosure`, `entityCaveats`,
 `allClaims` \u2014 and `src/main.ts` calls none of them. So **44 rival claims, 27 caveats and 113 source
 lists are authored and unreachable**; only `date_note` renders. This is the largest instance in the
 project of the pattern that has already produced four dead-code findings, and unlike those it is a
@@ -1668,7 +1668,7 @@ check_standards.py` sizes the debt rather than guessing at it \u2014 **20 violat
 | 3.3 file length by layer | 5 | `calendars/registry.ts` 310/100, `chrono/year.ts` 295/100, `main.ts` 385/250 |
 | 3.1 exported body \u2264 20 lines | 5 | `readYear` 74, `displayRange` 44, `datingOf` 34 |
 | 3.2 one function export per PURE file | 8 | `chrono/year.ts` has 23, `tree.ts` 9, `chrono/bp.ts` 8 |
-| 3.8 name for responsibility, not shape | 2 | `src/lib/` and `src/lib/types.ts` |
+| 3.8 name for responsibility, not shape | 2 | `src/` and `src/entity/entity.ts` |
 | 3.9 no untagged barrel files | 0 | both found and fixed during reconciliation |
 
 Two of these are mine from this week (`displayRange`, and `bp.ts` at 129/100), so this is not
@@ -1701,8 +1701,8 @@ the shared page by half. After syncing:
   `BP_DATUM_YEAR` that nothing consumed \u2014 a §3.9 barrel and §3.6 dead code at once \u2014 and
   `temporal/temporal.ts` is a legitimate §1.7 source-selection shim that lacked the required
   `EXCEPTION` tag, which made a permitted carve-out indistinguishable from an oversight.
-- **Two §3.8 violations remain and are structural.** `src/lib/` and `src/lib/types.ts` both use
-  prohibited shape names, and §0 of the repo copy *maps PURE to `src/lib/**`* \u2014 so the path mapping
+- **Two §3.8 violations remain and are structural.** `src/` and `src/entity/entity.ts` both use
+  prohibited shape names, and §0 of the repo copy *maps PURE to `src/<domain>/**`* \u2014 so the path mapping
   enshrines a name the naming rule forbids. Renaming touches every import in the app.
 - **One discrepancy to propagate upward.** The repo copy tags the barrel carve-out
   `EXCEPTION [coding-standards §3.8]` under Rule 3.**9**. The wiki gives no tag number, so this is

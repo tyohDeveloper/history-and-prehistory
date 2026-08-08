@@ -8,7 +8,7 @@
  * no-storage rule and running from `file://`.
  */
 
-import { CALENDARS_BY_ID, DEFAULT_CALENDAR_IDS } from "./calendars/registry";
+import { CALENDARS_BY_ID, DEFAULT_CALENDAR_IDS } from "./registry";
 
 const HASH_KEY = "cal";
 /** Guard against a hand-edited URL producing an unreadable wall of columns. */

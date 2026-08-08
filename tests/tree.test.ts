@@ -9,8 +9,8 @@ import {
   pathTo,
   searchEntities,
   visibleAtTier,
-} from "../src/lib/tree";
-import type { Entity } from "../src/lib/types";
+} from "../src/entity/tree";
+import type { Entity } from "../src/entity/entity";
 
 const mk = (p: Partial<Entity> & Pick<Entity, "id">): Entity => ({
   kind: "era",

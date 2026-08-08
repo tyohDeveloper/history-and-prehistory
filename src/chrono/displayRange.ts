@@ -11,10 +11,10 @@
  * to render BP honestly (`formatBp`). This module is the join.
  */
 
-import type { Entity } from "./types";
-import { formatRange as naiveRange, formatYear } from "./tree";
-import { datingOf } from "./chrono/fromEntity";
-import { bpSenseOf } from "./chrono/year";
+import type { Entity } from "../entity/entity";
+import { formatRange as naiveRange, formatYear } from "../entity/tree";
+import { datingOf } from "./fromEntity";
+import { bpSenseOf } from "./year";
 import {
   BP_UNIT_DIVISOR,
   bpFromYear,
@@ -23,7 +23,7 @@ import {
   formatBp,
   resolveFrame,
   type FramePreference,
-} from "./chrono/bp";
+} from "./bp";
 
 export interface DisplayRange {
   text: string;

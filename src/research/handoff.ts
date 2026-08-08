@@ -29,8 +29,8 @@
  * were going to do anyway.
  */
 
-import type { Entity } from "./types";
-import { formatRange, pathTo, type TreeIndex } from "./tree";
+import type { Entity } from "../entity/entity";
+import { formatRange, pathTo, type TreeIndex } from "../entity/tree";
 
 /** Wikipedia language edition to search. */
 export type WikiLang = "en";

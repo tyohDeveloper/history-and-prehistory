@@ -20,7 +20,7 @@
  * trusted. See `needsBoundaryReview`.
  */
 
-import type { Entity } from "../types";
+import type { Entity } from "../entity/entity";
 import { asHistorical, isoFromHistorical } from "./year";
 import type {
   BoundaryDating,

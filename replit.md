@@ -36,7 +36,7 @@ CI; it does not ship.
 
 - `src/data/*.json` is **generated**. Edit `tools/build_data.py`, regenerate, validate, and commit
   source and output together. `tools/check_regenerated.py` fails CI if they drift.
-- Logic belongs in `src/lib/` as pure functions with unit tests. `src/main.ts` is UI only.
+- Logic belongs in `src/` as pure functions with unit tests. `src/main.ts` is UI only.
 - New test ID means updating `scripts/testid-manifest.json` in the same change.
 - Bundle size is baselined in `scripts/build-baseline.json`; >5% gzip growth fails the build.
 - Terse commit messages, decomposed commits.

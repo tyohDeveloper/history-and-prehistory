@@ -19,11 +19,18 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 
 # §0 path mapping. Order matters: the most specific prefix wins.
+#
+# This table went stale the moment src/lib was dismantled, and the checker
+# silently stopped classifying most of the tree - the violation count fell from
+# 20 to 8 with no code improved. That is §16.1 happening to the tool written to
+# enforce §16.1: enforcement that quietly narrows its own coverage is not
+# enforcement. Keep this in step with §0 of docs/CODING-STANDARDS.md.
 LAYERS = [
-    ("PURE-CORE", ("src/lib/calendars/", "src/lib/chrono/", "src/lib/temporal/"), 100),
-    ("PURE", ("src/lib/",), 150),
-    ("VIEW", ("src/",), 250),
+    ("PURE-CORE", ("src/calendars/", "src/chrono/", "src/temporal/"), 100),
+    ("PURE", ("src/entity/", "src/dataset/", "src/research/"), 150),
 ]
+VIEW_LIMIT = 250
+
 
 FUNC_LIMIT = 20
 
@@ -32,6 +39,12 @@ def layer_of(rel: str) -> tuple[str, int]:
     for name, prefixes, limit in LAYERS:
         if any(rel.startswith(p) for p in prefixes):
             return name, limit
+    # VIEW is top-level src/*.ts only. A file one level down belongs to a
+    # domain, and an unrecognised domain is a mapping gap worth surfacing
+    # rather than a file to wave through.
+    if rel.startswith("src/"):
+        rest = rel[len("src/"):]
+        return ("VIEW", VIEW_LIMIT) if "/" not in rest else ("UNMAPPED-DOMAIN", 150)
     return "UNMAPPED", 10**9
 
 

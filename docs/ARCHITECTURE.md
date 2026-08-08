@@ -45,13 +45,13 @@ by bookmarking. That is compatible with `file://` and needs zero storage APIs.
 ## 4. Layers
 
 ```
-src/lib/*     Pure functions. No DOM, no globals, no side effects. Unit-tested.
+src/*     Pure functions. No DOM, no globals, no side effects. Unit-tested.
 src/main.ts   UI. Rendering and event wiring. Exercised via Playwright, not unit tests.
 src/data/*    Generated JSON. Read-only and immutable at runtime.
 tools/*       Python generators and validator. The authoring surface for the dataset.
 ```
 
-Logic belongs in `src/lib/`. If a function can be written without touching the DOM, it goes there
+Logic belongs in `src/`. If a function can be written without touching the DOM, it goes there
 and it gets a unit test. This is the boundary that keeps the test suite fast and meaningful.
 
 ## 5. Testing

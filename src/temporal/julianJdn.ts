@@ -16,7 +16,7 @@
  * Ported from OmniUnitConverter-Calculator, unchanged apart from comments.
  * Note these functions use ASTRONOMICAL year numbering (1 BCE = year 0),
  * whereas the entity dataset uses historical numbering with no year zero.
- * `src/lib/calendars/convert.ts` owns that translation — do not mix the two.
+ * `src/calendars/convert.ts` owns that translation — do not mix the two.
  */
 
 export interface JulianDate {

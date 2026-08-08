@@ -1,20 +1,20 @@
 import "./style.css";
-import { datasetVersion, entities } from "./lib/dataset";
-import { displayRange } from "./lib/displayRange";
-import { datingOf } from "./lib/chrono/fromEntity";
-import { isCalendarConvertible } from "./lib/chrono/year";
+import { datasetVersion, entities } from "./dataset/dataset";
+import { displayRange } from "./chrono/displayRange";
+import { datingOf } from "./chrono/fromEntity";
+import { isCalendarConvertible } from "./chrono/year";
 import {
   buildIndex,
   childrenOf,
   pathTo,
   searchEntities,
   visibleAtTier,
-} from "./lib/tree";
-import type { Entity, EntityKind, Tier } from "./lib/types";
-import { readYearIn, type CalendarReading } from "./lib/calendars/convert";
-import { CALENDARS, getCalendar } from "./lib/calendars/registry";
-import { parseSelection, serializeSelection, toggleCalendar } from "./lib/calendarSelection";
-import { asHistorical, isoFromHistorical } from "./lib/chrono/year";
+} from "./entity/tree";
+import type { Entity, EntityKind, Tier } from "./entity/entity";
+import { readYearIn, type CalendarReading } from "./calendars/convert";
+import { CALENDARS, getCalendar } from "./calendars/registry";
+import { parseSelection, serializeSelection, toggleCalendar } from "./calendars/selection";
+import { asHistorical, isoFromHistorical } from "./chrono/year";
 
 const APP_VERSION = __APP_VERSION__;
 const REPO_URL = "https://github.com/tyohDeveloper/history-and-prehistory";

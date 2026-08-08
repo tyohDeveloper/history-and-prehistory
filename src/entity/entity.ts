@@ -31,14 +31,6 @@ export type StandingId = "consensus" | "majority" | "minority" | "traditional" |
 
 export type CaveatKindId = "misconception" | "naming-confusion" | "contested-existence";
 
-export interface Source {
-  id: string;
-  kind: "scholarly" | "reference" | "primary" | "dataset";
-  citation: string;
-  url?: string;
-  note?: string;
-}
-
 export interface Entity {
   id: string;
   kind: EntityKind;
@@ -101,45 +93,3 @@ export interface Entity {
   sources?: { title: string; url?: string; note?: string }[];
 }
 
-export interface Calendar {
-  id: string;
-  name: string;
-  [k: string]: unknown;
-}
-export interface Theme {
-  id: string;
-  name: string;
-  entity_ids: string[];
-  [k: string]: unknown;
-}
-/**
- * A novice orientation anchor: "the Acheulean is about this old".
- *
- * `year` was previously absent from this interface and fell through the index
- * signature as `unknown`, so arithmetic on it did not type-check. The stub was
- * adequate while nothing read the field.
- */
-export interface ReferenceFrame {
-  id: string;
-  name: string;
-  /** Historical Gregorian year, negative for BCE. */
-  year: number;
-  end_year?: number;
-  /**
-   * `deep-time` is not a culture. The other sets are traditions a reader might
-   * already know; before the Holocene there is no such tradition, so those
-   * anchors supply scale instead of familiarity.
-   */
-  anchor_set?:
-    | "western" | "east-asian" | "islamic" | "south-asian"
-    | "african" | "americas" | "oceanic" | "global" | "deep-time";
-  summary?: string;
-  entity_id?: string;
-}
-
-export interface DataFile<T> {
-  schema_version: string;
-  dataset_version: string;
-  generated_at: string;
-  [k: string]: unknown | T[];
-}

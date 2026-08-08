@@ -18,9 +18,9 @@ import {
   hasDisclosure,
   type BoundaryDating,
   type YearValue,
-} from "../src/lib/chrono/year";
-import { bpFromYear, formatBpRange, resolveFrame, suggestFrame } from "../src/lib/chrono/bp";
-import { yearFromBp } from "../src/lib/chrono/bp";
+} from "../src/chrono/year";
+import { bpFromYear, formatBpRange, resolveFrame, suggestFrame } from "../src/chrono/bp";
+import { yearFromBp } from "../src/chrono/bp";
 
 const ka = (n: number) => yearFromBp(n * 1000);
 const Ma = (n: number) => yearFromBp(n * 1_000_000);

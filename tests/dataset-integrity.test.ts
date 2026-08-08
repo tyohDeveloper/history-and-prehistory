@@ -16,14 +16,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.7.0.0");
+    expect(datasetVersion).toBe("0.8.0.0");
     expect(schemaVersion).toBe("3.0.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1461);
+    expect(entities.length).toBe(1480);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -103,11 +103,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(155);
+    expect(cited.length).toBe(175);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(163);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(182);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -119,7 +119,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(115);
+    expect(withEnd.length).toBe(123);
 
     const differing = entities
       .filter(
@@ -278,5 +278,48 @@ describe("dating method is physically capable of the date", () => {
         !(e.date_note ?? "").toUpperCase().includes("UNCALIB"),
     );
     expect(undeclared.map((e) => e.id)).toEqual([]);
+  });
+});
+
+describe("Neolithic transition", () => {
+  const NEO = "global.neolithic.agricultural-revolution";
+  const node = () => entities.find((e) => e.id === NEO)!;
+
+  it("is an era, not an event", () => {
+    // A 4,000-year unconscious process filed as `event` asserted something the
+    // literature abandoned. The id stays for stability; the claim does not.
+    expect(node().kind).toBe("era");
+    expect(node().name).toBe("Neolithic Transition");
+    expect(node().aliases).toContain("Agricultural Revolution");
+  });
+
+  it("carries the gradualist framing and the dissent from it", () => {
+    expect(node().date_note).toMatch(/protracted|NOT A REVOLUTION/);
+    // Abbo and Gopher's rapid core-area model is live, not settled against.
+    expect(node().alternatives?.some((a) => a.standing === "minority")).toBe(true);
+  });
+
+  it("has its independent centres", () => {
+    const centres = entities.filter((e) => e.parent_id === NEO);
+    expect(centres.length).toBe(8);
+    // How many centres exist is itself disputed, so the count is a caveat
+    // rather than a claim the node makes.
+    expect(node().caveats?.some((c) => c.kind === "contested-existence")).toBe(true);
+  });
+
+  it("records pottery as predating farming", () => {
+    // The single most useful correction in this layer: ceramics are not a
+    // marker of agriculture or sedentism.
+    const pot = entities.find((e) => e.id === "global.prehistory.firsts.pottery")!;
+    const cereal = entities.find((e) => e.id === "global.prehistory.firsts.cereal-farming")!;
+    expect(pot.start_year!).toBeLessThan(cereal.start_year! - 9000);
+    expect(pot.caveats?.[0]?.kind).toBe("misconception");
+  });
+
+  it("keeps Botai as husbandry and not as ancestry", () => {
+    const horse = entities.find((e) => e.id === "global.prehistory.firsts.horse-domestication")!;
+    expect(horse.start_year).toBe(-2200);
+    const botai = horse.alternatives?.find((a) => a.label.includes("Botai"));
+    expect(botai?.standing).toBe("superseded");
   });
 });

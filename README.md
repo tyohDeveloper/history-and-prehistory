@@ -92,6 +92,26 @@ holes, incomplete ruler lineages, prehistory attach points, and schema debt. Rea
 authoring new content — several of its findings are load-bearing for how the next region should
 be written.
 
+### Aiming a coverage pass
+
+Run `npm run coverage` before deciding what to author. It prints a region × era-band matrix, and
+it exists because intuition about where the dataset was thin turned out to be wrong: the millennia
+approaching 1000 BCE look sparse but are the densest pre-CE band, while 10,000–3,000 BCE is the
+genuinely starved one.
+
+Two rules the report enforces by construction:
+
+- **Partition a pass by START year, never by span.** Entities have one start but a date *range*.
+  Slicing on "ends before X" silently drops every long-lived entity crossing the line, and
+  duration correlates with significance — so that cut is biased against the entities most worth
+  having. `--spanning` lists the straddlers a naive cut would lose.
+- **Never truncate an end to fit the slice.** If a culture starts inside your window and runs past
+  it, author its real end. The slice governs what you pick up, not what you record.
+
+Reigns are counted separately throughout, because forty kings of one dynasty are forty entities
+and almost no additional coverage of a period. `--childless` lists eras that promise sub-structure
+they do not have.
+
 ## Privacy and offline posture
 
 This is a product property, not an implementation accident. The app is designed so that a user

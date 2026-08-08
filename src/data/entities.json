@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
-  "dataset_version": "0.7.0.0",
-  "generated_at": "2026-08-08T19:47:08Z",
+  "dataset_version": "0.8.0.0",
+  "generated_at": "2026-08-08T20:13:32Z",
   "entities": [
     {
       "id": "global",
@@ -9074,21 +9074,58 @@
     },
     {
       "id": "global.neolithic.agricultural-revolution",
-      "kind": "event",
-      "name": "Neolithic (Agricultural) Revolution",
+      "kind": "era",
+      "name": "Neolithic Transition",
       "parent_id": "global.neolithic",
       "start_year": -10000,
-      "end_year": -4500,
+      "end_year": -1800,
       "tier": "foundational",
       "start_dating_method": "radiocarbon-calibrated",
-      "standing": "consensus",
+      "standing": "majority",
       "start_precision": "approx",
       "end_precision": "approx",
       "aliases": [
         "Neolithic Revolution",
+        "Agricultural Revolution",
         "First Agricultural Revolution"
       ],
-      "summary": "Independent transitions to farming and animal domestication in the Fertile Crescent, China, Mesoamerica, and elsewhere.",
+      "summary": "Independent, and largely unconscious, transitions to farming in at least seven regions. A process of millennia, not an event.",
+      "allow_outside_parent_dates": true,
+      "as_of": "2026-08-08",
+      "date_note": "NOT A REVOLUTION, despite the name it is still filed under. The dominant model is protracted and geographically autonomous: domestication took on the order of 4,000 years, happened independently at several foci, and was largely unconscious rather than invented. The field has largely replaced Childe's 'Neolithic Revolution' with 'Neolithic transition' for that reason. The end date is diachronous and runs past the Neolithic label itself, because Eastern North America domesticates thousands of years after the Fertile Crescent.",
+      "alternatives": [
+        {
+          "label": "Rapid, conscious, core-area domestication",
+          "standing": "minority",
+          "note": "Abbo and Gopher argue for a fast deliberate process in one core area.",
+          "source_ids": [
+            "abbo-gopher-core-area-critique"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not a revolution and not an event: the transition took millennia, and foraging and farming coexisted throughout much of it.",
+          "source_ids": [
+            "persistent-controversies-neolithic",
+            "fuller-2020-protracted-domestication"
+          ]
+        },
+        {
+          "kind": "contested-existence",
+          "text": "How many independent centres exist is unsettled: Harlan counted 6, Vavilov 12, Purugganan and Fuller 24.",
+          "source_ids": [
+            "springer-domestication-centres-review"
+          ]
+        }
+      ],
+      "source_ids": [
+        "fuller-2020-protracted-domestication",
+        "fuller-2022-reply-to-abbo",
+        "persistent-controversies-neolithic",
+        "springer-domestication-centres-review"
+      ],
       "end_dating_method": "radiocarbon-calibrated"
     },
     {
@@ -19070,6 +19107,455 @@
         "taruga-furnace-dates"
       ],
       "summary": "Central Nigerian culture producing sub-Saharan Africa's earliest large-scale sculptural tradition, and some of its earliest iron smelting."
+    },
+    {
+      "id": "global.neolithic.agricultural-revolution.fertile-crescent",
+      "kind": "period",
+      "name": "Fertile Crescent",
+      "parent_id": "global.neolithic.agricultural-revolution",
+      "start_year": -8651,
+      "end_year": -4651,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Earliest definite domesticated einkorn and emmer at Cayonu and Cafer Hoyuk, 10,600-9,900 cal BP. The end shown applies the protracted model's ~4,000-year duration to that onset; it is a modelled span, not a dated horizon.",
+      "source_ids": [
+        "sw-asian-founder-crops-table",
+        "fuller-2020-protracted-domestication"
+      ],
+      "summary": "Wheat, barley, lentil, pea, sheep, goat, pig and cattle — the package that reached Europe, North Africa and South Asia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.neolithic.agricultural-revolution.yangtze",
+      "kind": "period",
+      "name": "Yangtze Valley",
+      "parent_id": "global.neolithic.agricultural-revolution",
+      "start_year": -8051,
+      "end_year": -2351,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Shangshan at c. 10,000 cal BP holds the earliest cultivation, with both wild and domesticated-type rachis present, running to Liangzhu at 4,300 BP.",
+      "alternatives": [
+        {
+          "label": "Earlier trajectory (2024)",
+          "standing": "minority",
+          "start_year": -22051,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Exploitation from c. 24,000 BP, cultivation 13,000 BP, domestication 11,000 BP.",
+          "source_ids": [
+            "science-2024-rice-trajectory"
+          ]
+        }
+      ],
+      "source_ids": [
+        "antiquity-earliest-rice-domestication",
+        "science-2024-rice-trajectory"
+      ],
+      "summary": "Rice, domesticated over roughly six millennia from Shangshan to Liangzhu.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.neolithic.agricultural-revolution.yellow-river",
+      "kind": "period",
+      "name": "Yellow River Basin",
+      "parent_id": "global.neolithic.agricultural-revolution",
+      "start_year": -8351,
+      "end_year": -5551,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "minority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-08",
+      "date_note": "METHODOLOGICALLY CONTESTED. Phytolith evidence at Cishan reaches 10,300-8,700 cal BP, but macrobotanical seed remains from the same sites are as late as c. 5,900 cal BC. The two methods disagree by millennia and neither has displaced the other.",
+      "alternatives": [
+        {
+          "label": "Macrobotanical dating only",
+          "standing": "majority",
+          "start_year": -5900,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Seed remains, rather than phytoliths, give a far later onset.",
+          "source_ids": [
+            "miller-2016-millet-phytolith-dispute"
+          ]
+        }
+      ],
+      "source_ids": [
+        "pnas-2012-early-millet",
+        "miller-2016-millet-phytolith-dispute"
+      ],
+      "summary": "Broomcorn and foxtail millet, the dryland counterpart to the Yangtze's rice."
+    },
+    {
+      "id": "global.neolithic.agricultural-revolution.mesoamerica",
+      "kind": "period",
+      "name": "Mesoamerica",
+      "parent_id": "global.neolithic.agricultural-revolution",
+      "start_year": -8051,
+      "end_year": -4301,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Cucurbita pepo cultivated at Guila Naquitz from 10,000-8,000 cal BP. Maize appears as starch and phytoliths in the Balsas Valley at c. 8,700 cal BP but is not directly AMS-dated on cobs until 6,250-6,230 cal BP. The two figures rest on different evidence and are kept apart rather than averaged.",
+      "source_ids": [
+        "pnas-2009-balsas-maize",
+        "guila-naquitz-ams-maize"
+      ],
+      "summary": "Squash first, then maize and beans — the squash predates maize by over four thousand years.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.neolithic.agricultural-revolution.andes",
+      "kind": "period",
+      "name": "Andes",
+      "parent_id": "global.neolithic.agricultural-revolution",
+      "start_year": -5051,
+      "end_year": -2200,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Camelid domestication at Telarmachay and comparable sites from c. 7,000-6,000 BP. The earliest DIRECT evidence for potato is later, 3,400-2,200 cal BC at Jiskairumoko; broader claims of 8,000-5,000 BCE are not supported by directly dated material.",
+      "source_ids": [
+        "elife-2021-south-american-camelids",
+        "pnas-2016-jiskairumoko-potato"
+      ],
+      "summary": "Potato, llama, alpaca and guinea pig, domesticated in the high basin around Lake Titicaca.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.neolithic.agricultural-revolution.new-guinea",
+      "kind": "period",
+      "name": "New Guinea Highlands",
+      "parent_id": "global.neolithic.agricultural-revolution",
+      "start_year": -8271,
+      "end_year": -2031,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Kuk Swamp phase 1, plant exploitation, 10,220-9,910 cal BP; phase 2 mounded cultivation of taro and banana 6,950-6,440 cal BP; phase 3 ditched cultivation 4,350-3,980 cal BP.",
+      "source_ids": [
+        "denham-2003-kuk-swamp"
+      ],
+      "summary": "Taro and banana, cultivated at Kuk Swamp entirely independently of Asia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.neolithic.agricultural-revolution.eastern-north-america",
+      "kind": "period",
+      "name": "Eastern North America",
+      "parent_id": "global.neolithic.agricultural-revolution",
+      "start_year": -3076,
+      "end_year": -1851,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Squash at Phillips Spring 5,025 cal BP, sunflower at the Hayes site 4,840 cal BP, marsh elder c. 4,400 BP, chenopod c. 3,800 BP. Roughly five thousand years after the Fertile Crescent, which is why this node runs past the Neolithic.",
+      "source_ids": [
+        "smith-eastern-north-america"
+      ],
+      "summary": "Squash, sunflower, marsh elder and chenopod — a fully independent centre, and one of the latest.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.neolithic.agricultural-revolution.southwest-amazonia",
+      "kind": "period",
+      "name": "Southwest Amazonia",
+      "parent_id": "global.neolithic.agricultural-revolution",
+      "start_year": -8401,
+      "end_year": -4901,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Phytolith evidence from the Teotonio site: manioc by c. 10,350 BP, squash by c. 10,250 BP, maize present by c. 6,850 BP.",
+      "source_ids": [
+        "plos-teotonio-amazonia"
+      ],
+      "summary": "Manioc and squash cultivated on forest islands of the Llanos de Moxos, far earlier than Amazonian agriculture was thought to begin.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.firsts.spun-fibre",
+      "kind": "threshold",
+      "name": "Spun Fibre",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -30051,
+      "end_year": null,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Oldest layer 32,000-26,000 BP. Cordage and possible basketry, not woven cloth — those are separate thresholds tens of millennia apart.",
+      "source_ids": [
+        "kvavadze-2009-dzudzuana-flax"
+      ],
+      "date_precision": "minimum",
+      "summary": "Wild flax from Dzudzuana Cave, Georgia, twisted into cordage and dyed turquoise, pink and black."
+    },
+    {
+      "id": "global.prehistory.firsts.pottery",
+      "kind": "threshold",
+      "name": "Pottery",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -18051,
+      "end_year": null,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "20,000-19,000 cal BP, some 2,000-3,000 years older than any other East Asian pottery.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Pottery is not a marker of farming or settling down. Here it predates agriculture in the same region by over ten millennia.",
+          "source_ids": [
+            "wu-2012-xianrendong-pottery"
+          ]
+        }
+      ],
+      "source_ids": [
+        "wu-2012-xianrendong-pottery"
+      ],
+      "date_precision": "minimum",
+      "summary": "Ceramic vessels from Xianrendong Cave, Jiangxi — made by hunter-gatherers ten thousand years before anyone in the region farmed."
+    },
+    {
+      "id": "global.prehistory.firsts.dog",
+      "kind": "threshold",
+      "name": "Domestic Dog",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -13851,
+      "end_year": null,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Oldest confirmed genetic evidence is 15,800-14,200 years ago, from sites in Britain and Turkiye. Successive ancient-genome studies have pushed this progressively earlier, and a Palaeolithic origin is now firm even though the exact date and place are not.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not a product of farming: dogs precede agriculture by thousands of years and were domesticated by foragers.",
+          "source_ids": [
+            "nature-2026-palaeolithic-dogs"
+          ]
+        }
+      ],
+      "source_ids": [
+        "nature-2026-palaeolithic-dogs"
+      ],
+      "date_precision": "minimum",
+      "summary": "The first domesticated animal, and the only one domesticated by hunter-gatherers rather than farmers."
+    },
+    {
+      "id": "global.prehistory.firsts.fermented-drink",
+      "kind": "threshold",
+      "name": "Fermented Drink",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -11751,
+      "end_year": null,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "13,700-11,700 cal BP. The Natufian is pre-agricultural, so this predates domesticated cereals by millennia.",
+      "source_ids": [
+        "liu-2018-raqefet-fermentation"
+      ],
+      "date_precision": "minimum",
+      "summary": "Residues of fermented wheat and barley in stone mortars at Raqefet Cave, made by Natufian foragers from wild cereals."
+    },
+    {
+      "id": "global.prehistory.firsts.cereal-farming",
+      "kind": "threshold",
+      "name": "Cereal Domestication",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -8651,
+      "end_year": null,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "10,600-9,900 cal BP for the earliest definite domesticated wheat. Barley follows at Tell Aswad, 10,200-9,550 cal BP. A 2025 genetic study puts the domestication-associated barley haplotype as much as 27,000 years old, which no archaeobotanical evidence supports; that gap is unresolved.",
+      "source_ids": [
+        "sw-asian-founder-crops-table",
+        "fuller-2020-protracted-domestication"
+      ],
+      "date_precision": "minimum",
+      "summary": "Einkorn and emmer wheat at Cayonu and Cafer Hoyuk: the beginning of the crop package that spread across three continents."
+    },
+    {
+      "id": "global.prehistory.firsts.woven-cloth",
+      "kind": "threshold",
+      "name": "Woven Cloth",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -6700,
+      "end_year": null,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "c. 6700-6500 cal BC.",
+      "source_ids": [
+        "catalhoyuk-2021-earliest-textiles"
+      ],
+      "date_precision": "minimum",
+      "summary": "Preserved woven textile from Catalhoyuk — spinning and weaving, as distinct from the far older twisting of fibre into cord."
+    },
+    {
+      "id": "global.prehistory.firsts.irrigation",
+      "kind": "threshold",
+      "name": "Irrigation",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -6200,
+      "end_year": null,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Samarra culture, c. 6200-5700 BC.",
+      "source_ids": [
+        "isac-choga-mami-irrigation"
+      ],
+      "date_precision": "minimum",
+      "summary": "Canals and ditches at Choga Mami in Mesopotamia, the first farming that reshaped the land to suit itself."
+    },
+    {
+      "id": "global.prehistory.firsts.wheel",
+      "kind": "threshold",
+      "name": "The Wheel",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -3500,
+      "end_year": null,
+      "tier": "foundational",
+      "start_dating_method": "typological",
+      "standing": "majority",
+      "as_of": "2026-08-08",
+      "date_note": "Uruk pictographs c. 3500-3350 BCE and the Bronocice pot at 3635-3370 cal BCE are effectively contemporaneous. The oldest surviving physical wheel, from the Ljubljana Marshes, is later at 3340-3030 cal BC. Near-simultaneous appearance is the safest claim; priority is not settled.",
+      "alternatives": [
+        {
+          "label": "Central European priority (Bronocice pot)",
+          "standing": "majority",
+          "start_year": -3635,
+          "start_year_max": -3370,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Funnelbeaker wagon depiction from Poland, on equal footing with Uruk rather than derived from it.",
+          "source_ids": [
+            "antiquity-earliest-wheeled-vehicles"
+          ]
+        }
+      ],
+      "source_ids": [
+        "antiquity-earliest-wheeled-vehicles"
+      ],
+      "date_precision": "minimum",
+      "summary": "Wheeled wagons appear in Mesopotamia and central Europe at nearly the same moment, and which came first is unresolved."
+    },
+    {
+      "id": "global.prehistory.firsts.writing",
+      "kind": "threshold",
+      "name": "Writing",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -3400,
+      "end_year": null,
+      "tier": "foundational",
+      "start_dating_method": "typological",
+      "standing": "majority",
+      "as_of": "2026-08-08",
+      "date_note": "Mesopotamian proto-cuneiform c. 3400-3200 BCE; the Abydos tomb U-j tags c. 3320 BCE. The ranges overlap and the two systems developed independently, so neither is assigned priority here.",
+      "alternatives": [
+        {
+          "label": "Egyptian priority (Abydos tomb U-j)",
+          "standing": "majority",
+          "start_year": -3320,
+          "dating_method": "typological",
+          "note": "Bone and ivory tags bearing early hieroglyphic signs, Naqada III.",
+          "source_ids": [
+            "oup-origins-of-writing"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not a single invention that spread: Mesopotamian and Egyptian writing arose independently within overlapping date ranges.",
+          "source_ids": [
+            "oup-origins-of-writing"
+          ]
+        }
+      ],
+      "source_ids": [
+        "oup-origins-of-writing"
+      ],
+      "date_precision": "minimum",
+      "summary": "Proto-cuneiform at Uruk and hieroglyphic tags at Abydos — two independent inventions whose dates overlap."
+    },
+    {
+      "id": "global.prehistory.firsts.horse-domestication",
+      "kind": "threshold",
+      "name": "Horse Domestication",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -2200,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "The DOM2 lineage emerges c. 2200 BCE and spreads rapidly after 2000 BC. Botai horses, c. 3500 BC, remain the earliest known husbandry but are a genetic dead end — Przewalski's ancestry, not ours. The two answer different questions and conflating them is the usual error.",
+      "alternatives": [
+        {
+          "label": "Botai husbandry, c. 3500 BC",
+          "standing": "superseded",
+          "start_year": -3500,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Earliest known horse husbandry, but not ancestral to modern horses.",
+          "source_ids": [
+            "science-2018-botai-horses"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Botai is still widely cited as the origin of domestic horses; genomics showed in 2021 that it is not.",
+          "source_ids": [
+            "nature-2021-horse-origin"
+          ]
+        }
+      ],
+      "source_ids": [
+        "nature-2021-horse-origin",
+        "science-2018-botai-horses"
+      ],
+      "date_precision": "minimum",
+      "summary": "The ancestry of every modern domestic horse traces to the lower Volga-Don steppe, not to the older Botai husbandry once assumed to be its origin."
+    },
+    {
+      "id": "global.prehistory.firsts.chicken",
+      "kind": "threshold",
+      "name": "Domestic Chicken",
+      "parent_id": "global.prehistory.firsts",
+      "start_year": -1650,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "First unambiguous domestic chicken bones at Ban Non Wat, Thailand, 1650-1250 BCE. Chickens reach South Asia and Mesopotamia only in the late 2nd millennium BCE, and Mediterranean Europe around 800 BCE.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Long attributed to an Indian origin; a 2022 reassessment placed the earliest secure evidence in Southeast Asia instead.",
+          "source_ids": [
+            "chicken-2022-southeast-asia"
+          ]
+        }
+      ],
+      "source_ids": [
+        "chicken-2022-southeast-asia"
+      ],
+      "date_precision": "minimum",
+      "summary": "The world's most numerous bird was domesticated in mainland Southeast Asia, far later and further east than long assumed."
     },
     {
       "id": "west-asia.prehistory.epipalaeolithic",

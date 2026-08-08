@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 125780,
+  "gzipBytes": 130161,
   "recordedAt": "2026-08-08",
-  "note": "v3.4.0.0 + ages spine and regional navigation (data 0.7.0.0). Content growth from regional Chalcolithic, Levantine Epipalaeolithic and Nabta Playa phases."
+  "note": "v3.5.0.0 + Neolithic transition reframe, eight centres of origin and eleven behavioural firsts (data 0.8.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

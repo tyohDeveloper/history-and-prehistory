@@ -24,9 +24,9 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // The two tracks had been asserted the wrong way round since the renumbering:
   // v0.5.0 is the DATA version and 3.1.0 was the APP version. The test was
   // failing for that reason, not because the header was wrong.
-  await expect(page.getByTestId("text-app-version")).toContainText("v3.4.0.0");
-  await expect(page.getByTestId("text-app-version")).toContainText("data 0.7.0.0");
-  await expect(page.getByTestId("panel-footer-root")).toContainText("1,461 entities");
+  await expect(page.getByTestId("text-app-version")).toContainText("v3.5.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 0.8.0.0");
+  await expect(page.getByTestId("panel-footer-root")).toContainText("1,480 entities");
 });
 
 test("drills Region -> Era -> Period through the columns", async ({ page }) => {
@@ -294,4 +294,38 @@ test("the handoff makes no network request of its own", async ({ page }) => {
   await page.getByTestId("option-tree-node-east-asia").click();
   await expect(page.getByTestId("link-handoff-wikipedia")).toBeVisible();
   expect(external).toEqual([]);
+});
+
+test("shows caveats and competing dates, which nothing rendered before", async ({ page }) => {
+  // 62 entities carried caveats and 56 carried alternatives that no code path
+  // read. This asserts the epistemic layer actually reaches the screen.
+  await page.getByTestId("input-search-query").fill("Neolithic Transition");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+
+  const caveats = page.getByTestId("panel-caveats-root");
+  await expect(caveats).toContainText("Common misconception");
+  await expect(caveats).toContainText("Not a revolution and not an event");
+
+  const alts = page.getByTestId("panel-alternatives-root");
+  await expect(alts).toContainText("Minority view");
+  await expect(alts).toContainText("Abbo and Gopher");
+});
+
+test("marks a superseded rival claim as superseded", async ({ page }) => {
+  // Botai is still widely cited as the origin of domestic horses. It must not
+  // read as a live competitor to the Volga-Don date.
+  await page.getByTestId("input-search-query").fill("Horse Domestication");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+  const alts = page.getByTestId("panel-alternatives-root");
+  await expect(alts).toContainText("Botai husbandry");
+  await expect(alts).toContainText("Superseded");
+  await expect(alts).toContainText("3500 BCE");
+});
+
+test("omits the range when a rival claim is not about dates", async ({ page }) => {
+  // The Abbo-Gopher dispute is about the shape of the transition, not its
+  // years. An em dash there would imply unknown dates instead of an argument.
+  await page.getByTestId("input-search-query").fill("Neolithic Transition");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+  await expect(page.getByTestId("panel-alternatives-root").locator(".alt-range")).toHaveCount(0);
 });

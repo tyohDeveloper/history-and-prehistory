@@ -11,7 +11,8 @@ import {
   searchEntities,
   visibleAtTier,
 } from "./entity/tree";
-import type { Entity, EntityKind, Tier } from "./entity/entity";
+import { formatYear } from "./entity/tree";
+import type { CaveatKindId, Entity, EntityKind, StandingId, Tier } from "./entity/entity";
 import { readYearIn, type CalendarReading } from "./calendars/convert";
 import { CALENDARS, getCalendar } from "./calendars/registry";
 import { parseSelection, serializeSelection, toggleCalendar } from "./calendars/selection";
@@ -29,6 +30,23 @@ const GLYPH: Record<EntityKind, string> = {
   event: "\u25C7",
   taxon: "\u25D0",
   threshold: "\u25B3",
+};
+
+const STANDING_LABEL: Record<StandingId, string> = {
+  consensus: "Consensus",
+  majority: "Majority view",
+  minority: "Minority view",
+  // Kept distinct on purpose: a received date such as Rome's 753 BCE is not a
+  // finding, and showing it with the same weight as a measured one is the
+  // commonest way a history reference misleads.
+  traditional: "Traditional date",
+  superseded: "Superseded",
+};
+
+const CAVEAT_LABEL: Record<CaveatKindId, string> = {
+  misconception: "Common misconception",
+  "naming-confusion": "Naming",
+  "contested-existence": "Contested",
 };
 
 const KIND_LABEL: Record<EntityKind, string> = {
@@ -250,12 +268,86 @@ function renderReadout(): HTMLElement {
   if (e.calendar_ids !== undefined && e.calendar_ids.length > 0) {
     fact("Calendars", e.calendar_ids.join(", "));
   }
+  if (e.standing !== undefined) fact("Standing", STANDING_LABEL[e.standing]);
   if (e.capital !== undefined) fact("Capital", e.capital);
+  if (e.as_of !== undefined) fact("Dispute last checked", e.as_of);
   box.append(dl);
+  const caveats = renderCaveats(e);
+  if (caveats !== null) box.append(caveats);
+  const alternatives = renderAlternatives(e);
+  if (alternatives !== null) box.append(alternatives);
   const calendars = renderCalendarRows(e);
   if (calendars !== null) box.append(calendars);
   box.append(renderHandoff(e));
   return box;
+}
+
+/**
+ * Caveats: the corrections the reader most likely needs.
+ *
+ * These were authored across several dataset passes and, until now, rendered
+ * nowhere — 62 entities carried a `caveats` array that no code path read. The
+ * dataset's whole reason for existing is that it says where the received story
+ * is wrong, so leaving them unrendered removed the point of it.
+ *
+ * They sit above the calendar readout deliberately. A misconception about what
+ * a date *means* is worth more than the same date expressed in four calendars.
+ */
+function renderCaveats(entity: Entity): HTMLElement | null {
+  const items = entity.caveats ?? [];
+  if (items.length === 0) return null;
+  const box = el("div", { class: "caveats", "data-testid": "panel-caveats-root" });
+  box.append(el("div", { class: "caveats-head" }, "Worth knowing"));
+  const grid = el("div", { class: "caveat-grid" });
+  for (const c of items) {
+    grid.append(el("span", { class: `caveat-kind caveat-${c.kind}` }, CAVEAT_LABEL[c.kind]));
+    grid.append(el("span", { class: "caveat-text", dir: "auto" }, c.text));
+  }
+  box.append(grid);
+  return box;
+}
+
+/**
+ * Rival dating claims, kept apart rather than averaged.
+ *
+ * A wide range implies the middle is likeliest. When the field actually
+ * disagrees about which of two dates is right, that is a different claim, and
+ * flattening it into one range misreports it — which is why `alternatives`
+ * exists in the schema separately from the uncertainty bounds.
+ *
+ * The entity's own standing is shown alongside, so a `superseded` alternative
+ * reads as history-of-the-field rather than as a live competitor.
+ */
+function renderAlternatives(entity: Entity): HTMLElement | null {
+  const items = entity.alternatives ?? [];
+  if (items.length === 0) return null;
+  const box = el("div", { class: "alts", "data-testid": "panel-alternatives-root" });
+  box.append(el("div", { class: "alts-head" }, "Competing dates"));
+  for (const a of items) {
+    const row = el("div", { class: "alt" });
+    const head = el("div", { class: "alt-head" });
+    head.append(el("span", { class: "alt-label", dir: "auto" }, a.label));
+    head.append(el("span", { class: `alt-standing alt-${a.standing}` }, STANDING_LABEL[a.standing]));
+    row.append(head);
+    const span = altRange(a);
+    if (span !== null) row.append(el("span", { class: "alt-range" }, span));
+    if (a.note !== undefined) row.append(el("p", { class: "alt-note", dir: "auto" }, a.note));
+    box.append(row);
+  }
+  return box;
+}
+
+/**
+ * An alternative may carry no dates at all — Abbo and Gopher dispute the shape
+ * of the Neolithic transition, not its calendar years — so the range is
+ * omitted rather than rendered as an em dash, which would imply unknown dates
+ * instead of an argument that is not about dates.
+ */
+function altRange(a: NonNullable<Entity["alternatives"]>[number]): string | null {
+  const { start_year: s, end_year: e } = a;
+  if (s === undefined || s === null) return null;
+  if (e === undefined || e === null) return formatYear(s);
+  return `${formatYear(s)} \u2013 ${formatYear(e)}`;
 }
 
 /**

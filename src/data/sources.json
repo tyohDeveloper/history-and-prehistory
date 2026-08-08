@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
-  "dataset_version": "0.7.0.0",
-  "generated_at": "2026-08-08T19:47:08Z",
+  "dataset_version": "0.8.0.0",
+  "generated_at": "2026-08-08T20:13:32Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -1101,6 +1101,198 @@
       "citation": "'Origins of African Metallurgies', Oxford Research Encyclopedias",
       "url": "https://academic.oup.com/edited-volume/61643/chapter/539815102?guestAccessKey=",
       "note": "Evidence for metallurgy in Niger before 1000 BC remains in doubt; most of sub-Saharan Africa goes stone to iron."
+    },
+    {
+      "id": "wu-2012-xianrendong-pottery",
+      "kind": "scholarly",
+      "citation": "Wu et al. (2012), 'Early Pottery at 20,000 Years Ago in Xianrendong Cave, China', Science",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22745428/",
+      "note": "20,000-19,000 cal BP; pottery predates agriculture in the region by over ten millennia."
+    },
+    {
+      "id": "kvavadze-2009-dzudzuana-flax",
+      "kind": "scholarly",
+      "citation": "Kvavadze, Bar-Yosef et al. (2009), '30,000-Year-Old Wild Flax Fibers', Science",
+      "url": "https://ghss.ug.edu.ge/storage/themes/June2025/3ev9ncSLyickvEe40dMm.pdf",
+      "note": "Dzudzuana Cave, Georgia. Spun and dyed flax; cordage rather than woven cloth."
+    },
+    {
+      "id": "catalhoyuk-2021-earliest-textiles",
+      "kind": "scholarly",
+      "citation": "'Multidisciplinary investigation reveals the earliest textiles' (2021), Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-021-01349-5",
+      "note": "Catalhoyuk woven cloth, c. 6700-6500 cal BC."
+    },
+    {
+      "id": "sw-asian-founder-crops-table",
+      "kind": "scholarly",
+      "citation": "'Neolithic Foundations for the Evolution of Plant Phenotypic Diversity: Wheat and Barley Domestication', Current Anthropology",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/658367",
+      "note": "Einkorn and emmer at Cayonu and Cafer Hoyuk c. 10,600-9,900 cal BP."
+    },
+    {
+      "id": "fuller-2020-protracted-domestication",
+      "kind": "scholarly",
+      "citation": "'Plant domestication in the Neolithic Near East' (2020), Quaternary Science Reviews",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0277379120303747",
+      "note": "The protracted-autonomous model: millennia-long, multi-focus, largely unconscious."
+    },
+    {
+      "id": "abbo-gopher-core-area-critique",
+      "kind": "scholarly",
+      "citation": "Abbo, Gopher et al., critical review of the protracted domestication model, Journal of Experimental Botany",
+      "url": "https://academic.oup.com/jxb/article/63/12/4333/643435",
+      "note": "Minority: argues for a rapid, conscious, core-area domestication."
+    },
+    {
+      "id": "fuller-2022-reply-to-abbo",
+      "kind": "scholarly",
+      "citation": "Fuller et al., 'Progress in domestication research: a reply to Abbo and Gopher' (2022)",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10158703/1/Fuller_Reply%20to%20Abbo_v3.3.pdf",
+      "note": "Frames the disagreement as active and unresolved."
+    },
+    {
+      "id": "persistent-controversies-neolithic",
+      "kind": "scholarly",
+      "citation": "'Persistent Controversies about the Neolithic Revolution'",
+      "url": "http://www.bicga.org.uk/docs/Persistent_Controversies_about_the_Neolithic.pdf",
+      "note": "Records the terminology shift from Childe's 'revolution' to 'Neolithic transition'."
+    },
+    {
+      "id": "science-2024-rice-trajectory",
+      "kind": "scholarly",
+      "citation": "'Rice's trajectory from wild to domesticated: an archaeobotanical perspective' (2024), Science",
+      "url": "https://www.science.org/doi/abs/10.1126/science.ade4487",
+      "note": "Exploitation from c. 24,000 BP, cultivation c. 13,000 BP, domestication c. 11,000 BP."
+    },
+    {
+      "id": "antiquity-earliest-rice-domestication",
+      "kind": "scholarly",
+      "citation": "'The earliest rice domestication in China', Antiquity Project Gallery",
+      "url": "https://www.cambridge.org/core/journals/antiquity-project-gallery/article/earliest-rice-domestication-in-china/0F8D71ECFBAE8E8A6201B558500A84AB"
+    },
+    {
+      "id": "pnas-2012-early-millet",
+      "kind": "scholarly",
+      "citation": "'Early millet use in northern China' (2012), PNAS",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1115430109"
+    },
+    {
+      "id": "miller-2016-millet-phytolith-dispute",
+      "kind": "scholarly",
+      "citation": "Miller et al. (2016), The Holocene, on the millet phytolith-versus-macrobotanical discrepancy",
+      "url": "https://www.sas.upenn.edu/~nmiller0/papers/Miller%20&%20al.%202016%20millet.pdf",
+      "note": "Phytolith and seed dates for the same sites disagree by millennia."
+    },
+    {
+      "id": "pnas-2009-balsas-maize",
+      "kind": "scholarly",
+      "citation": "'Starch grain and phytolith evidence for early ninth millennium B.P. maize from the Central Balsas River Valley' (2009), PNAS",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2664021/"
+    },
+    {
+      "id": "guila-naquitz-ams-maize",
+      "kind": "scholarly",
+      "citation": "'Documenting domestication: the intersection of genetics and archaeology' (Guila Naquitz AMS maize dates)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC33375/",
+      "note": "Direct AMS cob dates 6,250-6,230 cal BP, c. 2,400 years later than the starch evidence."
+    },
+    {
+      "id": "pnas-2016-jiskairumoko-potato",
+      "kind": "scholarly",
+      "citation": "PNAS (2016), starch-grain evidence for potato processing at Jiskairumoko, Peru",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5137686/",
+      "note": "3,400-2,200 cal BC; earlier popular claims are not directly supported."
+    },
+    {
+      "id": "elife-2021-south-american-camelids",
+      "kind": "scholarly",
+      "citation": "'Ancient DNA reveals the lost domestication history of South American camelids' (2021), eLife",
+      "url": "https://elifesciences.org/articles/63390"
+    },
+    {
+      "id": "denham-2003-kuk-swamp",
+      "kind": "scholarly",
+      "citation": "Denham et al. (2003), 'Origins of Agriculture at Kuk Swamp in the Highlands of New Guinea', Science",
+      "url": "https://faculty.washington.edu/plape/pacificarchaut12/Denham%20et%20al%202003.pdf",
+      "note": "Phase 1 10,220-9,910 cal BP; Phase 3 ditched cultivation 4,350-3,980 cal BP."
+    },
+    {
+      "id": "smith-eastern-north-america",
+      "kind": "scholarly",
+      "citation": "Smith (2006), 'Eastern North America as an independent center of plant domestication', PNAS",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16894156/",
+      "note": "Squash 5,025 cal BP, sunflower 4,840 cal BP, marsh elder 4,400 BP, chenopod 3,800 BP."
+    },
+    {
+      "id": "plos-teotonio-amazonia",
+      "kind": "scholarly",
+      "citation": "'Ten thousand years of crop cultivation in southwestern Amazonia', PLOS ONE (Teotonio site)",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0199868",
+      "note": "Manioc c. 10,350 BP, squash c. 10,250 BP, maize c. 6,850 BP."
+    },
+    {
+      "id": "nature-2026-palaeolithic-dogs",
+      "kind": "scholarly",
+      "citation": "'Dogs were widely distributed across western Eurasia during the Palaeolithic' (2026), Nature",
+      "url": "https://www.nature.com/articles/s41586-026-10170-x",
+      "note": "Oldest confirmed genetic evidence, 15,800-14,200 years ago."
+    },
+    {
+      "id": "nature-2021-horse-origin",
+      "kind": "scholarly",
+      "citation": "'The origins and spread of domestic horses from the Western Eurasian steppes' (2021), Nature",
+      "url": "https://www.nature.com/articles/s41586-021-04018-9.pdf",
+      "note": "DOM2 lineage from the lower Volga-Don c. 2200 BCE, not Botai."
+    },
+    {
+      "id": "science-2018-botai-horses",
+      "kind": "scholarly",
+      "citation": "'Ancient genomes revisit the ancestry of domestic and Przewalski's horses' (2018), Science",
+      "url": "https://www.science.org/doi/10.1126/science.aao3297",
+      "note": "Botai husbandry remains the earliest known, but is a dead end for modern breeds."
+    },
+    {
+      "id": "chicken-2022-southeast-asia",
+      "kind": "scholarly",
+      "citation": "'The biocultural origins and dispersal of domestic chickens' (2022), PNAS",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35666876/",
+      "note": "Ban Non Wat, Thailand, 1650-1250 BCE; overturns an Indian origin."
+    },
+    {
+      "id": "liu-2018-raqefet-fermentation",
+      "kind": "scholarly",
+      "citation": "Liu et al. (2018), 'Fermented beverage and food storage in 13,000 y-old stone mortars at Raqefet Cave'",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352409X18303468",
+      "note": "Natufian, and so pre-agricultural."
+    },
+    {
+      "id": "isac-choga-mami-irrigation",
+      "kind": "scholarly",
+      "citation": "ISAC, University of Chicago, 'Excavations at Choga Mami, Iraq'",
+      "url": "https://isac.uchicago.edu/sites/default/files/uploads/shared/docs/ar/61-70/67-68a/67-68a_Choga_Mami.pdf",
+      "note": "Canal irrigation c. 6200-5700 BC, Samarra culture."
+    },
+    {
+      "id": "antiquity-earliest-wheeled-vehicles",
+      "kind": "scholarly",
+      "citation": "'Earliest evidence of wheeled vehicles in Europe and the Near East', Antiquity",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/earliest-evidence-of-wheeled-vehicles-in-europe-and-the-near-east/4835B594180234DC116F6F0105771573",
+      "note": "Uruk pictographs and the Bronocice pot are near-simultaneous, c. 3500-3350 BCE."
+    },
+    {
+      "id": "oup-origins-of-writing",
+      "kind": "scholarly",
+      "citation": "'The Origins of Writing in Northeastern Africa', Oxford Handbook chapter",
+      "url": "https://academic.oup.com/edited-volume/61663/chapter/553461749?searchresult=1",
+      "note": "Mesopotamian and Egyptian date ranges overlap; the two systems are independent."
+    },
+    {
+      "id": "springer-domestication-centres-review",
+      "kind": "scholarly",
+      "citation": "Review of independent domestication centres, Genetic Resources and Crop Evolution",
+      "url": "https://link.springer.com/article/10.1007/s10722-021-01114-7",
+      "note": "Harlan counted 6 centres, Vavilov 12, Purugganan and Fuller 24."
     }
   ]
 }

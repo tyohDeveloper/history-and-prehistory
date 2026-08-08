@@ -14,6 +14,40 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.5.0.0-app] — 2026-08-08
+
+### Added
+
+- **The epistemic layer is now rendered.** 62 entities carried `caveats`, 56
+  carried `alternatives`, 180 carried `standing` and 175 carried `source_ids`,
+  and no code path read any of them. `caveatsOf` and `entityCaveats` existed in
+  `chrono/` and were unit-tested, but `main.ts` never called them, so the whole
+  point of the dataset — that it says where the received story is wrong — was
+  invisible. Same failure as the research handoff in 3.2.0.0: model and tests
+  present, no wiring.
+  - "Worth knowing" block, above the calendar readout, because a misconception
+    about what a date *means* outranks the same date in four calendars.
+  - "Competing dates" block for rival claims, kept apart rather than averaged
+    into a range that would imply the middle is likeliest.
+  - `Standing` and `Dispute last checked` rows in the fact list.
+  - A `superseded` rival renders struck through, so Botai does not read as a
+    live competitor to the Volga-Don horse date.
+  - Costs 0.6 kB gzip. Source citations are **not** yet rendered: the trimmed
+    lookup for the 202 referenced sources is 14.6 kB gzip, which would exceed
+    the build ceiling, and that is a size-budget decision rather than an
+    oversight.
+
+### Changed
+
+- Ships dataset 0.8.0.0: the Neolithic transition reframed, its eight centres
+  of origin, and eleven behavioural firsts.
+- Build size baseline rebased to 130,161 bytes gzip, and now measured with
+  `zlib.gzipSync` to match `scripts/verify-build.mjs`. The previous baseline was
+  recorded with a different compressor, so it was not comparable to the value
+  the check computes.
+
+See [`docs/DATASET-CHANGELOG.md`](docs/DATASET-CHANGELOG.md) for 0.8.0.0.
+
 ## [3.4.0.0-app] — 2026-08-08
 
 ### Changed

@@ -1,5 +1,77 @@
 # Changelog
 
+## 0.8.0.0 — The Neolithic transition (2026-08-08)
+
+Aimed by `tools/coverage.py`, which found "Agricultural Revolution" holding
+5,500 years with zero children — the most consequential transition in scope
+stored as one undifferentiated block. Research in `docs/neolithic-research.md`
+(62 sources).
+
+### Changed — "Agricultural Revolution" was wrong twice over
+
+The node was an `event` named after a model the field has abandoned. Both are
+now corrected; the id `global.neolithic.agricultural-revolution` is unchanged,
+so nothing addressing it breaks.
+
+- `kind` event → era. A 4,000-year process is not "a discrete moment".
+- Named **Neolithic Transition**. The dominant model is protracted, multi-focus
+  and largely unconscious rather than invented, and the field has largely
+  replaced Childe's "revolution" for that reason. The old names stay as
+  aliases, because that is what readers arrive holding.
+- `end_year` -4500 → -1800. The end is diachronous and outlasts the Neolithic
+  label itself, because Eastern North America domesticates thousands of years
+  after the Fertile Crescent.
+- Carries the dissent rather than erasing it: Abbo and Gopher's rapid,
+  conscious, core-area model is recorded as a live minority position, with the
+  published exchange cited.
+- Caveat that "how many independent centres exist" is unsettled — Harlan
+  counted 6, Vavilov 12, Purugganan and Fuller 24.
+
+### Added — eight independent centres
+
+Fertile Crescent, Yangtze Valley, Yellow River Basin, Mesoamerica, Andes, New
+Guinea Highlands, Eastern North America, Southwest Amazonia.
+
+- Yangtze carries the 2024 *Science* trajectory (exploitation 24,000 BP,
+  domestication 11,000 BP) as a minority alternative to the Shangshan
+  consensus, rather than replacing it.
+- Yellow River is marked `disputed`: phytolith dates at Cishan reach 10,300 cal
+  BP while macrobotanical remains from the same sites are as late as 5,900 cal
+  BC. Both are recorded; neither is silently picked.
+- Mesoamerican maize keeps its two figures apart — starch and phytoliths at
+  8,700 cal BP versus direct AMS cobs at 6,250 cal BP — because they rest on
+  different evidence and averaging them would be false precision.
+
+### Added — eleven behavioural firsts
+
+The firsts layer previously stopped at African cereals. The additions were
+chosen for what they contradict as much as for what they record.
+
+- **Pottery** (Xianrendong, 20,000 cal BP) predates farming in the same region
+  by over ten millennia. Ceramics are not a marker of agriculture or sedentism.
+- **Domestic dog** (15,800 years ago) and **fermented drink** (Raqefet, 13,700
+  cal BP) are both Palaeolithic and both pre-agricultural.
+- **Horse domestication** is dated to the Volga-Don DOM2 lineage at 2200 BCE.
+  Botai, c. 3500 BC, is recorded as `superseded`: it remains the earliest known
+  husbandry but is a genetic dead end, and conflating the two is the usual
+  error in older secondary sources.
+- **Domestic chicken** (Ban Non Wat, Thailand, 1650 BCE), following the 2022
+  reassessment that displaced an Indian origin.
+- **The wheel** and **writing** are both recorded as unresolved priority
+  disputes with two equal-standing claims, not as single inventions that spread.
+- Also: spun fibre, woven cloth, cereal domestication, irrigation.
+
+### Not added
+
+Flagged `n.a.` in research and deliberately left out rather than guessed:
+Yuchanyan pottery, plough dates, the Bactrian camel, Chinese *qu* fermentation,
+and broad potato claims earlier than the Jiskairumoko direct evidence.
+
+### Counts
+
+1,461 → 1,480 entities. 155 → 175 cited. 175 → 203 sources. Schema unchanged at
+3.0.0.
+
 ## 0.7.0.0 — Ages spine and regional navigation (2026-08-08)
 
 ### Added — Chalcolithic, regionally and never globally

@@ -436,3 +436,82 @@ footer a { color: var(--ink-dim); }
   font-size: 11px;
   color: var(--ink-faint);
 }
+
+/* --- Caveats and competing dates ------------------------------------------
+   The epistemic layer. These read as annotations on the date rather than as
+   more facts about it, so they sit outside the definition list and carry a
+   rule down the left edge instead of a heading row of their own. */
+
+.caveats,
+.alts {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.caveats-head,
+.alts-head {
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 6px;
+}
+
+/* A grid rather than per-row flex, so the label column is sized once to the
+   widest label and every caveat text starts at the same indent. With flex,
+   "Common misconception" and "Contested" produced two different indents. */
+.caveat-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 10px;
+  align-items: baseline;
+  max-width: 78ch;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.caveat-kind {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.caveat-misconception { color: var(--accent); }
+.caveat-text { color: var(--ink-dim); overflow-wrap: anywhere; }
+
+.alt {
+  max-width: 78ch;
+  margin-bottom: 8px;
+  padding-left: 9px;
+  border-left: 2px solid var(--line);
+}
+.alt-head {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.alt-label { font-size: 12px; color: var(--ink); }
+.alt-standing {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+/* A superseded claim is history of the field, not a live competitor, and must
+   not read as one. */
+.alt-superseded { text-decoration: line-through; }
+.alt-minority { color: var(--accent); }
+.alt-range {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-dim);
+}
+.alt-note {
+  margin: 3px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-faint);
+  overflow-wrap: anywhere;
+}

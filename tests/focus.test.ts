@@ -6,7 +6,8 @@ import {
   degreeOfInterest,
   type DoiContext,
 } from "../src/focus/degreeOfInterest";
-import { extentOf, intervalGap } from "../src/focus/intervalGap";
+import { extentOf } from "../src/focus/extent";
+import { intervalGap } from "../src/focus/intervalGap";
 import { localGapScale } from "../src/focus/localGapScale";
 import { siblingTierScore } from "../src/focus/siblingTierScore";
 

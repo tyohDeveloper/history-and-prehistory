@@ -1587,7 +1587,7 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**14 open, 20 resolved.** Audited 2026-08-08; Q-33 and Q-34 added when the lens shipped.
+**13 open, 21 resolved.** Audited 2026-08-08; Q-33 and Q-34 added when the lens shipped.
 
 **Q-30. Should `dating_method` be per-boundary rather than per-entity?** One field
 cannot describe an entity whose start and end rest on different science.
@@ -1658,73 +1658,17 @@ It blocks `Q-23` and `Q-24`, which cannot be settled without something to settle
 sub-questions: marker in the tree row or only in the readout; popover or inline expansion; whether
 source lists belong with the claim or in one footer. The a11y contract is already specified above.
 
-**Q-32. How is the §3 granularity debt paid down, and when does the checker become a gate?**
-`docs/CODING-STANDARDS.md` arrived from the Replit side declaring itself binding, with hard limits
-enforced by CI. It postdates this codebase, so nothing here was written against it. `tools/
-check_standards.py` sizes the debt rather than guessing at it. It stood at **20 violations**;
-the §3.8/§3.9 refactor cleared both naming rules, leaving **18**:
+~~**Q-32.** Standards debt: the §3 checker reports but does not enforce.~~ — **resolved.**
+`tools/check_standards.py` now exits non-zero, and `npm run build` and CI both run it. Two regimes,
+because the rules were in two states: §3.8/§3.9 naming were at zero so any violation fails outright,
+while the 18 size and export violations ratchet against `DEBT_BASELINE` — the count may fall, never
+rise. Failing on all 18 immediately would only have got the check disabled.
 
-| Rule | Count | Worst cases |
-|---|---|---|
-| 3.3 file length by layer | 5 | `calendars/registry.ts` 310/100, `chrono/year.ts` 295/100, `main.ts` 385/250 |
-| 3.1 exported body ≤ 20 lines | 5 | `readYear` 74, `displayRange` 44, `datingOf` 34 |
-| 3.2 one function export per PURE file | 8 | `chrono/year.ts` has 23, `tree.ts` 9, `chrono/bp.ts` 8 |
-| 3.8 name for responsibility, not shape | 0 | cleared: `src/lib` eliminated, `types.ts` split by domain |
-| 3.9 no untagged barrel files | 0 | both found and fixed during reconciliation |
-
-Two of these are mine from this week (`displayRange`, and `bp.ts` at 129/100), so this is not
-purely inherited.
-
-The checker reports and does not gate, because gating today would simply fail the build. §16.1 is
-explicit that a checker scoped to the compliant part is decoration, so the checker covers all of
-`src/` including the view. §16.2 says extract misplaced logic before splitting on line count, which
-matters here: `chrono/year.ts` is large because it holds the branded-type layer, the disclosure
-model and the caveat vocabulary in one file — three responsibilities, not one long one. Splitting it
-by size would redistribute the violation.
-
-Open: whether to take the §11 route (dated, owned, expiring exceptions in
-`.architecture-exceptions.json`) for the inherited files and comply strictly for new code, or to do
-the decomposition first. The second is honest but is a substantial refactor of working, tested code
-with 166 unit and 20 browser tests to keep green.
-
-**Reconciled against the wiki 2026-08-08.** My earlier note that the two could not be compared was
-wrong — the workspace snapshot was two days stale. The wiki was rebuilt that morning, adding five
-pages (`architecture-review-lessons`, `coding-standards-artifact-contract`,
-`coding-standards-data-layer`, `coding-standards-localization`, `repository-conventions`) and growing
-the shared page by half. After syncing:
-
-- **The derived copy is faithful.** All nine wiki pages it cites now resolve, the index lists them,
-  and every numeric limit matches: function ≤ 20, PURE-CORE 100, PURE/STATE/CONTROLLER 150, VIEW 250
-  with an 80-line markup cap. §3.8 naming, §3.9 barrels, the coverage rule, the expiring-exception
-  mechanism and the superseded-predecessor history are all present on both sides. Nothing to
-  propagate in either direction.
-- **Two violations the reconciliation surfaced**, both fixed: `chrono/bp.ts` re-exported an imported
-  `BP_DATUM_YEAR` that nothing consumed — a §3.9 barrel and §3.6 dead code at once — and
-  `temporal/temporal.ts` is a legitimate §1.7 source-selection shim that lacked the required
-  `EXCEPTION` tag, which made a permitted carve-out indistinguishable from an oversight.
-- **Two §3.8 violations remain and are structural.** `src/` and `src/entity/entity.ts` both use
-  prohibited shape names, and §0 of the repo copy *maps PURE to `src/<domain>/**`* — so the path mapping
-  enshrines a name the naming rule forbids. Renaming touches every import in the app.
-- **One discrepancy to propagate upward.** The repo copy tags the barrel carve-out
-  `EXCEPTION [coding-standards §3.8]` under Rule 3.**9**. The wiki gives no tag number, so this is
-  an internal slip in the derived copy rather than a divergence. Amend the wiki first per its own
-  change process.
-
-**The adoption question is settled by the wiki's own rule:** "A standard is not adopted until the
-enforcing checker fails on a violation." `tools/check_standards.py` reports and does not fail, so §3
-is *not yet adopted* in this repository. That is the honest status, and it makes the choice concrete:
-adoption means making the checker fail, which means either paying the debt down or filing dated
-exceptions for what remains.
-
-### Non-blocking
-
-**Q-12. How are simultaneous calendars chosen?** User selection persisted in the URL fragment, or
-derived from the selected region via the dataset's `calendar_ids` — which exists for this and is
-populated only on East Asian entities.
-
-**Q-13. What does calendar input resolve to?** Typing `AH 897` — select the matching node, filter
-the tree, or just display the conversion?
-
+Verifying it by reintroducing the bug found a real one, for the fifth time. `src/focus/` was never
+added to `LAYERS`, so the six lens files were checked against nothing for a whole feature — the same
+stale-path-map failure as before, this time hiding my own new code. The true count was 19, not 18:
+`intervalGap.ts` exported two functions. Split rather than baselined. An unmapped domain now fails
+the check instead of defaulting quietly.
 
 
 **Q-33. What are the DOI weights, and how would we know they are right?** The lens ships with

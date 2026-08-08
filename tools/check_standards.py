@@ -27,12 +27,16 @@ SRC = ROOT / "src"
 # enforcement. Keep this in step with §0 of docs/CODING-STANDARDS.md.
 LAYERS = [
     ("PURE-CORE", ("src/calendars/", "src/chrono/", "src/temporal/"), 100),
-    ("PURE", ("src/entity/", "src/dataset/", "src/research/"), 150),
+    ("PURE", ("src/entity/", "src/dataset/", "src/research/", "src/focus/"), 150),
 ]
 VIEW_LIMIT = 250
 
 
 FUNC_LIMIT = 20
+
+
+# Known §3.1-3.3 debt. Ratchet only: may fall, may not rise.
+DEBT_BASELINE = 18
 
 
 def layer_of(rel: str) -> tuple[str, int]:
@@ -201,6 +205,57 @@ def main() -> int:
     total = len(file_rows) + len(func_rows) + len(export_rows) + len(shape) + len(barrels)
     print()
     print(f"TOTAL §3 violations: {total}")
+
+    # Enforcement. Until this exits non-zero on a violation the rule is
+    # advisory, and an advisory rule is one a coding agent will re-break the
+    # next time it is convenient. src/lib was deleted once and came straight
+    # back, which is the argument for this block existing.
+    #
+    # Two different regimes, because the rules are in two different states:
+    #
+    #   3.8 / 3.9 naming — currently zero. Anything above zero fails. These
+    #     are the cheap ones to obey and the ones that get broken by reflex.
+    #
+    #   Size and export rules — 18 known violations. Failing on those today
+    #     would just mean the check gets disabled, so instead they ratchet:
+    #     the count may fall and may not rise. Lower DEBT_BASELINE whenever
+    #     the real count drops, or the ratchet stops biting.
+    debt = len(file_rows) + len(func_rows) + len(export_rows)
+    failures: list[str] = []
+    if shape:
+        failures.append(
+            f"§3.8: {len(shape)} shape-named path(s) — "
+            + ", ".join(rel for rel, _ in shape)
+        )
+    if barrels:
+        failures.append(f"§3.9: {len(barrels)} untagged barrel file(s)")
+    unmapped = sorted({
+        rel.rsplit("/", 1)[0]
+        for rel in (p.relative_to(ROOT).as_posix() for p in SRC.rglob("*.ts"))
+        if layer_of(rel)[0] == "UNMAPPED-DOMAIN"
+    })
+    if unmapped:
+        # This is how src/focus/ escaped §3.2 for a whole feature: a new domain
+        # was added and the map was not, so six files were checked against
+        # nothing. A silent default is worse than a wrong one.
+        failures.append(
+            f"unmapped domain(s), add to LAYERS: {', '.join(unmapped)}"
+        )
+    if debt > DEBT_BASELINE:
+        failures.append(
+            f"§3.1-3.3: size/export debt rose to {debt}, baseline is {DEBT_BASELINE}"
+        )
+
+    if failures:
+        print()
+        print("FAILED:")
+        for f in failures:
+            print(f"  {f}")
+        return 1
+
+    if debt < DEBT_BASELINE:
+        print(f"\nDebt fell to {debt}. Lower DEBT_BASELINE to {debt} to hold the gain.")
+    print("\n§3 enforcement passed.")
     return 0
 
 

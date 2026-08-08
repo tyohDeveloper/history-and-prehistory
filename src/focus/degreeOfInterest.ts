@@ -1,4 +1,5 @@
-import { extentOf, intervalGap, type Extent } from "./intervalGap";
+import { extentOf, type Extent } from "./extent";
+import { intervalGap } from "./intervalGap";
 import { localGapScale } from "./localGapScale";
 import { siblingTierScore } from "./siblingTierScore";
 import { treeDistance } from "./treeDistance";

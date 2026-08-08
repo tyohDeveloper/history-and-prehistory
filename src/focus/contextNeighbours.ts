@@ -1,5 +1,5 @@
 import { DEFAULT_WEIGHTS, degreeOfInterest, type DoiContext } from "./degreeOfInterest";
-import { extentOf } from "./intervalGap";
+import { extentOf } from "./extent";
 import { buildIndex, type TreeIndex } from "../entity/tree";
 import type { Entity } from "../entity/entity";
 

@@ -18,8 +18,8 @@ test("boots offline from file:// with no network requests", async ({ page }) => 
 });
 
 test("shows the version stamp and entity count", async ({ page }) => {
-  await expect(page.getByTestId("text-app-version")).toContainText("data 2.1.0");
-  await expect(page.getByTestId("panel-footer-root")).toContainText("1,305 entities");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 2.2.0");
+  await expect(page.getByTestId("panel-footer-root")).toContainText("1,310 entities");
 });
 
 test("drills Region -> Era -> Period through the columns", async ({ page }) => {
@@ -124,4 +124,24 @@ test("still stores nothing across a reload", async ({ page }) => {
   await page.goto("index.html");
   await openEdo(page);
   await expect(page.getByTestId("text-calendar-hebrew")).toHaveCount(0);
+});
+
+test("reaches the prehistory pilot and its deep-time dates", async ({ page }) => {
+  // The five pilot entities are what proves Q-10 is unblocked end to end:
+  // authored with schema 1.1.0 fields, validated, and reaching the UI.
+  await page.getByTestId("option-tree-node-global").click();
+  await page.getByTestId("option-tree-node-global.prehistory").click();
+  await expect(page.getByTestId("option-tree-node-global.prehistory.oldowan")).toBeVisible();
+  await page.getByTestId("option-tree-node-global.prehistory.oldowan").click();
+  await expect(page.getByTestId("text-readout-name")).toHaveText("Oldowan Industry");
+});
+
+test("shows no calendar reading for a deep-time date", async ({ page }) => {
+  // 2.6 Ma is outside the date regime entirely: no calendar reaches it, and
+  // the readout must say so rather than extrapolating.
+  await page.goto("index.html#cal=common,islamic");
+  await page.getByTestId("option-tree-node-global").click();
+  await page.getByTestId("option-tree-node-global.prehistory").click();
+  await page.getByTestId("option-tree-node-global.prehistory.oldowan").click();
+  await expect(page.getByTestId("panel-calendar-readout")).toContainText("before calendars");
 });

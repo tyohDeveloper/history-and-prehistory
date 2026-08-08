@@ -2,9 +2,17 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://history-picker.local/schemas/entity.schema.json",
   "title": "Historical Entity",
-  "description": "A node in the hierarchical history tree. Regions, Eras, Periods, Reigns, and Events all share this shape. Parent/child links form the tree.",
+  "description": "A node in the hierarchical history tree. Regions, Eras, Periods, Reigns, and Events all share this shape. Parent/child links form the tree. Schema 1.1.0 adds subkind, dating_method, standing, as_of, native_date, alternatives, caveats and source_ids; all optional, so every 1.0.0 document remains valid.",
   "type": "object",
-  "required": ["id", "kind", "name", "parent_id", "start_year", "end_year", "tier"],
+  "required": [
+    "id",
+    "kind",
+    "name",
+    "parent_id",
+    "start_year",
+    "end_year",
+    "tier"
+  ],
   "additionalProperties": false,
   "properties": {
     "id": {
@@ -14,7 +22,13 @@
     },
     "kind": {
       "type": "string",
-      "enum": ["region", "era", "period", "reign", "event"],
+      "enum": [
+        "region",
+        "era",
+        "period",
+        "reign",
+        "event"
+      ],
       "description": "region = geographic bucket; era = long civilizational chunk; period = dynasty/named sub-era/nengō; reign = single ruler; event = discrete moment (battle, treaty, disaster)."
     },
     "name": {
@@ -30,30 +44,45 @@
       "type": "array",
       "uniqueItems": true,
       "description": "Alternate spellings, translations, and 'also known as' terms. Used for search matching even in a static app.",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "parent_id": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "id of the parent entity; explicitly null for top-level regions. Must always be present."
     },
     "cross_parent_ids": {
       "type": "array",
       "uniqueItems": true,
       "description": "Additional non-primary parents for cross-region entities (e.g. Mongol Empire is Steppe primary, but also cross-parents into East Asia and West Asia).",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "redirect_ids": {
       "type": "array",
       "uniqueItems": true,
       "description": "Deprecated ids that now redirect to this entity. Preserve external permalinks across renames.",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "start_year": {
-      "type": ["integer", "null"],
+      "type": [
+        "integer",
+        "null"
+      ],
       "description": "Start year (proleptic Gregorian, no year zero). Negative = BCE. null = unknown or not-applicable. Always present."
     },
     "end_year": {
-      "type": ["integer", "null"],
+      "type": [
+        "integer",
+        "null"
+      ],
       "description": "End year (proleptic Gregorian). Negative = BCE. null = ongoing/present or unknown. Always present."
     },
     "start_year_min": {
@@ -74,17 +103,47 @@
     },
     "date_precision": {
       "type": "string",
-      "enum": ["year", "decade", "century", "millennium", "approx", "traditional", "disputed", "unknown", "exact"],
+      "enum": [
+        "year",
+        "decade",
+        "century",
+        "millennium",
+        "approx",
+        "traditional",
+        "disputed",
+        "unknown",
+        "exact"
+      ],
       "description": "Overall precision when a single value fits both endpoints. If start and end have different precisions, use start_precision / end_precision instead. 'exact' is retained as an alias for 'year'."
     },
     "start_precision": {
       "type": "string",
-      "enum": ["year", "decade", "century", "millennium", "approx", "traditional", "disputed", "unknown", "exact"],
+      "enum": [
+        "year",
+        "decade",
+        "century",
+        "millennium",
+        "approx",
+        "traditional",
+        "disputed",
+        "unknown",
+        "exact"
+      ],
       "description": "Precision for start_year specifically."
     },
     "end_precision": {
       "type": "string",
-      "enum": ["year", "decade", "century", "millennium", "approx", "traditional", "disputed", "unknown", "exact"],
+      "enum": [
+        "year",
+        "decade",
+        "century",
+        "millennium",
+        "approx",
+        "traditional",
+        "disputed",
+        "unknown",
+        "exact"
+      ],
       "description": "Precision for end_year specifically."
     },
     "date_note": {
@@ -101,38 +160,52 @@
     },
     "tier": {
       "type": "string",
-      "enum": ["foundational", "intermediate", "specialist"],
+      "enum": [
+        "foundational",
+        "intermediate",
+        "specialist"
+      ],
       "description": "Novice-friendliness tier for progressive disclosure. 'foundational' = well-known to general audiences; 'specialist' = deep cuts. Always present."
     },
     "themes": {
       "type": "array",
       "uniqueItems": true,
       "description": "Theme ids this entity belongs to (empire, golden-age, revolution, plague, exploration, etc.).",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "region_tags": {
       "type": "array",
       "uniqueItems": true,
       "description": "Broad region tags for cross-cutting filters (e.g. 'east-asia', 'sahel', 'mediterranean').",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "calendar_ids": {
       "type": "array",
       "uniqueItems": true,
       "description": "Calendar systems most-associated with this entity (Japanese nengō for Japan, Hijri for Islamic states, etc.).",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "misconceptions": {
       "type": "array",
       "uniqueItems": true,
       "description": "Common misconceptions to flag in the UI (e.g. 'Ghana Empire was not in modern Ghana').",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "notable_figures": {
       "type": "array",
       "uniqueItems": true,
       "description": "Free-text notable people not modeled as separate reign entities.",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "capital": {
       "type": "string",
@@ -143,13 +216,29 @@
       "description": "For polities whose capital changed over time.",
       "items": {
         "type": "object",
-        "required": ["name"],
+        "required": [
+          "name"
+        ],
         "additionalProperties": false,
         "properties": {
-          "name": { "type": "string" },
-          "start_year": { "type": ["integer", "null"] },
-          "end_year": { "type": ["integer", "null"] },
-          "note": { "type": "string" }
+          "name": {
+            "type": "string"
+          },
+          "start_year": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "end_year": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
         }
       }
     },
@@ -157,20 +246,27 @@
       "type": "array",
       "uniqueItems": true,
       "description": "Direct chronological successors (for adjacent-in-time navigation).",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "predecessor_ids": {
       "type": "array",
       "uniqueItems": true,
       "description": "Direct chronological predecessors.",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "links": {
       "type": "array",
       "description": "Typed relations to other entities beyond simple parent/successor links. Use when the semantic type matters (successor_state_of, conquered_by, co_ruler_with, etc.).",
       "items": {
         "type": "object",
-        "required": ["type", "entity_id"],
+        "required": [
+          "type",
+          "entity_id"
+        ],
         "additionalProperties": false,
         "properties": {
           "type": {
@@ -195,10 +291,24 @@
               "other"
             ]
           },
-          "entity_id": { "type": "string" },
-          "start_year": { "type": ["integer", "null"] },
-          "end_year": { "type": ["integer", "null"] },
-          "note": { "type": "string" }
+          "entity_id": {
+            "type": "string"
+          },
+          "start_year": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "end_year": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
         }
       }
     },
@@ -207,12 +317,226 @@
       "description": "Reference URLs for further reading.",
       "items": {
         "type": "object",
-        "required": ["title", "url"],
+        "required": [
+          "title",
+          "url"
+        ],
         "additionalProperties": false,
         "properties": {
-          "title": { "type": "string" },
-          "url": { "type": "string", "format": "uri" }
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
         }
+      }
+    },
+    "subkind": {
+      "type": "string",
+      "description": "Refinement of `kind` where the bare kind misleads. `reign` currently covers monarchs, prime ministers, viceroys, poets and religious founders; subkind distinguishes them without multiplying the top-level kinds the picker renders.",
+      "enum": [
+        "monarch",
+        "head-of-state",
+        "head-of-government",
+        "colonial-administrator",
+        "religious-figure",
+        "cultural-figure",
+        "dynasty",
+        "phase",
+        "archaeological-culture",
+        "hominin-industry"
+      ]
+    },
+    "dating_method": {
+      "type": "string",
+      "description": "How the date was arrived at. Orthogonal to `date_precision`, which is about resolution: a calibrated radiocarbon date and an attested king-list date can share a precision while being entirely different kinds of claim. Also selects whether the readout leads in BP or in calendar reckoning.",
+      "enum": [
+        "calendar",
+        "radiocarbon-calibrated",
+        "radiocarbon-uncalibrated",
+        "argon-argon",
+        "potassium-argon",
+        "luminescence",
+        "uranium-series",
+        "esr",
+        "layer-counting",
+        "magnetostratigraphy",
+        "typological",
+        "unknown"
+      ]
+    },
+    "standing": {
+      "type": "string",
+      "description": "How the date stands relative to the field. `traditional` is deliberately separate: received dates such as Rome's 753 BCE founding are not findings, and presenting them with the same weight as measured or attested dates is the commonest way a history reference misleads.",
+      "enum": [
+        "consensus",
+        "majority",
+        "minority",
+        "traditional",
+        "superseded"
+      ]
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date this dating was last checked against the literature. Only for genuinely open disputes: a date-stamped controversy is useful, an undated one is a trap because a reader cannot tell whether it was settled last week.",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "native_date": {
+      "type": "object",
+      "description": "The date in its own cultural calendar, which is the authoritative form where one exists. Year-precision conversion is irreversible in every non-Gregorian calendar measured, so the source's own number is kept rather than recomputed.",
+      "required": [
+        "calendar_id",
+        "text"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "calendar_id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string",
+          "description": "Verbatim as a source would write it, e.g. '10 Muharram 61 AH'."
+        },
+        "year": {
+          "type": "integer"
+        },
+        "month": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 13
+        },
+        "day": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 31
+        },
+        "observance": {
+          "type": "string",
+          "description": "Culturally salient name for the day: Ashura, Nowruz, Yom Kippur."
+        },
+        "conversion_fuzz_days": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Uncertainty introduced BY the conversion, independent of and often larger than any in the native date itself."
+        }
+      }
+    },
+    "alternatives": {
+      "type": "array",
+      "description": "Rival dating claims. NOT imprecision: three competing chronologies flattened into one wide range implies the middle is likeliest, when the actual claim is that the field disagrees about which is right.",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "standing"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "e.g. 'Middle chronology', 'Radiocarbon (IntCal20)'."
+          },
+          "standing": {
+            "type": "string",
+            "description": "How the date stands relative to the field. `traditional` is deliberately separate: received dates such as Rome's 753 BCE founding are not findings, and presenting them with the same weight as measured or attested dates is the commonest way a history reference misleads.",
+            "enum": [
+              "consensus",
+              "majority",
+              "minority",
+              "traditional",
+              "superseded"
+            ]
+          },
+          "start_year": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "end_year": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "start_year_min": {
+            "type": "integer"
+          },
+          "start_year_max": {
+            "type": "integer"
+          },
+          "dating_method": {
+            "type": "string",
+            "description": "How the date was arrived at. Orthogonal to `date_precision`, which is about resolution: a calibrated radiocarbon date and an attested king-list date can share a precision while being entirely different kinds of claim. Also selects whether the readout leads in BP or in calendar reckoning.",
+            "enum": [
+              "calendar",
+              "radiocarbon-calibrated",
+              "radiocarbon-uncalibrated",
+              "argon-argon",
+              "potassium-argon",
+              "luminescence",
+              "uranium-series",
+              "esr",
+              "layer-counting",
+              "magnetostratigraphy",
+              "typological",
+              "unknown"
+            ]
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "caveats": {
+      "type": "array",
+      "description": "Corrections belonging to the subject rather than to a date. The Ghana Empire was not in modern Ghana; the Maya never formed one empire. Neither is chronological, so neither belongs on a boundary.",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "text"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "misconception",
+              "naming-confusion",
+              "contested-existence"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "One sentence. Brevity is enforced: prose is where 'starting point, not research tool' quietly erodes."
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "source_ids": {
+      "type": "array",
+      "description": "Ids into the normalized source registry. Deduplicated rather than inlined: one chronology work cited by 200 entities is stored once.",
+      "items": {
+        "type": "string"
       }
     }
   }

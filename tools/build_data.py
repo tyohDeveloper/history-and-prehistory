@@ -23,8 +23,8 @@ DATA.mkdir(exist_ok=True)
 # ---- Versions --------------------------------------------------------------
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
-SCHEMA_VERSION = "1.0.0"
-DATASET_VERSION = "2.1.0"
+SCHEMA_VERSION = "1.1.0"
+DATASET_VERSION = "2.2.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1561,6 +1561,9 @@ _extend(E, rome, cn, egypt)
 from extensions_south_asia import extend as _extend_south_asia
 _extend_south_asia(E, sa)
 
+from extensions_prehistory import extend as _extend_prehistory
+_extend_prehistory(E, "global")
+
 
 # =============================================================================
 # POST-PROCESS: flag legitimate parent/child date overlaps
@@ -2241,6 +2244,57 @@ themes = [
               "europe.enlightenment",
           ]),
 ]
+
+
+# =============================================================================
+# SOURCES — normalized registry
+# =============================================================================
+# Referenced from entities by id rather than inlined. One chronology work cited
+# by two hundred entities is stored once, which keeps the artifact linear in
+# distinct sources rather than in citations.
+#
+# Deliberately small: the app is a starting point, not a research tool, and
+# most entities are backed by a generated Wikipedia search rather than a
+# citation. Sources are for the minority of cases where a specific work IS the
+# substance of the claim. See docs/DESIGN.md, "Sources: the exception".
+
+sources = [
+    {
+        "id": "braun-2019-bokol-dora",
+        "kind": "scholarly",
+        "citation": "Braun et al. (2019), 'Earliest known Oldowan artifacts at >2.58 Ma', PNAS 116(24)",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.1820177116",
+    },
+    {
+        "id": "dietrich-2013-gobekli",
+        "kind": "scholarly",
+        "citation": "Dietrich & Schmidt et al., radiocarbon chronology of Göbekli Tepe",
+        "url": "https://www.dainst.blog/the-tepe-telegrams/",
+    },
+    {
+        "id": "sutikna-2016-flores",
+        "kind": "scholarly",
+        "citation": "Sutikna et al. (2016), 'Revised stratigraphy and chronology for Homo floresiensis at Liang Bua', Nature 532",
+        "url": "https://www.nature.com/articles/nature17179",
+    },
+    {
+        "id": "dillehay-1997-monte-verde",
+        "kind": "scholarly",
+        "citation": "Dillehay, Monte Verde: A Late Pleistocene Settlement in Chile (1997)",
+    },
+    {
+        "id": "surovell-2026-monte-verde",
+        "kind": "scholarly",
+        "citation": "Surovell et al. (2026), reanalysis proposing a Holocene age for Monte Verde II, Science",
+        "note": "Minority position. Rebutted by ~30 specialists in May 2026; authors replied June 2026.",
+    },
+]
+
+with open(DATA / "sources.json", "w") as f:
+    json.dump({"schema_version": SCHEMA_VERSION, "dataset_version": DATASET_VERSION,
+               "generated_at": _GENERATED_AT, "sources": sources}, f, indent=2, ensure_ascii=False)
+    f.write("\n")
+print(f"Wrote sources.json — {len(sources)} sources")
 
 with open(DATA / "themes.json", "w") as f:
     json.dump(_envelope("themes", themes), f, indent=2, ensure_ascii=False)

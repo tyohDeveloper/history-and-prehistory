@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "src" / "data"
-FILES = ["entities.json", "calendars.json", "themes.json", "reference-frames.json"]
+FILES = ["entities.json", "calendars.json", "themes.json", "reference-frames.json", "sources.json"]
 VOLATILE = {"generated_at"}
 
 

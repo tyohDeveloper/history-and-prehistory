@@ -9,10 +9,10 @@ to read well one at a time. Revisit that choice when the register stops changing
 
 | | |
 |---|---|
-| Branch | `calendar-layer`, unmerged. `main` is a clean baseline plus Replit config. |
+| Branch | Merged to `main`. `calendar-layer` retained but no longer ahead. |
 | Wired into the UI | Multi-calendar readout and calendar picker. Disclosure and focus view are not. |
-| Tests | 144 unit + 14 browser |
-| Artifact | 84.2 kB gzip, re-baselined for the polyfill and conversion layer |
+| Tests | 145 unit + 16 browser |
+| Artifact | 85.6 kB gzip |
 | Replit | Repo is loaded there but dormant by choice; no commits from it yet |
 | Last reviewed | 2026-08-07 |
 
@@ -911,6 +911,82 @@ The regression gate did its job: the build failed with *"Gzip 84.2 kB exceeds ba
 written into `build-baseline.json`. That is the intended workflow — the number moves in a commit
 that justifies it, not because someone edited it to make CI pass.
 
+## Q-10 unblocked: the builders, the schema, and a pilot
+
+**Done.** This was the keystone — every data-side task waited on it, and nothing could be authored
+regardless of how good the model got.
+
+### What was actually blocking
+
+Not a missing feature. `R()` and `P()` were defined **three separate times**, as closures inside
+each extension's `extend()`, each with a hand-written keyword list:
+
+```python
+def R(slug, name, parent, s, e, tier="specialist", summary=None, aliases=None):
+```
+
+That signature is the entire reason seven schema fields were unused across 1,305 entities. An
+author could not populate `date_note` or `sources` because the builder had nowhere to put them,
+and the natural fix — adding a keyword to one of the three copies — deepened the divergence.
+
+`tools/builders.py` now provides one shared set taking `**kw`. Migrating to it surfaced two traps
+that a search-and-replace would have silently shipped, and did:
+
+- **Roman emperor ids sit flat under `<rome>.empire`** while `parent_id` points at the dynasty, so
+  id and parent genuinely diverge. A naive swap relocated 121 emperors.
+- **`P` in the Rome/Egypt module means *pharaoh*, not *period*** — it emits reigns. The same letter
+  means "period" in the South Asia module. Two files, one name, opposite meanings.
+
+Both were caught because `check_regenerated.py` diffs the regenerated dataset against the
+committed one. Output is now **byte-identical** to before the refactor, which is the proof the
+migration changed nothing it should not have.
+
+The allowlist is **derived from the schema at import time** rather than hand-maintained, so the
+two cannot drift — the failure mode that created the problem. A typo fails where it was written,
+naming the entity, instead of surfacing as a JSON pointer into a 400 kB generated file. It caught
+a real one during this work: `source_ids` was added to the schema and not to the list.
+
+### Schema 1.1.0
+
+Eight optional fields, so every 1.0.0 document stays valid: `subkind`, `dating_method`,
+`standing`, `as_of`, `native_date`, `alternatives`, `caveats`, `source_ids`. Plus `sources.json`
+as a normalized registry.
+
+### Five validator rules, and proof they fire
+
+Rules 1, 2, 5, 6, 10 and 11 from the list above are implemented. Each was verified by deliberately
+breaking the data and confirming the objection:
+
+| Broken | Caught |
+|---|---|
+| `source_ids` pointing at nothing | ✅ unresolved reference |
+| alternatives with no `date_note` | ✅ "has alternatives but no date_note explaining why they differ" |
+| `as_of` with no open dispute | ✅ "no open dispute to re-check" |
+
+### The pilot
+
+Five prehistory entities — Human Prehistory, Oldowan, Göbekli Tepe, *Homo floresiensis*, Monte
+Verde II — chosen to exercise every unlocked field at least once. Fields that were **0/1305**:
+
+| Field | Now |
+|---|---|
+| `dating_method` | 4 |
+| `standing` | 4 |
+| `source_ids` | 4 |
+| `alternatives` | 2 |
+| `caveats` | 1 |
+| `as_of` | 1 |
+| `start_year_min` | 3 → 5 |
+
+Deliberately small. The ten regional attach points are still unwritten; this proves the chain
+works, it does not pretend prehistory is covered.
+
+It also exercises the deep-time regime for real: the Oldowan at 2.6 Ma sits outside
+`DATE_REGIME_LIMIT_YEARS`, and every calendar correctly reports "before calendars" rather than
+extrapolating. Monte Verde renders its live-dispute note and shows Islamic as "before epoch".
+
+**Dataset 2.1.0 → 2.2.0, schema 1.0.0 → 1.1.0, 1,305 → 1,310 entities. Artifact 84.2 → 85.6 kB.**
+
 ## Focus and context (requirement 10)
 
 The described behavior — focus large, falling away with perspective compression — is
@@ -1192,9 +1268,6 @@ That could replace the control, or make it redundant, or confuse users who expec
 
 ### Blocking — data
 
-**Q-10. When does the dataset gain fuzzy bounds and `dating_method`?** The Python builder helpers
-cannot emit them today (gap analysis §5.1), so this gates all prehistory authoring.
-
 **Q-28. Does the registry need splitting into origins and transforms?** `common`, `gregorian`,
 `iso8601` and the BP/b2k datums are origin views; the other 23 entries are structural calendars.
 They currently sit in one list. Splitting would make the picker clearer and the code simpler, at
@@ -1238,6 +1311,9 @@ frames per node or the app has a mode.
 
 ### Resolved
 
+- ~~`Q-10` Builder helpers and schema~~ — done. Shared `tools/builders.py` with a schema-derived
+  allowlist, schema 1.1.0, source registry, five validator rules, and a five-entity prehistory
+  pilot proving the chain end to end.
 - ~~`Q-27` ISO-internal refactor~~ — done. Branded `IsoYear` / `HistoricalYear` types made the
   off-by-one a compile error; introducing them surfaced 137 sites, two of which were real bugs.
 - ~~`Q-26` Is calendar input worth 24 kB?~~ — yes. The `Intl`-inversion alternative was built and
@@ -1278,8 +1354,8 @@ Nothing below exists yet. Roughly in dependency order:
 - **Schema changes.** Optional `subkind`, fuzzy anchors, `dating_method`, `standing`, `asOf`,
   and the source registry — none are in `entity.schema.json` yet.
 - **Validator rules.** Eleven are specified above; none are implemented in `tools/validate.py`.
-- **Prehistory content.** The eight cases in `tests/prehistory.test.ts` are test fixtures, not
-  dataset entries. No prehistory entity exists in `src/data/`.
+- **Prehistory content.** Five pilot entities exist; the ten regional attach points from the gap
+  analysis do not. This is now the largest single body of remaining work.
 
-The dependency that gates most of this is `Q-10`: the Python builder helpers cannot emit the new
-fields, so prehistory authoring cannot start regardless of how good the model is.
+`Q-10` no longer gates any of it. The next largest item is prehistory content, followed by
+requirement 6 (calendar input), which is the last unbuilt requirement.

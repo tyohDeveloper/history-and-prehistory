@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0.0",
-  "dataset_version": "2.1.0",
-  "generated_at": "2026-07-20T18:45:02Z",
+  "schema_version": "1.1.0",
+  "dataset_version": "2.2.0",
+  "generated_at": "2026-08-08T00:14:29Z",
   "entities": [
     {
       "id": "global",
@@ -12577,8 +12577,8 @@
       "start_year": 1192,
       "end_year": 1199,
       "tier": "foundational",
-      "native_name": "源頼朝",
       "summary": "Founder of the Kamakura bakufu and Japan's first shōgun in the enduring sense.",
+      "native_name": "源頼朝",
       "date_precision": "approx"
     },
     {
@@ -12589,8 +12589,8 @@
       "start_year": 1202,
       "end_year": 1203,
       "tier": "intermediate",
-      "native_name": "源頼家",
       "summary": "Deposed by the Hōjō regents.",
+      "native_name": "源頼家",
       "date_precision": "approx"
     },
     {
@@ -12601,8 +12601,8 @@
       "start_year": 1203,
       "end_year": 1219,
       "tier": "intermediate",
-      "native_name": "源實朝",
       "summary": "Last Minamoto shōgun; a noted waka poet, assassinated at Tsurugaoka Hachiman-gū.",
+      "native_name": "源實朝",
       "date_precision": "approx"
     },
     {
@@ -12613,8 +12613,8 @@
       "start_year": 1226,
       "end_year": 1244,
       "tier": "specialist",
-      "native_name": "九条頼経",
       "summary": "First Sekke shōgun; installed as a child by the Hōjō regents.",
+      "native_name": "九条頼経",
       "date_precision": "approx"
     },
     {
@@ -12636,8 +12636,8 @@
       "start_year": 1252,
       "end_year": 1266,
       "tier": "specialist",
-      "native_name": "宗尊親王",
       "summary": "First imperial-prince (Miya) shōgun.",
+      "native_name": "宗尊親王",
       "date_precision": "approx"
     },
     {
@@ -12670,8 +12670,8 @@
       "start_year": 1308,
       "end_year": 1333,
       "tier": "intermediate",
-      "native_name": "守邦親王",
       "summary": "Last Kamakura shōgun; deposed when the bakufu fell to Emperor Go-Daigo's forces.",
+      "native_name": "守邦親王",
       "date_precision": "approx"
     },
     {
@@ -12682,8 +12682,8 @@
       "start_year": 1338,
       "end_year": 1358,
       "tier": "foundational",
-      "native_name": "足利尊氏",
       "summary": "Founder of the Ashikaga bakufu; installed the Northern Court against Emperor Go-Daigo.",
+      "native_name": "足利尊氏",
       "date_precision": "approx"
     },
     {
@@ -12705,8 +12705,8 @@
       "start_year": 1368,
       "end_year": 1394,
       "tier": "foundational",
-      "native_name": "足利義満",
       "summary": "Reunified the Northern and Southern Courts (1392); built Kinkaku-ji, the Golden Pavilion.",
+      "native_name": "足利義満",
       "date_precision": "approx"
     },
     {
@@ -12739,8 +12739,8 @@
       "start_year": 1429,
       "end_year": 1441,
       "tier": "intermediate",
-      "native_name": "足利義教",
       "summary": "Assassinated by Akamatsu Mitsusuke at the Kakitsu Incident.",
+      "native_name": "足利義教",
       "date_precision": "approx"
     },
     {
@@ -12762,8 +12762,8 @@
       "start_year": 1449,
       "end_year": 1473,
       "tier": "foundational",
-      "native_name": "足利義政",
       "summary": "Aesthete-shōgun; built Ginkaku-ji. His succession dispute triggered the Ōnin War (1467).",
+      "native_name": "足利義政",
       "date_precision": "approx"
     },
     {
@@ -12785,8 +12785,8 @@
       "start_year": 1490,
       "end_year": 1493,
       "tier": "specialist",
-      "native_name": "足利義材",
       "summary": "Deposed, later restored (1508–1521); dates given are of first tenure.",
+      "native_name": "足利義材",
       "date_precision": "approx"
     },
     {
@@ -12808,8 +12808,8 @@
       "start_year": 1508,
       "end_year": 1521,
       "tier": "specialist",
-      "native_name": "足利義材",
       "summary": "Second tenure after being restored to the shōgunate.",
+      "native_name": "足利義材",
       "date_precision": "approx"
     },
     {
@@ -12831,8 +12831,8 @@
       "start_year": 1546,
       "end_year": 1565,
       "tier": "intermediate",
-      "native_name": "足利義輝",
       "summary": "Renowned swordsman; killed defending himself against Matsunaga and Miyoshi forces.",
+      "native_name": "足利義輝",
       "date_precision": "approx"
     },
     {
@@ -12843,8 +12843,8 @@
       "start_year": 1568,
       "end_year": 1568,
       "tier": "specialist",
-      "native_name": "足利義栗",
       "summary": "Reigned only a few months and never entered Kyoto.",
+      "native_name": "足利義栗",
       "date_precision": "approx"
     },
     {
@@ -12855,8 +12855,8 @@
       "start_year": 1568,
       "end_year": 1573,
       "tier": "intermediate",
-      "native_name": "足利義昭",
       "summary": "Last Ashikaga shōgun; expelled from Kyoto by Oda Nobunaga.",
+      "native_name": "足利義昭",
       "date_precision": "approx"
     },
     {
@@ -12867,8 +12867,8 @@
       "start_year": 1605,
       "end_year": 1623,
       "tier": "intermediate",
-      "native_name": "徳川秀忠",
       "summary": "Consolidated Tokugawa authority; enforced the persecution of Christians.",
+      "native_name": "徳川秀忠",
       "date_precision": "approx"
     },
     {
@@ -12879,8 +12879,8 @@
       "start_year": 1623,
       "end_year": 1651,
       "tier": "foundational",
-      "native_name": "徳川家光",
       "summary": "Sealed Japan under sakoku isolation policies; suppressed the Shimabara Rebellion.",
+      "native_name": "徳川家光",
       "date_precision": "approx"
     },
     {
@@ -12902,8 +12902,8 @@
       "start_year": 1680,
       "end_year": 1709,
       "tier": "intermediate",
-      "native_name": "徳川綱吉",
       "summary": "Known for the eccentric Shōrui Awaremi no Rei (compassion for living things) edicts.",
+      "native_name": "徳川綱吉",
       "date_precision": "approx"
     },
     {
@@ -12925,8 +12925,8 @@
       "start_year": 1713,
       "end_year": 1716,
       "tier": "specialist",
-      "native_name": "徳川家繼",
       "summary": "Died a child; ended the direct main line, opening the succession to the Kishū branch.",
+      "native_name": "徳川家繼",
       "date_precision": "approx"
     },
     {
@@ -12937,8 +12937,8 @@
       "start_year": 1716,
       "end_year": 1745,
       "tier": "foundational",
-      "native_name": "徳川吉宗",
       "summary": "Enacted the Kyōhō Reforms; permitted the study of Dutch/Western texts.",
+      "native_name": "徳川吉宗",
       "date_precision": "approx"
     },
     {
@@ -12960,8 +12960,8 @@
       "start_year": 1760,
       "end_year": 1786,
       "tier": "specialist",
-      "native_name": "徳川家治",
       "summary": "Reign dominated by chamberlain Tanuma Okitsugu's controversial commercial policies.",
+      "native_name": "徳川家治",
       "date_precision": "approx"
     },
     {
@@ -12972,8 +12972,8 @@
       "start_year": 1787,
       "end_year": 1837,
       "tier": "intermediate",
-      "native_name": "徳川家斉",
       "summary": "Longest-reigning Tokugawa shōgun; Kansei Reforms under Matsudaira Sadanobu early in his reign.",
+      "native_name": "徳川家斉",
       "date_precision": "approx"
     },
     {
@@ -12984,8 +12984,8 @@
       "start_year": 1837,
       "end_year": 1853,
       "tier": "intermediate",
-      "native_name": "徳川家慶",
       "summary": "On his deathbed when Perry's Black Ships arrived (1853).",
+      "native_name": "徳川家慶",
       "date_precision": "approx"
     },
     {
@@ -12996,8 +12996,8 @@
       "start_year": 1853,
       "end_year": 1858,
       "tier": "intermediate",
-      "native_name": "徳川家定",
       "summary": "Signed the Harris Treaty opening Japan to foreign trade.",
+      "native_name": "徳川家定",
       "date_precision": "approx"
     },
     {
@@ -13008,8 +13008,8 @@
       "start_year": 1858,
       "end_year": 1866,
       "tier": "intermediate",
-      "native_name": "徳川家茂",
       "summary": "Reigned during the bakumatsu crisis; died young in Osaka.",
+      "native_name": "徳川家茂",
       "date_precision": "approx"
     },
     {
@@ -13020,8 +13020,8 @@
       "start_year": 1866,
       "end_year": 1867,
       "tier": "foundational",
-      "native_name": "徳川慶喜",
       "summary": "Last shōgun of Japan; resigned power to the Meiji Emperor in the Taisei Hōkan (1867).",
+      "native_name": "徳川慶喜",
       "date_precision": "approx"
     },
     {
@@ -15038,6 +15038,131 @@
       "tier": "foundational",
       "summary": "Bengali polymath; first non-European Nobel laureate in Literature (1913). Composed the national anthems of India and Bangladesh.",
       "native_name": "রবীন্দ্রনাথ ঠাকুর",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory",
+      "kind": "era",
+      "name": "Human Prehistory",
+      "parent_id": "global",
+      "start_year": -3300000,
+      "end_year": -3000,
+      "tier": "foundational",
+      "summary": "From the first stone tools to the earliest written records. Dated by measurement rather than reckoning, so quoted in years before present.",
+      "date_note": "End is diachronous: writing appears at different times in different regions.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.oldowan",
+      "kind": "period",
+      "name": "Oldowan Industry",
+      "parent_id": "global.prehistory",
+      "start_year": -2600000,
+      "end_year": -1700000,
+      "tier": "foundational",
+      "start_year_min": -2618000,
+      "start_year_max": -2550000,
+      "dating_method": "argon-argon",
+      "standing": "consensus",
+      "date_note": "Lomekwi 3 tools at 3.3 Ma are excluded by classifying them as Lomekwian rather than Oldowan, so the boundary is definitional as much as evidential.",
+      "source_ids": [
+        "braun-2019-bokol-dora"
+      ],
+      "summary": "The earliest widely recognised stone tool industry, defined by simple flakes struck from cores.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.gobekli-tepe",
+      "kind": "period",
+      "name": "Göbekli Tepe",
+      "parent_id": "global.prehistory",
+      "start_year": -9530,
+      "end_year": -8000,
+      "tier": "foundational",
+      "start_year_min": -9745,
+      "start_year_max": -9314,
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Only 11 radiocarbon dates exist. Kinzel and Clare abandoned the Layer III/II/I scheme for at least eight phases, so phase labels in older sources do not map cleanly.",
+      "source_ids": [
+        "dietrich-2013-gobekli"
+      ],
+      "summary": "Monumental enclosures built by pre-agricultural communities in southeastern Anatolia, overturning the assumption that monuments require farming.",
+      "native_name": "Göbekli Tepe",
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.homo-floresiensis",
+      "kind": "period",
+      "name": "Homo floresiensis",
+      "parent_id": "global.prehistory",
+      "start_year": -100000,
+      "end_year": -50000,
+      "tier": "intermediate",
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "date_note": "Youngest skeletal remains around 60 ka, with artefacts to about 50 ka.",
+      "alternatives": [
+        {
+          "label": "Original 2004 chronology",
+          "standing": "superseded",
+          "start_year": -18000,
+          "end_year": -12000,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Withdrawn in 2016: the dated deposits proved to be a younger unit unconformably overlying the remains.",
+          "source_ids": [
+            "sutikna-2016-flores"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Often reported as surviving until 12,000 years ago. That date was corrected to around 60,000 in 2016.",
+          "source_ids": [
+            "sutikna-2016-flores"
+          ]
+        }
+      ],
+      "source_ids": [
+        "sutikna-2016-flores"
+      ],
+      "summary": "A small-bodied hominin known from Liang Bua cave on Flores, Indonesia.",
+      "aliases": [
+        "Flores hobbit"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "global.prehistory.monte-verde",
+      "kind": "period",
+      "name": "Monte Verde II",
+      "parent_id": "global.prehistory",
+      "start_year": -14500,
+      "end_year": -14000,
+      "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "as_of": "2026-06-30",
+      "date_note": "Under active challenge: a March 2026 reanalysis proposed a Holocene age, roughly thirty specialists rebutted it in May, and the authors replied in June.",
+      "alternatives": [
+        {
+          "label": "Surovell et al. 2026",
+          "standing": "minority",
+          "start_year": -8200,
+          "end_year": -4200,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Argues the dated material is intrusive and the occupation is mid-Holocene.",
+          "source_ids": [
+            "surovell-2026-monte-verde"
+          ]
+        }
+      ],
+      "source_ids": [
+        "dillehay-1997-monte-verde",
+        "surovell-2026-monte-verde"
+      ],
+      "summary": "A settlement site in southern Chile whose age broke the Clovis-first model of the peopling of the Americas.",
       "date_precision": "approx"
     }
   ]

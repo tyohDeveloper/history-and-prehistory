@@ -5,13 +5,17 @@ import { buildIndex } from "../src/lib/tree";
 const idx = buildIndex(entities);
 
 describe("dataset envelope", () => {
-  it("is the v2.1.0 baseline on schema 1.0.0", () => {
-    expect(datasetVersion).toBe("2.1.0");
-    expect(schemaVersion).toBe("1.0.0");
+  it("is v2.2.0 on schema 1.1.0", () => {
+    // 1.1.0 adds subkind, dating_method, standing, as_of, native_date,
+    // alternatives, caveats and source_ids. All optional, so every 1.0.0
+    // document remains valid.
+    expect(datasetVersion).toBe("2.2.0");
+    expect(schemaVersion).toBe("1.1.0");
   });
 
   it("has the expected collection sizes", () => {
-    expect(entities.length).toBe(1305);
+    // 1,305 historical entities plus the five-entity prehistory pilot.
+    expect(entities.length).toBe(1310);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(37);
@@ -83,19 +87,28 @@ describe("date invariants", () => {
   });
 });
 
-describe("known v2.1.0 gaps are still gaps", () => {
-  // These assertions document the gap-analysis baseline (docs/gap-analysis-v2.1.0.md).
-  // They are expected to FAIL when the corresponding gap is closed — at which
-  // point update the number here in the same commit that closes it.
-  it("has zero entities carrying sources[]", () => {
-    expect(entities.filter((e) => (e.sources?.length ?? 0) > 0).length).toBe(0);
+describe("gap-analysis baseline", () => {
+  // These assertions track docs/gap-analysis-v2.1.0.md. They are designed to
+  // FAIL when a gap closes, so a partial backfill cannot drift unnoticed --
+  // update the number in the same commit that closes it.
+  it("now cites sources on the prehistory pilot", () => {
+    // Was 0/1305 across the whole dataset: the builders could not emit the
+    // field. Closing that (Q-10) is what made these five possible.
+    const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
+    expect(cited.length).toBe(4);
+    expect(cited.every((e) => e.id.startsWith("global.prehistory"))).toBe(true);
+  });
+
+  it("now carries dating methods and uncertainty bounds", () => {
+    expect(entities.filter((e) => e.dating_method !== undefined).length).toBe(4);
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(5);
   });
 
   it("has calendar_ids on only 267 entities", () => {
     expect(entities.filter((e) => (e.calendar_ids?.length ?? 0) > 0).length).toBe(267);
   });
 
-  it("has summaries on only 6 of 43 region nodes", () => {
+  it("still has summaries on only 6 of 43 region nodes", () => {
     const regions = entities.filter((e) => e.kind === "region");
     expect(regions.length).toBe(43);
     expect(regions.filter((e) => e.summary !== undefined).length).toBe(6);

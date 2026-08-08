@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 86261,
+  "gzipBytes": 87698,
   "recordedAt": "2026-08-07",
-  "note": "v0.2.0: adds temporal-polyfill/full and the multi-calendar readout. Up from 57,698 B (v0.1.0). The polyfill accounts for ~24 kB of the increase and buys calendar input as well as display; see DESIGN.md Q-16 and Q-26."
+  "note": "v0.2.1: adds the schema 1.1.0 prehistory pilot (5 entities) and the source registry on top of the polyfill and conversion layer."
 }

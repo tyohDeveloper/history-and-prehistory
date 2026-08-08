@@ -13,18 +13,11 @@ Called from build_data.py after the main extensions.
 """
 
 
-def extend(E, sa):
-    def R(slug, name, parent, s, e, tier="specialist", summary=None, aliases=None, native=None):
-        kw = {}
-        if summary: kw["summary"] = summary
-        if aliases: kw["aliases"] = aliases
-        if native: kw["native_name"] = native
-        E(f"{parent}.{slug}", "reign", name, parent, start=s, end=e, tier=tier, **kw)
+from builders import make_builders
 
-    def P(slug, name, parent, s, e, tier="specialist", summary=None):
-        kw = {}
-        if summary: kw["summary"] = summary
-        E(f"{parent}.{slug}", "period", name, parent, start=s, end=e, tier=tier, **kw)
+
+def extend(E, sa):
+    R, P, ERA, EVENT = make_builders(E)
 
     # =========================================================================
     # MAURYA EMPIRE — remaining rulers (already have Chandragupta, Ashoka)

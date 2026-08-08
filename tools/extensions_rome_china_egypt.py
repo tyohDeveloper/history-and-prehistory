@@ -6,16 +6,17 @@ The function extend(E, entities, egypt, rome, cn) is called with references
 to the E() helper and the entities list, plus the ID prefixes.
 """
 
+from builders import make_builders
+
+
 def extend(E, rome, cn, egypt):
     # =========================================================================
     # ROMAN EMPERORS
     # =========================================================================
 
-    def R(slug, name, parent, s, e, tier="specialist", summary=None, aliases=None):
-        kw = {}
-        if summary: kw["summary"] = summary
-        if aliases: kw["aliases"] = aliases
-        E(f"{rome}.empire.{slug}", "reign", name, parent, start=s, end=e, tier=tier, **kw)
+    # Roman emperor ids sit flat under <rome>.empire while parent_id points at
+    # the dynasty period, so id and parent diverge and the prefix is explicit.
+    R, _, _, _ = make_builders(E, id_prefix=f"{rome}.empire")
 
     # Julio-Claudian (already have augustus, nero)
     jc = f"{rome}.empire.julio-claudian"
@@ -144,10 +145,12 @@ def extend(E, rome, cn, egypt):
     # =========================================================================
 
     byz = "europe.mediterranean.byzantine"
-    def B(slug, name, s, e, tier="specialist", summary=None):
-        kw = {}
-        if summary: kw["summary"] = summary
-        E(f"{byz}.{slug}", "reign", name, byz, start=s, end=e, tier=tier, **kw)
+    # Byzantine emperors all hang directly off the one era node, so parent is
+    # fixed rather than passed. Wrapped to keep the 90-odd call sites intact.
+    _byz_reign, _, _, _ = make_builders(E)
+
+    def B(slug, name, s, e, tier="specialist", summary=None, **kw):
+        return _byz_reign(slug, name, byz, s, e, tier, summary, **kw)
 
     B("anastasius-i",       "Anastasius I",        491, 518)
     B("justin-i",           "Justin I",            518, 527)
@@ -187,10 +190,8 @@ def extend(E, rome, cn, egypt):
     # CHINESE EMPERORS
     # =========================================================================
 
-    def C(slug, name, parent, s, e, tier="specialist", summary=None):
-        kw = {}
-        if summary: kw["summary"] = summary
-        E(f"{parent}.{slug}", "reign", name, parent, start=s, end=e, tier=tier, **kw)
+    # Chinese emperors: ordinary reigns rooted at their dynasty.
+    C, _, _, _ = make_builders(E)
 
     # Qin (already have shi-huang)
     C("er-shi",  "Qin Er Shi",  f"{cn}.qin", -210, -207, "intermediate", "Second and last Qin emperor.")
@@ -324,11 +325,12 @@ def extend(E, rome, cn, egypt):
     # EGYPTIAN PHARAOHS
     # =========================================================================
 
-    def P(slug, name, parent, s, e, tier="specialist", summary=None, aliases=None):
-        kw = {}
-        if summary: kw["summary"] = summary
-        if aliases: kw["aliases"] = aliases
-        E(f"{parent}.{slug}", "reign", name, parent, start=s, end=e, tier=tier, **kw)
+    # `P` here is *pharaoh*, not *period* — it emits reigns, rooted at the
+    # dynasty. The same letter means "period" in extensions_south_asia.py.
+    # Kept rather than renamed across ~200 call sites, but flagged: it is a
+    # genuine trap, and it is why a shared builder had to be introduced
+    # carefully rather than by search-and-replace.
+    P, _unused_period_builder, _, _ = make_builders(E)
 
     # 1st Dynasty (already have narmer)
     d1 = f"{egypt}.early-dynastic.dyn1"
@@ -530,11 +532,12 @@ def extend(E, rome, cn, egypt):
     # Shōgun = the de facto military ruler of Japan while emperors reigned
     # symbolically. Dates are the years each held the title Sei-i Taishōgun.
 
-    def S(slug, name, native, parent, s, e, tier="specialist", summary=None, aliases=None):
-        kw = {"native_name": native}
-        if summary: kw["summary"] = summary
-        if aliases: kw["aliases"] = aliases
-        E(f"{parent}.{slug}", "reign", name, parent, start=s, end=e, tier=tier, **kw)
+    # Shōguns take the native name positionally, ahead of parent.
+    _shogun_reign, _, _, _ = make_builders(E)
+
+    def S(slug, name, native, parent, s, e, tier="specialist", summary=None,
+          aliases=None, **kw):
+        return _shogun_reign(slug, name, parent, s, e, tier, summary, aliases, native, **kw)
 
     # --- Kamakura shōgunate (1192–1333) ---
     # 9 shōguns: 3 Minamoto, 2 Fujiwara-shogun (Sekke), 4 imperial-prince (Miyashogun)

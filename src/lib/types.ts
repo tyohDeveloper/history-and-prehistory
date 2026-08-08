@@ -7,6 +7,23 @@ export type Precision =
   | "year" | "decade" | "century" | "millennium"
   | "approx" | "traditional" | "disputed" | "unknown" | "exact";
 
+export type DatingMethodId =
+  | "calendar" | "radiocarbon-calibrated" | "radiocarbon-uncalibrated"
+  | "argon-argon" | "potassium-argon" | "luminescence" | "uranium-series"
+  | "esr" | "layer-counting" | "magnetostratigraphy" | "typological" | "unknown";
+
+export type StandingId = "consensus" | "majority" | "minority" | "traditional" | "superseded";
+
+export type CaveatKindId = "misconception" | "naming-confusion" | "contested-existence";
+
+export interface Source {
+  id: string;
+  kind: "scholarly" | "reference" | "primary" | "dataset";
+  citation: string;
+  url?: string;
+  note?: string;
+}
+
 export interface Entity {
   id: string;
   kind: EntityKind;
@@ -40,6 +57,32 @@ export interface Entity {
   successor_ids?: string[];
   predecessor_ids?: string[];
   links?: { type: string; entity_id: string; note?: string }[];
+  /* --- schema 1.1.0 ------------------------------------------------------ */
+  subkind?: string;
+  dating_method?: DatingMethodId;
+  standing?: StandingId;
+  /** ISO date this dating was last checked. Live disputes only. */
+  as_of?: string;
+  native_date?: {
+    calendar_id: string;
+    text: string;
+    year?: number;
+    month?: number;
+    day?: number;
+    observance?: string;
+    conversion_fuzz_days?: number;
+  };
+  alternatives?: {
+    label: string;
+    standing: StandingId;
+    start_year?: number | null;
+    end_year?: number | null;
+    dating_method?: DatingMethodId;
+    note?: string;
+    source_ids?: string[];
+  }[];
+  caveats?: { kind: CaveatKindId; text: string; source_ids?: string[] }[];
+  source_ids?: string[];
   sources?: { title: string; url?: string; note?: string }[];
 }
 

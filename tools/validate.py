@@ -115,6 +115,54 @@ for t in themes:
         if eid not in entity_ids:
             errors.append(f"theme {t['id']}: entity_ids ref {eid} does not exist")
 
+# ---- source registry: referential integrity and the rules from DESIGN.md ----
+# Rule numbers refer to docs/DESIGN.md, "Validator rules this implies".
+try:
+    with open(DATA / "sources.json", encoding="utf-8") as f:
+        _sources = json.load(f)["sources"]
+except FileNotFoundError:
+    _sources = []
+source_ids = {s_["id"] for s_ in _sources}
+cited = set()
+
+for e in entities:
+    def _cite(ids, where):
+        for sid in ids:
+            cited.add(sid)
+            if sid not in source_ids:
+                errors.append(f"entity {e['id']}: {where} source_ids ref {sid} is not in the registry")
+
+    _cite(e.get("source_ids", []), "")
+    alts = e.get("alternatives", [])
+    for a in alts:
+        _cite(a.get("source_ids", []), f"alternative {a.get('label')!r}")
+    for c in e.get("caveats", []):
+        _cite(c.get("source_ids", []), "caveat")
+
+    # Rule 1: if claims differ, say why.
+    if alts and not e.get("date_note"):
+        errors.append(f"entity {e['id']}: has alternatives but no date_note explaining why they differ")
+    # Rule 2: superseded by what?
+    for a in alts:
+        if a.get("standing") == "superseded" and not a.get("note") and not a.get("source_ids"):
+            errors.append(f"entity {e['id']}: superseded alternative {a.get('label')!r} says neither why nor by what")
+    # Rule 5: at most one consensus claim per entity.
+    if sum(1 for a in alts if a.get("standing") == "consensus") > 0 and e.get("standing") == "consensus":
+        errors.append(f"entity {e['id']}: more than one claim marked consensus")
+    # Rule 10: as_of is for live disputes only.
+    if e.get("as_of") and alts and all(a.get("standing") == "superseded" for a in alts):
+        warnings.append(f"entity {e['id']}: as_of set but every alternative is superseded; the question is settled")
+    if e.get("as_of") and not alts:
+        warnings.append(f"entity {e['id']}: as_of set but there is no open dispute to re-check")
+    # Rule 11: b2k belongs to ice-core dating.
+    nd = e.get("native_date") or {}
+    if nd.get("calendar_id") == "b2k" and e.get("dating_method") not in ("layer-counting", None):
+        errors.append(f"entity {e['id']}: native_date in b2k but dating_method is {e.get('dating_method')}")
+
+# Rule 6: an uncited registry entry is dead weight.
+for sid in sorted(source_ids - cited):
+    warnings.append(f"source {sid}: in the registry but cited by nothing")
+
 for f_ in frames:
     if f_.get("entity_id") and f_["entity_id"] not in entity_ids:
         errors.append(f"frame {f_['id']}: entity_id {f_['entity_id']} does not exist")

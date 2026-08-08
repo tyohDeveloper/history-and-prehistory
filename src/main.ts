@@ -1,6 +1,8 @@
 import "./style.css";
 import { datasetVersion, entities } from "./lib/dataset";
 import { displayRange } from "./lib/displayRange";
+import { datingOf } from "./lib/chrono/fromEntity";
+import { isCalendarConvertible } from "./lib/chrono/year";
 import {
   buildIndex,
   childrenOf,
@@ -252,6 +254,27 @@ function renderReadout(): HTMLElement {
  */
 function renderCalendarRows(entity: Entity): HTMLElement | null {
   if (entity.start_year === null) return null;
+
+  // An uncalibrated radiocarbon age is not a calendar date and cannot be made
+  // into one by arithmetic. Every calendar here would happily return a number,
+  // and every one of them would be fabricated, so the whole panel refuses
+  // rather than showing a row of confident wrong answers.
+  const startValue = datingOf(entity).start?.primary.value;
+  if (startValue !== undefined && !isCalendarConvertible(startValue)) {
+    const box = el("div", { class: "calendars", "data-testid": "panel-calendar-readout" });
+    box.append(el("div", { class: "calendars-head" }, "No calendar reading"));
+    box.append(
+      el(
+        "p",
+        { class: "cal-refusal" },
+        "This date is in uncalibrated radiocarbon years, which are not calendar years. " +
+          "Converting it would invent a precision the measurement does not have. " +
+          "A calibrated age is needed before any calendar can be shown.",
+      ),
+    );
+    return box;
+  }
+
   const iso = isoFromHistorical(asHistorical(entity.start_year));
   const readings = readYearIn(iso, state.calendars);
 

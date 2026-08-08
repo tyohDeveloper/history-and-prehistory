@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "dataset_version": "2.2.0",
-  "generated_at": "2026-08-08T02:00:33Z",
+  "generated_at": "2026-08-08T02:58:02Z",
   "entities": [
     {
       "id": "global",
@@ -496,6 +496,8 @@
       "start_year": -10000,
       "end_year": -5000,
       "tier": "intermediate",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
       "date_note": "A Eurasian term. It has no counterpart in the Americas, sub-Saharan Africa or Australia, where the post-glacial sequence is described differently.",
       "date_precision": "approx"
     },
@@ -507,6 +509,8 @@
       "start_year": -10000,
       "end_year": -3300,
       "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
       "summary": "Beginnings of agriculture, animal domestication, and permanent villages.",
       "date_precision": "approx"
     },
@@ -518,6 +522,8 @@
       "start_year": -3300,
       "end_year": -1200,
       "tier": "foundational",
+      "dating_method": "calendar",
+      "standing": "consensus",
       "start_year_min": -3500,
       "start_year_max": -3000,
       "end_year_min": -1200,
@@ -8375,7 +8381,10 @@
       "end_year": 1788,
       "date_precision": "approx",
       "tier": "foundational",
-      "summary": "One of the longest continuous cultural traditions in human history."
+      "dating_method": "luminescence",
+      "standing": "consensus",
+      "summary": "One of the longest continuous cultural traditions in human history.",
+      "date_note": "The 65 ka arrival rests on optically stimulated luminescence at Madjedbebe, well beyond the radiocarbon range. The 1788 end is a colonial boundary, not an end to the tradition."
     },
     {
       "id": "oceania.australia.colonial",
@@ -8992,6 +9001,8 @@
       "start_year": -10000,
       "end_year": -4500,
       "tier": "foundational",
+      "dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
       "start_precision": "approx",
       "end_precision": "approx",
       "aliases": [
@@ -15052,14 +15063,27 @@
       "end_year": -3000,
       "tier": "foundational",
       "dating_method": "argon-argon",
-      "summary": "From the earliest stone tools to the first written records. Dated by measurement rather than reckoning, so quoted in years before present.",
-      "date_note": "Begins with the earliest knapped stone at 3.3 Ma, which predates the genus Homo: the toolmaking record runs continuously across that taxonomic boundary. Ends diachronously, as writing appears at different times in different regions.",
+      "standing": "consensus",
+      "summary": "From the earliest stone toolmaking to the first written records. Dated by measurement rather than reckoning, so quoted in years before present.",
+      "date_note": "SCOPE GATE. This app begins where human-like BEHAVIOUR begins, not where a taxon does. The floor is the earliest knapped stone — currently Lomekwi 3 at 3.3 Ma, which predates the oldest Homo fossil by about 500,000 years. A taxonomic floor would exclude the oldest instance of the very behaviour this app exists to track, and taxonomy is the least stable line available: H. habilis placement is disputed and the Ledi-Geraru mandible is unnamed. Knapping is the line rather than tool use, because tool use extends to chimpanzees and orangutans and so runs past the ~7 Ma common ancestor, which would make any floor arbitrary. The end is diachronous: writing appears at different times in different regions.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The floor is a behaviour, not a site. If an older knapping site is accepted, this date moves and the app's scope does not change.",
+          "source_ids": [
+            "harmand-2015-lomekwi"
+          ]
+        }
+      ],
+      "source_ids": [
+        "harmand-2015-lomekwi"
+      ],
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins",
+      "id": "global.prehistory.hominins",
       "kind": "era",
-      "name": "The Genus Homo",
+      "name": "Hominins",
       "parent_id": "global.prehistory",
       "start_year": -2798051,
       "end_year": null,
@@ -15068,7 +15092,7 @@
       "start_year_max": -2748051,
       "dating_method": "argon-argon",
       "standing": "consensus",
-      "summary": "Our own genus: a dozen or so named species, most of which overlapped with others rather than succeeding them in a line.",
+      "summary": "Humans, proto-humans and near-humans: a dozen or so named species, most of which overlapped with others rather than succeeding them in a line.",
       "allow_outside_parent_dates": true,
       "date_note": "The earliest fossil attributed to Homo is LD 350-1 from Ledi-Geraru, Ethiopia, at 2.80-2.75 Ma, constrained by the Gurumaha Tuff at 2.782 +/- 0.006 Ma. The genus is ongoing, so it outlasts prehistory rather than ending with it.",
       "alternatives": [
@@ -15091,10 +15115,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.homo-habilis",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-habilis",
+      "kind": "taxon",
       "name": "Homo habilis",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -2398051,
       "end_year": -1398051,
       "tier": "foundational",
@@ -15117,10 +15141,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.homo-rudolfensis",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-rudolfensis",
+      "kind": "taxon",
       "name": "Homo rudolfensis",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -1898051,
       "end_year": -1798051,
       "tier": "specialist",
@@ -15143,10 +15167,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.homo-erectus",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-erectus",
+      "kind": "taxon",
       "name": "Homo erectus",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -1888051,
       "end_year": -108051,
       "tier": "foundational",
@@ -15168,10 +15192,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.homo-antecessor",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-antecessor",
+      "kind": "taxon",
       "name": "Homo antecessor",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -855051,
       "end_year": -778051,
       "tier": "specialist",
@@ -15185,10 +15209,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.homo-heidelbergensis",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-heidelbergensis",
+      "kind": "taxon",
       "name": "Homo heidelbergensis",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -698051,
       "end_year": -198051,
       "tier": "intermediate",
@@ -15213,10 +15237,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.homo-naledi",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-naledi",
+      "kind": "taxon",
       "name": "Homo naledi",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -333051,
       "end_year": -234051,
       "tier": "intermediate",
@@ -15230,10 +15254,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.homo-neanderthalensis",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-neanderthalensis",
+      "kind": "taxon",
       "name": "Homo neanderthalensis",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -398051,
       "end_year": -38051,
       "tier": "foundational",
@@ -15251,10 +15275,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.denisovans",
-      "kind": "period",
+      "id": "global.prehistory.hominins.denisovans",
+      "kind": "taxon",
       "name": "Denisovans",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -193051,
       "end_year": -50051,
       "tier": "intermediate",
@@ -15273,10 +15297,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.homo-floresiensis",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-floresiensis",
+      "kind": "taxon",
       "name": "Homo floresiensis",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -98051,
       "end_year": -58051,
       "tier": "intermediate",
@@ -15315,10 +15339,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.homo-luzonensis",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-luzonensis",
+      "kind": "taxon",
       "name": "Homo luzonensis",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -132051,
       "end_year": null,
       "tier": "specialist",
@@ -15332,10 +15356,10 @@
       "summary": "A human species known from a handful of bones and teeth in a cave on Luzon, the Philippines."
     },
     {
-      "id": "global.prehistory.origins.homo-sapiens",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-sapiens",
+      "kind": "taxon",
       "name": "Homo sapiens",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -313051,
       "end_year": null,
       "tier": "foundational",
@@ -15355,10 +15379,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "global.prehistory.origins.homo-longi",
-      "kind": "period",
+      "id": "global.prehistory.hominins.homo-longi",
+      "kind": "taxon",
       "name": "Homo longi",
-      "parent_id": "global.prehistory.origins",
+      "parent_id": "global.prehistory.hominins",
       "start_year": -144051,
       "end_year": null,
       "tier": "specialist",

@@ -292,3 +292,10 @@ footer a { color: var(--ink-dim); }
 .cal-option:hover { background: var(--panel); }
 .cal-option[aria-checked="true"] .cal-check { color: var(--accent); }
 .cal-check { color: var(--ink-faint); flex: 0 0 auto; font-size: 11px; }
+
+.cal-refusal {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--muted, #666);
+}

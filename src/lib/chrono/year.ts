@@ -334,17 +334,86 @@ export function uncertaintyOf(v: YearValue): number | undefined {
  * and a historically attested date are not the same kind of claim, and the
  * readout should not present them identically.
  */
-const NON_CALENDAR_METHODS: ReadonlySet<DatingMethod> = new Set([
-  "radiocarbon-calibrated",
-  "radiocarbon-uncalibrated",
-  "potassium-argon",
-  "luminescence",
-  "esr",
-  "typological",
-]);
+/**
+ * Methods that produce a measurement rather than a reckoning.
+ *
+ * Defined as the complement of the calendar-ish ones rather than as a list of
+ * the measured ones. The explicit-list version silently omitted argon-argon,
+ * uranium-series, magnetostratigraphy and layer-counting \u2014 four of the ten
+ * methods in the enum \u2014 which meant `isScientificDating` returned false for an
+ * Ar/Ar date. Nothing broke only because everything dated that way is old
+ * enough for the pre-Holocene backstop to reach the same answer by luck.
+ *
+ * As a complement, a method added to the enum later defaults to "measured",
+ * which is the safe direction: it leads to BP, which is always expressible.
+ */
+const CALENDAR_METHODS: ReadonlySet<DatingMethod> = new Set(["calendar", "unknown"]);
+
+/**
+ * Which of the three senses of "before present" a method produces.
+ *
+ * These are not interchangeable and the distinction is not cosmetic:
+ *
+ * - `cal` \u2014 calendar-equivalent years counted from 1950. Calibrated
+ *   radiocarbon and annual layer counts. Freely convertible to CE/BCE.
+ * - `radiocarbon` \u2014 UNCALIBRATED radiocarbon years. These are *not* calendar
+ *   years. The relationship to real time is the calibration curve, which is
+ *   neither linear nor monotonic in its wiggles, so there is no arithmetic
+ *   that turns a \u00B9\u2074C year into a CE date. See `isCalendarConvertible`.
+ * - `geological` \u2014 "years ago", never referenced to 1950 at all. At Ma scale
+ *   the 1950 offset is 0.00006% and numerically ignorable, but the label must
+ *   not claim a datum the measurement does not have.
+ */
+export type BpSense = "cal" | "radiocarbon" | "geological" | "calendar";
+
+const BP_SENSE: Partial<Record<DatingMethod, BpSense>> = {
+  calendar: "calendar",
+  "radiocarbon-calibrated": "cal",
+  "layer-counting": "cal",
+  "radiocarbon-uncalibrated": "radiocarbon",
+  "argon-argon": "geological",
+  "potassium-argon": "geological",
+  "uranium-series": "geological",
+  luminescence: "geological",
+  esr: "geological",
+  magnetostratigraphy: "geological",
+};
+
+export function bpSenseOf(v: YearValue): BpSense {
+  if (v.method === undefined) return "calendar";
+  return BP_SENSE[v.method] ?? "calendar";
+}
+
+/** Unit-independent label for a sense: what follows the number. */
+export const BP_SENSE_LABEL: Record<BpSense, string> = {
+  cal: "cal BP",
+  radiocarbon: "\u00B9\u2074C BP",
+  geological: "ago",
+  calendar: "BP",
+};
+
+/**
+ * Whether a value can honestly be shown as a calendar date.
+ *
+ * The frame model is built on BP and calendar reckoning being exactly
+ * interconvertible, which makes the choice between them purely a display
+ * decision. That premise holds for every method here except one.
+ *
+ * An uncalibrated radiocarbon age is a measurement in \u00B9\u2074C years, and \u00B9\u2074C years
+ * are not calendar years \u2014 atmospheric \u00B9\u2074C has varied, so the mapping is an
+ * empirical curve, not an offset. Rendering "7,500 \u00B9\u2074C BP" as "5551 BCE" would
+ * be inventing a calendar date that the measurement does not support, and the
+ * error is centuries in the worst parts of the curve.
+ *
+ * So this is the one case where the UI must refuse rather than convert, even
+ * against an explicit user preference.
+ */
+export function isCalendarConvertible(v: YearValue): boolean {
+  return bpSenseOf(v) !== "radiocarbon";
+}
 
 export function isScientificDating(v: YearValue): boolean {
-  return v.method !== undefined && NON_CALENDAR_METHODS.has(v.method);
+  return v.method !== undefined && !CALENDAR_METHODS.has(v.method);
 }
 
 export const DATING_METHOD_LABEL: Record<DatingMethod, string> = {

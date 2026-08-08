@@ -16,7 +16,7 @@ def extend(E, rome, cn, egypt):
 
     # Roman emperor ids sit flat under <rome>.empire while parent_id points at
     # the dynasty period, so id and parent diverge and the prefix is explicit.
-    R, _, _, _ = make_builders(E, id_prefix=f"{rome}.empire")
+    R, *_ = make_builders(E, id_prefix=f"{rome}.empire")
 
     # Julio-Claudian (already have augustus, nero)
     jc = f"{rome}.empire.julio-claudian"
@@ -147,7 +147,7 @@ def extend(E, rome, cn, egypt):
     byz = "europe.mediterranean.byzantine"
     # Byzantine emperors all hang directly off the one era node, so parent is
     # fixed rather than passed. Wrapped to keep the 90-odd call sites intact.
-    _byz_reign, _, _, _ = make_builders(E)
+    _byz_reign, *_ = make_builders(E)
 
     def B(slug, name, s, e, tier="specialist", summary=None, **kw):
         return _byz_reign(slug, name, byz, s, e, tier, summary, **kw)
@@ -191,7 +191,7 @@ def extend(E, rome, cn, egypt):
     # =========================================================================
 
     # Chinese emperors: ordinary reigns rooted at their dynasty.
-    C, _, _, _ = make_builders(E)
+    C, *_ = make_builders(E)
 
     # Qin (already have shi-huang)
     C("er-shi",  "Qin Er Shi",  f"{cn}.qin", -210, -207, "intermediate", "Second and last Qin emperor.")
@@ -330,7 +330,7 @@ def extend(E, rome, cn, egypt):
     # Kept rather than renamed across ~200 call sites, but flagged: it is a
     # genuine trap, and it is why a shared builder had to be introduced
     # carefully rather than by search-and-replace.
-    P, _unused_period_builder, _, _ = make_builders(E)
+    P, _unused_period_builder, *_ = make_builders(E)
 
     # 1st Dynasty (already have narmer)
     d1 = f"{egypt}.early-dynastic.dyn1"
@@ -533,7 +533,7 @@ def extend(E, rome, cn, egypt):
     # symbolically. Dates are the years each held the title Sei-i Taishōgun.
 
     # Shōguns take the native name positionally, ahead of parent.
-    _shogun_reign, _, _, _ = make_builders(E)
+    _shogun_reign, *_ = make_builders(E)
 
     def S(slug, name, native, parent, s, e, tier="specialist", summary=None,
           aliases=None, **kw):

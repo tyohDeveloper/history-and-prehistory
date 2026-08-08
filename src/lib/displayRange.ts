@@ -19,6 +19,7 @@
 import type { Entity } from "./types";
 import { formatRange as naiveRange } from "./tree";
 import { datingOf } from "./chrono/fromEntity";
+import { bpSenseOf } from "./chrono/year";
 import {
   BP_UNIT_DIVISOR,
   bpFromYear,
@@ -65,8 +66,10 @@ export function displayRange(e: Entity, preference: FramePreference = "auto"): D
   const shared =
     endBp !== undefined && endBp / BP_UNIT_DIVISOR[olderUnit] >= 1 ? olderUnit : undefined;
 
+  const sense = bpSenseOf(startValue);
   const startText = formatBp(startValue.consensus.year, startValue.consensus.fuzz, {
     datum: frame,
+    sense,
     ...(shared !== undefined ? { unit: shared } : {}),
   });
   const tail = endLabel(e);
@@ -75,6 +78,7 @@ export function displayRange(e: Entity, preference: FramePreference = "auto"): D
 
   const endText = formatBp(endValue.consensus.year, endValue.consensus.fuzz, {
     datum: frame,
+    sense,
     ...(shared !== undefined ? { unit: shared } : {}),
   });
   return { text: `${startText} \u2013 ${endText}`, frame };

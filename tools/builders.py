@@ -54,7 +54,7 @@ def _check(kw, where):
 
 
 def make_builders(E, id_prefix=None):
-    """Return (R, P, ERA, EVENT) bound to an ``E`` entity-emitter.
+    """Return (R, P, ERA, EVENT, TAXON, FIRST) bound to an ``E`` entity-emitter.
 
     ``id_prefix`` overrides where ids are rooted. By default an entity's id is
     ``f"{parent}.{slug}"``, which is what most of the dataset does. Roman
@@ -97,4 +97,25 @@ def make_builders(E, id_prefix=None):
               aliases=None, native=None, **kw):
         return _emit("event", slug, name, parent, s, e, tier, summary, aliases, native, kw)
 
-    return R, P, ERA, EVENT
+    def TAXON(slug, name, parent, s, e=None, tier="intermediate", summary=None,
+              aliases=None, native=None, **kw):
+        """A species or population. Not a period: several outlive the eras they
+        sit near, and Homo sapiens is extant, so ``e`` defaults to None."""
+        return _emit("taxon", slug, name, parent, s, e, tier, summary, aliases, native, kw)
+
+    def FIRST(slug, name, parent, s, tier="intermediate", summary=None,
+              aliases=None, native=None, **kw):
+        """The earliest known instance of a behaviour.
+
+        A threshold is one-sided. ``s`` is a floor, not an estimate: new
+        evidence can only push it older, and the behaviour continues after it.
+        So there is no end year to pass, and ``date_precision`` is forced to
+        ``minimum`` rather than left to the caller — an "approx" threshold
+        would misdescribe the claim being made.
+        """
+        kw.setdefault("date_precision", "minimum")
+        if kw["date_precision"] != "minimum":
+            raise ValueError(f"threshold {slug}: date_precision must be 'minimum'")
+        return _emit("threshold", slug, name, parent, s, None, tier, summary, aliases, native, kw)
+
+    return R, P, ERA, EVENT, TAXON, FIRST

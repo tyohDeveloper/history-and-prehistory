@@ -43,6 +43,8 @@ S_WURZ = "wurz-2013-msa"
 S_JACOBS = "jacobs-2008-msa"
 S_VILLA = "villa-2012-border-cave"
 S_PLOS_ATERIAN = "plos-2022-el-mnasra"
+S_HARMAND = "harmand-2015-lomekwi"
+S_DOMALAIN = "domalain-2017-lomekwi-critique"
 
 
 def bp(years_before_present):
@@ -64,30 +66,47 @@ def ka(thousands):
 
 
 def extend(E, glob):
-    _, P, _, _ = make_builders(E)
+    _, P, _, _, TAXON, FIRST = make_builders(E)
 
     pre = f"{glob}.prehistory"
     E(pre, "era", "Human Prehistory", glob, start=-3300000, end=-3000,
       tier="foundational",
       dating_method="argon-argon",
-      summary="From the earliest stone tools to the first written records. Dated by "
+      standing="consensus",
+      summary="From the earliest stone toolmaking to the first written records. Dated by "
               "measurement rather than reckoning, so quoted in years before present.",
-      date_note="Begins with the earliest knapped stone at 3.3 Ma, which predates the "
-                "genus Homo: the toolmaking record runs continuously across that "
-                "taxonomic boundary. Ends diachronously, as writing appears at different "
-                "times in different regions.")
+      date_note="SCOPE GATE. This app begins where human-like BEHAVIOUR begins, not where a "
+                "taxon does. The floor is the earliest knapped stone \u2014 currently Lomekwi 3 at "
+                "3.3 Ma, which predates the oldest Homo fossil by about 500,000 years. A "
+                "taxonomic floor would exclude the oldest instance of the very behaviour this "
+                "app exists to track, and taxonomy is the least stable line available: "
+                "H. habilis placement is disputed and the Ledi-Geraru mandible is unnamed. "
+                "Knapping is the line rather than tool use, because tool use extends to "
+                "chimpanzees and orangutans and so runs past the ~7 Ma common ancestor, which "
+                "would make any floor arbitrary. The end is diachronous: writing appears at "
+                "different times in different regions.",
+      caveats=[{"kind": "misconception",
+                "text": "The floor is a behaviour, not a site. If an older knapping site is "
+                        "accepted, this date moves and the app's scope does not change.",
+                "source_ids": [S_HARMAND]}],
+      source_ids=[S_HARMAND])
 
     # =========================================================================
-    # THE GENUS HOMO
+    # STRAND 1 of 3 - WHO: the hominins
     # =========================================================================
-    origins = f"{pre}.origins"
-    E(origins, "era", "The Genus Homo", pre,
+    # Named for its contents, not for the scope rule. The behavioural gate is
+    # on the prehistory root above; repeating it here as a branch title would
+    # misdescribe a branch that holds twelve species. Physical anthropology is
+    # in this app's domain - it is the study of proto-humans and near-humans -
+    # while the Deep Time app treats the genus as a single clade node.
+    origins = f"{pre}.hominins"
+    E(origins, "era", "Hominins", pre,
       start=ma(2.8), end=None, tier="foundational",
       start_year_min=ma(2.80), start_year_max=ma(2.75),
       dating_method="argon-argon",
       standing="consensus",
-      summary="Our own genus: a dozen or so named species, most of which overlapped with "
-              "others rather than succeeding them in a line.",
+      summary="Humans, proto-humans and near-humans: a dozen or so named species, most of "
+              "which overlapped with others rather than succeeding them in a line.",
       allow_outside_parent_dates=True,
       date_note="The earliest fossil attributed to Homo is LD 350-1 from Ledi-Geraru, "
                 "Ethiopia, at 2.80-2.75 Ma, constrained by the Gurumaha Tuff at "
@@ -104,7 +123,7 @@ def extend(E, glob):
       }],
       source_ids=[S_VILLMOARE, S_GURUMAHA, S_HAWKS])
 
-    P("homo-habilis", "Homo habilis", origins, ma(2.4), ma(1.4), "foundational",
+    TAXON("homo-habilis", "Homo habilis", origins, ma(2.4), ma(1.4), "foundational",
       summary="An early, small-brained human in Africa from about 2.4 to 1.4 million "
               "years ago, overlapping with other human species.",
       dating_method="argon-argon", standing="consensus",
@@ -116,7 +135,7 @@ def extend(E, glob):
                 "source_ids": [S_SMITHSONIAN]}],
       source_ids=[S_SMITHSONIAN])
 
-    P("homo-rudolfensis", "Homo rudolfensis", origins, ma(1.9), ma(1.8), "specialist",
+    TAXON("homo-rudolfensis", "Homo rudolfensis", origins, ma(1.9), ma(1.8), "specialist",
       summary="A flat-faced, big-toothed early human from Kenya about 1.9 million years "
               "ago whose place in the human genus is still argued over.",
       dating_method="argon-argon", standing="minority",
@@ -128,7 +147,7 @@ def extend(E, glob):
                 "source_ids": [S_SMITHSONIAN]}],
       source_ids=[S_SMITHSONIAN])
 
-    P("homo-erectus", "Homo erectus", origins, ma(1.89), ka(110), "foundational",
+    TAXON("homo-erectus", "Homo erectus", origins, ma(1.89), ka(110), "foundational",
       aliases=["Homo ergaster", "Java Man", "Peking Man"],
       summary="The first widely travelled human species, present from about 1.9 million "
               "years ago until roughly 110,000 years ago in Java.",
@@ -139,7 +158,7 @@ def extend(E, glob):
                 "52 radiometric estimates.",
       source_ids=[S_SMITHSONIAN, S_RIZAL])
 
-    P("homo-antecessor", "Homo antecessor", origins, ka(857), ka(780), "specialist",
+    TAXON("homo-antecessor", "Homo antecessor", origins, ka(857), ka(780), "specialist",
       summary="An early European human from a Spanish cave, about 800,000 years old, "
               "whose status as a separate species is still argued.",
       dating_method="esr", standing="minority",
@@ -147,7 +166,7 @@ def extend(E, glob):
                 "reversed Matuyama polarity, which requires an age greater than 780 ka.",
       source_ids=[S_FALGUERES])
 
-    P("homo-heidelbergensis", "Homo heidelbergensis", origins, ka(700), ka(200), "intermediate",
+    TAXON("homo-heidelbergensis", "Homo heidelbergensis", origins, ka(700), ka(200), "intermediate",
       summary="A large-brained Middle Pleistocene human in Europe, Africa and the Near "
               "East, roughly 700,000 to 200,000 years ago.",
       start_year_min=ma(1.3), start_year_max=ka(700),
@@ -159,14 +178,14 @@ def extend(E, glob):
                 "source_ids": [S_SMITHSONIAN]}],
       source_ids=[S_SMITHSONIAN])
 
-    P("homo-naledi", "Homo naledi", origins, ka(335), ka(236), "intermediate",
+    TAXON("homo-naledi", "Homo naledi", origins, ka(335), ka(236), "intermediate",
       summary="A small-brained human found deep in a South African cave system, "
               "surprisingly recent at 335,000 to 236,000 years ago.",
       dating_method="uranium-series", standing="consensus",
       date_note="Its position in the human family tree is unresolved.",
       source_ids=[S_SMITHSONIAN])
 
-    P("homo-neanderthalensis", "Homo neanderthalensis", origins, ka(400), ka(40), "foundational",
+    TAXON("homo-neanderthalensis", "Homo neanderthalensis", origins, ka(400), ka(40), "foundational",
       aliases=["Neanderthal"],
       summary="Cold-adapted humans across Europe and western Asia, from about 400,000 "
               "years ago until roughly 40,000 years ago.",
@@ -175,7 +194,7 @@ def extend(E, glob):
                 "Mousterian ends 41,030-39,260 cal BP.",
       source_ids=[S_SMITHSONIAN, S_MARIN])
 
-    P("denisovans", "Denisovans", origins, ka(195), ka(52), "intermediate",
+    TAXON("denisovans", "Denisovans", origins, ka(195), ka(52), "intermediate",
       aliases=["Denisova hominin"],
       summary="A human population known mainly from DNA, identified from fragments in a "
               "Siberian cave and traceable in living people.",
@@ -185,7 +204,7 @@ def extend(E, glob):
                 "no type specimen in the conventional sense.",
       source_ids=[S_DOUKA])
 
-    P("homo-floresiensis", "Homo floresiensis", origins, ka(100), ka(60), "intermediate",
+    TAXON("homo-floresiensis", "Homo floresiensis", origins, ka(100), ka(60), "intermediate",
       aliases=["Flores hobbit"],
       summary="A small-bodied human on the Indonesian island of Flores, known from Liang "
               "Bua cave.",
@@ -206,7 +225,7 @@ def extend(E, glob):
                 "source_ids": [S_SUTIKNA]}],
       source_ids=[S_SUTIKNA])
 
-    P("homo-luzonensis", "Homo luzonensis", origins, ka(134), None, "specialist",
+    TAXON("homo-luzonensis", "Homo luzonensis", origins, ka(134), None, "specialist",
       summary="A human species known from a handful of bones and teeth in a cave on "
               "Luzon, the Philippines.",
       dating_method="uranium-series", standing="minority",
@@ -216,7 +235,7 @@ def extend(E, glob):
                 "is now read as a minimum from the dating method rather than a true age.",
       source_ids=[S_NHM_LUZON])
 
-    P("homo-sapiens", "Homo sapiens", origins, ka(315), None, "foundational",
+    TAXON("homo-sapiens", "Homo sapiens", origins, ka(315), None, "foundational",
       aliases=["Anatomically modern humans"],
       summary="Our own species, first recognisable in Africa around 300,000 years ago.",
       start_year_min=ka(349), start_year_max=ka(281),
@@ -227,7 +246,7 @@ def extend(E, glob):
                 "itself part of the disagreement about the date.",
       source_ids=[S_HUBLIN])
 
-    P("homo-longi", "Homo longi", origins, ka(146), None, "specialist",
+    TAXON("homo-longi", "Homo longi", origins, ka(146), None, "specialist",
       aliases=["Dragon Man", "Harbin cranium"],
       summary="A single large skull from Harbin, China, whose identity was overturned by "
               "protein analysis in 2025.",

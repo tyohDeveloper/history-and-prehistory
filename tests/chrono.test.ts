@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { bpFromYear, formatBp, formatBpRange, resolveFrame, suggestFrame, yearFromBp } from "../src/lib/chrono/bp";
 import { datingOf } from "../src/lib/chrono/fromEntity";
+import { bpSenseOf, isCalendarConvertible, isScientificDating } from "../src/lib/chrono/year";
 import type { Entity } from "../src/lib/types";
 import {
   allClaims,
@@ -458,7 +459,57 @@ describe("dating method reaches the frame chooser", () => {
   });
 
   it("still leads a reckoned date in a calendar", () => {
-    const cyrus = { ...gobekli, start_year: -550, dating_method: "historical-record" } as unknown as Entity;
+    const cyrus = { ...gobekli, start_year: -550, dating_method: "calendar" } as unknown as Entity;
     expect(suggestFrame(datingOf(cyrus).start!.primary.value)).toBe("calendar");
+  });
+});
+
+describe("the three senses of before-present", () => {
+  const withMethod = (m: string, y = -8000) =>
+    datingOf({
+      id: "x", name: "X", kind: "period", parent_id: null, tier: "foundational",
+      start_year: y, end_year: null, dating_method: m,
+    } as unknown as Entity).start!.primary.value;
+
+  it("separates calibrated, uncalibrated and geological", () => {
+    expect(bpSenseOf(withMethod("radiocarbon-calibrated"))).toBe("cal");
+    expect(bpSenseOf(withMethod("layer-counting"))).toBe("cal");
+    expect(bpSenseOf(withMethod("radiocarbon-uncalibrated"))).toBe("radiocarbon");
+    expect(bpSenseOf(withMethod("argon-argon"))).toBe("geological");
+    expect(bpSenseOf(withMethod("uranium-series"))).toBe("geological");
+    expect(bpSenseOf(withMethod("calendar"))).toBe("calendar");
+  });
+
+  it("refuses a calendar reading for uncalibrated radiocarbon", () => {
+    // 14C years are not calendar years; the mapping is an empirical curve.
+    // There is no arithmetic that produces a BCE date from this.
+    expect(isCalendarConvertible(withMethod("radiocarbon-uncalibrated"))).toBe(false);
+    expect(isCalendarConvertible(withMethod("radiocarbon-calibrated"))).toBe(true);
+    expect(isCalendarConvertible(withMethod("argon-argon"))).toBe(true);
+  });
+
+  it("overrides an explicit calendar preference it cannot honour", () => {
+    // The only case where user preference does not win: the request is for a
+    // number that does not exist, not for a different view of one that does.
+    expect(resolveFrame(withMethod("radiocarbon-uncalibrated"), "calendar")).toBe("bp");
+    expect(resolveFrame(withMethod("radiocarbon-calibrated"), "calendar")).toBe("calendar");
+  });
+
+  it("labels each sense distinctly", () => {
+    const cal = formatBp(asIso(-6050), undefined, { sense: "cal" });
+    const raw = formatBp(asIso(-6050), undefined, { sense: "radiocarbon" });
+    expect(cal).toContain("cal BP");
+    expect(raw).toContain("\u00B9\u2074C BP");
+    expect(raw).not.toContain("cal");
+  });
+
+  it("treats every non-calendar method as measured", () => {
+    // Regression: the old explicit list omitted argon-argon, uranium-series,
+    // magnetostratigraphy and layer-counting, so isScientificDating was false
+    // for an Ar/Ar date. Only the age backstop hid it.
+    for (const m of ["argon-argon", "uranium-series", "magnetostratigraphy", "layer-counting"]) {
+      expect(isScientificDating(withMethod(m))).toBe(true);
+    }
+    expect(isScientificDating(withMethod("calendar"))).toBe(false);
   });
 });

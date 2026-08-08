@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://history-picker.local/schemas/entity.schema.json",
   "title": "Historical Entity",
-  "description": "A node in the hierarchical history tree. Regions, Eras, Periods, Reigns, and Events all share this shape. Parent/child links form the tree. Schema 1.1.0 adds subkind, dating_method, standing, as_of, native_date, alternatives, caveats and source_ids; all optional, so every 1.0.0 document remains valid.",
+  "description": "A node in the hierarchical history tree. Regions, Eras, Periods, Reigns, Events, Taxa and Thresholds all share this shape. Parent/child links form the tree. Schema 2.0.0 adds the 'taxon' and 'threshold' kinds and the 'minimum' date precision. It is a MAJOR bump because consumers that switch exhaustively on `kind` will not handle the two new values, and because entity ids in the prehistory subtree were restructured. Schema 1.1.0 added subkind, dating_method, standing, as_of, native_date, alternatives, caveats and source_ids; all optional, so every 1.0.0 document remained valid.",
   "type": "object",
   "required": [
     "id",
@@ -27,9 +27,11 @@
         "era",
         "period",
         "reign",
-        "event"
+        "event",
+        "taxon",
+        "threshold"
       ],
-      "description": "region = geographic bucket; era = long civilizational chunk; period = dynasty/named sub-era/nengō; reign = single ruler; event = discrete moment (battle, treaty, disaster)."
+      "description": "region = geographic bucket; era = long civilizational chunk; period = dynasty/named sub-era/nengō; reign = single ruler; event = discrete moment (battle, treaty, disaster); taxon = a biological species or population (a taxon is NOT a period — several outlive the eras they are filed near, and Homo sapiens is extant); threshold = the earliest known instance of a behaviour, e.g. controlled fire. A threshold is a ONE-SIDED bound: new evidence can only move it older, and the behaviour continues after it. Use date_precision 'minimum' with it."
     },
     "name": {
       "type": "string",
@@ -112,9 +114,10 @@
         "traditional",
         "disputed",
         "unknown",
-        "exact"
+        "exact",
+        "minimum"
       ],
-      "description": "Overall precision when a single value fits both endpoints. If start and end have different precisions, use start_precision / end_precision instead. 'exact' is retained as an alias for 'year'."
+      "description": "Overall precision when a single value fits both endpoints. If start and end have different precisions, use start_precision / end_precision instead. 'exact' is retained as an alias for 'year'. 'minimum' means the date is a floor, not an estimate: the behaviour or occurrence is at least this old and may be older. It is the correct precision for a threshold, where the record can only be pushed back."
     },
     "start_precision": {
       "type": "string",
@@ -127,7 +130,8 @@
         "traditional",
         "disputed",
         "unknown",
-        "exact"
+        "exact",
+        "minimum"
       ],
       "description": "Precision for start_year specifically."
     },
@@ -142,7 +146,8 @@
         "traditional",
         "disputed",
         "unknown",
-        "exact"
+        "exact",
+        "minimum"
       ],
       "description": "Precision for end_year specifically."
     },

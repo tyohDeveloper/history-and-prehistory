@@ -17,7 +17,7 @@ from builders import make_builders
 
 
 def extend(E, sa):
-    R, P, ERA, EVENT = make_builders(E)
+    R, P, ERA, EVENT, *_ = make_builders(E)
 
     # =========================================================================
     # MAURYA EMPIRE — remaining rulers (already have Chandragupta, Ashoka)

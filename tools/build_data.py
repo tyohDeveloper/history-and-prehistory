@@ -172,14 +172,16 @@ E("global.paleolithic", "era", "Paleolithic (Old Stone Age)", "global.prehistory
             "definitional argument; they are included here because the toolmaking record "
             "is continuous even where the taxonomy is not.")
 E("global.mesolithic", "era", "Mesolithic", "global.prehistory", start=-10000, end=-5000,
-  tier="intermediate",
+  tier="intermediate", dating_method="radiocarbon-calibrated", standing="consensus",
   date_note="A Eurasian term. It has no counterpart in the Americas, sub-Saharan Africa "
             "or Australia, where the post-glacial sequence is described differently.")
 E("global.neolithic", "era", "Neolithic (New Stone Age)", "global.prehistory",
   start=-10000, end=-3300, tier="foundational",
+  dating_method="radiocarbon-calibrated", standing="consensus",
   summary="Beginnings of agriculture, animal domestication, and permanent villages.")
 E("global.bronze-age", "era", "Bronze Age", "global",
   start=-3300, end=-1200, tier="foundational",
+  dating_method="calendar", standing="consensus",
   start_year_min=-3500, start_year_max=-3000,
   end_year_min=-1200, end_year_max=-1150,
   start_precision="approx", end_precision="approx",
@@ -1382,7 +1384,11 @@ E("americas.amazon-southern.mapuche", "era", "Mapuche / Araucanía", "americas.a
 
 E("oceania.australia.aboriginal", "era", "Aboriginal Australia", "oceania.australia",
   start=-65000, end=1788, date_precision="approx", tier="foundational",
-  summary="One of the longest continuous cultural traditions in human history.")
+  dating_method="luminescence", standing="consensus",
+  summary="One of the longest continuous cultural traditions in human history.",
+  date_note="The 65 ka arrival rests on optically stimulated luminescence at Madjedbebe, "
+            "well beyond the radiocarbon range. The 1788 end is a colonial boundary, not "
+            "an end to the tradition.")
 E("oceania.australia.colonial", "era", "Colonial Australia", "oceania.australia", start=1788, end=1901, tier="foundational")
 E("oceania.australia.commonwealth", "era", "Commonwealth of Australia", "oceania.australia", start=1901, end=None, tier="foundational")
 
@@ -1555,6 +1561,7 @@ E("global.contemporary.covid", "event", "COVID-19 Pandemic", "global.contemporar
 # --- Bronze Age subdivisions and neolithic events ---
 E("global.neolithic.agricultural-revolution", "event", "Neolithic (Agricultural) Revolution", "global.neolithic",
   start=-10000, end=-4500, tier="foundational",
+  dating_method="radiocarbon-calibrated", standing="consensus",
   start_precision="approx", end_precision="approx",
   aliases=["Neolithic Revolution", "First Agricultural Revolution"],
   summary="Independent transitions to farming and animal domestication in the Fertile Crescent, China, Mesoamerica, and elsewhere.")
@@ -2274,6 +2281,19 @@ themes = [
 # substance of the claim. See docs/DESIGN.md, "Sources: the exception".
 
 sources = [
+    {
+        "id": "harmand-2015-lomekwi",
+        "kind": "scholarly",
+        "citation": "Harmand et al. (2015), '3.3-million-year-old stone tools from Lomekwi 3, West Turkana, Kenya', Nature",
+        "url": "https://www.nature.com/articles/nature14464",
+    },
+    {
+        "id": "domalain-2017-lomekwi-critique",
+        "kind": "scholarly",
+        "citation": "Critiques of the Lomekwi 3 assemblage as naturally fractured stone (geofacts)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28460736/",
+        "note": "Minority position: questions whether the Lomekwi 3 flakes are deliberately knapped.",
+    },
     {
         "id": "smithsonian-human-origins",
         "kind": "reference",

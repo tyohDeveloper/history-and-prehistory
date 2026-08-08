@@ -30,9 +30,12 @@ import {
   BP_DATUM_YEAR,
   DATUM_LABEL,
   DATUM_YEAR,
+  isCalendarConvertible,
   isScientificDating,
   supportOf,
   uncertaintyOf,
+  BP_SENSE_LABEL,
+  type BpSense,
   type Datum,
   type IsoYear,
   type YearValue,
@@ -107,6 +110,8 @@ function formatMagnitude(bp: number, unit: BpUnit, uncertainty?: number): string
 export interface BpFormatOptions {
   /** Append the unit label. Default true. */
   withUnit?: boolean;
+  /** Which sense of "before present" this is; sets the suffix. */
+  sense?: BpSense;
   /**
    * Force the unit instead of choosing one from the value's own magnitude.
    *
@@ -137,7 +142,20 @@ export function formatBp(
   const unit = options.unit ?? bpUnitFor(bp);
   const magnitude = formatMagnitude(bp, unit, uncertainty);
   if (options.withUnit === false) return magnitude;
-  return unit === "yr" ? `${magnitude} ${DATUM_LABEL[datum]}` : `${magnitude} ${unit}`;
+  // The suffix carries the sense, not just the datum: "cal BP" and "14C BP"
+  // share the 1950 datum but are different quantities, and a geological age
+  // was never referenced to 1950 at all.
+  const sense = options.sense;
+  if (unit === "yr") {
+    const label =
+      sense === undefined || sense === "calendar"
+        ? DATUM_LABEL[datum]
+        : datum === "b2k"
+          ? DATUM_LABEL[datum]
+          : BP_SENSE_LABEL[sense];
+    return `${magnitude} ${label}`;
+  }
+  return sense === "geological" ? `${magnitude} ${unit} ago` : `${magnitude} ${unit}`;
 }
 
 /**
@@ -208,6 +226,7 @@ export function suggestFrame(v: YearValue): DisplayFrame {
   const bp = bpFromYear(v.consensus.year);
   if (bp >= HOLOCENE_BACKSTOP_BP) return "bp";
 
+  if (!isCalendarConvertible(v)) return "bp";
   if (v.method !== undefined && v.method !== "unknown") {
     return isScientificDating(v) ? "bp" : "calendar";
   }
@@ -226,5 +245,9 @@ export function suggestFrame(v: YearValue): DisplayFrame {
  * either way.
  */
 export function resolveFrame(v: YearValue, preference: FramePreference = "auto"): DisplayFrame {
+  // The one case where preference does not win. An uncalibrated radiocarbon
+  // age has no calendar equivalent to show, so "calendar" is not a display
+  // choice here \u2014 it is a request for a number that does not exist.
+  if (preference === "calendar" && !isCalendarConvertible(v)) return "bp";
   return preference === "auto" ? suggestFrame(v) : preference;
 }

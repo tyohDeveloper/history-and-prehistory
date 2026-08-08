@@ -5,9 +5,12 @@ Ships as **one HTML file** that runs offline from `file://`, stores nothing, and
 
 Planned home: **`history.tyoh.app`** — the History member of the [tyoh.app tools family](#the-tyohapp-family).
 
-> **Status:** dataset **v3.1.0** (1,417 entities, 114 sources, schema 2.0.0). The Miller-column
-> picker, the prehistory extension back to 3.3 Ma, the multi-calendar readout, and the
-> focus+context lens are in place. The multi-script input grammar is not built yet.
+> **Status:** app **v0.5.0**, dataset **v3.1.0** (1,417 entities, 114 sources, schema 2.0.0).
+> App and dataset are versioned independently and the header shows both.
+> The Miller-column picker, the prehistory extension back to 3.3 Ma, the multi-calendar readout,
+> and the focus+context lens are in place. Calendar *input* — the multi-script grammar — is the
+> last unbuilt requirement, and the disclosure surface is authored but not yet rendered (Q-31),
+> which is why this is not 1.0.
 > [`docs/DESIGN.md`](docs/DESIGN.md) is the living design doc and carries the open-item register;
 > [`docs/gap-analysis-v2.1.0.md`](docs/gap-analysis-v2.1.0.md) is the original roadmap and is now
 > largely historical.
@@ -157,7 +160,7 @@ Bundle size is baselined. If a change grows gzip by more than 5%, the build fail
 |---|---|---|
 | `tyoh.app` | Hub / launcher | Planned |
 | `units.tyoh.app` | [OmniUnitConverter-Calculator](https://github.com/tyohDeveloper/OmniUnitConverter-Calculator) | Currently at apex; scheduled to move |
-| `history.tyoh.app` | **History & Prehistory** (this repo) | In development — dataset v3.1.0, picker and lens working |
+| `history.tyoh.app` | **History & Prehistory** (this repo) | v0.5.0 · dataset v3.1.0 — picker, calendars, and lens working; not yet deployed |
 | `earth-cosmos.tyoh.app` | Deep Time — cosmology, geology, evolution | Planned |
 | `decay.tyoh.app` | Nuclear, particle, and atomic timescales | Planned |
 

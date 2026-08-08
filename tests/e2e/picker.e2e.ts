@@ -18,6 +18,10 @@ test("boots offline from file:// with no network requests", async ({ page }) => 
 });
 
 test("shows the version stamp and entity count", async ({ page }) => {
+  // Both versions are pinned. They move independently, and the app version
+  // silently drifting out of the header is exactly the kind of thing that
+  // goes unnoticed until a bug report quotes a version that never shipped.
+  await expect(page.getByTestId("text-app-version")).toContainText("v0.5.0");
   await expect(page.getByTestId("text-app-version")).toContainText("data 3.1.0");
   await expect(page.getByTestId("panel-footer-root")).toContainText("1,417 entities");
 });

@@ -14,12 +14,24 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
-## [0.5.0] — 2026-08-08
+## [3.1.2.0-app] — 2026-08-08
 
-First tagged release, cut while the project still used three-part semver. It was renumbered
-shortly afterwards when four-part versioning was adopted: this release is the app now known as
-**3.1.1.0**, and the dataset it ships moved from `3.1.0` to the data track's `0.5.0.1`. The old
-`v0.5.0` tag is kept so the reference in this file does not rot.
+### Fixed
+
+- Removed `src/lib/{types,tree,dataset}.ts`. They had no importers and duplicated the `entity`,
+  `dataset` and `chrono` domains; §3.8 violations went from 2 back to 0, total §3 from 20 to 18.
+- Removed `pnpm-lock.yaml`. CI runs `npm ci` and `release.mjs` syncs `package-lock.json`, so a
+  second lockfile only lets the workspace and CI disagree.
+- Dropped the unused `@replit/connectors-sdk` runtime dependency.
+- `tests/dataset-integrity.test.ts` pinned `5.0.0.1` against data reading `0.5.0.1` and had been
+  failing since the renumbering. 177 passing again.
+
+## [3.1.1.0-app] — 2026-08-08
+
+First tagged release. It was cut as `v0.5.0` under three-part semver, then renumbered when
+four-part versioning was adopted: the app became **3.1.1.0** and the dataset it ships moved from
+`3.1.0` to the data track's **0.5.0.1**, tagged `v3.1.1.0-app` and `v0.5.0.1-data`. The original
+`v0.5.0` tag no longer exists on the remote, so this file points at the tags that do.
 
 Nothing between `0.1.0` and `0.5.0` was ever released: `package.json` sat at `0.1.0` from the first
 commit while the work below landed, so this changelog starts here rather than inventing a release
@@ -96,5 +108,6 @@ no network requests.
 
 These are why this release is `0.5.0` and not `1.0.0`.
 
-[Unreleased]: https://github.com/tyohDeveloper/history-and-prehistory/compare/v0.5.0...HEAD
-[0.5.0]: https://github.com/tyohDeveloper/history-and-prehistory/releases/tag/v0.5.0
+[Unreleased]: https://github.com/tyohDeveloper/history-and-prehistory/compare/v3.1.2.0-app...HEAD
+[3.1.2.0-app]: https://github.com/tyohDeveloper/history-and-prehistory/releases/tag/v3.1.2.0-app
+[3.1.1.0-app]: https://github.com/tyohDeveloper/history-and-prehistory/releases/tag/v3.1.1.0-app

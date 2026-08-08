@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 163818,
+  "gzipBytes": 176186,
   "recordedAt": "2026-08-08",
-  "note": "v3.7.0.0 + European Mesolithic/Neolithic and Holocene Americas (data 0.9.0.0). Content growth: 40 entities and 58 sources. Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.8.0.0 + Central Asia, the Austronesian expansion and Oceania (data 0.10.0.0). Content: 24 entities and 46 sources. Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

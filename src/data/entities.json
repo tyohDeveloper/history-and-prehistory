@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
-  "dataset_version": "0.9.0.0",
-  "generated_at": "2026-08-08T21:06:52Z",
+  "dataset_version": "0.10.0.0",
+  "generated_at": "2026-08-08T22:03:06Z",
   "entities": [
     {
       "id": "global",
@@ -8451,7 +8451,7 @@
       "parent_id": "oceania.melanesia",
       "start_year": -1501,
       "end_year": -734,
-      "date_precision": "approx",
+      "date_precision": "disputed",
       "tier": "intermediate",
       "summary": "An ancestral Austronesian seafaring culture that spread from the Bismarck Archipelago into Remote Oceania.",
       "start_dating_method": "radiocarbon-calibrated",
@@ -8468,10 +8468,33 @@
           "source_ids": [
             "specht-lapita"
           ]
+        },
+        {
+          "label": "Later emergence, c. 3300-3200 cal BP",
+          "standing": "minority",
+          "start_year": -1351,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Kirch and others hold the Bismarck dates are no earlier than 3200 BP.",
+          "source_ids": [
+            "debating-lapita-volume"
+          ]
         }
       ],
       "source_ids": [
-        "specht-lapita"
+        "specht-lapita",
+        "rieth-athens-2017-lapita",
+        "debating-lapita-volume"
+      ],
+      "as_of": "2026-08-08",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "When Lapita begins is unresolved across roughly three centuries: Bayesian models give 3535-3234 cal BP, others no earlier than 3200.",
+          "source_ids": [
+            "rieth-athens-2017-lapita",
+            "debating-lapita-volume"
+          ]
+        }
       ],
       "cross_parent_ids": [
         "oceania.prehistory"
@@ -17719,7 +17742,7 @@
       "tier": "intermediate",
       "start_dating_method": "radiocarbon-calibrated",
       "standing": "majority",
-      "date_note": "Directly dating human bone collagen puts the first burial phase at 1600-1450 BC and the bronze transition at 1050-955 BC; later deposits reach the Iron Age.",
+      "date_note": "Bayesian modelling on human and animal bone puts the Neolithic-to-Bronze transition here at 1050-955 BC, with the earliest bronze artefact — a socketed spear from Burial 76 — at 1025-935 BC. Across five Khorat Plateau sites the transition falls in the late 11th or 10th centuries BC. The rival long chronology puts bronze at c. 2000-1800 BC on seven AMS dates from rice phytoliths and organic temper, methods the short-chronology camp rejects as unreliable.",
       "alternatives": [
         {
           "label": "Old long chronology",
@@ -17731,6 +17754,17 @@
           "source_ids": [
             "higham-2015-ban-chiang"
           ]
+        },
+        {
+          "label": "Long chronology (White & Hamilton)",
+          "standing": "minority",
+          "start_year": -2100,
+          "end_year": -1500,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Bronze already developed by c. 2000 BC, argued to derive from Seima-Turbino rather than from Shang China.",
+          "source_ids": [
+            "white-hamilton-long-chronology"
+          ]
         }
       ],
       "caveats": [
@@ -17740,13 +17774,25 @@
           "source_ids": [
             "higham-2015-ban-chiang"
           ]
+        },
+        {
+          "kind": "misconception",
+          "text": "Not the world's earliest bronze. That 1976 claim was abandoned by archaeology in 1982, and Near Eastern and Chinese bronze both predate Ban Chiang on either surviving chronology.",
+          "source_ids": [
+            "higham-2015-bronze-chronology",
+            "origins-bronze-age-msea-2022"
+          ]
         }
       ],
       "source_ids": [
-        "higham-2015-ban-chiang"
+        "higham-2015-ban-chiang",
+        "higham-2015-bronze-chronology",
+        "white-hamilton-long-chronology",
+        "origins-bronze-age-msea-2022"
       ],
       "summary": "A northeast Thai burial site central to the re-dating of Southeast Asian bronze metallurgy.",
-      "date_precision": "approx",
+      "date_precision": "disputed",
+      "as_of": "2026-08-08",
       "end_dating_method": "radiocarbon-calibrated"
     },
     {
@@ -20528,6 +20574,729 @@
       ],
       "summary": "An Amazonian shell midden holding the oldest pottery in the Western Hemisphere.",
       "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.jeitun",
+      "kind": "period",
+      "name": "Jeitun Culture",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -6000,
+      "end_year": -5616,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Eleven AMS dates on individual cereal grains put first occupation slightly before 6000 cal BCE; a Bayesian model over 87 dates at the related site of Monjukli Depe ends the Neolithic occupation at 5731-5616 cal BCE. The dates cluster too tightly to resolve the five architectural phases. A hiatus of 800-900 years then follows before the Aeneolithic, so the old model of Jeitun running straight into Anau IA does not hold.",
+      "alternatives": [
+        {
+          "label": "Long Jeitun period, 6200-4500 BCE",
+          "standing": "superseded",
+          "start_year": -6200,
+          "end_year": -4500,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Stretched across the gap by assigning undated Middle and Late Jeitun material to it.",
+          "source_ids": [
+            "monjukli-depe-bayesian"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The widely repeated 7200-4500 BC span is not supported by any radiocarbon dataset. First occupation is slightly before 6000 cal BCE.",
+          "source_ids": [
+            "harris-jeitun-excavations",
+            "monjukli-depe-bayesian"
+          ]
+        }
+      ],
+      "source_ids": [
+        "harris-jeitun-excavations",
+        "ucl-jeitun-archaeology-international",
+        "monjukli-depe-bayesian",
+        "pnas-2025-central-asia-barley"
+      ],
+      "summary": "The earliest farming in Central Asia: mudbrick villages in the Kopet Dag piedmont, with barley, einkorn, sheep and goat.",
+      "aliases": [
+        "Djeitun"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.anau",
+      "kind": "period",
+      "name": "Anau",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -4500,
+      "end_year": -1700,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Anau North 4500-3000 cal BC, Anau South 3000-1700 cal BC. Hiebert's radiocarbon programme put Anau IA at 4500-4000 BCE, and a later comparative table at 4350-3900 BCE; these are two renderings of the same dating work, not independent confirmations, and the underlying table has not been republished.",
+      "source_ids": [
+        "miller-1999-anau-archaeobotany",
+        "monjukli-depe-bayesian"
+      ],
+      "summary": "The Kopet Dag tell that names the Anau horizon, spanning the Chalcolithic in its north mound and the Bronze Age in its south.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.sarazm",
+      "kind": "period",
+      "name": "Sarazm",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -3500,
+      "end_year": -2000,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-08",
+      "date_note": "The UNESCO dossier reproduces the full radiocarbon table with lab codes and three parallel calibrations, and flags its own unresolved problem: ceramic typology ends the site around 2600 BC while the radiocarbon dates run to about 2000 BC. A steppe burial in an Afanasievo-type stone circle ties the site directly to the pastoralist world to its north.",
+      "alternatives": [
+        {
+          "label": "Ceramic-typological end, c. 2600 BC",
+          "standing": "minority",
+          "end_year": -2600,
+          "dating_method": "typological",
+          "note": "The dossier states the two lines of evidence are 'not in agreement'.",
+          "source_ids": [
+            "unesco-sarazm-dossier"
+          ]
+        }
+      ],
+      "source_ids": [
+        "unesco-sarazm-dossier"
+      ],
+      "summary": "A Chalcolithic town in the Zeravshan valley of Tajikistan, smelting copper and trading lapis and turquoise between the steppe, Mesopotamia and the Indus."
+    },
+    {
+      "id": "central-asia.prehistory.mountain-corridor",
+      "kind": "era",
+      "name": "Inner Asian Mountain Corridor",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -2840,
+      "end_year": -1250,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "Directly dated crops run from Tasbas Phase 1 at 2840-2500 BCE and Begash at c. 2450-2100 cal BCE, and are being locally cultivated at Tasbas by 1450-1250 cal BCE. Transhumant movement between piedmont winter grounds and high summer pasture created a corridor of contact between Xinjiang and southwest Asia.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not farmer-to-farmer diffusion. Mobile pastoralists carried the crops, and at Begash fed millet to their sheep and goats — the exchange predates any steppe-ancestry population in the region.",
+          "source_ids": [
+            "hermes-2019-millet-pastoralism"
+          ]
+        }
+      ],
+      "source_ids": [
+        "spengler-2014-crop-transmission",
+        "hermes-2019-millet-pastoralism",
+        "ventresca-miller-2022-millet-diet"
+      ],
+      "summary": "Wheat and barley moved east and millet moved west across the mountains of Inner Asia, carried by herders rather than farmers."
+    },
+    {
+      "id": "central-asia.prehistory.mountain-corridor.begash",
+      "kind": "period",
+      "name": "Begash",
+      "parent_id": "central-asia.prehistory.mountain-corridor",
+      "start_year": -2450,
+      "end_year": -2100,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Two published models that should not be merged: direct AMS calibration gives Phase 1a at 2450-2100 cal BCE, while OxCal modelling by stratigraphic layer gives 2345-2080 cal BCE. The difference is method, not new data.",
+      "alternatives": [
+        {
+          "label": "Bayesian model by occupation layer (2019)",
+          "standing": "majority",
+          "start_year": -2345,
+          "end_year": -2080,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Same evidence, modelled per layer in OxCal rather than calibrated directly.",
+          "source_ids": [
+            "hermes-2019-millet-pastoralism"
+          ]
+        }
+      ],
+      "source_ids": [
+        "spengler-2014-crop-transmission",
+        "hermes-2019-millet-pastoralism"
+      ],
+      "summary": "A Dzhungar Mountains campsite holding the earliest directly dated broomcorn millet outside China, together with wheat, in a cremation burial.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.mountain-corridor.tasbas",
+      "kind": "period",
+      "name": "Tasbas",
+      "parent_id": "central-asia.prehistory.mountain-corridor",
+      "start_year": -2840,
+      "end_year": -1250,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Phase 1 gives 2840-2500 BCE on direct AMS (2655-2480 cal BCE under the 2019 Bayesian model). Phase 2a, at 1450-1250 cal BCE, has 194 rachises and grain impressions in mudbrick — the only botanical evidence for local farming among seasonally mobile pastoralists in second-millennium Central Eurasia.",
+      "source_ids": [
+        "spengler-2014-crop-transmission",
+        "hermes-2019-millet-pastoralism"
+      ],
+      "summary": "A high-altitude Kazakh site where mobile pastoralists were threshing their own wheat, barley, millet and peas by the late second millennium.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.bmac.gonur-depe",
+      "kind": "period",
+      "name": "Gonur Depe",
+      "parent_id": "central-asia.prehistory.bmac",
+      "start_year": -2300,
+      "end_year": -1500,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Sixty radiocarbon dates put occupation at 2300-1500 cal BC, with construction at Gonur North beginning 2300-2250 BC. That runs both earlier and later than the 2200-1700 BCE bracket carried by the parent Oxus entry, which is a site-level nuance rather than a correction to it.",
+      "source_ids": [
+        "gonur-radiocarbon-zaytseva",
+        "margiana-gonur-depe-report"
+      ],
+      "summary": "The principal city of the Oxus civilisation in the Murghab delta, with palace, temple and monumental enclosure.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.prehistory.seima-turbino",
+      "kind": "period",
+      "name": "Seima-Turbino Phenomenon",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -2200,
+      "end_year": -1900,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-08",
+      "date_note": "AMS dating of 28 samples places most Seima-Turbino material in the 22nd-20th centuries cal BCE — Middle Bronze Age, and 500-700 years older than the typological estimate it replaced. The oldest locus is Pepkinskii Kurgan on the middle Volga at 26th-21st centuries cal BCE; eastern European finds run younger, consistent with spread from the east.",
+      "alternatives": [
+        {
+          "label": "Typological cross-dating, 16th-15th c. BCE",
+          "standing": "superseded",
+          "start_year": -1600,
+          "end_year": -1400,
+          "dating_method": "typological",
+          "note": "Dated by comparison with the Borodino Hoard and Anyang bronzes.",
+          "source_ids": [
+            "marchenko-2017-seima-turbino"
+          ]
+        },
+        {
+          "label": "Historical cross-dating, 17th-16th c. BCE",
+          "standing": "minority",
+          "start_year": -1700,
+          "end_year": -1500,
+          "dating_method": "typological",
+          "note": "Grigoriev reconciles via the Santorini eruption and early Shang chronology.",
+          "source_ids": [
+            "grigoriev-2023-seima-turbino"
+          ]
+        }
+      ],
+      "source_ids": [
+        "marchenko-2017-seima-turbino",
+        "grigoriev-2023-seima-turbino"
+      ],
+      "summary": "A distinctive kit of cast-bronze weapons that appears across five thousand kilometres of Eurasia without an accompanying culture, pottery or burial rite."
+    },
+    {
+      "id": "central-asia.prehistory.tarim-mummies",
+      "kind": "period",
+      "name": "Tarim Basin Mummies",
+      "parent_id": "central-asia.prehistory",
+      "start_year": -2100,
+      "end_year": -1700,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "AMS dates on the sequenced individuals, calibrated with IntCal20: Gumugou 2135-1939 BCE, Xiaohe 1884-1736 BCE, Beifang 1785-1664 BCE. The contemporary Dzungarian Basin population further north, at 3000-2800 BCE, is a separate case and does carry Afanasievo ancestry.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not migrants. The 2021 genomes carry no Afanasievo, Oxus or corridor ancestry at all — a local population that borrowed its neighbours' wheat and dairying rather than importing them.",
+          "source_ids": [
+            "zhang-2021-tarim-mummies"
+          ]
+        }
+      ],
+      "source_ids": [
+        "zhang-2021-tarim-mummies"
+      ],
+      "summary": "Naturally desiccated burials in the Taklamakan, long read as evidence of a western migration into China, and genomically nothing of the kind.",
+      "aliases": [
+        "Xiaohe horizon"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory.austronesian-expansion",
+      "kind": "era",
+      "name": "The Austronesian Expansion",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -3551,
+      "end_year": -1130,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "approx",
+      "as_of": "2026-08-08",
+      "date_note": "Taiwan settled from the southeast China coast c. 5000 BP; out into the northern Philippines c. 4200-4000 BP, a figure archaeology and genomic simulation reach independently; Palau and the Marianas c. 3500 BP; Lapita in the Bismarcks c. 3300 BP; Vanuatu 3250-3100 BP.",
+      "alternatives": [
+        {
+          "label": "Nusantao maritime network (Solheim)",
+          "standing": "minority",
+          "note": "Places the origin in the southern Philippines and eastern Indonesia, with multidirectional spread by trade rather than a farming migration.",
+          "source_ids": [
+            "solheim-nusantao-review"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not an express train to Polynesia. The expansion stalled for centuries between the Philippines and the Marianas, and again before Lapita.",
+          "source_ids": [
+            "austronesian-archaeolinguistics",
+            "cochrane-hunt-isea-dispersal"
+          ]
+        },
+        {
+          "kind": "contested-existence",
+          "text": "The domesticates did not travel as a package: pigs reach northern Luzon by 4500-4000 BP but dogs not until c. 2500 BP.",
+          "source_ids": [
+            "cochrane-hunt-isea-dispersal"
+          ]
+        }
+      ],
+      "source_ids": [
+        "austronesian-archaeolinguistics",
+        "early-austronesians-taiwan",
+        "cochrane-hunt-isea-dispersal",
+        "austronesian-dispersal-human-biology"
+      ],
+      "summary": "From Taiwan to the edge of Remote Oceania: the widest maritime dispersal in prehistory, and one that kept stopping."
+    },
+    {
+      "id": "southeast-asia.prehistory.austronesian-expansion.dabenkeng",
+      "kind": "period",
+      "name": "Dabenkeng Culture",
+      "parent_id": "southeast-asia.prehistory.austronesian-expansion",
+      "start_year": -3551,
+      "end_year": -2200,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Begins c. 5500-5000 BP, with the main phase ending c. 4600-4200 BP and a late regional phase persisting to c. 2200 BC.",
+      "source_ids": [
+        "carson-hung-2022-luzon"
+      ],
+      "summary": "Taiwan's founding Neolithic, with cord-marked pottery, polished stone and millet — the archaeological anchor of the Austronesian homeland.",
+      "aliases": [
+        "Dapenkeng",
+        "Tapenkeng"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory.austronesian-expansion.isea-pottery",
+      "kind": "event",
+      "name": "Pottery Reaches Island Southeast Asia",
+      "parent_id": "southeast-asia.prehistory.austronesian-expansion",
+      "start_year": -3481,
+      "end_year": -2341,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "A Bayesian synthesis across 20 sites in six island regions puts pottery entering the northern Philippine record at 5430-4290 cal BP, and finds Borneo contemporaneous rather than downstream.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Contemporaneous appearance in Borneo and Luzon does not fit a single staged wave south from Taiwan, and the authors say so.",
+          "source_ids": [
+            "isea-pottery-bayesian-2021"
+          ]
+        }
+      ],
+      "source_ids": [
+        "isea-pottery-bayesian-2021"
+      ],
+      "summary": "Pottery appears in Borneo and the northern Philippines at the same time, not one after the other."
+    },
+    {
+      "id": "southeast-asia.prehistory.austronesian-expansion.marianas",
+      "kind": "period",
+      "name": "Settlement of the Marianas",
+      "parent_id": "southeast-asia.prehistory.austronesian-expansion",
+      "start_year": -1612,
+      "end_year": -1130,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-08",
+      "alternatives": [
+        {
+          "label": "Hardwater-corrected Bayesian model",
+          "standing": "minority",
+          "start_year": -1250,
+          "end_year": -1130,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Correcting shell dates for hardwater effects moves first arrival three centuries later.",
+          "source_ids": [
+            "unai-bapot-marianas"
+          ]
+        }
+      ],
+      "date_note": "The oldest layer at Unai Bapot on Saipan calibrates to 1612-1558 BC. A Bayesian re-analysis correcting for hardwater effects in shell instead gives first arrival at 3200-3080 cal BP, roughly 1250-1130 BC. Both are live; the span shown brackets them rather than choosing.",
+      "source_ids": [
+        "unai-bapot-marianas"
+      ],
+      "summary": "The first crossing into Remote Oceania — some 2,000 km of open ocean, the longest voyage anyone had yet made."
+    },
+    {
+      "id": "southeast-asia.prehistory.da-but",
+      "kind": "period",
+      "name": "Da But Culture",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -5000,
+      "end_year": -3500,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "minority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-08",
+      "alternatives": [
+        {
+          "label": "Long chronology, 7000-2000 BC",
+          "standing": "minority",
+          "start_year": -7000,
+          "end_year": -2000,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Includes an early cave phase and runs to the Vietnamese accepted end date.",
+          "source_ids": [
+            "da-but-vietnam-neolithic"
+          ]
+        }
+      ],
+      "date_note": "GENUINELY UNRESOLVED and never Bayesian-modelled as a whole. Published starts run from 7000 BC for the early cave phase to c. 4500 BC for the middens; ends from 3500 BCE to 2000 BC. The chronology Vietnamese archaeologists accept runs to 2500 BCE, but the same 2025 study notes no directly dated Da But site is younger than 3500 BCE. The range shown is the defensible core, not a consensus.",
+      "source_ids": [
+        "da-but-vietnam-neolithic",
+        "thach-lac-transition-2025"
+      ],
+      "summary": "Shell-midden communities in northern Vietnam with basket-marked pottery, conventionally marking the end of the Hoabinhian way of life.",
+      "aliases": [
+        "Đa Bút"
+      ]
+    },
+    {
+      "id": "southeast-asia.prehistory.man-bac",
+      "kind": "period",
+      "name": "Man Bac",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -2066,
+      "end_year": -1523,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "2066-1523 cal BCE on seven charcoal and four human-bone samples.",
+      "source_ids": [
+        "man-bac-aberdeen-thesis"
+      ],
+      "summary": "A northern Vietnamese cemetery whose 85 burials hold both resident foragers and incoming farmers, side by side.",
+      "aliases": [
+        "Mán Bạc"
+      ],
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory.khok-phanom-di",
+      "kind": "period",
+      "name": "Khok Phanom Di",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -2000,
+      "end_year": -1500,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The standard range is c. 2000-1500 BC. A revision using human bone and shell rather than charcoal reports an earlier occupation, but the revised figures were not available in the fetched source and are not guessed at here.",
+      "source_ids": [
+        "khok-phanom-di-higham"
+      ],
+      "summary": "An estuarine mound on the Gulf of Siam with a seven-stage mortuary sequence built up in only five centuries.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory.ban-non-wat",
+      "kind": "period",
+      "name": "Ban Non Wat",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -1700,
+      "end_year": -1000,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Initial Neolithic settlement in the 17th century BC, transition into the Bronze Age in the late 11th, and a 'starburst' of hierarchical activity around 1000 BC.",
+      "source_ids": [
+        "higham-2009-ban-non-wat",
+        "higham-2015-bronze-chronology"
+      ],
+      "summary": "The Thai site whose 75 modelled radiocarbon dates rebuilt the chronology of Southeast Asian prehistory.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory.non-nok-tha",
+      "kind": "period",
+      "name": "Non Nok Tha",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -1500,
+      "end_year": -600,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Bayesian re-dating puts initial Neolithic settlement at 1500-1300 BC and the earliest socketed copper-base axe at 980-900 BC. The original excavation claimed a fourth-millennium BC date.",
+      "alternatives": [
+        {
+          "label": "Original fourth-millennium BC claim",
+          "standing": "superseded",
+          "start_year": -4000,
+          "dating_method": "typological",
+          "note": "The 1960s-70s dating, comprehensively replaced.",
+          "source_ids": [
+            "non-nok-tha-jipa"
+          ]
+        }
+      ],
+      "source_ids": [
+        "non-nok-tha-jipa",
+        "higham-2015-bronze-chronology"
+      ],
+      "summary": "With Ban Chiang, one of the two sites behind the claim that Southeast Asia invented bronze first — and behind its collapse.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.prehistory.neolithic-migration-sea",
+      "kind": "event",
+      "name": "Neolithic Migration into Southeast Asia",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -2051,
+      "end_year": -2051,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "Ancient genomes show ancestry changing by about 4,000 years ago. The old two-layer model survives as a skeleton, but the 2018 genomes add a further Bronze Age pulse from China, and work through 2026 subdivides the second layer into as many as five southward waves.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Neither pure replacement nor pure continuity. Both Hoabinhian foragers and East Asian farmers contribute to modern Southeast Asian ancestry.",
+          "source_ids": [
+            "mccoll-2018-peopling-sea"
+          ]
+        }
+      ],
+      "source_ids": [
+        "mccoll-2018-peopling-sea"
+      ],
+      "summary": "East Asian farming populations move south and mix with resident Hoabinhian-descended foragers rather than replacing them.",
+      "end_dating_method": "radiocarbon-calibrated"
+    },
+    {
+      "id": "southeast-asia.prehistory.toalean",
+      "kind": "period",
+      "name": "Toalean Culture",
+      "parent_id": "southeast-asia.prehistory",
+      "start_year": -6051,
+      "end_year": -451,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Early Toalean 7500-5500 BP, Late Preceramic 5500-3500 with the distinctive Maros points, Ceramic Toalean 3500-2000 BP.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The one sequenced Toalean individual, buried 7.3-7.2 kyr cal BP, belongs to a previously unknown lineage that split around 37,000 years ago and carries about 2.2% Denisovan ancestry.",
+          "source_ids": [
+            "carlhoff-2021-leang-panninge"
+          ]
+        }
+      ],
+      "source_ids": [
+        "sulawesi-toalean-chronology",
+        "carlhoff-2021-leang-panninge"
+      ],
+      "summary": "A hunter-gatherer tradition confined to a corner of South Sulawesi, which outlasted the arrival of farming around it by millennia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "oceania.prehistory.bismarck-obsidian",
+      "kind": "period",
+      "name": "Bismarck Obsidian Network",
+      "parent_id": "oceania.prehistory",
+      "start_year": -18051,
+      "end_year": -1051,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "consensus",
+      "date_note": "Talasea obsidian reaches Buang Merabak on New Ireland by c. 20,000 BP and Lou Island obsidian reaches Manus by 13,000 BP. Talasea dominates every Bismarck assemblage in the Early Lapita phase at 3300-3000 BP.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Near Oceania was not waiting to be discovered by Lapita voyagers. It had been trading across open water for seventeen millennia already.",
+          "source_ids": [
+            "bismarck-obsidian-seafaring",
+            "bismarck-obsidian-report"
+          ]
+        }
+      ],
+      "source_ids": [
+        "bismarck-obsidian-seafaring",
+        "bismarck-obsidian-report"
+      ],
+      "summary": "Obsidian moved 600 km between islands of the Bismarck Archipelago for some seventeen thousand years — among the longest-running exchange networks known.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "oceania.prehistory.torres-strait",
+      "kind": "period",
+      "name": "Torres Strait Settlement",
+      "parent_id": "oceania.prehistory",
+      "start_year": -6051,
+      "end_year": -301,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "minority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-08",
+      "date_note": "REGIONALLY SPLIT, and not to be reduced to one figure. In the west, Badu 15 shows permanent occupation 8000-6000 cal BP, only a fleeting presence 6000-3500, then renewed settlement; Dabangay on Mabuyag gives 7239-4901 cal BP with dugong hunting by 6480-6256. In the east, Ormi on Dauar begins only 2600-2250 cal BP, and that study finds no Pleistocene or early Holocene occupation at all.",
+      "alternatives": [
+        {
+          "label": "Eastern Torres Strait, from c. 2500 BP",
+          "standing": "majority",
+          "start_year": -651,
+          "end_year": -301,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "The widely quoted '2,500 years' figure, accurate for the eastern islands.",
+          "source_ids": [
+            "ormi-dauar-geoarchaeology-2025"
+          ]
+        }
+      ],
+      "source_ids": [
+        "badu-15-torres-strait",
+        "dabangay-mabuyag",
+        "ormi-dauar-geoarchaeology-2025"
+      ],
+      "summary": "The island chain between New Guinea and Australia, settled at very different times at its two ends."
+    },
+    {
+      "id": "oceania.prehistory.dingo-arrival",
+      "kind": "event",
+      "name": "Arrival of the Dingo",
+      "parent_id": "oceania.prehistory",
+      "start_year": -1399,
+      "end_year": -1132,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "approx",
+      "as_of": "2026-08-08",
+      "date_note": "The oldest directly dated specimen, from Madura Cave on the Nullarbor, gives 3348-3081 cal BP. A 2024 study of 42 ancient genomes puts lineage divergence anywhere in 3,000-8,000 years ago — an upper bound on ancestry, not a second arrival date. Older molecular-clock figures of 5,000 to 18,000 years are superseded.",
+      "alternatives": [
+        {
+          "label": "Genomic divergence window (2024)",
+          "standing": "minority",
+          "start_year": -6051,
+          "end_year": -1051,
+          "dating_method": "unknown",
+          "note": "Lineage divergence from 42 ancient genomes; does not overturn the c. 3,000 BP fossil floor.",
+          "source_ids": [
+            "dingo-ancient-dna-2024"
+          ]
+        }
+      ],
+      "source_ids": [
+        "balme-2018-dingo-madura-cave",
+        "dingo-ancient-dna-2024"
+      ],
+      "summary": "A dog carried to Australia by sea, and the clearest evidence of outside contact before Europeans."
+    },
+    {
+      "id": "oceania.prehistory.australian-intensification",
+      "kind": "era",
+      "name": "Australian Mid-Holocene Intensification",
+      "parent_id": "oceania.prehistory",
+      "start_year": -3051,
+      "end_year": -51,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "minority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-08",
+      "date_note": "Backed artefacts, present from at least 8,500 years ago, multiply sharply at 4,000-3,500 cal BP and again at 3,300-1,970, tracking intensified ENSO variability. The population signal is disputed: one radiocarbon-density model finds negligible growth before 5,000 BP and acceleration after, another finds pulsed growth from about 12,000 BP with one pulse at 4,400-3,700. Both are peer-reviewed and use different datasets.",
+      "alternatives": [
+        {
+          "label": "Pulsed growth from the terminal Pleistocene",
+          "standing": "minority",
+          "start_year": -10051,
+          "dating_method": "radiocarbon-calibrated",
+          "note": "Growth in pulses from c. 12 ka rather than one mid-Holocene acceleration.",
+          "source_ids": [
+            "australian-population-curve-2013"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Backed artefacts did not appear at 4,000 BP. They had been made for at least four thousand years already; what changed was how many.",
+          "source_ids": [
+            "backed-artefacts-holocene-climate"
+          ]
+        }
+      ],
+      "source_ids": [
+        "backed-artefacts-holocene-climate",
+        "australian-population-proxy-2011",
+        "australian-population-curve-2013"
+      ],
+      "summary": "More people, more sites and far more backed artefacts across Australia, tracking the onset of a more variable climate."
     },
     {
       "id": "west-asia.prehistory.epipalaeolithic",

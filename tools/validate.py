@@ -19,6 +19,7 @@ Warnings:
 """
 
 import json
+import re
 import sys
 from pathlib import Path
 from collections import defaultdict, Counter
@@ -344,6 +345,78 @@ kinds = Counter(e["kind"] for e in entities)
 tiers = Counter(e.get("tier", "?") for e in entities)
 print(f"\nKind breakdown: {dict(kinds)}")
 print(f"Tier breakdown: {dict(tiers)}")
+
+# ---------------------------------------------------------------------------
+# A cal BP figure written into the calendar-year field.
+#
+# This is the class of error that put Monte Verde 1,950 years too early: a cal
+# BP figure written into a field that holds calendar years. It survives every
+# other check because -14500 is a perfectly well-formed BCE year. It was found
+# by accident, when a second Monte Verde authored through `bp()` disagreed with
+# the first by two millennia.
+#
+# HONEST LIMITATION: this check would NOT have caught Monte Verde. That entity's
+# note described the dispute without ever quoting the number, so there was
+# nothing to compare the year against. The check only fires when an entity's own
+# prose contradicts its year field. That is a real subset of the problem and
+# worth catching, but it is not coverage of the whole class, and the only
+# reliable guard remains authoring through `bp()` rather than typing a year.
+#
+# The discriminator is EXACT equality. A correctly authored entity's year comes
+# out of `bp()`, so it lands on an odd-looking number like -12551 and will not
+# equal any round figure quoted in its own prose. An entity whose year is
+# exactly the negation of a BP figure in its own note almost certainly skipped
+# the conversion.
+#
+# Requiring an exact hit is what keeps this quiet: matching loosely flags every
+# entity whose note quotes the far end of a range, which is most of them.
+_BP_IN_PROSE = re.compile(r"([\d,]{3,9})\s*(?:cal\s*BP|years ago|ka BP|BP)\b")
+
+
+def _bp_figures(text):
+    out = set()
+    for m in _BP_IN_PROSE.finditer(text or ""):
+        n = int(m.group(1).replace(",", ""))
+        if 100 <= n <= 3_000_000:
+            out.add(n)
+    return out
+
+
+def _check_units(year, prose, label):
+    if year is None or year >= 0:
+        return
+    figures = _bp_figures(prose)
+    if not figures:
+        return
+    # Already consistent with a conversion of something it quotes.
+    if any(year == _historical_from_bp(n) for n in figures):
+        return
+    hit = next((n for n in figures if year == -n), None)
+    if hit is not None:
+        warnings.append(
+            f"{label}: year {year} is exactly -{hit}, and the text quotes "
+            f"'{hit} BP'. A cal BP figure may have been written straight into "
+            f"the calendar-year field; {hit} BP is "
+            f"{_historical_from_bp(hit)}."
+        )
+
+
+def _historical_from_bp(years_bp):
+    astronomical = 1950 - years_bp
+    return astronomical if astronomical > 0 else astronomical - 1
+
+
+for e in entities:
+    prose = " ".join(str(e.get(k, "")) for k in ("date_note", "summary"))
+    _check_units(e.get("start_year"), prose, f"entity {e['id']} start_year")
+    _check_units(e.get("end_year"), prose, f"entity {e['id']} end_year")
+    for i, alt in enumerate(e.get("alternatives") or []):
+        alt_prose = f"{alt.get('label', '')} {alt.get('note', '')}"
+        _check_units(alt.get("start_year"), alt_prose,
+                     f"entity {e['id']} alternatives[{i}] start_year")
+        _check_units(alt.get("end_year"), alt_prose,
+                     f"entity {e['id']} alternatives[{i}] end_year")
+
 
 if warnings:
     print(f"\n⚠ WARNINGS ({len(warnings)}):")

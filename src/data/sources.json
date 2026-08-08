@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
-  "dataset_version": "0.9.0.0",
-  "generated_at": "2026-08-08T21:06:52Z",
+  "dataset_version": "0.10.0.0",
+  "generated_at": "2026-08-08T22:03:06Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -1679,6 +1679,321 @@
       "kind": "scholarly",
       "citation": "Roosevelt et al. (1991), 'Eighth Millennium Pottery from a Prehistoric Shell Midden in the Brazilian Amazon', Science 254:1621-1624",
       "url": "https://www.science.org/doi/10.1126/science.254.5038.1621"
+    },
+    {
+      "id": "harris-jeitun-excavations",
+      "kind": "scholarly",
+      "citation": "Harris, Gosden & Charles, 'Jeitun: Recent Excavations at an Early Neolithic Site in Southern Turkmenistan'",
+      "url": "https://www.academia.edu/102279073/Jeitun_Recent_Excavations_at_an_Early_Neolithic_Site_in_Southern_Turkmenistan",
+      "note": "11 AMS dates on individual cereal grains; first occupation slightly before 6000 cal BCE."
+    },
+    {
+      "id": "ucl-jeitun-archaeology-international",
+      "kind": "institutional",
+      "citation": "Harris et al., Archaeology International (UCL Press), on Jeitun",
+      "url": "https://journals.uclpress.co.uk/ai/article/993/galley/12657/view/",
+      "note": "Domestic barley, einkorn, sheep and goat present from first occupation."
+    },
+    {
+      "id": "monjukli-depe-bayesian",
+      "kind": "scholarly",
+      "citation": "Looking Closely: Excavations at Monjukli Depe, Turkmenistan 2010-2014 (Sidestone Press, open access)",
+      "url": "https://www.sidestone.com/openaccess/9789088907654.pdf",
+      "note": "Bayesian model over 87 AMS dates; finds an 800-900 year hiatus before the Aeneolithic."
+    },
+    {
+      "id": "pnas-2025-central-asia-barley",
+      "kind": "scholarly",
+      "citation": "Zhou, Spengler et al. (2025), '9,000-year-old barley consumption in the foothills of central Asia', PNAS",
+      "url": "https://pnas.org/doi/10.1073/pnas.2424093122"
+    },
+    {
+      "id": "spengler-2014-crop-transmission",
+      "kind": "scholarly",
+      "citation": "Spengler, Frachetti et al. (2014), 'Early agriculture and crop transmission among Bronze Age mobile pastoralists of Central Eurasia', Proceedings of the Royal Society B",
+      "url": "https://royalsocietypublishing.org/doi/10.1098/rspb.2013.3382",
+      "note": "Earliest directly dated broomcorn millet outside China, with wheat, in one cremation cist."
+    },
+    {
+      "id": "hermes-2019-millet-pastoralism",
+      "kind": "scholarly",
+      "citation": "Hermes, Frachetti et al. (2019), 'Early integration of pastoralism and millet cultivation in Bronze Age Eurasia', Proceedings of the Royal Society B",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6743000/",
+      "note": "Isotopes show millet fed to sheep and goats; predates steppe-ancestry arrival."
+    },
+    {
+      "id": "ventresca-miller-2022-millet-diet",
+      "kind": "scholarly",
+      "citation": "Ventresca Miller et al. (2022), 'The integration of millet into the diet of Central Asian populations in the third millennium BC', Antiquity",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/integration-of-millet-into-the-diet-of-central-asian-populations-in-the-third-millennium-bc/1035166AD2FD0E412AE3F3A4C51012D3"
+    },
+    {
+      "id": "miller-1999-anau-archaeobotany",
+      "kind": "scholarly",
+      "citation": "N. Miller (1999), Vegetation History and Archaeobotany 8, on Anau North and Anau South",
+      "url": "https://www.sas.upenn.edu/~nmiller0/papers/Miller%201999%20VHA.pdf"
+    },
+    {
+      "id": "gonur-radiocarbon-zaytseva",
+      "kind": "scholarly",
+      "citation": "University of Warsaw anthropology bulletin, citing Zaytseva et al. (2008) on 60 radiocarbon dates from Gonur",
+      "url": "https://www.anthropology.uw.edu.pl/07/bne-07-03.pdf",
+      "note": "Gonur inhabited 2300-1500 cal BC."
+    },
+    {
+      "id": "margiana-gonur-depe-report",
+      "kind": "institutional",
+      "citation": "Margiana.su, excavation-affiliated publication on Gonur Depe",
+      "url": "https://margiana.su/publication/articles/Art-Urm-2013-Gonur-Depe%20eng%20allFig=.pdf"
+    },
+    {
+      "id": "unesco-sarazm-dossier",
+      "kind": "institutional",
+      "citation": "UNESCO World Heritage nomination dossier for Sarazm, Republic of Tajikistan",
+      "url": "https://whc.unesco.org/uploads/nominations/1141rev.pdf",
+      "note": "Reproduces the full radiocarbon table with lab codes and three parallel calibrations."
+    },
+    {
+      "id": "marchenko-2017-seima-turbino",
+      "kind": "scholarly",
+      "citation": "Marchenko et al. (2017), 'Radiocarbon Chronology of Complexes With Seima-Turbino Type Objects', Radiocarbon",
+      "url": "https://news.tsu.ru/upload/medialibrary/bab/2017_06_marchenko_et_al..pdf",
+      "note": "28 AMS samples; moves the phenomenon 500-700 years earlier than the typological estimate."
+    },
+    {
+      "id": "grigoriev-2023-seima-turbino",
+      "kind": "scholarly",
+      "citation": "Grigoriev (2023), 'Chronology of the Seima-Turbino bronzes, early Shang Dynasty and Santorini eruption', Praehistorische Zeitschrift",
+      "url": "https://www.degruyter.com/document/doi/10.1515/pz-2023-2028/html",
+      "note": "A third position: 17th-16th century BCE by historical cross-dating."
+    },
+    {
+      "id": "zhang-2021-tarim-mummies",
+      "kind": "scholarly",
+      "citation": "Zhang, Ning, Cui et al. (2021), 'The genomic origins of the Bronze Age Tarim Basin mummies', Nature 599",
+      "url": "https://www.nature.com/articles/s41586-021-04052-7",
+      "note": "'Our results do not support previous hypotheses for the origin of the Tarim mummies.'"
+    },
+    {
+      "id": "carson-hung-2022-luzon",
+      "kind": "scholarly",
+      "citation": "Carson & Hung (2022), 'Preceramic riverside hunter-gatherers and the arrival of Neolithic farmers in northern Luzon', Antiquity",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/preceramic-riverside-huntergatherers-and-the-arrival-of-neolithic-farmers-in-northern-luzon/018B349F98B18C1668C944B0B287A678",
+      "note": "Dabenkeng begins c. 5500-5000 BP; directly dated domestic pig at Nagsabaran 4448-4246 cal BP."
+    },
+    {
+      "id": "austronesian-archaeolinguistics",
+      "kind": "scholarly",
+      "citation": "Austronesian archaeolinguistics, Oxford Handbooks",
+      "url": "https://academic.oup.com/edited-volume/60672/chapter/526636737",
+      "note": "Expansion out of Taiwan into the northern Philippines dated to c. 4200/4000 BP."
+    },
+    {
+      "id": "early-austronesians-taiwan",
+      "kind": "scholarly",
+      "citation": "'Early Austronesians: Into and Out of Taiwan'",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3951936/",
+      "note": "Genomic simulation converges independently on 4.1-4.2 kya for the Out-of-Taiwan pulse."
+    },
+    {
+      "id": "isea-pottery-bayesian-2021",
+      "kind": "scholarly",
+      "citation": "'The first quantitative assessment of radiocarbon chronologies for Island Southeast Asian pottery' (2021)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8171956/",
+      "note": "Pottery appears contemporaneously in Borneo and the northern Philippines, against a staged sequence."
+    },
+    {
+      "id": "unai-bapot-marianas",
+      "kind": "scholarly",
+      "citation": "Excavation report on Unai Bapot, Saipan (Archaeopress)",
+      "url": "https://www.archaeopress.com/Archaeopress/DMS/2B0B85F6AB3A4C7C806880BCE401AE48/9781784916657-sample.pdf",
+      "note": "Oldest reported layer cal 1612-1558 BC."
+    },
+    {
+      "id": "cochrane-hunt-isea-dispersal",
+      "kind": "scholarly",
+      "citation": "'The Austronesian Dispersal in Island Southeast Asia', Oxford Handbooks",
+      "url": "https://academic.oup.com/edited-volume/34645/chapter/295205670",
+      "note": "Pigs reach northern Luzon by 4500-4000 BP but dogs not until c. 2500 BP; crop words do not reconstruct to Proto-Austronesian."
+    },
+    {
+      "id": "solheim-nusantao-review",
+      "kind": "reference",
+      "citation": "Review of Solheim's Nusantao Maritime Trading and Communication Network against Out-of-Taiwan",
+      "url": "https://www.academia.edu/10134524/The_Austronesians_the_Nusantao_and_the_Lapita_Cultural_Complex_A_Review_of_Neolithic_migration_in_SEA_and_Oceania",
+      "note": "Secondary review; frames Out-of-Taiwan as the dominant model and Nusantao as a minority critique."
+    },
+    {
+      "id": "austronesian-dispersal-human-biology",
+      "kind": "scholarly",
+      "citation": "'Human biology of the Austronesian dispersal' (2015), Human Genetics",
+      "url": "https://link.springer.com/article/10.1007/s00439-015-1620-z",
+      "note": "Beyond the Philippines, acculturation rather than demographic replacement."
+    },
+    {
+      "id": "da-but-vietnam-neolithic",
+      "kind": "scholarly",
+      "citation": "'The Neolithic of Vietnam', Oxford Handbooks",
+      "url": "https://academic.oup.com/edited-volume/42054/chapter/355844411"
+    },
+    {
+      "id": "thach-lac-transition-2025",
+      "kind": "scholarly",
+      "citation": "Thach Lac transition study (2025), Journal of Island and Coastal Archaeology",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/15564894.2025.2474945",
+      "note": "Notes no directly dated Da But site is younger than 3500 BCE, against the accepted 2500 BCE end."
+    },
+    {
+      "id": "man-bac-aberdeen-thesis",
+      "kind": "scholarly",
+      "citation": "University of Aberdeen thesis, radiocarbon chronology for Man Bac",
+      "url": "https://aura.abdn.ac.uk/server/api/core/bitstreams/a81db0e6-787c-4786-92e9-c53c59550fff/content",
+      "note": "2066-1523 cal BCE on seven charcoal and four human-bone samples."
+    },
+    {
+      "id": "non-nok-tha-jipa",
+      "kind": "scholarly",
+      "citation": "'The Chronology and Status of Non Nok Tha', Journal of Indo-Pacific Archaeology",
+      "url": "https://journals.lib.washington.edu/index.php/JIPA/article/view/14719",
+      "note": "Neolithic occupation in the 14th century BC, earliest Bronze Age in the 10th."
+    },
+    {
+      "id": "khok-phanom-di-higham",
+      "kind": "scholarly",
+      "citation": "Higham, on Khok Phanom Di, Journal of the Siam Society",
+      "url": "https://thesiamsociety.org/wp-content/uploads/2004/03/JSS_092_0c_Higham_OpposedHumanFigureAtKhokPhnaomDi.pdf"
+    },
+    {
+      "id": "higham-2009-ban-non-wat",
+      "kind": "scholarly",
+      "citation": "Higham & Higham (2009), 'A new chronological framework for prehistoric Southeast Asia, based on a Bayesian model from Ban Non Wat', Antiquity",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/new-chronological-framework-for-prehistoric-southeast-asia-based-on-a-bayesian-model-from-ban-non-wat/4AA644BD284B1522DF1B4D193422600D",
+      "note": "75 radiocarbon dates; the pivot to the short chronology."
+    },
+    {
+      "id": "higham-2015-bronze-chronology",
+      "kind": "scholarly",
+      "citation": "Higham, Douka & Higham (2015), 'A New Chronology for the Bronze Age of Northeastern Thailand', PLOS ONE",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4575132/",
+      "note": "Ban Chiang's Neolithic-to-Bronze transition at 1050-955 BC; earliest bronze artefact 1025-935 BC."
+    },
+    {
+      "id": "white-hamilton-long-chronology",
+      "kind": "scholarly",
+      "citation": "White & Hamilton, the long-chronology model for Ban Chiang",
+      "url": "https://os.pennds.org/archaeobib_filestore/pdf_articles/bookchapters/2014_WhiteHamilton.pdf",
+      "note": "Bronze as a developed technology by c. 2000 BC, argued to derive from Seima-Turbino."
+    },
+    {
+      "id": "origins-bronze-age-msea-2022",
+      "kind": "scholarly",
+      "citation": "'The Origins of the Bronze Age in Mainland Southeast Asia' (2022), Oxford Handbooks",
+      "url": "https://academic.oup.com/edited-volume/42054/chapter/355846103?searchresult=1",
+      "note": "Calls the long-versus-short debate 'close to resolution' — not resolved."
+    },
+    {
+      "id": "mccoll-2018-peopling-sea",
+      "kind": "scholarly",
+      "citation": "McColl et al. (2018), 'The prehistoric peopling of Southeast Asia', Science",
+      "url": "https://www.science.org/doi/10.1126/science.aat3628",
+      "note": "Neither simple layer model fits; ancestry changes by ~4 ka, with further waves after."
+    },
+    {
+      "id": "bismarck-obsidian-seafaring",
+      "kind": "scholarly",
+      "citation": "National Museum of Ethnology (Japan), Late Pleistocene-Holocene seafaring and obsidian in the Bismarcks",
+      "url": "https://minpaku.repo.nii.ac.jp/record/2000374/files/KH_049_3_02.pdf",
+      "note": "Talasea obsidian reaches New Ireland by c. 20,000 BP."
+    },
+    {
+      "id": "bismarck-obsidian-report",
+      "kind": "institutional",
+      "citation": "Archaeological report on Bismarck Archipelago obsidian sourcing (OSTI AU9917997)",
+      "url": "https://www.osti.gov/etdeweb/servlets/purl/347110"
+    },
+    {
+      "id": "badu-15-torres-strait",
+      "kind": "scholarly",
+      "citation": "'Badu 15 and the Papuan-Austronesian settlement of Torres Strait', ANU Open Research",
+      "url": "https://openresearch-repository.anu.edu.au/items/2eb1ae78-2587-49b5-beb6-9bf3e7d82720",
+      "note": "Permanent occupation 8000-6000 cal BP, a fleeting presence 6000-3500, then renewed settlement."
+    },
+    {
+      "id": "dabangay-mabuyag",
+      "kind": "scholarly",
+      "citation": "Wright et al., re-excavation of Dabangay, Mabuyag, Australian Archaeology",
+      "url": "https://australianarchaeologicalassociation.com.au/wp-content/uploads/2013/06/AA76-Dabangay-Wright-200dpi.pdf",
+      "note": "Sustained settlement 7239-4901 cal BP; dugong and turtle hunting by 6480-6256 cal BP."
+    },
+    {
+      "id": "ormi-dauar-geoarchaeology-2025",
+      "kind": "scholarly",
+      "citation": "Geoarchaeological study at Ormi, Dauar (2025), Environmental Archaeology",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/14614103.2025.2522542",
+      "note": "Eastern Torres Strait occupation from 2600-2250 cal BP, with no evidence of Pleistocene use."
+    },
+    {
+      "id": "balme-2018-dingo-madura-cave",
+      "kind": "scholarly",
+      "citation": "Balme et al. (2018), 'New dates on dingo bones from Madura Cave', Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-018-28324-x",
+      "note": "3348-3081 cal BP, the oldest reliable direct date for the dingo in Australia."
+    },
+    {
+      "id": "dingo-ancient-dna-2024",
+      "kind": "news",
+      "citation": "'Ancient DNA analysis reveals dingoes have been in Australia thousands of years' (2024), Science",
+      "url": "https://www.science.org/content/article/ancient-dna-analysis-reveals-dingoes-have-been-australia-thousands-years",
+      "note": "42 ancient genomes; arrival window of 3,000-8,000 years ago."
+    },
+    {
+      "id": "backed-artefacts-holocene-climate",
+      "kind": "institutional",
+      "citation": "'The changing abundance of backed artefacts in south-eastern Australia: a response to Holocene climate change', Australian Museum",
+      "url": "https://publications.australian.museum/the-changing-abundance-of-backed-artefacts-in-south-eastern-australia-a-response-to-holocene-climate-change/",
+      "note": "Present from at least 8,500 years ago; the increase in number falls at 4,000-3,500."
+    },
+    {
+      "id": "australian-population-proxy-2011",
+      "kind": "scholarly",
+      "citation": "'Reconstructing the dynamics of ancient human populations' (2011)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3203495/",
+      "note": "Growth negligible before 5,000 years ago, faster after."
+    },
+    {
+      "id": "australian-population-curve-2013",
+      "kind": "scholarly",
+      "citation": "'A new population curve for prehistoric Australia' (2013)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3652441/",
+      "note": "Growth in pulses from c. 12 ka, not a single mid-Holocene acceleration."
+    },
+    {
+      "id": "sulawesi-toalean-chronology",
+      "kind": "scholarly",
+      "citation": "Toalean chronology, PLOS ONE (2021), following Bulbeck et al. 2000",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0251138",
+      "note": "Early Toalean 7500-5500 BP, Late Preceramic 5500-3500, Ceramic 3500-2000."
+    },
+    {
+      "id": "carlhoff-2021-leang-panninge",
+      "kind": "scholarly",
+      "citation": "Carlhoff et al. (2021), 'Genome of a middle Holocene hunter-gatherer from Wallacea', Nature",
+      "url": "https://www.nature.com/articles/s41586-021-03823-6",
+      "note": "A previously unknown divergent lineage, split c. 37,000 years ago, with ~2.2% Denisovan ancestry."
+    },
+    {
+      "id": "rieth-athens-2017-lapita",
+      "kind": "scholarly",
+      "citation": "Rieth & Athens (2017), Bayesian model for Late Holocene human expansion into Remote Oceania",
+      "url": "https://iarii.org/wp-content/uploads/2018/03/Rieth__Athens_2017-Late-Holocene-Human-Expansion.pdf",
+      "note": "Lapita emergence 3535-3234 cal BP at 95% probability."
+    },
+    {
+      "id": "debating-lapita-volume",
+      "kind": "scholarly",
+      "citation": "Debating Lapita: Distribution, Chronology, Society and Subsistence (ANU Press, open access)",
+      "url": "https://library.oapen.org/bitstream/id/a0ef75fa-3f03-4d94-b680-70cb781c03a5/book%20(1).pdf",
+      "note": "Other groups favour a later start of 3300-3200 cal BP."
     }
   ]
 }

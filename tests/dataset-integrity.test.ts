@@ -16,14 +16,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.9.0.0");
+    expect(datasetVersion).toBe("0.10.0.0");
     expect(schemaVersion).toBe("3.0.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1519);
+    expect(entities.length).toBe(1543);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -103,11 +103,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(214);
+    expect(cited.length).toBe(238);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(221);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(245);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -119,7 +119,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(158);
+    expect(withEnd.length).toBe(182);
 
     const differing = entities
       .filter(
@@ -406,5 +406,71 @@ describe("Holocene Americas", () => {
     const ws = entities.find((e) => e.id === "americas.prehistory.white-sands")!;
     expect(ws.date_note).toMatch(/three\s+material types, two labs/);
     expect(ws.alternatives?.length).toBeGreaterThanOrEqual(2);
+  });
+});
+
+describe("Central Asia and the Austronesian world", () => {
+  it("fills the Central Asian Neolithic hole", () => {
+    // The region held nothing at all between 10,000 and 3,700 BCE.
+    const band = entities.filter(
+      (e) =>
+        e.id.startsWith("central-asia.prehistory") &&
+        e.start_year !== null &&
+        e.start_year >= -10000 &&
+        e.start_year < -3700,
+    );
+    expect(band.length).toBeGreaterThanOrEqual(2);
+  });
+
+  it("does not author Namazga or Kelteminar", () => {
+    // Namazga is the region's standard framework and its phase brackets are
+    // quoted everywhere, but they trace to Soviet typology rather than to any
+    // published radiocarbon table. Kelteminar has no primary dataset at all.
+    expect(entities.some((e) => /namazga|kelteminar|altyn/i.test(e.id))).toBe(false);
+  });
+
+  it("keeps three rival Seima-Turbino chronologies apart", () => {
+    const st = entities.find((e) => e.id === "central-asia.prehistory.seima-turbino")!;
+    expect(st.date_precision).toBe("disputed");
+    expect(st.alternatives?.length).toBe(2);
+    expect(st.alternatives?.some((a) => a.standing === "superseded")).toBe(true);
+  });
+
+  it("records that the Tarim mummies were not migrants", () => {
+    const t = entities.find((e) => e.id === "central-asia.prehistory.tarim-mummies")!;
+    expect(t.caveats?.[0]?.kind).toBe("misconception");
+    expect(t.caveats?.[0]?.text).toMatch(/Not migrants/);
+  });
+
+  it("gives the Austronesian expansion its stages", () => {
+    const kids = entities.filter(
+      (e) => e.parent_id === "southeast-asia.prehistory.austronesian-expansion",
+    );
+    expect(kids.length).toBeGreaterThanOrEqual(3);
+  });
+
+  it("gives Ban Chiang the bronze controversy it is famous for", () => {
+    const bc = entities.find((e) => e.id === "southeast-asia.prehistory.ban-chiang")!;
+    // The 1976 world's-earliest-bronze claim, and the long chronology that is
+    // still argued for, must both be visible.
+    expect(bc.alternatives?.some((a) => a.standing === "superseded")).toBe(true);
+    expect(bc.alternatives?.some((a) => a.standing === "minority")).toBe(true);
+    expect(bc.caveats?.some((c) => /world's earliest bronze/.test(c.text))).toBe(true);
+  });
+
+  it("does not assert the same rival claim twice", () => {
+    // Enriching an existing entity re-added a superseded 3600 BCE Ban Chiang
+    // chronology it already carried, so the panel showed the same claim twice
+    // at the same date.
+    for (const e of entities) {
+      const alts = e.alternatives ?? [];
+      const keys = alts.map((a) => `${a.standing}|${a.start_year ?? ""}|${a.end_year ?? ""}`);
+      expect(new Set(keys).size, `duplicate alternative on ${e.id}`).toBe(keys.length);
+    }
+  });
+
+  it("marks Lapita's own start as unresolved", () => {
+    const l = entities.find((e) => e.id === "oceania.melanesia.lapita")!;
+    expect(l.date_precision).toBe("disputed");
   });
 });

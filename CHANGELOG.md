@@ -14,6 +14,28 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.8.0.0-app] — 2026-08-08
+
+### Added
+
+- **The validator now looks for cal BP figures stored as calendar years** — the
+  class of error that put Monte Verde 1,950 years out in 0.9.0.0. It fires when
+  an entity's own prose quotes a BP figure that its year field is the exact
+  negation of. Carries an explicit note that it would NOT have caught Monte
+  Verde, whose note never quoted the number; it covers a real subset of the
+  problem, not the whole class.
+- A dataset-wide test that no entity asserts the same rival claim twice. Added
+  after enriching Ban Chiang re-introduced a superseded 3600 BCE chronology it
+  already carried, so the panel showed the same claim twice at the same date.
+
+### Changed
+
+- Ships dataset 0.10.0.0: Central Asia, the Austronesian expansion and Oceania.
+- Build size baseline rebased to 176,186 bytes gzip. Content: 24 entities and 46
+  sources.
+
+See [`docs/DATASET-CHANGELOG.md`](docs/DATASET-CHANGELOG.md) for 0.10.0.0.
+
 ## [3.7.0.0-app] — 2026-08-08
 
 ### Fixed

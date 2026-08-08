@@ -1,5 +1,76 @@
 # Changelog
 
+## 0.10.0.0 — Central Asia, the Austronesian expansion, Oceania (2026-08-08)
+
+The three thinnest regions. `tools/coverage.py` found Central Asia with nothing
+at all between 10,000 and 3,700 BCE, Southeast Asia almost nothing before 1,600
+BCE, and Oceania nothing whatever between 10,000 and 1,500 BCE — the largest
+maritime migration in human prehistory was simply missing. Research in
+`docs/centralasia-research.md` and `docs/seasia-oceania-research.md`.
+
+### Added — Central Asia (9 entities)
+
+Jeitun, Anau, Sarazm, the Inner Asian Mountain Corridor with Begash and Tasbas
+beneath it, Gonur Depe, Seima-Turbino, and the Tarim Basin mummies.
+
+The organising finding is that crops crossed Asia in the hands of herders, not
+farmers: wheat and barley east, broomcorn millet west, carried by transhumant
+pastoralists who at Begash were feeding the millet to their sheep. It happened
+before any steppe-ancestry population reached the region, which rules out the
+obvious alternative.
+
+Two genuine reversals are recorded. **Seima-Turbino** moved 500-700 years older
+under AMS dating, from Late to Middle Bronze Age; three chronologies are carried
+side by side rather than reconciled. **The Tarim mummies** carry no Afanasievo,
+Oxus or corridor ancestry at all — a local population that borrowed its
+neighbours' wheat and dairying rather than importing them, which is the reverse
+of every previous hypothesis.
+
+### Added — Southeast Asia and Oceania (15 entities)
+
+The Austronesian Expansion as a spine, with Dabenkeng, the arrival of pottery in
+Island Southeast Asia, and the settlement of the Marianas beneath it. Da But,
+Man Bac, Khok Phanom Di, Ban Non Wat, Non Nok Tha, the Neolithic migration into
+Southeast Asia, and the Toalean culture. For Oceania: the Bismarck obsidian
+network, Torres Strait settlement, the arrival of the dingo, and Australian
+mid-Holocene intensification.
+
+The expansion is authored for what it contradicts. It stalled — centuries
+between the Philippines and the Marianas, more before Lapita. The domesticates
+did not travel as a set: pigs reach northern Luzon two thousand years before
+dogs. Pottery appears in Borneo and the northern Philippines at the same time
+rather than in sequence. And the Bismarck obsidian network shows Near Oceania
+had been trading across open water for seventeen thousand years before Lapita
+voyagers arrived.
+
+### Changed
+
+**Ban Chiang** gains the controversy it is famous for and did not carry: a 1976
+claim of the world's earliest bronze at 3600 BC, abandoned in 1982, and a
+long-versus-short chronology dispute a 2022 review still calls only "close to
+resolution". **Lapita** gains the unresolved 3550-3200 cal BP range for its own
+beginning.
+
+### Not added
+
+Three Central Asian entities were researched and deliberately left out, for
+different reasons. **Kelteminar** has no fetched primary radiocarbon dataset at
+all. **Altyn-Depe** has no independent modern dating and inherits the Namazga
+uncertainty. **The Namazga I-VI sequence** is the awkward one: it is the standard
+framework for the whole region and its phase brackets are quoted everywhere, but
+essentially all of them trace to Soviet-era typology rather than to a published
+radiocarbon table — Hiebert found C14 dates for a single Namazga VI layer
+spanning 1884 to 818 BC. Authoring it would mean importing a chronology the
+sources cannot support.
+
+Rock art in Island Southeast Asia is likewise absent: dating claims were
+plentiful in search results and thin in fetched primary sources.
+
+### Counts
+
+1,519 → 1,543 entities. 214 → 238 cited. 261 → 307 sources. Schema unchanged at
+3.0.0.
+
 ## 0.9.0.0 — European Mesolithic and Holocene Americas (2026-08-08)
 
 Two coverage passes aimed by `tools/coverage.py`, which found Europe holding

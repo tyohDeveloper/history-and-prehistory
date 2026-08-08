@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.0.0"
-DATASET_VERSION = "0.9.0.0"
+DATASET_VERSION = "0.10.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1633,6 +1633,13 @@ _extend_europe(E, entities)
 from extensions_americas import extend as _extend_americas
 _extend_americas(E, entities)
 
+from extensions_central_asia import extend as _extend_central_asia
+_extend_central_asia(E, entities)
+
+# Reads the finished corpus to enrich Ban Chiang and Lapita in place.
+from extensions_seasia_oceania import extend as _extend_seasia_oceania
+_extend_seasia_oceania(E, entities)
+
 # Must run last: it reads the finished corpus to derive its spans and to attach
 # cross-parent links to entities other modules created.
 from extensions_ages import extend as _extend_ages
@@ -3048,6 +3055,10 @@ from extensions_europe import EUROPE_SOURCES  # noqa: E402
 sources.extend(EUROPE_SOURCES)
 from extensions_americas import AMERICAS_SOURCES  # noqa: E402
 sources.extend(AMERICAS_SOURCES)
+from extensions_central_asia import CENTRAL_ASIA_SOURCES  # noqa: E402
+sources.extend(CENTRAL_ASIA_SOURCES)
+from extensions_seasia_oceania import SEASIA_OCEANIA_SOURCES  # noqa: E402
+sources.extend(SEASIA_OCEANIA_SOURCES)
 
 with open(DATA / "sources.json", "w") as f:
     json.dump({"schema_version": SCHEMA_VERSION, "dataset_version": DATASET_VERSION,

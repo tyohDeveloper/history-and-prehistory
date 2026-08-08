@@ -79,6 +79,51 @@ def exported_function_bodies(text: str) -> list[tuple[str, int]]:
     return out
 
 
+# Rule 3.8 prohibits names that describe a file's SHAPE rather than what it
+# owns, "including as leaf names inside an otherwise well-named directory".
+SHAPE_NAMES = {
+    "helpers", "utils", "misc", "common", "shared", "handlers", "setters",
+    "getters", "stuff", "things", "lib", "index", "types", "useHelpers",
+    "useHandlers", "useSetters",
+}
+
+RE_EXPORT = re.compile(r"^\s*export\s+(?:\*|type\s*\{|\{)")
+EXCEPTION_TAG = re.compile(r"EXCEPTION \[coding-standards §3\.[89]\]")
+
+
+def shape_named_paths() -> list[tuple[str, str]]:
+    """Files and directories under src/ named for shape instead of domain."""
+    out: list[tuple[str, str]] = []
+    for path in sorted(SRC.rglob("*")):
+        if path.name.startswith("."):
+            continue
+        stem = path.stem if path.is_file() else path.name
+        if stem in SHAPE_NAMES:
+            rel = path.relative_to(ROOT).as_posix()
+            kind = "file" if path.is_file() else "directory"
+            out.append((rel, kind))
+    return out
+
+
+def barrel_files() -> list[tuple[str, int, int]]:
+    """(path, re_export_count, substantive_lines) for un-excepted barrels.
+
+    A single-symbol source-selection shim is a permitted exception, but only
+    when it carries the EXCEPTION tag - otherwise the carve-out is indis-
+    tinguishable from an oversight.
+    """
+    out: list[tuple[str, int, int]] = []
+    for path in sorted(SRC.rglob("*.ts")):
+        text = path.read_text(encoding="utf-8")
+        if EXCEPTION_TAG.search(text):
+            continue
+        reexports = sum(1 for line in text.splitlines() if RE_EXPORT.match(line))
+        if reexports == 0:
+            continue
+        out.append((path.relative_to(ROOT).as_posix(), reexports, countable_lines(text)))
+    return out
+
+
 def main() -> int:
     file_rows: list[tuple[str, str, int, int]] = []
     func_rows: list[tuple[str, str, int]] = []
@@ -122,7 +167,25 @@ def main() -> int:
         print(f"  {rel:44} {count:3} exports  e.g. {', '.join(fns[:3])}")
     print(f"  -> {len(export_rows)} PURE files with more than one function export")
 
-    total = len(file_rows) + len(func_rows) + len(export_rows)
+    shape = shape_named_paths()
+    print()
+    print("=" * 72)
+    print("RULE 3.8 — name for responsibility, not shape")
+    print("=" * 72)
+    for rel, kind in shape:
+        print(f"  {rel:44} {kind}")
+    print(f"  -> {len(shape)} shape-named paths")
+
+    barrels = barrel_files()
+    print()
+    print("=" * 72)
+    print("RULE 3.9 — no barrel files (untagged)")
+    print("=" * 72)
+    for rel, n, total_lines in barrels:
+        print(f"  {rel:44} {n} re-export(s) in {total_lines} lines")
+    print(f"  -> {len(barrels)} untagged re-exporting files")
+
+    total = len(file_rows) + len(func_rows) + len(export_rows) + len(shape) + len(barrels)
     print()
     print(f"TOTAL §3 violations: {total}")
     return 0

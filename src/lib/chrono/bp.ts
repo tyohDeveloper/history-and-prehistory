@@ -27,7 +27,6 @@
 
 import {
   asIso,
-  BP_DATUM_YEAR,
   DATUM_LABEL,
   DATUM_YEAR,
   isCalendarConvertible,
@@ -40,8 +39,6 @@ import {
   type IsoYear,
   type YearValue,
 } from "./year";
-
-export { BP_DATUM_YEAR };
 
 /**
  * Convert a historical Gregorian year to years Before Present.

@@ -1581,13 +1581,15 @@ source lists belong with the claim or in one footer. The a11y contract is alread
 **Q-32. How is the §3 granularity debt paid down, and when does the checker become a gate?**
 `docs/CODING-STANDARDS.md` arrived from the Replit side declaring itself binding, with hard limits
 enforced by CI. It postdates this codebase, so nothing here was written against it. `tools/
-check_standards.py` sizes the debt rather than guessing at it \u2014 **18 violations**:
+check_standards.py` sizes the debt rather than guessing at it \u2014 **20 violations**:
 
 | Rule | Count | Worst cases |
 |---|---|---|
 | 3.3 file length by layer | 5 | `calendars/registry.ts` 310/100, `chrono/year.ts` 295/100, `main.ts` 385/250 |
 | 3.1 exported body \u2264 20 lines | 5 | `readYear` 74, `displayRange` 44, `datingOf` 34 |
 | 3.2 one function export per PURE file | 8 | `chrono/year.ts` has 23, `tree.ts` 9, `chrono/bp.ts` 8 |
+| 3.8 name for responsibility, not shape | 2 | `src/lib/` and `src/lib/types.ts` |
+| 3.9 no untagged barrel files | 0 | both found and fixed during reconciliation |
 
 Two of these are mine from this week (`displayRange`, and `bp.ts` at 129/100), so this is not
 purely inherited.
@@ -1604,9 +1606,34 @@ Open: whether to take the §11 route (dated, owned, expiring exceptions in
 the decomposition first. The second is honest but is a substantial refactor of working, tested code
 with 166 unit and 20 browser tests to keep green.
 
-Note also that the in-repo standards file declares itself a *derived copy* of the project wiki page
-`concepts/coding-architecture-standards`, and the wiki snapshot in this workspace predates it, so I
-cannot confirm the two agree.
+**Reconciled against the wiki 2026-08-08.** My earlier note that the two could not be compared was
+wrong \u2014 the workspace snapshot was two days stale. The wiki was rebuilt that morning, adding five
+pages (`architecture-review-lessons`, `coding-standards-artifact-contract`,
+`coding-standards-data-layer`, `coding-standards-localization`, `repository-conventions`) and growing
+the shared page by half. After syncing:
+
+- **The derived copy is faithful.** All nine wiki pages it cites now resolve, the index lists them,
+  and every numeric limit matches: function \u2264 20, PURE-CORE 100, PURE/STATE/CONTROLLER 150, VIEW 250
+  with an 80-line markup cap. §3.8 naming, §3.9 barrels, the coverage rule, the expiring-exception
+  mechanism and the superseded-predecessor history are all present on both sides. Nothing to
+  propagate in either direction.
+- **Two violations the reconciliation surfaced**, both fixed: `chrono/bp.ts` re-exported an imported
+  `BP_DATUM_YEAR` that nothing consumed \u2014 a §3.9 barrel and §3.6 dead code at once \u2014 and
+  `temporal/temporal.ts` is a legitimate §1.7 source-selection shim that lacked the required
+  `EXCEPTION` tag, which made a permitted carve-out indistinguishable from an oversight.
+- **Two §3.8 violations remain and are structural.** `src/lib/` and `src/lib/types.ts` both use
+  prohibited shape names, and §0 of the repo copy *maps PURE to `src/lib/**`* \u2014 so the path mapping
+  enshrines a name the naming rule forbids. Renaming touches every import in the app.
+- **One discrepancy to propagate upward.** The repo copy tags the barrel carve-out
+  `EXCEPTION [coding-standards §3.8]` under Rule 3.**9**. The wiki gives no tag number, so this is
+  an internal slip in the derived copy rather than a divergence. Amend the wiki first per its own
+  change process.
+
+**The adoption question is settled by the wiki's own rule:** "A standard is not adopted until the
+enforcing checker fails on a violation." `tools/check_standards.py` reports and does not fail, so §3
+is *not yet adopted* in this repository. That is the honest status, and it makes the choice concrete:
+adoption means making the checker fail, which means either paying the debt down or filing dated
+exceptions for what remains.
 
 ### Non-blocking
 

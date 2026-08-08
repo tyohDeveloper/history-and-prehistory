@@ -1095,7 +1095,7 @@ which chronology, for a first you argue whether the evidence counts at all —
 the Dikika cut marks are contested as trampling damage, not as a date. And it
 renders as a marker, not a bar.
 
-Rendering follows: "from 3.3 Ma ago", never "3.3 Ma ago \u2013 present", which would
+Rendering follows: "from 3.3 Ma ago", never "3.3 Ma ago – present", which would
 read as an interval that happens to reach today.
 
 ### Three senses of before-present
@@ -1106,13 +1106,13 @@ and conversion needed the distinction.
 | Sense | Methods | Suffix | Convertible to CE/BCE? |
 |---|---|---|---|
 | calibrated | calibrated radiocarbon, layer counting | `cal BP` | yes |
-| radiocarbon | UNCALIBRATED radiocarbon | `\u00B9\u2074C BP` | **no** |
+| radiocarbon | UNCALIBRATED radiocarbon | `¹⁴C BP` | **no** |
 | geological | Ar/Ar, K-Ar, U-series, OSL/TL, ESR, palaeomag | `ago` | yes |
 
 The middle row breaks a premise the frame model was built on. `resolveFrame`
 documented that "BP and calendar reckoning are exactly interconvertible, so this
 is a display decision" and that a user preference always wins. Uncalibrated
-\u00B9\u2074C years are not calendar years — the mapping is an empirical curve, not an
+¹⁴C years are not calendar years — the mapping is an empirical curve, not an
 offset — so there is no arithmetic that yields a BCE date from one. This is the
 single place the UI refuses rather than converts, and the only place an explicit
 preference is overridden. Note the research turned up the same trap in the
@@ -1149,13 +1149,13 @@ Dataset 3.0.0 moves the prehistory ids.
 Recorded honestly: **2.2.0 was itself mis-versioned.** It re-parented three
 top-level eras and dropped four ids under a minor bump. 3.0.0 absorbs that.
 
-## Regional prehistory (gap analysis \u00a74.2)
+## Regional prehistory (gap analysis §4.2)
 
-All ten regions now have a prehistory branch. 1,345 \u2192 1,417 entities, every date
+All ten regions now have a prehistory branch. 1,345 → 1,417 entities, every date
 carrying a fetched source.
 
 **Industries stay on the global Paleolithic spine** and cross-parent into their
-region, because an industry is not owned by a modern country. G\u00f6bekli Tepe moved
+region, because an industry is not owned by a modern country. Göbekli Tepe moved
 to `west-asia.prehistory` and cross-parents back into `global.neolithic`, which
 is what `cross_parent_ids` is for.
 
@@ -1167,18 +1167,18 @@ of them a calendar reading.
 
 Jericho is the sharpest case. The familiar "tower built c. 8300 BC" is an
 uncalibrated figure, and the source never labels it. Checked against calibrated
-estimates for the same stages it runs 500\u2013900 years young, so the tower is
+estimates for the same stages it runs 500–900 years young, so the tower is
 roughly a **millennium older** in calendar terms than the usual number implies.
-Its stage table is also internally inconsistent \u2014 Stage V is older than Stage III
+Its stage table is also internally inconsistent — Stage V is older than Stage III
 despite being stratigraphically later.
 
-'Ain Ghazal is the same trap with both numbers in circulation: 6750 \u00b1 80 BC
-uncalibrated against 7580 \u00b1 110 BC calibrated for the same statues.
+'Ain Ghazal is the same trap with both numbers in circulation: 6750 ± 80 BC
+uncalibrated against 7580 ± 110 BC calibrated for the same statues.
 
 ### Two validator rules, and what they caught
 
 **Radiocarbon claimed beyond its range is impossible, not debatable.** Carbon
-decays out of usable range by ~50 kyr. The rule caught six entities \u2014 *three of
+decays out of usable range by ~50 kyr. The rule caught six entities — *three of
 them authored by hand in earlier sessions of this project*.
 
 The cause is structural rather than careless, and it is worth stating plainly:
@@ -1195,14 +1195,14 @@ hazard is that published sources frequently do not.
 
 Both rules were verified by reintroducing the bugs into a copy of the data and
 confirming they fire, rather than by assuming a passing run means a working
-check \u2014 four dead-code findings in this project argue for the stronger test.
+check — four dead-code findings in this project argue for the stronger test.
 
 ### Reference anchors reached 0.35% of the dataset
 
 The eight anchor sets are cultural traditions and none begins before the
 Holocene, so 42 entities older than 10,000 BCE had nothing to orient against. A
 `deep-time` set now runs from the first stone tools to the start of the
-Holocene; coverage 0.35% \u2192 97.3%.
+Holocene; coverage 0.35% → 97.3%.
 
 These anchors work differently from the others. "Fall of Rome" is a landmark the
 reader already holds; nobody grew up knowing when the Last Glacial Maximum was,
@@ -1218,7 +1218,7 @@ so a deep-time anchor has to supply the scale as well as the position.
 - `ReferenceFrame` did not declare `year`; it fell through the index signature
   as `unknown`, so arithmetic on it did not type-check. Fine while nothing read
   the field.
-- The visual check caught four entities rendering "\u2013 present" that were not
+- The visual check caught four entities rendering "– present" that were not
   ongoing, and Border Cave asserting a 2.0 ka end that was a placeholder
   convention of mine rather than a finding.
 
@@ -1444,7 +1444,7 @@ Four items were settled by measurement rather than by decision, 2026-08-07.
 ### Q-29 — resolved by authoring the method instead of tuning the threshold
 
 The fuzz-ratio fallback was producing jarring results among siblings: the Bronze
-Age led in BP (\u00b1300 yr on 5,250 BP is 5.7%, over the 5% threshold) while the
+Age led in BP (±300 yr on 5,250 BP is 5.7%, over the 5% threshold) while the
 Iron Age beside it led in BCE. Both were right by the rule and looked like a bug
 side by side.
 
@@ -1587,7 +1587,7 @@ The live register. `Q-n` ids are stable — reference them in commits and conver
 roughly by how much else they block. Ids are never reused; a settled item moves to §Resolved with
 its answer rather than being deleted, so a reference in an old commit still resolves.
 
-**12 open, 20 resolved.** Audited 2026-08-08.
+**14 open, 20 resolved.** Audited 2026-08-08; Q-33 and Q-34 added when the lens shipped.
 
 **Q-30. Should `dating_method` be per-boundary rather than per-entity?** One field
 cannot describe an entity whose start and end rest on different science.
@@ -1633,23 +1633,23 @@ someone re-checks it. Options: surface the age in the UI ("last checked 2026-06"
 check past some horizon, or accept drift. Nothing is decided.
 
 **Q-24. Should `revised` claims show by default or stay behind the popover?** Now sized: of 44
-authored alternatives, **8** are `superseded` \u2014 small enough that either choice is cheap. Note the
+authored alternatives, **8** are `superseded` — small enough that either choice is cheap. Note the
 asymmetry the content revealed: `superseded` claims can wait behind a popover, but the 14
 `misconception` caveats cannot, because they exist to correct a belief the reader arrives holding
-(the *floresiensis* 12,000-year date, figurative art starting in Europe, the J\u014dmon "13,000 BCE").
+(the *floresiensis* 12,000-year date, figurative art starting in Europe, the Jōmon "13,000 BCE").
 A claim nobody believes is optional; a claim everybody believes is not. Original framing: They are settled, so
 inline display is arguably noise — but the whole reason to keep them is that readers arrive
 holding the old number and need to collide with it.
 
 **Q-22. Who reviews the flagged boundary attachments, and can it stop being a one-off?**
 Migration cannot infer which boundary an entity-level note belongs to. Originally 33 entities; now
-**37**, because it grows with every content pass \u2014 which is the real finding. A scheduled review
+**37**, because it grows with every content pass — which is the real finding. A scheduled review
 never catches up with authoring, so this needs to be a rule at author time rather than a pass.
 Same shape as `Q-30`: both are per-entity fields standing in for per-boundary facts.
 
 **Q-31. What is the disclosure surface, and where does it live?** The disclosure model is built and
-tested in `src/chrono/year.ts` \u2014 `disclosureReasons`, `rollupDisclosure`, `entityCaveats`,
-`allClaims` \u2014 and `src/main.ts` calls none of them. So **44 rival claims, 27 caveats and 113 source
+tested in `src/chrono/year.ts` — `disclosureReasons`, `rollupDisclosure`, `entityCaveats`,
+`allClaims` — and `src/main.ts` calls none of them. So **44 rival claims, 27 caveats and 113 source
 lists are authored and unreachable**; only `date_note` renders. This is the largest instance in the
 project of the pattern that has already produced four dead-code findings, and unlike those it is a
 whole surface rather than a plumbing slip.
@@ -1661,14 +1661,15 @@ source lists belong with the claim or in one footer. The a11y contract is alread
 **Q-32. How is the §3 granularity debt paid down, and when does the checker become a gate?**
 `docs/CODING-STANDARDS.md` arrived from the Replit side declaring itself binding, with hard limits
 enforced by CI. It postdates this codebase, so nothing here was written against it. `tools/
-check_standards.py` sizes the debt rather than guessing at it \u2014 **20 violations**:
+check_standards.py` sizes the debt rather than guessing at it. It stood at **20 violations**;
+the §3.8/§3.9 refactor cleared both naming rules, leaving **18**:
 
 | Rule | Count | Worst cases |
 |---|---|---|
 | 3.3 file length by layer | 5 | `calendars/registry.ts` 310/100, `chrono/year.ts` 295/100, `main.ts` 385/250 |
-| 3.1 exported body \u2264 20 lines | 5 | `readYear` 74, `displayRange` 44, `datingOf` 34 |
+| 3.1 exported body ≤ 20 lines | 5 | `readYear` 74, `displayRange` 44, `datingOf` 34 |
 | 3.2 one function export per PURE file | 8 | `chrono/year.ts` has 23, `tree.ts` 9, `chrono/bp.ts` 8 |
-| 3.8 name for responsibility, not shape | 2 | `src/` and `src/entity/entity.ts` |
+| 3.8 name for responsibility, not shape | 0 | cleared: `src/lib` eliminated, `types.ts` split by domain |
 | 3.9 no untagged barrel files | 0 | both found and fixed during reconciliation |
 
 Two of these are mine from this week (`displayRange`, and `bp.ts` at 129/100), so this is not
@@ -1678,7 +1679,7 @@ The checker reports and does not gate, because gating today would simply fail th
 explicit that a checker scoped to the compliant part is decoration, so the checker covers all of
 `src/` including the view. §16.2 says extract misplaced logic before splitting on line count, which
 matters here: `chrono/year.ts` is large because it holds the branded-type layer, the disclosure
-model and the caveat vocabulary in one file \u2014 three responsibilities, not one long one. Splitting it
+model and the caveat vocabulary in one file — three responsibilities, not one long one. Splitting it
 by size would redistribute the violation.
 
 Open: whether to take the §11 route (dated, owned, expiring exceptions in
@@ -1687,22 +1688,22 @@ the decomposition first. The second is honest but is a substantial refactor of w
 with 166 unit and 20 browser tests to keep green.
 
 **Reconciled against the wiki 2026-08-08.** My earlier note that the two could not be compared was
-wrong \u2014 the workspace snapshot was two days stale. The wiki was rebuilt that morning, adding five
+wrong — the workspace snapshot was two days stale. The wiki was rebuilt that morning, adding five
 pages (`architecture-review-lessons`, `coding-standards-artifact-contract`,
 `coding-standards-data-layer`, `coding-standards-localization`, `repository-conventions`) and growing
 the shared page by half. After syncing:
 
 - **The derived copy is faithful.** All nine wiki pages it cites now resolve, the index lists them,
-  and every numeric limit matches: function \u2264 20, PURE-CORE 100, PURE/STATE/CONTROLLER 150, VIEW 250
+  and every numeric limit matches: function ≤ 20, PURE-CORE 100, PURE/STATE/CONTROLLER 150, VIEW 250
   with an 80-line markup cap. §3.8 naming, §3.9 barrels, the coverage rule, the expiring-exception
   mechanism and the superseded-predecessor history are all present on both sides. Nothing to
   propagate in either direction.
 - **Two violations the reconciliation surfaced**, both fixed: `chrono/bp.ts` re-exported an imported
-  `BP_DATUM_YEAR` that nothing consumed \u2014 a §3.9 barrel and §3.6 dead code at once \u2014 and
+  `BP_DATUM_YEAR` that nothing consumed — a §3.9 barrel and §3.6 dead code at once — and
   `temporal/temporal.ts` is a legitimate §1.7 source-selection shim that lacked the required
   `EXCEPTION` tag, which made a permitted carve-out indistinguishable from an oversight.
 - **Two §3.8 violations remain and are structural.** `src/` and `src/entity/entity.ts` both use
-  prohibited shape names, and §0 of the repo copy *maps PURE to `src/<domain>/**`* \u2014 so the path mapping
+  prohibited shape names, and §0 of the repo copy *maps PURE to `src/<domain>/**`* — so the path mapping
   enshrines a name the naming rule forbids. Renaming touches every import in the app.
 - **One discrepancy to propagate upward.** The repo copy tags the barrel carve-out
   `EXCEPTION [coding-standards §3.8]` under Rule 3.**9**. The wiki gives no tag number, so this is
@@ -1726,6 +1727,23 @@ the tree, or just display the conversion?
 
 
 
+**Q-33. What are the DOI weights, and how would we know they are right?** The lens ships with
+`λ=2.5, w_time=1.0, w_tree=1.0, w_span=0.6` — the prototype's placeholders, checked against four
+sampled foci and no more. They are not tuned; they are un-falsified, which is a weaker claim. The
+harder problem is that there is no ground truth for "the right neighbours", so tuning risks fitting
+the weights to whichever foci happen to get sampled. A usable standard is probably adversarial
+rather than optimal: assemble foci that should be hard — a nengō buried among 88 siblings, a
+hominin whose nearest neighbour is 400,000 years away, a node whose parent is undated, an entity at
+a region boundary — and require that no weight set produces an obviously absurd neighbour on any of
+them. Until that exists the weights are provisional and should be described that way.
+
+**Q-34. When does the detail-tier select come out?** Q-9 settled that the budget replaces the tier
+control's mechanism. Both now ship: the budget drives the lens, the select still filters the
+columns. That is the honest interim state, not the destination — two controls over "how much"
+invites them to disagree, and they already can, since the select can hide a column row that the
+lens still ranks. Removing the select in the same commit that introduced its replacement risked
+losing both; it should come out once the lens has been used enough to trust.
+
 ### Resolved
 
 - ~~`Q-7` Is the distortion geometric or typographic?~~ — **typographic, over a one-dimensional
@@ -1745,13 +1763,13 @@ the tree, or just display the conversion?
   unknown is to find out: `dating_method` is now authored on the Bronze Age, Mesolithic, Neolithic,
   agricultural revolution and Aboriginal Australia. No entity now selects BP on the proxy alone.
   The proxy still covers the 1,253 entities with no dating signal, but decides nothing visible.
-- ~~`Q-15` Is prehistory a separate branch or interleaved?~~ \u2014 **both**, and it did not need a
+- ~~`Q-15` Is prehistory a separate branch or interleaved?~~ — **both**, and it did not need a
   mode switch. There is a global spine (41 entities: taxa, industries, thresholds) and a regional
   branch in each of nine regions (56 entities), joined by `cross_parent_ids` where an entity
   genuinely belongs in two places. The readout does not switch behaviour at a boundary because
   frame selection is per entity and driven by provenance, so a radiocarbon date in the Neolithic
   and an Ar/Ar date at 3.3 Ma are handled by the same code path.
-- ~~`Q-18` Is the frame preference global, per-entity, or both?~~ \u2014 **both, with one case that
+- ~~`Q-18` Is the frame preference global, per-entity, or both?~~ — **both, with one case that
   overrides any preference.** `resolveFrame(value, preference)` takes `"auto" | "bp" | "calendar"`
   per call, so a global default and a per-entity override are the same mechanism. Building it
   surfaced the constraint that settles the question: an uncalibrated radiocarbon age has no

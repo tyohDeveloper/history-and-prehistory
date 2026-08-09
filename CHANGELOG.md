@@ -14,6 +14,18 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.17.0.0-app] — 2026-08-09
+
+### Changed
+
+- Ships dataset 0.19.0.0. Build size baseline rebased to 226,404 bytes gzip.
+
+### Added
+
+- Three tests: exonyms must be handled identically across entities, a live
+  sovereignty dispute may not be settled with a bare date, and no entity may
+  display two caveats of the same kind with the same opening text.
+
 ## [3.16.0.0-app] — 2026-08-09
 
 ### Changed

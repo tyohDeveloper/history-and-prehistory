@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.18.0.0",
-  "generated_at": "2026-08-09T22:38:46Z",
+  "dataset_version": "0.19.0.0",
+  "generated_at": "2026-08-09T22:50:56Z",
   "entities": [
     {
       "id": "global",
@@ -570,8 +570,16 @@
       "end_year_max": -1150,
       "start_precision": "approx",
       "end_precision": "approx",
-      "date_note": "Regional Bronze Ages began at different dates; the collapse cluster is c. 1200-1150 BCE.",
+      "date_note": "Regional Bronze Ages began at different dates; the collapse cluster is c. 1200-1150 BCE. Thomsen devised the Stone/Bronze/Iron scheme in 1837 to order northern European material. Connah's verdict on exporting it: applying it to African archaeology 'produced little more than confusion, whereas in the Americas or Australasia it has been irrelevant'.",
       "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "A northern European scheme applied worldwide. It has little utility for sub-Saharan Africa, much of Asia and the Americas, where specialists largely do not use it.",
+          "source_ids": [
+            "naser-brill-middle-nile-three-age",
+            "spafa-three-age-southeast-asia"
+          ]
+        },
         {
           "kind": "misconception",
           "text": "The clean 3300 BC seam with the Neolithic hides a regionally variable Copper Age; see the regional Chalcolithic entries.",
@@ -579,6 +587,10 @@
             "roberts-copper-age-concept"
           ]
         }
+      ],
+      "source_ids": [
+        "naser-brill-middle-nile-three-age",
+        "spafa-three-age-southeast-asia"
       ],
       "summary": "Age of bronze metallurgy, ending in the systemic Late Bronze Age Collapse c. 1200 BCE.",
       "end_dating_method": "calendar"
@@ -592,6 +604,21 @@
       "end_year": -550,
       "tier": "foundational",
       "date_precision": "approx",
+      "date_note": "Thomsen devised the Stone/Bronze/Iron scheme in 1837 to order northern European material. Connah's verdict on exporting it: applying it to African archaeology 'produced little more than confusion, whereas in the Americas or Australasia it has been irrelevant'.",
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "A northern European scheme applied worldwide. It has little utility for sub-Saharan Africa, much of Asia and the Americas, where specialists largely do not use it.",
+          "source_ids": [
+            "naser-brill-middle-nile-three-age",
+            "spafa-three-age-southeast-asia"
+          ]
+        }
+      ],
+      "source_ids": [
+        "naser-brill-middle-nile-three-age",
+        "spafa-three-age-southeast-asia"
+      ],
       "summary": "Widespread adoption of iron for weapons and tools; the age of classical antiquity's origins."
     },
     {
@@ -5487,7 +5514,54 @@
       "start_year": 1912,
       "end_year": 1949,
       "tier": "foundational",
-      "date_precision": "approx",
+      "date_precision": "disputed",
+      "native_name": "中華民國",
+      "aliases": [
+        "ROC",
+        "Nationalist China",
+        "Republican Era"
+      ],
+      "standing": "majority",
+      "date_note": "1912-1949 is the mainland period, not an uncontested lifespan. Whether the Republic of China ended in 1949 is a live dispute in international law: the PRC holds that it did, Taiwan's government states it relocated and has governed there ever since, and a third position holds it was a government of the state of China rather than a state in its own right.",
+      "as_of": "2026-08-09",
+      "alternatives": [
+        {
+          "label": "Ongoing since 1912 (relocated to Taiwan in 1949)",
+          "standing": "majority",
+          "note": "Taiwan's official position: the government relocated and has exercised jurisdiction continuously since.",
+          "source_ids": [
+            "taiwan-gov-history",
+            "brookings-roc-cross-strait"
+          ]
+        },
+        {
+          "label": "Ended 1 October 1949",
+          "standing": "majority",
+          "end_year": 1949,
+          "note": "The PRC's formal position, that its proclamation brought the historical status of the ROC to an end.",
+          "source_ids": [
+            "prc-one-china-principle"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Whether this entity still exists is disputed between two governments. The end date shown is the loss of the mainland, which is not the same claim as dissolution.",
+          "source_ids": [
+            "taiwan-gov-history",
+            "prc-one-china-principle",
+            "brookings-roc-cross-strait",
+            "soochow-roc-statehood"
+          ]
+        }
+      ],
+      "source_ids": [
+        "brookings-roc-cross-strait",
+        "prc-one-china-principle",
+        "soochow-roc-statehood",
+        "taiwan-gov-history"
+      ],
       "summary": "Post-imperial China, ending on the mainland with the Communist victory in 1949; continues on Taiwan."
     },
     {
@@ -5499,6 +5573,15 @@
       "end_year": null,
       "tier": "foundational",
       "date_precision": "approx",
+      "native_name": "中华人民共和国",
+      "aliases": [
+        "PRC",
+        "Communist China",
+        "Mainland China"
+      ],
+      "source_ids": [
+        "prc-one-china-principle"
+      ],
       "summary": "Founded by Mao Zedong in 1949; the world's most populous state until 2023."
     },
     {
@@ -5598,6 +5681,27 @@
       "end_year": null,
       "tier": "foundational",
       "date_precision": "approx",
+      "aliases": [
+        "North Korea",
+        "South Korea",
+        "DPRK",
+        "Republic of Korea"
+      ],
+      "date_note": "The two states do not share a word for the nation they both claim. The North uses Joseon, the South uses Hanguk, and English flattens both to 'Korea', which conceals a disagreement rather than resolving it.",
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "There is no neutral Korean term for the country. Choosing Joseon or Hanguk takes a side; English 'Korea' only looks neutral because it discards the distinction.",
+          "source_ids": [
+            "iias-hanguk-or-joseon",
+            "muse-what-is-south-korea"
+          ]
+        }
+      ],
+      "source_ids": [
+        "iias-hanguk-or-joseon",
+        "muse-what-is-south-korea"
+      ],
       "summary": "Postwar division into North and South Korea after the Korean War."
     },
     {
@@ -6752,7 +6856,10 @@
       "end_year": 1453,
       "tier": "foundational",
       "aliases": [
-        "Eastern Roman Empire"
+        "Basileia ton Rhomaion",
+        "Byzantium",
+        "Eastern Roman Empire",
+        "Rhomania"
       ],
       "summary": "Roman Empire's Greek-speaking continuation, based in Constantinople.",
       "date_precision": "disputed",
@@ -6762,9 +6869,11 @@
       "date_note": "The dedication of Constantinople in 330 CE is securely attested; using it as the start of a distinct empire is a choice. At least six conventions are in use, beginning at Diocletian, Constantine, Theodosius, 395, 476, Anastasius, Justinian or Heraclius. The end, 29 May 1453, is not in doubt.",
       "as_of": "2026-08-08",
       "source_ids": [
-        "oxford-dictionary-of-byzantium-preface",
+        "encyclopedia-com-byzantine",
         "hellenic-world-constantinople-foundation",
-        "oup-constantine-dedicates-constantinople"
+        "oup-constantine-dedicates-constantinople",
+        "oxford-dictionary-of-byzantium-preface",
+        "van-tricht-basileia-ton-rhomaion"
       ],
       "alternatives": [
         {
@@ -6798,7 +6907,8 @@
             "oxford-dictionary-of-byzantium-preface"
           ]
         }
-      ]
+      ],
+      "native_name": "Βασιλεία τῶν Ῥωμαίων"
     },
     {
       "id": "europe.mediterranean.byzantine.justinian",
@@ -7570,7 +7680,7 @@
     {
       "id": "central-asia.mongol-empire.golden-horde",
       "kind": "period",
-      "name": "Ulus of Jochi",
+      "name": "Golden Horde",
       "parent_id": "central-asia.mongol-empire",
       "start_year": 1242,
       "end_year": 1502,
@@ -7580,11 +7690,12 @@
       "tier": "intermediate",
       "date_precision": "disputed",
       "aliases": [
-        "Golden Horde",
+        "Ulus of Jochi",
         "Jochid ulus",
-        "Kipchak Khanate"
+        "Kipchak Khanate",
+        "Ulug Ulus"
       ],
-      "summary": "The Jochid inheritance of the Mongol empire, ruling the western steppe and the Rus principalities. Known in English by a name it never used.",
+      "summary": "The Jochid inheritance of the Mongol empire, ruling the western steppe and the Rus principalities. It called itself the Great State.",
       "start_dating_method": "calendar",
       "end_dating_method": "calendar",
       "standing": "majority",
@@ -7622,19 +7733,24 @@
       "caveats": [
         {
           "kind": "naming-confusion",
-          "text": "'Golden Horde' is a Russian coinage first attested in the 16th century, long after the fact. Contemporaries called it the ulus of Jochi.",
+          "text": "'Golden Horde' is a Russian coinage first attested in the 16th century, long after the fact. It called itself Ulug Ulus, 'Great State', and is also known as the ulus of Jochi.",
           "source_ids": [
-            "ostrowski-golden-horde",
-            "iranica-golden-horde"
+            "hermitage-golden-horde",
+            "kazakhstan-gov-ulug-ulus",
+            "springer-great-horde-agony"
           ]
         }
       ],
       "source_ids": [
         "britannica-golden-horde",
         "cambridge-history-mongol-empire-horde",
+        "hermitage-golden-horde",
         "iranica-golden-horde",
-        "ostrowski-golden-horde"
+        "kazakhstan-gov-ulug-ulus",
+        "ostrowski-golden-horde",
+        "springer-great-horde-agony"
       ],
+      "native_name": "Ulug Ulus",
       "allow_outside_parent_dates": true
     },
     {

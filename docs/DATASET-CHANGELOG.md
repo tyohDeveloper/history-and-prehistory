@@ -1,5 +1,90 @@
 # Changelog
 
+## 0.19.0.0 — One naming rule, applied twice (2026-08-09)
+
+### Correcting yesterday
+
+0.18.0.0 renamed the Golden Horde to "Ulus of Jochi", on the sound and
+well-sourced grounds that the common name is a 16th-century Russian coinage.
+The reasoning held. The application did not.
+
+The Byzantine Empire has **precisely the same problem** -- nobody inside it ever
+called it Byzantine -- and it was left named "Byzantine Empire" with the endonym
+demoted to an alias. Two identical problems given opposite treatments in the
+same dataset.
+
+The rename also traded away something worth more than it gained. This is a
+reference tool. Hiding the term a reader arrives with defeats the purpose, and
+while search still found it, anyone *browsing* Central Asia met a name they had
+no reason to recognise.
+
+### The rule, stated once and applied to both
+
+* `name` is the name a reader arrives with. Being findable is the function, not
+  a compromise of it.
+* `native_name` is what the polity called itself. It renders directly under the
+  title, so it cannot be missed.
+* `aliases` carry the remaining variants so search catches all of them.
+* A sourced `naming-confusion` caveat explains what the common name gets wrong
+  and who coined it.
+
+Neutrality does not come from suppressing the exonym. It comes from never
+letting the exonym stand alone and unexplained.
+
+So the Golden Horde is the Golden Horde again, now showing **Ulug Ulus** -- its
+own name for itself, "Great State", attested in Turkic sources and given by both
+the Hermitage and the Kazakh government -- under the title. Byzantium gets the
+same treatment for the first time, with Basileia ton Rhomaion.
+
+### A live dispute is not a dead mislabel
+
+`east-asia.china.roc` was published as 1912-1949 with no qualification. Whether
+the Republic of China ended in 1949 is one of the most actively contested
+questions in international law, and publishing that bare date silently adopts
+one side of it.
+
+Three positions are now recorded: the PRC's formal statement that its
+proclamation "brought the historical status of the Republic of China to an end";
+Taiwan's government portal stating it relocated and has exercised jurisdiction
+since; and the academic position that it was a government of the state of China
+rather than a state in its own right. Brookings notes Beijing has a vested
+interest in its own claim.
+
+This needed a different instrument from the Golden Horde. Byzantium is a
+retrospective mislabel of a dead polity where nobody's interests are at stake.
+The ROC is a live dispute in which each name is official to someone, so
+`naming-confusion` would be wrong -- it implies a mistake to correct.
+`contested-existence` and competing dates instead.
+
+The entity's summary had said "continues on Taiwan" all along. The prose knew;
+the date did not.
+
+Korea gets the related note: the two states share no word for the nation they
+both claim -- Joseon in the North, Hanguk in the South -- and English flattens
+both to "Korea", which conceals the disagreement rather than resolving it.
+
+### A Danish scheme applied to the world
+
+Bronze Age and Iron Age carried no sources at all, and the Iron Age no caveats,
+while the dataset applies both worldwide. Thomsen devised the scheme in 1837 for
+northern European material. Connah's verdict on exporting it is quoted directly:
+applying it to African archaeology "produced little more than confusion, whereas
+in the Americas or Australasia it has been irrelevant".
+
+### What visual review caught
+
+A duplicate. The Golden Horde displayed two near-identical naming caveats,
+because this module *reworded* one a previous pass had written and the dedup
+matched on exact text. Repeated caveat kinds are legitimate -- Ban Chiang
+carries two genuinely distinct misconceptions -- so the new test compares
+opening text rather than banning the kind, and superseding is now opt-in.
+
+### Counts
+
+1,633 entities unchanged; this pass corrected rather than added. 481 → 494
+sources. 353 → 358 cited. 325 → 329 native names. Twelve `naming-confusion`
+caveats → sixteen.
+
 ## 0.18.0.0 — A naming rule, and the empire that was missing (2026-08-09)
 
 ### The naming rule, stated for the first time

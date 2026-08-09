@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.18.0.0",
-  "generated_at": "2026-08-09T22:38:46Z",
+  "dataset_version": "0.19.0.0",
+  "generated_at": "2026-08-09T22:50:56Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -3106,6 +3106,93 @@
       "kind": "reference",
       "citation": "Dutch West India Company records, Library of Congress",
       "url": "https://www.loc.gov/item/2021666732/"
+    },
+    {
+      "id": "hermitage-golden-horde",
+      "kind": "reference",
+      "citation": "'The History and Culture of the Golden Horde', State Hermitage Museum",
+      "url": "https://www.hermitagemuseum.org/explore/buildings/rooms/room_1694?lng=en",
+      "note": "The state's own name for itself was Ulug Ulus, 'Great State' in Turkic."
+    },
+    {
+      "id": "kazakhstan-gov-ulug-ulus",
+      "kind": "reference",
+      "citation": "'Kazakhstan's 750th anniversary of the Golden Horde', Government of Kazakhstan",
+      "url": "https://www.gov.kz/memleket/entities/mfa-vienna/press/news/details/110329?lang=en",
+      "note": "Gives Ulug Ulus as the historical name used in Turkic written sources, both inside the Horde and outside it."
+    },
+    {
+      "id": "springer-great-horde-agony",
+      "kind": "scholarly",
+      "citation": "'The Agony of the Yoke: The Great Horde as a Fading Threat to Muscovite Rus', Herald of the Russian Academy of Sciences",
+      "url": "https://link.springer.com/article/10.1134/S1019331622110119",
+      "note": "Notes the Russian 'Great Horde' is probably a calque of the Turkic Ulug Ordu, though some historians dispute the derivation."
+    },
+    {
+      "id": "encyclopedia-com-byzantine",
+      "kind": "reference",
+      "citation": "'Byzantine Empire, The', Encyclopedia.com",
+      "url": "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/byzantine-empire",
+      "note": "Basileia ton Rhomaion is the scholarly designation; the empire's formal name remained the Roman Empire and its subjects called themselves Romans."
+    },
+    {
+      "id": "van-tricht-basileia-ton-rhomaion",
+      "kind": "scholarly",
+      "citation": "Van Tricht, 'Claiming the Basileia ton Rhomaion', SAGE (2017)",
+      "url": "https://journals.sagepub.com/doi/10.1177/0971945817718651"
+    },
+    {
+      "id": "naser-brill-middle-nile-three-age",
+      "kind": "scholarly",
+      "citation": "Naser, 'Walking the Line: Bronze and Iron Age as Terms in Middle Nile Valley Archaeology?', Brill",
+      "url": "https://brill.com/view/journals/ow/5/1/article-p1_009.xml",
+      "note": "Quotes Connah: applying the three-age model to African archaeology 'produced little more than confusion, whereas in the Americas or Australasia it has been irrelevant'. Thomsen devised it in 1837 for northern European material."
+    },
+    {
+      "id": "spafa-three-age-southeast-asia",
+      "kind": "scholarly",
+      "citation": "'The Three-Age System: A Struggle for Southeast Asian Prehistoric Periodisation', SPAFA Journal",
+      "url": "https://www.spafajournal.org/index.php/spafajournal/article/download/623/713/2181"
+    },
+    {
+      "id": "taiwan-gov-history",
+      "kind": "primary",
+      "citation": "'History', Government Portal of the Republic of China (Taiwan)",
+      "url": "https://www.taiwan.gov.tw/content_3.php",
+      "note": "States the ROC government relocated to Taiwan in 1949 and has exercised jurisdiction there since."
+    },
+    {
+      "id": "prc-one-china-principle",
+      "kind": "primary",
+      "citation": "'The One-China Principle and the Taiwan Issue', Government of the People's Republic of China",
+      "url": "http://www.china.org.cn/english/taiwan/7956.htm",
+      "note": "States the PRC replaced the ROC on 1 October 1949, 'thereby bringing the historical status of the Republic of China to an end'."
+    },
+    {
+      "id": "brookings-roc-cross-strait",
+      "kind": "scholarly",
+      "citation": "Bush, 'The Significance of the Republic of China for Cross-Strait Relations', Brookings Institution",
+      "url": "https://www.brookings.edu/articles/the-significance-of-the-republic-of-china-for-cross-strait-relations/",
+      "note": "Sets out both positions and notes Beijing has a vested interest in the claim that it is the sole successor state."
+    },
+    {
+      "id": "soochow-roc-statehood",
+      "kind": "scholarly",
+      "citation": "'The Republic of China's Statehood and Taiwan's Legal Status', Soochow University",
+      "url": "https://scups.ppo.scu.edu.tw/upload/f20220531092634obteu1.pdf"
+    },
+    {
+      "id": "iias-hanguk-or-joseon",
+      "kind": "scholarly",
+      "citation": "'Hanguk or Joseon?', International Institute for Asian Studies",
+      "url": "https://www.iias.asia/the-newsletter/article/hanguk-or-joseon",
+      "note": "The North uses Joseon and the South uses Hanguk for the same nation. The distinction is not mirrored in English, where both become 'Korea'."
+    },
+    {
+      "id": "muse-what-is-south-korea",
+      "kind": "scholarly",
+      "citation": "'Introduction: What Is South Korea?', Project MUSE",
+      "url": "https://muse.jhu.edu/pub/342/edited_volume/chapter/3003758"
     },
     {
       "id": "masson-altyn-depe-summary",

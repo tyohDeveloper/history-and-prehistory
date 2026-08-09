@@ -18,7 +18,7 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.18.0.0");
+    expect(datasetVersion).toBe("0.19.0.0");
     expect(schemaVersion).toBe("3.1.0");
   });
 
@@ -105,7 +105,7 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(353);
+    expect(cited.length).toBe(358);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
@@ -559,6 +559,62 @@ describe("Central Asia and the Austronesian world", () => {
     expect(legend.dating_method).toBe("received");
   });
 
+  it("does not show the reader the same caveat twice", () => {
+    // Rewording an existing caveat rather than replacing it left the Golden
+    // Horde displaying two near-identical naming notes. Repeated kinds are
+    // legitimate -- Ban Chiang carries two genuinely different misconceptions
+    // -- so this compares opening text rather than banning the kind.
+    for (const e of entities) {
+      const seen = new Map<string, string>();
+      for (const c of e.caveats ?? []) {
+        const key = `${c.kind}|${c.text.slice(0, 40)}`;
+        expect(seen.has(key), `duplicate caveat on ${e.id}: ${c.text.slice(0, 40)}`).toBe(false);
+        seen.set(key, c.text);
+      }
+    }
+  });
+
+  it("handles every exonym the same way", () => {
+    // 0.18.0.0 renamed the Golden Horde to its endonym while leaving Byzantium
+    // -- the identical problem -- named for a city nobody in it invoked. Two
+    // matching problems, opposite treatments, same release. The rule now: the
+    // display name is what a reader arrives with, the endonym goes in
+    // native_name where it renders under the title, and a sourced caveat
+    // explains the gap. Neutrality comes from never letting the common name
+    // stand alone, not from suppressing it.
+    for (const id of [
+      "central-asia.mongol-empire.golden-horde",
+      "europe.mediterranean.byzantine",
+    ]) {
+      const e = entities.find((x) => x.id === id)!;
+      expect(e.native_name, `${id} shows what it called itself`).toBeTruthy();
+      const naming = e.caveats?.find((c) => c.kind === "naming-confusion");
+      expect(naming, `${id} explains its exonym`).toBeDefined();
+      expect(naming!.source_ids?.length ?? 0).toBeGreaterThan(0);
+    }
+    // The common names must remain the display names: this is a reference
+    // tool, and hiding the term people search for defeats the purpose.
+    expect(entities.find((x) => x.id === "central-asia.mongol-empire.golden-horde")!.name)
+      .toBe("Golden Horde");
+    expect(entities.find((x) => x.id === "europe.mediterranean.byzantine")!.name)
+      .toBe("Byzantine Empire");
+  });
+
+  it("does not settle a live sovereignty dispute with a bare date", () => {
+    // roc was shipped as 1912-1949 with no qualification, which silently
+    // adopts the PRC's position over Taiwan's. Unlike an exonym, neither name
+    // here is a mistake to correct, so this is contested-existence rather
+    // than naming-confusion.
+    const roc = entities.find((e) => e.id === "east-asia.china.roc")!;
+    expect(roc.caveats?.some((c) => c.kind === "contested-existence")).toBe(true);
+    expect(roc.date_precision).toBe("disputed");
+    // Both governments' positions must be present, each with a source.
+    expect((roc.alternatives ?? []).length).toBeGreaterThanOrEqual(2);
+    for (const a of roc.alternatives ?? []) {
+      expect(a.source_ids?.length ?? 0, `${a.label} is sourced`).toBeGreaterThan(0);
+    }
+  });
+
   it("files contested names under the name the polity used", () => {
     // The dataset had two mechanisms for names and applied them only to the
     // harmless cases -- Cheops, King Tut, Ozymandias. The hard ones, where the
@@ -567,10 +623,10 @@ describe("Central Asia and the Austronesian world", () => {
     // recoverable, keep the common name as an alias so search still works, and
     // explain the difference in a sourced caveat.
     const h = entities.find((e) => e.id === "central-asia.mongol-empire.golden-horde")!;
-    expect(h.name).toBe("Ulus of Jochi");
+    expect(h.name).toBe("Golden Horde");
     // Findability must survive the rename, or this is a regression for every
     // reader who only knows the common name.
-    expect(h.aliases).toContain("Golden Horde");
+    expect(h.aliases).toContain("Ulus of Jochi");
     const naming = h.caveats?.find((c) => c.kind === "naming-confusion");
     expect(naming).toBeDefined();
     expect(naming!.source_ids?.length ?? 0).toBeGreaterThan(0);

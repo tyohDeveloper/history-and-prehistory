@@ -18,14 +18,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.17.0.0");
+    expect(datasetVersion).toBe("0.18.0.0");
     expect(schemaVersion).toBe("3.1.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1631);
+    expect(entities.length).toBe(1633);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -105,11 +105,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(346);
+    expect(cited.length).toBe(353);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(358);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(364);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -121,7 +121,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(291);
+    expect(withEnd.length).toBe(297);
 
     const differing = entities
       .filter(
@@ -557,6 +557,23 @@ describe("Central Asia and the Austronesian world", () => {
     const legend = mac.alternatives!.find((a) => a.start_year === -808)!;
     expect(legend.standing).toBe("traditional");
     expect(legend.dating_method).toBe("received");
+  });
+
+  it("files contested names under the name the polity used", () => {
+    // The dataset had two mechanisms for names and applied them only to the
+    // harmless cases -- Cheops, King Tut, Ozymandias. The hard ones, where the
+    // common English name embeds somebody's later claim, had neither an alias
+    // nor a caveat. The rule now: file under the endonym where one is
+    // recoverable, keep the common name as an alias so search still works, and
+    // explain the difference in a sourced caveat.
+    const h = entities.find((e) => e.id === "central-asia.mongol-empire.golden-horde")!;
+    expect(h.name).toBe("Ulus of Jochi");
+    // Findability must survive the rename, or this is a regression for every
+    // reader who only knows the common name.
+    expect(h.aliases).toContain("Golden Horde");
+    const naming = h.caveats?.find((c) => c.kind === "naming-confusion");
+    expect(naming).toBeDefined();
+    expect(naming!.source_ids?.length ?? 0).toBeGreaterThan(0);
   });
 
   it("does not present the Mesolithic as a settled global category", () => {

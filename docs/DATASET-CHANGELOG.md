@@ -1,5 +1,95 @@
 # Changelog
 
+## 0.18.0.0 — A naming rule, and the empire that was missing (2026-08-09)
+
+### The naming rule, stated for the first time
+
+The dataset already had two mechanisms for names and had been applying them to
+the wrong half of the problem. `aliases` renders as "Also known as" and makes an
+entity findable. A `naming-confusion` caveat renders under "Worth knowing",
+carries sources, and explains why a name misleads.
+
+Between them they cover the ground. But they had been used for the *harmless*
+cases — Cheops, King Tut, Ozymandias, Near East — and skipped on the loaded
+ones. The Golden Horde had neither, despite "Golden Horde" being a documented
+16th-century Russian coinage that the polity never used for itself.
+
+The rule from here: **file under the name the polity used where one is
+recoverable, keep the common name as an alias so search still works, and when
+the common name embeds somebody's later claim, say so in a caveat with a
+source.** Findability and truth are different jobs and there is already a field
+for each.
+
+Applied to the Ulus of Jochi, which is now its name. Searching "Golden Horde"
+still finds it. Its founding, previously the bare fact 1240, is now `disputed`
+with four sourced positions — the grant of the ulus in 1224/25, the western
+campaign of 1236-40, the conventional 1240s, and c. 1260, which is where the
+Cambridge History of the Mongol Empire starts it.
+
+Not yet applied to the caliphates, the PRC and ROC, or Korea. Those need it.
+
+### The British Empire did not exist here
+
+England ran to the Stuarts and then jumped to the Victorian era. No Act of
+Union, no empire, and nothing at all after 1901.
+
+It is added with both ends held open, because neither is a fact. The start is a
+**definitional fork rather than a dispute**: nobody disagrees about what
+happened in 1497, 1583 or 1607, only about which one counts. That is a different
+species of uncertainty from a contested radiocarbon date and the entity says so
+in as many words. The end has four live positions — 1947, 1956, 1960, 1997 —
+with named proponents and no winner.
+
+The First/Second Empire split is recorded as **contested**, not as settled
+periodisation: standard in Britannica and the tertiary literature, rejected by
+Marshall and by Cambridge specialists who argue the two overlapped and the break
+is artificial. Pre-1707 activity is flagged as English rather than British.
+
+### An identifier that contradicted its own dates
+
+`southeast-asia.maritime.dutch-eic` covers 1800-1949. The Dutch East India
+Company's charter lapsed on 31 December 1799, so that period is by definition
+*not* company rule — it is the state colony. The entity now says so, and carries
+1945 as an alternative end, since Indonesia dates independence from the
+proclamation and 1949 is only when the Netherlands agreed.
+
+### Iberia, sourced
+
+Spain's 1898 is now scoped to the empire it actually ends — the American and
+Pacific one — with the 1975-76 withdrawal from the Western Sahara as the later
+terminus. Portugal's 1415-1999 is confirmed rather than changed: 584 years, and
+unusually for an empire of that size, both ends are largely uncontested.
+
+The Cross-Regional Empires category now carries a scholarly warrant rather than
+a filing rationale. Burbank and Cooper treat the caliphates, the Mongol empire
+and the European maritime empires as comparable, and the Oxford World History of
+Empire frames that comparison as a corrective to older single-region history.
+
+### What the tests caught
+
+Three failures, two of them substantive. The duplicate-alternative test rejected
+the new competing dates because they described years in prose without setting
+the year fields — so the app could not have rendered them comparably. The
+split-dating-method catalogue caught the Ulus of Jochi and prompted a rethink:
+`typological` was wrong, because the disagreement is about which event counts as
+a beginning, not about how any candidate date was derived. Both ends are
+calendar dates from written sources; the fork lives in `date_precision`.
+
+### Deliberately NOT authored
+
+The **VOC**, the **Dutch West India Company** and the **French colonial
+empire**. The first two have no sensible parent: there is no Netherlands node in
+the dataset at all, and filing a company that operated from the Cape to Nagasaki
+under "Maritime Southeast Asia" would be worse than omitting it. That is a gap
+to fix with a Netherlands node, not a place to wedge an entity. The WIC also
+needs splitting into two charters, 1621-1674 and c. 1675-1791/92, with sources
+differing on the final year.
+
+### Counts
+
+1,631 → 1,633 entities. 461 → 481 sources. 346 → 353 cited. Nine
+`naming-confusion` caveats → twelve.
+
 ## 0.17.0.0 — Citations for Greece and Rome, and what the Mesolithic actually is (2026-08-08)
 
 Two jobs. Neither added much, and both fixed things that were wrong.

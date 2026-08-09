@@ -14,6 +14,18 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.16.0.0-app] — 2026-08-09
+
+### Changed
+
+- Ships dataset 0.18.0.0. Build size baseline rebased to 223,658 bytes gzip.
+
+### Added
+
+- A test requiring contested names to be filed under the name the polity used,
+  with the common name kept as a searchable alias and the difference explained
+  in a sourced caveat.
+
 ## [3.15.0.0-app] — 2026-08-08
 
 ### Changed

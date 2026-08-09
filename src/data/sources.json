@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.17.0.0",
-  "generated_at": "2026-08-09T00:54:21Z",
+  "dataset_version": "0.18.0.0",
+  "generated_at": "2026-08-09T22:38:46Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2975,6 +2975,137 @@
       "citation": "Wicks & Mithen, on the impact of the 8.2 ka event on Mesolithic western Scotland (2014, University of Reading)",
       "url": "https://centaur.reading.ac.uk/60211/",
       "note": "Bayesian analysis of radiocarbon activity events finds a dramatic population reduction synchronous with the event."
+    },
+    {
+      "id": "burbank-cooper-empires-world-history",
+      "kind": "scholarly",
+      "citation": "Burbank & Cooper, Empires in World History: Power and the Politics of Difference (review, Project MUSE)",
+      "url": "https://muse.jhu.edu/article/713800",
+      "note": "Treats the caliphates, the Mongol empire and the European maritime empires as comparable phenomena rather than separate historiographical worlds."
+    },
+    {
+      "id": "oxford-world-history-of-empire",
+      "kind": "scholarly",
+      "citation": "The Oxford World History of Empire, project overview (Stanford)",
+      "url": "https://web.stanford.edu/~scheidel/OWHE.pdf",
+      "note": "Frames cross-empire comparison as a deliberate corrective to older siloed, single-region imperial history."
+    },
+    {
+      "id": "ostrowski-golden-horde",
+      "kind": "scholarly",
+      "citation": "Ostrowski, on the Golden Horde (Harvard)",
+      "url": "https://donostrowski2.bitbucket.io/mm/golden2.pdf",
+      "note": "'Golden Horde' is a retrospective Russian coinage first attested in the 16th century, never a contemporary self-designation."
+    },
+    {
+      "id": "iranica-golden-horde",
+      "kind": "reference",
+      "citation": "'Golden Horde', Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/golden-horde/",
+      "note": "Gives the contemporary designation as the ulus of Jochi."
+    },
+    {
+      "id": "cambridge-history-mongol-empire-horde",
+      "kind": "scholarly",
+      "citation": "'The Golden Horde, c. 1260-1502', The Cambridge History of the Mongol Empire",
+      "url": "https://www.cambridge.org/core/books/cambridge-history-of-the-mongol-empire/golden-horde-c-12601502/194D20494453E0AC8373BE9ADFB8B8D6",
+      "note": "Dates the polity's independent existence from about 1260, later than the conventional 1240s."
+    },
+    {
+      "id": "britannica-golden-horde",
+      "kind": "reference",
+      "citation": "'Golden Horde', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Golden-Horde"
+    },
+    {
+      "id": "britannica-loss-american-colonies",
+      "kind": "reference",
+      "citation": "'Loss of the American colonies', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Western-colonialism/Loss-of-the-American-colonies",
+      "note": "States the standard framing: a first empire centred on North America in 1763, a second centred on India by 1815."
+    },
+    {
+      "id": "marshall-making-unmaking-empires",
+      "kind": "scholarly",
+      "citation": "P. J. Marshall, The Making and Unmaking of Empires (Oxford University Press)",
+      "url": "https://academic.oup.com/book/2601",
+      "note": "Contests the First/Second Empire split, arguing losses in America and gains in India were part of a single process."
+    },
+    {
+      "id": "cambridge-first-second-empire",
+      "kind": "scholarly",
+      "citation": "Cambridge University Press, on First and Second British Empire periodisation",
+      "url": "https://assets.cambridge.org/97805215/90815/excerpt/9780521590815_excerpt.pdf",
+      "note": "Records specialist protest against any easy separation, on the grounds the two overlapped in time."
+    },
+    {
+      "id": "brown-british-academy-states",
+      "kind": "scholarly",
+      "citation": "Judith Brown, 'The making and breaking of states', Journal of the British Academy",
+      "url": "https://www.thebritishacademy.ac.uk/documents/1547/JBA-001-133-Brown.pdf"
+    },
+    {
+      "id": "aiia-suez-death-of-empire",
+      "kind": "scholarly",
+      "citation": "'The Suez dispute and the death of empire', Australian Institute of International Affairs",
+      "url": "https://www.internationalaffairs.org.au/australianoutlook/the-suez-dispute-and-the-death-of-empire/",
+      "note": "Reports diplomatic historians as agreed that the 1956 invasion of Egypt signalled the approaching demise of empire."
+    },
+    {
+      "id": "macinnes-union-and-empire",
+      "kind": "scholarly",
+      "citation": "Allan I. Macinnes, Union and Empire: The Making of the United Kingdom in 1707",
+      "url": "https://pureportal.strath.ac.uk/en/publications/union-and-empire-the-making-of-the-united-kingdom-in-1707/",
+      "note": "Sets the Acts of Union in a colonial context; the state of Great Britain dates from 1707, so earlier overseas activity is English."
+    },
+    {
+      "id": "britannica-british-empire-timeline",
+      "kind": "reference",
+      "citation": "'British Empire Timeline', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/summary/British-Empire-Timeline"
+    },
+    {
+      "id": "elcano-spanish-withdrawal-sahara",
+      "kind": "scholarly",
+      "citation": "'Fifty years since the Spanish withdrawal from the Western Sahara', Real Instituto Elcano",
+      "url": "https://www.realinstitutoelcano.org/en/analyses/between-principles-and-national-interest-50-years-since-the-spanish-withdrawal-from-the-western-sahara/",
+      "note": "The 1975-76 withdrawal from the Western Sahara is the end of Spain's last significant overseas territory."
+    },
+    {
+      "id": "murcia-1898-spanish-empire",
+      "kind": "scholarly",
+      "citation": "On 1898 and the end of the Spanish overseas empire, Anales de Historia Contemporanea (Universidad de Murcia)",
+      "url": "https://revistas.um.es/analeshc/article/download/87411/84141/356521"
+    },
+    {
+      "id": "britannica-treaty-tordesillas",
+      "kind": "reference",
+      "citation": "'Treaty of Tordesillas', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/event/Treaty-of-Tordesillas"
+    },
+    {
+      "id": "avalon-tordesillas",
+      "kind": "primary",
+      "citation": "Treaty of Tordesillas, 1494 (text), Yale Avalon Project",
+      "url": "https://avalon.law.yale.edu/15th_century/mod001.asp"
+    },
+    {
+      "id": "brown-ejph-portuguese-empire",
+      "kind": "scholarly",
+      "citation": "e-Journal of Portuguese History (Brown University), on Portuguese imperial periodisation",
+      "url": "https://www.brown.edu/Departments/Portuguese_Brazilian_Studies/ejph/html/issue27/pdf/v14n1a04.pdf"
+    },
+    {
+      "id": "britannica-dutch-rule-indonesia",
+      "kind": "reference",
+      "citation": "'History of Indonesia: Dutch rule from 1815 to c. 1920', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/history-of-Indonesia/Dutch-rule-from-1815-to-c-1920"
+    },
+    {
+      "id": "loc-dutch-west-india-company",
+      "kind": "reference",
+      "citation": "Dutch West India Company records, Library of Congress",
+      "url": "https://www.loc.gov/item/2021666732/"
     },
     {
       "id": "masson-altyn-depe-summary",

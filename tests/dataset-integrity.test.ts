@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calendars, datasetVersion, entities, referenceFrames, schemaVersion, themes } from "../src/dataset/dataset";
+import { calendars, datasetVersion, entities, referenceFrames, schemaVersion, sources, themes } from "../src/dataset/dataset";
 import { buildIndex } from "../src/entity/tree";
 import { datingOf } from "../src/chrono/fromEntity";
 import { isScientificDating } from "../src/chrono/year";
@@ -18,7 +18,7 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.20.0.0");
+    expect(datasetVersion).toBe("0.21.0.0");
     expect(schemaVersion).toBe("3.3.0");
   });
 
@@ -105,7 +105,7 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(382);
+    expect(cited.length).toBe(385);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
@@ -561,6 +561,66 @@ describe("Central Asia and the Austronesian world", () => {
     const legend = mac.alternatives!.find((a) => a.start_year === -808)!;
     expect(legend.standing).toBe("traditional");
     expect(legend.dating_method).toBe("received");
+  });
+
+  it("has a label for every source kind actually present", () => {
+    // Three separate notions of "source kind" had drifted apart -- the union in
+    // chrono/year.ts, the one in dataset/dataset.ts, and the label map in
+    // main.ts -- and none of them matched the data. Eleven primary and press
+    // sources rendered their badge as "UNDEFINED" for several releases. A
+    // TypeScript Record cannot catch this, because it checks the union, not
+    // the JSON. This does.
+    const labelled = new Set([
+      "scholarly", "reference", "institutional", "news", "primary", "press",
+    ]);
+    const present = new Set(sources.map((s) => s.kind));
+    for (const k of present) {
+      expect(labelled.has(k), `source kind "${k}" has no display label`).toBe(true);
+    }
+  });
+
+  it("does not cram two names into one display name", () => {
+    // "Haudenosaunee (Iroquois)", "Iran / Persia", "Habsburg /
+    // Austria-Hungary" and "North Africa (Maghreb)" were all one workaround: a
+    // second name with nowhere to live. name_forms is where it lives now.
+    //
+    // Deliberately a named list rather than a pattern. A parenthetical is not
+    // reliably a second name -- "Chalcolithic (Anatolia)" is the only thing
+    // separating five sibling entities, and "BCE (Before Common Era)" is a
+    // gloss. Telling those apart from "Paleolithic (Old Stone Age)" needs
+    // judgement, so the test guards the specific regressions instead of
+    // pretending to a rule it cannot apply.
+    const fixed: Record<string, string> = {
+      "west-asia.iran": "Iran",
+      "europe.central.habsburg-monarchy": "The Habsburg Monarchy",
+      "africa.north": "North Africa",
+      "global.paleolithic": "Paleolithic",
+      "global.neolithic": "Neolithic",
+      "americas.north.haudenosaunee": "Haudenosaunee Confederacy",
+      "americas.north.ancestral-puebloan": "Ancestral Puebloan",
+    };
+    for (const [id, name] of Object.entries(fixed)) {
+      const e = entities.find((x) => x.id === id)!;
+      expect(e.name, `${id} display name`).toBe(name);
+      // The displaced name must survive somewhere findable.
+      expect((e.aliases ?? []).length, `${id} kept its other names`).toBeGreaterThan(0);
+    }
+  });
+
+  it("dates a historical name only when it can cite the change", () => {
+    // A `from`/`to` on a name form is a date claim like any other, and this
+    // dataset does not ship uncited date claims. Austria-Hungary is recorded
+    // with a note and no year for exactly this reason.
+    for (const e of entities) {
+      for (const f of e.name_forms ?? []) {
+        if (f.from === undefined && f.to === undefined) continue;
+        if (f.kind !== "historical") continue;
+        expect(
+          (f.source_ids?.length ?? 0) > 0 || (e.source_ids?.length ?? 0) > 0,
+          `${e.id}: "${f.name}" is dated but uncited`,
+        ).toBe(true);
+      }
+    }
   });
 
   it("keeps every name searchable, including the repudiated ones", () => {

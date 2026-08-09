@@ -41,9 +41,11 @@ export const schemaVersion: string = entitiesFile.schema_version;
  * minority position, or that it revises an earlier date — which is the part a
  * reader cannot recover from the citation string alone.
  */
+import type { SourceKind } from "../chrono/year";
+
 export interface Source {
   id: string;
-  kind: "scholarly" | "institutional" | "reference" | "news";
+  kind: SourceKind;
   citation: string;
   url?: string;
   note?: string;

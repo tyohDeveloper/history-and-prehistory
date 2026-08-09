@@ -1,5 +1,68 @@
 # Changelog
 
+## 0.21.0.0 — Formal and historical names (2026-08-09)
+
+`name_forms` shipped last release with eight entities and two of its eight kinds
+unexercised. `formal` and `historical` are now in use across 24 entities, and
+all eight kinds appear in the data.
+
+### Two more slash hacks, and a third
+
+`Iran / Persia`, `Habsburg / Austria-Hungary` and `North Africa (Maghreb)` were
+doing what `Haudenosaunee (Iroquois)` did: cramming a second name into the
+display field because there was nowhere else to put it. All three are now single
+names with the alternatives typed.
+
+Not every parenthetical is that, which is worth stating because a first attempt
+at a general test said otherwise. `Chalcolithic (Anatolia)` is the only thing
+separating five sibling entities, and `BCE (Before Common Era)` is a gloss.
+`Paleolithic (Old Stone Age)` genuinely is two names. Telling them apart needs
+judgement, so the test guards named regressions instead of pretending to a rule
+it cannot apply.
+
+### The `historical` kind earns its date fields
+
+* **Persia to Iran** is the crispest case in the dataset. Iran was always the
+  endonym; Persia is the Greek exonym Europe used. In December 1934 the Iranian
+  foreign ministry gave foreign governments three months' notice, and from 21
+  March 1935 -- Nowruz -- asked them to use Iran. Unlike "Byzantine", this is
+  not a scholarly reinterpretation: it is a government changing what other
+  governments must call it.
+* **The Holy Roman Empire** accreted its title in layers and the sources
+  disagree on when. `sacrum imperium` under Barbarossa's chancery in 1157;
+  `sacrum Romanum imperium` in 1184 by one account, 1254 by others; "of the
+  German Nation" first in a document in 1474 and fixed at the Diet of Cologne in
+  1512, though some references still call the longer form unofficial. The
+  competing dates are recorded, not picked.
+* **The Ottoman state** was Devlet-i Aliyye, "the Exalted State", from its
+  founding, with "Osmaniyye" added during the Tanzimat. Western Europe called it
+  the Turkish Empire, which it never called itself.
+* **Germany** gets the treatment its example invited: `Deutschland` as the
+  translation, `Bundesrepublik Deutschland` as the formal name, `Germany` as the
+  common one, and `West Germany` as historical -- with the precision that
+  reunification was legally an *accession*, so the Federal Republic continued as
+  the same subject of international law while the GDR ceased to exist.
+
+### What `formal` reveals about the two Chinas
+
+For the PRC and the ROC the display name already *is* the formal name. What was
+missing is the common one -- "China" and "Taiwan" -- and those short forms are
+precisely what the sovereignty dispute is about. They are tagged `common` with a
+note pointing at the `contested-existence` caveat rather than resolved. The
+mechanism does not settle that dispute and should not look as though it has.
+
+### Deliberately undated
+
+**Austria-Hungary from 1867.** The Ausgleich date is not in doubt, but it was
+not in this module's sourcing pass, and a `from` year is a date claim like any
+other. Recorded as a `historical` form with a note and no year. A new test
+enforces this generally: a dated name form must be able to cite the change.
+
+### Counts
+
+1,640 entities unchanged; this pass renamed and typed rather than added. 526 →
+528 sources. 382 → 385 cited. 8 → 24 entities with `name_forms`.
+
 ## 0.20.0.0 — A mechanism for names, and the region that needed it most (2026-08-09)
 
 ### The mechanism

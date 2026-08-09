@@ -1,7 +1,7 @@
 {
   "schema_version": "3.3.0",
-  "dataset_version": "0.20.0.0",
-  "generated_at": "2026-08-09T23:15:53Z",
+  "dataset_version": "0.21.0.0",
+  "generated_at": "2026-08-09T23:32:47Z",
   "entities": [
     {
       "id": "global",
@@ -113,12 +113,51 @@
     {
       "id": "west-asia.iran",
       "kind": "region",
-      "name": "Iran / Persia",
+      "name": "Iran",
       "parent_id": "west-asia",
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "name_forms": [
+        {
+          "name": "Iran",
+          "kind": "endonym",
+          "lang": "fa",
+          "note": "Always the internal name. The 1935 change was to what foreigners were asked to say, not to what Iranians called their country.",
+          "source_ids": [
+            "national-archives-persia-iran"
+          ]
+        },
+        {
+          "name": "Persia",
+          "kind": "historical",
+          "to": 1935,
+          "lang": "el",
+          "note": "The Greek-derived exonym Europe used. Foreign governments were asked to drop it with effect from 21 March 1935.",
+          "source_ids": [
+            "national-archives-persia-iran",
+            "sup-discovery-of-iran"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Persia was never the country's own name. Iran is the endonym, and in 1934 the government gave foreign states three months' notice to start using it.",
+          "source_ids": [
+            "national-archives-persia-iran",
+            "sup-discovery-of-iran"
+          ]
+        }
+      ],
+      "source_ids": [
+        "national-archives-persia-iran",
+        "sup-discovery-of-iran"
+      ],
+      "aliases": [
+        "Persia"
+      ]
     },
     {
       "id": "west-asia.arabia",
@@ -285,12 +324,29 @@
     {
       "id": "africa.north",
       "kind": "region",
-      "name": "North Africa (Maghreb)",
+      "name": "North Africa",
       "parent_id": "africa",
       "start_year": null,
       "end_year": null,
       "tier": "intermediate",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "name_forms": [
+        {
+          "name": "Maghreb",
+          "kind": "endonym",
+          "lang": "ar",
+          "note": "Arabic for 'the west'. Usually the western part rather than the whole of North Africa, so the two are not quite synonyms."
+        },
+        {
+          "name": "Barbary Coast",
+          "kind": "historical",
+          "note": "An early modern European name for the coast, now avoided."
+        }
+      ],
+      "aliases": [
+        "Maghreb",
+        "Barbary Coast"
+      ]
     },
     {
       "id": "africa.west",
@@ -483,7 +539,7 @@
     {
       "id": "global.paleolithic",
       "kind": "era",
-      "name": "Paleolithic (Old Stone Age)",
+      "name": "Paleolithic",
       "parent_id": "global.prehistory",
       "start_year": -3300000,
       "end_year": -10000,
@@ -491,7 +547,23 @@
       "tier": "foundational",
       "start_dating_method": "argon-argon",
       "summary": "The long first chapter: stone tools, fire, and hunter-gatherer life, from the earliest knapped stone through the whole span of the genus Homo.",
-      "date_note": "Starts at the earliest known stone tools — Lomekwi 3, c. 3.3 Ma — which predate the genus Homo. Whether those count as Oldowan is a definitional argument; they are included here because the toolmaking record is continuous even where the taxonomy is not."
+      "date_note": "Starts at the earliest known stone tools — Lomekwi 3, c. 3.3 Ma — which predate the genus Homo. Whether those count as Oldowan is a definitional argument; they are included here because the toolmaking record is continuous even where the taxonomy is not.",
+      "name_forms": [
+        {
+          "name": "Old Stone Age",
+          "kind": "common",
+          "note": "The English calque of the Greek. Part of the three-age scheme whose worldwide application is contested on this entity's parent."
+        },
+        {
+          "name": "Palaeolithic",
+          "kind": "translation",
+          "lang": "en-GB"
+        }
+      ],
+      "aliases": [
+        "Old Stone Age",
+        "Palaeolithic"
+      ]
     },
     {
       "id": "global.mesolithic",
@@ -543,7 +615,7 @@
     {
       "id": "global.neolithic",
       "kind": "era",
-      "name": "Neolithic (New Stone Age)",
+      "name": "Neolithic",
       "parent_id": "global.prehistory",
       "start_year": -10000,
       "end_year": -3300,
@@ -552,7 +624,16 @@
       "standing": "consensus",
       "summary": "Beginnings of agriculture, animal domestication, and permanent villages.",
       "date_precision": "approx",
-      "end_dating_method": "radiocarbon-calibrated"
+      "name_forms": [
+        {
+          "name": "New Stone Age",
+          "kind": "common"
+        }
+      ],
+      "end_dating_method": "radiocarbon-calibrated",
+      "aliases": [
+        "New Stone Age"
+      ]
     },
     {
       "id": "global.bronze-age",
@@ -1336,7 +1417,18 @@
         "Abyssinia"
       ],
       "summary": "Solomonic dynasty ruled Ethiopia for seven centuries; never fully colonized.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Abyssinia",
+          "kind": "historical",
+          "note": "The usual European name into the 20th century, from Arabic Habasha. Ethiopia is the older and the preferred form."
+        },
+        {
+          "name": "Solomonic Dynasty",
+          "kind": "scholarly"
+        }
+      ]
     },
     {
       "id": "africa.nile.ethiopia.menelik2",
@@ -5519,7 +5611,9 @@
       "aliases": [
         "ROC",
         "Nationalist China",
-        "Republican Era"
+        "Republican Era",
+        "中華民國",
+        "Taiwan"
       ],
       "standing": "majority",
       "date_note": "1912-1949 is the mainland period, not an uncontested lifespan. Whether the Republic of China ended in 1949 is a live dispute in international law: the PRC holds that it did, Taiwan's government states it relocated and has governed there ever since, and a third position holds it was a government of the state of China rather than a state in its own right.",
@@ -5562,6 +5656,37 @@
         "soochow-roc-statehood",
         "taiwan-gov-history"
       ],
+      "name_forms": [
+        {
+          "name": "Republic of China",
+          "kind": "formal"
+        },
+        {
+          "name": "中華民國",
+          "kind": "formal",
+          "lang": "zh-Hant"
+        },
+        {
+          "name": "Taiwan",
+          "kind": "common",
+          "from": 1949,
+          "note": "The everyday name since the government relocated. Using it as the state's name is itself a position in the dispute."
+        },
+        {
+          "name": "ROC",
+          "kind": "common"
+        },
+        {
+          "name": "Nationalist China",
+          "kind": "historical",
+          "to": 1949
+        },
+        {
+          "name": "Republican Era",
+          "kind": "scholarly",
+          "note": "How the 1912-1949 mainland period is usually named in Chinese historiography."
+        }
+      ],
       "summary": "Post-imperial China, ending on the mainland with the Communist victory in 1949; continues on Taiwan."
     },
     {
@@ -5577,10 +5702,36 @@
       "aliases": [
         "PRC",
         "Communist China",
-        "Mainland China"
+        "Mainland China",
+        "中华人民共和国",
+        "China"
       ],
       "source_ids": [
         "prc-one-china-principle"
+      ],
+      "name_forms": [
+        {
+          "name": "People's Republic of China",
+          "kind": "formal"
+        },
+        {
+          "name": "中华人民共和国",
+          "kind": "formal",
+          "lang": "zh-Hans"
+        },
+        {
+          "name": "China",
+          "kind": "common",
+          "note": "The short form is not neutral: which state it denotes is the substance of the dispute recorded on the Republic of China."
+        },
+        {
+          "name": "PRC",
+          "kind": "common"
+        },
+        {
+          "name": "Mainland China",
+          "kind": "common"
+        }
       ],
       "summary": "Founded by Mao Zedong in 1949; the world's most populous state until 2023."
     },
@@ -5685,7 +5836,11 @@
         "North Korea",
         "South Korea",
         "DPRK",
-        "Republic of Korea"
+        "Republic of Korea",
+        "Democratic People's Republic of Korea",
+        "ROK",
+        "Chosŏn",
+        "Hanguk"
       ],
       "date_note": "The two states do not share a word for the nation they both claim. The North uses Joseon, the South uses Hanguk, and English flattens both to 'Korea', which conceals a disagreement rather than resolving it.",
       "caveats": [
@@ -5701,6 +5856,44 @@
       "source_ids": [
         "iias-hanguk-or-joseon",
         "muse-what-is-south-korea"
+      ],
+      "name_forms": [
+        {
+          "name": "Democratic People's Republic of Korea",
+          "kind": "formal"
+        },
+        {
+          "name": "Republic of Korea",
+          "kind": "formal"
+        },
+        {
+          "name": "North Korea",
+          "kind": "common"
+        },
+        {
+          "name": "South Korea",
+          "kind": "common"
+        },
+        {
+          "name": "DPRK",
+          "kind": "common"
+        },
+        {
+          "name": "ROK",
+          "kind": "common"
+        },
+        {
+          "name": "Chosŏn",
+          "kind": "endonym",
+          "lang": "ko",
+          "note": "The North's word for the nation."
+        },
+        {
+          "name": "Hanguk",
+          "kind": "endonym",
+          "lang": "ko",
+          "note": "The South's word for the same nation."
+        }
       ],
       "summary": "Postwar division into North and South Korea after the Korean War."
     },
@@ -6284,7 +6477,49 @@
         "hijri"
       ],
       "summary": "Multi-continental empire spanning Anatolia, the Balkans, North Africa, and the Arab world.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "native_name": "دولت عليه عثمانیه",
+      "name_forms": [
+        {
+          "name": "Devlet-i ʿAlīye-i ʿOsmānīye",
+          "kind": "formal",
+          "lang": "ota",
+          "note": "'The Sublime Ottoman State'.",
+          "source_ids": [
+            "epfl-ottoman-empire"
+          ]
+        },
+        {
+          "name": "Devlet-i Aliyye",
+          "kind": "historical",
+          "note": "'The Exalted State', used from the founding; 'Osmaniyye' was added during the Tanzimat.",
+          "source_ids": [
+            "epfl-ottoman-empire"
+          ]
+        },
+        {
+          "name": "Osmanlı İmparatorluğu",
+          "kind": "translation",
+          "lang": "tr"
+        },
+        {
+          "name": "Turkish Empire",
+          "kind": "exonym",
+          "note": "The usual Western European name. The state did not call itself Turkish.",
+          "source_ids": [
+            "epfl-ottoman-empire"
+          ]
+        }
+      ],
+      "source_ids": [
+        "epfl-ottoman-empire"
+      ],
+      "aliases": [
+        "Devlet-i ʿAlīye-i ʿOsmānīye",
+        "Devlet-i Aliyye",
+        "Osmanlı İmparatorluğu",
+        "Turkish Empire"
+      ]
     },
     {
       "id": "cross-regional.ottoman.mehmed2",
@@ -6859,7 +7094,8 @@
         "Basileia ton Rhomaion",
         "Byzantium",
         "Eastern Roman Empire",
-        "Rhomania"
+        "Rhomania",
+        "Βασιλεία τῶν Ῥωμαίων"
       ],
       "summary": "Roman Empire's Greek-speaking continuation, based in Constantinople.",
       "date_precision": "disputed",
@@ -6908,7 +7144,34 @@
           ]
         }
       ],
-      "native_name": "Βασιλεία τῶν Ῥωμαίων"
+      "native_name": "Βασιλεία τῶν Ῥωμαίων",
+      "name_forms": [
+        {
+          "name": "Βασιλεία τῶν Ῥωμαίων",
+          "kind": "endonym",
+          "lang": "grc",
+          "note": "'Empire of the Romans'. Its subjects called themselves Romans."
+        },
+        {
+          "name": "Basileia ton Rhomaion",
+          "kind": "formal",
+          "lang": "grc"
+        },
+        {
+          "name": "Eastern Roman Empire",
+          "kind": "scholarly"
+        },
+        {
+          "name": "Rhomania",
+          "kind": "endonym",
+          "lang": "grc",
+          "note": "The everyday word for the country, as against the formal style."
+        },
+        {
+          "name": "Byzantium",
+          "kind": "exonym"
+        }
+      ]
     },
     {
       "id": "europe.mediterranean.byzantine.justinian",
@@ -7233,7 +7496,70 @@
       "end_year": 1806,
       "tier": "foundational",
       "summary": "Multi-ethnic complex of European territories notionally under an elected emperor.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "native_name": "Sacrum Romanum Imperium",
+      "name_forms": [
+        {
+          "name": "Sacrum Romanum Imperium",
+          "kind": "formal",
+          "lang": "la",
+          "note": "'Holy' attaches under Barbarossa's chancery in 1157; the full phrase is dated to 1184 by one account and to 1254 by others.",
+          "source_ids": [
+            "oup-sacrum-imperium-lombard",
+            "heraldica-holy-roman-empire",
+            "encyclopedia-com-holy-roman-empire"
+          ]
+        },
+        {
+          "name": "Heiliges Römisches Reich",
+          "kind": "translation",
+          "lang": "de"
+        },
+        {
+          "name": "Holy Roman Empire of the German Nation",
+          "kind": "historical",
+          "from": 1474,
+          "note": "First in a document in 1474 and the official style after the Diet of Cologne in 1512, though some references still call the longer form unofficial.",
+          "source_ids": [
+            "encyclopedia-com-holy-roman-empire",
+            "britannica-hre-after-frederick-ii"
+          ]
+        },
+        {
+          "name": "Sacrum Imperium Romanum Nationis Germanicae",
+          "kind": "historical",
+          "from": 1512,
+          "lang": "la",
+          "source_ids": [
+            "encyclopedia-com-holy-roman-empire"
+          ]
+        }
+      ],
+      "date_note": "The 800 start is Charlemagne's coronation, a convention: contemporaries did not call it the Holy Roman Empire and the title was assembled over four centuries. 'Holy' appears in 1157, the full 'sacrum Romanum imperium' in 1184 or 1254 depending on the source, and 'of the German Nation' from 1474.",
+      "as_of": "2026-08-09",
+      "alternatives": [
+        {
+          "label": "Title 'sacrum Romanum imperium' standard only from 1254",
+          "standing": "majority",
+          "note": "German History dates the expanded phrase to 1184 but its adoption as standard chancery terminology to 1254.",
+          "source_ids": [
+            "oup-sacrum-imperium-lombard",
+            "heraldica-holy-roman-empire"
+          ]
+        }
+      ],
+      "source_ids": [
+        "britannica-hre-after-frederick-ii",
+        "encyclopedia-com-holy-roman-empire",
+        "heraldica-holy-roman-empire",
+        "oup-sacrum-imperium-lombard"
+      ],
+      "aliases": [
+        "Sacrum Romanum Imperium",
+        "Heiliges Römisches Reich",
+        "Holy Roman Empire of the German Nation",
+        "Sacrum Imperium Romanum Nationis Germanicae"
+      ]
     },
     {
       "id": "europe.central.hre.ottonian",
@@ -7280,12 +7606,38 @@
     {
       "id": "europe.central.habsburg-monarchy",
       "kind": "era",
-      "name": "Habsburg / Austria-Hungary",
+      "name": "The Habsburg Monarchy",
       "parent_id": "europe.central",
       "start_year": 1526,
       "end_year": 1918,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Austria-Hungary",
+          "kind": "historical",
+          "note": "The dual monarchy's name after the Compromise, for the last half century of its existence."
+        },
+        {
+          "name": "Habsburg Empire",
+          "kind": "common"
+        },
+        {
+          "name": "Österreich-Ungarn",
+          "kind": "translation",
+          "lang": "de"
+        },
+        {
+          "name": "Austrian Empire",
+          "kind": "historical"
+        }
+      ],
+      "aliases": [
+        "Austria-Hungary",
+        "Habsburg Empire",
+        "Österreich-Ungarn",
+        "Austrian Empire"
+      ]
     },
     {
       "id": "europe.central.prussia",
@@ -7338,7 +7690,56 @@
       "end_year": null,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "Federal Republic of Germany from 1949 (reunified 1990)."
+      "native_name": "Bundesrepublik Deutschland",
+      "name_forms": [
+        {
+          "name": "Bundesrepublik Deutschland",
+          "kind": "formal",
+          "lang": "de"
+        },
+        {
+          "name": "Federal Republic of Germany",
+          "kind": "formal"
+        },
+        {
+          "name": "Deutschland",
+          "kind": "translation",
+          "lang": "de"
+        },
+        {
+          "name": "Germany",
+          "kind": "common"
+        },
+        {
+          "name": "West Germany",
+          "kind": "historical",
+          "to": 1990,
+          "note": "An informal name for the same continuous state, not a predecessor of it: the GDR acceded to the Federal Republic on 3 October 1990.",
+          "source_ids": [
+            "ghi-unification-treaty-1990",
+            "loc-german-reunification"
+          ]
+        },
+        {
+          "name": "Deutsche Demokratische Republik",
+          "kind": "historical",
+          "to": 1990,
+          "lang": "de",
+          "note": "A separate state until it acceded; it ceased to exist rather than merging.",
+          "source_ids": [
+            "loc-german-reunification"
+          ]
+        }
+      ],
+      "summary": "Federal Republic of Germany from 1949 (reunified 1990).",
+      "aliases": [
+        "Bundesrepublik Deutschland",
+        "Federal Republic of Germany",
+        "Deutschland",
+        "Germany",
+        "West Germany",
+        "Deutsche Demokratische Republik"
+      ]
     },
     {
       "id": "europe.northern.viking-age",
@@ -7443,7 +7844,28 @@
       "end_year": 1917,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "Multi-national empire from Peter the Great to the abdication of Nicholas II."
+      "native_name": "Россійская Имперія",
+      "name_forms": [
+        {
+          "name": "Rossiyskaya Imperiya",
+          "kind": "formal",
+          "lang": "ru"
+        },
+        {
+          "name": "Imperial Russia",
+          "kind": "common"
+        },
+        {
+          "name": "Tsarist Russia",
+          "kind": "common"
+        }
+      ],
+      "summary": "Multi-national empire from Peter the Great to the abdication of Nicholas II.",
+      "aliases": [
+        "Rossiyskaya Imperiya",
+        "Imperial Russia",
+        "Tsarist Russia"
+      ]
     },
     {
       "id": "europe.eastern.russian-empire.peter1",
@@ -8229,7 +8651,9 @@
       "date_precision": "disputed",
       "aliases": [
         "Netherlands East Indies",
-        "Nederlands-Indie"
+        "Nederlands-Indie",
+        "Nederlands-Indië",
+        "Indonesia"
       ],
       "start_dating_method": "calendar",
       "end_dating_method": "calendar",
@@ -8260,6 +8684,27 @@
       "source_ids": [
         "britannica-dutch-rule-indonesia",
         "loc-dutch-west-india-company"
+      ],
+      "name_forms": [
+        {
+          "name": "Nederlands-Indië",
+          "kind": "formal",
+          "lang": "nl"
+        },
+        {
+          "name": "Netherlands East Indies",
+          "kind": "formal"
+        },
+        {
+          "name": "Dutch East Indies",
+          "kind": "common"
+        },
+        {
+          "name": "Indonesia",
+          "kind": "historical",
+          "from": 1945,
+          "note": "The successor state, proclaimed in 1945 and recognised by the Netherlands in 1949."
+        }
       ]
     },
     {
@@ -8744,7 +9189,27 @@
       "end_year": null,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "United States of America from independence (1776) to the present."
+      "name_forms": [
+        {
+          "name": "United States of America",
+          "kind": "formal"
+        },
+        {
+          "name": "USA",
+          "kind": "common"
+        },
+        {
+          "name": "America",
+          "kind": "common",
+          "note": "Ambiguous: also the name of two continents, which is why this dataset files the country under North America rather than the reverse."
+        }
+      ],
+      "summary": "United States of America from independence (1776) to the present.",
+      "aliases": [
+        "United States of America",
+        "USA",
+        "America"
+      ]
     },
     {
       "id": "americas.north.usa.civil-war",

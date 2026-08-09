@@ -476,15 +476,28 @@ export const DATING_METHOD_LABEL: Record<DatingMethod, string> = {
  * dataset already normalizes calendars and themes into their own id-keyed
  * files, so this follows the existing shape rather than inventing one.
  */
+/**
+ * The kinds a source can have.
+ *
+ * This list, the one in `dataset/dataset.ts`, and the label map in `main.ts`
+ * had all drifted apart from each other and from the data, with the result
+ * that eleven `primary` and `press` sources rendered their badge as
+ * "UNDEFINED". A screenshot caught it; no test did. `tests` now asserts every
+ * kind present in the data has a label.
+ */
 export type SourceKind =
   /** Peer-reviewed or academic-press work. */
   | "scholarly"
   /** General reference: encyclopedia entries, standard handbooks. */
   | "reference"
+  /** A museum, government body, university, or similar institution. */
+  | "institutional"
   /** A primary document: inscription, king list, chronicle, excavation report. */
   | "primary"
-  /** A published dataset or calibration curve. */
-  | "dataset";
+  /** Journalism. */
+  | "news"
+  /** A press release or other promotional publication. */
+  | "press";
 
 export interface Source {
   id: string;

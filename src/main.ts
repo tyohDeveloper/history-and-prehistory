@@ -49,7 +49,13 @@ const SOURCE_KIND_LABEL: Record<Source["kind"], string> = {
   institutional: "Institutional",
   reference: "Reference",
   news: "News",
+  primary: "Primary source",
+  press: "Press",
 };
+
+// A Record<SourceKind, string> only type-checks the kinds the union knows
+// about. It cannot know what is actually in the JSON, which is how eleven
+// sources shipped with an "UNDEFINED" badge.
 
 const CAVEAT_LABEL: Record<CaveatKindId, string> = {
   misconception: "Common misconception",
@@ -432,6 +438,11 @@ function citationOrder(entity: Entity): string[] {
     }
   };
   push(entity.source_ids);
+  // Name forms cite too, and deliberately do not roll up into
+  // `entity.source_ids`: a citation for when Persia became Iran is not a
+  // citation for the entity's date range, and the readout's "not yet sourced"
+  // notice must keep telling the truth about the date.
+  for (const f of entity.name_forms ?? []) push(f.source_ids);
   for (const c of entity.caveats ?? []) push(c.source_ids);
   for (const a of entity.alternatives ?? []) push(a.source_ids);
   return seen;

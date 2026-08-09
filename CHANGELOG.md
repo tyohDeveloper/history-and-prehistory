@@ -14,6 +14,23 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.19.0.0-app] — 2026-08-09
+
+### Fixed
+
+- Every source kind now has a display label. `primary` and `press` were in the
+  data but missing from the label map and from both `Source` type unions, so
+  eleven sources had been rendering their badge as "UNDEFINED". A screenshot
+  caught it; no test did. There is now a test.
+- Name-form citations render. `citationOrder` did not look at `name_forms`, so
+  a sourced name change showed no marker.
+
+### Changed
+
+- Ships dataset 0.21.0.0. Size baseline 234,945 bytes gzip.
+- The three `SourceKind` definitions, which had drifted apart from each other
+  and from the data, are now one.
+
 ## [3.18.0.0-app] — 2026-08-09
 
 ### Added

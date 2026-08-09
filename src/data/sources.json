@@ -1,7 +1,7 @@
 {
   "schema_version": "3.3.0",
-  "dataset_version": "0.20.0.0",
-  "generated_at": "2026-08-09T23:15:53Z",
+  "dataset_version": "0.21.0.0",
+  "generated_at": "2026-08-09T23:32:47Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -3352,6 +3352,68 @@
       "citation": "'Can a Myth Be Astronomically Dated?', American Indian Culture and Research Journal (1999)",
       "url": "https://escholarship.org/uc/item/0f04m96b",
       "note": "Direct published rebuttal to the Mann and Fields eclipse dating."
+    },
+    {
+      "id": "national-archives-persia-iran",
+      "kind": "primary",
+      "citation": "'From Persia to Iran, via Inglistan', The National Archives (UK) blog",
+      "url": "https://blog.nationalarchives.gov.uk/persia-iran-via-inglistan/",
+      "note": "In 1934 foreign governments were informed that from 21 March 1935 the country should officially be called Iran."
+    },
+    {
+      "id": "sup-discovery-of-iran",
+      "kind": "scholarly",
+      "citation": "The Discovery of Iran, introduction, Stanford University Press",
+      "url": "https://www.sup.org/books/middle-east-studies/discovery-iran/excerpt/introduction-excerpt",
+      "note": "Dates the demand to 4 December 1934, giving three months' notice before the change took effect."
+    },
+    {
+      "id": "encyclopedia-com-holy-roman-empire",
+      "kind": "reference",
+      "citation": "'Holy Roman Empire', Encyclopedia.com",
+      "url": "https://www.encyclopedia.com/history/modern-europe/german-history/holy-roman-empire",
+      "note": "'Holy' first attached under Frederick Barbarossa's chancery in 1157; the full 'of the German Nation' first used officially in 1474 and the official title from 1512."
+    },
+    {
+      "id": "oup-sacrum-imperium-lombard",
+      "kind": "scholarly",
+      "citation": "'Sacrum imperium: Lombard Influence and the Sacralization of the Empire', German History (Oxford Academic)",
+      "url": "https://academic.oup.com/gh/article/39/2/147/6043923?rss=1",
+      "note": "sacrum imperium adopted 1157, expanded to sacrum Romanum imperium in 1184, and standard chancery terminology only from 1254."
+    },
+    {
+      "id": "heraldica-holy-roman-empire",
+      "kind": "reference",
+      "citation": "'The Holy Roman Empire', Heraldica",
+      "url": "https://www.heraldica.org/topics/national/hre.htm",
+      "note": "Gives 1254 as the first appearance of the two expressions together as sacrum Romanum imperium."
+    },
+    {
+      "id": "britannica-hre-after-frederick-ii",
+      "kind": "reference",
+      "citation": "'Holy Roman Empire: the empire after Frederick II', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Holy-Roman-Empire/The-empire-after-Frederick-II"
+    },
+    {
+      "id": "epfl-ottoman-empire",
+      "kind": "reference",
+      "citation": "'Ottoman Empire', EPFL Data Science Lab reference corpus",
+      "url": "https://dlab.epfl.ch/wikispeedia/wpcd/wp/o/Ottoman_Empire.htm",
+      "note": "Devlet-i Aliye-yi Osmaniyye, 'the Sublime Ottoman State'; known in the West as the Turkish Empire."
+    },
+    {
+      "id": "ghi-unification-treaty-1990",
+      "kind": "primary",
+      "citation": "Treaty of 31 August 1990 on the Establishment of German Unity (German Historical Institute, Washington)",
+      "url": "https://germanhistorydocs.ghi-dc.org/pdf/eng/Unification_Treaty.pdf",
+      "note": "Article 1: the accession of the German Democratic Republic takes effect on 3 October 1990."
+    },
+    {
+      "id": "loc-german-reunification",
+      "kind": "institutional",
+      "citation": "'FALQs: 35 Years of German Reunification', Library of Congress",
+      "url": "https://blogs.loc.gov/law/2025/11/falqs-35-years-of-german-reunification/",
+      "note": "Legally an accession rather than a merger: the Federal Republic continued as the same subject of international law and the GDR ceased to exist."
     },
     {
       "id": "masson-altyn-depe-summary",

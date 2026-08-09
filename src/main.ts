@@ -184,7 +184,14 @@ function shortRange(e: Entity): string {
   // reading happens, and a caveat one click away does not reach it. The dagger
   // is the conventional "there is a note" mark and costs one character.
   const dagger = e.standing === "traditional" ? "\u2009\u2020" : "";
-  if (t === null) return `${magnitude(s)}${s < 0 ? "\u2009BCE" : ""}${DASH}${dagger}`;
+  // A trailing dash reads as "and onwards", which is right for an era with no
+  // end and wrong for a battle. Point events were added in 0.16.0.0 and the
+  // gutter showed Kadesh as "1274 BCE-". Same bug as formatRange had, in a
+  // second formatter -- worth noting that two places format ranges at all.
+  if (t === null) {
+    const open = e.kind === "event" && e.end_precision === undefined ? "" : DASH;
+    return `${magnitude(s)}${s < 0 ? "\u2009BCE" : ""}${open}${dagger}`;
+  }
   if (s < 0 && t < 0) return `${magnitude(s)}${DASH}${magnitude(t)}\u2009BCE${dagger}`;
   if (s < 0 && t >= 0) return `${magnitude(s)}\u2009BCE${DASH}${magnitude(t)}\u2009CE${dagger}`;
   return `${magnitude(s)}${DASH}${magnitude(t)}${dagger}`;

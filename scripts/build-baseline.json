@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 203186,
+  "gzipBytes": 211222,
   "recordedAt": "2026-08-08",
-  "note": "v3.13.0.0 + the Uruk period, Elam subdivided, and Anatolia populated (data 0.15.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.14.0.0 + pre-Islamic Arabia and Predynastic Egypt (data 0.16.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

@@ -1,5 +1,80 @@
 # Changelog
 
+## 0.16.0.0 — Pre-Islamic Arabia and Predynastic Egypt (2026-08-08)
+
+Twenty entities across the two remaining large gaps flagged by the childless
+report, and one rendering bug that only twenty entities could have exposed.
+
+### Egypt: how fast a state can appear
+
+`africa.nile.egypt.predynastic` held 6000–3100 BCE with no children, so the
+dataset had Narmer but nothing he came out of. It now has the Badarian, Naqada
+I, II and III, Hierakonpolis, tomb U-j, Dynasty 0, and the Lower Egyptian
+sequence of Merimde, el-Omari and Maadi-Buto.
+
+The organising entity is **the speed of state formation**. Dee et al.'s 2013
+Bayesian model over 186 radiocarbon dates compressed the whole run from
+pre-state to unified state into roughly **600–700 years**, against about
+**4,000–5,000** for the same journey in Southwest Asia. The dataset can now
+show both ends of that comparison, because the Uruk period was authored one
+release earlier. At its finest resolution the model puts the assimilation of
+Upper and Lower Egyptian funerary practice at five or six generations.
+
+That model also moved dates: the Badarian ended two to three centuries later
+than typological estimates had it. Where a museum round number disagrees with a
+modelled radiocarbon range here, the range wins and the round number is
+recorded as a conversion of Petrie's relative seriation, which is what it is.
+
+**The Narmer Palette is authored as iconography, not as a record of conquest.**
+Scholarship is genuinely split, Tell el-Farkha shows no invasion layer, and the
+Lower Egyptian material culture had already been absorbed gradually, centuries
+earlier. The palette proves a kingship ideology existed by about 3100 BC. It
+does not date a unification or show that unification was an event.
+
+Already in the dataset and therefore not re-authored: the Green Sahara, Nabta
+Playa with its three sub-phases, and the Fayum Neolithic. Checked first this
+time, which the East Asia pass had to learn the hard way.
+
+### Arabia: Dilmun, Saba, the Nabataeans, and the camel
+
+`west-asia.arabia.pre-islamic` held three and a half millennia with no
+children. It now has Dilmun, Umm an-Nar, Wadi Suq, Saba, the Marib Dam, the
+Nabataeans, camel domestication and the incense route.
+
+Two of those are worth more than their subject.
+
+**The Marib Dam is physical evidence contradicting a story everyone knows.**
+Its collapse is remembered as the Sayl al-'Arim, conventionally 570 CE. AMS
+dating of charcoal in the basin silts puts the dam's final activity between
+roughly 1 CE and the end of the third century — three hundred years earlier.
+Both ship; neither is resolved. It is also the dataset's first entity whose
+START is textual and whose END is scientific, which is the reverse of the usual
+direction and is now pinned by a test.
+
+**Camel domestication carries a documented correction.** Timna Site 30's bones
+were long cited for domestication by the 13th century BCE. They belong to the
+site's last occupation phase, not its Late Bronze Age layers; OxA-2165 at
+2650 +/- 90 BP calibrates to 969–600 BCE. Not a bad measurement — a good
+measurement attached to the wrong layer.
+
+South Arabian dates ship under the **Long Chronology** and say so, because
+after the Hammurabi fix in 0.15.0.0 an unlabelled scheme-dependent date is not
+acceptable anywhere in this dataset.
+
+### Deliberately NOT authored
+
+**Magan**, the copper source that supplied Mesopotamia, because every date
+found for it traces to Wikipedia. **Himyar**, because the research marked its
+dates search-located and never confirmed by fetching; the convergence on 110
+BCE is probably right, and probably right is not the standard. And no single
+Merimde range, because published radiocarbon for that site varies by five
+hundred years across research groups — it ships wide and says why.
+
+### Counts
+
+1,608 → 1,628 entities. 396 → 424 sources. 305 → 325 cited. 318 → 338 with a
+start dating method, 252 → 271 with an end one.
+
 ## 0.15.0.0 — Uruk, Elam, Anatolia, and Hammurabi's missing frame (2026-08-08)
 
 Twenty-five entities, and one long-standing bug fixed.

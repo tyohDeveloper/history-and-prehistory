@@ -117,19 +117,26 @@ export function formatYear(y: number | null): string {
 }
 
 /**
- * A missing end year means two different things and they must not read alike.
+ * A missing end year means three different things and they must not read alike.
  *
  * For Homo sapiens it means *extant*. For Homo luzonensis it means the youngest
  * remains have never been dated — the species certainly ended, we just cannot
  * say when. Rendering both as "present" would assert that a hominin known from
- * a handful of foot bones is still walking around.
+ * a handful of foot bones is still walking around. `end_precision: "unknown"`
+ * separates those two.
  *
- * `end_precision: "unknown"` is what separates them.
+ * The third case only appeared in 0.16.0.0, when the dataset acquired its first
+ * point events — the sack of Babylon, Kadesh, the invention of coinage, the
+ * Narmer Palette. A battle has no end year because it is a moment, not because
+ * it is ongoing, and the readout was rendering the Narmer Palette as
+ * "5,049 BP – present". An `event` with no end is a point in time, so it prints
+ * as one date and nothing else.
  */
 export function formatRange(e: Entity): string {
   const start = formatYear(e.start_year);
   if (e.end_year === null) {
     if (e.start_year === null) return "—";
+    if (e.kind === "event" && e.end_precision === undefined) return start;
     return e.end_precision === "unknown" ? `${start} – unknown` : `${start} – present`;
   }
   return `${start} – ${formatYear(e.end_year)}`;

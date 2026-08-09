@@ -18,14 +18,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.15.0.0");
+    expect(datasetVersion).toBe("0.16.0.0");
     expect(schemaVersion).toBe("3.1.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1608);
+    expect(entities.length).toBe(1628);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -105,11 +105,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(305);
+    expect(cited.length).toBe(325);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(318);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(338);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -121,7 +121,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(252);
+    expect(withEnd.length).toBe(271);
 
     const differing = entities
       .filter(
@@ -137,18 +137,24 @@ describe("gap-analysis baseline", () => {
     // US-ESR on teeth out) and Sterkfontein (cosmogenic in, U-Pb out). Under
     // the old single field every one of these was mislabelled at one end.
     //
-    // The last two cross the boundary the other way, from science into
-    // history. Susa's earliest occupation is radiocarbon-dated and its end is
-    // Cyrus taking the city in 539 BCE, which is a calendar date from written
-    // record. Phrygia's start comes off the Gordion tree-ring sequence and its
-    // end is typological. Recording either with one method would claim a
-    // precision, or a kind of evidence, that only one end of the range has.
+    // The last three cross the boundary between science and history. Susa's
+    // earliest occupation is radiocarbon-dated and its end is Cyrus taking the
+    // city in 539 BCE, a calendar date from written record. Phrygia's start
+    // comes off the Gordion tree-ring sequence and its end is typological.
+    //
+    // The Marib Dam runs the other way, and is the reason this test is worth
+    // keeping: its construction is known only from an inscription, while its
+    // END is radiocarbon on charcoal in the basin silts -- which puts the dam's
+    // last activity some three centuries before the collapse that tradition
+    // remembers. A single method field would have hidden exactly the tension
+    // that makes the entity interesting.
     expect(differing).toEqual([
       "africa.prehistory.rising-star",
       "africa.prehistory.sterkfontein",
       "europe.prehistory.neanderthal-europe",
       "global.paleolithic.middle-stone-age",
       "west-asia.anatolia.phrygia",
+      "west-asia.arabia.pre-islamic.saba.marib-dam",
       "west-asia.iran.elam.susa",
     ]);
 

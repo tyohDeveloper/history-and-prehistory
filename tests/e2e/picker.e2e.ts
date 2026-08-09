@@ -24,9 +24,9 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // The two tracks had been asserted the wrong way round since the renumbering:
   // v0.5.0 is the DATA version and 3.1.0 was the APP version. The test was
   // failing for that reason, not because the header was wrong.
-  await expect(page.getByTestId("text-app-version")).toContainText("v3.13.0.0");
-  await expect(page.getByTestId("text-app-version")).toContainText("data 0.15.0.0");
-  await expect(page.getByTestId("panel-footer-root")).toContainText("1,608 entities");
+  await expect(page.getByTestId("text-app-version")).toContainText("v3.14.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 0.16.0.0");
+  await expect(page.getByTestId("panel-footer-root")).toContainText("1,628 entities");
 });
 
 test("drills Region -> Era -> Period through the columns", async ({ page }) => {
@@ -428,4 +428,21 @@ test("leads with the warning, above the summary", async ({ page }) => {
   const facts = order.indexOf("list-readout-facts");
   expect(banner).toBeGreaterThan(-1);
   expect(banner).toBeLessThan(facts);
+});
+
+test("shows a point event as a single date in both the gutter and the readout", async ({ page }) => {
+  // Point events arrived in 0.16.0.0 and immediately exposed that TWO separate
+  // formatters handle a missing end year, and both defaulted to "ongoing". The
+  // Narmer Palette read "5,049 BP - present" in the panel and Kadesh read
+  // "1274 BCE-" in the column. A battle is a moment, not an open interval.
+  await page.getByTestId("input-search-query").fill("Battle of Kadesh");
+  await page.waitForTimeout(400);
+  const gutter = await page.getByTestId("region-picker-columns").innerText();
+  expect(gutter).toContain("1274");
+  expect(gutter).not.toMatch(/1274\u2009BCE\u2013/);
+
+  await page.getByText("Battle of Kadesh", { exact: false }).last().click();
+  await page.waitForTimeout(400);
+  const panel = await page.getByTestId("panel-readout-root").innerText();
+  expect(panel).not.toContain("present");
 });

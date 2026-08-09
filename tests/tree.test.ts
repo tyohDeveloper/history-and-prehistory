@@ -120,6 +120,19 @@ describe("year formatting", () => {
   it("renders ongoing ranges", () => {
     expect(formatRange(mk({ id: "x", start_year: 2019, end_year: null }))).toBe("2019 CE \u2013 present");
   });
+
+  it("prints a point event as one date, not as ongoing", () => {
+    // The dataset had no point events until 0.16.0.0, so this path was never
+    // exercised and defaulted to the wrong one of the three meanings a missing
+    // end year can carry. The Narmer Palette rendered as "5,049 BP - present".
+    expect(
+      formatRange(mk({ id: "narmer", kind: "event", start_year: -3100, end_year: null })),
+    ).toBe("3100 BCE");
+    // An era with no end is still ongoing, not a point.
+    expect(
+      formatRange(mk({ id: "era", kind: "era", start_year: -3100, end_year: null })),
+    ).toBe("3100 BCE \u2013 present");
+  });
 });
 
 describe("compareEntities", () => {

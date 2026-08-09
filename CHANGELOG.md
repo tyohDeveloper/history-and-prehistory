@@ -14,6 +14,30 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.14.0.0-app] — 2026-08-08
+
+### Fixed
+
+- **A point event no longer renders as ongoing.** The dataset had no point
+  events until this release. The moment it acquired four — the sack of Babylon,
+  Kadesh, the invention of coinage, the Narmer Palette — the readout showed
+  "The Narmer Palette, 5,049 BP – present" and the picker column showed
+  "1274 BCE–" for a battle.
+
+  The interesting part is that fixing it took THREE separate changes.
+  `formatRange` in `entity/tree`, `shortRange` in `main`, and `displayRange` in
+  `chrono` each format a range, and each independently treated a missing end
+  year as "still going". `formatRange` even carried a comment explaining that a
+  missing end means two different things — extant, or never dated — and a point
+  event is a third meaning none of them had.
+
+  That three places format ranges at all is the real finding, and it is
+  recorded in the code rather than quietly tidied away.
+
+### Changed
+
+- Ships dataset 0.16.0.0. Build size baseline rebased to 211,222 bytes gzip.
+
 ## [3.13.0.0-app] — 2026-08-08
 
 ### Changed

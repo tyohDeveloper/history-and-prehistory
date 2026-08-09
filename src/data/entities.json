@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.15.0.0",
-  "generated_at": "2026-08-08T23:52:59Z",
+  "dataset_version": "0.16.0.0",
+  "generated_at": "2026-08-09T00:15:30Z",
   "entities": [
     {
       "id": "global",
@@ -23044,6 +23044,590 @@
         "Ilion",
         "Hisarlik"
       ]
+    },
+    {
+      "id": "west-asia.arabia.pre-islamic.dilmun",
+      "kind": "era",
+      "name": "Dilmun",
+      "parent_id": "west-asia.arabia.pre-islamic",
+      "start_year": -3300,
+      "end_year": -510,
+      "tier": "foundational",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Dated from Mesopotamian texts rather than excavation. First mentioned about 3300 BCE; a tribal phase 2250-2050 BCE, then state formation on Bahrain from 2050; Kassite control in the 15th and 14th centuries; late cemeteries cautiously placed 950-700 BCE. Sargon II names King Uperi about 709 BCE, and the last mention is in a legal contract of about 510 BCE.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The old three-part Early, Middle and Late Dilmun scheme has been superseded by the more granular phasing above. The year of that revision is not stated in the source.",
+          "source_ids": [
+            "ancient-arabia-dictionary-dilmun"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "ancient-arabia-dictionary-dilmun",
+        "bahrain-authority-history-timeline"
+      ],
+      "summary": "The Gulf trading power that stood between Mesopotamia and the Indus, and which Mesopotamian literature remembered as a kind of paradise."
+    },
+    {
+      "id": "west-asia.arabia.pre-islamic.umm-an-nar",
+      "kind": "period",
+      "name": "Umm an-Nar Culture",
+      "parent_id": "west-asia.arabia.pre-islamic",
+      "start_year": -2700,
+      "end_year": -2000,
+      "tier": "intermediate",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Dated by tomb architecture and pottery, not radiocarbon. The start is soft: the same doctoral thesis gives 2700 BCE in one passage and 2800 in another, and other academic sources go as late as 2600.",
+      "source_ids": [
+        "durham-thesis-umm-an-nar-wadi-suq"
+      ],
+      "summary": "The Oman peninsula's Bronze Age of circular stone tower tombs, copper export, and carnelian carried in from the Indus."
+    },
+    {
+      "id": "west-asia.arabia.pre-islamic.wadi-suq",
+      "kind": "period",
+      "name": "Wadi Suq Period",
+      "parent_id": "west-asia.arabia.pre-islamic",
+      "start_year": -2000,
+      "end_year": -1600,
+      "tier": "specialist",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "The 2000-1600 BC bracket was agreed in 1980 and remains the most cited. A later Bronze Age phase runs about 1600-1250 BC after it.",
+      "alternatives": [
+        {
+          "label": "Split into Classic and Late Wadi Suq",
+          "standing": "minority",
+          "start_year": -2000,
+          "end_year": -1300,
+          "dating_method": "typological",
+          "note": "Carter's alternative divides it at 1500 BCE and runs the later phase to 1300, which removes the need for a separate Late Bronze Age phase.",
+          "source_ids": [
+            "durham-thesis-umm-an-nar-wadi-suq"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "durham-thesis-umm-an-nar-wadi-suq"
+      ],
+      "summary": "The southeastern Arabian second millennium, when the tower-tomb tradition breaks and burial practice changes shape."
+    },
+    {
+      "id": "west-asia.arabia.pre-islamic.saba",
+      "kind": "era",
+      "name": "Saba",
+      "parent_id": "west-asia.arabia.pre-islamic",
+      "start_year": -800,
+      "end_year": 275,
+      "tier": "foundational",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "These are LONG CHRONOLOGY dates and the choice matters. The Short Chronology, proposed by Pirenne in 1955 from art-historical and palaeographic comparison with Greece, would start South Arabian civilisation in the 5th century BCE instead — several centuries later. The one point all schemes agree on is Aelius Gallus's Roman campaign of 25 BCE. Contemporary kingdoms under the same scheme: Hadramawt and Ma'in from the 8th century, Awsan 800-500, Qataban from the 4th.",
+      "alternatives": [
+        {
+          "label": "Short Chronology: from the 5th century BCE",
+          "standing": "minority",
+          "start_year": -500,
+          "end_year": 275,
+          "dating_method": "calendar",
+          "note": "Pirenne's 1955 scheme, from Greek stylistic and letter-form comparison. Not disproven, but losing ground.",
+          "source_ids": [
+            "south-arabian-kingdoms-overview"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "South Arabian dates are almost never labelled with their scheme. Two sources centuries apart are usually not in conflict; they have chosen differently.",
+          "source_ids": [
+            "south-arabian-kingdoms-overview"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "south-arabian-kingdoms-overview"
+      ],
+      "summary": "The incense kingdom of the Yemeni highlands, the Sheba of later legend, and the builder of the Marib Dam.",
+      "aliases": [
+        "Sheba"
+      ]
+    },
+    {
+      "id": "west-asia.arabia.pre-islamic.saba.marib-dam",
+      "kind": "period",
+      "name": "The Marib Dam",
+      "parent_id": "west-asia.arabia.pre-islamic.saba",
+      "start_year": -700,
+      "end_year": 300,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Construction is attributed by inscription to around 700 BCE, in the era of Karib'il Watar; no scientific date confirms a construction year. The end date here is radiocarbon: AMS on detrital charcoal in the basin silts puts the dam's final period of activity no earlier than about 1 CE and no later than the end of the 3rd century.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The famous collapse, the Sayl al-'Arim of about 570 CE, is remembered in later tradition. The sediment dating puts the dam's last activity roughly three centuries earlier.",
+          "source_ids": [
+            "francaviglia-dating-marib-dam"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "francaviglia-dating-marib-dam",
+        "south-arabian-kingdoms-overview"
+      ],
+      "summary": "Sabaean hydraulic engineering on a scale that watered a desert kingdom, and whose failure became a parable."
+    },
+    {
+      "id": "west-asia.arabia.pre-islamic.nabataeans",
+      "kind": "era",
+      "name": "The Nabataeans",
+      "parent_id": "west-asia.arabia.pre-islamic",
+      "start_year": -312,
+      "end_year": 106,
+      "tier": "foundational",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "The first fixed reference is 312 BCE, when Diodorus records Antigonus's general attacking the Nabataean Arabs at a strong but unwalled rock, conventionally identified as Petra. The earliest Nabataean inscription naming a king, Aretas, is dated on palaeographic grounds to the first half of the 2nd century BCE and usually to 168 BCE. Rome annexed the kingdom in 106 CE.",
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Assyrian references to Nabatu and biblical Nabaioth are often taken for early Nabataeans. Most scholars now hold that none of them can be identified with the Nabataeans of Petra.",
+          "source_ids": [
+            "ca-foscari-nabataean-studies",
+            "naveh-nabataean-inscriptions-haifa"
+          ]
+        }
+      ],
+      "source_ids": [
+        "ca-foscari-nabataean-studies",
+        "naveh-nabataean-inscriptions-haifa"
+      ],
+      "summary": "Caravan traders who took the northern end of the incense route, cut Petra out of sandstone, and were annexed by Rome without a fight.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.arabia.pre-islamic.camel-domestication",
+      "kind": "period",
+      "name": "Domestication of the Dromedary",
+      "parent_id": "west-asia.arabia.pre-islamic",
+      "start_year": -1200,
+      "end_year": -900,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Most scholars place exploitation as a pack animal no earlier than the 12th century BCE, with domestic dromedaries in southeast Arabia in the first third of the 1st millennium. In the Levant the first significant appearance is no earlier than the last third of the 10th century BCE. Wild camels are much older: bones at Baynunah in the 5th millennium and at Ra's al-Hadd at 2890-2580 BCE, neither of them domesticated.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Timna Site 30 was long cited for camels by the 13th century BCE. The bones belong to the site's last phase, not its Late Bronze Age layers: OxA-2165 calibrates to 969-600 BCE.",
+          "source_ids": [
+            "introduction-domestic-camels-southern-levant"
+          ]
+        },
+        {
+          "kind": "misconception",
+          "text": "Old camel bones are not evidence of domestication. Wild dromedaries were present in Arabia for millennia before anyone rode one.",
+          "source_ids": [
+            "introduction-domestic-camels-southern-levant"
+          ]
+        }
+      ],
+      "source_ids": [
+        "introduction-domestic-camels-southern-levant"
+      ],
+      "summary": "The pack animal that made the incense route possible, domesticated far later than the trade routes it is usually credited with opening."
+    },
+    {
+      "id": "west-asia.arabia.pre-islamic.incense-trade",
+      "kind": "period",
+      "name": "The Incense Route",
+      "parent_id": "west-asia.arabia.pre-islamic",
+      "start_year": -700,
+      "end_year": 200,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Conventionally described as flourishing between the 3rd century BCE and the 2nd century CE, but the route is argued to have been in use since at least the 7th century BCE and possibly the 8th. A radiocarbon date from Hajar bin Humeid of about 852 BCE with a +/-160 year error supports early South Arabian urban development, though the range is too wide to pin the trade to.",
+      "source_ids": [
+        "jordan-antiquities-nabataeans-oriental-trade",
+        "orient-frankincense-and-myrrh",
+        "south-arabian-kingdoms-overview"
+      ],
+      "summary": "Frankincense and myrrh moving north out of South Arabia, the trade that paid for Saba, Qataban and eventually Petra."
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.badarian",
+      "kind": "period",
+      "name": "Badarian Culture",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -4350,
+      "end_year": -3730,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Bayesian radiocarbon gives a start of 4407-4308 and an end of 3800-3667 BCE at 68% probability, with a modelled duration of 529-709 years.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The Badarian ended in the 38th century BC, two to three hundred years later than typological estimates had it. Ranges like 4800-4200 BC still circulate on museum material.",
+          "source_ids": [
+            "dee-2013-absolute-chronology-early-egypt",
+            "wengrow-radiocarbon-naqada-relative-chronology"
+          ]
+        }
+      ],
+      "source_ids": [
+        "dee-2013-absolute-chronology-early-egypt",
+        "wengrow-radiocarbon-naqada-relative-chronology"
+      ],
+      "summary": "The earliest well-defined farming culture of Upper Egypt, and the first casualty of the 2013 radiocarbon model."
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.naqada-i",
+      "kind": "period",
+      "name": "Naqada I",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -3800,
+      "end_year": -3550,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Petrie's Sequence Dating placed this at SD 31-37, which is a relative seriation and not a calendar at all. Bayesian radiocarbon pins the Naqada IB/IC transition to 3690-3605 BCE, centuries later than typological estimates.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Round figures like 4000-3500 BC are conversions of a relative seriation, not measurements. They are still printed on museum education material.",
+          "source_ids": [
+            "ucl-digital-egypt-predynastic-chronology",
+            "dee-2013-absolute-chronology-early-egypt"
+          ]
+        }
+      ],
+      "source_ids": [
+        "dee-2013-absolute-chronology-early-egypt",
+        "ucl-digital-egypt-predynastic-chronology",
+        "seshat-naqada-polity",
+        "british-museum-early-egypt-gallery"
+      ],
+      "summary": "The first phase of the Naqada sequence: black-topped pottery, white cross-lined ware, and the beginnings of a distinctly Upper Egyptian world.",
+      "aliases": [
+        "Amratian"
+      ]
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.naqada-ii",
+      "kind": "period",
+      "name": "Naqada II",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -3550,
+      "end_year": -3325,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "The IID/IIIA transition is modelled at 3352-3297 BCE. The interval spanning the visible assimilation of Upper and Lower Egyptian funerary practice lasted about five or six generations.",
+      "source_ids": [
+        "dee-2013-absolute-chronology-early-egypt",
+        "seshat-naqada-polity",
+        "british-museum-early-egypt-gallery"
+      ],
+      "summary": "Trade networks widen, burials grow unequal, and Upper Egyptian material culture starts moving north into the Delta.",
+      "aliases": [
+        "Gerzean"
+      ]
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.naqada-iii",
+      "kind": "period",
+      "name": "Naqada III",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -3325,
+      "end_year": -3085,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "allow_outside_parent_dates": true,
+      "date_note": "Ends with the modelled accession of Aha at 3111-3045 BCE, median 3085. Before this model, published estimates for the foundation of the Egyptian state ranged across 3400-2900 BCE.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Even radiocarbon programmes disagree. The Abydos excavators' own First Dynasty dates came out 100-150 years earlier than the king-list chronology, while staying internally consistent.",
+          "source_ids": [
+            "dai-abydos-radiocarbon"
+          ]
+        }
+      ],
+      "source_ids": [
+        "dee-2013-absolute-chronology-early-egypt",
+        "dai-abydos-radiocarbon",
+        "seshat-naqada-polity"
+      ],
+      "summary": "State formation proper: walled towns, royal-scale tombs, the first writing, and the kings who came before the First Dynasty."
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.state-formation",
+      "kind": "event",
+      "name": "The Speed of Egyptian State Formation",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -3800,
+      "end_year": -3085,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "allow_outside_parent_dates": true,
+      "date_note": "From a Bayesian model over 186 radiocarbon dates. The paper's conclusion is comparative rather than merely chronological: prehistoric societies in Africa and Asia followed very different trajectories to political centralisation, and Egypt's was extraordinarily quick.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The contrast is with Southwest Asia measured the same way, from cereal agriculture to state. Egypt started farming much later, so it is the pace that differs, not the finish line.",
+          "source_ids": [
+            "dee-2013-absolute-chronology-early-egypt"
+          ]
+        }
+      ],
+      "source_ids": [
+        "dee-2013-absolute-chronology-early-egypt",
+        "royal-society-2013-early-egyptian-timeline"
+      ],
+      "summary": "Egypt went from pre-state to unified state in six or seven centuries, where the same journey in Southwest Asia took four or five millennia."
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.hierakonpolis",
+      "kind": "period",
+      "name": "Hierakonpolis",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -3700,
+      "end_year": -3050,
+      "tier": "intermediate",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "The HK6 elite cemetery runs from about Naqada IIA through Naqada IIIC1. Dating is by Naqada-phase placement rather than radiocarbon, so sub-century precision for individual tombs should not be trusted.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Predynastic Egypt is often told as one centre rising. Hierakonpolis, Abydos and Naqada were competing or complementary centres, not a single seat of authority.",
+          "source_ids": [
+            "fahmy-hierakonpolis-hk6-archaeobotany",
+            "hierakonpolis-nekhen-news"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "fahmy-hierakonpolis-hk6-archaeobotany",
+        "hierakonpolis-nekhen-news"
+      ],
+      "summary": "An Upper Egyptian power centre with monumental elite tombs, industrial-scale brewing, and buried elephants.",
+      "aliases": [
+        "Nekhen"
+      ]
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.tomb-uj",
+      "kind": "period",
+      "name": "Tomb U-j at Abydos",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -3320,
+      "end_year": -3150,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Radiocarbon on wood from the tomb: Hd-12953 at 4470+/-30 BP calibrating to 3310-3230, 3180-3160 and 3120-3030 cal BC; Hd-12954 at 4595+/-25 BP giving 3490-3470 and 3380-3330 cal BC. Related Naqada IIIa2 tombs cluster around 3510-3100 cal BC.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Whether Egyptian writing was invented independently or prompted by contact with Mesopotamia is not settled. The dates are close enough that neither priority nor influence can be demonstrated.",
+          "source_ids": [
+            "dai-abydos-radiocarbon"
+          ]
+        }
+      ],
+      "source_ids": [
+        "dai-abydos-radiocarbon"
+      ],
+      "summary": "The richest tomb at Abydos before the First Dynasty, holding the earliest known Egyptian writing."
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.dynasty-0",
+      "kind": "period",
+      "name": "Dynasty 0",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -3200,
+      "end_year": -3085,
+      "tier": "intermediate",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "allow_outside_parent_dates": true,
+      "date_note": "A modern historiographic label, not an Egyptian one, correlated with Naqada IIIB. The succession Iry-Hor, then Ka, then Narmer may include overlapping reigns.",
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Dynasty 0 and Dynasty 00 are not standardised. Scholars draw the boundaries differently, and the order of the earliest rulers, known mainly from serekhs on pots, is not secure.",
+          "source_ids": [
+            "raffaele-dynasty-0",
+            "ucla-encyclopedia-egyptology-chronology"
+          ]
+        }
+      ],
+      "source_ids": [
+        "raffaele-dynasty-0",
+        "ucla-encyclopedia-egyptology-chronology"
+      ],
+      "summary": "The rulers before the First Dynasty — Iry-Hor, Ka, Narmer — and the best argument that unification was a process rather than a moment."
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.narmer-palette",
+      "kind": "event",
+      "name": "The Narmer Palette",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -3100,
+      "end_year": null,
+      "tier": "foundational",
+      "start_dating_method": "typological",
+      "standing": "majority",
+      "date_precision": "century",
+      "allow_outside_parent_dates": true,
+      "date_note": "Placed at Naqada IIIC1, about 3100 BC, on typological grounds.",
+      "alternatives": [
+        {
+          "label": "Records an actual conquest of the Delta",
+          "standing": "minority",
+          "note": "The historical-event reading, associated with Yurco. Long treated as conclusive evidence for military unification under Narmer.",
+          "source_ids": [
+            "bas-narmers-enigmatic-palette",
+            "smarthistory-narmer-palette"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "It does not date a unification or show one happened as an event. It shows a smiting-and-dual-crown kingship ideology existed by about 3100 BC.",
+          "source_ids": [
+            "cambridge-emergence-egyptian-state",
+            "smarthistory-narmer-palette"
+          ]
+        },
+        {
+          "kind": "misconception",
+          "text": "Tell el-Farkha shows no invasion layer in the Delta, and Lower Egyptian material culture had already been absorbed gradually, centuries earlier.",
+          "source_ids": [
+            "one-palette-two-lands",
+            "maadi-buto-dissertation"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "cambridge-emergence-egyptian-state",
+        "smarthistory-narmer-palette",
+        "bas-narmers-enigmatic-palette",
+        "one-palette-two-lands"
+      ],
+      "summary": "A carved schist palette showing a king smiting an enemy, and probably the most over-read object in Egyptology."
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.merimde",
+      "kind": "period",
+      "name": "Merimde Beni Salama",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -4900,
+      "end_year": -4200,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "date_note": "Published ranges include 5300-4200, 4900-4000, 4880-4250 and 4750-4250 BC across different research groups and sample series. The wide range here is deliberate: no tighter figure is defensible.",
+      "source_ids": [
+        "rowland-merimde-new-perspectives"
+      ],
+      "summary": "One of the largest Neolithic settlements of the Delta, and a site whose published dates disagree by five hundred years."
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.el-omari",
+      "kind": "period",
+      "name": "El-Omari",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -4600,
+      "end_year": -4400,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "Published radiocarbon places it at the end of the northern Early Neolithic sequence, between 4600 and 4400 cal BC, with some sources extending to 4300.",
+      "source_ids": [
+        "vienna-el-omari-radiocarbon"
+      ],
+      "summary": "A Lower Egyptian Neolithic settlement near Helwan, plainer in its material culture than its Upper Egyptian contemporaries.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "africa.nile.egypt.predynastic.maadi-buto",
+      "kind": "period",
+      "name": "Maadi-Buto Culture",
+      "parent_id": "africa.nile.egypt.predynastic",
+      "start_year": -3900,
+      "end_year": -3200,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Radiocarbon places the culture at roughly 3900-3300/3200 BC, with Buto I about 3900-3800 and the Maadi phase about 3800-3600. The transitional layer in which Naqada material replaces it falls about 3300-3200 BC.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "This replacement is often told as the unification, coincident with Narmer. The excavated dates put it centuries earlier and show it happening gradually.",
+          "source_ids": [
+            "maadi-buto-dissertation"
+          ]
+        }
+      ],
+      "source_ids": [
+        "maadi-buto-dissertation"
+      ],
+      "summary": "The last independent culture of Lower Egypt, absorbed into the expanding Naqada world well before any king unified anything."
     },
     {
       "id": "central-asia.prehistory.namazga",

@@ -43,6 +43,21 @@ function isThreshold(e: Entity): boolean {
 }
 
 /**
+ * A point event: a battle, a sack, an invention. It has no end year because it
+ * is a moment, not because it is open-ended.
+ *
+ * This is the THIRD formatter in the codebase to need the distinction, after
+ * `formatRange` in `entity/tree` and `shortRange` in `main`. The dataset had no
+ * point events until 0.16.0.0, so all three quietly treated a missing end as
+ * "ongoing", and the Narmer Palette rendered as "5,049 BP - present". That
+ * three separate places format a range is the more interesting finding, and is
+ * left recorded here rather than fixed under cover of a data release.
+ */
+function isPoint(e: Entity): boolean {
+  return e.kind === "event" && e.end_year === null && e.end_precision === undefined;
+}
+
+/**
  * A missing end year means two different things. For Homo sapiens it means
  * extant; for Homo luzonensis it means the youngest remains were never dated.
  * See `tree.formatRange`.
@@ -83,6 +98,14 @@ export function displayRange(e: Entity, preference: FramePreference = "auto"): D
       sense,
     });
     return { text: `from ${text}`, frame };
+  }
+
+  if (isPoint(e)) {
+    const text = formatBp(startValue.consensus.year, startValue.consensus.fuzz, {
+      datum: frame,
+      sense,
+    });
+    return { text, frame };
   }
 
   const tail = openEndLabel(e);

@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.15.0.0",
-  "generated_at": "2026-08-08T23:52:59Z",
+  "dataset_version": "0.16.0.0",
+  "generated_at": "2026-08-09T00:15:30Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2552,6 +2552,185 @@
       "kind": "reference",
       "citation": "Encyclopaedia Britannica, 'Troy (ancient city, Turkey)'",
       "url": "https://www.britannica.com/place/Troy-ancient-city-Turkey"
+    },
+    {
+      "id": "ancient-arabia-dictionary-dilmun",
+      "kind": "scholarly",
+      "citation": "Ancient Arabia Dictionary (Huma-Num), 'Baḥrayn / Dilmun / Tylos'",
+      "url": "https://ancientarabia.huma-num.fr/dictionary/definition/bahrayn-al",
+      "note": "States that recent research has moved beyond the older Ancient/Middle/Late Dilmun scheme in favour of a more granular phasing."
+    },
+    {
+      "id": "bahrain-authority-history-timeline",
+      "kind": "reference",
+      "citation": "Bahrain Authority for Culture and Antiquities, Bahrain History Timeline",
+      "url": "https://culture.gov.bh/en/eservices/BahrainHistoryTimeline/"
+    },
+    {
+      "id": "durham-thesis-umm-an-nar-wadi-suq",
+      "kind": "scholarly",
+      "citation": "Durham University doctoral thesis on southeastern Arabian Bronze Age periodisation",
+      "url": "http://etheses.dur.ac.uk/11730/1/eThesis.pdf",
+      "note": "Gives Umm an-Nar as both 2700-2000 and 2800-2000 BC in different passages of the same work, which is a fair measure of how firm the start date is."
+    },
+    {
+      "id": "south-arabian-kingdoms-overview",
+      "kind": "reference",
+      "citation": "Survey history of the South Arabian kingdoms of ancient Yemen",
+      "url": "https://brewminate.com/a-history-of-the-south-arabian-kingdoms-of-ancient-yemen/",
+      "note": "Adopts the Long Chronology explicitly for its own date reporting, and names the scholars on each side of the dispute."
+    },
+    {
+      "id": "francaviglia-dating-marib-dam",
+      "kind": "scholarly",
+      "citation": "Francaviglia, 'Dating the Ancient Dam of Ma'rib (Yemen)', Journal of Archaeological Science",
+      "url": "https://www.academia.edu/57427411/Dating_the_Ancient_Dam_of_Marib_Yemen_",
+      "note": "AMS on detrital charcoal in the basin silts puts final dam activity no earlier than about 1 CE and no later than the end of the 3rd century."
+    },
+    {
+      "id": "introduction-domestic-camels-southern-levant",
+      "kind": "scholarly",
+      "citation": "'The Introduction of Domestic Camels to the Southern Levant'",
+      "url": "https://static1.squarespace.com/static/54694fa6e4b0eaec4530f99d/t/65493ec2a05a17007b8c2074/1699299011442/The_Introduction_of_Domestic_Camels_to_t.pdf",
+      "note": "OxA-2165, 2650 +/- 90 BP, calibrating to 969-600 BCE at 1 sigma. Shows the Timna Site 30 camel bones belong to the last occupation phase, not the Late Bronze Age layers they were long assigned to."
+    },
+    {
+      "id": "ca-foscari-nabataean-studies",
+      "kind": "scholarly",
+      "citation": "Edizioni Ca' Foscari, volume on Nabataean history and epigraphy",
+      "url": "https://edizionicafoscari.unive.it/media/pdf/books/978-88-6969-508-7/978-88-6969-508-7_jFP74xP.pdf"
+    },
+    {
+      "id": "naveh-nabataean-inscriptions-haifa",
+      "kind": "scholarly",
+      "citation": "Naveh, on Nabataean inscriptions (Hecht Museum, University of Haifa)",
+      "url": "https://mushecht2.haifa.ac.il/images/catalogues/archeology/Nabateans/Joseph_Naveh.pdf"
+    },
+    {
+      "id": "jordan-antiquities-nabataeans-oriental-trade",
+      "kind": "scholarly",
+      "citation": "Jordan Department of Antiquities, 'Nabataeans and Oriental Trade', Studies in the History and Archaeology of Jordan 10",
+      "url": "https://publication.doa.gov.jo/uploads/publications/25/SHAJ_10-405-412.pdf"
+    },
+    {
+      "id": "orient-frankincense-and-myrrh",
+      "kind": "scholarly",
+      "citation": "'Frankincense and Myrrh', Orient (Society for Near Eastern Studies in Japan)",
+      "url": "https://www.jstage.jst.go.jp/article/orient1960/3/0/3_0_21/_pdf/-char/en"
+    },
+    {
+      "id": "dee-2013-absolute-chronology-early-egypt",
+      "kind": "scholarly",
+      "citation": "Dee, Wengrow, Shortland, Stevenson, Brock, Girdland Flink & Bronk Ramsey, 'An absolute chronology for early Egypt using radiocarbon dating and Bayesian statistical modelling', Proceedings of the Royal Society A 469 (2013)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3780825/",
+      "note": "186 radiocarbon dates in ten linked OxCal sub-models. Concludes the pre-state to state transition took 600-700 years, against roughly 4,000-5,000 in Southwest Asia."
+    },
+    {
+      "id": "royal-society-2013-early-egyptian-timeline",
+      "kind": "press",
+      "citation": "The Royal Society, 'Early Egyptian timeline' news release (2013)",
+      "url": "https://royalsociety.org/news/2013/early-egyptian-timeline/"
+    },
+    {
+      "id": "wengrow-radiocarbon-naqada-relative-chronology",
+      "kind": "scholarly",
+      "citation": "Wengrow et al., 'Radiocarbon Dating and the Naqada Relative Chronology' (UCL Discovery)",
+      "url": "https://discovery.ucl.ac.uk/"
+    },
+    {
+      "id": "ucl-digital-egypt-predynastic-chronology",
+      "kind": "reference",
+      "citation": "UCL Digital Egypt, 'Predynastic chronology' and 'Sequence Dates'",
+      "url": "https://www.ucl.ac.uk/museums-static/digitalegypt/naqadan/chronology.html",
+      "note": "Petrie's Sequence Dating is a relative seriation on an SD 30-80 scale, not an absolute calendar."
+    },
+    {
+      "id": "british-museum-early-egypt-gallery",
+      "kind": "reference",
+      "citation": "British Museum, 'Early Egypt' gallery",
+      "url": "https://www.britishmuseum.org/collection/galleries/early-egypt"
+    },
+    {
+      "id": "seshat-naqada-polity",
+      "kind": "reference",
+      "citation": "Seshat Global History Databank, Naqada polity",
+      "url": "https://www.seshat-db.com/core/polity/511"
+    },
+    {
+      "id": "dai-abydos-radiocarbon",
+      "kind": "scholarly",
+      "citation": "German Archaeological Institute, radiocarbon dates from Abydos Cemetery U, Radiocarbon",
+      "url": "https://journals.uair.arizona.edu/index.php/radiocarbon/article/download/3738/3163",
+      "note": "The excavators' own First Dynasty dates came out 100-150 years earlier than the standard king-list chronology while staying internally consistent."
+    },
+    {
+      "id": "cambridge-emergence-egyptian-state",
+      "kind": "scholarly",
+      "citation": "'The Emergence of the Egyptian State', in The Cambridge World Prehistory",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-world-prehistory/emergence-of-the-egyptian-state/EFC256E863656A77F3A534D93A78FA74"
+    },
+    {
+      "id": "smarthistory-narmer-palette",
+      "kind": "reference",
+      "citation": "Smarthistory, 'Palette of King Narmer'",
+      "url": "https://smarthistory.org/palette-of-king-narmer/"
+    },
+    {
+      "id": "bas-narmers-enigmatic-palette",
+      "kind": "scholarly",
+      "citation": "Biblical Archaeology Society Library, 'Narmer's Enigmatic Palette'",
+      "url": "https://library.biblicalarchaeology.org/article/narmers-enigmatic-palette/",
+      "note": "Baines reads it as ritual affirmation of conquest rather than a real event; Yurco reads Narmer as conqueror of the Delta."
+    },
+    {
+      "id": "one-palette-two-lands",
+      "kind": "scholarly",
+      "citation": "'One Palette, Two Lands', on the Narmer Palette and unification",
+      "url": "https://www.academia.edu/10220097/",
+      "note": "Notes Tell el-Farkha shows no invasion layer in the Delta."
+    },
+    {
+      "id": "raffaele-dynasty-0",
+      "kind": "scholarly",
+      "citation": "Raffaele, 'Dynasty 0', Aegyptiaca Helvetica 17",
+      "url": "https://digilander.libero.it/peribsen/Dynasty0-Raffaele_AH17.pdf"
+    },
+    {
+      "id": "ucla-encyclopedia-egyptology-chronology",
+      "kind": "scholarly",
+      "citation": "UCLA Encyclopedia of Egyptology, chronology resource",
+      "url": "https://www.uee.ucla.edu/chronology"
+    },
+    {
+      "id": "fahmy-hierakonpolis-hk6-archaeobotany",
+      "kind": "scholarly",
+      "citation": "Fahmy et al., archaeobotany of the HK6 cemetery at Hierakonpolis, Archéo-Nil",
+      "url": "https://www.archeonil.com/images/revue%202008%202010/AN2008-11-Fahmy%20et%20al.pdf"
+    },
+    {
+      "id": "hierakonpolis-nekhen-news",
+      "kind": "scholarly",
+      "citation": "Hierakonpolis Expedition, Nekhen News (1998)",
+      "url": "http://www.hierakonpolis-online.org/nekhennews/nn-10-1998.pdf"
+    },
+    {
+      "id": "rowland-merimde-new-perspectives",
+      "kind": "scholarly",
+      "citation": "Rowland, 'New Perspectives and Methods' on Merimde Beni Salama (University of Edinburgh)",
+      "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/265345066/RowlandJ2020NewPerspectives.pdf"
+    },
+    {
+      "id": "vienna-el-omari-radiocarbon",
+      "kind": "scholarly",
+      "citation": "University of Vienna repository, on the Lower Egyptian Neolithic sequence",
+      "url": "https://uscholar.univie.ac.at/detail/o:1079992.pdf",
+      "note": "Places el-Omari at the end of the northern Early Neolithic, 4600-4400 cal BC."
+    },
+    {
+      "id": "maadi-buto-dissertation",
+      "kind": "scholarly",
+      "citation": "Dissertation on the Maadi-Buto culture (German National Library)",
+      "url": "https://d-nb.info/1337905968/34"
     },
     {
       "id": "masson-altyn-depe-summary",

@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.16.0.0",
-  "generated_at": "2026-08-09T00:15:30Z",
+  "dataset_version": "0.17.0.0",
+  "generated_at": "2026-08-09T00:54:21Z",
   "entities": [
     {
       "id": "global",
@@ -496,11 +496,44 @@
       "start_year": -10000,
       "end_year": -5000,
       "tier": "intermediate",
-      "start_dating_method": "radiocarbon-calibrated",
-      "standing": "consensus",
-      "date_note": "A Eurasian term. It has no counterpart in the Americas, sub-Saharan Africa or Australia, where the post-glacial sequence is described differently.",
-      "date_precision": "approx",
-      "end_dating_method": "radiocarbon-calibrated"
+      "start_dating_method": "typological",
+      "standing": "minority",
+      "date_note": "The span here is the conventional European one and should not be read as global. Africa uses Later Stone Age, introduced by Goodwin and Van Riet Lowe in 1929; the Americas use Archaic; Southwest Asia uses Epipalaeolithic. The cultures usually meant by the word — Maglemose, Kongemose, Ertebolle, the Azilian, the Sauveterrian — sit under European prehistory in this dataset, because that is where the term has content.",
+      "date_precision": "disputed",
+      "summary": "A European period name that much of the world does not use, and a live argument about whether it describes a real stage at all.",
+      "end_dating_method": "typological",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Czarnik argued the Mesolithic began as a negative category, defined by being neither Palaeolithic nor Neolithic. Braidwood called the whole tripartite scheme artificial.",
+          "source_ids": [
+            "dolitsky-1985-mesolithic-siberia"
+          ]
+        },
+        {
+          "kind": "misconception",
+          "text": "There is no universal package of microliths, forest adaptation and coastal sedentism. South Asian microliths appear from about 45,000 years ago, long before any Mesolithic stage.",
+          "source_ids": [
+            "roberts-south-asian-microliths",
+            "mesolithic-sindh-terminology"
+          ]
+        },
+        {
+          "kind": "naming-confusion",
+          "text": "Elliott and Warren argue exporting the term pegs the rest of the world to a northern European developmental stage. They keep using it for Europe, where it still earns its place.",
+          "source_ids": [
+            "elliott-warren-2023-colonialism-mesolithic"
+          ]
+        }
+      ],
+      "source_ids": [
+        "elliott-warren-2023-colonialism-mesolithic",
+        "dolitsky-1985-mesolithic-siberia",
+        "richter-maher-2013-epipalaeolithic",
+        "ora-stone-age-west-africa",
+        "roberts-south-asian-microliths",
+        "mesolithic-sindh-terminology"
+      ]
     },
     {
       "id": "global.neolithic",
@@ -6171,10 +6204,29 @@
       "kind": "era",
       "name": "Ancient Greece",
       "parent_id": "europe.mediterranean",
-      "start_year": -3000,
+      "start_year": -3200,
       "end_year": -146,
       "tier": "foundational",
-      "date_precision": "approx",
+      "date_precision": "century",
+      "start_dating_method": "typological",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "Corrected from 3000 BCE, which was a rounding. The British Museum, Cambridge and Smarthistory all place the start of the Greek Bronze Age at about 3200 BC. Note the two ends are different kinds of date: a periodisation boundary at the start, and the Roman sack of Corinth in 146 BCE at the end.",
+      "source_ids": [
+        "british-museum-greece-rome-department",
+        "british-museum-visitor-guide-bronze-age",
+        "cambridge-aegean-bronze-age-excerpt",
+        "smarthistory-ancient-greece-intro"
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "A round 3000 BCE circulates widely for the start of Greek prehistory. It is a rounding of the 3200 BC convention, not a separate finding.",
+          "source_ids": [
+            "british-museum-visitor-guide-bronze-age"
+          ]
+        }
+      ],
       "summary": "Cradle of Western philosophy, drama, historiography, and democracy."
     },
     {
@@ -6196,7 +6248,42 @@
       "start_year": -1600,
       "end_year": -1100,
       "tier": "foundational",
-      "date_precision": "approx",
+      "date_precision": "disputed",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "majority",
+      "date_note": "1600-1100 BC is the British Museum's convention and a defensible one, but not the only one: start dates of 1750, 1700 and 1675 BCE are all in print. The whole Aegean absolute chronology this sits inside is unresolved, because radiocarbon dating of the Thera eruption and the Egyptian synchronisms disagree by roughly a century.",
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "british-museum-visitor-guide-bronze-age",
+        "leiden-mycenaean-chronology",
+        "greek-culture-ministry-mycenae",
+        "cambridge-mycenaean-high-chronology"
+      ],
+      "alternatives": [
+        {
+          "label": "Aegean high chronology, from c. 1700 BCE",
+          "standing": "minority",
+          "start_year": -1700,
+          "end_year": -1100,
+          "dating_method": "typological",
+          "note": "Follows the radiocarbon dating of the Thera eruption rather than the Egyptian synchronisms, and pushes the Late Bronze Age Aegean about a century earlier.",
+          "source_ids": [
+            "cambridge-mycenaean-high-chronology",
+            "bruins-van-der-plicht-2025-thera"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Aegean Bronze Age dates are not independently fixed. They inherit the unresolved Thera dispute, which recent work has narrowed without settling.",
+          "source_ids": [
+            "bruins-van-der-plicht-2025-thera",
+            "sci-reports-2023-thera-olive"
+          ]
+        }
+      ],
       "summary": "Late Bronze Age Greek civilization; the world of Homer's epics."
     },
     {
@@ -6217,7 +6304,15 @@
       "start_year": -800,
       "end_year": -480,
       "tier": "foundational",
-      "date_precision": "approx",
+      "date_precision": "century",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "A modern retrospective label, coined in the 18th century, not a period the Greeks recognised. The end is usually pinned to the Persian Wars, which some schemes date to 479 rather than 480 BCE.",
+      "source_ids": [
+        "national-archaeological-museum-athens-archaic",
+        "smarthistory-ancient-greece-intro"
+      ],
       "summary": "Formative period of the polis, colonization, and archaic art."
     },
     {
@@ -6229,7 +6324,15 @@
       "end_year": -323,
       "tier": "foundational",
       "summary": "Age of Athens' Golden Age, the Peloponnesian War, and philosophers Socrates, Plato, and Aristotle.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "Bracketed by two attested events, the end of the Persian Wars and the death of Alexander in 323 BCE, but 'Classical' is itself a modern retrospective category rather than a contemporary one.",
+      "source_ids": [
+        "smarthistory-ancient-greece-intro",
+        "british-museum-greece-rome-department"
+      ]
     },
     {
       "id": "europe.mediterranean.greece.classical.pericles",
@@ -6247,10 +6350,42 @@
       "kind": "period",
       "name": "Kingdom of Macedon",
       "parent_id": "europe.mediterranean",
-      "start_year": -808,
+      "start_year": -700,
       "end_year": -146,
       "tier": "foundational",
-      "date_precision": "approx",
+      "date_precision": "century",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "Corrected from 808 BCE. Britannica, the Oxford Companion to Classical Literature and the Lexicon of Argead Macedonia all date the historically attested kingdom to about 700 BC under Perdiccas I. The end, Roman annexation in 146 BCE, is securely attested.",
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "britannica-argead-dynasty",
+        "lexicon-of-argead-macedonia"
+      ],
+      "alternatives": [
+        {
+          "label": "Traditional foundation by Karanos, 808 BCE",
+          "standing": "traditional",
+          "start_year": -808,
+          "end_year": -146,
+          "dating_method": "received",
+          "note": "A king-list back-calculation to a founder ancient authors themselves disputed. Herodotus credits Perdiccas I instead and does not mention Karanos.",
+          "source_ids": [
+            "britannica-argead-dynasty",
+            "lexicon-of-argead-macedonia"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "808 BCE is still widely printed as Macedon's founding. It is legend systematised into a king-list, structurally the same as Rome's 753.",
+          "source_ids": [
+            "britannica-argead-dynasty"
+          ]
+        }
+      ],
       "summary": "Northern Greek kingdom that under Philip II and Alexander conquered the classical world."
     },
     {
@@ -6290,6 +6425,14 @@
       "end_year": -31,
       "tier": "foundational",
       "date_precision": "approx",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "From Alexander's death in 323 BCE to Actium in 31. The term was coined by Droysen in the 19th century; no one living through it called it that.",
+      "source_ids": [
+        "smarthistory-ancient-greece-intro",
+        "british-museum-greece-rome-department"
+      ],
       "summary": "Age of Greek-influenced kingdoms from Alexander's death to Actium."
     },
     {
@@ -6303,7 +6446,41 @@
       "calendar_ids": [
         "roman-auc"
       ],
-      "date_precision": "approx",
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "calendar",
+      "standing": "traditional",
+      "date_note": "Both ends are conventions rather than facts. 753 BCE is Varro's back-calculation, which the Oxford Classical Dictionary calls artificial manipulation that does not accord with any archaeological starting point. 476 CE is Gibbon's marker, which Britannica declines to give at all, preferring 'the 5th century'.",
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "ocd-rome-foundation",
+        "mulder-rome-foundation-dates",
+        "conversation-rome-foundation-archaeology",
+        "ucl-thesis-fall-of-western-empire"
+      ],
+      "alternatives": [
+        {
+          "label": "Ancient authors gave at least six founding years",
+          "standing": "traditional",
+          "start_year": -841,
+          "end_year": 476,
+          "dating_method": "received",
+          "note": "Timaeus 841, Polybius and Diodorus 750, Dionysius 751, Livy 749, Fabius Pictor 747, Cincius 728 BC. Varro's 753 won on authority, not evidence.",
+          "source_ids": [
+            "mulder-rome-foundation-dates"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Settlement on the Palatine is attested well before 753 BCE and an urbanised city-state considerably after it. The traditional year matches neither.",
+          "source_ids": [
+            "ocd-rome-foundation",
+            "conversation-rome-foundation-archaeology"
+          ]
+        }
+      ],
       "summary": "From the legendary founding to the fall of the Western Empire; the political and cultural core of the ancient Mediterranean."
     },
     {
@@ -6328,7 +6505,24 @@
       "start_year": -509,
       "end_year": -27,
       "tier": "foundational",
-      "date_precision": "approx",
+      "date_precision": "disputed",
+      "start_dating_method": "received",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "509 BCE is the Varronian date and the Oxford Classical Dictionary describes the Varronian scheme as incorrect in places; modern scholarship generally prefers 508 or 507. The end, 27 BCE, is securely attested.",
+      "source_ids": [
+        "ocd-rome-foundation",
+        "perseus-harpers-augustus-imperator"
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "509 BCE is a Varronian reckoning, not an attested year. The expulsion of the kings is not dated by any contemporary record.",
+          "source_ids": [
+            "ocd-rome-foundation"
+          ]
+        }
+      ],
       "summary": "Non-monarchical Rome governed by the Senate and elected magistrates."
     },
     {
@@ -6360,6 +6554,14 @@
       "end_year": -27,
       "tier": "foundational",
       "date_precision": "approx",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "A modern periodisation running from the tribunate of Tiberius Gracchus in 133 BCE. Its end is variously given as 44, 31 or 27 BCE depending on whether the marker is Caesar's death, Actium, or the settlement with the Senate.",
+      "source_ids": [
+        "perseus-harpers-augustus-imperator",
+        "world-history-roman-empire-maps"
+      ],
       "summary": "Era of Marius, Sulla, Pompey, Caesar, and Octavian; ended by civil wars that produced the Empire."
     },
     {
@@ -6381,7 +6583,52 @@
       "start_year": -27,
       "end_year": 476,
       "tier": "foundational",
-      "date_precision": "approx",
+      "date_precision": "disputed",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "The start is solid: the Senate granted Octavian the title Augustus on 16 January 27 BCE. The end is not. 476 CE is an 18th-century convention popularised by Gibbon, whose own footnote conceded the year is not positively ascertained, and a 2024 paper argues even the day is doubtful.",
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "perseus-harpers-augustus-imperator",
+        "ucl-thesis-fall-of-western-empire",
+        "unrv-romulus-augustulus",
+        "latomus-2024-odoacer-deposition"
+      ],
+      "alternatives": [
+        {
+          "label": "Ends 480 CE, with Julius Nepos",
+          "standing": "minority",
+          "start_year": -27,
+          "end_year": 480,
+          "dating_method": "calendar",
+          "note": "Nepos was the last legitimate western emperor and outlived Romulus Augustulus's deposition by four years.",
+          "source_ids": [
+            "world-history-roman-empire-maps",
+            "unrv-romulus-augustulus"
+          ]
+        },
+        {
+          "label": "Ends 410 CE, with the sack of Rome",
+          "standing": "minority",
+          "start_year": -27,
+          "end_year": 410,
+          "dating_method": "calendar",
+          "note": "One of several rival markers, alongside the Rhine crossing of 406 and the Vandal sack of 455.",
+          "source_ids": [
+            "ucl-thesis-fall-of-western-empire"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "A UCL thesis puts it plainly: 476 is not the year in which the empire ended, and never was. Britannica gives no year, only the 5th century.",
+          "source_ids": [
+            "ucl-thesis-fall-of-western-empire"
+          ]
+        }
+      ],
       "summary": "Monarchical Roman state from Augustus's Principate to the deposition of Romulus Augustulus."
     },
     {
@@ -6438,7 +6685,14 @@
       "end_year": 192,
       "tier": "foundational",
       "summary": "Five Good Emperors; Pax Romana at its peak.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "Bracketed by two attested accessions and one attested murder, that of Commodus at the end of 192 CE.",
+      "source_ids": [
+        "world-history-roman-empire-maps"
+      ]
     },
     {
       "id": "europe.mediterranean.rome.empire.trajan",
@@ -6496,7 +6750,50 @@
         "Eastern Roman Empire"
       ],
       "summary": "Roman Empire's Greek-speaking continuation, based in Constantinople.",
-      "date_precision": "approx"
+      "date_precision": "disputed",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "The dedication of Constantinople in 330 CE is securely attested; using it as the start of a distinct empire is a choice. At least six conventions are in use, beginning at Diocletian, Constantine, Theodosius, 395, 476, Anastasius, Justinian or Heraclius. The end, 29 May 1453, is not in doubt.",
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "oxford-dictionary-of-byzantium-preface",
+        "hellenic-world-constantinople-foundation",
+        "oup-constantine-dedicates-constantinople"
+      ],
+      "alternatives": [
+        {
+          "label": "Byzantine begins in the 7th century",
+          "standing": "minority",
+          "start_year": 610,
+          "end_year": 1453,
+          "dating_method": "calendar",
+          "note": "The Oxford Dictionary of Byzantium uses 'late Roman' for the 4th to mid-7th centuries and reserves 'Byzantine' for what follows.",
+          "source_ids": [
+            "oxford-dictionary-of-byzantium-preface"
+          ]
+        },
+        {
+          "label": "Byzantine begins with the division of 395",
+          "standing": "minority",
+          "start_year": 395,
+          "end_year": 1453,
+          "dating_method": "calendar",
+          "note": "Takes the permanent administrative split after Theodosius I as the starting point.",
+          "source_ids": [
+            "hellenic-world-constantinople-foundation"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Nobody in it called it Byzantine; they called it Roman. The field's own standard reference avoids the word before the 7th century.",
+          "source_ids": [
+            "oxford-dictionary-of-byzantium-preface"
+          ]
+        }
+      ]
     },
     {
       "id": "europe.mediterranean.byzantine.justinian",
@@ -9005,7 +9302,14 @@
       "end_year": -44,
       "tier": "foundational",
       "summary": "Caesar assassinated on the Ides of March, 44 BCE, by a conspiracy of senators.",
-      "date_precision": "approx"
+      "date_precision": "year",
+      "start_dating_method": "calendar",
+      "standing": "consensus",
+      "date_note": "15 March 44 BCE. Attested by contemporaries and among the most securely dated events in Roman history.",
+      "source_ids": [
+        "perseus-harpers-augustus-imperator"
+      ],
+      "end_dating_method": "calendar"
     },
     {
       "id": "europe.mediterranean.rome.republic.late.actium",
@@ -9016,7 +9320,15 @@
       "end_year": -31,
       "tier": "foundational",
       "summary": "Octavian's naval victory over Antony and Cleopatra; effective end of the Republic.",
-      "date_precision": "approx"
+      "date_precision": "year",
+      "start_dating_method": "calendar",
+      "standing": "consensus",
+      "date_note": "2 September 31 BCE, securely attested.",
+      "source_ids": [
+        "perseus-harpers-augustus-imperator",
+        "world-history-roman-empire-maps"
+      ],
+      "end_dating_method": "calendar"
     },
     {
       "id": "cross-regional.korean-war",
@@ -9520,7 +9832,23 @@
       "end_year": 284,
       "tier": "foundational",
       "summary": "Fifty years of civil war, plague, and near-collapse.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "The years are attested. The label is the problem: 'crisis' asserts a coherent systemic collapse, and a substantial body of archaeological work argues the evidence does not support one empire-wide.",
+      "source_ids": [
+        "world-history-roman-empire-maps"
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Lewitt, Witschel and others reject the total-crisis model. The name smuggles in an interpretation, which is unusual for a dating label.",
+          "source_ids": [
+            "world-history-roman-empire-maps"
+          ]
+        }
+      ]
     },
     {
       "id": "europe.mediterranean.rome.empire.maximinus-thrax",
@@ -9829,6 +10157,14 @@
       "end_year": 363,
       "tier": "foundational",
       "date_precision": "approx",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "Some schemes begin the dynasty at 305 rather than 306 CE, depending on whether Constantius I's accession or Constantine's acclamation is taken as the start.",
+      "source_ids": [
+        "oup-constantine-dedicates-constantinople",
+        "world-history-roman-empire-maps"
+      ],
       "summary": "Roman imperial dynasty led by Constantine the Great and his successors; Christianization of the Empire."
     },
     {
@@ -9998,8 +10334,16 @@
       "end_year": 480,
       "tier": "foundational",
       "allow_outside_parent_dates": true,
-      "date_note": "476 marks Romulus Augustulus's deposition in the West; Julius Nepos was still recognized in the East until 480.",
-      "date_precision": "approx",
+      "date_note": "455-480 CE brackets the Vandal sack of Rome and the death of Julius Nepos, which is one defensible framing among several. The choice of any bracket here is a historiographical position rather than a finding.",
+      "date_precision": "disputed",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "minority",
+      "source_ids": [
+        "ucl-thesis-fall-of-western-empire",
+        "unrv-romulus-augustulus",
+        "world-history-roman-empire-maps"
+      ],
       "summary": "Final disintegration of the Western Roman Empire during a rapid succession of short-lived emperors."
     },
     {
@@ -19704,22 +20048,33 @@
       "kind": "period",
       "name": "Maglemosian",
       "parent_id": "europe.prehistory",
-      "start_year": -9651,
-      "end_year": -6451,
+      "start_year": -9050,
+      "end_year": -6450,
       "tier": "intermediate",
       "start_dating_method": "radiocarbon-calibrated",
       "end_dating_method": "radiocarbon-calibrated",
       "standing": "majority",
-      "date_note": "A 2020 AMS study of bone-point series splits this into Early and Late Maglemose complexes either side of a hiatus of roughly 600 years at c. 10,300 cal BP — older accounts treat it as one uniform culture.",
+      "date_note": "11,000-8,400 cal BP, from a Bayesian phase model over 81 radiocarbon dates from 64 Danish sites. The Oxford Handbook gives different figures for the same cultures without consistently stating calibration, so the two are not merged.",
       "source_ids": [
+        "allentoft-2024-neolithic-denmark",
+        "lundby-mose-preboreal",
         "maglemose-bone-points-2020",
-        "lundby-mose-preboreal"
+        "oxford-handbook-southern-scandinavia"
       ],
       "summary": "The founding culture of the northern European Mesolithic, working bone and antler in the forests and wetlands left by the retreating ice.",
       "aliases": [
         "Maglemose culture"
       ],
-      "date_precision": "approx"
+      "date_precision": "century",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "These boundaries are modelled phase transitions with uncertainty, not sharp events. Popular sources quote them as though one culture stopped on a particular year.",
+          "source_ids": [
+            "allentoft-2024-neolithic-denmark"
+          ]
+        }
+      ]
     },
     {
       "id": "europe.prehistory.sauveterrian",
@@ -19803,18 +20158,29 @@
       "kind": "period",
       "name": "Kongemose Culture",
       "parent_id": "europe.prehistory",
-      "start_year": -6500,
-      "end_year": -5400,
+      "start_year": -6450,
+      "end_year": -5450,
       "tier": "specialist",
       "start_dating_method": "radiocarbon-calibrated",
       "end_dating_method": "radiocarbon-calibrated",
       "standing": "majority",
-      "date_note": "Sources vary by several centuries, largely because uncalibrated BP and calendar BC figures are quoted interchangeably in the secondary literature.",
+      "date_note": "8,400-7,400 cal BP, from a Bayesian phase model over 81 radiocarbon dates from 64 Danish sites. The Oxford Handbook gives different figures for the same cultures without consistently stating calibration, so the two are not merged.",
       "source_ids": [
-        "nw-poland-mesolithic-c14"
+        "allentoft-2024-neolithic-denmark",
+        "nw-poland-mesolithic-c14",
+        "oxford-handbook-southern-scandinavia"
       ],
       "summary": "The middle Mesolithic of southern Scandinavia, between the Maglemosian and the Ertebolle, turning increasingly to the coast.",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "These boundaries are modelled phase transitions with uncertainty, not sharp events. Popular sources quote them as though one culture stopped on a particular year.",
+          "source_ids": [
+            "allentoft-2024-neolithic-denmark"
+          ]
+        }
+      ]
     },
     {
       "id": "europe.prehistory.doggerland-inundation",
@@ -19869,21 +20235,33 @@
       "kind": "period",
       "name": "Ertebolle Culture",
       "parent_id": "europe.prehistory",
-      "start_year": -5400,
-      "end_year": -4000,
+      "start_year": -5450,
+      "end_year": -3950,
       "tier": "intermediate",
       "start_dating_method": "radiocarbon-calibrated",
       "end_dating_method": "radiocarbon-calibrated",
-      "standing": "consensus",
-      "date_note": "Persists to c. 4000 cal BC, long after the Linear Pottery Culture had ended further south. The Mesolithic-Neolithic frontier in this region held for centuries rather than moving as a front.",
+      "standing": "majority",
+      "date_note": "7,400-5,900 cal BP, from a Bayesian phase model over 81 radiocarbon dates from 64 Danish sites. The Oxford Handbook gives different figures for the same cultures without consistently stating calibration, so the two are not merged.",
       "source_ids": [
-        "ertebolle-southern-scandinavia"
+        "allentoft-2024-neolithic-denmark",
+        "archaeofauna-havno-midden",
+        "ertebolle-southern-scandinavia",
+        "oxford-handbook-southern-scandinavia"
       ],
       "summary": "Complex coastal foragers of southern Scandinavia who made pottery, built shell middens, and kept farming at arm's length for centuries.",
       "aliases": [
         "Ertebølle"
       ],
-      "date_precision": "approx"
+      "date_precision": "century",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "These boundaries are modelled phase transitions with uncertainty, not sharp events. Popular sources quote them as though one culture stopped on a particular year.",
+          "source_ids": [
+            "allentoft-2024-neolithic-denmark"
+          ]
+        }
+      ]
     },
     {
       "id": "europe.prehistory.franchthi",
@@ -23628,6 +24006,93 @@
         "maadi-buto-dissertation"
       ],
       "summary": "The last independent culture of Lower Egypt, absorbed into the expanding Naqada world well before any king unified anything."
+    },
+    {
+      "id": "europe.prehistory.muge-middens",
+      "kind": "period",
+      "name": "The Muge Shell Middens",
+      "parent_id": "europe.prehistory",
+      "start_year": -6550,
+      "end_year": -5050,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Mesolithic central Portugal is generally dated 8,500-7,000 cal BP. Deposition at Cabeco da Amoreira specifically runs 8,000-7,350 cal BP, and the first burial at Vale de Romeiras in the Sado dates to 8,543-8,334 cal BP.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not a last stand before farming. The Muge and Sado foragers overlap in time with incoming Neolithic groups and interact with them for centuries.",
+          "source_ids": [
+            "coimbra-muge-central-portugal",
+            "jackes-lubell-muge-chronology"
+          ]
+        }
+      ],
+      "source_ids": [
+        "coimbra-muge-central-portugal",
+        "jackes-lubell-muge-chronology"
+      ],
+      "summary": "Enormous mounds of estuarine shell in the Tagus and Sado valleys, used as both settlement and cemetery by foragers who overlapped with the first farmers."
+    },
+    {
+      "id": "europe.prehistory.obanian",
+      "kind": "period",
+      "name": "The Obanian",
+      "parent_id": "europe.prehistory",
+      "start_year": -5150,
+      "end_year": -4250,
+      "tier": "specialist",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Bulk charcoal from five Oronsay middens gave 6,200-5,400 BP uncalibrated, calibrating to about 5,150-4,250 cal BC. Bulk charcoal samples average material of different ages, so these are coarser than single-entity dates.",
+      "source_ids": [
+        "bonsall-mesolithic-kilmore-oban"
+      ],
+      "summary": "Shell middens around Oban and on Oronsay, Scotland's main evidence that late foragers there lived substantially off the sea."
+    },
+    {
+      "id": "europe.prehistory.event-8point2ka",
+      "kind": "event",
+      "name": "The 8.2 Kiloyear Event",
+      "parent_id": "europe.prehistory",
+      "start_year": -6300,
+      "end_year": -6140,
+      "tier": "intermediate",
+      "start_dating_method": "layer-counting",
+      "end_dating_method": "layer-counting",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Dated in the NGRIP Greenland ice core by layer counting to 8,250-8,090 cal BP, which is far more precise than any of the archaeological responses being matched to it.",
+      "alternatives": [
+        {
+          "label": "No causal link in the Scheldt basin",
+          "standing": "minority",
+          "note": "A multi-proxy Belgian study found little evidence connecting the 9.3 and 8.2 ka coolings to changes in human behaviour there.",
+          "source_ids": [
+            "garcia-escarzaga-2022-8point2ka"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not a uniform catastrophe. Western Scotland shows demographic collapse, while Atlantic Iberia shows intensified shellfish use and population growth in the same window.",
+          "source_ids": [
+            "wicks-mithen-2014-scotland-8point2ka",
+            "garcia-escarzaga-2022-8point2ka"
+          ]
+        }
+      ],
+      "as_of": "2026-08-08",
+      "source_ids": [
+        "garcia-escarzaga-2022-8point2ka",
+        "wicks-mithen-2014-scotland-8point2ka"
+      ],
+      "summary": "An abrupt cooling that hit Mesolithic Europe unevenly — collapse in Scotland, apparent resilience in Belgium, and growth on the Atlantic coast."
     },
     {
       "id": "central-asia.prehistory.namazga",

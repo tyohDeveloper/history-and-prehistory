@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.1.0"
-DATASET_VERSION = "0.16.0.0"
+DATASET_VERSION = "0.17.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1673,12 +1673,17 @@ from extensions_east_asia import extend as _extend_east_asia
 from extensions_west_asia import extend as _extend_west_asia
 from extensions_arabia import extend as _extend_arabia
 from extensions_egypt import extend as _extend_egypt
+from citations_mediterranean import extend as _cite_mediterranean
+from extensions_mesolithic import extend as _extend_mesolithic
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
 _extend_west_asia(E, entities)
 _extend_arabia(E, entities)
 _extend_egypt(E, entities)
+# Enrichment, not authoring: attaches sources to entities that predate the rule.
+_cite_mediterranean(E, entities)
+_extend_mesolithic(E, entities)
 
 # Marks received conventions across the corpus, so it runs after every module
 # that could author one.
@@ -3108,12 +3113,16 @@ from extensions_east_asia import EAST_ASIA_SOURCES  # noqa: E402
 from extensions_west_asia import WEST_ASIA_SOURCES  # noqa: E402
 from extensions_arabia import ARABIA_SOURCES  # noqa: E402
 from extensions_egypt import EGYPT_SOURCES  # noqa: E402
+from citations_mediterranean import MEDITERRANEAN_SOURCES  # noqa: E402
+from extensions_mesolithic import MESOLITHIC_SOURCES  # noqa: E402
 sources.extend(SEASIA_OCEANIA_SOURCES)
 sources.extend(INDUS_SOURCES)
 sources.extend(EAST_ASIA_SOURCES)
 sources.extend(WEST_ASIA_SOURCES)
 sources.extend(ARABIA_SOURCES)
 sources.extend(EGYPT_SOURCES)
+sources.extend(MEDITERRANEAN_SOURCES)
+sources.extend(MESOLITHIC_SOURCES)
 from received_conventions import RECEIVED_CONVENTION_SOURCES  # noqa: E402
 sources.extend(RECEIVED_CONVENTION_SOURCES)
 

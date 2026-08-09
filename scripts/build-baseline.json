@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 211222,
+  "gzipBytes": 219726,
   "recordedAt": "2026-08-08",
-  "note": "v3.14.0.0 + pre-Islamic Arabia and Predynastic Egypt (data 0.16.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.15.0.0 + Mediterranean citations and the Mesolithic reframing (data 0.17.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

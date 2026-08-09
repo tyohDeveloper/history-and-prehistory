@@ -1,5 +1,93 @@
 # Changelog
 
+## 0.17.0.0 — Citations for Greece and Rome, and what the Mesolithic actually is (2026-08-08)
+
+Two jobs. Neither added much, and both fixed things that were wrong.
+
+### The rigour was inverted
+
+616 entities displayed a date with no source behind them, and the worst were
+the most famous. Namazga — a Turkmen pottery sequence almost nobody will look
+up — had three sources, a dagger in the picker, and a caveat about Soviet
+typology. The Roman Republic had nothing. Everything authored under the
+sourcing rule was scrupulous; everything older was bare, and that is precisely
+the material a visitor opens first.
+
+This is the first tranche: the seventeen foundational Mediterranean entities.
+
+**Two dates were simply wrong.**
+
+Greece started at **3000 BCE**. The British Museum, Cambridge and Smarthistory
+all put the start of the Greek Bronze Age at about **3200**. The dataset was
+carrying a rounding as a fact, two centuries out.
+
+Macedon started at **808 BCE** — a king-list back-calculation to Karanos, a
+founder Herodotus does not even name. Britannica, the Oxford Companion and the
+Lexicon of Argead Macedonia all date the attested kingdom to about **700 BCE**
+under Perdiccas I. Corrected, with the legend retained as a `traditional`
+alternative on a `received` dating method. It is the same error as Rome's 753
+and it had been sitting one row away from it for the entire life of the project.
+
+**Four conventions are now labelled as conventions.** Rome's 753 is Varro's
+back-calculation, which the Oxford Classical Dictionary calls "artificial
+manipulation" that "does not accord with any archaeological starting point";
+ancient authors proposed at least six years, from 841 to 728 BCE. The Republic's
+509 is Varronian too. 476 CE is Gibbon's marker — a UCL thesis says flatly "476
+is not the year in which the empire ended, and never was", Gibbon's own footnote
+conceded it was "not positively ascertained", and Britannica declines to give a
+year. Byzantium's 330 is one of at least six live conventions, and the Oxford
+Dictionary of Byzantium avoids the word entirely before the 7th century.
+
+One label rather than a date is flagged: "Crisis of the Third Century" asserts a
+coherent systemic collapse that Lewitt, Witschel and others reject.
+
+The effect is that all the epistemic machinery built since 3.6.0.0 — the dagger,
+the received-convention banner, the split start/end dating methods, the
+competing-dates block — now fires on the entity people are most likely to open.
+
+### The Mesolithic was empty for the right reason
+
+`global.mesolithic` had been the widest childless era for six passes and I
+deferred it every time. The content was never missing: Maglemose, Kongemose,
+Ertebolle, Star Carr, the Azilian and the Sauveterrian all already existed under
+European prehistory, which is where the term has content.
+
+What is actually disputed is the **global category**. Africa uses Later Stone
+Age, the Americas use Archaic, Southwest Asia uses Epipalaeolithic. Czarnik
+called the Mesolithic a negative category, defined by being neither Palaeolithic
+nor Neolithic. Elliott and Warren, writing in 2023 against Graeber and Wengrow's
+worldwide "Mesolithic", argue that exporting the label pegs the rest of the
+world to a northern European developmental stage.
+
+So the node is not filled with children. It is reframed as the argument, with
+`standing: minority`, a `contested-existence` caveat, and the regional
+alternatives named in its date note. A test now requires it to name them.
+
+A satisfying consequence: `coverage.py` already skips eras that have caveats and
+no children, on the grounds that they are concepts rather than empty containers.
+Giving this node its caveats made it drop off the gap report by itself, under a
+rule written three passes earlier.
+
+Also added: Muge, the Obanian, and the 8.2 kiloyear event, plus better dates for
+the three Scandinavian cultures from Allentoft et al.'s 2024 Bayesian model over
+81 radiocarbon dates. The 8.2 ka entity records that the ice core dates the
+event far more precisely than any archaeological response being matched to it,
+and that western Scotland collapsed while Atlantic Iberia grew.
+
+### Deliberately NOT authored, for the second time
+
+The **Tardenoisian**. A previous pass declined it because sources disagreed by
+3,000 years and mixed calibrated with uncalibrated figures. This pass confirms
+Thevenin and Rozoy still disagree with no calibration status stated on either
+side. Two passes have now reached the same answer, recorded here so a third does
+not have to repeat the work.
+
+### Counts
+
+1,628 → 1,631 entities, which understates the pass: 20 existing entities were
+corrected or sourced rather than added. 424 → 461 sources. 325 → 346 cited.
+Foundational entities still without a source: 179 → 162.
+
 ## 0.16.0.0 — Pre-Islamic Arabia and Predynastic Egypt (2026-08-08)
 
 Twenty entities across the two remaining large gaps flagged by the childless

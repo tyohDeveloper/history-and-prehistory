@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0",
-  "dataset_version": "0.16.0.0",
-  "generated_at": "2026-08-09T00:15:30Z",
+  "dataset_version": "0.17.0.0",
+  "generated_at": "2026-08-09T00:54:21Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2731,6 +2731,250 @@
       "kind": "scholarly",
       "citation": "Dissertation on the Maadi-Buto culture (German National Library)",
       "url": "https://d-nb.info/1337905968/34"
+    },
+    {
+      "id": "ocd-rome-foundation",
+      "kind": "scholarly",
+      "citation": "Cornell, 'Rome (history)', Oxford Classical Dictionary",
+      "url": "https://academic.oup.com/edited-volume/61673/chapter/550496605",
+      "note": "'The conventional foundation date, fixed at 753 BCE by Varro, is the result of artificial manipulation, and does not accord with any archaeological starting point.'"
+    },
+    {
+      "id": "british-museum-greece-rome-department",
+      "kind": "reference",
+      "citation": "British Museum, Department of Greece and Rome",
+      "url": "https://www.britishmuseum.org/our-work/departments/greece-and-rome",
+      "note": "Dates the beginning of the Greek Bronze Age to about 3200 BC."
+    },
+    {
+      "id": "british-museum-visitor-guide-bronze-age",
+      "kind": "reference",
+      "citation": "British Museum, Visitor Journey large-print gallery guide",
+      "url": "https://www.britishmuseum.org/sites/default/files/2020-11/Visitor_Journey_large_print_guide_British_Museum.pdf",
+      "note": "'The Greek Bronze Age lasted from about 3200 to 1100 BC'; Mycenaean period 1600-1100 BC."
+    },
+    {
+      "id": "cambridge-aegean-bronze-age-excerpt",
+      "kind": "scholarly",
+      "citation": "Cambridge University Press, Aegean Bronze Age volume excerpt",
+      "url": "https://assets.cambridge.org/97810094/93123/excerpt/9781009493123_excerpt.pdf"
+    },
+    {
+      "id": "smarthistory-ancient-greece-intro",
+      "kind": "reference",
+      "citation": "Smarthistory, 'Ancient Greece, an introduction'",
+      "url": "https://smarthistory.org/ancient-greece-an-introduction/"
+    },
+    {
+      "id": "leiden-mycenaean-chronology",
+      "kind": "scholarly",
+      "citation": "Leiden University doctoral dissertation on Mycenaean chronology",
+      "url": "https://scholarlypublications.universiteitleiden.nl/access/item:4098120/view"
+    },
+    {
+      "id": "greek-culture-ministry-mycenae",
+      "kind": "reference",
+      "citation": "Greek Ministry of Culture, Odysseus portal, Mycenae",
+      "url": "http://odysseus.culture.gr/h/3/eh351.jsp?obj_id=2573"
+    },
+    {
+      "id": "cambridge-mycenaean-high-chronology",
+      "kind": "scholarly",
+      "citation": "Cambridge University Press excerpt citing Shelmerdine (2008) on the Aegean high chronology",
+      "url": "https://assets.cambridge.org/97811071/07540/excerpt/9781107107540_excerpt.pdf",
+      "note": "The high chronology places the start of Late Helladic I at about 1700 BCE."
+    },
+    {
+      "id": "britannica-argead-dynasty",
+      "kind": "reference",
+      "citation": "Encyclopaedia Britannica, 'Argead Dynasty'",
+      "url": "https://www.britannica.com/topic/Argead-dynasty",
+      "note": "Dates the ruling house of Macedonia from about 700 BC under Perdiccas I, a century later than the Karanos king-list figure."
+    },
+    {
+      "id": "lexicon-of-argead-macedonia",
+      "kind": "scholarly",
+      "citation": "Lexicon of Argead Macedonia",
+      "url": "https://dokumen.pub/lexicon-of-argead-macedonia-3732904059-9783732904051-9783732996018.html",
+      "note": "Places the mythic foundation of the Argead line in the mid-7th century BC."
+    },
+    {
+      "id": "mulder-rome-foundation-dates",
+      "kind": "scholarly",
+      "citation": "Mulder, thesis on ancient accounts of Rome's foundation (Utrecht University)",
+      "url": "https://studenttheses.uu.nl/",
+      "note": "Catalogues the ancient disagreement: Timaeus 841, Polybius and Diodorus 750, Dionysius 751, Livy 749, Fabius Pictor 747, Cincius 728 BC."
+    },
+    {
+      "id": "conversation-rome-foundation-archaeology",
+      "kind": "press",
+      "citation": "Swift, 'Archaeology adds another twist to Rome's foundation story', The Conversation",
+      "url": "https://theconversation.com/archaeology-adds-another-twist-to-romes-foundation-story-by-ageing-it-100-years",
+      "note": "Explains Varro's back-calculation through the consular lists, and the 9th-century settlement evidence that does not fit it."
+    },
+    {
+      "id": "ucl-thesis-fall-of-western-empire",
+      "kind": "scholarly",
+      "citation": "Campbell-Moffat, doctoral thesis on the end of the Western Roman Empire (UCL Discovery)",
+      "url": "https://discovery.ucl.ac.uk/",
+      "note": "'476 is not the year in which the empire ended, and never was.' Quotes Gibbon's own footnote conceding the year 'is not positively ascertained'."
+    },
+    {
+      "id": "unrv-romulus-augustulus",
+      "kind": "reference",
+      "citation": "UNRV Roman History, 'Romulus Augustulus'",
+      "url": "https://www.unrv.com/emperors/romulus-augustulus.php"
+    },
+    {
+      "id": "latomus-2024-odoacer-deposition",
+      "kind": "scholarly",
+      "citation": "'When did Odoacer depose Romulus Augustulus?', Latomus (2024)",
+      "url": "https://www.academia.edu/124406620/When_did_Odoacer_depose_Romulus_Augustulus_",
+      "note": "Argues even the day, 4 September 476, is questionable given contradictions among the surviving sources."
+    },
+    {
+      "id": "world-history-roman-empire-maps",
+      "kind": "reference",
+      "citation": "World History Encyclopedia, the Roman Empire in maps",
+      "url": "https://www.worldhistory.org/collection/189/the-roman-empire-in-10-maps/9/"
+    },
+    {
+      "id": "oxford-dictionary-of-byzantium-preface",
+      "kind": "scholarly",
+      "citation": "The Oxford Dictionary of Byzantium, preface",
+      "url": "https://archive.org/details/oxforddictionary0000unse",
+      "note": "The field's standard reference uses 'late Roman' or 'late antique' for the 4th to mid-7th centuries and reserves 'Byzantine' for the 7th century onward."
+    },
+    {
+      "id": "hellenic-world-constantinople-foundation",
+      "kind": "scholarly",
+      "citation": "Encyclopaedia of the Hellenic World, foundation of Constantinople",
+      "url": "http://www.ehw.gr/constantinople/",
+      "note": "Cites Dagron: the foundation was a long process over many years that tradition gradually epitomised into a single date."
+    },
+    {
+      "id": "oup-constantine-dedicates-constantinople",
+      "kind": "reference",
+      "citation": "Oxford University Press blog, 'Constantine dedicates Constantinople'",
+      "url": "https://blog.oup.com/2012/05/constantine-dedicates-constantinople/"
+    },
+    {
+      "id": "national-archaeological-museum-athens-archaic",
+      "kind": "reference",
+      "citation": "National Archaeological Museum, Athens, on the Archaic period",
+      "url": "https://www.namuseum.gr/en/collection/archaiki-periodos-2/",
+      "note": "Notes that 'Archaic' is an 18th-century coinage, applied retrospectively."
+    },
+    {
+      "id": "perseus-harpers-augustus-imperator",
+      "kind": "scholarly",
+      "citation": "Harpers Dictionary of Classical Antiquities, 'Augustus, Imperator' (Perseus, Tufts)",
+      "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0062:alphabetic+letter=A:entry+group=1:entry=augustus-imperator-harpers"
+    },
+    {
+      "id": "bruins-van-der-plicht-2025-thera",
+      "kind": "scholarly",
+      "citation": "Bruins & van der Plicht, on the Thera eruption date, PLOS ONE (2025)",
+      "url": "https://journals.plos.org/plosone/",
+      "note": "The radiocarbon and Egyptian-synchronism chronologies have narrowed but not converged."
+    },
+    {
+      "id": "sci-reports-2023-thera-olive",
+      "kind": "scholarly",
+      "citation": "Olive-shrub study of the Thera eruption, Scientific Reports (2023)",
+      "url": "https://www.nature.com/srep/"
+    },
+    {
+      "id": "elliott-warren-2023-colonialism-mesolithic",
+      "kind": "scholarly",
+      "citation": "Elliott & Warren, 'Colonialism and the European Mesolithic', Norwegian Archaeological Review (2023)",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/00293652.2023.2182232",
+      "note": "Critiques the global 'Mesolithic' of Graeber & Wengrow's The Dawn of Everything as exporting a northern European typo-chronological label."
+    },
+    {
+      "id": "dolitsky-1985-mesolithic-siberia",
+      "kind": "scholarly",
+      "citation": "Dolitsky, 'A Critical Review of the Mesolithic in Relation to Siberian Archaeology', Arctic 38 (1985)",
+      "url": "https://journalhosting.ucalgary.ca/index.php/arctic/article/download/65183/49097",
+      "note": "Records Czarnik's point that the Mesolithic began as a negative category positioned between better-defined periods, and Braidwood calling the tripartite scheme artificial."
+    },
+    {
+      "id": "richter-maher-2013-epipalaeolithic",
+      "kind": "scholarly",
+      "citation": "Richter & Maher, 'Terminology, process and change: reflections on the Epipalaeolithic of South-west Asia' (2013)",
+      "url": "http://www.tandfonline.com/doi/full/10.1179/0075891413Z.00000000020"
+    },
+    {
+      "id": "ora-stone-age-west-africa",
+      "kind": "scholarly",
+      "citation": "'The Stone Age Archaeology of West Africa' (Oxford Research Archive)",
+      "url": "https://ora.ox.ac.uk/objects/uuid:1442d1c1-7f76-454d-97db-8fd52a4c6c1e",
+      "note": "Later Stone Age was introduced by Goodwin and Van Riet Lowe in 1929 and is used in Africa in place of Mesolithic."
+    },
+    {
+      "id": "roberts-south-asian-microliths",
+      "kind": "scholarly",
+      "citation": "Roberts et al., 'Microliths in the South Asian rainforest ~45-4 ka'",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6774521/",
+      "note": "Microliths appear in South Asia from about 45,000 years ago, which breaks the assumed equation of microliths with a Mesolithic stage."
+    },
+    {
+      "id": "mesolithic-sindh-terminology",
+      "kind": "scholarly",
+      "citation": "'Mesolithic Sindh' (Ca' Foscari University of Venice repository)",
+      "url": "https://iris.unive.it/bitstream/10278/19301/1/MesoSindhPraehistoria.pdf",
+      "note": "Documents the Possehl-Misra dispute over whether the term has any utility in South Asia."
+    },
+    {
+      "id": "allentoft-2024-neolithic-denmark",
+      "kind": "scholarly",
+      "citation": "Allentoft et al., '100 ancient genomes show repeated population turnovers in Neolithic Denmark', Nature (2024)",
+      "url": "https://www.nature.com/articles/s41586-023-06862-3",
+      "note": "Bayesian trapezoidal phase model in OxCal over 81 radiocarbon dates from 64 Danish sites."
+    },
+    {
+      "id": "oxford-handbook-southern-scandinavia",
+      "kind": "scholarly",
+      "citation": "Oxford Handbook of Mesolithic Europe, 'Southern Scandinavia' chapter",
+      "url": "https://academic.oup.com/edited-volume/59635/chapter/505049919"
+    },
+    {
+      "id": "archaeofauna-havno-midden",
+      "kind": "scholarly",
+      "citation": "Havnø shell midden study, Archaeofauna",
+      "url": "https://revistas.uam.es/archaeofauna/article/download/6380/6856"
+    },
+    {
+      "id": "coimbra-muge-central-portugal",
+      "kind": "scholarly",
+      "citation": "'The case of Muge, central Portugal' (University of Coimbra repository)",
+      "url": "https://estudogeral.uc.pt/bitstream/10316/45835/1/cias2016_3.pdf"
+    },
+    {
+      "id": "jackes-lubell-muge-chronology",
+      "kind": "scholarly",
+      "citation": "Jackes & Lubell, on Muge chronology (University of Waterloo)",
+      "url": "http://www.arts.uwaterloo.ca/~mkjackes/Jackes%20and%20Lubell%20incorrect.pdf"
+    },
+    {
+      "id": "bonsall-mesolithic-kilmore-oban",
+      "kind": "scholarly",
+      "citation": "Bonsall et al., 'A Mesolithic Site at Kilmore, near Oban, Western Scotland' (University of Edinburgh)",
+      "url": "https://www.pure.ed.ac.uk/ws/files/539999/2009_BANN_FLAKES_Bonsall_etal.pdf"
+    },
+    {
+      "id": "garcia-escarzaga-2022-8point2ka",
+      "kind": "scholarly",
+      "citation": "García-Escárzaga et al., 'Human forager response to abrupt climate change at 8.2 ka on the Atlantic coast of Europe', Scientific Reports (2022)",
+      "url": "https://www.nature.com/articles/s41598-022-10135-w",
+      "note": "Dates the event in the NGRIP ice core to 8,250-8,090 cal BP, and finds intensified shellfish use and demographic growth in Atlantic refugia."
+    },
+    {
+      "id": "wicks-mithen-2014-scotland-8point2ka",
+      "kind": "scholarly",
+      "citation": "Wicks & Mithen, on the impact of the 8.2 ka event on Mesolithic western Scotland (2014, University of Reading)",
+      "url": "https://centaur.reading.ac.uk/60211/",
+      "note": "Bayesian analysis of radiocarbon activity events finds a dramatic population reduction synchronous with the event."
     },
     {
       "id": "masson-altyn-depe-summary",

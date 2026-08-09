@@ -14,6 +14,18 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.15.0.0-app] — 2026-08-08
+
+### Changed
+
+- Ships dataset 0.17.0.0. Build size baseline rebased to 219,726 bytes gzip.
+
+### Added
+
+- Three tests: the most-opened Mediterranean entities must be sourced, Macedon
+  must not start at its legendary founding, and `global.mesolithic` must name
+  the regional terms that replace it.
+
 ## [3.14.0.0-app] — 2026-08-08
 
 ### Fixed

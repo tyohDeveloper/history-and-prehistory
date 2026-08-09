@@ -18,14 +18,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.16.0.0");
+    expect(datasetVersion).toBe("0.17.0.0");
     expect(schemaVersion).toBe("3.1.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1628);
+    expect(entities.length).toBe(1631);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -105,11 +105,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(325);
+    expect(cited.length).toBe(346);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(338);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(358);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -121,7 +121,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(271);
+    expect(withEnd.length).toBe(291);
 
     const differing = entities
       .filter(
@@ -142,15 +142,23 @@ describe("gap-analysis baseline", () => {
     // city in 539 BCE, a calendar date from written record. Phrygia's start
     // comes off the Gordion tree-ring sequence and its end is typological.
     //
-    // The Marib Dam runs the other way, and is the reason this test is worth
-    // keeping: its construction is known only from an inscription, while its
-    // END is radiocarbon on charcoal in the basin silts -- which puts the dam's
-    // last activity some three centuries before the collapse that tradition
-    // remembers. A single method field would have hidden exactly the tension
-    // that makes the entity interesting.
+    // The Marib Dam runs the other way: its construction is known only from an
+    // inscription, while its END is radiocarbon on charcoal in the basin silts,
+    // putting the dam's last activity three centuries before the collapse
+    // tradition remembers.
+    //
+    // The clearest cases arrived with the Mediterranean citation pass. Rome and
+    // the Republic both begin on `received` dates -- Varro's back-calculations,
+    // which the Oxford Classical Dictionary calls artificial manipulation --
+    // and end on calendar dates for events that actually happened. One method
+    // field would have flattened a legend and a datable event into the same
+    // kind of claim, which is the whole reason the field was split.
     expect(differing).toEqual([
       "africa.prehistory.rising-star",
       "africa.prehistory.sterkfontein",
+      "europe.mediterranean.greece",
+      "europe.mediterranean.rome",
+      "europe.mediterranean.rome.republic",
       "europe.prehistory.neanderthal-europe",
       "global.paleolithic.middle-stone-age",
       "west-asia.anatolia.phrygia",
@@ -517,6 +525,54 @@ describe("Central Asia and the Austronesian world", () => {
     const withKids = new Set(entities.map((e) => e.parent_id).filter(Boolean));
     for (const r of entities.filter((e) => e.kind === "region")) {
       expect(withKids.has(r.id), `${r.id} is empty`).toBe(true);
+    }
+  });
+
+  it("sources the entities people actually open", () => {
+    // The dataset's rigour was inverted: everything authored under the
+    // sourcing rule was scrupulous, and everything older was bare -- which
+    // meant Namazga had three sources and a dagger while the Roman Republic
+    // had nothing. A visitor's first click landed on the weakest part.
+    for (const id of [
+      "europe.mediterranean.greece",
+      "europe.mediterranean.greece.mycenaean",
+      "europe.mediterranean.macedon",
+      "europe.mediterranean.rome",
+      "europe.mediterranean.rome.republic",
+      "europe.mediterranean.rome.empire",
+      "europe.mediterranean.byzantine",
+    ]) {
+      const e = entities.find((x) => x.id === id)!;
+      expect(e, `${id} exists`).toBeDefined();
+      expect((e.source_ids ?? []).length, `${id} is sourced`).toBeGreaterThan(0);
+    }
+  });
+
+  it("does not present Macedon's legendary founding as its start", () => {
+    // Macedon shipped from 808 BCE, a king-list back-calculation to Karanos,
+    // a founder Herodotus does not even name. Structurally identical to Rome's
+    // 753, and sitting one row away from it in the same tree.
+    const mac = entities.find((e) => e.id === "europe.mediterranean.macedon")!;
+    expect(mac.start_year).toBe(-700);
+    const legend = mac.alternatives!.find((a) => a.start_year === -808)!;
+    expect(legend.standing).toBe("traditional");
+    expect(legend.dating_method).toBe("received");
+  });
+
+  it("does not present the Mesolithic as a settled global category", () => {
+    // This was the widest childless era for six passes. The content was never
+    // missing -- Maglemose, Kongemose, Ertebolle and the rest live under
+    // European prehistory, where the term has content. What is actually at
+    // issue is whether the GLOBAL category exists at all, so the node carries
+    // the argument instead of pretending to contain the world.
+    const m = entities.find((e) => e.id === "global.mesolithic")!;
+    expect(m.standing).toBe("minority");
+    expect((m.source_ids ?? []).length).toBeGreaterThan(0);
+    expect(m.caveats?.some((c) => c.kind === "contested-existence")).toBe(true);
+    // Regional alternatives must be named, or the entity is still Eurocentric
+    // while claiming not to be.
+    for (const term of ["Later Stone Age", "Archaic", "Epipalaeolithic"]) {
+      expect(m.date_note, `names ${term}`).toContain(term);
     }
   });
 

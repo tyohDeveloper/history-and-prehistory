@@ -1,5 +1,82 @@
 # Changelog
 
+## 0.22.0.0 — More formal and historical names (2026-08-09)
+
+A second tranche, from 24 entities carrying `name_forms` to 43. The first
+covered states; this one covers people, peoples, and one event whose name is the
+entire historiographical dispute in miniature.
+
+### A name that is an argument
+
+**The Indian Rebellion of 1857** is now the sharpest naming case in the dataset,
+because every available label is a verdict.
+
+The British called it the **Sepoy Mutiny** -- which says it was a breach of
+military discipline. Savarkar called it the **First War of Independence** in
+1909 -- which says it was national liberation. S. N. Sen, writing the official
+centenary history, concluded it began as a fight for religion and ended as a war
+of independence. Punjabi historians object that the First Anglo-Sikh War has the
+better claim to "first"; South Indian historians point to the Vellore Mutiny;
+and the broad modern position is that it was not nationalist in the modern sense
+at all.
+
+Naming it is taking a side. The entity now says so, with the labels typed by who
+used them and two competing readings recorded as such.
+
+### Rulers who changed their own names
+
+* **Octavian became Augustus** when the Senate conferred the title on 16 January
+  27 BCE -- 17 January in the 1911 Britannica. He had considered "Romulus" and
+  rejected it as too close to king. The dataset had "Octavian" as a flat alias,
+  which flattened a deliberate political act into a spelling variant.
+* **Amenhotep IV became Akhenaten** in his fifth regnal year, trading a name
+  meaning "Amun is satisfied" for one meaning "effective for the Aten" -- while
+  abolishing Amun. Britannica, ARCE and the Met put it in year five; UCL's
+  Digital Egypt puts it in year six, and both are recorded.
+* **Caligula never was Caligula.** He was Gaius. "Little boot" was a soldiers'
+  nickname from his childhood in camp which the sources say he disliked. It
+  stays as the display name, because that is how history knows him, and now
+  carries a note saying what it is.
+
+### Greek is why several Egyptians have two names
+
+Cheops, Chephren and Ozymandias are Herodotus and Diodorus rendering Khufu,
+Khafre and User-maat-re into Greek, and Europe inherited the Greek rather than
+the Egyptian. Those are `exonym`, not spelling variants. Egypt itself gets
+**Kemet**, "the black land", and the note that every European name for the
+country descends from the Greek Aigyptos.
+
+Also: the Ghana Empire called itself **Wagadu** -- "Ghana" was its ruler's
+title; **Saba** entered European tradition as biblical Sheba, attached to a
+queen its own sources do not name; and Troy is filed with **Hisarlik**, the
+modern name excavation reports use precisely because it does not assume the
+identification.
+
+### A third kind of name change
+
+**Java Man** and **Peking Man** are neither exonyms nor renames but
+classifications that lost -- *Pithecanthropus erectus* and *Sinanthropus
+pekinensis*, both folded into *Homo erectus*. `historical` with a note carries
+them.
+
+Honorifics -- Mahatma, Netaji, Quaid-e-Azam, Bangabandhu -- are filed as
+`common` with a gloss rather than given a kind of their own. They are titles
+rather than names and a reader searching any of them should land on the person,
+but adding an `honorific` kind for four entities would be inventing vocabulary
+ahead of need.
+
+### What the screenshot caught
+
+The alternatives panel is headed "Competing dates". For 1857 the alternatives
+are readings of what the event *was*, so the heading contradicted the entity's
+own date note two lines above it. It now reads "Competing views" when no
+alternative carries a year.
+
+### Counts
+
+1,640 entities unchanged; this pass typed names rather than adding. 528 → 537
+sources. 385 → 388 cited. 24 → 43 entities with `name_forms`.
+
 ## 0.21.0.0 — Formal and historical names (2026-08-09)
 
 `name_forms` shipped last release with eight entities and two of its eight kinds

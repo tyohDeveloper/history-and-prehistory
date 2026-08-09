@@ -1,7 +1,7 @@
 {
   "schema_version": "3.3.0",
-  "dataset_version": "0.21.0.0",
-  "generated_at": "2026-08-09T23:32:47Z",
+  "dataset_version": "0.22.0.0",
+  "generated_at": "2026-08-09T23:43:16Z",
   "themes": [
     {
       "id": "empires-classical",

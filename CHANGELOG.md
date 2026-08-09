@@ -14,6 +14,19 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.20.0.0-app] — 2026-08-09
+
+### Fixed
+
+- The alternatives panel is headed "Competing views" when no alternative
+  carries a year, and "Competing dates" when one does. The 1857 rebellion's
+  rivals are readings of what the event was, and heading them "Competing
+  dates" contradicted the entity's own note two lines above.
+
+### Changed
+
+- Ships dataset 0.22.0.0. Size baseline 238,218 bytes gzip.
+
 ## [3.19.0.0-app] — 2026-08-09
 
 ### Fixed

@@ -554,7 +554,12 @@ function renderAlternatives(entity: Entity, order: string[]): HTMLElement | null
   const items = entity.alternatives ?? [];
   if (items.length === 0) return null;
   const box = el("div", { class: "alts", "data-testid": "panel-alternatives-root" });
-  box.append(el("div", { class: "alts-head" }, "Competing dates"));
+  // Not every alternative is a date. The 1857 rebellion's rivals are readings
+  // of what the event WAS -- a mutiny, a war of independence, neither -- and
+  // heading those "Competing dates" contradicted the entity's own note two
+  // lines above. Head by what the alternatives actually carry.
+  const anyDated = items.some((a) => a.start_year !== undefined || a.end_year !== undefined);
+  box.append(el("div", { class: "alts-head" }, anyDated ? "Competing dates" : "Competing views"));
   for (const a of items) {
     const row = el("div", { class: "alt" });
     const head = el("div", { class: "alt-head" });

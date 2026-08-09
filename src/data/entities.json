@@ -1,7 +1,7 @@
 {
   "schema_version": "3.3.0",
-  "dataset_version": "0.21.0.0",
-  "generated_at": "2026-08-09T23:32:47Z",
+  "dataset_version": "0.22.0.0",
+  "generated_at": "2026-08-09T23:43:16Z",
   "entities": [
     {
       "id": "global",
@@ -788,13 +788,38 @@
       "tier": "foundational",
       "aliases": [
         "Pharaonic Egypt",
-        "Nile Valley civilization"
+        "Nile Valley civilization",
+        "Kemet",
+        "Aigyptos"
       ],
       "calendar_ids": [
         "egyptian-regnal"
       ],
       "summary": "Continuous Nile Valley civilization from Predynastic cultures through Narmer's unification, the pharaonic dynasties, and Ptolemaic/Roman/Byzantine rule.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "native_name": "Kemet",
+      "name_forms": [
+        {
+          "name": "Kemet",
+          "kind": "endonym",
+          "lang": "egy",
+          "note": "'The black land', for the Nile silt as against the red desert."
+        },
+        {
+          "name": "Pharaonic Egypt",
+          "kind": "scholarly"
+        },
+        {
+          "name": "Nile Valley civilization",
+          "kind": "scholarly"
+        },
+        {
+          "name": "Aigyptos",
+          "kind": "exonym",
+          "lang": "grc",
+          "note": "The Greek from which every European name for the country descends."
+        }
+      ]
     },
     {
       "id": "africa.nile.egypt.predynastic",
@@ -919,7 +944,20 @@
         "Cheops"
       ],
       "summary": "Builder of the Great Pyramid of Giza.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Khufu",
+          "kind": "endonym",
+          "lang": "egy"
+        },
+        {
+          "name": "Cheops",
+          "kind": "exonym",
+          "lang": "grc",
+          "note": "Herodotus's rendering, which is how Europe learned the name."
+        }
+      ]
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn4.khafre",
@@ -933,7 +971,20 @@
         "Chephren"
       ],
       "summary": "Built the second Giza pyramid and, by tradition, the Great Sphinx.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Khafre",
+          "kind": "endonym",
+          "lang": "egy"
+        },
+        {
+          "name": "Chephren",
+          "kind": "exonym",
+          "lang": "grc",
+          "note": "Herodotus's rendering, which is how Europe learned the name."
+        }
+      ]
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn4.menkaure",
@@ -1136,10 +1187,69 @@
       "end_year": -1334,
       "tier": "foundational",
       "aliases": [
-        "Amenhotep IV"
+        "Amenhotep IV",
+        "Amenophis IV",
+        "Ikhnaton"
       ],
       "summary": "Founded a short-lived monotheistic cult of the Aten and moved the capital to Amarna.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Amenhotep IV",
+          "kind": "historical",
+          "note": "His name for the first five years. 'Amun is satisfied' -- which is precisely the god he then abolished.",
+          "source_ids": [
+            "arce-akhenaten-revolution",
+            "britannica-akhenaten-amarna"
+          ]
+        },
+        {
+          "name": "Akhenaten",
+          "kind": "endonym",
+          "note": "'Effective for the Aten', adopted with the new religion.",
+          "source_ids": [
+            "arce-akhenaten-revolution"
+          ]
+        },
+        {
+          "name": "Amenophis IV",
+          "kind": "exonym",
+          "lang": "grc",
+          "note": "The Hellenised form."
+        },
+        {
+          "name": "Ikhnaton",
+          "kind": "translation"
+        }
+      ],
+      "as_of": "2026-08-09",
+      "date_note": "The reign dates are conventional New Kingdom chronology. The alternative below concerns when within the reign he changed his name, not when the reign began.",
+      "alternatives": [
+        {
+          "label": "Name changed in regnal year six",
+          "standing": "minority",
+          "note": "UCL's Digital Egypt dates the change a year later than Britannica, ARCE and the Met.",
+          "source_ids": [
+            "ucl-digital-egypt-akhnaton"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "He changed his own name in regnal year five, from one honouring Amun to one honouring the Aten. UCL puts the change in year six.",
+          "source_ids": [
+            "met-amenhotep-iv-akhenaten",
+            "ucl-digital-egypt-akhnaton"
+          ]
+        }
+      ],
+      "source_ids": [
+        "arce-akhenaten-revolution",
+        "britannica-akhenaten-amarna",
+        "met-amenhotep-iv-akhenaten",
+        "ucl-digital-egypt-akhnaton"
+      ]
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn18.tutankhamun",
@@ -1188,7 +1298,24 @@
         "Ozymandias"
       ],
       "summary": "Long-reigning warrior-pharaoh. Fought the Hittites at Kadesh and signed the world's earliest surviving peace treaty.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Ramesses II",
+          "kind": "endonym",
+          "lang": "egy"
+        },
+        {
+          "name": "Ramesses the Great",
+          "kind": "common"
+        },
+        {
+          "name": "Ozymandias",
+          "kind": "exonym",
+          "lang": "grc",
+          "note": "A Greek rendering of his throne name User-maat-re, and the name under which Shelley made him a byword for ruined ambition."
+        }
+      ]
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn20",
@@ -1346,10 +1473,29 @@
       "end_year": 350,
       "tier": "intermediate",
       "aliases": [
-        "Nubia"
+        "Nubia",
+        "Kush",
+        "Aethiopia"
       ],
       "summary": "Nubian civilization south of Egypt with capitals successively at Kerma, Napata, and Meroë.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Kush",
+          "kind": "endonym"
+        },
+        {
+          "name": "Nubia",
+          "kind": "exonym",
+          "note": "A regional name rather than a synonym: Nubia is the territory, Kush the kingdom."
+        },
+        {
+          "name": "Aethiopia",
+          "kind": "exonym",
+          "lang": "grc",
+          "note": "The Greek name for the lands south of Egypt, unrelated to modern Ethiopia."
+        }
+      ]
     },
     {
       "id": "africa.nile.kush.kerma",
@@ -6752,13 +6898,36 @@
       "end_year": -323,
       "tier": "foundational",
       "aliases": [
-        "Alexander III of Macedon"
+        "Alexander III of Macedon",
+        "Ἀλέξανδρος",
+        "Iskandar"
       ],
       "summary": "Conquered the Achaemenid Empire, reaching India. Ushered in the Hellenistic Age.",
       "cross_parent_ids": [
         "west-asia.iran.achaemenid"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Alexander III of Macedon",
+          "kind": "formal"
+        },
+        {
+          "name": "Alexander the Great",
+          "kind": "common"
+        },
+        {
+          "name": "Ἀλέξανδρος",
+          "kind": "endonym",
+          "lang": "grc"
+        },
+        {
+          "name": "Iskandar",
+          "kind": "exonym",
+          "lang": "fa",
+          "note": "The Persian and later Islamic form, through which he entered a very different body of legend."
+        }
+      ]
     },
     {
       "id": "europe.mediterranean.hellenistic",
@@ -6994,10 +7163,54 @@
       "end_year": 14,
       "tier": "foundational",
       "aliases": [
-        "Octavian"
+        "Octavian",
+        "Gaius Octavius",
+        "Imperator Caesar Divi Filius Augustus"
       ],
       "summary": "First Roman emperor; founder of the Principate.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Octavian",
+          "kind": "historical",
+          "to": -27,
+          "note": "His name until the Senate conferred Augustus on 16 January 27 BCE. The 1911 Britannica gives 17 January.",
+          "source_ids": [
+            "augustus-title-27bc",
+            "eb1911-augustus"
+          ]
+        },
+        {
+          "name": "Gaius Octavius",
+          "kind": "historical",
+          "to": -44,
+          "note": "His birth name, before Caesar's will adopted him.",
+          "source_ids": [
+            "augustus-title-27bc"
+          ]
+        },
+        {
+          "name": "Imperator Caesar Divi Filius Augustus",
+          "kind": "formal",
+          "lang": "la",
+          "source_ids": [
+            "augustus-title-27bc"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Augustus is a title the Senate voted him, not a name he was born with. He had considered Romulus and rejected it as too close to king.",
+          "source_ids": [
+            "augustus-title-27bc"
+          ]
+        }
+      ],
+      "source_ids": [
+        "augustus-title-27bc",
+        "eb1911-augustus"
+      ]
     },
     {
       "id": "europe.mediterranean.rome.empire.nero",
@@ -8238,7 +8451,18 @@
         "Harappan Civilization"
       ],
       "summary": "Bronze Age civilization along the Indus and Sarasvati rivers.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Harappan Civilization",
+          "kind": "scholarly",
+          "note": "Named for the first site excavated, which is convention rather than precedence: Harappa was simply dug first."
+        },
+        {
+          "name": "Indus Valley Civilization",
+          "kind": "common"
+        }
+      ]
     },
     {
       "id": "south-asia.vedic",
@@ -8795,6 +9019,17 @@
         "Ghana Empire was not located in the modern nation of Ghana."
       ],
       "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Wagadu",
+          "kind": "endonym",
+          "note": "What its own people called it. 'Ghana' was the title of its ruler."
+        },
+        {
+          "name": "Ghana Empire",
+          "kind": "common"
+        }
+      ],
       "summary": "Sahelian trading empire, unrelated to the modern nation of Ghana."
     },
     {
@@ -10670,7 +10905,19 @@
       "aliases": [
         "Gaius"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Gaius",
+          "kind": "endonym",
+          "note": "His actual name: Gaius Julius Caesar Augustus Germanicus."
+        },
+        {
+          "name": "Caligula",
+          "kind": "common",
+          "note": "'Little boot', a soldiers' nickname from his childhood in camp. The sources say he disliked it, and it is how history knows him."
+        }
+      ]
     },
     {
       "id": "europe.mediterranean.rome.empire.claudius",
@@ -16189,10 +16436,90 @@
       "aliases": [
         "First War of Independence",
         "Sepoy Mutiny",
-        "Great Rebellion"
+        "Great Rebellion",
+        "Indian Mutiny",
+        "Revolt of 1857"
       ],
       "summary": "Massive uprising against Company rule; suppressed with great violence. Led directly to the establishment of the British Raj.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Sepoy Mutiny",
+          "kind": "historical",
+          "note": "The British name. Calling it a mutiny says it was a breach of military discipline rather than a political rising.",
+          "source_ids": [
+            "punjab-university-names-1857",
+            "nbu-hundred-fifty-years-1857"
+          ]
+        },
+        {
+          "name": "Indian Mutiny",
+          "kind": "historical",
+          "source_ids": [
+            "punjab-university-names-1857"
+          ]
+        },
+        {
+          "name": "First War of Independence",
+          "kind": "common",
+          "from": 1909,
+          "note": "Savarkar's name, and the usual one in India and Pakistan. It says the rising was a national liberation struggle.",
+          "source_ids": [
+            "nbu-hundred-fifty-years-1857"
+          ]
+        },
+        {
+          "name": "Great Rebellion",
+          "kind": "scholarly",
+          "source_ids": [
+            "punjab-university-names-1857"
+          ]
+        },
+        {
+          "name": "Revolt of 1857",
+          "kind": "scholarly",
+          "note": "Preferred by writers who find both 'mutiny' and 'war of independence' tendentious.",
+          "source_ids": [
+            "punjab-university-names-1857"
+          ]
+        }
+      ],
+      "as_of": "2026-08-09",
+      "date_note": "The dates are not in dispute; the name and the interpretation are. The alternatives below are positions on what this was, not on when.",
+      "alternatives": [
+        {
+          "label": "Not a war of independence",
+          "standing": "majority",
+          "note": "S. N. Sen's official centenary history and most later work hold it was not nationalist in the modern sense.",
+          "source_ids": [
+            "nbu-hundred-fifty-years-1857"
+          ]
+        },
+        {
+          "label": "Not the first: the Anglo-Sikh War or the Vellore Mutiny",
+          "standing": "minority",
+          "note": "Punjabi and South Indian historians dispute the word 'first' rather than the words after it.",
+          "source_ids": [
+            "nbu-hundred-fifty-years-1857"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Every name for this is a verdict on it. 'Mutiny' makes it indiscipline, 'First War of Independence' makes it national liberation, and historians have not settled which it was.",
+          "source_ids": [
+            "punjab-university-names-1857",
+            "nbu-hundred-fifty-years-1857",
+            "brown-insurgent-sepoys-review"
+          ]
+        }
+      ],
+      "source_ids": [
+        "brown-insurgent-sepoys-review",
+        "nbu-hundred-fifty-years-1857",
+        "punjab-university-names-1857"
+      ]
     },
     {
       "id": "south-asia.british-raj.canning",
@@ -16342,6 +16669,17 @@
       ],
       "native_name": "महात्मा गांधी",
       "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Mohandas K. Gandhi",
+          "kind": "formal"
+        },
+        {
+          "name": "Mahatma",
+          "kind": "common",
+          "note": "'Great soul', a title rather than a name."
+        }
+      ],
       "allow_outside_parent_dates": true,
       "date_note": "Gandhi's political leadership began in 1915, three decades before Independence; his date range starts before the parent's 1947 for historiographic reasons."
     },
@@ -16359,6 +16697,13 @@
       ],
       "native_name": "محمد علی جناح",
       "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Quaid-e-Azam",
+          "kind": "common",
+          "note": "'Great leader'."
+        }
+      ],
       "allow_outside_parent_dates": true,
       "date_note": "Jinnah's political leadership began in 1913; his date range starts before the parent's 1947 for historiographic reasons."
     },
@@ -16389,6 +16734,13 @@
         "Netaji"
       ],
       "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Netaji",
+          "kind": "common",
+          "note": "'Respected leader'."
+        }
+      ],
       "allow_outside_parent_dates": true,
       "date_note": "Bose's INA leadership predated 1947 Independence."
     },
@@ -16619,7 +16971,14 @@
       "aliases": [
         "Bangabandhu"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Bangabandhu",
+          "kind": "common",
+          "note": "'Friend of Bengal'."
+        }
+      ]
     },
     {
       "id": "south-asia.independence.hasina",
@@ -16830,9 +17189,41 @@
       "aliases": [
         "Homo ergaster",
         "Java Man",
-        "Peking Man"
+        "Peking Man",
+        "Pithecanthropus erectus",
+        "Sinanthropus pekinensis"
       ],
       "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Homo erectus",
+          "kind": "scholarly"
+        },
+        {
+          "name": "Pithecanthropus erectus",
+          "kind": "historical",
+          "note": "Dubois's 1894 genus for the Java find, later folded into Homo."
+        },
+        {
+          "name": "Java Man",
+          "kind": "historical",
+          "note": "The popular name for that specimen."
+        },
+        {
+          "name": "Sinanthropus pekinensis",
+          "kind": "historical",
+          "note": "The Zhoukoudian material, also later folded in."
+        },
+        {
+          "name": "Peking Man",
+          "kind": "historical"
+        },
+        {
+          "name": "Homo ergaster",
+          "kind": "scholarly",
+          "note": "Used by those who separate the African material as its own species."
+        }
+      ],
       "end_dating_method": "uranium-series"
     },
     {
@@ -24523,6 +24914,24 @@
       "aliases": [
         "Ilion",
         "Hisarlik"
+      ],
+      "name_forms": [
+        {
+          "name": "Ilion",
+          "kind": "endonym",
+          "lang": "grc",
+          "note": "The name behind the Iliad; Wilusa in Hittite records."
+        },
+        {
+          "name": "Troy",
+          "kind": "common"
+        },
+        {
+          "name": "Hisarlik",
+          "kind": "common",
+          "lang": "tr",
+          "note": "The modern Turkish name of the mound. Excavation reports use it precisely because it does not assume the identification."
+        }
       ]
     },
     {
@@ -24646,6 +25055,17 @@
       "summary": "The incense kingdom of the Yemeni highlands, the Sheba of later legend, and the builder of the Marib Dam.",
       "aliases": [
         "Sheba"
+      ],
+      "name_forms": [
+        {
+          "name": "Saba",
+          "kind": "endonym"
+        },
+        {
+          "name": "Sheba",
+          "kind": "exonym",
+          "note": "The biblical form, which carried the kingdom into European tradition attached to a queen the Sabaean sources do not name."
+        }
       ]
     },
     {

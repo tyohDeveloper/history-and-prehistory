@@ -1,7 +1,7 @@
 {
   "schema_version": "3.3.0",
-  "dataset_version": "0.21.0.0",
-  "generated_at": "2026-08-09T23:32:47Z",
+  "dataset_version": "0.22.0.0",
+  "generated_at": "2026-08-09T23:43:16Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -3414,6 +3414,68 @@
       "citation": "'FALQs: 35 Years of German Reunification', Library of Congress",
       "url": "https://blogs.loc.gov/law/2025/11/falqs-35-years-of-german-reunification/",
       "note": "Legally an accession rather than a merger: the Federal Republic continued as the same subject of international law and the GDR ceased to exist."
+    },
+    {
+      "id": "met-amenhotep-iv-akhenaten",
+      "kind": "institutional",
+      "citation": "'Art, Architecture, and the City in the Reign of Amenhotep IV / Akhenaten', The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/essays/art-architecture-and-the-city-in-the-reign-of-amenhotep-iv-akhenaten-ca-13531336-b-c",
+      "note": "Traces the change through the Amarna boundary stelae: the name had changed by the time the oath was recorded, early in or just after year five."
+    },
+    {
+      "id": "arce-akhenaten-revolution",
+      "kind": "institutional",
+      "citation": "'Akhenaten: The Mysteries of Religious Revolution', American Research Center in Egypt",
+      "url": "https://arce.org/resource/akhenaten-mysteries-religious-revolution/",
+      "note": "Amenhotep means 'Amun is satisfied'; Akhenaten means 'effective for Aten'. The change is the religious programme in miniature."
+    },
+    {
+      "id": "ucl-digital-egypt-akhnaton",
+      "kind": "institutional",
+      "citation": "'Akhnaton', Digital Egypt for Universities, University College London",
+      "url": "https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/akhnaton.html",
+      "note": "Places the name change in the sixth regnal year rather than the fifth."
+    },
+    {
+      "id": "britannica-akhenaten-amarna",
+      "kind": "reference",
+      "citation": "'Akhenaten: Move to Akhetaton', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Akhenaten/Move-to-Akhetaton"
+    },
+    {
+      "id": "augustus-title-27bc",
+      "kind": "reference",
+      "citation": "'Augustus (title)', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Augustus_(title)",
+      "note": "Renamed by the Senate on 16 January 27 BC; 'Romulus' had been considered and rejected. Full style Imperator Caesar Divi Filius Augustus."
+    },
+    {
+      "id": "eb1911-augustus",
+      "kind": "reference",
+      "citation": "'Augustus', 1911 Encyclopaedia Britannica",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Augustus",
+      "note": "Gives 17 January 27 BCE for the conferral, four days after the civic crown of 13 January."
+    },
+    {
+      "id": "punjab-university-names-1857",
+      "kind": "scholarly",
+      "citation": "Soharwardi, 'The significance of the different names of the 1857 uprising', University of the Punjab",
+      "url": "https://pu.edu.pk/images/journal/pols/pdf-files/Soharwardi_v20_1_2013.pdf",
+      "note": "Groups the labels into four families -- mutiny, uprising, war of independence, revolution -- and treats the choice as political."
+    },
+    {
+      "id": "nbu-hundred-fifty-years-1857",
+      "kind": "scholarly",
+      "citation": "'Hundred and Fifty years of the Revolt of 1857', University of North Bengal",
+      "url": "https://ir.nbu.ac.in/server/api/core/bitstreams/25efaf92-5fe4-4201-82c8-c1411f0f6928/content",
+      "note": "Savarkar was probably the first to call it a war of independence; S. N. Sen and others rejected the label, and a consensus has grown that it was not nationalist in the modern sense."
+    },
+    {
+      "id": "brown-insurgent-sepoys-review",
+      "kind": "scholarly",
+      "citation": "Review of Mazumdar, Insurgent Sepoys: Europe Views the Revolt, e-Journal of Portuguese History (Brown University)",
+      "url": "https://www.brown.edu/Departments/Portuguese_Brazilian_Studies/ejph/html/issue19/pdf/v10n1a06.pdf",
+      "note": "The event 'has been named in many different ways depending on the perspective of who is naming it'."
     },
     {
       "id": "masson-altyn-depe-summary",

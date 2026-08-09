@@ -23,8 +23,8 @@ DATA.mkdir(exist_ok=True)
 # ---- Versions --------------------------------------------------------------
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
-SCHEMA_VERSION = "3.1.0"
-DATASET_VERSION = "0.19.0.0"
+SCHEMA_VERSION = "3.3.0"
+DATASET_VERSION = "0.20.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1677,6 +1677,7 @@ from citations_mediterranean import extend as _cite_mediterranean
 from extensions_mesolithic import extend as _extend_mesolithic
 from extensions_empires import extend as _extend_empires
 from extensions_naming import extend as _extend_naming
+from extensions_americas_civ import extend as _extend_americas_civ
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1688,6 +1689,7 @@ _cite_mediterranean(E, entities)
 _extend_mesolithic(E, entities)
 _extend_empires(E, entities)
 _extend_naming(E, entities)
+_extend_americas_civ(E, entities)
 
 # Marks received conventions across the corpus, so it runs after every module
 # that could author one.
@@ -1927,6 +1929,25 @@ print(
     f"End dating: {_explicit} explicit, {_derived} derived, {_unset} left unset "
     f"(end rests on different science from the start)"
 )
+
+# Search must match on every name a reader might arrive with, including ones
+# the UI files under headings like "Rejected name". Deriving `aliases` from
+# `name_forms` rather than asking authors to maintain both is the only way the
+# two cannot drift apart -- and drift here means a reader searching "Anasazi"
+# silently gets nothing.
+_nf_entities = 0
+for _e in entities:
+    _forms = _e.get("name_forms")
+    if not _forms:
+        continue
+    _nf_entities += 1
+    _names = [f["name"] for f in _forms]
+    # The display name is not its own alias.
+    _merged = [n for n in dict.fromkeys(list(_e.get("aliases", [])) + _names)
+               if n != _e["name"]]
+    if _merged:
+        _e["aliases"] = _merged
+print(f"Name forms: {_nf_entities} entities carry structured names")
 
 with open(DATA / "entities.json", "w") as f:
     json.dump(_envelope("entities", entities), f, indent=2, ensure_ascii=False)
@@ -3121,6 +3142,7 @@ from citations_mediterranean import MEDITERRANEAN_SOURCES  # noqa: E402
 from extensions_mesolithic import MESOLITHIC_SOURCES  # noqa: E402
 from extensions_empires import EMPIRE_SOURCES  # noqa: E402
 from extensions_naming import NAMING_SOURCES  # noqa: E402
+from extensions_americas_civ import AMERICAS_CIV_SOURCES  # noqa: E402
 sources.extend(SEASIA_OCEANIA_SOURCES)
 sources.extend(INDUS_SOURCES)
 sources.extend(EAST_ASIA_SOURCES)
@@ -3131,6 +3153,7 @@ sources.extend(MEDITERRANEAN_SOURCES)
 sources.extend(MESOLITHIC_SOURCES)
 sources.extend(EMPIRE_SOURCES)
 sources.extend(NAMING_SOURCES)
+sources.extend(AMERICAS_CIV_SOURCES)
 from received_conventions import RECEIVED_CONVENTION_SOURCES  # noqa: E402
 sources.extend(RECEIVED_CONVENTION_SOURCES)
 

@@ -610,3 +610,16 @@ a.source-cite:focus-visible { outline: 2px solid var(--accent); outline-offset: 
   color: var(--accent);
   font-size: 13px;
 }
+
+/* Name forms. The rejected form is dimmed and struck rather than hidden:
+   a reader who arrives with "Anasazi" must still find the entity, and must
+   also see at a glance that the word is repudiated. */
+.name-form-endonym { font-weight: 600; }
+.name-form-rejected { text-decoration: line-through; opacity: 0.72; }
+.name-form-years { opacity: 0.7; font-variant-numeric: tabular-nums; }
+.name-form-note {
+  margin-top: 0.25rem;
+  font-size: 0.85em;
+  opacity: 0.75;
+  line-height: 1.4;
+}

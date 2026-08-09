@@ -23,7 +23,7 @@ export type Precision =
   | "approx" | "traditional" | "disputed" | "unknown" | "exact" | "minimum";
 
 export type DatingMethodId =
-  | "calendar" | "radiocarbon-calibrated" | "radiocarbon-uncalibrated"
+  | "calendar" | "dendrochronology" | "radiocarbon-calibrated" | "radiocarbon-uncalibrated"
   | "argon-argon" | "potassium-argon" | "luminescence" | "uranium-series"
   | "esr" | "cosmogenic" | "layer-counting" | "magnetostratigraphy"
   | "received" | "typological" | "unknown";
@@ -31,6 +31,29 @@ export type DatingMethodId =
 export type StandingId = "consensus" | "majority" | "minority" | "traditional" | "superseded";
 
 export type CaveatKindId = "misconception" | "naming-confusion" | "contested-existence";
+
+/** A name this entity is or was known by, and what kind of name it is.
+ *
+ * A flat string list could not say why a name differs, who uses it, when it
+ * applied, or whether descendants repudiate it. That is why the easy cases got
+ * aliases (Cheops, King Tut) while the loaded ones went unfilled. */
+export interface NameForm {
+  name: string;
+  kind:
+    | "endonym"
+    | "exonym"
+    | "formal"
+    | "common"
+    | "translation"
+    | "scholarly"
+    | "historical"
+    | "rejected";
+  lang?: string;
+  from?: number;
+  to?: number;
+  note?: string;
+  source_ids?: string[];
+}
 
 export interface Entity {
   id: string;
@@ -43,6 +66,7 @@ export interface Entity {
   tier: Tier;
   native_name?: string;
   aliases?: string[];
+  name_forms?: NameForm[];
   cross_parent_ids?: string[];
   redirect_ids?: string[];
   start_year_min?: number;

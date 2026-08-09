@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.1.0",
-  "dataset_version": "0.19.0.0",
-  "generated_at": "2026-08-09T22:50:56Z",
+  "schema_version": "3.3.0",
+  "dataset_version": "0.20.0.0",
+  "generated_at": "2026-08-09T23:15:53Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -3193,6 +3193,165 @@
       "kind": "scholarly",
       "citation": "'Introduction: What Is South Korea?', Project MUSE",
       "url": "https://muse.jhu.edu/pub/342/edited_volume/chapter/3003758"
+    },
+    {
+      "id": "britannica-aztec",
+      "kind": "reference",
+      "citation": "'Aztec', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Aztec",
+      "note": "The people called themselves Mexica, more precisely Culhua-Mexica."
+    },
+    {
+      "id": "britannica-inca",
+      "kind": "reference",
+      "citation": "'Inca', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Inca",
+      "note": "Inca is properly a ruler's title in Quechua, applied by convention to the whole state and population."
+    },
+    {
+      "id": "nps-mesa-verde-history",
+      "kind": "reference",
+      "citation": "Mesa Verde administrative history, US National Park Service",
+      "url": "https://www.nps.gov/parkhistory/online_books/smith/chap13.htm",
+      "note": "States plainly that no one knows what the Ancestral Puebloans called themselves."
+    },
+    {
+      "id": "archaeology-magazine-anasazi",
+      "kind": "scholarly",
+      "citation": "'What's in a Name? The Anasazi', Archaeology Magazine",
+      "url": "https://archive.archaeology.org/0607/news/insider.html",
+      "note": "Records a live disagreement within Navajo scholarship over how negative the term's connotation actually is."
+    },
+    {
+      "id": "haudenosaunee-confederacy-official",
+      "kind": "primary",
+      "citation": "Haudenosaunee Confederacy, official site",
+      "url": "https://www.haudenosauneeconfederacy.com/",
+      "note": "Haudenosaunee means 'people of the longhouse'."
+    },
+    {
+      "id": "nysm-mohawk-iroquois",
+      "kind": "reference",
+      "citation": "Mohawk Iroquois resources, New York State Museum",
+      "url": "https://nysm.nysed.gov/mohawk-iroquois",
+      "note": "Reports the derivation of 'Iroquois' from a Huron term for adders or black snakes, originating with an enemy nation."
+    },
+    {
+      "id": "britannica-olmec",
+      "kind": "reference",
+      "citation": "'Olmec', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Olmec"
+    },
+    {
+      "id": "britannica-san-lorenzo",
+      "kind": "reference",
+      "citation": "'San Lorenzo', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/San-Lorenzo-archaeological-site-Mexico"
+    },
+    {
+      "id": "britannica-toltec",
+      "kind": "reference",
+      "citation": "'Toltec', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Toltec"
+    },
+    {
+      "id": "britannica-maya-people",
+      "kind": "reference",
+      "citation": "'Maya', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Maya-people"
+    },
+    {
+      "id": "smarthistory-maya-intro",
+      "kind": "reference",
+      "citation": "'Introduction to the Maya', Smarthistory",
+      "url": "https://smarthistory.org/maya-intro/"
+    },
+    {
+      "id": "britannica-teotihuacan",
+      "kind": "reference",
+      "citation": "'Teotihuacan', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Teotihuac%C3%A1n"
+    },
+    {
+      "id": "britannica-monte-alban",
+      "kind": "reference",
+      "citation": "'Monte Alban', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Monte-Alban"
+    },
+    {
+      "id": "britannica-tenochtitlan",
+      "kind": "reference",
+      "citation": "'Tenochtitlan', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Tenochtitlan"
+    },
+    {
+      "id": "haas-creamer-ruiz-2004-norte-chico",
+      "kind": "scholarly",
+      "citation": "Haas, Creamer & Ruiz, 'Dating the Late Archaic occupation of the Norte Chico region in Peru', Nature (2004)",
+      "url": "https://www.nature.com/articles/nature03146",
+      "note": "Radiocarbon programme establishing monumental construction in the third millennium BCE."
+    },
+    {
+      "id": "britannica-chavin",
+      "kind": "reference",
+      "citation": "'Chavin', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Chavin"
+    },
+    {
+      "id": "britannica-moche",
+      "kind": "reference",
+      "citation": "'Moche', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Moche"
+    },
+    {
+      "id": "britannica-huari",
+      "kind": "reference",
+      "citation": "'Huari', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Huari"
+    },
+    {
+      "id": "britannica-chimu",
+      "kind": "reference",
+      "citation": "'Chimu', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Chimu"
+    },
+    {
+      "id": "britannica-ancestral-pueblo",
+      "kind": "reference",
+      "citation": "'Ancestral Pueblo culture', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Ancestral-Pueblo-culture"
+    },
+    {
+      "id": "britannica-chaco-culture",
+      "kind": "reference",
+      "citation": "'Chaco Culture National Historical Park', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Chaco-Culture-National-Historical-Park"
+    },
+    {
+      "id": "britannica-cahokia",
+      "kind": "reference",
+      "citation": "'Cahokia Mounds', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Cahokia-Mounds"
+    },
+    {
+      "id": "unesco-qhapaq-nan",
+      "kind": "reference",
+      "citation": "'Qhapaq Nan, Andean Road System', UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/1459/"
+    },
+    {
+      "id": "mann-fields-sign-in-the-sky",
+      "kind": "scholarly",
+      "citation": "Mann & Fields, 'A Sign in the Sky: Dating the League of the Haudenosaunee', American Indian Culture and Research Journal (1997)",
+      "url": "https://escholarship.org/uc/item/34s5f7qm",
+      "note": "Argues from oral tradition plus a solar eclipse for a founding in 1142."
+    },
+    {
+      "id": "escholarship-myth-astronomically-dated",
+      "kind": "scholarly",
+      "citation": "'Can a Myth Be Astronomically Dated?', American Indian Culture and Research Journal (1999)",
+      "url": "https://escholarship.org/uc/item/0f04m96b",
+      "note": "Direct published rebuttal to the Mann and Fields eclipse dating."
     },
     {
       "id": "masson-altyn-depe-summary",

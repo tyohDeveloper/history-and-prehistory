@@ -12,7 +12,7 @@ import {
   visibleAtTier,
 } from "./entity/tree";
 import { formatYear } from "./entity/tree";
-import type { CaveatKindId, Entity, EntityKind, StandingId, Tier } from "./entity/entity";
+import type { CaveatKindId, Entity, EntityKind, NameForm, StandingId, Tier } from "./entity/entity";
 import type { Source } from "./dataset/dataset";
 import { readYearIn, type CalendarReading } from "./calendars/convert";
 import { CALENDARS, getCalendar } from "./calendars/registry";
@@ -56,6 +56,26 @@ const CAVEAT_LABEL: Record<CaveatKindId, string> = {
   "naming-confusion": "Naming",
   "contested-existence": "Contested",
 };
+
+/** Deliberately plain-spoken. "Also known as" flattened a name a people chose
+ *  and a slur imposed on them into one indistinguishable list. */
+const NAME_FORM_LABEL: Record<NameForm["kind"], string> = {
+  endonym: "Called itself",
+  formal: "Formal name",
+  common: "Commonly called",
+  translation: "In other languages",
+  historical: "Formerly",
+  exonym: "Named by outsiders",
+  scholarly: "Scholarly coinage",
+  rejected: "Rejected name",
+};
+
+function yearSpanLabel(from?: number, to?: number): string {
+  const y = (n: number): string => (n < 0 ? `${-n} BCE` : `${n} CE`);
+  if (from !== undefined && to !== undefined) return `${y(from)}\u2013${y(to)}`;
+  if (from !== undefined) return `from ${y(from)}`;
+  return `until ${y(to as number)}`;
+}
 
 const KIND_LABEL: Record<EntityKind, string> = {
   region: "Region",
@@ -310,7 +330,38 @@ function renderReadout(): HTMLElement {
     if (mark !== null) dd.append(" ", mark);
     dl.append(el("dt", {}, "Dating note"), dd);
   }
-  if (e.aliases !== undefined && e.aliases.length > 0) fact("Also known as", e.aliases.join(", "));
+  if (e.name_forms !== undefined && e.name_forms.length > 0) {
+    // Grouped by kind rather than dumped into one "Also known as" line. The
+    // difference between a name a people chose and a name imposed on them is
+    // the content, not metadata about it.
+    const order: NameForm["kind"][] = [
+      "endonym", "formal", "common", "translation",
+      "historical", "exonym", "scholarly", "rejected",
+    ];
+    for (const kind of order) {
+      const forms = e.name_forms.filter((f) => f.kind === kind);
+      if (forms.length === 0) continue;
+      const dd = el("dd", { dir: "auto" });
+      forms.forEach((f, i) => {
+        if (i > 0) dd.append(", ");
+        const attrs: Record<string, string> = { class: `name-form name-form-${kind}` };
+        if (f.lang !== undefined) attrs["lang"] = f.lang;
+        dd.append(el("span", attrs, f.name));
+        if (f.from !== undefined || f.to !== undefined) {
+          dd.append(el("span", { class: "name-form-years" }, ` (${yearSpanLabel(f.from, f.to)})`));
+        }
+        const mark = citationMarker(f.source_ids, citationOrder(e));
+        if (mark !== null) dd.append(" ", mark);
+      });
+      const notes = forms.map((f) => f.note).filter((n): n is string => n !== undefined);
+      if (notes.length > 0) {
+        dd.append(el("div", { class: "name-form-note" }, notes.join(" ")));
+      }
+      dl.append(el("dt", {}, NAME_FORM_LABEL[kind]), dd);
+    }
+  } else if (e.aliases !== undefined && e.aliases.length > 0) {
+    fact("Also known as", e.aliases.join(", "));
+  }
   if (e.calendar_ids !== undefined && e.calendar_ids.length > 0) {
     fact("Calendars", e.calendar_ids.join(", "));
   }

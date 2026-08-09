@@ -97,6 +97,9 @@ export function bce(year: number): IsoYear {
 
 export type DatingMethod =
   | "calendar"
+  /** Tree-ring dating. Yields absolute calendar years, often to the season, so
+   *  it reads in calendar reckoning rather than BP. */
+  | "dendrochronology"
   | "radiocarbon-calibrated"
   | "radiocarbon-uncalibrated"
   | "argon-argon"
@@ -360,8 +363,17 @@ export function uncertaintyOf(v: YearValue): number | undefined {
 // `received` sits here because it is emphatically not scientific dating: no
 // instrument produced it. Leaving it out would make isScientificDating() claim
 // Rome's 753 BCE was measured.
+/**
+ * Methods whose result IS a calendar year, so the readout leads in CE/BCE.
+ *
+ * The axis here is not "scientific versus not". Dendrochronology is as
+ * scientific as radiocarbon and belongs on this side anyway, because a
+ * tree-ring date is an absolute calendar year -- often to the season. Rendering
+ * Chaco Canyon as "1,100 - 700 BP" threw away the precision that makes those
+ * sites remarkable in the first place.
+ */
 const CALENDAR_METHODS: ReadonlySet<DatingMethod> = new Set([
-  "calendar", "received", "unknown",
+  "calendar", "dendrochronology", "received", "unknown",
 ]);
 
 /**
@@ -383,6 +395,7 @@ export type BpSense = "cal" | "radiocarbon" | "geological" | "calendar";
 
 const BP_SENSE: Partial<Record<DatingMethod, BpSense>> = {
   calendar: "calendar",
+  dendrochronology: "calendar",
   "radiocarbon-calibrated": "cal",
   "layer-counting": "cal",
   "radiocarbon-uncalibrated": "radiocarbon",
@@ -434,6 +447,7 @@ export function isScientificDating(v: YearValue): boolean {
 
 export const DATING_METHOD_LABEL: Record<DatingMethod, string> = {
   calendar: "Calendar / historically attested",
+  dendrochronology: "Tree rings",
   "radiocarbon-calibrated": "Radiocarbon, calibrated",
   "radiocarbon-uncalibrated": "Radiocarbon, uncalibrated",
   "argon-argon": "Argon-argon (\u2074\u2070Ar/\u00B3\u2079Ar)",

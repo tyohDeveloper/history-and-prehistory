@@ -45,9 +45,66 @@
     "aliases": {
       "type": "array",
       "uniqueItems": true,
-      "description": "Alternate spellings, translations, and 'also known as' terms. Used for search matching even in a static app.",
+      "description": "Flat list of alternate names, used for search matching. DERIVED from name_forms at build time when name_forms is present -- do not hand-author both, or they drift. Hand-authored aliases remain valid for entities with no naming complexity.",
       "items": {
         "type": "string"
+      }
+    },
+    "name_forms": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "Structured alternate names. A flat string list cannot say why a name differs, who uses it, when it applied, or whether anyone repudiates it -- which is why the hard cases went unfilled while King Tut and Cheops got aliases. Each form carries its own kind so search can index all of them while the UI groups them meaningfully.",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "kind"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "endonym",
+              "exonym",
+              "formal",
+              "common",
+              "translation",
+              "scholarly",
+              "historical",
+              "rejected"
+            ],
+            "description": "endonym: what it called itself. exonym: an outsiders' name. formal: official long form. common: everyday short form. translation: the same referent in another language. scholarly: a modern academic coinage with no ancient referent. historical: used only during a stated period. rejected: actively repudiated by descendant communities."
+          },
+          "lang": {
+            "type": "string",
+            "description": "BCP-47 tag. The display name is implicitly the English form; this makes that assumption visible rather than silent."
+          },
+          "from": {
+            "type": "integer",
+            "description": "First year this form was in use, when the form is period-bound."
+          },
+          "to": {
+            "type": "integer",
+            "description": "Last year this form was in use."
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "One sentence on where the form comes from or why it is rejected."
+          },
+          "source_ids": {
+            "type": "array",
+            "description": "Ids into the normalized source registry. Deduplicated rather than inlined: one chronology work cited by 200 entities is stored once.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
       }
     },
     "parent_id": {
@@ -356,9 +413,10 @@
     },
     "start_dating_method": {
       "type": "string",
-      "description": "How the START boundary's date was arrived at. Orthogonal to precision: a calibrated radiocarbon date and an attested king-list date can share a precision while being entirely different kinds of claim. Selects whether the readout leads in BP or in calendar reckoning, which is computed from the start. Schema 3.0.0 split the former single `dating_method` into per-boundary fields (Q-30): one field cannot describe an entity whose boundaries rest on different science. Schema 3.1.0 adds `received`, for a date arrived at by transmission rather than by measurement or attestation: Rome's 753 BCE from the annalists, Narmer's 3100 from king-lists, the Namazga phase brackets from Masson's ceramic typology. Before it, such entities carried no method at all, because calling them `typological` or `unknown` misdescribed a date whose provenance is in fact perfectly well known — it is just not evidence.",
+      "description": "How the START boundary's date was arrived at. Orthogonal to precision: a calibrated radiocarbon date and an attested king-list date can share a precision while being entirely different kinds of claim. Selects whether the readout leads in BP or in calendar reckoning, which is computed from the start. Schema 3.0.0 split the former single `dating_method` into per-boundary fields (Q-30): one field cannot describe an entity whose boundaries rest on different science. Schema 3.1.0 adds `received`, for a date arrived at by transmission rather than by measurement or attestation: Rome's 753 BCE from the annalists, Narmer's 3100 from king-lists, the Namazga phase brackets from Masson's ceramic typology. Before it, such entities carried no method at all, because calling them `typological` or `unknown` misdescribed a date whose provenance is in fact perfectly well known — it is just not evidence. Schema 3.3.0 adds `dendrochronology`. Its absence was conspicuous: the American Southwest is where Douglass invented tree-ring dating, and filing Chaco under radiocarbon made the readout offer 'cal BP' for sites dated to the year.",
       "enum": [
         "calendar",
+        "dendrochronology",
         "radiocarbon-calibrated",
         "radiocarbon-uncalibrated",
         "argon-argon",
@@ -379,6 +437,7 @@
       "description": "How the END boundary's date was arrived at, when it differs from the start. Neanderthals appear at ~400 ka by uranium-series and disappear at ~40 ka by radiocarbon; recording one method for both is the error this field exists to prevent. Omit when the end is undated or the method is unrecorded -- it is NOT inherited from the start, because silently inheriting is what produced the mislabelling. Schema 3.1.0 adds `received`, for a date arrived at by transmission rather than by measurement or attestation: Rome's 753 BCE from the annalists, Narmer's 3100 from king-lists, the Namazga phase brackets from Masson's ceramic typology. Before it, such entities carried no method at all, because calling them `typological` or `unknown` misdescribed a date whose provenance is in fact perfectly well known — it is just not evidence.",
       "enum": [
         "calendar",
+        "dendrochronology",
         "radiocarbon-calibrated",
         "radiocarbon-uncalibrated",
         "argon-argon",

@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.1.0",
-  "dataset_version": "0.19.0.0",
-  "generated_at": "2026-08-09T22:50:56Z",
+  "schema_version": "3.3.0",
+  "dataset_version": "0.20.0.0",
+  "generated_at": "2026-08-09T23:15:53Z",
   "entities": [
     {
       "id": "global",
@@ -8582,7 +8582,13 @@
       "end_year": 1600,
       "tier": "intermediate",
       "summary": "Mound-building cultures across the American southeast and midwest. Cahokia was North America's largest pre-Columbian city.",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "source_ids": [
+        "britannica-cahokia"
+      ]
     },
     {
       "id": "americas.north.ancestral-puebloan",
@@ -8592,17 +8598,121 @@
       "start_year": 100,
       "end_year": 1600,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "name_forms": [
+        {
+          "name": "Anasazi",
+          "kind": "rejected",
+          "note": "Navajo, glossed as 'enemy ancestors'. Pueblo peoples have rejected it since the early 1990s, and the National Park Service dropped it.",
+          "source_ids": [
+            "nps-mesa-verde-history",
+            "archaeology-magazine-anasazi"
+          ]
+        },
+        {
+          "name": "Hisatsinom",
+          "kind": "endonym",
+          "lang": "hop",
+          "note": "The Hopi term for their own ancestors. No general self-designation for the whole culture is recoverable.",
+          "source_ids": [
+            "nps-mesa-verde-history"
+          ]
+        },
+        {
+          "name": "Ancestral Pueblo culture",
+          "kind": "scholarly",
+          "source_ids": [
+            "britannica-ancestral-pueblo"
+          ]
+        }
+      ],
+      "start_dating_method": "dendrochronology",
+      "end_dating_method": "dendrochronology",
+      "standing": "majority",
+      "source_ids": [
+        "britannica-ancestral-pueblo",
+        "nps-mesa-verde-history",
+        "archaeology-magazine-anasazi"
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "The National Park Service states that no one knows what these people called themselves. Every name for them is somebody else's.",
+          "source_ids": [
+            "nps-mesa-verde-history"
+          ]
+        }
+      ],
+      "aliases": [
+        "Anasazi",
+        "Hisatsinom",
+        "Ancestral Pueblo culture"
+      ]
     },
     {
       "id": "americas.north.haudenosaunee",
       "kind": "era",
-      "name": "Haudenosaunee (Iroquois) Confederacy",
+      "name": "Haudenosaunee Confederacy",
       "parent_id": "americas.north",
       "start_year": 1450,
       "end_year": null,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "disputed",
+      "name_forms": [
+        {
+          "name": "Haudenosaunee",
+          "kind": "endonym",
+          "note": "'People of the longhouse'.",
+          "source_ids": [
+            "haudenosaunee-confederacy-official"
+          ]
+        },
+        {
+          "name": "Iroquois",
+          "kind": "exonym",
+          "note": "A French colonial coinage with no settled etymology; the commonest derivation is a Huron term used by an enemy nation.",
+          "source_ids": [
+            "nysm-mohawk-iroquois"
+          ]
+        },
+        {
+          "name": "Iroquois Confederacy",
+          "kind": "historical",
+          "to": 1990
+        },
+        {
+          "name": "Six Nations",
+          "kind": "common"
+        }
+      ],
+      "start_dating_method": "typological",
+      "standing": "majority",
+      "as_of": "2026-08-09",
+      "date_note": "The founding date is genuinely unresolved. The archaeological mainstream places it in the 1450s; Mann and Fields argued for 1142 from oral tradition and a solar eclipse, and drew a published rebuttal.",
+      "source_ids": [
+        "haudenosaunee-confederacy-official",
+        "nysm-mohawk-iroquois",
+        "mann-fields-sign-in-the-sky",
+        "escholarship-myth-astronomically-dated"
+      ],
+      "alternatives": [
+        {
+          "label": "Founded 1142 (eclipse dating)",
+          "standing": "minority",
+          "start_year": 1142,
+          "note": "Mann and Fields, from oral tradition plus the August 1142 solar eclipse. A dedicated rebuttal disputes the method.",
+          "source_ids": [
+            "mann-fields-sign-in-the-sky",
+            "escholarship-myth-astronomically-dated"
+          ]
+        }
+      ],
+      "aliases": [
+        "Haudenosaunee",
+        "Iroquois",
+        "Iroquois Confederacy",
+        "Six Nations"
+      ]
     },
     {
       "id": "americas.north.comanche",
@@ -8652,11 +8762,51 @@
       "kind": "era",
       "name": "Olmec Civilization",
       "parent_id": "americas.mesoamerica",
-      "start_year": -1500,
+      "start_year": -1200,
       "end_year": -400,
       "tier": "foundational",
       "summary": "Mother culture of Mesoamerica.",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "name_forms": [
+        {
+          "name": "Olmeca",
+          "kind": "exonym",
+          "lang": "nah",
+          "note": "Nahuatl for 'rubber people'. The Mexica used it for the Gulf Coast inhabitants of their own time, two millennia later than this civilization.",
+          "source_ids": [
+            "britannica-olmec"
+          ]
+        },
+        {
+          "name": "Tenocelome",
+          "kind": "scholarly",
+          "note": "'Mouth of the jaguar', proposed by some scholars to avoid the misnomer. Not widely adopted.",
+          "source_ids": [
+            "britannica-olmec"
+          ]
+        }
+      ],
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "San Lorenzo, the earliest major centre, dates to about 1150 BCE.",
+      "source_ids": [
+        "britannica-olmec",
+        "britannica-san-lorenzo"
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "The name is borrowed and wrong. Hermann Beyer applied a Nahuatl word for a much later people to this culture in 1929. No self-designation survives.",
+          "source_ids": [
+            "britannica-olmec"
+          ]
+        }
+      ],
+      "aliases": [
+        "Olmeca",
+        "Tenocelome"
+      ]
     },
     {
       "id": "americas.mesoamerica.zapotec",
@@ -8664,9 +8814,16 @@
       "name": "Zapotec (Monte Albán)",
       "parent_id": "americas.mesoamerica",
       "start_year": -500,
-      "end_year": 800,
+      "end_year": 1521,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "Runs to the Spanish conquest. The often-quoted end around 800 CE is the close of Monte Alban's Classic florescence, not of the Zapotec.",
+      "source_ids": [
+        "britannica-monte-alban"
+      ]
     },
     {
       "id": "americas.mesoamerica.teotihuacan",
@@ -8677,7 +8834,25 @@
       "end_year": 550,
       "tier": "foundational",
       "summary": "One of the largest cities in the ancient world.",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_note": "The city's monumental florescence. Its inhabitants' own name for it is unknown; 'Teotihuacan' is what the Mexica called the ruins centuries later.",
+      "source_ids": [
+        "britannica-teotihuacan"
+      ],
+      "name_forms": [
+        {
+          "name": "Teotihuacan",
+          "kind": "exonym",
+          "lang": "nah",
+          "note": "Nahuatl, roughly 'birthplace of the gods', applied by the Mexica to a city already long abandoned.",
+          "source_ids": [
+            "britannica-teotihuacan"
+          ]
+        }
+      ]
     },
     {
       "id": "americas.mesoamerica.maya",
@@ -8694,6 +8869,13 @@
         "The Maya never formed a single unified empire; they were a network of city-states."
       ],
       "date_precision": "approx",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "source_ids": [
+        "britannica-maya-people",
+        "britannica-maya-people"
+      ],
       "summary": "Long-lived Mesoamerican civilization known for writing, mathematics, and monumental architecture."
     },
     {
@@ -8705,6 +8887,13 @@
       "end_year": 900,
       "tier": "foundational",
       "date_precision": "approx",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "source_ids": [
+        "smarthistory-maya-intro",
+        "britannica-maya-people"
+      ],
       "summary": "Classic Maya florescence of city-states and hieroglyphic writing."
     },
     {
@@ -8715,7 +8904,27 @@
       "start_year": 900,
       "end_year": 1697,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "disputed",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "source_ids": [
+        "britannica-maya-people",
+        "britannica-maya-people"
+      ],
+      "as_of": "2026-08-09",
+      "date_note": "The end depends on which ending is meant: first Spanish contact in 1519, the fall of the northern polities, or Nojpeten in 1697.",
+      "alternatives": [
+        {
+          "label": "Ends 1519 (first Spanish contact)",
+          "standing": "majority",
+          "end_year": 1519,
+          "note": "Dates the end from contact rather than from the last independent Maya polity.",
+          "source_ids": [
+            "britannica-maya-people"
+          ]
+        }
+      ]
     },
     {
       "id": "americas.mesoamerica.toltec",
@@ -8725,17 +8934,52 @@
       "start_year": 900,
       "end_year": 1150,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "disputed",
+      "start_dating_method": "typological",
+      "end_dating_method": "typological",
+      "standing": "minority",
+      "date_note": "These dates describe the archaeological horizon centred on Tula. Whether they describe an empire is exactly what is disputed.",
+      "source_ids": [
+        "britannica-toltec"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Historicists hold that Tula supported a real Toltec state. Sceptics hold that 'Toltec' is substantially a Mexica retrospective ideal. Unresolved.",
+          "source_ids": [
+            "britannica-toltec"
+          ]
+        }
+      ]
     },
     {
       "id": "americas.mesoamerica.purepecha",
       "kind": "era",
-      "name": "Purépecha (Tarascan) Empire",
+      "name": "Purépecha Empire",
       "parent_id": "americas.mesoamerica",
       "start_year": 1300,
       "end_year": 1530,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Purépecha",
+          "kind": "endonym"
+        },
+        {
+          "name": "Tarascan",
+          "kind": "exonym",
+          "note": "A Spanish-era name of disputed and possibly disparaging origin."
+        }
+      ],
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "Founded by Tariacuri with a capital at Patzcuaro around 1300; some sources give 1325.",
+      "aliases": [
+        "Purépecha",
+        "Tarascan"
+      ]
     },
     {
       "id": "americas.mesoamerica.aztec",
@@ -8746,12 +8990,69 @@
       "end_year": 1521,
       "tier": "foundational",
       "aliases": [
-        "Mexica Triple Alliance"
+        "Mexica Triple Alliance",
+        "Mexica",
+        "Excan Tlatoloyan",
+        "Triple Alliance",
+        "Aztec"
       ],
       "calendar_ids": [
         "aztec-calendar"
       ],
-      "date_precision": "approx",
+      "date_precision": "year",
+      "native_name": "Excan Tlatoloyan",
+      "name_forms": [
+        {
+          "name": "Mexica",
+          "kind": "endonym",
+          "lang": "nah",
+          "note": "What the people called themselves, more precisely Culhua-Mexica.",
+          "source_ids": [
+            "britannica-aztec"
+          ]
+        },
+        {
+          "name": "Excan Tlatoloyan",
+          "kind": "formal",
+          "lang": "nah",
+          "note": "The Triple Alliance of Tenochtitlan, Texcoco and Tlacopan, which is what the polity actually was.",
+          "source_ids": [
+            "britannica-aztec"
+          ]
+        },
+        {
+          "name": "Triple Alliance",
+          "kind": "scholarly",
+          "source_ids": [
+            "britannica-aztec"
+          ]
+        },
+        {
+          "name": "Aztec",
+          "kind": "exonym",
+          "note": "Popularised as a civilizational label by Humboldt in the 19th century; never a general self-designation.",
+          "source_ids": [
+            "britannica-aztec"
+          ]
+        }
+      ],
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "The Triple Alliance was formed in 1428 under Itzcoatl against Azcapotzalco, and fell with Tenochtitlan on 13 August 1521.",
+      "source_ids": [
+        "britannica-aztec",
+        "britannica-tenochtitlan"
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "'Aztec Empire' is a 19th-century construct for what was an alliance of three city-states. Its people were Mexica.",
+          "source_ids": [
+            "britannica-aztec"
+          ]
+        }
+      ],
       "summary": "Mexica Triple Alliance dominating central Mexico until Spanish conquest."
     },
     {
@@ -8828,7 +9129,32 @@
       "end_year": -1800,
       "tier": "intermediate",
       "summary": "Oldest known civilization in the Americas.",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "source_ids": [
+        "haas-creamer-ruiz-2004-norte-chico"
+      ],
+      "name_forms": [
+        {
+          "name": "Caral",
+          "kind": "common",
+          "note": "Often named for its largest excavated site.",
+          "source_ids": [
+            "haas-creamer-ruiz-2004-norte-chico"
+          ]
+        },
+        {
+          "name": "Caral-Supe",
+          "kind": "scholarly"
+        }
+      ],
+      "date_note": "Monumental construction in the third millennium BCE, established by a radiocarbon programme published in Nature.",
+      "aliases": [
+        "Caral",
+        "Caral-Supe"
+      ]
     },
     {
       "id": "americas.andes.chavin",
@@ -8838,7 +9164,13 @@
       "start_year": -900,
       "end_year": -200,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "source_ids": [
+        "britannica-chavin"
+      ]
     },
     {
       "id": "americas.andes.moche",
@@ -8846,9 +9178,16 @@
       "name": "Moche",
       "parent_id": "americas.andes",
       "start_year": 100,
-      "end_year": 700,
+      "end_year": 800,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "source_ids": [
+        "britannica-moche"
+      ],
+      "date_note": "Britannica gives the 1st to 8th century CE; the dataset previously ended this a century early."
     },
     {
       "id": "americas.andes.nazca",
@@ -8878,7 +9217,13 @@
       "start_year": 600,
       "end_year": 1000,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "source_ids": [
+        "britannica-huari"
+      ]
     },
     {
       "id": "americas.andes.chimu",
@@ -8888,7 +9233,13 @@
       "start_year": 900,
       "end_year": 1470,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "century",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "source_ids": [
+        "britannica-chimu"
+      ]
     },
     {
       "id": "americas.andes.inca",
@@ -8900,7 +9251,52 @@
       "tier": "foundational",
       "native_name": "Tawantinsuyu",
       "summary": "Largest pre-Columbian empire; stretched ~4,000 km along the Andes.",
-      "date_precision": "approx"
+      "date_precision": "year",
+      "name_forms": [
+        {
+          "name": "Tawantinsuyu",
+          "kind": "endonym",
+          "lang": "qu",
+          "note": "Quechua for 'the four regions together'.",
+          "source_ids": [
+            "britannica-inca"
+          ]
+        },
+        {
+          "name": "Tahuantinsuyu",
+          "kind": "translation",
+          "lang": "qu"
+        },
+        {
+          "name": "Inca",
+          "kind": "exonym",
+          "note": "Properly a ruler's title, extended by convention to the whole state and its people.",
+          "source_ids": [
+            "britannica-inca"
+          ]
+        }
+      ],
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_note": "1438 is the earliest date confidently assignable to imperial history, when Pachacuti took the throne.",
+      "source_ids": [
+        "britannica-inca"
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "'Inca' was the title of the ruler and his class, perhaps 40,000 people. It now names an empire of millions.",
+          "source_ids": [
+            "britannica-inca"
+          ]
+        }
+      ],
+      "aliases": [
+        "Tawantinsuyu",
+        "Tahuantinsuyu",
+        "Inca"
+      ]
     },
     {
       "id": "americas.andes.inca.pachacuti",
@@ -24437,6 +24833,145 @@
         "macinnes-union-and-empire"
       ],
       "summary": "England and Scotland became one state, which is the point at which an English empire can properly be called British."
+    },
+    {
+      "id": "americas.north.mississippian.cahokia",
+      "kind": "period",
+      "name": "Cahokia",
+      "parent_id": "americas.north.mississippian",
+      "start_year": 950,
+      "end_year": 1350,
+      "tier": "foundational",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "First occupied around 700 CE, with the florescence conventionally placed between about 950 and 1350.",
+      "source_ids": [
+        "britannica-cahokia"
+      ],
+      "summary": "The largest pre-Columbian settlement north of Mexico, and the reason 'Mississippian' names a civilization rather than a pottery style."
+    },
+    {
+      "id": "americas.north.ancestral-puebloan.chaco",
+      "kind": "period",
+      "name": "Chaco Canyon",
+      "parent_id": "americas.north.ancestral-puebloan",
+      "start_year": 850,
+      "end_year": 1250,
+      "tier": "foundational",
+      "start_dating_method": "dendrochronology",
+      "end_dating_method": "dendrochronology",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Chaco's great houses are dated by tree rings, often to the year and sometimes to the felling season -- among the most precisely dated architecture anywhere before written records.",
+      "source_ids": [
+        "britannica-chaco-culture"
+      ],
+      "summary": "The administrative and ceremonial centre of the Ancestral Puebloan world, linked by engineered roads across the San Juan Basin."
+    },
+    {
+      "id": "americas.mesoamerica.aztec.tenochtitlan",
+      "kind": "period",
+      "name": "Tenochtitlan",
+      "parent_id": "americas.mesoamerica.aztec",
+      "start_year": 1325,
+      "end_year": 1521,
+      "tier": "foundational",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "year",
+      "date_note": "1325 is the traditional founding date. The city fell on 13 August 1521. It predates the Triple Alliance by a century: the capital is older than the empire it came to head.",
+      "allow_outside_parent_dates": true,
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "1325 is a traditional date from Mexica accounts, not an archaeological one.",
+          "source_ids": [
+            "britannica-tenochtitlan"
+          ]
+        }
+      ],
+      "source_ids": [
+        "britannica-tenochtitlan"
+      ],
+      "summary": "The island capital of the Mexica, and one of the largest cities in the world when Cortés reached it.",
+      "native_name": "Mēxihco-Tenōchtitlan"
+    },
+    {
+      "id": "americas.mesoamerica.zapotec.monte-alban",
+      "kind": "period",
+      "name": "Monte Albán",
+      "parent_id": "americas.mesoamerica.zapotec",
+      "start_year": -500,
+      "end_year": 900,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "date_note": "Rose to regional prominence around 500 BCE with its Classic floruit between about 300 and 900 CE.",
+      "source_ids": [
+        "britannica-monte-alban"
+      ],
+      "summary": "The Zapotec capital on a levelled mountaintop above the Oaxaca valley."
+    },
+    {
+      "id": "americas.mesoamerica.maya.classic.tikal",
+      "kind": "period",
+      "name": "Tikal",
+      "parent_id": "americas.mesoamerica.maya.classic",
+      "start_year": 600,
+      "end_year": 900,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "radiocarbon-calibrated",
+      "standing": "majority",
+      "date_precision": "century",
+      "source_ids": [
+        "smarthistory-maya-intro",
+        "britannica-maya-people"
+      ],
+      "summary": "The largest excavated Classic Maya city, and the clearest single illustration that the Maya were never one empire."
+    },
+    {
+      "id": "americas.andes.inca.machu-picchu",
+      "kind": "period",
+      "name": "Machu Picchu",
+      "parent_id": "americas.andes.inca",
+      "start_year": 1450,
+      "end_year": 1572,
+      "tier": "intermediate",
+      "start_dating_method": "radiocarbon-calibrated",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "Construction is conventionally placed around 1450, in Pachacuti's reign. The site outlasts the empire: it is tied to Vilcabamba, which held out until 1572.",
+      "allow_outside_parent_dates": true,
+      "source_ids": [
+        "britannica-inca"
+      ],
+      "summary": "A royal estate on the Vilcabamba ridge, built under Pachacuti and abandoned within a century of Spanish arrival."
+    },
+    {
+      "id": "americas.andes.inca.qhapaq-nan",
+      "kind": "period",
+      "name": "Qhapaq Ñan",
+      "parent_id": "americas.andes.inca",
+      "start_year": 1438,
+      "end_year": 1533,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "approx",
+      "date_note": "Built largely under the empire but incorporating far older routes, which is why the inscribed network is described as a cultural route rather than an Inca invention.",
+      "source_ids": [
+        "unesco-qhapaq-nan"
+      ],
+      "summary": "The Andean road network that made the empire governable, running some 30,000 kilometres across six modern countries.",
+      "native_name": "Qhapaq Ñan"
     },
     {
       "id": "central-asia.prehistory.namazga",

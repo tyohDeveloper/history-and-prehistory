@@ -1,5 +1,111 @@
 # Changelog
 
+## 0.20.0.0 — A mechanism for names, and the region that needed it most (2026-08-09)
+
+### The mechanism
+
+Three releases of naming work kept hitting the same wall: `aliases` is a flat
+list of strings, and a flat list cannot say **why** a name differs, **who** uses
+it, **when** it applied, or **whether anyone repudiates it**. That is why the
+easy cases got filled in -- Cheops, King Tut, Ozymandias -- while the loaded
+ones went bare. There was nowhere to put the reason.
+
+`name_forms` replaces the guesswork with structure. Each form carries a `kind`:
+
+| kind | meaning |
+| --- | --- |
+| `endonym` | what it called itself |
+| `exonym` | an outsiders' name |
+| `formal` | official long form |
+| `common` | everyday short form |
+| `translation` | same referent, another language |
+| `scholarly` | a modern academic coinage with no ancient referent |
+| `historical` | used only during a stated period |
+| `rejected` | actively repudiated by descendant communities |
+
+plus optional `lang`, `from`/`to`, `note`, and `source_ids`.
+
+**`aliases` is now derived from `name_forms` at build time.** Authors write one
+thing; search indexes every form regardless of kind. The two cannot drift, which
+matters more than it sounds -- drift here means a reader searching "Anasazi"
+silently gets nothing.
+
+The readout groups the forms under plain headings -- "Called itself", "Named by
+outsiders", "Rejected name" -- because the difference between a name a people
+chose and a name imposed on them is content, not metadata about content. A
+rejected form renders struck through and still matches search.
+
+### The region that needed it
+
+The Americas was being handled four different ways at once. `Ancestral Puebloan`
+had the corrected name and no alias, so **"Anasazi" found nothing**.
+`Haudenosaunee (Iroquois)` crammed both names into the display name. `Aztec
+Empire` used an alias. `Inca Empire` used `native_name`. One problem, four
+strategies, none of them stated.
+
+It also had a sourcing split as clean as any in the dataset:
+`americas.prehistory` was **23 of 23 entities cited**, and everything else was
+**0 of 45**. Every archaeological site rigorous, every civilization bare.
+
+The naming cases here are unusually sharp:
+
+* **Olmec** is the best-documented misnomer in the dataset. Nahuatl for "rubber
+  people", used by the Mexica for their own Gulf Coast contemporaries, borrowed
+  by Hermann Beyer in 1929 for a civilization that had ended two thousand years
+  earlier. No endonym survives.
+* **Anasazi** is Navajo, glossed "enemy ancestors", rejected by Pueblo peoples
+  since the early 1990s. The National Park Service states plainly that no one
+  knows what these people called themselves; the Hopi term for their own
+  ancestors is Hisatsinom.
+* **Inca** was the ruler's title, held by perhaps 40,000 people. It now names an
+  empire of millions. The polity was Tawantinsuyu.
+* **Aztec** is a 19th-century label popularised by Humboldt for what was the
+  Excan Tlatoloyan, an alliance of three city-states. Its people were Mexica.
+* **Toltec** keeps its dates and gains a `contested-existence` caveat, because
+  whether Tula supported a real state or "Toltec" is substantially a Mexica
+  retrospective ideal is unresolved.
+* **Haudenosaunee** loses its parenthetical, and its founding becomes the
+  dispute it is: the archaeological mainstream in the 1450s against Mann and
+  Fields' 1142, argued from oral tradition and a solar eclipse -- with the
+  published rebuttal recorded rather than omitted.
+
+Seven capitals and sites were added to childless parents: Cahokia, Chaco Canyon,
+Tenochtitlan, Monte Alban, Tikal, Machu Picchu and the Qhapaq Nan.
+
+### Tree rings
+
+Rendering Ancestral Puebloan revealed a hole. The dataset had no
+`dendrochronology`, so the American Southwest -- where Douglass **invented**
+tree-ring dating, and where great houses are dated to the year and sometimes to
+the felling season -- was filed under radiocarbon and displayed as "1,100 - 700
+BP".
+
+The fix exposed a conceptual error in the frame logic, which chose BP versus
+calendar by asking whether a method was "scientific". That is the wrong axis.
+Dendrochronology is as scientific as radiocarbon and belongs with the calendar
+methods anyway, because its result *is* an absolute calendar year. Chaco now
+reads 850-1250 CE.
+
+### Corrections
+
+The Zapotec ended at 800, which is the close of Monte Alban's Classic
+florescence rather than of the Zapotec, who persisted to the conquest; extended
+to 1521. Moche ended a century early. Tenochtitlan is recorded as predating the
+Triple Alliance by a century -- the capital is older than the empire it came to
+head.
+
+### Deliberately NOT authored
+
+The **Columbian Exchange and contact-era depopulation**. Estimates run from
+roughly 8 million to over 100 million, and the disagreement is methodological
+rather than evidentiary. It needs a pass of its own with the competing
+estimation methods named, not a number wedged into a summary line.
+
+### Counts
+
+1,633 → 1,640 entities. 494 → 519 sources. 358 → 382 cited. Eight entities now
+carry structured `name_forms`. Americas outside prehistory: 0 → 24 sourced.
+
 ## 0.19.0.0 — One naming rule, applied twice (2026-08-09)
 
 ### Correcting yesterday

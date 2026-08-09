@@ -14,6 +14,24 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.18.0.0-app] — 2026-08-09
+
+### Added
+
+- `name_forms`: structured alternate names, each tagged with what kind of name
+  it is (endonym, exonym, formal, common, translation, scholarly, historical,
+  rejected), with optional language and date range. Rendered as grouped rows
+  rather than one flat "Also known as" line; rejected forms are struck through
+  but remain fully searchable.
+- `dendrochronology` as a dating method, reading in calendar years rather than
+  BP. Its absence had Chaco Canyon rendering as "1,100 - 700 BP".
+
+### Changed
+
+- Ships dataset 0.20.0.0, schema 3.3.0. Size baseline 231,526 bytes gzip.
+- `aliases` is now DERIVED from `name_forms` at build time where present, so a
+  corrected name can never cost searchability.
+
 ## [3.17.0.0-app] — 2026-08-09
 
 ### Changed

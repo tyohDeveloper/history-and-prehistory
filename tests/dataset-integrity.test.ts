@@ -18,14 +18,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.19.0.0");
-    expect(schemaVersion).toBe("3.1.0");
+    expect(datasetVersion).toBe("0.20.0.0");
+    expect(schemaVersion).toBe("3.3.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1633);
+    expect(entities.length).toBe(1640);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -105,11 +105,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(358);
+    expect(cited.length).toBe(382);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(364);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(389);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -121,7 +121,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(297);
+    expect(withEnd.length).toBe(321);
 
     const differing = entities
       .filter(
@@ -156,6 +156,10 @@ describe("gap-analysis baseline", () => {
     expect(differing).toEqual([
       "africa.prehistory.rising-star",
       "africa.prehistory.sterkfontein",
+      // Both dug at the start and conquered at the end: the archaeology dates
+      // the building, a written date ends it.
+      "americas.andes.inca.machu-picchu",
+      "americas.mesoamerica.zapotec",
       "europe.mediterranean.greece",
       "europe.mediterranean.rome",
       "europe.mediterranean.rome.republic",
@@ -557,6 +561,25 @@ describe("Central Asia and the Austronesian world", () => {
     const legend = mac.alternatives!.find((a) => a.start_year === -808)!;
     expect(legend.standing).toBe("traditional");
     expect(legend.dating_method).toBe("received");
+  });
+
+  it("keeps every name searchable, including the repudiated ones", () => {
+    // "Ancestral Puebloan" is the right name and it had no alias, so a reader
+    // arriving with "Anasazi" -- the word in every older book -- got nothing.
+    // Correcting a name must never cost findability, so aliases are DERIVED
+    // from name_forms at build time and the two cannot drift.
+    for (const e of entities) {
+      if (e.name_forms === undefined) continue;
+      for (const f of e.name_forms) {
+        if (f.name === e.name) continue;
+        expect(e.aliases ?? [], `${e.id} can be found by "${f.name}"`).toContain(f.name);
+      }
+    }
+    const ap = entities.find((e) => e.id === "americas.north.ancestral-puebloan")!;
+    expect(ap.aliases).toContain("Anasazi");
+    // ...and the rejected form must still be marked as rejected, not quietly
+    // rehabilitated by being searchable.
+    expect(ap.name_forms?.find((f) => f.name === "Anasazi")?.kind).toBe("rejected");
   });
 
   it("does not show the reader the same caveat twice", () => {

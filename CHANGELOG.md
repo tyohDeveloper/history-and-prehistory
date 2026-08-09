@@ -14,6 +14,18 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.21.0.0-app] — 2026-08-09
+
+### Fixed
+
+- `validate.py` counts `name_forms` citations. Two legitimately-used sources
+  were being reported as dead registry weight -- the same blind spot the
+  readout had before `citationOrder` learned to read name forms.
+
+### Changed
+
+- Ships dataset 0.23.0.0. Size baseline 240,614 bytes gzip.
+
 ## [3.20.0.0-app] — 2026-08-09
 
 ### Fixed

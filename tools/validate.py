@@ -134,6 +134,11 @@ for e in entities:
                 errors.append(f"entity {e['id']}: {where} source_ids ref {sid} is not in the registry")
 
     _cite(e.get("source_ids", []), "")
+    # name_forms cite too. Leaving them out here made two legitimately-used
+    # sources look like dead registry weight, which is the same blind spot the
+    # readout had before `citationOrder` learned to read them.
+    for _nf in e.get("name_forms", []):
+        _cite(_nf.get("source_ids", []), "name_forms")
     alts = e.get("alternatives", [])
     for a in alts:
         _cite(a.get("source_ids", []), f"alternative {a.get('label')!r}")

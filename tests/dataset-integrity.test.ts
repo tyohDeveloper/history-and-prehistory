@@ -18,7 +18,7 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.22.0.0");
+    expect(datasetVersion).toBe("0.23.0.0");
     expect(schemaVersion).toBe("3.3.0");
   });
 
@@ -105,7 +105,7 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(388);
+    expect(cited.length).toBe(389);
   });
 
   it("carries dating methods and uncertainty bounds", () => {

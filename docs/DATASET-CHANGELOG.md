@@ -1,5 +1,77 @@
 # Changelog
 
+## 0.23.0.0 — Names that carry an ideology (2026-08-09)
+
+A third tranche, 43 to 54 entities. The first covered states, the second people;
+this one covers names whose problem is not that they are foreign but that they
+encode a viewpoint -- and one case where a name is wrong on purpose.
+
+### The dataset had already taken a side without saying so
+
+Its first region is called **West Asia**, not the Middle East. That is the
+decolonised alternative, and until now it was an unexplained editorial choice
+sitting in the region list.
+
+"Near East" and "Middle East" both measure distance from London. Mahan coined
+"Middle East" in the *National Review* in September 1902, arguing the British
+should hold the Persian Gulf against Russia and Germany; a Middle Eastern
+Studies article finds General Gordon using it two years earlier. Either way it
+is a naval strategist's term for a buffer zone, adopted by the people it was not
+about, and scholars from the region have criticised it as colonialist.
+
+Both names are now on the entity as exonyms, with a caveat saying the dataset
+files the region as West Asia for that reason -- and that this is itself a
+choice rather than a neutral default.
+
+### A mine, a colony, and Cecil Rhodes
+
+The **Kabwe cranium** was found in 1921 at the Broken Hill mine in Northern
+Rhodesia, and Woodward named the species *Homo rhodesiensis*. Roksandic and
+colleagues proposed dissolving the taxon in 2021 partly because the name honours
+a man who disenfranchised southern Africa's black population. Britannica records
+that the "Rhodesian man" framing was used to argue African *Homo* lagged behind
+Eurasian in acquiring modern anatomy.
+
+Named three times for other people. The place is Kabwe, Zambia; the entity keeps
+that and files the rest as `historical` and `rejected`.
+
+Also: **Taforalt** carries its French colonial name Grotte des Pigeons as
+historical, and **Tell es-Sultan** is restored as the endonym alongside the
+biblical Jericho.
+
+### A spelling frozen by rule
+
+**Neanderthal is misspelled on purpose.** The Neander valley was *Neanderthal*
+until Germany's 1901 orthographic reform turned *Thal* into *Tal*. The valley
+changed; the species could not, because zoological nomenclature fixes the
+spelling used at the time of naming. So *Homo neanderthalensis* preserves an
+orthography Germany abolished 125 years ago, while the German common name went
+to *Neandertaler*.
+
+That is a fourth kind of name difference: neither exonym, nor rename, nor a
+classification that lost, but a spelling held in place by a rule while the world
+moved past it.
+
+### Two labels that are arguments
+
+The **Vietnam War** is *Kháng chiến chống Mỹ*, the resistance war against
+America, if you are Vietnamese -- each side names it for the other. The **Age of
+Discovery** is a discovery from one end only; the dataset already preferred Age
+of Sail, and now says why, because the places discovered were without exception
+already inhabited.
+
+### Deliberately not changed
+
+The Gupta **"Golden Age of India"**. The label is loaded and stays as a flat
+alias. Adjudicating whether the period earns it needs the scholarship on that
+specific debate, and recording an unsourced editorial verdict would be worse
+than leaving it untyped.
+
+### Counts
+
+1,640 entities unchanged. 537 → 544 sources. 43 → 54 entities with
+`name_forms`. All eight kinds remain in use; `rejected` grows from one to three.
+
 ## 0.22.0.0 — More formal and historical names (2026-08-09)
 
 A second tranche, from 24 entities carrying `name_forms` to 43. The first

@@ -1,7 +1,7 @@
 {
   "schema_version": "3.3.0",
-  "dataset_version": "0.22.0.0",
-  "generated_at": "2026-08-09T23:43:16Z",
+  "dataset_version": "0.23.0.0",
+  "generated_at": "2026-08-09T23:50:08Z",
   "entities": [
     {
       "id": "global",
@@ -88,7 +88,49 @@
       ],
       "tier": "foundational",
       "summary": "Mesopotamia, the Levant, Anatolia, Iran, and Arabia.",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "name_forms": [
+        {
+          "name": "Middle East",
+          "kind": "exonym",
+          "from": 1902,
+          "note": "Coined by the naval strategist Mahan in 1902 for a buffer zone guarding the route to India. Measured from London.",
+          "source_ids": [
+            "middle-east-term-origins",
+            "tandf-mahan-gordon-middle-east"
+          ]
+        },
+        {
+          "name": "Near East",
+          "kind": "exonym",
+          "note": "The older British term for the Ottoman lands, 'near' relative to Europe and now largely superseded outside archaeology.",
+          "source_ids": [
+            "tandf-mahan-gordon-middle-east"
+          ]
+        },
+        {
+          "name": "West Asia",
+          "kind": "common",
+          "note": "The geographic term, and the one this dataset uses: it locates the region on its own continent rather than by distance from London.",
+          "source_ids": [
+            "tandf-mahan-gordon-middle-east"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "'Near' and 'Middle' East are measured from Europe. This dataset files the region as West Asia for that reason, which is itself a choice rather than a neutral default.",
+          "source_ids": [
+            "tandf-mahan-gordon-middle-east",
+            "middle-east-term-origins"
+          ]
+        }
+      ],
+      "source_ids": [
+        "middle-east-term-origins",
+        "tandf-mahan-gordon-middle-east"
+      ]
     },
     {
       "id": "west-asia.mesopotamia",
@@ -177,11 +219,24 @@
       "start_year": null,
       "end_year": null,
       "aliases": [
-        "Inner Asia"
+        "Inner Asia",
+        "Turkestan"
       ],
       "tier": "intermediate",
       "summary": "Silk Road oases, the Eurasian steppe, and Tibet.",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "name_forms": [
+        {
+          "name": "Inner Asia",
+          "kind": "scholarly",
+          "note": "Overlapping rather than synonymous: Inner Asia usually reaches further into Mongolia and Manchuria."
+        },
+        {
+          "name": "Turkestan",
+          "kind": "historical",
+          "note": "The 19th-century Russian and British name for the region, divided into Russian and Chinese halves."
+        }
+      ]
     },
     {
       "id": "central-asia.core",
@@ -221,11 +276,24 @@
       "start_year": null,
       "end_year": null,
       "aliases": [
-        "Indian subcontinent"
+        "Indian subcontinent",
+        "Hindustan"
       ],
       "tier": "foundational",
       "summary": "Indian subcontinent from Indus civilization through the modern republics.",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "name_forms": [
+        {
+          "name": "Indian subcontinent",
+          "kind": "common",
+          "note": "Geographic rather than political, and older than the states in it."
+        },
+        {
+          "name": "Hindustan",
+          "kind": "historical",
+          "lang": "fa"
+        }
+      ]
     },
     {
       "id": "east-asia",
@@ -296,10 +364,26 @@
       "end_year": null,
       "aliases": [
         "Malay Archipelago",
-        "Insular Southeast Asia"
+        "Insular Southeast Asia",
+        "East Indies"
       ],
       "tier": "intermediate",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "name_forms": [
+        {
+          "name": "Malay Archipelago",
+          "kind": "common"
+        },
+        {
+          "name": "Insular Southeast Asia",
+          "kind": "scholarly"
+        },
+        {
+          "name": "East Indies",
+          "kind": "historical",
+          "note": "The European trading name, and the reason the Caribbean ended up called the West Indies."
+        }
+      ]
     },
     {
       "id": "africa",
@@ -10373,7 +10457,28 @@
       "end_year": 1815,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "European maritime exploration and colonial expansion, roughly Columbus to Napoleon."
+      "name_forms": [
+        {
+          "name": "Age of Exploration",
+          "kind": "common"
+        },
+        {
+          "name": "Age of Discovery",
+          "kind": "common",
+          "note": "A discovery only from the European end. The dataset prefers Age of Sail, which describes the technology rather than assigning a viewpoint."
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "'Discovery' presumes whose knowledge counts as new. The places discovered were, without exception, already inhabited."
+        }
+      ],
+      "summary": "European maritime exploration and colonial expansion, roughly Columbus to Napoleon.",
+      "aliases": [
+        "Age of Exploration",
+        "Age of Discovery"
+      ]
     },
     {
       "id": "cross-regional.columbus",
@@ -10688,10 +10793,28 @@
       "tier": "foundational",
       "aliases": [
         "Second Indochina War",
-        "American War in Vietnam"
+        "American War in Vietnam",
+        "Kháng chiến chống Mỹ"
       ],
       "summary": "Prolonged conflict ending with North Vietnamese victory and reunification.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Kháng chiến chống Mỹ",
+          "kind": "endonym",
+          "lang": "vi",
+          "note": "'Resistance war against America', the Vietnamese name. The war is named for the other side by whoever is speaking."
+        },
+        {
+          "name": "American War in Vietnam",
+          "kind": "common"
+        },
+        {
+          "name": "Second Indochina War",
+          "kind": "scholarly",
+          "note": "Places it in a sequence beginning with the French war, which neither national name does."
+        }
+      ]
     },
     {
       "id": "cross-regional.cuban-missile-crisis",
@@ -17302,14 +17425,62 @@
       "standing": "consensus",
       "date_note": "No method is stated for the 400 ka appearance. The END is radiocarbon: the associated Mousterian closes 41,030-39,260 cal BP by AMS with Bayesian modelling across 40 sites. Radiocarbon cannot reach the start, so the two boundaries rest on different evidence.",
       "source_ids": [
+        "marin-arroyo-2018-cantabria",
+        "neandertal-valley-spelling",
         "smithsonian-human-origins",
-        "marin-arroyo-2018-cantabria"
+        "talkorigins-neandertal-spelling"
       ],
       "summary": "Cold-adapted humans across Europe and western Asia, from about 400,000 years ago until roughly 40,000 years ago.",
       "aliases": [
-        "Neanderthal"
+        "Neanderthal",
+        "Neandertal",
+        "Neandertaler"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Homo neanderthalensis",
+          "kind": "scholarly",
+          "note": "Keeps the pre-1901 'th' because zoological nomenclature fixes the spelling used when a species is named.",
+          "source_ids": [
+            "neandertal-valley-spelling"
+          ]
+        },
+        {
+          "name": "Neanderthal",
+          "kind": "common",
+          "source_ids": [
+            "talkorigins-neandertal-spelling"
+          ]
+        },
+        {
+          "name": "Neandertal",
+          "kind": "common",
+          "note": "The reformed spelling, proposed for English by Vallois in 1952 and common since.",
+          "source_ids": [
+            "talkorigins-neandertal-spelling"
+          ]
+        },
+        {
+          "name": "Neandertaler",
+          "kind": "translation",
+          "lang": "de",
+          "note": "The German common name, which did follow the reform.",
+          "source_ids": [
+            "neandertal-valley-spelling"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "The valley was respelled Neandertal in Germany's 1901 orthographic reform. The species could not follow: taxonomy keeps the original spelling, so the Latin preserves an abolished one.",
+          "source_ids": [
+            "neandertal-valley-spelling",
+            "talkorigins-neandertal-spelling"
+          ]
+        }
+      ]
     },
     {
       "id": "global.prehistory.hominins.denisovans",
@@ -18706,10 +18877,24 @@
       ],
       "summary": "The oldest known town wall and stone tower, built by people who farmed but had not yet made pottery.",
       "aliases": [
-        "Tell es-Sultan"
+        "Tell es-Sultan",
+        "Jericho"
       ],
       "native_name": "أريحا",
       "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Tell es-Sultan",
+          "kind": "endonym",
+          "lang": "ar",
+          "note": "The Arabic name of the mound, and what excavation reports call it."
+        },
+        {
+          "name": "Jericho",
+          "kind": "common",
+          "note": "The biblical name, which attaches the site to a much later story."
+        }
+      ],
       "end_dating_method": "radiocarbon-uncalibrated"
     },
     {
@@ -20466,14 +20651,72 @@
           "source_ids": [
             "grun-2020-kabwe"
           ]
+        },
+        {
+          "kind": "naming-confusion",
+          "text": "Named three times for other people: a mine, a colony, and Cecil Rhodes. Britannica notes the 'Rhodesian man' framing was used to argue African Homo lagged behind Eurasian.",
+          "source_ids": [
+            "britannica-kabwe-cranium",
+            "roksandic-dissolution-rhodesiensis"
+          ]
         }
       ],
       "source_ids": [
-        "grun-2020-kabwe"
+        "britannica-kabwe-cranium",
+        "grun-2020-kabwe",
+        "roksandic-dissolution-rhodesiensis",
+        "smithsonian-kabwe-1"
       ],
       "summary": "Zambian cranium once called Homo rhodesiensis, and the clearest case in African palaeoanthropology of a textbook number being wrong by 200,000 years.",
       "aliases": [
-        "Broken Hill"
+        "Broken Hill",
+        "Rhodesian Man",
+        "Homo rhodesiensis",
+        "Kabwe 1"
+      ],
+      "name_forms": [
+        {
+          "name": "Kabwe",
+          "kind": "common",
+          "note": "The Zambian town where the mine was.",
+          "source_ids": [
+            "smithsonian-kabwe-1"
+          ]
+        },
+        {
+          "name": "Broken Hill",
+          "kind": "historical",
+          "note": "The colonial-era mine and town name, in what was then Northern Rhodesia.",
+          "source_ids": [
+            "smithsonian-kabwe-1",
+            "britannica-kabwe-cranium"
+          ]
+        },
+        {
+          "name": "Rhodesian Man",
+          "kind": "rejected",
+          "note": "Named for Cecil Rhodes. Roksandic and colleagues proposed dissolving the taxon in 2021 partly on that ground.",
+          "source_ids": [
+            "roksandic-dissolution-rhodesiensis",
+            "britannica-kabwe-cranium"
+          ]
+        },
+        {
+          "name": "Homo rhodesiensis",
+          "kind": "rejected",
+          "note": "Woodward's 1921 species name, now generally folded into Homo heidelbergensis.",
+          "source_ids": [
+            "smithsonian-kabwe-1",
+            "roksandic-dissolution-rhodesiensis"
+          ]
+        },
+        {
+          "name": "Kabwe 1",
+          "kind": "scholarly",
+          "source_ids": [
+            "smithsonian-kabwe-1"
+          ]
+        }
       ]
     },
     {
@@ -20730,6 +20973,18 @@
       "summary": "The most extensively radiocarbon-dated Later Stone Age site in North Africa, and the location of the continent's oldest known cemetery.",
       "aliases": [
         "Grotte des Pigeons"
+      ],
+      "name_forms": [
+        {
+          "name": "Taforalt",
+          "kind": "endonym"
+        },
+        {
+          "name": "Grotte des Pigeons",
+          "kind": "historical",
+          "lang": "fr",
+          "note": "The French colonial-era name, still common in the literature."
+        }
       ]
     },
     {
@@ -24037,6 +24292,14 @@
       "summary": "Korea's Neolithic: comb-patterned pottery, coastal foraging, and the slow arrival of millet from northeast China.",
       "aliases": [
         "Jeulmun pottery period"
+      ],
+      "name_forms": [
+        {
+          "name": "Jeulmun pottery period",
+          "kind": "translation",
+          "lang": "ko",
+          "note": "Revised Romanization spelling. Korean romanisation changed system in 2000, so the same word appears two ways across the literature."
+        }
       ]
     },
     {

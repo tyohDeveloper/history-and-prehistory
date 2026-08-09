@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.3.0"
-DATASET_VERSION = "0.22.0.0"
+DATASET_VERSION = "0.23.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1680,6 +1680,7 @@ from extensions_naming import extend as _extend_naming
 from extensions_americas_civ import extend as _extend_americas_civ
 from naming_formal_historical import extend as _naming_formal_historical
 from naming_formal_historical_2 import extend as _naming_formal_historical_2
+from naming_formal_historical_3 import extend as _naming_formal_historical_3
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1694,6 +1695,7 @@ _extend_naming(E, entities)
 _extend_americas_civ(E, entities)
 _naming_formal_historical(E, entities)
 _naming_formal_historical_2(E, entities)
+_naming_formal_historical_3(E, entities)
 
 # Marks received conventions across the corpus, so it runs after every module
 # that could author one.
@@ -3149,6 +3151,7 @@ from extensions_naming import NAMING_SOURCES  # noqa: E402
 from extensions_americas_civ import AMERICAS_CIV_SOURCES  # noqa: E402
 from naming_formal_historical import FORMAL_HISTORICAL_SOURCES  # noqa: E402
 from naming_formal_historical_2 import NAMING_2_SOURCES  # noqa: E402
+from naming_formal_historical_3 import NAMING_3_SOURCES  # noqa: E402
 sources.extend(SEASIA_OCEANIA_SOURCES)
 sources.extend(INDUS_SOURCES)
 sources.extend(EAST_ASIA_SOURCES)
@@ -3162,6 +3165,7 @@ sources.extend(NAMING_SOURCES)
 sources.extend(AMERICAS_CIV_SOURCES)
 sources.extend(FORMAL_HISTORICAL_SOURCES)
 sources.extend(NAMING_2_SOURCES)
+sources.extend(NAMING_3_SOURCES)
 from received_conventions import RECEIVED_CONVENTION_SOURCES  # noqa: E402
 sources.extend(RECEIVED_CONVENTION_SOURCES)
 

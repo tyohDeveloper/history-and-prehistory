@@ -1,7 +1,7 @@
 {
   "schema_version": "3.3.0",
-  "dataset_version": "0.22.0.0",
-  "generated_at": "2026-08-09T23:43:16Z",
+  "dataset_version": "0.23.0.0",
+  "generated_at": "2026-08-09T23:50:08Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -3476,6 +3476,55 @@
       "citation": "Review of Mazumdar, Insurgent Sepoys: Europe Views the Revolt, e-Journal of Portuguese History (Brown University)",
       "url": "https://www.brown.edu/Departments/Portuguese_Brazilian_Studies/ejph/html/issue19/pdf/v10n1a06.pdf",
       "note": "The event 'has been named in many different ways depending on the perspective of who is naming it'."
+    },
+    {
+      "id": "tandf-mahan-gordon-middle-east",
+      "kind": "scholarly",
+      "citation": "Koppes, 'Captain Mahan, General Gordon, and the origins of the term Middle East', Middle Eastern Studies",
+      "url": "https://www.tandfonline.com/doi/pdf/10.1080/00263207608700307",
+      "note": "Both 'Middle East' and 'Near East' reflect a Europe-centred view. Mahan is the usual coiner, in 1902, but General Sir Thomas Edward Gordon used the term in 1900."
+    },
+    {
+      "id": "middle-east-term-origins",
+      "kind": "reference",
+      "citation": "'Middle East', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Middle_East",
+      "note": "Mahan's coinage appeared in 'The Persian Gulf and International Relations', National Review, September 1902. Scholars from the region have criticised the term as Eurocentric and colonialist."
+    },
+    {
+      "id": "smithsonian-kabwe-1",
+      "kind": "institutional",
+      "citation": "'Kabwe 1', Smithsonian Human Origins Program",
+      "url": "https://humanorigins.si.edu/evidence/human-fossils/fossils/kabwe-1",
+      "note": "Found 1921 at Broken Hill, now Kabwe, Zambia. Woodward assigned it to a new species, Homo rhodesiensis; most now assign it to Homo heidelbergensis."
+    },
+    {
+      "id": "britannica-kabwe-cranium",
+      "kind": "reference",
+      "citation": "'Kabwe cranium', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Kabwe-cranium",
+      "note": "Records that the find, as 'Rhodesian man', convinced some scholars that African Homo lagged behind Eurasian Homo in acquiring modern anatomy."
+    },
+    {
+      "id": "roksandic-dissolution-rhodesiensis",
+      "kind": "scholarly",
+      "citation": "On the proposed dissolution of Homo rhodesiensis (summarised at 'Homo rhodesiensis')",
+      "url": "https://en.wikipedia.org/wiki/Homo_rhodesiensis",
+      "note": "Roksandic and colleagues recommended dissolving the taxon in 2021, partly because the name honours Cecil Rhodes."
+    },
+    {
+      "id": "neandertal-valley-spelling",
+      "kind": "reference",
+      "citation": "'Neandertal (valley)', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Neandertal_(valley)",
+      "note": "The 1901 German orthographic reform changed Thal to Tal. Scientific names kept the original spelling, because taxonomy retains the spelling at the time of naming."
+    },
+    {
+      "id": "talkorigins-neandertal-spelling",
+      "kind": "reference",
+      "citation": "'Neanderthal or Neandertal?', TalkOrigins Archive",
+      "url": "https://talkorigins.org/faqs/homs/spelling.html",
+      "note": "Vallois proposed in 1952 that English follow the reformed German spelling, and '-tal' has been common since."
     },
     {
       "id": "masson-altyn-depe-summary",

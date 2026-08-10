@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
   "dataset_version": "0.34.1.0",
-  "generated_at": "2026-08-10T09:16:52Z",
+  "generated_at": "2026-08-10T09:28:13Z",
   "entities": [
     {
       "id": "global",
@@ -7950,7 +7950,7 @@
       "id": "europe.mediterranean.rome.empire",
       "kind": "era",
       "name": "Roman Empire",
-      "parent_id": "europe.mediterranean",
+      "parent_id": "europe.mediterranean.rome",
       "start_year": -27,
       "end_year": 476,
       "tier": "foundational",
@@ -7958,7 +7958,7 @@
       "start_dating_method": "calendar",
       "end_dating_method": "calendar",
       "standing": "majority",
-      "date_note": "The start is solid: the Senate granted Octavian the title Augustus on 16 January 27 BCE. The end is not. 476 CE is an 18th-century convention popularised by Gibbon, whose own footnote conceded the year is not positively ascertained, and a 2024 paper argues even the day is doubtful.",
+      "date_note": "The start is solid: the Senate granted Octavian the title Augustus on 16 January 27 BCE. The end is not. 476 CE is an 18th-century convention popularised by Gibbon, whose own footnote conceded the year is not positively ascertained, and a 2024 paper argues even the day is doubtful. Filed under Ancient Rome alongside the Kingdom and the Republic. It previously sat beside them as a sibling, which left the emperors unreachable from Rome by either search or drilling.",
       "as_of": "2026-08-08",
       "source_ids": [
         "perseus-harpers-augustus-imperator",

@@ -1705,6 +1705,7 @@ import reigns_from_research
 from reigns_from_research import extend as _reigns_from_research
 from upgrade_sources import extend as _upgrade_sources
 from co_rulers import extend as _co_rulers
+from fix_rome_parent import extend as _fix_rome_parent
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1743,6 +1744,7 @@ _china_legendary(E, entities)
 _reigns_from_research(E, entities)
 _upgrade_sources(E, entities)
 _co_rulers(E, entities)
+_fix_rome_parent(E, entities)
 _romanisation_chinese(E, entities)
 _regions_multiregional(E, entities)
 

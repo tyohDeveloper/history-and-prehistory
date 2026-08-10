@@ -83,24 +83,128 @@ export function foldForSearch(s: string): string {
     .replace(/[^a-z0-9]+/g, "");
 }
 
+/** Fold to lowercase words, keeping word boundaries that `foldForSearch` throws away. */
+function foldToWords(s: string): string[] {
+  return s
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((w) => w.length > 0);
+}
+
+/**
+ * Words dropped from a query, because they appear inside real names and match everything.
+ *
+ * Without this, "rulers of rome" ranked "Controlled Use of Fire" and "The Drowning of
+ * Doggerland" above the Roman entities -- they matched on "of". These are only stripped
+ * from the QUERY; entity names keep their own words, so "Year of the Four Emperors" is
+ * still findable by its distinctive words.
+ */
+const SEARCH_STOPWORDS = new Set([
+  "a", "an", "and", "are", "as", "at", "by", "did", "do", "for", "from", "in", "is",
+  "of", "on", "or", "the", "to", "was", "were", "what", "which", "who", "whom", "whose",
+  "with",
+]);
+
+/**
+ * Search names, aliases, and the names of ancestors.
+ *
+ * The previous version folded away word boundaries and then used `includes`, which had
+ * two consequences a user hit immediately. Searching **Rome** returned "Domestication of
+ * the Dromedary" — fold "dromedary" and the letters r-o-m-e sit right there in the middle
+ * — and it returned neither the Roman Kingdom, the Republic, the Empire, nor any of the
+ * seventy-odd Roman rulers. "rulers of rome" returned nothing at all, because a
+ * multi-word query was folded into one long token that matched no single name.
+ *
+ * Three changes:
+ *
+ * **Words, not substrings.** A query word must match a whole haystack word or its start.
+ * That kills Dromedary without any special-casing.
+ *
+ * **Every query word must match somewhere.** So multi-word queries work, and "rulers of
+ * rome" finds things under Rome instead of nothing.
+ *
+ * **Ancestors count, at a lower score.** A reader searching "Rome" wants the city, the
+ * kingdom, the republic and the emperors — and the emperors' own names contain none of
+ * that. Matching against the ancestor chain reaches them, ranked below anything whose own
+ * name matches, so Ancient Rome still comes first and the rulers follow.
+ */
 export function searchEntities(
   list: readonly Entity[],
   query: string,
   limit = 50,
 ): Entity[] {
-  const q = foldForSearch(query);
-  if (q.length === 0) return [];
+  const raw = foldToWords(query);
+  // Keep stopwords only if the query is nothing but stopwords, so searching "the" still
+  // does something rather than silently returning nothing.
+  const stripped = raw.filter((w) => !SEARCH_STOPWORDS.has(w));
+  const terms = stripped.length > 0 ? stripped : raw;
+  if (terms.length === 0) return [];
+
+  const byId = new Map(list.map((e) => [e.id, e]));
+  const ownWords = new Map<string, string[]>();
+  for (const e of list) {
+    ownWords.set(
+      e.id,
+      [e.name, e.native_name ?? "", ...(e.aliases ?? [])].flatMap(foldToWords),
+    );
+  }
+
+  // Ancestor words, memoised: an entity deep in the tree would otherwise walk its whole
+  // lineage once per search term.
+  const lineageWords = new Map<string, string[]>();
+  const lineageOf = (id: string): string[] => {
+    const cached = lineageWords.get(id);
+    if (cached !== undefined) return cached;
+    const entity = byId.get(id);
+    const parentId = entity?.parent_id ?? null;
+    const words =
+      parentId === null || parentId === undefined
+        ? []
+        : [...(ownWords.get(parentId) ?? []), ...lineageOf(parentId)];
+    lineageWords.set(id, words);
+    return words;
+  };
+
+  const hits = (word: string, haystack: string[]): boolean =>
+    haystack.some((w) => w === word || w.startsWith(word));
+
   const scored: { e: Entity; score: number }[] = [];
   for (const e of list) {
-    const haystacks = [e.name, e.native_name ?? "", ...(e.aliases ?? [])];
-    let best = -1;
-    for (const h of haystacks) {
-      const f = foldForSearch(h);
-      if (f === q) best = Math.max(best, 3);
-      else if (f.startsWith(q)) best = Math.max(best, 2);
-      else if (f.includes(q)) best = Math.max(best, 1);
+    const own = ownWords.get(e.id) ?? [];
+    const inherited = lineageOf(e.id);
+    let total = 0;
+    let matchedOwn = false;
+    let matchedTerms = 0;
+    for (const term of terms) {
+      if (own.some((w) => w === term)) {
+        total += 3;
+        matchedOwn = true;
+        matchedTerms += 1;
+      } else if (own.some((w) => w.startsWith(term))) {
+        total += 2;
+        matchedOwn = true;
+        matchedTerms += 1;
+      } else if (hits(term, inherited)) {
+        // Reachable through an ancestor, which is weaker than matching on its own name.
+        total += 0.4;
+        matchedTerms += 1;
+      }
+      // A word that matches nothing is ignored rather than disqualifying the entity.
+      // Requiring every word to match meant "rulers of rome" returned nothing at all,
+      // because no entity is named "rulers" and none is named "of". People type
+      // questions into search boxes, and answering with an empty list is the wrong
+      // response to a query that names a real thing.
     }
-    if (best > 0) scored.push({ e, score: best - TIER_ORDER[e.tier] * 0.1 });
+    if (matchedTerms === 0) continue;
+    // Matching more of the query outranks matching one word strongly, so "tang emperor"
+    // puts Tang emperors above everything that merely contains "emperor".
+    const coverage = matchedTerms / terms.length;
+    // An entity found only through its ancestors ranks below every direct match.
+    const score =
+      (matchedOwn ? total : total - 2) + coverage * 2 - TIER_ORDER[e.tier] * 0.1;
+    scored.push({ e, score });
   }
   scored.sort((a, b) => b.score - a.score || compareEntities(a.e, b.e));
   return scored.slice(0, limit).map((s) => s.e);

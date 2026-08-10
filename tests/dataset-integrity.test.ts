@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { calendars, datasetVersion, entities, referenceFrames, schemaVersion, sources, themes } from "../src/dataset/dataset";
 import type { Entity } from "../src/entity/entity";
-import { buildIndex } from "../src/entity/tree";
+import { buildIndex , searchEntities } from "../src/entity/tree";
 import { datingOf } from "../src/chrono/fromEntity";
 import { isScientificDating } from "../src/chrono/year";
 
@@ -994,5 +994,51 @@ describe("the Essentials view", () => {
       })
       .map((e) => `${e.id} under ${e.parent_id}`);
     expect(stranded).toEqual([]);
+  });
+});
+
+describe("search", () => {
+  // Reported from use: searching "Rome" returned "Domestication of the Dromedary" and none
+  // of Rome's rulers, and "rulers of rome" returned nothing at all.
+  it("does not match inside a word", () => {
+    // Fold "dromedary" and the letters r-o-m-e sit in the middle of it.
+    const hits = searchEntities(entities, "Rome").map((e) => e.name);
+    expect(hits.some((n) => /dromedar/i.test(n))).toBe(false);
+    expect(hits).toContain("Ancient Rome");
+  });
+
+  it("reaches descendants through an ancestor's name", () => {
+    // The emperors' own names contain nothing resembling "Rome".
+    const hits = searchEntities(entities, "Rome").map((e) => e.id);
+    expect(hits).toContain("europe.mediterranean.rome");
+    expect(hits.some((id) => id.startsWith("europe.mediterranean.rome.empire."))).toBe(true);
+    // And the parent still outranks its descendants.
+    expect(hits[0]).toBe("europe.mediterranean.rome");
+  });
+
+  it("answers a multi-word query instead of returning nothing", () => {
+    const hits = searchEntities(entities, "rulers of rome").map((e) => e.id);
+    expect(hits.length).toBeGreaterThan(5);
+    expect(hits[0]).toBe("europe.mediterranean.rome");
+  });
+
+  it("ignores function words that appear inside real names", () => {
+    // "of" alone would otherwise rank "Controlled Use of Fire" and "The Drowning of
+    // Doggerland" above anything Roman.
+    const hits = searchEntities(entities, "rulers of rome").map((e) => e.name).slice(0, 5);
+    expect(hits.some((n) => /Doggerland|Controlled Use of Fire/.test(n))).toBe(false);
+  });
+
+  it("ranks entities matching more of the query higher", () => {
+    const hits = searchEntities(entities, "tang emperor").map((e) => e.id);
+    expect(hits[0] ?? "").toMatch(/^east-asia\.china\.tang/);
+  });
+
+  it("still disambiguates identical romanisations", () => {
+    // Two distinct Japanese eras romanise to Showa; the native form separates them.
+    const hits = searchEntities(entities, "Showa");
+    expect(hits.length).toBeGreaterThanOrEqual(2);
+    const natives = new Set(hits.map((e) => e.native_name));
+    expect(natives.size).toBeGreaterThanOrEqual(2);
   });
 });

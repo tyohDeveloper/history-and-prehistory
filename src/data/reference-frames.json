@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.3.0",
-  "dataset_version": "0.24.0.0",
-  "generated_at": "2026-08-10T01:38:17Z",
+  "schema_version": "3.4.0",
+  "dataset_version": "0.25.0.0",
+  "generated_at": "2026-08-10T02:07:24Z",
   "frames": [
     {
       "id": "lucy",
@@ -130,7 +130,7 @@
       "end_year": 1918,
       "anchor_set": "global",
       "summary": "First industrialized total war; collapsed four empires (Russian, German, Austro-Hungarian, Ottoman).",
-      "entity_id": "cross-regional.ww1"
+      "entity_id": "global.short-20c.ww1"
     },
     {
       "id": "ww2",
@@ -139,7 +139,7 @@
       "end_year": 1945,
       "anchor_set": "global",
       "summary": "Global war fought in Europe, Asia, and the Pacific; ended with Axis defeat and the atomic bombings of Hiroshima and Nagasaki.",
-      "entity_id": "cross-regional.ww2"
+      "entity_id": "global.short-20c.ww2"
     },
     {
       "id": "confucius",
@@ -350,7 +350,7 @@
       "year": 1969,
       "anchor_set": "global",
       "summary": "First human landing on the Moon.",
-      "entity_id": "cross-regional.moon-landing"
+      "entity_id": "global.short-20c.moon-landing"
     },
     {
       "id": "berlin-wall-anchor",
@@ -358,7 +358,7 @@
       "year": 1989,
       "anchor_set": "global",
       "summary": "Symbolic end of the Cold War division of Europe.",
-      "entity_id": "cross-regional.berlin-wall-fall"
+      "entity_id": "global.short-20c.berlin-wall-fall"
     },
     {
       "id": "nine-eleven",

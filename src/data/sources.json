@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.3.0",
-  "dataset_version": "0.24.0.0",
-  "generated_at": "2026-08-10T01:38:17Z",
+  "schema_version": "3.4.0",
+  "dataset_version": "0.25.0.0",
+  "generated_at": "2026-08-10T02:07:24Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -3560,6 +3560,87 @@
       "citation": "'Naming the oldest civilisation of India: Indus, Harappan or Sindhu-Sarasvati?', The Indian Express",
       "url": "https://indianexpress.com/article/research/naming-the-oldest-civilisation-of-india-indus-harappan-or-sindhu-sarasvati-9701782/",
       "note": "Some historians call the Sarasvati label hyper-nationalist; against that, the Ghaggar-Sarasvati identification dates from 1855 and has been endorsed by generations of specialists."
+    },
+    {
+      "id": "heidelberg-voc-charter-1602",
+      "kind": "scholarly",
+      "citation": "Heidelberg University Press, on the VOC charter",
+      "url": "https://books.ub.uni-heidelberg.de/arthistoricum/catalog/view/499/1049/87966",
+      "note": "The charter (octrooi) signed on 20 March 1602 marked the formal creation of the Company."
+    },
+    {
+      "id": "umassd-the-voc",
+      "kind": "scholarly",
+      "citation": "'The VOC 1602-1799', University of Massachusetts Dartmouth",
+      "url": "https://bpb-us-w2.wpmucdn.com/sites.umassd.edu/dist/4/628/files/2017/02/thevoc.pdf"
+    },
+    {
+      "id": "cambridge-wic-bankruptcy-1674",
+      "kind": "scholarly",
+      "citation": "'Recapitalization or Reform? The Bankruptcy of the First Dutch West India Company and the Formation of the Second, 1674', Cambridge University Press",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/15B612FB4C8EF77F1B24EA2513A129D2/S016511531900007Xa.pdf/recapitalization_or_reform_the_bankruptcy_of_the_first_dutch_west_india_company_and_the_formation_of_the_second_west_india_company_1674.pdf",
+      "note": "The first WIC was 'disbanded and destroyed' by the States General in September 1674; a second was founded with a charter largely taken from the first."
+    },
+    {
+      "id": "encyclopedia-com-dutch-west-india-company",
+      "kind": "reference",
+      "citation": "'Dutch West India Company', Encyclopedia.com",
+      "url": "https://www.encyclopedia.com/history/modern-europe/benelux-history/dutch-west-india-company",
+      "note": "Chartered 3 June 1621; dissolved September 1674; the second company abolished in 1791."
+    },
+    {
+      "id": "britannica-dutch-west-india-company",
+      "kind": "reference",
+      "citation": "'Dutch West India Company', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Dutch-West-India-Company",
+      "note": "Gives 1621-1794: taken over by the state in 1791 and dissolved in the wake of the French invasion of the Dutch Republic in 1794."
+    },
+    {
+      "id": "loc-wic-charter-1621",
+      "kind": "institutional",
+      "citation": "Charter of the Dutch West India Company, 1621, Library of Congress",
+      "url": "https://www.loc.gov/item/2021666732/"
+    },
+    {
+      "id": "georgian-era-definition",
+      "kind": "reference",
+      "citation": "'Georgian era', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Georgian_era",
+      "note": "1714 to 1830, often extended to 1837. Historians debate the ending, with the deaths of George IV in 1830 or William IV in 1837 as the usual markers."
+    },
+    {
+      "id": "univ-oeb-georgian-britain",
+      "kind": "scholarly",
+      "citation": "'Britain in the 18th Century: The Georgian Era', Université Oum El Bouaghi",
+      "url": "http://tele-ens.univ-oeb.dz/moodle/pluginfile.php/146951/mod_forum/attachment/5437/Lesson%20One,%2018th%20C%20Britain,%20political%20developments.pdf?forcedownload=1"
+    },
+    {
+      "id": "french-colonial-empire-dates",
+      "kind": "reference",
+      "citation": "'French colonial empire', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/French_colonial_empire",
+      "note": "Gives 1534 (Cartier's claim) as the start and 1814 as the end of the first empire, by which time most of it had been lost or sold."
+    },
+    {
+      "id": "globalsecurity-french-colonial-empire",
+      "kind": "reference",
+      "citation": "'French Colonial Empire', GlobalSecurity.org",
+      "url": "https://www.globalsecurity.org/military/world/europe/fr-colony-1.htm",
+      "note": "Frames the first empire as 1603-1803, ending with the Louisiana sale rather than the Napoleonic collapse."
+    },
+    {
+      "id": "smithsonian-crosby-columbian-exchange",
+      "kind": "institutional",
+      "citation": "'Alfred W. Crosby on the Columbian Exchange', Smithsonian Magazine",
+      "url": "https://www.smithsonianmag.com/history/alfred-w-crosby-on-the-columbian-exchange-98116477/",
+      "note": "Crosby coined the term in his 1972 book of the same name."
+    },
+    {
+      "id": "population-history-indigenous-americas",
+      "kind": "reference",
+      "citation": "'Population history of the Indigenous peoples of the Americas', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Population_history_of_the_Indigenous_peoples_of_the_Americas",
+      "note": "Collects the competing estimates: Kroeber low, Dobyns 90-112 million on an assumed 95 per cent epidemic mortality, Denevan about 55 million, with modern work converging near 45-60 million."
     },
     {
       "id": "masson-altyn-depe-summary",

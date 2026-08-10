@@ -1,18 +1,29 @@
 {
-  "schema_version": "3.3.0",
-  "dataset_version": "0.24.0.0",
-  "generated_at": "2026-08-10T01:38:17Z",
+  "schema_version": "3.4.0",
+  "dataset_version": "0.25.0.0",
+  "generated_at": "2026-08-10T02:07:24Z",
   "entities": [
     {
       "id": "global",
       "kind": "region",
-      "name": "Global",
+      "name": "Global & Multi-Regional",
       "parent_id": null,
       "start_year": null,
       "end_year": null,
-      "summary": "Cross-regional and worldwide frames (BCE/CE, prehistoric ages, world wars).",
+      "summary": "Everything that is not one region: worldwide frames and events, and the spans that cross regional boundaries.",
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "date_note": "Renamed from 'Global'. The old summary read 'cross-regional and worldwide frames', which ran together two different claims -- being everywhere, and being in several places at once. Empires that span regions are filed in the region they came from and cross-linked to the others; each entity's `regions` list records every region it touches.",
+      "name_forms": [
+        {
+          "name": "Global",
+          "kind": "historical",
+          "note": "The earlier name, which invited world events and multi-region empires into the same bucket."
+        }
+      ],
+      "aliases": [
+        "Global"
+      ]
     },
     {
       "id": "europe",
@@ -73,7 +84,11 @@
       "start_year": null,
       "end_year": null,
       "tier": "intermediate",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "regions": [
+        "central-asia",
+        "europe"
+      ]
     },
     {
       "id": "west-asia",
@@ -197,6 +212,10 @@
         "national-archives-persia-iran",
         "sup-discovery-of-iran"
       ],
+      "regions": [
+        "central-asia",
+        "west-asia"
+      ],
       "aliases": [
         "Persia"
       ]
@@ -293,6 +312,10 @@
           "kind": "historical",
           "lang": "fa"
         }
+      ],
+      "regions": [
+        "central-asia",
+        "south-asia"
       ]
     },
     {
@@ -590,12 +613,26 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "summary": "Empires and imperial processes that spanned more than one world region, gathered so they can be compared with each other.",
+      "summary": "Empires that spanned more than one world region, and the processes that built and dismantled them.",
       "date_precision": "unknown",
-      "date_note": "Grouping the caliphates, the Mongol empire and the European maritime empires together is a deliberate scholarly move rather than a filing convenience. Burbank and Cooper treat them as comparable, and the Oxford World History of Empire frames the comparison as a corrective to older single-region imperial history.",
+      "date_note": "The test for this category: a single polity whose territory crossed more than one of this dataset's regions, or a process of imperial expansion or contraction that did the same. A worldwide event that belongs to nobody -- a war, a pandemic, a moon landing -- is filed under Global instead. Grouping the caliphates, the Mongols and the European maritime empires for comparison is a deliberate scholarly move, not a filing convenience: Burbank and Cooper treat them as comparable, and the Oxford World History of Empire frames the comparison as a corrective to older single-region imperial history.",
       "source_ids": [
         "burbank-cooper-empires-world-history",
         "oxford-world-history-of-empire"
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Most empires here are cross-linked from the region they came from, not moved. The caliphates are the exception: they are the only ones with no single regional home.",
+          "source_ids": [
+            "burbank-cooper-empires-world-history"
+          ]
+        }
+      ],
+      "regions": [
+        "central-asia",
+        "europe",
+        "west-asia"
       ]
     },
     {
@@ -1517,7 +1554,11 @@
         "west-asia.iran.achaemenid"
       ],
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "west-asia"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic",
@@ -1532,7 +1573,11 @@
       "cross_parent_ids": [
         "europe.mediterranean.hellenistic"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy1",
@@ -1542,7 +1587,11 @@
       "start_year": -305,
       "end_year": -283,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.cleopatra7",
@@ -1553,7 +1602,11 @@
       "end_year": -30,
       "tier": "foundational",
       "summary": "Last active pharaoh of Egypt. Allied with Julius Caesar and Mark Antony; defeated at Actium in 31 BCE.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.roman-byzantine",
@@ -1566,7 +1619,11 @@
       "cross_parent_ids": [
         "europe.mediterranean.rome.empire"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.kush",
@@ -5769,7 +5826,11 @@
           "note": "Overthrown by the Ming, which claimed the Mandate of Heaven."
         }
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.yuan.kublai",
@@ -5781,6 +5842,10 @@
       "tier": "foundational",
       "summary": "Grandson of Genghis; founder of the Yuan Dynasty.",
       "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ],
       "allow_outside_parent_dates": true,
       "date_note": "Kublai was Great Khan from 1260; founded the Yuan dynasty in 1271."
     },
@@ -6426,7 +6491,15 @@
       "end_year": -330,
       "tier": "foundational",
       "summary": "First Persian empire; largest of its time.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "cross-regional"
+      ],
+      "regions": [
+        "africa",
+        "europe",
+        "west-asia"
+      ]
     },
     {
       "id": "west-asia.iran.achaemenid.cyrus2",
@@ -6497,6 +6570,10 @@
         "europe.mediterranean.hellenistic"
       ],
       "date_precision": "approx",
+      "regions": [
+        "europe",
+        "west-asia"
+      ],
       "summary": "Hellenistic successor state to Alexander's eastern conquests; the biggest single Diadochi kingdom."
     },
     {
@@ -7044,6 +7121,10 @@
           "lang": "fa",
           "note": "The Persian and later Islamic form, through which he entered a very different body of legend."
         }
+      ],
+      "regions": [
+        "europe",
+        "west-asia"
       ]
     },
     {
@@ -7062,6 +7143,12 @@
       "source_ids": [
         "smarthistory-ancient-greece-intro",
         "british-museum-greece-rome-department"
+      ],
+      "regions": [
+        "africa",
+        "europe",
+        "south-asia",
+        "west-asia"
       ],
       "summary": "Age of Greek-influenced kingdoms from Alexander's death to Actium."
     },
@@ -7258,6 +7345,13 @@
             "ucl-thesis-fall-of-western-empire"
           ]
         }
+      ],
+      "cross_parent_ids": [
+        "cross-regional"
+      ],
+      "regions": [
+        "africa",
+        "europe"
       ],
       "summary": "Monarchical Roman state from Augustus's Principate to the deposition of Romulus Augustulus."
     },
@@ -7795,6 +7889,9 @@
         "elcano-spanish-withdrawal-sahara",
         "murcia-1898-spanish-empire"
       ],
+      "cross_parent_ids": [
+        "cross-regional"
+      ],
       "summary": "First truly global empire; the leading colonial power of the 16th century."
     },
     {
@@ -7814,6 +7911,9 @@
         "avalon-tordesillas",
         "britannica-treaty-tordesillas",
         "brown-ejph-portuguese-empire"
+      ],
+      "cross_parent_ids": [
+        "cross-regional"
       ],
       "summary": "Pioneered European maritime exploration; earliest and longest-lived colonial empire."
     },
@@ -8190,6 +8290,9 @@
           "kind": "common"
         }
       ],
+      "cross_parent_ids": [
+        "cross-regional"
+      ],
       "summary": "Multi-national empire from Peter the Great to the abdication of Nicholas II.",
       "aliases": [
         "Rossiyskaya Imperiya",
@@ -8320,7 +8423,11 @@
       "cross_parent_ids": [
         "south-asia"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "south-asia"
+      ]
     },
     {
       "id": "central-asia.kushan.kanishka",
@@ -8330,7 +8437,11 @@
       "start_year": 127,
       "end_year": 150,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "south-asia"
+      ]
     },
     {
       "id": "central-asia.turkic-khaganate",
@@ -8371,7 +8482,14 @@
       "end_year": 1368,
       "tier": "foundational",
       "summary": "Largest contiguous empire in world history.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "cross-regional"
+      ],
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "central-asia.mongol-empire.genghis",
@@ -8415,7 +8533,11 @@
         "west-asia.iran"
       ],
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "west-asia"
+      ]
     },
     {
       "id": "central-asia.mongol-empire.chagatai",
@@ -8529,6 +8651,10 @@
           "note": "After the Turkic majority of its nomadic population."
         }
       ],
+      "regions": [
+        "central-asia",
+        "europe"
+      ],
       "allow_outside_parent_dates": true
     },
     {
@@ -8539,7 +8665,10 @@
       "start_year": 1370,
       "end_year": 1507,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "cross-regional"
+      ]
     },
     {
       "id": "central-asia.timurid.timur",
@@ -8721,7 +8850,11 @@
       "cross_parent_ids": [
         "europe.mediterranean.hellenistic"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "europe",
+        "south-asia"
+      ]
     },
     {
       "id": "south-asia.gupta",
@@ -10491,10 +10624,10 @@
       "summary": "Post-Treaty-of-Waitangi Aotearoa/New Zealand."
     },
     {
-      "id": "cross-regional.bronze-collapse",
+      "id": "global.bronze-age.collapse",
       "kind": "event",
       "name": "Late Bronze Age Collapse",
-      "parent_id": "cross-regional",
+      "parent_id": "global.bronze-age",
       "start_year": -1200,
       "end_year": -1150,
       "tier": "intermediate",
@@ -10507,13 +10640,14 @@
       "aliases": [
         "Bronze Age Collapse"
       ],
-      "summary": "Systemic collapse of Mediterranean and Near Eastern civilizations c. 1200 BCE."
+      "summary": "Systemic collapse of Mediterranean and Near Eastern civilizations c. 1200 BCE.",
+      "allow_outside_parent_dates": true
     },
     {
-      "id": "cross-regional.axial-age",
+      "id": "global.classical-antiquity.axial-age",
       "kind": "era",
       "name": "Axial Age",
-      "parent_id": "cross-regional",
+      "parent_id": "global.classical-antiquity",
       "start_year": -800,
       "end_year": -200,
       "tier": "intermediate",
@@ -10521,10 +10655,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "cross-regional.black-death",
+      "id": "global.middle-ages.black-death",
       "kind": "event",
       "name": "Black Death",
-      "parent_id": "cross-regional",
+      "parent_id": "global.middle-ages",
       "start_year": 1346,
       "end_year": 1353,
       "tier": "foundational",
@@ -10575,10 +10709,10 @@
       "summary": "Christopher Columbus's first landfall in the Bahamas; opened sustained contact between the Old World and the Americas."
     },
     {
-      "id": "cross-regional.ww1",
+      "id": "global.short-20c.ww1",
       "kind": "event",
       "name": "World War I",
-      "parent_id": "cross-regional",
+      "parent_id": "global.short-20c",
       "start_year": 1914,
       "end_year": 1918,
       "tier": "foundational",
@@ -10586,10 +10720,10 @@
       "summary": "World War I — the first industrialized total war; ended four empires."
     },
     {
-      "id": "cross-regional.ww2",
+      "id": "global.short-20c.ww2",
       "kind": "event",
       "name": "World War II",
-      "parent_id": "cross-regional",
+      "parent_id": "global.short-20c",
       "start_year": 1939,
       "end_year": 1945,
       "tier": "foundational",
@@ -10597,10 +10731,10 @@
       "summary": "World War II — the deadliest conflict in human history; ended with the atomic bombings of Japan."
     },
     {
-      "id": "cross-regional.cold-war",
+      "id": "global.short-20c.cold-war",
       "kind": "era",
       "name": "Cold War",
-      "parent_id": "cross-regional",
+      "parent_id": "global.short-20c",
       "start_year": 1947,
       "end_year": 1991,
       "tier": "foundational",
@@ -10868,10 +11002,10 @@
       "end_dating_method": "calendar"
     },
     {
-      "id": "cross-regional.korean-war",
+      "id": "global.short-20c.korean-war",
       "kind": "event",
       "name": "Korean War",
-      "parent_id": "cross-regional.cold-war",
+      "parent_id": "global.short-20c.cold-war",
       "start_year": 1950,
       "end_year": 1953,
       "tier": "foundational",
@@ -10879,43 +11013,25 @@
       "date_precision": "approx"
     },
     {
-      "id": "cross-regional.vietnam-war",
+      "id": "global.short-20c.vietnam-war",
       "kind": "event",
       "name": "Vietnam War",
-      "parent_id": "cross-regional.cold-war",
+      "parent_id": "global.short-20c.cold-war",
       "start_year": 1955,
       "end_year": 1975,
       "tier": "foundational",
       "aliases": [
         "Second Indochina War",
-        "American War in Vietnam",
-        "Kháng chiến chống Mỹ"
+        "American War in Vietnam"
       ],
       "summary": "Prolonged conflict ending with North Vietnamese victory and reunification.",
-      "date_precision": "approx",
-      "name_forms": [
-        {
-          "name": "Kháng chiến chống Mỹ",
-          "kind": "endonym",
-          "lang": "vi",
-          "note": "'Resistance war against America', the Vietnamese name. The war is named for the other side by whoever is speaking."
-        },
-        {
-          "name": "American War in Vietnam",
-          "kind": "common"
-        },
-        {
-          "name": "Second Indochina War",
-          "kind": "scholarly",
-          "note": "Places it in a sequence beginning with the French war, which neither national name does."
-        }
-      ]
+      "date_precision": "approx"
     },
     {
-      "id": "cross-regional.cuban-missile-crisis",
+      "id": "global.short-20c.cuban-missile-crisis",
       "kind": "event",
       "name": "Cuban Missile Crisis",
-      "parent_id": "cross-regional.cold-war",
+      "parent_id": "global.short-20c.cold-war",
       "start_year": 1962,
       "end_year": 1962,
       "tier": "foundational",
@@ -10923,10 +11039,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "cross-regional.moon-landing",
+      "id": "global.short-20c.moon-landing",
       "kind": "event",
       "name": "Apollo 11 Moon Landing",
-      "parent_id": "cross-regional.cold-war",
+      "parent_id": "global.short-20c.cold-war",
       "start_year": 1969,
       "end_year": 1969,
       "tier": "foundational",
@@ -10934,10 +11050,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "cross-regional.berlin-wall-fall",
+      "id": "global.short-20c.berlin-wall-fall",
       "kind": "event",
       "name": "Fall of the Berlin Wall",
-      "parent_id": "cross-regional.cold-war",
+      "parent_id": "global.short-20c.cold-war",
       "start_year": 1989,
       "end_year": 1989,
       "tier": "foundational",
@@ -10945,10 +11061,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "cross-regional.soviet-dissolution",
+      "id": "global.short-20c.soviet-dissolution",
       "kind": "event",
       "name": "Dissolution of the Soviet Union",
-      "parent_id": "cross-regional.cold-war",
+      "parent_id": "global.short-20c.cold-war",
       "start_year": 1991,
       "end_year": 1991,
       "tier": "foundational",
@@ -13063,7 +13179,11 @@
       "start_year": 1294,
       "end_year": 1307,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.yuan.wuzong-yuan",
@@ -13073,7 +13193,11 @@
       "start_year": 1307,
       "end_year": 1311,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.yuan.renzong-yuan",
@@ -13083,7 +13207,11 @@
       "start_year": 1311,
       "end_year": 1320,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.yuan.yingzong-yuan",
@@ -13093,7 +13221,11 @@
       "start_year": 1320,
       "end_year": 1323,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.yuan.taiding",
@@ -13103,7 +13235,11 @@
       "start_year": 1323,
       "end_year": 1328,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.yuan.tianshun-yuan",
@@ -13113,7 +13249,11 @@
       "start_year": 1328,
       "end_year": 1328,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.yuan.wenzong-yuan",
@@ -13123,7 +13263,11 @@
       "start_year": 1328,
       "end_year": 1332,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.yuan.mingzong-yuan",
@@ -13133,7 +13277,11 @@
       "start_year": 1329,
       "end_year": 1329,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.yuan.ningzong-yuan",
@@ -13143,7 +13291,11 @@
       "start_year": 1332,
       "end_year": 1332,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.yuan.huizong-yuan",
@@ -13154,7 +13306,11 @@
       "end_year": 1370,
       "tier": "intermediate",
       "summary": "Last Yuan emperor of China; expelled to Mongolia.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.ming.jianwen",
@@ -14379,7 +14535,11 @@
       "start_year": -525,
       "end_year": -522,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "west-asia"
+      ]
     },
     {
       "id": "africa.nile.egypt.late-period.dyn27-persian1.darius-i-egypt",
@@ -14389,7 +14549,11 @@
       "start_year": -522,
       "end_year": -486,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "west-asia"
+      ]
     },
     {
       "id": "africa.nile.egypt.late-period.dyn27-persian1.xerxes-i-egypt",
@@ -14399,7 +14563,11 @@
       "start_year": -486,
       "end_year": -465,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "west-asia"
+      ]
     },
     {
       "id": "africa.nile.egypt.late-period.dyn27-persian1.artaxerxes-i-egypt",
@@ -14409,7 +14577,11 @@
       "start_year": -465,
       "end_year": -424,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "west-asia"
+      ]
     },
     {
       "id": "africa.nile.egypt.late-period.dyn28",
@@ -14552,7 +14724,11 @@
       "end_year": -246,
       "tier": "intermediate",
       "summary": "Commissioned the Septuagint translation of the Hebrew Bible.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-iii",
@@ -14562,7 +14738,11 @@
       "start_year": -246,
       "end_year": -222,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-iv",
@@ -14572,7 +14752,11 @@
       "start_year": -221,
       "end_year": -204,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-v",
@@ -14583,7 +14767,11 @@
       "end_year": -181,
       "tier": "intermediate",
       "summary": "His decree is preserved on the Rosetta Stone.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-vi",
@@ -14593,7 +14781,11 @@
       "start_year": -180,
       "end_year": -145,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-vii",
@@ -14603,7 +14795,11 @@
       "start_year": -145,
       "end_year": -144,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-viii",
@@ -14613,7 +14809,11 @@
       "start_year": -170,
       "end_year": -116,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.cleopatra-iii",
@@ -14623,7 +14823,11 @@
       "start_year": -142,
       "end_year": -101,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-ix",
@@ -14633,7 +14837,11 @@
       "start_year": -116,
       "end_year": -81,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-x",
@@ -14643,7 +14851,11 @@
       "start_year": -110,
       "end_year": -88,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.berenice-iii",
@@ -14653,7 +14865,11 @@
       "start_year": -81,
       "end_year": -80,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-xi",
@@ -14663,7 +14879,11 @@
       "start_year": -80,
       "end_year": -80,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-xii",
@@ -14674,7 +14894,11 @@
       "end_year": -51,
       "tier": "intermediate",
       "summary": "Cleopatra VII's father.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-xiii",
@@ -14685,7 +14909,11 @@
       "end_year": -47,
       "tier": "intermediate",
       "summary": "Co-ruler with sister Cleopatra VII; killed by Caesar.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.ptolemy-xiv",
@@ -14695,7 +14923,11 @@
       "start_year": -47,
       "end_year": -44,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "africa.nile.egypt.ptolemaic.caesarion",
@@ -14706,7 +14938,11 @@
       "end_year": -30,
       "tier": "intermediate",
       "summary": "Son of Cleopatra VII and Julius Caesar; last Ptolemy.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
       "id": "east-asia.japan.kamakura.shogun-yoritomo",
@@ -15351,7 +15587,11 @@
       "end_year": -180,
       "tier": "intermediate",
       "summary": "Founder of the Indo-Greek kingdom; pushed into the Punjab.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "europe",
+        "south-asia"
+      ]
     },
     {
       "id": "south-asia.indo-greek.menander-i",
@@ -15380,6 +15620,10 @@
           "lang": "pi",
           "note": "His name in the Pali Milindapanha, where he debates a Buddhist monk and converts. He is remembered in two traditions under two names."
         }
+      ],
+      "regions": [
+        "europe",
+        "south-asia"
       ]
     },
     {
@@ -15390,7 +15634,11 @@
       "start_year": -80,
       "end_year": -65,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "europe",
+        "south-asia"
+      ]
     },
     {
       "id": "south-asia.indo-greek.strato-ii",
@@ -15401,7 +15649,11 @@
       "end_year": 10,
       "tier": "specialist",
       "summary": "Last known Indo-Greek king; ended by Indo-Scythian conquest.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "europe",
+        "south-asia"
+      ]
     },
     {
       "id": "south-asia.gupta.chandragupta-i",
@@ -19077,7 +19329,11 @@
         "higham-2014-neanderthal"
       ],
       "summary": "The deep human past of Europe, from Neanderthals and cave art to farming, monuments, and metal-age cultures.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "europe"
+      ]
     },
     {
       "id": "europe.prehistory.neanderthal-europe",
@@ -19112,6 +19368,10 @@
       ],
       "summary": "Neanderthals lived across Europe for hundreds of thousands of years before disappearing after a period of overlap with modern humans.",
       "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "europe"
+      ],
       "end_dating_method": "radiocarbon-calibrated"
     },
     {
@@ -19367,7 +19627,11 @@
         "lazaridis-2025-yamnaya"
       ],
       "summary": "The deep history of Inner Asia, including early hominins, horse herding, and the Bronze Age steppe networks.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "europe"
+      ]
     },
     {
       "id": "central-asia.prehistory.denisova-cave",
@@ -19486,6 +19750,10 @@
       ],
       "summary": "Mobile pastoral communities of the Pontic-Caspian steppe whose movements had major effects across Europe and Asia.",
       "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "europe"
+      ],
       "end_dating_method": "radiocarbon-calibrated"
     },
     {
@@ -26283,6 +26551,9 @@
       "aliases": [
         "First British Empire",
         "Second British Empire"
+      ],
+      "cross_parent_ids": [
+        "cross-regional"
       ]
     },
     {
@@ -26441,6 +26712,317 @@
       ],
       "summary": "The Andean road network that made the empire governable, running some 30,000 kilometres across six modern countries.",
       "native_name": "Qhapaq Ñan"
+    },
+    {
+      "id": "europe.western.netherlands",
+      "kind": "reign",
+      "name": "The Netherlands",
+      "parent_id": "europe.western",
+      "start_year": 1581,
+      "end_year": null,
+      "tier": "specialist",
+      "summary": "The Dutch Republic and its successors, and the two chartered companies through which a small state ran a global trading empire.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "europe.western.netherlands.voc",
+      "kind": "era",
+      "name": "Dutch East India Company",
+      "parent_id": "europe.western.netherlands",
+      "start_year": 1602,
+      "end_year": 1799,
+      "tier": "foundational",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "year",
+      "date_note": "Chartered 20 March 1602; the charter lapsed on 31 December 1799. The 1798, 1799 and 1800 dates in circulation are not rival claims but three steps: the Batavian Republic assumed the company's debts in March 1798, the charter lapsed at the end of 1799, and the state took administrative control in 1800.",
+      "name_forms": [
+        {
+          "name": "VOC",
+          "kind": "common"
+        },
+        {
+          "name": "Vereenigde Oostindische Compagnie",
+          "kind": "formal",
+          "lang": "nl"
+        },
+        {
+          "name": "United East India Company",
+          "kind": "formal"
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Not a company in the modern sense. Its charter granted powers of war, treaty-making, coinage and colonial government.",
+          "source_ids": [
+            "heidelberg-voc-charter-1602"
+          ]
+        }
+      ],
+      "source_ids": [
+        "heidelberg-voc-charter-1602",
+        "umassd-the-voc"
+      ],
+      "summary": "A chartered company with the power to wage war, coin money and hold territory, which for two centuries was the Dutch presence in Asia.",
+      "native_name": "Vereenigde Oostindische Compagnie",
+      "aliases": [
+        "VOC",
+        "Vereenigde Oostindische Compagnie",
+        "United East India Company"
+      ]
+    },
+    {
+      "id": "europe.western.netherlands.wic-first",
+      "kind": "era",
+      "name": "Dutch West India Company",
+      "parent_id": "europe.western.netherlands",
+      "start_year": 1621,
+      "end_year": 1674,
+      "tier": "intermediate",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "year",
+      "date_note": "Chartered 3 June 1621 and declared bankrupt by the States General in September 1674. This is the first company; a second followed immediately under a near-identical charter, and sources that give '1621-1794' have run the two together.",
+      "source_ids": [
+        "loc-wic-charter-1621",
+        "cambridge-wic-bankruptcy-1674",
+        "encyclopedia-com-dutch-west-india-company"
+      ],
+      "summary": "The Atlantic counterpart of the VOC: Brazil, the Caribbean, New Netherland, and a dominant share of the Dutch slave trade."
+    },
+    {
+      "id": "europe.western.netherlands.wic-second",
+      "kind": "era",
+      "name": "Second Dutch West India Company",
+      "parent_id": "europe.western.netherlands",
+      "start_year": 1675,
+      "end_year": 1792,
+      "tier": "specialist",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-09",
+      "date_note": "Chartered 1675 and wound up on 1 January 1792, having been abolished by decision in 1791.",
+      "alternatives": [
+        {
+          "label": "Ends 1791 (abolition decided)",
+          "standing": "majority",
+          "end_year": 1791,
+          "note": "The States General decided not to renew the patent in 1791; the formal end followed on 1 January 1792.",
+          "source_ids": [
+            "encyclopedia-com-dutch-west-india-company"
+          ]
+        },
+        {
+          "label": "Ends 1794 (French invasion)",
+          "standing": "minority",
+          "end_year": 1794,
+          "note": "Britannica dates the dissolution to the French invasion of the Dutch Republic.",
+          "source_ids": [
+            "britannica-dutch-west-india-company"
+          ]
+        }
+      ],
+      "source_ids": [
+        "cambridge-wic-bankruptcy-1674",
+        "encyclopedia-com-dutch-west-india-company",
+        "britannica-dutch-west-india-company"
+      ],
+      "summary": "The successor company, narrower in remit and increasingly dependent on the slave trade."
+    },
+    {
+      "id": "europe.western.france.colonial-empire-first",
+      "kind": "era",
+      "name": "First French Colonial Empire",
+      "parent_id": "europe.western.france",
+      "start_year": 1534,
+      "end_year": 1814,
+      "tier": "foundational",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-09",
+      "date_note": "Both ends are choices. 1534 is Cartier's claim rather than a settlement, and the end depends on which loss counts as terminal.",
+      "alternatives": [
+        {
+          "label": "1605-1803 (Port Royal to the Louisiana sale)",
+          "standing": "majority",
+          "start_year": 1605,
+          "end_year": 1803,
+          "note": "Dates the empire from the first actual colony and ends it with the sale of Louisiana rather than the Napoleonic collapse.",
+          "source_ids": [
+            "globalsecurity-french-colonial-empire"
+          ]
+        }
+      ],
+      "source_ids": [
+        "french-colonial-empire-dates",
+        "globalsecurity-french-colonial-empire"
+      ],
+      "summary": "New France, the Caribbean sugar islands and the Indian trading posts, most of it lost or sold within two generations."
+    },
+    {
+      "id": "europe.western.france.colonial-empire-second",
+      "kind": "era",
+      "name": "Second French Colonial Empire",
+      "parent_id": "europe.western.france",
+      "start_year": 1830,
+      "end_year": 1962,
+      "tier": "foundational",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "year",
+      "date_note": "1830 is the invasion of Algiers and is essentially uncontested. The end is Algerian independence, declared on 5 July 1962 -- a date chosen to fall exactly 132 years after the landing, which makes it a commemorative convention as much as an administrative fact.",
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "5 July 1962 is a symbolic date. The Evian ceasefire was in March and France recognised independence on 3 July.",
+          "source_ids": [
+            "french-colonial-empire-dates"
+          ]
+        }
+      ],
+      "source_ids": [
+        "french-colonial-empire-dates"
+      ],
+      "summary": "Rebuilt around Algeria and expanded across West and Central Africa and Indochina, and dismantled in fifteen years after 1945."
+    },
+    {
+      "id": "europe.western.britain.georgian",
+      "kind": "era",
+      "name": "The Georgian Era",
+      "parent_id": "europe.western",
+      "start_year": 1714,
+      "end_year": 1837,
+      "tier": "foundational",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-09",
+      "date_note": "1714 is George I's accession on the death of Queen Anne. The end is disputed: 1830 with George IV, the last of the four Georges, or 1837 with William IV, which is the boundary with the Victorian era.",
+      "name_forms": [
+        {
+          "name": "Hanoverian Britain",
+          "kind": "common"
+        },
+        {
+          "name": "House of Hanover",
+          "kind": "formal"
+        },
+        {
+          "name": "Regency era",
+          "kind": "historical",
+          "from": 1811,
+          "to": 1820,
+          "note": "Strictly the regency of George IV as Prince of Wales during his father's illness, though used loosely for the wider period.",
+          "source_ids": [
+            "georgian-era-definition"
+          ]
+        }
+      ],
+      "alternatives": [
+        {
+          "label": "Ends 1830 (death of George IV)",
+          "standing": "majority",
+          "end_year": 1830,
+          "note": "Ends the era with the last of the four kings it is named after.",
+          "source_ids": [
+            "georgian-era-definition",
+            "univ-oeb-georgian-britain"
+          ]
+        }
+      ],
+      "source_ids": [
+        "georgian-era-definition",
+        "univ-oeb-georgian-britain"
+      ],
+      "summary": "Hanoverian Britain: the Jacobite risings, the loss of America, the Regency, and the industrial transformation that reshaped the country.",
+      "aliases": [
+        "Hanoverian Britain",
+        "House of Hanover",
+        "Regency era"
+      ]
+    },
+    {
+      "id": "global.columbian-exchange",
+      "kind": "era",
+      "name": "The Columbian Exchange",
+      "parent_id": "global",
+      "start_year": 1492,
+      "end_year": 1700,
+      "tier": "foundational",
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
+      "standing": "majority",
+      "date_precision": "disputed",
+      "as_of": "2026-08-09",
+      "date_note": "The end date is a convention: the exchange has no terminus, and 1700 marks roughly where the sharpest demographic phase closes. The pre-contact population, and so the scale of the collapse, is one of the least settled quantities in the discipline.",
+      "name_forms": [
+        {
+          "name": "Columbian Exchange",
+          "kind": "scholarly",
+          "note": "Coined by Alfred Crosby in his 1972 book of that name; the phrase is younger than most of the scholarship it now organises.",
+          "source_ids": [
+            "smithsonian-crosby-columbian-exchange"
+          ]
+        },
+        {
+          "name": "Great Dying",
+          "kind": "common",
+          "note": "Used for the depopulation specifically, and naming it separately makes clear that 'exchange' is a very mild word for it."
+        }
+      ],
+      "alternatives": [
+        {
+          "label": "Pre-contact population c. 90-112 million (Dobyns)",
+          "standing": "minority",
+          "note": "Dobyns's 1966 estimate, built on an assumption of about 95 per cent epidemic mortality.",
+          "source_ids": [
+            "population-history-indigenous-americas"
+          ]
+        },
+        {
+          "label": "Pre-contact population c. 55 million (Denevan)",
+          "standing": "majority",
+          "note": "Denevan's 1976 middle estimate; modern work converges near 45-60 million.",
+          "source_ids": [
+            "population-history-indigenous-americas"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Estimates of the pre-contact population range from 8 million to over 100 million. The disagreement is methodological, not evidentiary, so more digging does not narrow it.",
+          "source_ids": [
+            "population-history-indigenous-americas"
+          ]
+        },
+        {
+          "kind": "naming-confusion",
+          "text": "'Exchange' describes crops and livestock accurately and the human consequence not at all: depopulation estimates run from 75 to 95 per cent.",
+          "source_ids": [
+            "population-history-indigenous-americas",
+            "smithsonian-crosby-columbian-exchange"
+          ]
+        }
+      ],
+      "source_ids": [
+        "smithsonian-crosby-columbian-exchange",
+        "population-history-indigenous-americas"
+      ],
+      "summary": "The transfer of crops, animals, people and above all disease between hemispheres, and the demographic collapse that followed in the Americas.",
+      "aliases": [
+        "Columbian Exchange",
+        "Great Dying"
+      ]
     },
     {
       "id": "central-asia.prehistory.namazga",

@@ -14,6 +14,19 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.23.0.0-app] — 2026-08-09
+
+### Added
+
+- `regions`: a DERIVED list of the top-level geographies an entity is reachable
+  from, following `parent_id` and `cross_parent_ids` in both directions. Schema
+  3.4.0. Not authored, so it cannot drift from the tree.
+
+### Changed
+
+- "Global" is now "Global & Multi-Regional".
+- Ships dataset 0.25.0.0. Size baseline 247,636 bytes gzip.
+
 ## [3.22.0.0-app] — 2026-08-09
 
 ### Security

@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 243169,
+  "gzipBytes": 247636,
   "recordedAt": "2026-08-09",
-  "note": "v3.22.0.0 + a fourth tranche of name forms (data 0.24.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.23.0.0 + restructure, gaps and derived regions (data 0.25.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.3.0",
-  "dataset_version": "0.24.0.0",
-  "generated_at": "2026-08-10T01:38:17Z",
+  "schema_version": "3.4.0",
+  "dataset_version": "0.25.0.0",
+  "generated_at": "2026-08-10T02:07:24Z",
   "themes": [
     {
       "id": "empires-classical",
@@ -75,13 +75,13 @@
       "name": "Collapses & Dark Ages",
       "description": "Times when established orders unraveled.",
       "entity_ids": [
-        "cross-regional.bronze-collapse",
+        "global.bronze-age.collapse",
         "africa.nile.egypt.fip",
         "africa.nile.egypt.sip",
         "africa.nile.egypt.tip",
         "europe.mediterranean.greece.dark-age",
         "east-asia.china.three-kingdoms",
-        "cross-regional.black-death"
+        "global.middle-ages.black-death"
       ],
       "sort": "chronological"
     },
@@ -205,11 +205,11 @@
       "name": "Cold War Proxy Conflicts",
       "description": "Regional conflicts in which the US and USSR backed opposing sides.",
       "entity_ids": [
-        "cross-regional.korean-war",
-        "cross-regional.vietnam-war",
-        "cross-regional.cuban-missile-crisis",
-        "cross-regional.berlin-wall-fall",
-        "cross-regional.soviet-dissolution"
+        "global.short-20c.korean-war",
+        "global.short-20c.vietnam-war",
+        "global.short-20c.cuban-missile-crisis",
+        "global.short-20c.berlin-wall-fall",
+        "global.short-20c.soviet-dissolution"
       ],
       "sort": "chronological"
     },

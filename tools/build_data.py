@@ -23,8 +23,8 @@ DATA.mkdir(exist_ok=True)
 # ---- Versions --------------------------------------------------------------
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
-SCHEMA_VERSION = "3.3.0"
-DATASET_VERSION = "0.24.0.0"
+SCHEMA_VERSION = "3.4.0"
+DATASET_VERSION = "0.25.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1475,22 +1475,25 @@ E("oceania.polynesia.new-zealand", "era", "New Zealand (post-Waitangi)", "oceani
 # CROSS-REGIONAL EVENTS
 # =============================================================================
 
-E("cross-regional.bronze-collapse", "event", "Late Bronze Age Collapse", "cross-regional",
+E("global.bronze-age.collapse", "event", "Late Bronze Age Collapse", "global.bronze-age",
   start=-1200, end=-1150, tier="intermediate",
   start_year_min=-1220, start_year_max=-1180,
   end_year_min=-1150, end_year_max=-1100,
   start_precision="approx", end_precision="approx",
   aliases=["Bronze Age Collapse"],
-  summary="Systemic collapse of Mediterranean and Near Eastern civilizations c. 1200 BCE.")
-E("cross-regional.axial-age", "era", "Axial Age", "cross-regional", start=-800, end=-200, tier="intermediate",
+  summary="Systemic collapse of Mediterranean and Near Eastern civilizations c. 1200 BCE.",
+  # The Collapse straddles the boundary it defines: it ends the Bronze Age
+  # and opens the Iron Age, so it cannot sit wholly inside either.
+  allow_outside_parent_dates=True)
+E("global.classical-antiquity.axial-age", "era", "Axial Age", "global.classical-antiquity", start=-800, end=-200, tier="intermediate",
   summary="Concurrent religious and philosophical revolutions: Buddha, Confucius, Zoroaster, Hebrew prophets, Greek philosophers.")
-E("cross-regional.black-death", "event", "Black Death", "cross-regional", start=1346, end=1353, tier="foundational",
+E("global.middle-ages.black-death", "event", "Black Death", "global.middle-ages", start=1346, end=1353, tier="foundational",
   summary="Bubonic plague pandemic that killed 30–60% of Europe's population and swept Asia and North Africa.")
 E("cross-regional.age-of-sail", "era", "Age of Exploration / Age of Sail", "cross-regional", start=1418, end=1815, tier="foundational")
 E("cross-regional.columbus", "event", "Columbus reaches the Americas", "cross-regional", start=1492, end=1492, tier="foundational")
-E("cross-regional.ww1", "event", "World War I", "cross-regional", start=1914, end=1918, tier="foundational")
-E("cross-regional.ww2", "event", "World War II", "cross-regional", start=1939, end=1945, tier="foundational")
-E("cross-regional.cold-war", "era", "Cold War", "cross-regional", start=1947, end=1991, tier="foundational")
+E("global.short-20c.ww1", "event", "World War I", "global.short-20c", start=1914, end=1918, tier="foundational")
+E("global.short-20c.ww2", "event", "World War II", "global.short-20c", start=1939, end=1945, tier="foundational")
+E("global.short-20c.cold-war", "era", "Cold War", "global.short-20c", start=1947, end=1991, tier="foundational")
 
 
 # =============================================================================
@@ -1577,23 +1580,23 @@ E(f"{rome}.republic.late.actium", "event", "Battle of Actium", f"{rome}.republic
   summary="Octavian's naval victory over Antony and Cleopatra; effective end of the Republic.")
 
 # --- Modern conflicts and Cold War events ---
-E("cross-regional.korean-war", "event", "Korean War", "cross-regional.cold-war",
+E("global.short-20c.korean-war", "event", "Korean War", "global.short-20c.cold-war",
   start=1950, end=1953, tier="foundational",
   summary="First major hot conflict of the Cold War; UN-backed South Korea vs. Chinese/Soviet-backed North.")
-E("cross-regional.vietnam-war", "event", "Vietnam War", "cross-regional.cold-war",
+E("global.short-20c.vietnam-war", "event", "Vietnam War", "global.short-20c.cold-war",
   start=1955, end=1975, tier="foundational",
   aliases=["Second Indochina War", "American War in Vietnam"],
   summary="Prolonged conflict ending with North Vietnamese victory and reunification.")
-E("cross-regional.cuban-missile-crisis", "event", "Cuban Missile Crisis", "cross-regional.cold-war",
+E("global.short-20c.cuban-missile-crisis", "event", "Cuban Missile Crisis", "global.short-20c.cold-war",
   start=1962, end=1962, tier="foundational",
   summary="Thirteen-day nuclear standoff between the US and USSR over Soviet missiles in Cuba — the closest the Cold War came to nuclear war.")
-E("cross-regional.moon-landing", "event", "Apollo 11 Moon Landing", "cross-regional.cold-war",
+E("global.short-20c.moon-landing", "event", "Apollo 11 Moon Landing", "global.short-20c.cold-war",
   start=1969, end=1969, tier="foundational",
   summary="Neil Armstrong and Buzz Aldrin became the first humans to walk on the Moon (20 July 1969).")
-E("cross-regional.berlin-wall-fall", "event", "Fall of the Berlin Wall", "cross-regional.cold-war",
+E("global.short-20c.berlin-wall-fall", "event", "Fall of the Berlin Wall", "global.short-20c.cold-war",
   start=1989, end=1989, tier="foundational",
   summary="Symbolic end of the Cold War division of Europe; East Germans crossed freely on 9 November 1989.")
-E("cross-regional.soviet-dissolution", "event", "Dissolution of the Soviet Union", "cross-regional.cold-war",
+E("global.short-20c.soviet-dissolution", "event", "Dissolution of the Soviet Union", "global.short-20c.cold-war",
   start=1991, end=1991, tier="foundational",
   summary="Formal end of the USSR on 26 December 1991; 15 successor republics.")
 
@@ -1682,6 +1685,10 @@ from naming_formal_historical import extend as _naming_formal_historical
 from naming_formal_historical_2 import extend as _naming_formal_historical_2
 from naming_formal_historical_3 import extend as _naming_formal_historical_3
 from naming_formal_historical_4 import extend as _naming_formal_historical_4
+from extensions_gaps import GAP_SOURCES  # noqa: E402
+from cross_regional_definition import extend as _cross_regional_definition
+from extensions_gaps import extend as _extend_gaps
+from regions_multiregional import extend as _regions_multiregional
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1698,6 +1705,9 @@ _naming_formal_historical(E, entities)
 _naming_formal_historical_2(E, entities)
 _naming_formal_historical_3(E, entities)
 _naming_formal_historical_4(E, entities)
+_cross_regional_definition(E, entities)
+_extend_gaps(E, entities)
+_regions_multiregional(E, entities)
 
 # Marks received conventions across the corpus, so it runs after every module
 # that could author one.
@@ -1892,12 +1902,12 @@ _backfill_summaries = {
     "oceania.polynesia.hawaii": "Unified Hawaiian Kingdom under the Kamehameha dynasty until US annexation in 1898.",
     "oceania.polynesia.aotearoa": "Māori settlement and society of New Zealand before 1840.",
     "oceania.polynesia.new-zealand": "Post-Treaty-of-Waitangi Aotearoa/New Zealand.",
-    "cross-regional.axial-age": "Concurrent religious/philosophical revolutions in Greece, Israel, Persia, India, and China.",
+    "global.classical-antiquity.axial-age": "Concurrent religious/philosophical revolutions in Greece, Israel, Persia, India, and China.",
     "cross-regional.age-of-sail": "European maritime exploration and colonial expansion, roughly Columbus to Napoleon.",
     "cross-regional.columbus": "Christopher Columbus's first landfall in the Bahamas; opened sustained contact between the Old World and the Americas.",
-    "cross-regional.ww1": "World War I — the first industrialized total war; ended four empires.",
-    "cross-regional.ww2": "World War II — the deadliest conflict in human history; ended with the atomic bombings of Japan.",
-    "cross-regional.cold-war": "US–USSR geopolitical rivalry, 1947–1991; defined the second half of the 20th century.",
+    "global.short-20c.ww1": "World War I — the first industrialized total war; ended four empires.",
+    "global.short-20c.ww2": "World War II — the deadliest conflict in human history; ended with the atomic bombings of Japan.",
+    "global.short-20c.cold-war": "US–USSR geopolitical rivalry, 1947–1991; defined the second half of the 20th century.",
     "europe.mediterranean.rome.empire.constantinian": "Roman imperial dynasty led by Constantine the Great and his successors; Christianization of the Empire.",
     "europe.mediterranean.rome.empire.western-collapse": "Final disintegration of the Western Roman Empire during a rapid succession of short-lived emperors.",
     "oceania.polynesia.hawaii.kamehameha1": "Warrior chief who unified the Hawaiian Islands into a single kingdom.",
@@ -2289,13 +2299,13 @@ themes = [
     theme("collapses", "Collapses & Dark Ages",
           "Times when established orders unraveled.",
           [
-              "cross-regional.bronze-collapse",
+              "global.bronze-age.collapse",
               "africa.nile.egypt.fip",
               "africa.nile.egypt.sip",
               "africa.nile.egypt.tip",
               f"{gr}.dark-age",
               "east-asia.china.three-kingdoms",
-              "cross-regional.black-death",
+              "global.middle-ages.black-death",
           ]),
     theme("silk-road", "Silk Road Eras",
           "Periods when long-distance Eurasian trade flourished.",
@@ -2388,11 +2398,11 @@ themes = [
     theme("cold-war-proxy", "Cold War Proxy Conflicts",
           "Regional conflicts in which the US and USSR backed opposing sides.",
           [
-              "cross-regional.korean-war",
-              "cross-regional.vietnam-war",
-              "cross-regional.cuban-missile-crisis",
-              "cross-regional.berlin-wall-fall",
-              "cross-regional.soviet-dissolution",
+              "global.short-20c.korean-war",
+              "global.short-20c.vietnam-war",
+              "global.short-20c.cuban-missile-crisis",
+              "global.short-20c.berlin-wall-fall",
+              "global.short-20c.soviet-dissolution",
           ]),
     theme("decolonization", "Decolonization",
           "Dissolution of European colonial empires and emergence of independent post-colonial states.",
@@ -3170,6 +3180,7 @@ sources.extend(FORMAL_HISTORICAL_SOURCES)
 sources.extend(NAMING_2_SOURCES)
 sources.extend(NAMING_3_SOURCES)
 sources.extend(NAMING_4_SOURCES)
+sources.extend(GAP_SOURCES)
 from received_conventions import RECEIVED_CONVENTION_SOURCES  # noqa: E402
 sources.extend(RECEIVED_CONVENTION_SOURCES)
 
@@ -3245,10 +3256,10 @@ frames = [
      "entity_id": "europe.western.france.revolution"},
     {"id": "ww1", "name": "World War I", "year": 1914, "end_year": 1918, "anchor_set": "global",
      "summary": "First industrialized total war; collapsed four empires (Russian, German, Austro-Hungarian, Ottoman).",
-     "entity_id": "cross-regional.ww1"},
+     "entity_id": "global.short-20c.ww1"},
     {"id": "ww2", "name": "World War II", "year": 1939, "end_year": 1945, "anchor_set": "global",
      "summary": "Global war fought in Europe, Asia, and the Pacific; ended with Axis defeat and the atomic bombings of Hiroshima and Nagasaki.",
-     "entity_id": "cross-regional.ww2"},
+     "entity_id": "global.short-20c.ww2"},
 
     # East Asian anchors
     {"id": "confucius", "name": "Life of Confucius", "year": -551, "end_year": -479, "anchor_set": "east-asian",
@@ -3340,10 +3351,10 @@ frames = [
      "summary": "First combat use of a nuclear weapon; helped end WWII in the Pacific."},
     {"id": "moon-landing-anchor", "name": "Apollo 11 Moon Landing", "year": 1969, "anchor_set": "global",
      "summary": "First human landing on the Moon.",
-     "entity_id": "cross-regional.moon-landing"},
+     "entity_id": "global.short-20c.moon-landing"},
     {"id": "berlin-wall-anchor", "name": "Fall of the Berlin Wall", "year": 1989, "anchor_set": "global",
      "summary": "Symbolic end of the Cold War division of Europe.",
-     "entity_id": "cross-regional.berlin-wall-fall"},
+     "entity_id": "global.short-20c.berlin-wall-fall"},
     {"id": "nine-eleven", "name": "September 11 Attacks", "year": 2001, "anchor_set": "global",
      "summary": "al-Qaeda attacks on the United States; catalyst for the War on Terror.",
      "entity_id": "global.contemporary.september-11"},

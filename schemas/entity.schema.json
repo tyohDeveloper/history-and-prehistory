@@ -122,6 +122,14 @@
         "type": "string"
       }
     },
+    "regions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      },
+      "description": "DERIVED, not authored: the top-level geographies this entity is reachable from, following parent_id and cross_parent_ids in both directions. Present only when more than one. This records where an entity is PLACED, not where a polity RULED -- the Mongol empire understates at two regions because its khanates are ordinary children whose own cross-links do not propagate upward. A territorial claim would have to be authored with sources."
+    },
     "redirect_ids": {
       "type": "array",
       "uniqueItems": true,

@@ -18,14 +18,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.24.0.0");
-    expect(schemaVersion).toBe("3.3.0");
+    expect(datasetVersion).toBe("0.25.0.0");
+    expect(schemaVersion).toBe("3.4.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1640);
+    expect(entities.length).toBe(1648);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -105,11 +105,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(390);
+    expect(cited.length).toBe(397);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(389);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(396);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -121,7 +121,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(321);
+    expect(withEnd.length).toBe(328);
 
     const differing = entities
       .filter(
@@ -561,6 +561,37 @@ describe("Central Asia and the Austronesian world", () => {
     const legend = mac.alternatives!.find((a) => a.start_year === -808)!;
     expect(legend.standing).toBe("traditional");
     expect(legend.dating_method).toBe("received");
+  });
+
+  it("keeps Cross-Regional Empires about empires", () => {
+    // The category was almost exactly inverted from its name: it held two world
+    // wars, the Cold War, a pandemic and the Bronze Age Collapse, while every
+    // actual multi-region empire sat filed under one region. The test now
+    // written into the entity: a polity spanning more than one region, or a
+    // process of imperial expansion or contraction. A worldwide event that
+    // belongs to nobody is global.
+    const strays = ["ww1", "ww2", "cold-war", "black-death", "axial-age", "bronze-collapse"];
+    for (const s of strays) {
+      expect(
+        entities.find((e) => e.id === `cross-regional.${s}`),
+        `${s} is not an empire and should not be filed as one`,
+      ).toBeUndefined();
+    }
+    // ...and they must have landed somewhere, not vanished.
+    for (const id of [
+      "global.short-20c.ww1",
+      "global.short-20c.cold-war",
+      "global.middle-ages.black-death",
+      "global.classical-antiquity.axial-age",
+    ]) {
+      expect(entities.find((e) => e.id === id), `${id} exists`).toBeDefined();
+    }
+    // Empires are cross-linked from their region of origin, never moved: the
+    // Mongols are Central Asian and also cross-regional, and the breadcrumb
+    // that says where a polity came from is worth keeping.
+    const mongols = entities.find((e) => e.id === "central-asia.mongol-empire")!;
+    expect(mongols.parent_id).toBe("central-asia");
+    expect(mongols.cross_parent_ids).toContain("cross-regional");
   });
 
   it("has a label for every source kind actually present", () => {

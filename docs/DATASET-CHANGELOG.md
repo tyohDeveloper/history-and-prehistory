@@ -1,5 +1,88 @@
 # Changelog
 
+## 0.25.0.0 — Cross-Regional means empires, and the deferred gaps are filled (2026-08-09)
+
+### The category was inverted, and the fix was already waiting
+
+Parked five releases ago with "continue as is and revisit". Cross-Regional
+Empires held nine genuinely imperial entities and **twelve that were not empires
+at all**: two world wars, the Cold War and its six events, plus the Bronze Age
+Collapse, the Axial Age and the Black Death. Meanwhile every actual multi-region
+empire sat filed under a single region.
+
+The twelve have moved, and three of them landed somewhere standing empty:
+
+* the world wars and the entire Cold War subtree into **global.short-20c**,
+  Hobsbawm's short twentieth century, 1914-1991, which is exactly their span and
+  had no children at all;
+* the **Axial Age** into Classical Antiquity, an exact fit at -800 to -200;
+* the **Black Death** into the Middle Ages.
+
+That the misfits fitted the empty eras this neatly suggests the taxonomy was
+sound and only the filing was wrong.
+
+The test is now written into the category itself: a single polity whose
+territory crossed more than one region, or a process of imperial expansion or
+contraction. A worldwide event that belongs to nobody is Global.
+
+Eight empires are **cross-linked** rather than moved -- Mongol, Timurid,
+Achaemenid, Spanish, Portuguese, British, Russian, Rome. Moving them would gut
+the regions and destroy the breadcrumb that says where a polity came from.
+
+Which leaves a real finding: **the caliphates are the only entities whose
+primary home is this category**, because they are the only ones with no single
+regional origin. Rashidun through Abbasid governed from Arabia, Syria and Iraq
+in turn while ruling from Iberia to Central Asia.
+
+### Global becomes Global & Multi-Regional
+
+Its old summary read "cross-regional and worldwide frames" -- running together
+the two things this pass spent its time separating. The new name says what the
+region is for: everything that is not one region, whether because it is
+everywhere or because it is several places at once.
+
+### `regions`, derived rather than authored
+
+A new field lists the top-level geographies an entity is reachable from,
+computed from the tree in both directions. 60 entities span more than one.
+
+**It means placement, not territory**, and the difference matters. The
+Hellenistic world comes out spanning four regions, which is right. The Mongol
+empire comes out at two, which understates it: the Ilkhanate and Golden Horde
+are ordinary children, so their cross-links to West Asia and Europe do not
+propagate upward -- and propagating through every descendant would make Europe
+"span" Africa because Ptolemaic Egypt cross-links into the Hellenistic world.
+That gap is not a traversal bug. It is the difference between a placement graph
+and a territorial claim, and only the first is something a tree can know.
+
+### The deferred gaps, filled
+
+Four things earlier passes declined, each for a stated reason now addressed:
+
+* **A Netherlands node**, so the **VOC** and both **West India Companies** have
+  somewhere to live. Two passes refused to wedge a company that operated from
+  the Cape to Nagasaki under "Maritime Southeast Asia".
+* Both companies turn out to illustrate a pattern this dataset keeps meeting: a
+  date that looks disputed but is a process seen from different points. The VOC
+  ends in 1798, 1799 or 1800 -- debts assumed, charter lapsed, state control --
+  three steps, three correct dates. The WIC is **two companies**, bankrupt in
+  1674 and rechartered in 1675; the old "1621-1794" figure ran them together.
+* **The French colonial empire**, first and second, with the same
+  periodisation argument as the British, and 5 July 1962 flagged as a
+  commemorative convention chosen to fall 132 years after the landing at Algiers.
+* **Britain's 123-year hole** between the Stuarts and the Victorians, filled as
+  the Georgian era, whose own end is disputed between 1830 and 1837.
+* **The Columbian Exchange**, deferred from the Americas pass because the
+  estimates run from 8 million to over 100 million. Authored now precisely *as*
+  a dispute -- Kroeber low, Dobyns at 90-112 million assuming 95 per cent
+  mortality, Denevan at about 55 million -- because leaving it out left every
+  post-1492 end date in the dataset unexplained.
+
+### Counts
+
+1,640 → 1,648 entities. 549 → 561 sources. 390 → 397 cited. Schema 3.3.0 →
+3.4.0.
+
 ## 0.24.0.0 — Endonyms from cuneiform, and a name that claims the past (2026-08-09)
 
 Fourth tranche, 54 to 70 entities. All eight kinds remain in use.

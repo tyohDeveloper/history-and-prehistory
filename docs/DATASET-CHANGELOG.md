@@ -1,5 +1,79 @@
 # Changelog
 
+## 0.24.0.0 — Endonyms from cuneiform, and a name that claims the past (2026-08-09)
+
+Fourth tranche, 54 to 70 entities. All eight kinds remain in use.
+
+### The case that started this was not using the mechanism
+
+The **Golden Horde** prompted the whole naming project three releases ago -- a
+16th-century Russian coinage sitting where a polity's own name belonged -- and it
+had been carrying flat `aliases` plus a caveat ever since, because it predated
+`name_forms`. Now typed like everything else, with **Ulug Ulus** as the endonym.
+
+### Cuneiform means some endonyms are recoverable exactly
+
+Uruk is the Akkadian name. The city's own Sumerian name was **Unug**, written
+𒀕𒆠. It reached English through the Bible as Erech and through Greek as Orchoe,
+and the site is Warka in Arabic today -- possibly the root of "Iraq". Five names,
+four languages, one place, and we know which one the inhabitants used.
+
+**Chogha Zanbil** is the same shape: a modern Persian name for a mound whose
+Elamite name, **Dur-Untash**, is stamped on its own bricks. Susa is the Greek
+form of Shushan. And **Newgrange** is an English farm name -- from the grange
+land of Mellifont Abbey -- for a monument the Irish call Sí an Bhrú.
+
+### A name that is a claim about who owns the past
+
+Calling the Indus civilization **Sindhu-Sarasvati** ties it to the Rigvedic
+river, and through that to Vedic culture. Both halves of this are now recorded,
+because a reader who meets only one has been handled:
+
+* The identification of the Sarasvati with the Ghaggar-Hakra is *not* fringe. It
+  dates to 1855 and generations of indologists, geologists and archaeologists
+  have endorsed it.
+* As a renaming it does work. Kumar sets out how identifying the two lets the
+  Harappans be Aryanised, the Aryans be indigenous, and the Hindu community be
+  the exclusive proprietor of the Indian past. Other historians call the label
+  hyper-nationalist.
+
+**The screenshot caught the dataset doing the thing it was documenting.** The
+Indus summary read "along the Indus and Sarasvati rivers" -- asserting the
+contested name as a bare fact, directly above the caveat calling it contested.
+Same failure as the ROC's 1949: the prose making a claim the apparatus was busy
+qualifying. Now reads Ghaggar-Hakra.
+
+### A rival scheme, not a set of synonyms
+
+Shaffer's **Integration Era** and **Localization Era** are not other words for
+Mature and Late Harappan. They come from a different model, organised by
+interaction intensity rather than urban phase, with its own boundaries --
+Shaffer's Regionalization starts around 4000 BCE where Coningham and Young put it
+at 5000. Filed with that stated, rather than implying interchangeability.
+
+### One more silent editorial choice, stated
+
+This dataset says Neolithic **Transition**, not Neolithic **Revolution**. Same
+kind of choice as Age of Sail over Age of Discovery, and equally unexplained
+until now. Childe's "revolution" is the famous label and implies a speed the
+dataset's own entities contradict: roughly four thousand years in Southwest Asia.
+
+### Smaller things
+
+The Edo period is the Tokugawa period named for a capital instead of a house --
+two conventions used interchangeably. "Protestant Reformation" names a movement
+by its outcome and from one side. **Menander I** is remembered in two traditions
+under two names, Greek on his coins and Milinda in the Pali Milindapanha where he
+debates a monk and converts. **Tutankhamun** was Tutankhaten at accession,
+honouring the god his father raised and he abolished -- and "King Tut" is a 1920s
+press abbreviation, which is why the least consequential pharaoh is the most
+famous.
+
+### Counts
+
+1,640 entities unchanged. 544 → 549 sources. 389 → 390 cited. 54 → 70 entities
+with `name_forms`.
+
 ## 0.23.0.0 — Names that carry an ideology (2026-08-09)
 
 A third tranche, 43 to 54 entities. The first covered states, the second people;

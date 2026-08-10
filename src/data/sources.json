@@ -1,7 +1,7 @@
 {
   "schema_version": "3.3.0",
-  "dataset_version": "0.23.0.0",
-  "generated_at": "2026-08-09T23:50:08Z",
+  "dataset_version": "0.24.0.0",
+  "generated_at": "2026-08-10T01:38:17Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -3525,6 +3525,41 @@
       "citation": "'Neanderthal or Neandertal?', TalkOrigins Archive",
       "url": "https://talkorigins.org/faqs/homs/spelling.html",
       "note": "Vallois proposed in 1952 that English follow the reformed German spelling, and '-tal' has been common since."
+    },
+    {
+      "id": "encyclopedia-com-erech",
+      "kind": "reference",
+      "citation": "'Erech', Encyclopedia.com",
+      "url": "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/erech",
+      "note": "Sumerian Unug, Akkadian Uruk, modern Warka; Erech is the biblical form."
+    },
+    {
+      "id": "unive-hakra-cultural-horizon",
+      "kind": "scholarly",
+      "citation": "'The Hakra Cultural Horizon in the Greater Indus Valley', Ca' Foscari University of Venice",
+      "url": "https://iris.unive.it/retrieve/b13823e4-7893-47b2-8cdf-c26a8f94402b/956395-1229871.pdf",
+      "note": "Sets out Shaffer's Tradition/Phase/Era model against the conventional Early/Mature/Late Harappan phases."
+    },
+    {
+      "id": "kenoyer-1991-indus-valley-tradition",
+      "kind": "scholarly",
+      "citation": "Kenoyer, 'The Indus Valley Tradition of Pakistan and western India' (1991)",
+      "url": "https://www.harappa.com/sites/default/files/pdf/Kenoyer1991%20Indus%20Valley%20Tradition.pdf",
+      "note": "Describes the Eras by interaction intensity: the Integration Era shows widespread homogeneity, the Localization Era altered interaction networks."
+    },
+    {
+      "id": "kumar-2022-why-aryans-still-matter",
+      "kind": "scholarly",
+      "citation": "Ashish Kumar, 'Why the Aryans Still Matter? History, Historiography and Politics', SAGE (2022)",
+      "url": "https://journals.sagepub.com/doi/10.1177/2455328X211063048",
+      "note": "Identifying the Rigvedic Sarasvati with the Ghaggar-Hakra allows the Harappan civilization to be Aryanised and the Aryans located within India, supporting an exclusive Hindu claim on the Indian past."
+    },
+    {
+      "id": "indian-express-naming-oldest-civilisation",
+      "kind": "news",
+      "citation": "'Naming the oldest civilisation of India: Indus, Harappan or Sindhu-Sarasvati?', The Indian Express",
+      "url": "https://indianexpress.com/article/research/naming-the-oldest-civilisation-of-india-indus-harappan-or-sindhu-sarasvati-9701782/",
+      "note": "Some historians call the Sarasvati label hyper-nationalist; against that, the Ghaggar-Sarasvati identification dates from 1855 and has been endorsed by generations of specialists."
     },
     {
       "id": "masson-altyn-depe-summary",

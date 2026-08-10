@@ -14,6 +14,12 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.22.0.0-app] — 2026-08-09
+
+### Changed
+
+- Ships dataset 0.24.0.0. Size baseline 243,161 bytes gzip.
+
 ## [3.21.0.0-app] — 2026-08-09
 
 ### Fixed

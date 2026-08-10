@@ -1,7 +1,7 @@
 {
   "schema_version": "3.3.0",
-  "dataset_version": "0.23.0.0",
-  "generated_at": "2026-08-09T23:50:08Z",
+  "dataset_version": "0.24.0.0",
+  "generated_at": "2026-08-10T01:38:17Z",
   "entities": [
     {
       "id": "global",
@@ -973,7 +973,14 @@
         "Age of the Pyramids"
       ],
       "summary": "Pyramid-building age. Djoser, Khufu, Khafre, Menkaure.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Age of the Pyramids",
+          "kind": "common",
+          "note": "True of this period but not only of it: pyramids were built for a thousand years after it ended."
+        }
+      ]
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn3",
@@ -1344,10 +1351,23 @@
       "end_year": -1323,
       "tier": "foundational",
       "aliases": [
-        "King Tut"
+        "King Tut",
+        "Tutankhaten"
       ],
       "summary": "Reversed the Amarna religious reforms. His intact tomb was discovered in 1922.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Tutankhaten",
+          "kind": "historical",
+          "note": "His name at accession, honouring the Aten. He changed it to honour Amun instead, reversing his father's religion."
+        },
+        {
+          "name": "King Tut",
+          "kind": "common",
+          "note": "A 1920s press abbreviation, which is why the least consequential pharaoh is the most famous."
+        }
+      ]
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn19",
@@ -1870,13 +1890,26 @@
       "tier": "foundational",
       "native_name": "江戸時代",
       "aliases": [
-        "Tokugawa Period"
+        "Tokugawa Period",
+        "Edo Jidai"
       ],
       "calendar_ids": [
         "japanese-nengo"
       ],
       "summary": "Tokugawa shogunate; long peace, sakoku isolation, cultural flowering.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Tokugawa Period",
+          "kind": "scholarly",
+          "note": "The same span named for the ruling house rather than the capital -- two conventions, dynasty or place, used interchangeably."
+        },
+        {
+          "name": "Edo Jidai",
+          "kind": "endonym",
+          "lang": "ja"
+        }
+      ]
     },
     {
       "id": "east-asia.japan.edo.ieyasu",
@@ -8470,6 +8503,32 @@
         "springer-great-horde-agony"
       ],
       "native_name": "Ulug Ulus",
+      "name_forms": [
+        {
+          "name": "Ulug Ulus",
+          "kind": "endonym",
+          "note": "'Great State' in Turkic, attested in the Horde's own written sources."
+        },
+        {
+          "name": "Ulus of Jochi",
+          "kind": "endonym",
+          "note": "The Jochid inheritance, and how contemporaries placed it within the Mongol succession."
+        },
+        {
+          "name": "Jochid ulus",
+          "kind": "scholarly"
+        },
+        {
+          "name": "Golden Horde",
+          "kind": "exonym",
+          "note": "A Russian coinage first attested in the 16th century, long after the polity it names."
+        },
+        {
+          "name": "Kipchak Khanate",
+          "kind": "scholarly",
+          "note": "After the Turkic majority of its nomadic population."
+        }
+      ],
       "allow_outside_parent_dates": true
     },
     {
@@ -8532,9 +8591,10 @@
       "end_year": -1300,
       "tier": "foundational",
       "aliases": [
-        "Harappan Civilization"
+        "Harappan Civilization",
+        "Sindhu-Sarasvati Civilization"
       ],
-      "summary": "Bronze Age civilization along the Indus and Sarasvati rivers.",
+      "summary": "Bronze Age civilization along the Indus and the Ghaggar-Hakra.",
       "date_precision": "approx",
       "name_forms": [
         {
@@ -8545,7 +8605,30 @@
         {
           "name": "Indus Valley Civilization",
           "kind": "common"
+        },
+        {
+          "name": "Sindhu-Sarasvati Civilization",
+          "kind": "common",
+          "note": "Ties the civilization to the Rigvedic Sarasvati. The river identification is long-standing; the renaming is contested as nationalist.",
+          "source_ids": [
+            "kumar-2022-why-aryans-still-matter",
+            "indian-express-naming-oldest-civilisation"
+          ]
         }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Which name you use is a position. 'Sindhu-Sarasvati' makes the Harappans Vedic; some historians call that hyper-nationalist, while the underlying river identification dates to 1855.",
+          "source_ids": [
+            "kumar-2022-why-aryans-still-matter",
+            "indian-express-naming-oldest-civilisation"
+          ]
+        }
+      ],
+      "source_ids": [
+        "indian-express-naming-oldest-civilisation",
+        "kumar-2022-why-aryans-still-matter"
       ]
     },
     {
@@ -10571,10 +10654,22 @@
       "end_year": 1648,
       "tier": "foundational",
       "aliases": [
-        "Protestant Reformation"
+        "Protestant Reformation",
+        "European Reformation"
       ],
       "summary": "Religious and political upheaval that fractured Latin Christendom, triggered by Luther's Ninety-Five Theses and ended by the Peace of Westphalia.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Protestant Reformation",
+          "kind": "common",
+          "note": "Names the movement by its outcome and from one side; Catholic writing long preferred 'Protestant revolt'."
+        },
+        {
+          "name": "European Reformation",
+          "kind": "scholarly"
+        }
+      ]
     },
     {
       "id": "europe.reformation.luther",
@@ -10965,6 +11060,10 @@
           "source_ids": [
             "springer-domestication-centres-review"
           ]
+        },
+        {
+          "kind": "naming-confusion",
+          "text": "Called a Transition here rather than a Revolution: the process took roughly four thousand years in Southwest Asia, which is not what the word revolution conveys."
         }
       ],
       "source_ids": [
@@ -10972,6 +11071,21 @@
         "fuller-2022-reply-to-abbo",
         "persistent-controversies-neolithic",
         "springer-domestication-centres-review"
+      ],
+      "name_forms": [
+        {
+          "name": "Neolithic Revolution",
+          "kind": "common",
+          "note": "Childe's label, and the famous one. It implies a speed this dataset's own entities contradict."
+        },
+        {
+          "name": "Agricultural Revolution",
+          "kind": "common"
+        },
+        {
+          "name": "First Agricultural Revolution",
+          "kind": "scholarly"
+        }
       ],
       "end_dating_method": "radiocarbon-calibrated"
     },
@@ -15249,9 +15363,24 @@
       "tier": "foundational",
       "summary": "Greatest Indo-Greek king; the Buddhist king Milinda of the Milindapañha dialogues.",
       "aliases": [
-        "Milinda"
+        "Milinda",
+        "Menander I Soter"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Menander I Soter",
+          "kind": "formal",
+          "lang": "grc",
+          "note": "'Saviour', from his coinage."
+        },
+        {
+          "name": "Milinda",
+          "kind": "endonym",
+          "lang": "pi",
+          "note": "His name in the Pali Milindapanha, where he debates a Buddhist monk and converts. He is remembered in two traditions under two names."
+        }
+      ]
     },
     {
       "id": "south-asia.indo-greek.apollodotus-ii",
@@ -17628,6 +17757,22 @@
       "aliases": [
         "Dragon Man",
         "Harbin cranium"
+      ],
+      "name_forms": [
+        {
+          "name": "Homo longi",
+          "kind": "scholarly",
+          "note": "'Dragon' for Heilongjiang, the Black Dragon River province."
+        },
+        {
+          "name": "Dragon Man",
+          "kind": "common"
+        },
+        {
+          "name": "Harbin cranium",
+          "kind": "scholarly",
+          "note": "The specimen name, preferred by those who doubt the species is distinct."
+        }
       ]
     },
     {
@@ -22303,9 +22448,29 @@
       ],
       "summary": "An Irish passage tomb built to admit the winter solstice sunrise, older than Stonehenge's standing stones and older than the pyramids.",
       "aliases": [
-        "Brú na Bóinne"
+        "Brú na Bóinne",
+        "Sí an Bhrú"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Sí an Bhrú",
+          "kind": "endonym",
+          "lang": "ga",
+          "note": "The Irish name of the monument itself."
+        },
+        {
+          "name": "Brú na Bóinne",
+          "kind": "endonym",
+          "lang": "ga",
+          "note": "'Palace of the Boyne', properly the whole complex rather than this mound alone."
+        },
+        {
+          "name": "Newgrange",
+          "kind": "common",
+          "note": "An English farm name, from the grange land of Mellifont Abbey."
+        }
+      ]
     },
     {
       "id": "europe.prehistory.skara-brae",
@@ -23493,13 +23658,31 @@
       "date_note": "From the Harappa test-trench sequence, which rests on more than seventy radiocarbon dates at the type site. Urbanism does not begin at 2600 BCE; it is already underway here.",
       "source_ids": [
         "harappa-test-trench-chronology",
-        "kenoyer-2008-indus-cities"
+        "kenoyer-1991-indus-valley-tradition",
+        "kenoyer-2008-indus-cities",
+        "unive-hakra-cultural-horizon"
       ],
       "summary": "The Early Harappan phase in which the first city walls, the first writing and the first standardised crafts appear, before the mature cities.",
       "aliases": [
-        "Early Harappan"
+        "Early Harappan",
+        "Regionalization Era"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Early Harappan",
+          "kind": "scholarly"
+        },
+        {
+          "name": "Regionalization Era",
+          "kind": "scholarly",
+          "note": "Shaffer's term, not a synonym for Early Harappan: it comes from a model organised by interaction intensity, with its own boundaries.",
+          "source_ids": [
+            "unive-hakra-cultural-horizon",
+            "kenoyer-1991-indus-valley-tradition"
+          ]
+        }
+      ]
     },
     {
       "id": "south-asia.indus.mature",
@@ -23528,14 +23711,31 @@
         }
       ],
       "source_ids": [
+        "agrawal-1964-shorter-chronology",
         "harappa-test-trench-chronology",
+        "kenoyer-1991-indus-valley-tradition",
         "kenoyer-2008-indus-cities",
-        "agrawal-1964-shorter-chronology"
+        "unive-hakra-cultural-horizon"
       ],
       "summary": "The urban centuries: Mohenjo-daro and Harappa at full extent, with standardised weights, fired-brick drainage and long-distance trade.",
       "aliases": [
         "Integration Era",
         "Harappan Phase"
+      ],
+      "name_forms": [
+        {
+          "name": "Harappan Phase",
+          "kind": "scholarly"
+        },
+        {
+          "name": "Integration Era",
+          "kind": "scholarly",
+          "note": "Shaffer's term, not a synonym for Mature Harappan: it comes from a model organised by interaction intensity, with its own boundaries.",
+          "source_ids": [
+            "unive-hakra-cultural-horizon",
+            "kenoyer-1991-indus-valley-tradition"
+          ]
+        }
       ]
     },
     {
@@ -23561,14 +23761,31 @@
       ],
       "source_ids": [
         "harappa-test-trench-chronology",
-        "kenoyer-2008-indus-cities"
+        "kenoyer-1991-indus-valley-tradition",
+        "kenoyer-2008-indus-cities",
+        "unive-hakra-cultural-horizon"
       ],
       "summary": "The post-urban centuries. The cities empty and the standardised material culture dissolves into regional styles, but settlement does not stop.",
       "aliases": [
         "Localization Era",
         "Post-urban Harappan"
       ],
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Post-urban Harappan",
+          "kind": "scholarly"
+        },
+        {
+          "name": "Localization Era",
+          "kind": "scholarly",
+          "note": "Shaffer's term, not a synonym for Late Harappan: it comes from a model organised by interaction intensity, with its own boundaries.",
+          "source_ids": [
+            "unive-hakra-cultural-horizon",
+            "kenoyer-1991-indus-valley-tradition"
+          ]
+        }
+      ]
     },
     {
       "id": "south-asia.indus.harappa",
@@ -23793,11 +24010,33 @@
         }
       ],
       "source_ids": [
-        "dave-2017-ghaggar-hakra"
+        "dave-2017-ghaggar-hakra",
+        "indian-express-naming-oldest-civilisation",
+        "kumar-2022-why-aryans-still-matter"
       ],
       "summary": "Whether a great river dried and took the cities with it. The geology says the big glacier-fed river was already gone long before the cities existed.",
       "aliases": [
-        "Sarasvati question"
+        "Sarasvati question",
+        "Ghaggar-Hakra"
+      ],
+      "name_forms": [
+        {
+          "name": "Sarasvati question",
+          "kind": "common",
+          "note": "Names the debate after the Vedic river, which is the claim the debate is about.",
+          "source_ids": [
+            "kumar-2022-why-aryans-still-matter",
+            "indian-express-naming-oldest-civilisation"
+          ]
+        },
+        {
+          "name": "Ghaggar-Hakra",
+          "kind": "scholarly",
+          "note": "The modern hydronym, used because it does not presuppose the identification.",
+          "source_ids": [
+            "indian-express-naming-oldest-civilisation"
+          ]
+        }
       ]
     },
     {
@@ -24516,11 +24755,54 @@
       ],
       "source_ids": [
         "cdli-uruk-warka",
-        "sallaberger-schrakamp-2015-arcane",
+        "encyclopedia-com-erech",
         "isac-surezha-lc-chronology",
+        "sallaberger-schrakamp-2015-arcane",
         "unicode-2019-proto-cuneiform"
       ],
-      "summary": "The centuries in which southern Mesopotamia produced the first cities, the first bureaucracy, and the first writing."
+      "summary": "The centuries in which southern Mesopotamia produced the first cities, the first bureaucracy, and the first writing.",
+      "name_forms": [
+        {
+          "name": "Unug",
+          "kind": "endonym",
+          "lang": "sux",
+          "note": "The city's Sumerian name, written 𒀕𒆠. Uruk is the Akkadian form.",
+          "source_ids": [
+            "encyclopedia-com-erech"
+          ]
+        },
+        {
+          "name": "Uruk",
+          "kind": "exonym",
+          "lang": "akk",
+          "source_ids": [
+            "encyclopedia-com-erech"
+          ]
+        },
+        {
+          "name": "Erech",
+          "kind": "exonym",
+          "note": "The biblical form, and how the name first reached English.",
+          "source_ids": [
+            "encyclopedia-com-erech"
+          ]
+        },
+        {
+          "name": "Warka",
+          "kind": "common",
+          "lang": "ar",
+          "note": "The modern Arabic name of the site, possibly the root of 'Iraq'.",
+          "source_ids": [
+            "encyclopedia-com-erech"
+          ]
+        }
+      ],
+      "aliases": [
+        "Unug",
+        "Uruk",
+        "Erech",
+        "Warka"
+      ]
     },
     {
       "id": "west-asia.prehistory.late-chalcolithic-mesopotamia.uruk-period.uruk-city",
@@ -24795,6 +25077,25 @@
       "aliases": [
         "Dur-Untash",
         "Tchogha Zanbil"
+      ],
+      "name_forms": [
+        {
+          "name": "Dur-Untash",
+          "kind": "endonym",
+          "lang": "elx",
+          "note": "'Fortress of Untash', its Elamite name, stamped on its own bricks."
+        },
+        {
+          "name": "Chogha Zanbil",
+          "kind": "common",
+          "lang": "fa",
+          "note": "The modern Persian name of the mound, roughly 'basket hill'."
+        },
+        {
+          "name": "Tchogha Zanbil",
+          "kind": "translation",
+          "note": "The French transliteration, used by UNESCO."
+        }
       ]
     },
     {
@@ -24847,7 +25148,27 @@
       "summary": "Occupied for six thousand years, capital of Elam, and the place the Code of Hammurabi was found — because the Elamites took it there.",
       "aliases": [
         "Shush",
-        "Šuš"
+        "Šuš",
+        "Shushan"
+      ],
+      "name_forms": [
+        {
+          "name": "Shushan",
+          "kind": "endonym",
+          "lang": "elx"
+        },
+        {
+          "name": "Susa",
+          "kind": "exonym",
+          "lang": "grc",
+          "note": "The Greek form, which is how Europe received the name."
+        },
+        {
+          "name": "Shush",
+          "kind": "common",
+          "lang": "fa",
+          "note": "The modern Iranian town on the site."
+        }
       ]
     },
     {

@@ -24,8 +24,8 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // The two tracks had been asserted the wrong way round since the renumbering:
   // v0.5.0 is the DATA version and 3.1.0 was the APP version. The test was
   // failing for that reason, not because the header was wrong.
-  await expect(page.getByTestId("text-app-version")).toContainText("v3.21.0.0");
-  await expect(page.getByTestId("text-app-version")).toContainText("data 0.23.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("v3.22.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 0.24.0.0");
   await expect(page.getByTestId("panel-footer-root")).toContainText("1,640 entities");
 });
 

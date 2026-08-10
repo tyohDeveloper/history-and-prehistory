@@ -1,7 +1,7 @@
 {
   "schema_version": "3.6.0",
   "dataset_version": "0.36.0.0",
-  "generated_at": "2026-08-10T20:40:54Z",
+  "generated_at": "2026-08-10T20:48:11Z",
   "frames": [
     {
       "id": "lucy",
@@ -366,7 +366,7 @@
       "year": 2001,
       "anchor_set": "global",
       "summary": "al-Qaeda attacks on the United States; catalyst for the War on Terror.",
-      "entity_id": "global.contemporary.september-xi"
+      "entity_id": "global.contemporary.september-11"
     }
   ]
 }

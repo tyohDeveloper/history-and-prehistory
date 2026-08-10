@@ -1074,6 +1074,10 @@ describe("identity", () => {
   it("uses Roman regnal numerals in every slug", () => {
     const offenders = entities
       .filter((e) => {
+        // An event's numerals are dates, not regnal numbers. "September 11 Attacks" was rewritten
+        // to `september-xi` before this exclusion existed, and the earlier guard -- that the slug
+        // stem must be the name's first word -- could not catch it, because here it is.
+        if (e.kind === "event") return false;
         const slug = e.id.split(".").pop()!;
         const m = /^([a-z][a-z-]*?)-?(\d{1,2})$/.exec(slug);
         if (m === null || Number(m[2]) === 0) return false;

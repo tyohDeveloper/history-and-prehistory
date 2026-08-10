@@ -1717,6 +1717,7 @@ from derive_links import extend as _derive_links
 from historicity import extend as _historicity
 from search_phrases import extend as _search_phrases
 from polity_split import extend as _polity_split
+from contemporary_placement import extend as _contemporary_placement
 from new_kinds import extend as _new_kinds
 from author_cities import extend as _author_cities
 _extend_seasia_oceania(E, entities)
@@ -2018,6 +2019,7 @@ _derive_links(E, entities)
 _historicity(E, entities)
 _search_phrases(E, entities)
 _polity_split(E, entities)
+_contemporary_placement(E, entities)
 
 # Aliases are derived from name_forms LAST, because several later modules add name forms and
 # this has now been got wrong in both directions: running it before name_repair left the

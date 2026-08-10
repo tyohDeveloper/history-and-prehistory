@@ -1,7 +1,7 @@
 {
   "schema_version": "3.6.0",
   "dataset_version": "0.36.0.0",
-  "generated_at": "2026-08-10T20:40:54Z",
+  "generated_at": "2026-08-10T20:48:11Z",
   "entities": [
     {
       "id": "global",
@@ -19514,7 +19514,7 @@
       "end_dating_method": "calendar"
     },
     {
-      "id": "global.contemporary.september-xi",
+      "id": "global.contemporary.september-11",
       "kind": "event",
       "name": "September 11 Attacks",
       "parent_id": "global.contemporary",
@@ -19527,7 +19527,10 @@
       ],
       "summary": "Coordinated al-Qaeda attacks on the United States; triggered the War on Terror.",
       "start_dating_method": "calendar",
-      "end_dating_method": "calendar"
+      "end_dating_method": "calendar",
+      "cross_parent_ids": [
+        "americas.north.usa"
+      ]
     },
     {
       "id": "global.contemporary.war-on-terror",
@@ -19542,7 +19545,18 @@
       ],
       "summary": "US-led military campaign following 9/11; wars in Afghanistan (2001–2021) and Iraq (2003–2011).",
       "start_dating_method": "calendar",
-      "end_dating_method": "calendar"
+      "end_dating_method": "calendar",
+      "cross_parent_ids": [
+        "americas.north.usa"
+      ],
+      "regions": [
+        "americas",
+        "west-asia",
+        "central-asia",
+        "europe",
+        "africa"
+      ],
+      "date_note": "Declared and led by the United States; NATO invoked Article 5 for the only time in its history, so the campaigns were multinational. Filed under both."
     },
     {
       "id": "global.contemporary.gfc",
@@ -92556,7 +92570,6 @@
     "americas.mesoamerica.aztec.moctezuma1": "americas.mesoamerica.aztec.moctezuma-i",
     "americas.mesoamerica.aztec.moctezuma2": "americas.mesoamerica.aztec.moctezuma-ii",
     "oceania.polynesia.hawaii.kamehameha1": "oceania.polynesia.hawaii.kamehameha-i",
-    "global.contemporary.september-11": "global.contemporary.september-xi",
     "south-asia.independence.pakistan-leaders.benazir-2": "south-asia.independence.pakistan-leaders.benazir-ii"
   }
 }

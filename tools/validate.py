@@ -697,6 +697,9 @@ def _check_identity(entities):
     digit_slugs = []
     for e in entities:
         slug = e["id"].rsplit(".", 1)[-1]
+        # An event's numerals are dates. See normalize_ids for why kind is the right test.
+        if e["kind"] == "event":
+            continue
         m = _DIGIT_SLUG.fullmatch(slug)
         # Zero is exempt because there is no Roman numeral for it. "Dynasty 0" is a scholarly
         # designation for the proto-dynastic rulers before Egypt's First Dynasty, not a regnal

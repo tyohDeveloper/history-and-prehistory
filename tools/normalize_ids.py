@@ -37,6 +37,12 @@ _SLUG_TRAILING_DIGITS = re.compile(r"^(?P<stem>[a-z][a-z\-]*?)-?(?P<num>\d{1,2})
 
 def _proposed(entity):
     """The convention-compliant slug for this entity, or None if it already complies."""
+    # An event's numerals are dates, not regnal numbers. "September 11 Attacks" was rewritten to
+    # `september-xi`, which is the same failure as `ww1` becoming `ww-i` -- and the guard added for
+    # that one did not catch this, because here the slug stem genuinely IS the name's first word.
+    # Kind is the discriminator that actually holds: rulers are counted, dates are not.
+    if entity["kind"] == "event":
+        return None
     slug = entity["id"].rsplit(".", 1)[-1]
     m = _SLUG_TRAILING_DIGITS.match(slug)
     if not m:

@@ -1238,3 +1238,68 @@ describe("the before-and-after graph", () => {
     }
   });
 });
+
+describe("historicity", () => {
+  // The axis `date_standing` could not carry. Before this, Dangun and Hammurabi were reported
+  // identically on the question of whether the subject existed.
+  it("grades the topic independently of the dating", () => {
+    const dangun = entities.find((e) => e.id === "east-asia.korea.gojoseon.dangun")!;
+    // A precise, genuine dating convention about a person who very likely never lived.
+    expect(dangun.historicity).toBe("mythological");
+    expect(dangun.date_standing).toBe("traditional");
+    expect(dangun.start_dating_method).toBe("received");
+
+    const hammurabi = entities.find(
+      (e) => e.id === "west-asia.mesopotamia.old-babylonian.hammurabi",
+    )!;
+    // Existence not in question; the dates are, because rival Mesopotamian chronologies
+    // disagree by more than a century.
+    expect(hammurabi.historicity).toBeUndefined();
+    expect((hammurabi.alternatives?.length ?? 0) > 0).toBe(true);
+  });
+
+  it("separates the legendary from the mythological", () => {
+    // Rome's kings are handed down AS history and doubted; Fuxi is described in the sources
+    // themselves as a god-king. Collapsing the two loses the distinction that matters.
+    const romulus = entities.find(
+      (e) => e.id === "europe.mediterranean.rome.kingdom.romulus",
+    )!;
+    expect(romulus.historicity).toBe("legendary");
+    const fuxi = entities.find((e) => e.id === "east-asia.china.legendary.fuxi")!;
+    expect(fuxi.historicity).toBe("mythological");
+  });
+
+  it("marks the Xia contested rather than legendary", () => {
+    // Specialists actively disagree, which is a different state from tradition-versus-doubt:
+    // the Xia-Shang-Zhou Chronology Project dates it while Cambridge starts at the Shang.
+    const xia = entities.find((e) => e.id === "east-asia.china.xia")!;
+    expect(xia.historicity).toBe("contested");
+  });
+
+  it("leaves the accepted majority unmarked", () => {
+    // Saying "accepted" on 1,700 entities would be noise, so the default is silence.
+    const graded = entities.filter((e) => e.historicity !== undefined);
+    expect(graded.length).toBeGreaterThan(25);
+    expect(graded.length).toBeLessThan(200);
+  });
+
+  it("uses no placeholder text as content", () => {
+    // Eleven entities shipped with a contested-existence caveat whose entire text was "omit",
+    // imported from a research file where the writer typed the instruction into the field.
+    // Cicero and Pompey were told to the reader as figures of doubtful existence.
+    const sentinels = new Set(["omit", "none", "n/a", "tbd", "todo", "null", "-", "unknown"]);
+    for (const e of entities) {
+      for (const c of e.caveats ?? []) {
+        expect(sentinels.has(c.text.trim().toLowerCase()), `${e.id}: ${c.text}`).toBe(false);
+        expect(c.text.trim().length, `${e.id} caveat length`).toBeGreaterThan(11);
+      }
+    }
+  });
+
+  it("finds Romulus the king before Romulus Augustulus", () => {
+    // An exact whole-name match must beat matching one word of a longer name, or the founder
+    // of Rome comes second to the man who lost it because the emperor sits at a higher tier.
+    const hits = searchEntities(entities, "Romulus").map((e) => e.id);
+    expect(hits[0]).toBe("europe.mediterranean.rome.kingdom.romulus");
+  });
+});

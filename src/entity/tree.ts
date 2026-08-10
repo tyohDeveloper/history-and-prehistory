@@ -210,9 +210,13 @@ function scoreEntity(e: Entity, terms: string[], idx: SearchIndex): number | nul
     // every word to match meant "rulers of rome" returned nothing at all.
   }
   if (matched === 0) return null;
+  // An exact whole-name match beats matching one word of a longer name. Searching "Romulus"
+  // put Romulus Augustulus first -- both contain the word, and the emperor sits at a more
+  // prominent tier -- so the founder of Rome came second to the man who lost it.
+  const exact = foldToWords(e.name).join(" ") === terms.join(" ") ? 4 : 0;
   const coverage = (matched / terms.length) * 2;
   // Entities found only through an ancestor rank below every direct match.
-  return (matchedOwn ? total : total - 2) + coverage - TIER_ORDER[e.tier] * 0.1;
+  return (matchedOwn ? total : total - 2) + coverage + exact - TIER_ORDER[e.tier] * 0.1;
 }
 
 export function searchEntities(

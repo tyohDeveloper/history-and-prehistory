@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
   "dataset_version": "0.34.1.0",
-  "generated_at": "2026-08-10T18:02:36Z",
+  "generated_at": "2026-08-10T18:12:02Z",
   "entities": [
     {
       "id": "global",
@@ -746,7 +746,8 @@
           "entity_id": "global.prehistory",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "interpretive"
     },
     {
       "id": "global.ce",
@@ -760,7 +761,8 @@
       "start_dating_method": "unknown",
       "start_year_min": -24,
       "start_year_max": 26,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "historicity": "interpretive"
     },
     {
       "id": "global.paleolithic",
@@ -843,7 +845,8 @@
       "start_year_max": -9000,
       "end_year_min": -5200,
       "end_year_max": -4800,
-      "date_standing": "minority"
+      "date_standing": "minority",
+      "historicity": "interpretive"
     },
     {
       "id": "global.neolithic",
@@ -1242,7 +1245,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn1.hor-aha",
           "derived": "sequence"
         }
-      ]
+      ],
+      "historicity": "contested"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn2",
@@ -11222,7 +11226,8 @@
           "entity_id": "east-asia.china.xia",
           "derived": "chronology"
         }
-      ]
+      ],
+      "historicity": "legendary"
     },
     {
       "id": "east-asia.china.shang",
@@ -12552,7 +12557,8 @@
       "summary": "The first Korean state in the traditional account, in the peninsula's northwest and southern Manchuria, ended by Han conquest in 108 BCE.",
       "start_dating_method": "received",
       "end_dating_method": "received",
-      "date_standing": "traditional"
+      "date_standing": "traditional",
+      "historicity": "contested"
     },
     {
       "id": "east-asia.korea.three-kingdoms",
@@ -12893,7 +12899,8 @@
       ],
       "start_dating_method": "received",
       "end_dating_method": "received",
-      "date_standing": "traditional"
+      "date_standing": "traditional",
+      "historicity": "legendary"
     },
     {
       "id": "west-asia.mesopotamia.akkadian",
@@ -13185,7 +13192,8 @@
           "entity_id": "west-asia.mesopotamia.israel-judah.solomon",
           "derived": "sequence"
         }
-      ]
+      ],
+      "historicity": "contested"
     },
     {
       "id": "west-asia.mesopotamia.israel-judah.solomon",
@@ -13205,7 +13213,8 @@
           "entity_id": "west-asia.mesopotamia.israel-judah.david",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "contested"
     },
     {
       "id": "west-asia.mesopotamia.phoenicia",
@@ -17937,7 +17946,8 @@
       "start_year_max": 93,
       "end_dating_method": "unknown",
       "end_year_min": 500,
-      "end_year_max": 600
+      "end_year_max": 600,
+      "historicity": "contested"
     },
     {
       "id": "southeast-asia.mainland.champa",
@@ -19487,7 +19497,8 @@
       "start_year_max": 950,
       "end_year_min": 1050,
       "end_year_max": 1250,
-      "date_standing": "minority"
+      "date_standing": "minority",
+      "historicity": "contested"
     },
     {
       "id": "americas.mesoamerica.purepecha",
@@ -21315,7 +21326,8 @@
       "start_year_max": -9000,
       "end_year_min": -1900,
       "end_year_max": -1700,
-      "date_standing": "majority"
+      "date_standing": "majority",
+      "historicity": "interpretive"
     },
     {
       "id": "global.bronze-age.early",
@@ -28184,7 +28196,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn6.merenre-ii",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "legendary"
     },
     {
       "id": "africa.nile.egypt.middle-kingdom.dyn11.intef-i",
@@ -42287,7 +42300,8 @@
       "start_year_max": -6300,
       "end_year_min": -4200,
       "end_year_max": -3800,
-      "date_standing": "consensus"
+      "date_standing": "consensus",
+      "historicity": "reconstructed"
     },
     {
       "id": "europe.prehistory.steppe-influx",
@@ -43052,7 +43066,8 @@
       "start_year_max": -3351,
       "end_year_min": -1230,
       "end_year_max": -1030,
-      "date_standing": "majority"
+      "date_standing": "majority",
+      "historicity": "reconstructed"
     },
     {
       "id": "southeast-asia.prehistory.austronesian-expansion.dabenkeng",
@@ -46904,7 +46919,8 @@
       "start_year_max": 650,
       "end_dating_method": "unknown",
       "end_year_min": 1000,
-      "end_year_max": 1200
+      "end_year_max": 1200,
+      "historicity": "contested"
     },
     {
       "id": "southeast-asia.mainland.post-pagan",
@@ -47912,7 +47928,8 @@
       "start_year_max": -450,
       "end_dating_method": "unknown",
       "end_year_min": 700,
-      "end_year_max": 800
+      "end_year_max": 800,
+      "historicity": "contested"
     },
     {
       "id": "central-asia.hephthalites",
@@ -47955,7 +47972,8 @@
       "start_year_max": 465,
       "end_dating_method": "unknown",
       "end_year_min": 510,
-      "end_year_max": 610
+      "end_year_max": 610,
+      "historicity": "contested"
     },
     {
       "id": "central-asia.uyghur-khaganate",
@@ -49059,7 +49077,8 @@
           "entity_id": "east-asia.china.legendary",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "contested"
     },
     {
       "id": "east-asia.china.legendary.fuxi",
@@ -49091,7 +49110,8 @@
         "Paoxi"
       ],
       "native_name": "伏羲",
-      "date_standing": "traditional"
+      "date_standing": "traditional",
+      "historicity": "mythological"
     },
     {
       "id": "east-asia.china.legendary.shennong",
@@ -49131,7 +49151,8 @@
           "entity_id": "east-asia.china.legendary.huangdi",
           "derived": "sequence"
         }
-      ]
+      ],
+      "historicity": "mythological"
     },
     {
       "id": "east-asia.china.legendary.huangdi",
@@ -49170,7 +49191,8 @@
           "entity_id": "east-asia.china.legendary.shennong",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "mythological"
     },
     {
       "id": "east-asia.china.legendary.zhuanxu",
@@ -49207,7 +49229,8 @@
           "entity_id": "east-asia.china.legendary.emperor-ku",
           "derived": "sequence"
         }
-      ]
+      ],
+      "historicity": "mythological"
     },
     {
       "id": "east-asia.china.legendary.emperor-ku",
@@ -49249,7 +49272,8 @@
           "entity_id": "east-asia.china.legendary.zhuanxu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "mythological"
     },
     {
       "id": "east-asia.china.legendary.emperor-yao",
@@ -49288,7 +49312,8 @@
           "entity_id": "east-asia.china.legendary.emperor-ku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "mythological"
     },
     {
       "id": "east-asia.china.legendary.emperor-shun",
@@ -49323,7 +49348,8 @@
           "entity_id": "east-asia.china.legendary.emperor-yao",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "mythological"
     },
     {
       "id": "europe.mediterranean.rome.kingdom.romulus",
@@ -49356,7 +49382,8 @@
           "entity_id": "europe.mediterranean.rome.kingdom.numa-pompilius",
           "derived": "sequence"
         }
-      ]
+      ],
+      "historicity": "legendary"
     },
     {
       "id": "europe.mediterranean.rome.kingdom.numa-pompilius",
@@ -49395,7 +49422,8 @@
           "entity_id": "europe.mediterranean.rome.kingdom.romulus",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "legendary"
     },
     {
       "id": "europe.mediterranean.rome.kingdom.tullus-hostilius",
@@ -49434,7 +49462,8 @@
           "entity_id": "europe.mediterranean.rome.kingdom.numa-pompilius",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "legendary"
     },
     {
       "id": "europe.mediterranean.rome.kingdom.ancus-marcius",
@@ -49473,7 +49502,8 @@
           "entity_id": "europe.mediterranean.rome.kingdom.tullus-hostilius",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "legendary"
     },
     {
       "id": "europe.mediterranean.rome.kingdom.tarquinius-priscus",
@@ -49514,7 +49544,8 @@
           "entity_id": "europe.mediterranean.rome.kingdom.ancus-marcius",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "legendary"
     },
     {
       "id": "europe.mediterranean.rome.kingdom.servius-tullius",
@@ -49553,7 +49584,8 @@
           "entity_id": "europe.mediterranean.rome.kingdom.tarquinius-priscus",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "legendary"
     },
     {
       "id": "europe.mediterranean.rome.kingdom.tarquinius-superbus",
@@ -49589,7 +49621,8 @@
           "entity_id": "europe.mediterranean.rome.kingdom.servius-tullius",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "historicity": "legendary"
     },
     {
       "id": "europe.mediterranean.rome.republic.scipio-africanus",
@@ -49601,15 +49634,6 @@
       "tier": "intermediate",
       "source_ids": [
         "rome-rulers-02"
-      ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-02"
-          ]
-        }
       ],
       "date_note": "Held office as general; dates are of office or command, not of birth and death. differs: dates given span his Spanish command through his Africanus cognomen (210 to 201 BCE); Britannica states he received his Spanish command in 210 BCE as a private citizen ('privatus'), was elected consul for 205 BCE, defeated Hannibal at Zama in 202 BCE, and won the surname Africanus in 201 BCE, so no single office year covers his full significance. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "summary": "Won Roman command in Spain as a private citizen, then as consul defeated Hannibal at Zama, ending the Second Punic War.",
@@ -49633,15 +49657,6 @@
       "tier": "intermediate",
       "source_ids": [
         "rome-rulers-03"
-      ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-03"
-          ]
-        }
       ],
       "date_note": "Held office as tribune; dates are of office or command, not of birth and death.",
       "summary": "As tribune, forced through land reform to restore small farmers, triggering the political violence that opened the Republic's crisis.",
@@ -49669,15 +49684,6 @@
       "source_ids": [
         "rome-rulers-04"
       ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-04"
-          ]
-        }
-      ],
       "date_note": "Held office as tribune; dates are of office or command, not of birth and death. differs: used his two-year tribunate (123-122 BCE) as the office span, but extended the end year to 121 BCE (his death, per Britannica) to mark when the political crisis he provoked was resolved by force; his lifespan is separately given as c. 160-153?-121 BCE.",
       "summary": "As tribune, extended his brother's land reform and created a subsidized grain supply, deepening the populares-optimates split.",
       "aliases": [
@@ -49703,15 +49709,6 @@
       "tier": "intermediate",
       "source_ids": [
         "rome-rulers-05"
-      ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-05"
-          ]
-        }
       ],
       "date_note": "Held office as consul; dates are of office or command, not of birth and death.",
       "summary": "Held the consulship seven times and opened the legions to the landless, making armies loyal to commanders rather than the state.",
@@ -49740,15 +49737,6 @@
       "tier": "intermediate",
       "source_ids": [
         "rome-rulers-06"
-      ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-06"
-          ]
-        }
       ],
       "date_note": "Held office as dictator; dates are of office or command, not of birth and death.",
       "summary": "Marched on Rome, won the first Roman civil war, and ruled as dictator, reshaping the constitution to entrench senatorial power.",
@@ -49781,15 +49769,6 @@
       "source_ids": [
         "rome-rulers-07"
       ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-07"
-          ]
-        }
-      ],
       "date_note": "Held office as general; dates are of office or command, not of birth and death.",
       "summary": "Cleared the Mediterranean of pirates, defeated Mithradates under extraordinary commands, then became Rome's sole consul.",
       "aliases": [
@@ -49817,15 +49796,6 @@
       "source_ids": [
         "rome-rulers-08"
       ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-08"
-          ]
-        }
-      ],
       "date_note": "Held office as consul; dates are of office or command, not of birth and death.",
       "summary": "Financed rising politicians and crushed the Spartacus revolt, then bankrolled the First Triumvirate that sidelined the Senate.",
       "aliases": [
@@ -49851,15 +49821,6 @@
       "tier": "intermediate",
       "source_ids": [
         "rome-rulers-09"
-      ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-09"
-          ]
-        }
       ],
       "date_note": "Held office as orator; dates are of office or command, not of birth and death.",
       "summary": "As consul, exposed and crushed the Catiline conspiracy, then became the Republic's foremost voice defending constitutional government.",
@@ -49892,15 +49853,6 @@
       "source_ids": [
         "rome-rulers-11"
       ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-11"
-          ]
-        }
-      ],
       "date_note": "Held office as tribune; dates are of office or command, not of birth and death. differs: used his tenure of major office, from plebeian tribune (62 BCE) to his death commanding the last Republican resistance at Utica (46 BCE), rather than the page's own 'Years active' field, which is given as 67-46 BCE (starting from his military tribunate); his praetorship (54 BCE) also falls within the chosen span. Lifespan is 95-46 BCE.",
       "summary": "As tribune and senator, led principled Senate resistance to Caesar and Pompey, and chose suicide at Utica over living under Caesar's rule.",
       "aliases": [
@@ -49932,15 +49884,6 @@
       "source_ids": [
         "rome-rulers-12"
       ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-12"
-          ]
-        }
-      ],
       "date_note": "Held office as triumvir; dates are of office or command, not of birth and death.",
       "summary": "Seized Caesar's legacy, ruled the eastern Mediterranean as triumvir with Cleopatra, and lost Rome's last civil war to Octavian.",
       "aliases": [
@@ -49971,15 +49914,6 @@
       "tier": "intermediate",
       "source_ids": [
         "rome-rulers-13"
-      ],
-      "caveats": [
-        {
-          "kind": "contested-existence",
-          "text": "omit",
-          "source_ids": [
-            "rome-rulers-13"
-          ]
-        }
       ],
       "date_note": "Held office as triumvir; dates are of office or command, not of birth and death.",
       "summary": "Won the Second Triumvirate's power struggle and Actium, then formally 'restored' the Republic while keeping real power as princeps.",
@@ -50027,7 +49961,8 @@
         "Tan'gun Wanggŏm"
       ],
       "native_name": "단군",
-      "date_standing": "traditional"
+      "date_standing": "traditional",
+      "historicity": "mythological"
     },
     {
       "id": "east-asia.korea.three-kingdoms.gwanggaeto-the-great",

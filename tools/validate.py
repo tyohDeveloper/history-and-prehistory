@@ -790,6 +790,43 @@ def _check_link_graph(entities):
 
 _check_link_graph(entities)
 
+# ---------------------------------------------------------------------------
+# Rule 13: placeholder text is not content.
+#
+# Eleven entities shipped carrying a caveat of kind `contested-existence` whose
+# entire text was the word "omit" -- among them Cicero, Pompey and Sulla, which
+# told the reader their existence was in doubt. The cause was an importer reading
+# a research file where the writer had typed the instruction ("omit") into the
+# field rather than leaving the field out, and nothing caught it because a short
+# string is structurally valid.
+# ---------------------------------------------------------------------------
+
+_SENTINELS = {"omit", "none", "n/a", "na", "tbd", "todo", "-", "--", "null", "false",
+              "unknown", "?", "no", "x"}
+
+
+def _check_placeholders(entities):
+    hits = []
+    for e in entities:
+        for c in e.get("caveats") or []:
+            text = (c.get("text") or "").strip()
+            if text.lower() in _SENTINELS or len(text) < 12:
+                hits.append(f"{e['id']} [{c.get('kind')}] {text!r}")
+        for field in ("summary", "date_note", "search_phrase"):
+            v = (e.get(field) or "").strip()
+            if v and v.lower() in _SENTINELS:
+                hits.append(f"{e['id']} {field}={v!r}")
+        for a in e.get("alternatives") or []:
+            v = (a.get("label") or "").strip()
+            if v.lower() in _SENTINELS:
+                hits.append(f"{e['id']} alternative label={v!r}")
+    if hits:
+        errors.append(f"placeholder text used as content, {len(hits)} case(s): "
+                      + "; ".join(hits[:5]) + (" ..." if len(hits) > 5 else ""))
+
+
+_check_placeholders(entities)
+
 # Retired authoring shorthands. Accepted by the builders during the migration window so that
 # ~30 modules did not have to change at once; reported here so the window does not quietly
 # become permanent.

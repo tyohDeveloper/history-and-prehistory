@@ -1714,6 +1714,7 @@ from migrate_dating import extend as _migrate_dating
 from normalize_ids import extend as _normalize_ids, rewrite_refs as _rewrite_refs
 from name_repair import extend as _name_repair
 from derive_links import extend as _derive_links
+from historicity import extend as _historicity
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -2030,6 +2031,7 @@ _ID_REDIRECTS = _normalize_ids(E, entities) or {}
 # longer satisfied.
 _migrate_dating(E, entities)
 _derive_links(E, entities)
+_historicity(E, entities)
 
 with open(DATA / "entities.json", "w") as f:
     json.dump(_envelope("entities", entities, redirects=_ID_REDIRECTS), f, indent=2, ensure_ascii=False)

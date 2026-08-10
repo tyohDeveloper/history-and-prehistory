@@ -402,7 +402,7 @@ function renderReadout(): HTMLElement {
   fact("Identifier", e.id);
   // Precision is no longer authored; it is implied by the bounds, which are shown beside
   // each endpoint's dating method below.
-  if (e.historicity !== undefined) fact("Historicity", e.historicity);
+  if (e.historicity !== undefined) fact("Standing of the topic", HISTORICITY_LABEL[e.historicity] ?? e.historicity);
   if (e.extant === true) fact("Continues to", "the present");
   const sm = e.start_dating_method;
   const em = e.end_dating_method;
@@ -663,6 +663,22 @@ function uncertaintyLabel(e: Entity): string | null {
   }
   return parts.length === 0 ? null : parts.join(" \u00b7 ");
 }
+
+/**
+ * What `historicity` means, in a sentence the reader does not have to decode.
+ *
+ * This is the axis `date_standing` could not carry. Dangun's dating is a precise, genuine
+ * convention -- 2333 BCE, from a thirteenth-century chronicle -- about a person who very
+ * likely never lived, and a schema with only one uncertainty axis reported him the same way it
+ * reported Hammurabi.
+ */
+const HISTORICITY_LABEL: Record<string, string> = {
+  mythological: "Mythological \u2014 a figure of myth, not presented as history by scholarship",
+  legendary: "Legendary \u2014 handed down as history; existence unverified or doubted",
+  contested: "Contested \u2014 specialists disagree whether this existed as described",
+  reconstructed: "Reconstructed \u2014 inferred from indirect evidence, never directly attested",
+  interpretive: "Interpretive \u2014 a modern scholarly category, and an argued one",
+};
 
 const DERIVED_TITLE: Record<string, string> = {
   sequence: "Marked relations are the order of rulers within their dynasty, taken from the dataset's own sequence rather than from a source.",

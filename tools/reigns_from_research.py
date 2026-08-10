@@ -229,6 +229,16 @@ def _emit_rows(R, rows, parent, url_to_sid, *, legendary: bool, tier: str,
 
         caveats = []
         contested = (row.get("contested") or "").strip()
+        # A research brief tells the researcher to omit a field when it does not apply, and one
+        # wrote the word "omit" into the field instead of leaving it out. Taken literally, that
+        # produced eleven caveats of kind `contested-existence` whose entire text was "omit" --
+        # on Cicero, Pompey, Sulla and Marius, asserting to the reader that their existence is
+        # in doubt. It shipped, because a four-character string is structurally valid.
+        #
+        # Any importer reading human-written JSON needs this: the sentinels a writer reaches for
+        # to mean "nothing here" are not content.
+        if contested.lower() in ("omit", "none", "n/a", "na", "tbd", "-", "null", "false"):
+            contested = ""
         if contested:
             if len(contested) > 200:
                 contested = contested[:197] + "..."

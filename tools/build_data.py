@@ -23,7 +23,10 @@ DATA.mkdir(exist_ok=True)
 # ---- Versions --------------------------------------------------------------
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
-SCHEMA_VERSION = "3.6.0"
+# 3.7.0 adds the `site` kind -- a place that mattered without being a town, for the forty-seven
+# sanctuaries, necropoleis and mound centres that had been filed as cities and said so themselves.
+# Additive, so no reader of 3.6.0 data breaks; a reader of 3.7.0 data needs the new kind.
+SCHEMA_VERSION = "3.7.0"
 DATASET_VERSION = "0.37.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 

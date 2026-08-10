@@ -1,5 +1,5 @@
 import "./style.css";
-import { datasetVersion, entities, sourceById } from "./dataset/dataset";
+import { datasetVersion, entities, sourceById, themes } from "./dataset/dataset";
 import { displayRange } from "./chrono/displayRange";
 import { contextNeighbours } from "./focus/contextNeighbours";
 import { datingOf } from "./chrono/fromEntity";
@@ -108,6 +108,10 @@ interface State {
   /** Calendars shown in the readout. Persisted only in location.hash. */
   calendars: string[];
   calendarPickerOpen: boolean;
+  /** Open theme in the theme browser, or null. Themes cut across the geographic
+   * tree, which the tree itself cannot express. */
+  openTheme: string | null;
+  themePickerOpen: boolean;
   /** Focus+context lens beside the columns. Q-9: a budget, not a tier filter. */
   contextOpen: boolean;
   contextBudget: number;
@@ -119,6 +123,8 @@ const state: State = {
   query: "",
   calendars: parseSelection(window.location.hash),
   calendarPickerOpen: false,
+  openTheme: null,
+  themePickerOpen: false,
   contextOpen: false,
   contextBudget: 24,
 };
@@ -446,6 +452,8 @@ function renderReadout(): HTMLElement {
   if (caveats !== null) box.append(caveats);
   const relations = renderLinks(e, index, selectEntity);
   if (relations !== null) box.append(relations);
+  const themeChips = renderThemesOf(e);
+  if (themeChips !== null) box.append(themeChips);
   const alternatives = renderAlternatives(e, order);
   if (alternatives !== null) box.append(alternatives);
   const calendars = renderCalendarRows(e);
@@ -767,7 +775,12 @@ function renderHandoff(entity: Entity, cited: boolean): HTMLElement {
       { class: "handoff-note" },
       cited
         ? "The sources above are where this date comes from. This search is for everything else."
-        : "This date is not yet sourced in the dataset. Treat it as a starting point and verify it.",
+        : entity.start_year === null
+          // Region and grouping nodes carry no date, so claiming their date is
+          // unsourced asserts something about a figure that does not exist. The
+          // grouping itself is this dataset's editorial choice, not a sourceable claim.
+          ? "This is a grouping in this dataset rather than a dated period. The contents are what carry dates and sources."
+          : "This date is not yet sourced in the dataset. Treat it as a starting point and verify it.",
     ),
   );
   return box;
@@ -847,6 +860,124 @@ function flagLabel(r: CalendarReading): string {
     default:
       return "";
   }
+}
+
+/**
+ * Reverse index: entity id -> the themes it belongs to.
+ *
+ * Membership is stored on the theme (`entity_ids`), not on the entity, which is why an
+ * audit that checked only `entity.themes` concluded the feature was empty. It was not:
+ * 121 curated memberships across 16 themes, every id resolving. Built rather than
+ * deleted for that reason.
+ */
+const THEMES_BY_ENTITY = ((): Map<string, { id: string; name: string }[]> => {
+  const m = new Map<string, { id: string; name: string }[]>();
+  for (const t of themes) {
+    for (const eid of t.entity_ids) {
+      const list = m.get(eid) ?? [];
+      list.push({ id: t.id, name: t.name });
+      m.set(eid, list);
+    }
+  }
+  return m;
+})();
+
+/**
+ * Themes an entity belongs to, as links into the theme browser.
+ *
+ * This is the axis the geographic tree cannot express: "Women Rulers" and "Silk Road
+ * Eras" cut across regions and centuries, and a strict hierarchy cannot say so.
+ */
+function renderThemesOf(entity: Entity): HTMLElement | null {
+  const mine = THEMES_BY_ENTITY.get(entity.id);
+  if (mine === undefined || mine.length === 0) return null;
+  const box = el("div", { class: "ent-themes", "data-testid": "panel-entity-themes" });
+  box.append(el("div", { class: "links-head" }, "Themes"));
+  const row = el("div", { class: "theme-chips" });
+  for (const t of mine) {
+    const chip = el("button", {
+      type: "button",
+      class: "theme-chip",
+      "data-testid": `button-theme-${t.id}`,
+    }, t.name);
+    chip.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      state.openTheme = t.id;
+      state.themePickerOpen = true;
+      render();
+    });
+    row.append(chip);
+  }
+  box.append(row);
+  return box;
+}
+
+function renderThemePicker(): HTMLElement {
+  const wrap = el("div", { class: "cal-picker theme-picker" });
+  const btn = el("button", {
+    type: "button",
+    class: "cal-picker-toggle",
+    "aria-expanded": String(state.themePickerOpen),
+    "data-testid": "button-theme-picker",
+  }, `Themes (${themes.length})`);
+  btn.addEventListener("click", () => {
+    state.themePickerOpen = !state.themePickerOpen;
+    render();
+  });
+  wrap.append(btn);
+  if (!state.themePickerOpen) return wrap;
+
+  const panel = el("div", { class: "cal-picker-panel theme-panel", role: "group",
+    "aria-label": "Themes", "data-testid": "panel-theme-picker" });
+  for (const t of themes) {
+    const open = state.openTheme === t.id;
+    const row = el("button", {
+      type: "button",
+      class: "cal-option",
+      "aria-expanded": String(open),
+      "data-testid": `option-theme-${t.id}`,
+      ...(typeof t.description === "string" ? { title: t.description } : {}),
+    });
+    row.append(
+      el("span", { class: "cal-check", "aria-hidden": "true" }, open ? "\u25BE" : "\u25B8"),
+      el("span", {}, `${t.name} (${t.entity_ids.length})`),
+    );
+    row.addEventListener("click", () => {
+      state.openTheme = open ? null : t.id;
+      render();
+    });
+    panel.append(row);
+
+    if (!open) continue;
+    const members = el("div", { class: "theme-members",
+      "data-testid": `list-theme-members-${t.id}` });
+    if (typeof t.description === "string") {
+      members.append(el("div", { class: "theme-desc" }, t.description));
+    }
+    // Chronological: a theme reads best as a sequence.
+    const found = t.entity_ids
+      .map((id) => index.byId.get(id))
+      .filter((e): e is Entity => e !== undefined)
+      .sort((a, b) => (a.start_year ?? 0) - (b.start_year ?? 0));
+    for (const m of found) {
+      const link = el("button", {
+        type: "button",
+        class: "theme-member",
+        "data-testid": `button-theme-member-${m.id}`,
+      });
+      link.append(el("span", { class: "theme-member-name" }, m.name));
+      link.append(el("span", { class: "theme-member-range" },
+        displayRange(m).text));
+      link.addEventListener("click", (ev) => {
+        ev.stopPropagation();
+        selectEntity(m.id);
+      });
+      members.append(link);
+    }
+    panel.append(members);
+  }
+  wrap.append(panel);
+  return wrap;
 }
 
 function renderCalendarPicker(): HTMLElement {
@@ -974,6 +1105,7 @@ function renderHeader(): HTMLElement {
   });
   controls.append(tier);
   controls.append(ctxToggle);
+  controls.append(renderThemePicker());
   controls.append(renderCalendarPicker());
 
   head.append(controls);

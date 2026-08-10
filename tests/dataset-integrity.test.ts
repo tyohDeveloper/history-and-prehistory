@@ -19,7 +19,7 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.32.0.0");
+    expect(datasetVersion).toBe("0.33.0.0");
     expect(schemaVersion).toBe("3.5.0");
   });
 
@@ -106,7 +106,7 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(498);
+    expect(cited.length).toBe(531);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
@@ -191,10 +191,14 @@ describe("gap-analysis baseline", () => {
     expect(entities.filter((e) => (e.calendar_ids?.length ?? 0) > 0).length).toBe(267);
   });
 
-  it("still has summaries on only 5 of 42 region nodes", () => {
+  it("gives every region node a summary", () => {
+    // Was a debt marker asserting 5 of 42. Region nodes are the highest-traffic
+    // entities in the app -- a reader clicking "China" or "Africa" lands on one -- and
+    // they were the emptiest. Now an invariant rather than a record of the gap.
     const regions = entities.filter((e) => e.kind === "region");
     expect(regions.length).toBe(42);
-    expect(regions.filter((e) => e.summary !== undefined).length).toBe(5);
+    const missing = regions.filter((e) => (e.summary ?? "").trim() === "").map((e) => e.id);
+    expect(missing).toEqual([]);
   });
 });
 
@@ -932,5 +936,63 @@ describe("homograph disambiguation", () => {
           .toBe(han.length);
       }
     }
+  });
+});
+
+describe("themes", () => {
+  // 121 curated memberships existed for several releases with no UI. An audit that
+  // checked only `entity.themes` called the feature empty; membership is on the theme.
+  it("resolves every theme membership to a real entity", () => {
+    const ids = new Set(entities.map((e) => e.id));
+    const broken = themes.flatMap((t) =>
+      t.entity_ids.filter((id) => !ids.has(id)).map((id) => `${t.id} -> ${id}`),
+    );
+    expect(broken).toEqual([]);
+  });
+
+  it("keeps every theme non-empty and named", () => {
+    expect(themes.length).toBe(16);
+    for (const t of themes) {
+      expect(t.entity_ids.length).toBeGreaterThan(0);
+      expect(t.name.trim()).not.toBe("");
+    }
+    const total = themes.reduce((n, t) => n + t.entity_ids.length, 0);
+    expect(total).toBeGreaterThanOrEqual(121);
+  });
+});
+
+describe("the Essentials view", () => {
+  // foundational = "Essentials" in the UI. It is meant to be the clean overview and
+  // was the most broken of the three tiers: three of ten regions were absent from it
+  // entirely, so 65 Southeast Asian and 56 Central Asian entities were unreachable.
+  it("shows every top-level region", () => {
+    const roots = entities.filter((e) => e.parent_id === null);
+    const hidden = roots.filter((e) => e.tier !== "foundational").map((e) => e.id);
+    expect(hidden).toEqual([]);
+    expect(roots.length).toBe(10);
+  });
+
+  it("does not strand a foundational entity under a hidden parent", () => {
+    // A child cannot be reached by drilling if its parent is filtered out. This is
+    // scoped to shallow depths, where unreachability is most damaging; the deeper
+    // inversions (famous pharaohs under bookkeeping dynasties) are tracked separately.
+    const byId = new Map(entities.map((e) => [e.id, e]));
+    const depth = (e: Entity): number => {
+      let n = 0;
+      let cur = e;
+      while (cur.parent_id !== null) {
+        cur = byId.get(cur.parent_id)!;
+        n += 1;
+      }
+      return n;
+    };
+    const stranded = entities
+      .filter((e) => e.tier === "foundational" && depth(e) <= 2)
+      .filter((e) => {
+        const p = e.parent_id === null ? null : byId.get(e.parent_id);
+        return p !== null && p !== undefined && p.tier !== "foundational";
+      })
+      .map((e) => `${e.id} under ${e.parent_id}`);
+    expect(stranded).toEqual([]);
   });
 });

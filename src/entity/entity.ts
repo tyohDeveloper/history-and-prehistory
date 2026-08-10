@@ -73,7 +73,6 @@ export interface Entity {
    *  directions. Present only when more than one. Records where an entity is
    *  PLACED, not where a polity RULED. */
   regions?: string[];
-  redirect_ids?: string[];
   start_year_min?: number;
   start_year_max?: number;
   end_year_min?: number;
@@ -84,18 +83,11 @@ export interface Entity {
   date_note?: string;
   allow_outside_parent_dates?: boolean;
   summary?: string;
-  themes?: string[];
-  region_tags?: string[];
   calendar_ids?: string[];
-  misconceptions?: string[];
   notable_figures?: string[];
   capital?: string;
-  capitals?: string[];
-  successor_ids?: string[];
-  predecessor_ids?: string[];
   links?: { type: string; entity_id: string; note?: string }[];
   /* --- schema 1.1.0 (see 2.0.0 additions below) ------------------------------------------------------ */
-  subkind?: string;
   /**
    * Per-boundary dating (schema 3.0.0, resolving Q-30).
    *
@@ -111,15 +103,6 @@ export interface Entity {
   standing?: StandingId;
   /** ISO date this dating was last checked. Live disputes only. */
   as_of?: string;
-  native_date?: {
-    calendar_id: string;
-    text: string;
-    year?: number;
-    month?: number;
-    day?: number;
-    observance?: string;
-    conversion_fuzz_days?: number;
-  };
   alternatives?: {
     label: string;
     standing: StandingId;
@@ -131,6 +114,5 @@ export interface Entity {
   }[];
   caveats?: { kind: CaveatKindId; text: string; source_ids?: string[] }[];
   source_ids?: string[];
-  sources?: { title: string; url?: string; note?: string }[];
 }
 

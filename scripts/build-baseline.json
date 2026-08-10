@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 274575,
+  "gzipBytes": 287270,
   "recordedAt": "2026-08-10",
-  "note": "v3.31.0.0 relations rendered, rival claims (data 0.32.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.32.0.0 Essentials tier repair, themes browser, schema cleanup (data 0.33.0.0). Measured with zlib.gzipSync."
 }

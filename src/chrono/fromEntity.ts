@@ -25,8 +25,6 @@ import { asHistorical, isoFromHistorical } from "./year";
 import type {
   BoundaryDating,
   DatingClaim,
-  EntityCaveat,
-  EntityCaveatKind,
   FuzzyPoint,
   YearValue,
 } from "./year";
@@ -128,41 +126,4 @@ export function datingOf(entity: Entity): EntityDates {
   }
 
   return result;
-}
-
-/**
- * Split a free-text misconception into a caveat kind.
- *
- * Heuristic, and deliberately conservative: it only promotes to
- * `naming-confusion` on an explicit name-versus-place construction, and
- * otherwise leaves the entry as a plain misconception. Getting this wrong in
- * the safe direction costs a slightly generic label; getting it wrong in the
- * other direction would put a factual correction under a heading that
- * misdescribes it.
- *
- * Intended for a one-time migration pass whose output is reviewed, not as a
- * permanent classifier. Once the field is authored directly, delete this.
- */
-export function classifyCaveat(text: string): EntityCaveatKind {
-  const t = text.toLowerCase();
-  const namePattern =
-    /(not (located )?in the modern|not the modern|despite the name|is a misnomer|named after|confused with the modern)/;
-  if (namePattern.test(t)) return "naming-confusion";
-  return "misconception";
-}
-
-export function caveatsOf(entity: Entity): EntityCaveat[] {
-  const out: EntityCaveat[] = [];
-  for (const text of entity.misconceptions ?? []) {
-    out.push({ kind: classifyCaveat(text), text });
-  }
-  // "(legendary)" and "(traditional)" in a display name are the dataset's
-  // existing way of hedging existence. Promote it to a real caveat.
-  if (/\((legendary|traditional)\)/i.test(entity.name)) {
-    out.push({
-      kind: "contested-existence",
-      text: `${entity.name.replace(/\s*\((legendary|traditional)\)/i, "")} is known from tradition rather than contemporary record.`,
-    });
-  }
-  return out;
 }

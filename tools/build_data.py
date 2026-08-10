@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.5.0"
-DATASET_VERSION = "0.32.0.0"
+DATASET_VERSION = "0.33.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1320,8 +1320,7 @@ E(f"{na}.morocco-alaouite", "era", "Alaouite Morocco", na, start=1631, end=None,
 
 wa = "africa.west"
 E(f"{wa}.ghana", "era", "Ghana Empire", wa, start=300, end=1240, tier="foundational",
-  aliases=["Wagadu"],
-  misconceptions=["Ghana Empire was not located in the modern nation of Ghana."])
+  aliases=["Wagadu"])
 E(f"{wa}.mali", "era", "Mali Empire", wa, start=1235, end=1670, tier="foundational")
 E(f"{wa}.mali.sundiata", "reign", "Sundiata Keita", f"{wa}.mali", start=1235, end=1255, tier="foundational")
 E(f"{wa}.mali.mansa-musa", "reign", "Mansa Musa", f"{wa}.mali", start=1312, end=1337, tier="foundational",
@@ -1330,8 +1329,7 @@ E(f"{wa}.songhai", "era", "Songhai Empire", wa, start=1464, end=1591, tier="foun
 E(f"{wa}.songhai.sunni-ali", "reign", "Sunni Ali", f"{wa}.songhai", start=1464, end=1492, tier="intermediate")
 E(f"{wa}.songhai.askia-muhammad", "reign", "Askia Muhammad I", f"{wa}.songhai", start=1493, end=1528, tier="intermediate")
 E(f"{wa}.kanem-bornu", "era", "Kanem–Bornu Empire", wa, start=700, end=1900, tier="intermediate")
-E(f"{wa}.benin", "era", "Benin Empire", wa, start=1180, end=1897, tier="intermediate",
-  misconceptions=["Benin Empire was in southern Nigeria, not the modern nation of Benin."])
+E(f"{wa}.benin", "era", "Benin Empire", wa, start=1180, end=1897, tier="intermediate")
 E(f"{wa}.oyo", "era", "Oyo Empire", wa, start=1400, end=1836, tier="intermediate")
 E(f"{wa}.ashanti", "era", "Ashanti Empire", wa, start=1670, end=1902, tier="intermediate")
 E(f"{wa}.dahomey", "era", "Kingdom of Dahomey", wa, start=1600, end=1904, tier="intermediate")
@@ -1379,8 +1377,7 @@ E(f"{meso}.zapotec", "era", "Zapotec (Monte Albán)", meso, start=-500, end=800,
 E(f"{meso}.teotihuacan", "era", "Teotihuacan", meso, start=-100, end=550, tier="foundational",
   summary="One of the largest cities in the ancient world.")
 E(f"{meso}.maya", "era", "Maya Civilization", meso, start=-2000, end=1697, tier="foundational",
-  calendar_ids=["maya-long-count"],
-  misconceptions=["The Maya never formed a single unified empire; they were a network of city-states."])
+  calendar_ids=["maya-long-count"])
 E(f"{meso}.maya.classic", "period", "Classic Maya", f"{meso}.maya", start=250, end=900, tier="foundational")
 E(f"{meso}.maya.postclassic", "period", "Postclassic Maya", f"{meso}.maya", start=900, end=1697)
 E(f"{meso}.toltec", "era", "Toltec Empire", meso, start=900, end=1150, tier="intermediate")
@@ -1699,6 +1696,10 @@ from citations_cross_region import extend as _cross_region_citations
 from extensions_phoenicia import extend as _phoenicia
 from extensions_vedic import extend as _vedic
 from rival_claims import extend as _rival_claims
+from tier_promotions import extend as _tier_promotions
+from misconception_migration import extend as _misconception_migration
+from container_summaries import extend as _container_summaries
+from promoted_sourcing import extend as _promoted_sourcing
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1724,6 +1725,10 @@ _iran_islamic(E, entities)
 _phoenicia(E, entities)
 _vedic(E, entities)
 _rival_claims(E, entities)
+_misconception_migration(E, entities)
+_tier_promotions(E, entities)
+_container_summaries(E, entities)
+_promoted_sourcing(E, entities)
 _cross_region_citations(E, entities)
 _song_era_states(E, entities)
 _fix_china_tiers(E, entities)
@@ -3176,6 +3181,9 @@ from citations_cross_region import CROSS_REGION_SOURCES  # noqa: E402
 from extensions_phoenicia import PHOENICIA_SOURCES  # noqa: E402
 from extensions_vedic import VEDIC_SOURCES  # noqa: E402
 from rival_claims import RIVAL_SOURCES  # noqa: E402
+from misconception_migration import MISCONCEPTION_SOURCES  # noqa: E402
+from misconception_migration import LEGENDARY_SOURCES  # noqa: E402
+from promoted_sourcing import PROMOTED_SOURCES  # noqa: E402
 sources.extend(CENTRAL_ASIA_SOURCES)
 sources.extend(CENTRAL_ASIA_MEDIEVAL_SOURCES)
 sources.extend(IRAN_ISLAMIC_SOURCES)
@@ -3183,6 +3191,9 @@ sources.extend(CROSS_REGION_SOURCES)
 sources.extend(PHOENICIA_SOURCES)
 sources.extend(VEDIC_SOURCES)
 sources.extend(RIVAL_SOURCES)
+sources.extend(MISCONCEPTION_SOURCES)
+sources.extend(LEGENDARY_SOURCES)
+sources.extend(PROMOTED_SOURCES)
 from extensions_seasia_oceania import SEASIA_OCEANIA_SOURCES  # noqa: E402
 from extensions_indus import INDUS_SOURCES  # noqa: E402
 from extensions_east_asia import EAST_ASIA_SOURCES  # noqa: E402

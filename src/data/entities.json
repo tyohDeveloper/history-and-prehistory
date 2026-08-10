@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
-  "dataset_version": "0.32.0.0",
-  "generated_at": "2026-08-10T05:35:11Z",
+  "dataset_version": "0.33.0.0",
+  "generated_at": "2026-08-10T06:22:39Z",
   "entities": [
     {
       "id": "global",
@@ -51,7 +51,8 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "summary": "The Greek, Roman and Byzantine worlds and the sea that connected them, treated as one region because its societies were more closely linked to each other by water than to their own inland neighbours."
     },
     {
       "id": "europe.western",
@@ -62,6 +63,7 @@
       "end_year": null,
       "tier": "foundational",
       "date_precision": "unknown",
+      "summary": "Iberia, France, the Low Countries and the British Isles, from the post-Roman kingdoms through the Atlantic empires.",
       "regions": [
         "africa",
         "europe",
@@ -76,7 +78,8 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "summary": "The German-speaking lands, the Alps and the Carpathian basin: the Holy Roman Empire and the Habsburg and Prussian states that succeeded it."
     },
     {
       "id": "europe.northern",
@@ -85,8 +88,9 @@
       "parent_id": "europe",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "Scandinavia, the Baltic and Finland, including the Norse expansion that reached Greenland and North America."
     },
     {
       "id": "europe.eastern",
@@ -95,8 +99,9 @@
       "parent_id": "europe",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "unknown",
+      "summary": "The lands between the Baltic and the Black Sea: Kievan Rus', Poland-Lithuania, Muscovy and the Russian states that grew from them. The boundary with Central Europe is political and has moved repeatedly.",
       "regions": [
         "africa",
         "central-asia",
@@ -176,6 +181,7 @@
       "end_year": null,
       "tier": "foundational",
       "date_precision": "unknown",
+      "summary": "The Tigris-Euphrates floodplain and the Levantine coast, where writing, cities and law codes first appear in the record.",
       "regions": [
         "africa",
         "central-asia",
@@ -190,8 +196,9 @@
       "parent_id": "west-asia",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "unknown",
+      "summary": "The peninsula between the Aegean and the Caucasus: Hittite, Phrygian, Lydian, Greek, Roman, Byzantine and Turkish in succession.",
       "regions": [
         "africa",
         "europe",
@@ -243,6 +250,7 @@
         "national-archives-persia-iran",
         "sup-discovery-of-iran"
       ],
+      "summary": "The Iranian plateau and its empires, from Elam and the Achaemenids to the Safavids and the modern state.",
       "regions": [
         "africa",
         "central-asia",
@@ -260,8 +268,9 @@
       "parent_id": "west-asia",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "unknown",
+      "summary": "The peninsula and its incense kingdoms before Islam, and the states that followed.",
       "regions": [
         "africa",
         "west-asia"
@@ -278,7 +287,7 @@
         "Inner Asia",
         "Turkestan"
       ],
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "Silk Road oases, the Eurasian steppe, and Tibet.",
       "date_precision": "unknown",
       "name_forms": [
@@ -306,8 +315,9 @@
       "parent_id": "central-asia",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "The oasis cities and river valleys of Transoxiana and Khorasan — Samarkand, Bukhara, Merv — repeatedly the hinge between the settled empires around them."
     },
     {
       "id": "central-asia.steppe",
@@ -316,8 +326,9 @@
       "parent_id": "central-asia",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "The grassland corridor from Mongolia to Hungary, and the mobile polities that formed across it. Their borders were seasonal and their records are usually written by their neighbours."
     },
     {
       "id": "central-asia.tibet",
@@ -327,7 +338,8 @@
       "start_year": null,
       "end_year": null,
       "tier": "intermediate",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "summary": "The plateau and the Himalaya: the Tibetan Empire that once rivalled Tang China, and the Buddhist polity that followed it."
     },
     {
       "id": "south-asia",
@@ -373,7 +385,8 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "summary": "China, Korea and Japan, plus the steppe and maritime peripheries they contested, linked by a shared script, canon and diplomatic order."
     },
     {
       "id": "east-asia.china",
@@ -383,7 +396,8 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "summary": "The longest continuously documented state tradition on record, from the Neolithic cultures of the Yellow and Yangtze valleys to the present. Dynastic names organise it, but they conceal as much as they reveal: several were regional, several overlapped, and some conquered from outside."
     },
     {
       "id": "east-asia.korea",
@@ -392,8 +406,9 @@
       "parent_id": "east-asia",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "The peninsula from Gojoseon and the Three Kingdoms through Silla, Goryeo and Joseon to the modern division."
     },
     {
       "id": "east-asia.japan",
@@ -403,7 +418,8 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "summary": "The archipelago from Jōmon foraging societies through the imperial court, the shogunates and the modern state. Its eras are named reign periods, which is why so many appear here."
     },
     {
       "id": "southeast-asia",
@@ -412,8 +428,9 @@
       "parent_id": null,
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "unknown",
+      "summary": "The mainland peninsulas and the island world between India and China. The name is a twentieth-century military coinage; the region's own states organised themselves around river valleys and sea lanes, not around this category.",
       "regions": [
         "africa",
         "americas",
@@ -430,8 +447,9 @@
       "parent_id": "southeast-asia",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "The Irrawaddy, Chao Phraya, Mekong and Red River valleys: the Burmese, Thai, Lao, Khmer, Cham and Vietnamese states."
     },
     {
       "id": "southeast-asia.maritime",
@@ -445,7 +463,7 @@
         "Insular Southeast Asia",
         "East Indies"
       ],
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "unknown",
       "name_forms": [
         {
@@ -461,7 +479,8 @@
           "kind": "historical",
           "note": "The European trading name, and the reason the Caribbean ended up called the West Indies."
         }
-      ]
+      ],
+      "summary": "The archipelagos and straits — Srivijaya, Majapahit, the sultanates, the Philippine polities — where control meant control of shipping rather than of territory."
     },
     {
       "id": "africa",
@@ -472,6 +491,7 @@
       "end_year": null,
       "tier": "foundational",
       "date_precision": "unknown",
+      "summary": "The continent where the human lineage originates, and the states, trade systems and empires that followed across a landmass big enough to hold several unconnected histories at once.",
       "regions": [
         "africa",
         "americas",
@@ -490,6 +510,7 @@
       "end_year": null,
       "tier": "foundational",
       "date_precision": "unknown",
+      "summary": "The Nile corridor and the Horn: Egypt, Nubia and Kush, Aksum and Ethiopia — societies shaped by a river that floods on schedule.",
       "regions": [
         "africa",
         "europe",
@@ -503,7 +524,7 @@
       "parent_id": "africa",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "unknown",
       "name_forms": [
         {
@@ -518,6 +539,7 @@
           "note": "An early modern European name for the coast, now avoided."
         }
       ],
+      "summary": "The Maghreb and the Mediterranean littoral: Carthage, Roman Africa, the Berber dynasties and the Islamic states.",
       "regions": [
         "africa",
         "europe",
@@ -535,8 +557,9 @@
       "parent_id": "africa",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "The Sahel and the forest belt, where Ghana, Mali, Songhai, Kanem-Bornu and Benin grew on the trade crossing the Sahara."
     },
     {
       "id": "africa.east",
@@ -545,8 +568,9 @@
       "parent_id": "africa",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "The Swahili coast and the interlacustrine kingdoms, connected by monsoon trade to Arabia, India and China."
     },
     {
       "id": "africa.central",
@@ -555,8 +579,9 @@
       "parent_id": "africa",
       "start_year": null,
       "end_year": null,
-      "tier": "specialist",
-      "date_precision": "unknown"
+      "tier": "intermediate",
+      "date_precision": "unknown",
+      "summary": "The Congo basin and its forests, where the Kingdom of Kongo and the Luba and Lunda states formed. Thinly represented here relative to its importance, which is a gap in this dataset rather than in the history."
     },
     {
       "id": "africa.southern",
@@ -565,8 +590,9 @@
       "parent_id": "africa",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "From Great Zimbabwe and Mapungubwe to the Mutapa state and the Zulu kingdom."
     },
     {
       "id": "americas",
@@ -577,6 +603,7 @@
       "end_year": null,
       "tier": "foundational",
       "date_precision": "unknown",
+      "summary": "Two continents settled from Asia in the late Pleistocene, whose societies developed in near-total isolation from Afro-Eurasia until 1492 — which makes their parallels with it, agriculture and cities and states, the most useful controlled comparison in human history.",
       "regions": [
         "africa",
         "americas",
@@ -593,7 +620,8 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "summary": "North of Mesoamerica: the Ancestral Puebloan and Mississippian societies, the Arctic and subarctic peoples, and the nations encountered and displaced by European settlement."
     },
     {
       "id": "americas.mesoamerica",
@@ -603,7 +631,8 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "summary": "From central Mexico to Honduras: Olmec, Zapotec, Maya, Teotihuacan, Toltec, Purépecha and Aztec, sharing a calendar, a ballgame and a writing tradition."
     },
     {
       "id": "americas.intermediate",
@@ -612,8 +641,9 @@
       "parent_id": "americas",
       "start_year": null,
       "end_year": null,
-      "tier": "specialist",
-      "date_precision": "unknown"
+      "tier": "intermediate",
+      "date_precision": "unknown",
+      "summary": "The isthmus and the Caribbean, between the Mesoamerican and Andean worlds and connected to both."
     },
     {
       "id": "americas.andes",
@@ -623,7 +653,8 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "summary": "The Pacific coast and highlands from Norte Chico through Moche, Nazca and Wari to the Inca — states built without the wheel, the arch or a writing system as usually defined."
     },
     {
       "id": "americas.amazon-southern",
@@ -632,8 +663,9 @@
       "parent_id": "americas",
       "start_year": null,
       "end_year": null,
-      "tier": "specialist",
-      "date_precision": "unknown"
+      "tier": "intermediate",
+      "date_precision": "unknown",
+      "summary": "Amazonia and the southern cone, including the earthworks and managed forests that overturned the idea of the basin as untouched wilderness."
     },
     {
       "id": "oceania",
@@ -642,8 +674,9 @@
       "parent_id": null,
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "Australia, New Guinea and the Pacific islands: the longest continuous cultural traditions known, alongside the last major human migration, which settled the remotest islands on Earth by deliberate open-ocean voyaging."
     },
     {
       "id": "oceania.australia",
@@ -653,7 +686,8 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "summary": "The continent held by Aboriginal and Torres Strait Islander peoples for tens of thousands of years before British colonisation."
     },
     {
       "id": "oceania.melanesia",
@@ -662,8 +696,9 @@
       "parent_id": "oceania",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "New Guinea and the islands east of it, among the most linguistically diverse places on Earth and an independent centre of agricultural origin."
     },
     {
       "id": "oceania.micronesia",
@@ -672,8 +707,9 @@
       "parent_id": "oceania",
       "start_year": null,
       "end_year": null,
-      "tier": "specialist",
-      "date_precision": "unknown"
+      "tier": "intermediate",
+      "date_precision": "unknown",
+      "summary": "The small islands of the western Pacific, including the megalithic city of Nan Madol built on artificial islets."
     },
     {
       "id": "oceania.polynesia",
@@ -682,8 +718,9 @@
       "parent_id": "oceania",
       "start_year": null,
       "end_year": null,
-      "tier": "intermediate",
-      "date_precision": "unknown"
+      "tier": "foundational",
+      "date_precision": "unknown",
+      "summary": "The triangle from Hawaii to New Zealand to Rapa Nui, settled by navigators who crossed thousands of kilometres of open ocean and, in several cases, returned."
     },
     {
       "id": "global.bce",
@@ -1212,9 +1249,12 @@
       "parent_id": "africa.nile.egypt",
       "start_year": -2181,
       "end_year": -2055,
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "Political fragmentation between the Old and Middle Kingdoms.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "src-africa-nile-egypt-fip"
+      ]
     },
     {
       "id": "africa.nile.egypt.middle-kingdom",
@@ -1277,9 +1317,33 @@
       "parent_id": "africa.nile.egypt",
       "start_year": -1650,
       "end_year": -1550,
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "Hyksos rule in the Delta; Theban resistance in the south.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "src-africa-nile-egypt-sip"
+      ],
+      "alternatives": [
+        {
+          "label": "UCL Digital Egypt",
+          "standing": "majority",
+          "start_year": -1700,
+          "end_year": -1550,
+          "source_ids": [
+            "src-africa-nile-egypt-sip"
+          ]
+        },
+        {
+          "label": "World History Encyclopedia",
+          "standing": "minority",
+          "start_year": -1782,
+          "end_year": -1539,
+          "source_ids": [
+            "src-africa-nile-egypt-sip"
+          ]
+        }
+      ],
+      "date_note": "Egyptology has no agreement on the length of this period or on how to define it; UCL says so directly. The figures here sit inside the plausible range without being uniquely confirmed by any one authority."
     },
     {
       "id": "africa.nile.egypt.sip.dyn15-hyksos",
@@ -1536,8 +1600,12 @@
       "parent_id": "africa.nile.egypt",
       "start_year": -1069,
       "end_year": -656,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-africa-nile-egypt-tip"
+      ],
+      "summary": "Egypt fragmented after the New Kingdom: Libyan and Nubian dynasties ruled in parallel from different cities, and the Kushite 25th Dynasty took the whole country."
     },
     {
       "id": "africa.nile.egypt.tip.dyn25-kushite",
@@ -1584,8 +1652,12 @@
       "parent_id": "africa.nile.egypt",
       "start_year": -664,
       "end_year": -332,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-africa-nile-egypt-late-period"
+      ],
+      "summary": "The last era of native and Persian rule, ending with Alexander's conquest. Egypt was twice a Persian province and twice independent again."
     },
     {
       "id": "africa.nile.egypt.late-period.dyn26-saite",
@@ -1761,9 +1833,25 @@
       "parent_id": "africa.nile",
       "start_year": 100,
       "end_year": 940,
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "Highland Ethiopian empire; converted to Christianity under Ezana (c. 330 CE).",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "src-africa-nile-aksum"
+      ],
+      "alternatives": [
+        {
+          "label": "Britannica, counting the Aksumite successor states",
+          "standing": "majority",
+          "start_year": 100,
+          "end_year": 1100,
+          "note": "Aksum's collapse is itself disputed; c.940-960 is the narrower reading.",
+          "source_ids": [
+            "src-africa-nile-aksum"
+          ]
+        }
+      ],
+      "date_note": "Britannica runs Aksum to c.1100 by counting the successor states; the narrower reading ends the kingdom itself around 940-960."
     },
     {
       "id": "africa.nile.aksum.ezana",
@@ -5782,8 +5870,13 @@
       "parent_id": "east-asia.china",
       "start_year": 266,
       "end_year": 420,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "approx",
+      "source_ids": [
+        "src-east-asia-china-jin"
+      ],
+      "date_note": "Britannica gives 265 for the start; the one-year difference is a matter of whether the abdication or the enthronement is counted.",
+      "summary": "Briefly reunified China after the Three Kingdoms, then lost the north to steppe powers and fled south — the beginning of nearly three centuries of division.",
       "name_forms": [
         {
           "name": "Chin",
@@ -5808,8 +5901,12 @@
       "parent_id": "east-asia.china",
       "start_year": 420,
       "end_year": 589,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "approx",
+      "source_ids": [
+        "src-east-asia-china-north-south"
+      ],
+      "summary": "Rival northern and southern courts, the north under non-Han dynasties that progressively adopted Chinese administration. Buddhism spread widely in both.",
       "name_forms": [
         {
           "name": "Nan-Pei Ch'ao",
@@ -6276,7 +6373,21 @@
       "start_year": -2333,
       "end_year": -108,
       "date_precision": "traditional",
-      "tier": "specialist",
+      "tier": "foundational",
+      "source_ids": [
+        "src-east-asia-korea-gojoseon"
+      ],
+      "date_note": "The 2333 BCE start is the traditional Dangun foundation date, not an archaeological one; there is no material evidence for it. The 108 BCE end is the Han conquest and is secure.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "The 2333 BCE founding comes from the Dangun myth. Historians of Korea treat it as legend: there is no archaeological and very little textual evidence.",
+          "source_ids": [
+            "src-east-asia-korea-gojoseon"
+          ]
+        }
+      ],
+      "summary": "The first Korean state in the traditional account, in the peninsula's northwest and southern Manchuria, ended by Han conquest in 108 BCE.",
       "standing": "traditional",
       "start_dating_method": "received",
       "end_dating_method": "received"
@@ -6288,9 +6399,12 @@
       "parent_id": "east-asia.korea",
       "start_year": -57,
       "end_year": 668,
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "Goguryeo, Baekje, Silla.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "src-east-asia-korea-three-kingdoms"
+      ]
     },
     {
       "id": "east-asia.korea.unified-silla",
@@ -6299,8 +6413,12 @@
       "parent_id": "east-asia.korea",
       "start_year": 668,
       "end_year": 935,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-east-asia-korea-unified-silla"
+      ],
+      "summary": "Silla, allied with Tang China, defeated Baekje and Goguryeo and then turned on its ally, unifying most of the peninsula for the first time and presiding over a Buddhist cultural peak."
     },
     {
       "id": "east-asia.korea.goryeo",
@@ -6451,6 +6569,18 @@
       "date_precision": "traditional",
       "tier": "foundational",
       "summary": "Legendary king of Uruk; hero of the eponymous epic.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Probably a real king of Uruk early in the 3rd millennium BCE, but no historical evidence supports the exploits the epic describes.",
+          "source_ids": [
+            "britannica-gilgamesh"
+          ]
+        }
+      ],
+      "source_ids": [
+        "britannica-gilgamesh"
+      ],
       "standing": "traditional",
       "start_dating_method": "received",
       "end_dating_method": "received"
@@ -6484,8 +6614,12 @@
       "parent_id": "west-asia.mesopotamia",
       "start_year": -2112,
       "end_year": -2004,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-west-asia-mesopotamia-ur3"
+      ],
+      "summary": "The last Sumerian-speaking dynasty, which left the earliest surviving law code and an administrative archive of tens of thousands of tablets."
     },
     {
       "id": "west-asia.mesopotamia.old-babylonian",
@@ -6550,8 +6684,13 @@
       "parent_id": "west-asia.mesopotamia",
       "start_year": -1595,
       "end_year": -1155,
-      "tier": "specialist",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-west-asia-mesopotamia-kassite"
+      ],
+      "date_note": "These are middle-chronology figures, the convention most used in scientific publication. Short or long chronology shifts both ends by decades. 1595 BCE is the Hittite sack of Babylon.",
+      "summary": "Four centuries of stable Babylonian rule under a dynasty of foreign origin, during which Babylon became a recognised great power in the diplomacy of the Late Bronze Age."
     },
     {
       "id": "west-asia.mesopotamia.assyrian",
@@ -6957,10 +7096,36 @@
       "kind": "era",
       "name": "Qajar Dynasty",
       "parent_id": "west-asia.iran",
-      "start_year": 1789,
+      "start_year": 1794,
       "end_year": 1925,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-west-asia-iran-qajar"
+      ],
+      "alternatives": [
+        {
+          "label": "From the start of Agha Mohammad Khan's unification campaign",
+          "standing": "minority",
+          "start_year": 1789,
+          "end_year": 1925,
+          "note": "The date this dataset used before it was sourced.",
+          "source_ids": [
+            "src-west-asia-iran-qajar"
+          ]
+        },
+        {
+          "label": "From Agha Mohammad Khan's coronation as shah",
+          "standing": "minority",
+          "start_year": 1796,
+          "end_year": 1925,
+          "source_ids": [
+            "src-west-asia-iran-qajar"
+          ]
+        }
+      ],
+      "date_note": "Britannica dates the dynasty from 1794, when Agha Mohammad Khan eliminated his last rival. 1789 (campaign) and 1796 (coronation) are also used.",
+      "summary": "The dynasty that lost the Caucasus to Russia, granted the concessions that made Iran a field of Anglo-Russian competition, and was forced into a constitution in 1906."
     },
     {
       "id": "west-asia.iran.pahlavi",
@@ -7358,8 +7523,30 @@
       "parent_id": "europe.mediterranean.greece",
       "start_year": -1100,
       "end_year": -800,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-europe-mediterranean-greece-dark-age"
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "“Dark Age” is disputed and increasingly avoided. Protogeometric, Geometric and Early Iron Age are used instead; the period was not uniformly one of decline.",
+          "source_ids": [
+            "src-europe-mediterranean-greece-dark-age"
+          ]
+        }
+      ],
+      "name_forms": [
+        {
+          "name": "Early Iron Age",
+          "kind": "scholarly"
+        }
+      ],
+      "summary": "The centuries between the collapse of Mycenaean palace society and the emergence of the city-states: writing was lost and populations fell, but iron came into use and the epics took shape.",
+      "aliases": [
+        "Early Iron Age"
+      ]
     },
     {
       "id": "europe.mediterranean.greece.archaic",
@@ -8164,8 +8351,12 @@
       "parent_id": "europe.western.england",
       "start_year": 1154,
       "end_year": 1485,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-europe-western-england-plantagenet"
+      ],
+      "summary": "Three centuries covering Magna Carta, the first English parliaments, the Black Death, the Hundred Years' War and the Wars of the Roses."
     },
     {
       "id": "europe.western.england.tudor",
@@ -8207,8 +8398,13 @@
       "parent_id": "europe.western.england",
       "start_year": 1603,
       "end_year": 1714,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-europe-western-england-stuart"
+      ],
+      "date_note": "Stuart rule was not continuous: the monarchy was abolished from 1649 to 1660 under the Commonwealth and Protectorate, then restored. 1603-1714 is a conventional simplification that elides the interregnum.",
+      "summary": "Union of the English and Scottish crowns, civil war, regicide, republic, restoration and the constitutional settlement of 1688."
     },
     {
       "id": "europe.western.britain.victorian",
@@ -8239,8 +8435,12 @@
       "parent_id": "europe.western",
       "start_year": 711,
       "end_year": 1492,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-europe-western-iberia-reconquista"
+      ],
+      "summary": "The long, discontinuous Christian expansion against Muslim al-Andalus, ending in 1492 with Granada — the same year as the expulsion of the Jews and Columbus's first voyage."
     },
     {
       "id": "europe.western.iberia.spanish-empire",
@@ -8424,7 +8624,7 @@
       "parent_id": "europe.central",
       "start_year": 1526,
       "end_year": 1918,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "approx",
       "name_forms": [
         {
@@ -8446,6 +8646,11 @@
           "kind": "historical"
         }
       ],
+      "source_ids": [
+        "src-europe-central-habsburg-monarchy"
+      ],
+      "date_note": "1526 is Ferdinand I's acquisition of the Hungarian and Bohemian crowns, forming the composite realm. Habsburg rule in Austria alone goes back to 1282.",
+      "summary": "A composite realm assembled by marriage rather than conquest, holding together Austrians, Hungarians, Czechs, Poles, Croats, Romanians and Italians until nationalism pulled it apart in 1918.",
       "aliases": [
         "Austria-Hungary",
         "Habsburg Empire",
@@ -8460,8 +8665,13 @@
       "parent_id": "europe.central",
       "start_year": 1701,
       "end_year": 1871,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-europe-central-prussia"
+      ],
+      "date_note": "1871 is the proclamation of the German Empire, where the story of Prussia's rise ends. Prussia itself continued as a state until 1918 and as a legal entity later still.",
+      "summary": "A minor Baltic state that turned military and administrative reform into great-power status, then unified Germany around itself."
     },
     {
       "id": "europe.central.german-empire",
@@ -8624,8 +8834,25 @@
       "parent_id": "europe.eastern",
       "start_year": 1263,
       "end_year": 1547,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-europe-eastern-moscow"
+      ],
+      "alternatives": [
+        {
+          "label": "Britannica",
+          "standing": "majority",
+          "start_year": 1251,
+          "end_year": 1505,
+          "note": "Britannica's own dating differs from the more commonly cited convention.",
+          "source_ids": [
+            "src-europe-eastern-moscow"
+          ]
+        }
+      ],
+      "date_note": "1263 is the start of Daniel's line and 1547 Ivan IV's coronation as tsar, which ends the grand-principality label. Britannica's own dating differs, c.1251-1505.",
+      "summary": "A minor principality under Mongol overlordship that outmanoeuvred its rivals, absorbed them, stopped paying tribute, and became the core of the Russian state."
     },
     {
       "id": "europe.eastern.tsardom",
@@ -8852,7 +9079,7 @@
       "parent_id": "central-asia.core",
       "start_year": 819,
       "end_year": 999,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "approx",
       "cross_parent_ids": [
         "west-asia.iran"
@@ -8860,6 +9087,7 @@
       "source_ids": [
         "britannica-samanid-dynasty"
       ],
+      "summary": "A Persian revival in Bukhara and Samarkand: the dynasty under which New Persian became a literary language again, patronising Rudaki, Ferdowsi's sources and Avicenna's education.",
       "regions": [
         "central-asia",
         "west-asia"
@@ -9079,7 +9307,7 @@
       "parent_id": "central-asia.core",
       "start_year": 1370,
       "end_year": 1507,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "approx",
       "cross_parent_ids": [
         "global.multi-regional",
@@ -9089,6 +9317,7 @@
       "source_ids": [
         "britannica-iran-timurids-turkmen"
       ],
+      "summary": "Timur's conquests were devastating and short-lived, but the dynasty he founded made Samarkand and Herat centres of astronomy, miniature painting and architecture, and produced the founder of Mughal India.",
       "regions": [
         "central-asia",
         "west-asia"
@@ -9258,13 +9487,14 @@
       "parent_id": "south-asia",
       "start_year": -600,
       "end_year": -345,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "approx",
       "source_ids": [
         "britannica-india-history",
         "britannica-mahajanapada"
       ],
-      "date_note": "Overlaps the Later Vedic period on purpose: the second urbanisation is under way while the Vedic corpus is still closing, and the conventional Vedic end date of 500 BCE describes the language rather than the politics."
+      "date_note": "Overlaps the Later Vedic period on purpose: the second urbanisation is under way while the Vedic corpus is still closing, and the conventional Vedic end date of 500 BCE describes the language rather than the politics.",
+      "summary": "India's second urbanisation: sixteen or so states across the Ganges plain, some kingdoms and some republics, the setting in which Buddhism and Jainism emerged."
     },
     {
       "id": "south-asia.maurya",
@@ -9320,9 +9550,13 @@
       "parent_id": "south-asia",
       "start_year": -230,
       "end_year": 220,
-      "tier": "intermediate",
-      "date_note": "Founded under Simuka c. -230; imperial phase from c. -100.",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_note": "Founded under Simuka c. -230; imperial phase from c. -100. One of the most chronologically contested dynasties in ancient India. Britannica declines firm bounds; a Maharashtra gazetteer argues c.222 BCE-226 CE.",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-south-asia-satavahana"
+      ],
+      "summary": "The dominant power of the Deccan between the Maurya and Gupta empires, controlling the trade that carried Roman coinage into central India."
     },
     {
       "id": "south-asia.indo-greek",
@@ -9331,11 +9565,12 @@
       "parent_id": "south-asia",
       "start_year": -200,
       "end_year": 10,
-      "tier": "intermediate",
+      "tier": "foundational",
       "cross_parent_ids": [
         "europe.mediterranean.hellenistic"
       ],
       "date_precision": "approx",
+      "summary": "Greek-speaking kings ruling in Bactria and northwest India after Alexander, issuing bilingual coinage and, in Menander's case, appearing in Buddhist literature as a convert.",
       "source_ids": [
         "britannica-indo-greek-kingdom"
       ],
@@ -9482,8 +9717,9 @@
       "parent_id": "south-asia",
       "start_year": 1674,
       "end_year": 1818,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "summary": "The power that broke Mughal dominance in the Deccan and governed much of the subcontinent through a confederacy of chiefs, until the British defeated it in three wars."
     },
     {
       "id": "south-asia.sikh-empire",
@@ -9492,8 +9728,9 @@
       "parent_id": "south-asia",
       "start_year": 1799,
       "end_year": 1849,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "summary": "Ranjit Singh's state in Punjab, which absorbed Kashmir and Peshawar, kept the British at the Sutlej for a generation, and fell within a decade of his death."
     },
     {
       "id": "south-asia.british-raj",
@@ -10045,9 +10282,6 @@
       "aliases": [
         "Wagadu"
       ],
-      "misconceptions": [
-        "Ghana Empire was not located in the modern nation of Ghana."
-      ],
       "date_precision": "approx",
       "name_forms": [
         {
@@ -10059,6 +10293,18 @@
           "name": "Ghana Empire",
           "kind": "common"
         }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "The Ghana Empire lay in what is now southeastern Mauritania and western Mali, about 400 miles from the modern Republic of Ghana, which took the name in 1957.",
+          "source_ids": [
+            "britannica-ghana-empire"
+          ]
+        }
+      ],
+      "source_ids": [
+        "britannica-ghana-empire"
       ],
       "summary": "Sahelian trading empire, unrelated to the modern nation of Ghana."
     },
@@ -10144,10 +10390,19 @@
       "start_year": 1180,
       "end_year": 1897,
       "tier": "intermediate",
-      "misconceptions": [
-        "Benin Empire was in southern Nigeria, not the modern nation of Benin."
+      "date_precision": "approx",
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "The Benin Empire was in southern Nigeria, not the modern Republic of Benin. That country, formerly Dahomey, is named for the Bight of Benin.",
+          "source_ids": [
+            "worldhistory-kingdom-of-benin"
+          ]
+        }
       ],
-      "date_precision": "approx"
+      "source_ids": [
+        "worldhistory-kingdom-of-benin"
+      ]
     },
     {
       "id": "africa.west.oyo",
@@ -10228,8 +10483,34 @@
       "parent_id": "africa.southern",
       "start_year": 1430,
       "end_year": 1760,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-africa-southern-mutapa"
+      ],
+      "alternatives": [
+        {
+          "label": "Britannica, under 'Matapa'",
+          "standing": "majority",
+          "start_year": 1301,
+          "end_year": 1700,
+          "source_ids": [
+            "src-africa-southern-mutapa"
+          ]
+        },
+        {
+          "label": "New World Encyclopedia, first Mutapa state only",
+          "standing": "minority",
+          "start_year": 1450,
+          "end_year": 1629,
+          "note": "Treats 1803-1902 as a separate second Mutapa state.",
+          "source_ids": [
+            "src-africa-southern-mutapa"
+          ]
+        }
+      ],
+      "date_note": "The most contested dating in this dataset: three reputable sources give three incompatible ranges, and this one is corroborated only at Wikipedia tier.",
+      "summary": "A gold-trading state that succeeded Great Zimbabwe, dealt with Swahili and later Portuguese merchants, and was progressively undermined by them."
     },
     {
       "id": "africa.southern.zulu",
@@ -10545,7 +10826,7 @@
       "parent_id": "americas.mesoamerica",
       "start_year": -500,
       "end_year": 1521,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "century",
       "start_dating_method": "radiocarbon-calibrated",
       "end_dating_method": "calendar",
@@ -10553,7 +10834,8 @@
       "date_note": "Runs to the Spanish conquest. The often-quoted end around 800 CE is the close of Monte Alban's Classic florescence, not of the Zapotec.",
       "source_ids": [
         "britannica-monte-alban"
-      ]
+      ],
+      "summary": "Builders of Monte Albán, a city levelled from a mountaintop, and users of one of the earliest writing systems in the Americas."
     },
     {
       "id": "americas.mesoamerica.teotihuacan",
@@ -10595,16 +10877,24 @@
       "calendar_ids": [
         "maya-long-count"
       ],
-      "misconceptions": [
-        "The Maya never formed a single unified empire; they were a network of city-states."
-      ],
       "date_precision": "approx",
       "start_dating_method": "radiocarbon-calibrated",
       "end_dating_method": "radiocarbon-calibrated",
       "standing": "majority",
       "source_ids": [
         "britannica-maya-people",
-        "britannica-maya-people"
+        "oup-maya-society-government",
+        "worldhistory-maya-government"
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The Maya never formed a single unified empire. They were dozens of independent city-states sharing a culture, script and calendar but no central authority.",
+          "source_ids": [
+            "worldhistory-maya-government",
+            "oup-maya-society-government"
+          ]
+        }
       ],
       "summary": "Long-lived Mesoamerican civilization known for writing, mathematics, and monumental architecture."
     },
@@ -10663,7 +10953,7 @@
       "parent_id": "americas.mesoamerica",
       "start_year": 900,
       "end_year": 1150,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_precision": "disputed",
       "start_dating_method": "typological",
       "end_dating_method": "typological",
@@ -10680,7 +10970,8 @@
             "britannica-toltec"
           ]
         }
-      ]
+      ],
+      "summary": "A central Mexican power at Tula that later Mesoamericans, the Aztecs above all, treated as the model of civilisation and claimed descent from."
     },
     {
       "id": "americas.mesoamerica.purepecha",
@@ -10689,7 +10980,7 @@
       "parent_id": "americas.mesoamerica",
       "start_year": 1300,
       "end_year": 1530,
-      "tier": "specialist",
+      "tier": "foundational",
       "date_precision": "approx",
       "name_forms": [
         {
@@ -10706,6 +10997,10 @@
       "end_dating_method": "calendar",
       "standing": "majority",
       "date_note": "Founded by Tariacuri with a capital at Patzcuaro around 1300; some sources give 1325.",
+      "source_ids": [
+        "src-americas-mesoamerica-purepecha"
+      ],
+      "summary": "The Aztecs' most effective rival, never conquered by them, and the only Mesoamerican state working metal for tools and weapons at scale.",
       "aliases": [
         "Purépecha",
         "Tarascan"
@@ -12236,8 +12531,12 @@
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 193,
       "end_year": 235,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-europe-mediterranean-rome-empire-severan"
+      ],
+      "summary": "A dynasty of provincial origin that widened citizenship, leaned openly on the army for legitimacy, and ended in the assassination that opened the third-century crisis."
     },
     {
       "id": "europe.mediterranean.rome.empire.septimius-severus",
@@ -12705,8 +13004,12 @@
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 364,
       "end_year": 457,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "tier": "foundational",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-europe-mediterranean-rome-empire-valentinianic-theodosian"
+      ],
+      "summary": "The last dynasties to rule a single empire: Christianity became the state religion, the Goths won at Adrianople, and the final administrative division of east and west set in."
     },
     {
       "id": "europe.mediterranean.rome.empire.valentinian-i",
@@ -14672,6 +14975,18 @@
       "tier": "intermediate",
       "date_precision": "traditional",
       "summary": "Traditionally the earliest named female pharaoh; historicity debated.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Known only from Herodotus, Manetho and king lists — no inscription, monument or tomb. May be a corruption of the male king Neitiqerty Siptah.",
+          "source_ids": [
+            "worldhistory-nitocris"
+          ]
+        }
+      ],
+      "source_ids": [
+        "worldhistory-nitocris"
+      ],
       "standing": "traditional",
       "start_dating_method": "received",
       "end_dating_method": "received"
@@ -16524,7 +16839,7 @@
       "parent_id": "south-asia",
       "start_year": 606,
       "end_year": 647,
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "Last great pre-Islamic north Indian empire; centered on Kannauj.",
       "date_precision": "approx"
     },
@@ -16650,9 +16965,12 @@
       "parent_id": "south-asia",
       "start_year": 275,
       "end_year": 897,
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "South Indian dynasty ruling from Kanchipuram; commissioned the great rock-cut temples at Mahabalipuram.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "src-south-asia-pallava"
+      ]
     },
     {
       "id": "south-asia.pallava.mahendravarman-i",
@@ -16693,9 +17011,12 @@
       "parent_id": "south-asia",
       "start_year": 750,
       "end_year": 1161,
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "Buddhist dynasty of Bengal and Bihar; patronized Nalanda and founded Vikramashila.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "src-south-asia-pala"
+      ]
     },
     {
       "id": "south-asia.pala.gopala",
@@ -16735,12 +17056,36 @@
       "kind": "era",
       "name": "Rashtrakuta Dynasty",
       "parent_id": "south-asia",
-      "start_year": 735,
+      "start_year": 753,
       "end_year": 982,
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "Deccan-based empire that patronized both Hinduism and Jainism; commissioned Kailasa Temple at Ellora.",
-      "date_note": "Founded under Dantidurga c. 735; imperial power consolidated by 753.",
-      "date_precision": "approx"
+      "date_note": "Founded under Dantidurga c. 735; imperial power consolidated by 753. 753 is Dantidurga's defeat of the last Badami Chalukya king, which is when the dynasty became paramount. Dantidurga's own reign began in 735, so the founder predates the dynasty as dated here.",
+      "date_precision": "approx",
+      "source_ids": [
+        "src-south-asia-rashtrakuta"
+      ],
+      "alternatives": [
+        {
+          "label": "From the start of Dantidurga's reign",
+          "standing": "minority",
+          "start_year": 735,
+          "end_year": 982,
+          "note": "The date this dataset used before it was sourced. It counts the founder's career rather than the dynasty's paramountcy.",
+          "source_ids": [
+            "src-south-asia-rashtrakuta"
+          ]
+        },
+        {
+          "label": "Britannica",
+          "standing": "majority",
+          "start_year": 755,
+          "end_year": 975,
+          "source_ids": [
+            "src-south-asia-rashtrakuta"
+          ]
+        }
+      ]
     },
     {
       "id": "south-asia.rashtrakuta.dantidurga",
@@ -16751,7 +17096,9 @@
       "end_year": 756,
       "tier": "specialist",
       "summary": "Founder of the Rashtrakuta dynasty.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "allow_outside_parent_dates": true,
+      "date_note": "His reign began in 735, before the 753 victory over the Chalukyas from which the dynasty is dated."
     },
     {
       "id": "south-asia.rashtrakuta.krishna-i",
@@ -16792,12 +17139,15 @@
       "parent_id": "south-asia",
       "start_year": 543,
       "end_year": 753,
-      "tier": "intermediate",
+      "tier": "foundational",
       "aliases": [
         "Early Western Chalukyas"
       ],
       "summary": "Deccan dynasty that dominated south-central India during the 6th–8th centuries.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "src-south-asia-chalukya-badami"
+      ]
     },
     {
       "id": "south-asia.chalukya-badami.pulakeshin-ii",
@@ -17234,7 +17584,7 @@
       "parent_id": "south-asia",
       "start_year": 1163,
       "end_year": 1323,
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "Telugu dynasty of Warangal; extensive irrigation and temple-building.",
       "date_precision": "approx"
     },
@@ -17601,7 +17951,7 @@
       "parent_id": "south-asia",
       "start_year": 1399,
       "end_year": 1947,
-      "tier": "intermediate",
+      "tier": "foundational",
       "summary": "South Indian kingdom that under Haidar Ali and Tipu Sultan resisted British expansion.",
       "date_precision": "approx"
     },
@@ -26616,7 +26966,7 @@
       "parent_id": "west-asia.arabia.pre-islamic",
       "start_year": -2000,
       "end_year": -1600,
-      "tier": "specialist",
+      "tier": "intermediate",
       "start_dating_method": "typological",
       "end_dating_method": "typological",
       "standing": "majority",
@@ -28515,7 +28865,7 @@
       "parent_id": "central-asia.core",
       "start_year": 440,
       "end_year": 560,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_note": "Their origin, and whether the name covers a single people or a confederation, are both disputed. Broken around 560 by a Turkic and Sasanian alliance.",
       "source_ids": [
         "iranica-hephthalites",
@@ -28591,7 +28941,7 @@
       "parent_id": "central-asia.core",
       "start_year": 840,
       "end_year": 1212,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_note": "The founding date is uncertain and usually given as around 840. Split into eastern and western branches, both eventually absorbed by the Qara Khitai and then the Khwarazmians.",
       "source_ids": [
         "britannica-qarakhanid-dynasty"
@@ -28815,7 +29165,7 @@
       "parent_id": "west-asia.iran",
       "start_year": 1374,
       "end_year": 1468,
-      "tier": "intermediate",
+      "tier": "foundational",
       "source_ids": [
         "iranica-qara-qoyunlu"
       ],
@@ -28829,7 +29179,7 @@
       "parent_id": "west-asia.iran",
       "start_year": 1378,
       "end_year": 1501,
-      "tier": "intermediate",
+      "tier": "foundational",
       "date_note": "Ended when Ismail I took Tabriz in 1501, which is also the Safavid founding: one event, two entries.",
       "source_ids": [
         "iranica-aq-qoyunlu"

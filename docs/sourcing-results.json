@@ -1,0 +1,234 @@
+[
+  {
+    "id": "africa.nile.egypt.fip",
+    "citation": "\"Timeline of ancient Egypt\", The British Museum",
+    "url": "https://www.britishmuseum.org/learn/schools/ages-7-11/ancient-egypt/timeline-ancient-egypt",
+    "kind": "museum",
+    "date_agreement": "matches",
+    "note": "British Museum gives First Intermediate Period as 'about 2181-2055 BC', matching exactly; Britannica's main Egypt article gives a slightly later c.2118-c.1980 BCE."
+  },
+  {
+    "id": "africa.nile.egypt.sip",
+    "citation": "\"Chronology: The Second Intermediate Period\", UCL Digital Egypt for Universities",
+    "url": "https://www.ucl.ac.uk/museums-static/digitalegypt/2inter/index.html",
+    "kind": "university",
+    "date_agreement": "differs: source says c.1700-1550 BC (and explicitly states no scholarly consensus)",
+    "note": "UCL states outright 'there is no general agreement in Egyptology either about the length or how to define the Second Intermediate Period'; other sources range c.1782-c.1539 BCE."
+  },
+  {
+    "id": "africa.nile.egypt.tip",
+    "citation": "\"Chronology: The Third Intermediate Period\", UCL Digital Egypt for Universities",
+    "url": "https://www.ucl.ac.uk/museums-static/digitalegypt/3inter/index.html",
+    "kind": "university",
+    "date_agreement": "matches",
+    "note": "UCL and the British Museum both give 1069-664 BC, matching our range (-1069..-656) within a few years at the end."
+  },
+  {
+    "id": "africa.nile.egypt.late-period",
+    "citation": "\"Late period\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/topic/Late-period",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica dates the Late Period 664-332 BCE, matching our range exactly."
+  },
+  {
+    "id": "africa.nile.aksum",
+    "citation": "\"Aksum\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/place/Aksum-ancient-kingdom-Africa",
+    "kind": "encyclopaedia",
+    "date_agreement": "differs: source gives c.100-c.1100",
+    "note": "Britannica's infobox spans to c.1100; most other sources (Wikipedia, HeritageDaily) put Aksum's collapse c.940-960, closer to our end year of 940."
+  },
+  {
+    "id": "east-asia.china.jin",
+    "citation": "\"Jin dynasty\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/topic/Jin-dynasty-China-AD-265-316-317-317-420",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica dates the Jin dynasty 265-420 CE; the 1-year difference from our 266 start is within normal rounding of the founding date."
+  },
+  {
+    "id": "east-asia.china.north-south",
+    "citation": "\"Southern Dynasties\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/event/Southern-Dynasties",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica gives 420-589 CE for this period, matching our range exactly."
+  },
+  {
+    "id": "east-asia.korea.gojoseon",
+    "citation": "\"Dan'gun and Gojoseon founding myth vs. archaeology\", GlobalSecurity.org / \"Gojoseon\", World History Encyclopedia",
+    "url": "https://www.globalsecurity.org/military/world/rok/history-gojoseon.htm",
+    "kind": "other (specialist reference site; corroborated by World History Encyclopedia at https://www.worldhistory.org/Gojoseon/)",
+    "date_agreement": "differs: -2333 is a legendary date, not archaeological",
+    "note": "GlobalSecurity states serious historians treat 2333 BCE/Dangun as pure myth with no archaeological support; the -108 end year matches the Han conquest recorded by World History Encyclopedia."
+  },
+  {
+    "id": "east-asia.korea.three-kingdoms",
+    "citation": "\"Three Kingdoms period\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/topic/Three-Kingdoms-period",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica dates the period c.57 BCE-668 CE, matching our range exactly."
+  },
+  {
+    "id": "east-asia.korea.unified-silla",
+    "citation": "\"Unified Silla dynasty\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/topic/Unified-Silla-dynasty",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica gives 668-935, matching our range exactly."
+  },
+  {
+    "id": "west-asia.mesopotamia.ur3",
+    "citation": "\"3rd Dynasty of Ur\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/topic/3rd-Dynasty-of-Ur",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica gives c.2112-c.2004 BCE (middle chronology, the mainstream figure used in scientific publications), matching our range exactly."
+  },
+  {
+    "id": "west-asia.mesopotamia.kassite",
+    "citation": "\"The Middle Babylonian / Kassite Period (ca. 1595-1155 B.C.) in Mesopotamia\", The Metropolitan Museum of Art",
+    "url": "https://www.metmuseum.org/essays/the-middle-babylonian-kassite-period-ca-1595-1155-b-c-in-mesopotamia",
+    "kind": "museum",
+    "date_agreement": "matches",
+    "note": "Met Museum gives 1595-1155 BC using the middle chronology (sack of Babylon in 1595 BC as dividing line); short/long chronologies would shift these dates."
+  },
+  {
+    "id": "west-asia.iran.qajar",
+    "citation": "\"Qajar dynasty\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/topic/Qajar-dynasty",
+    "kind": "encyclopaedia",
+    "date_agreement": "differs: source says 1794-1925",
+    "note": "Britannica dates Qajar rule from 1794 (when Agha Mohammad Khan eliminated his rivals), not 1789; end year 1925 matches."
+  },
+  {
+    "id": "europe.mediterranean.greece.dark-age",
+    "citation": "\"A Timeline of Ancient Greece\", TheCollector.com (cf. \"Greek Dark Age\", World History Encyclopedia)",
+    "url": "https://www.thecollector.com/timeline-ancient-greece/",
+    "kind": "other (popular history site; World History Encyclopedia corroborates at https://www.worldhistory.org/Greek_Dark_Age/)",
+    "date_agreement": "matches",
+    "note": "Source gives 'Dark Age / Early Iron Age (c.1100-c.800 BCE)' and explicitly notes the 'Dark Age' label is disputed, with 'Early Iron Age' preferred by many scholars."
+  },
+  {
+    "id": "europe.western.england.plantagenet",
+    "citation": "\"House of Plantagenet\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/topic/house-of-Plantagenet",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica states the Plantagenets reigned 1154-1485, matching our range exactly."
+  },
+  {
+    "id": "europe.western.england.stuart",
+    "citation": "\"House of Stuart\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/topic/House-of-Stuart",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica confirms English rule 1603-1714, but rule was interrupted 1649-1660 by the Commonwealth, so 1603-1714 is a conventional simplification, not continuous rule."
+  },
+  {
+    "id": "europe.western.iberia.reconquista",
+    "citation": "\"Reconquista\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/event/Reconquista",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica ties 711 to the Muslim conquest's start and 1492 to the fall of Granada, matching our range, though it separately notes Christian resistance is often dated from 718 (Covadonga)."
+  },
+  {
+    "id": "europe.central.habsburg-monarchy",
+    "citation": "\"House of Habsburg\" (summary), Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/summary/House-of-Habsburg",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica states Habsburg control of Hungary and Bohemia ran 1526-1918, matching our range exactly; Habsburg rule of Austria itself dates earlier, to 1282."
+  },
+  {
+    "id": "europe.central.prussia",
+    "citation": "\"Prussia\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/place/Prussia",
+    "kind": "encyclopaedia",
+    "date_agreement": "differs: the Kingdom of Prussia itself lasted 1701-1918",
+    "note": "Britannica and Wikipedia confirm the Kingdom of Prussia existed 1701-1918; our 1701-1871 end reflects a 'Rise of Prussia' framing ending at German unification, not the state's full lifespan."
+  },
+  {
+    "id": "europe.eastern.moscow",
+    "citation": "\"Grand Principality of Moscow\", Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Grand_Principality_of_Moscow",
+    "kind": "wikipedia (flagged: no matching museum/encyclopaedia source found)",
+    "date_agreement": "differs: Britannica gives c.1251-1505 for the same entity",
+    "note": "Wikipedia's infobox gives 1263-1478/1547, close to ours, but Britannica's own 'Grand Principality of Moscow' page instead gives c.1251-1505, a genuine cross-source disagreement."
+  },
+  {
+    "id": "south-asia.satavahana",
+    "citation": "\"Satavahana Empire\", historicindia.org (Encyclopedia of History), corroborated by multiple academic-adjacent sources",
+    "url": "https://historicindia.org/article/satavahana-dynasty",
+    "kind": "other (specialist history encyclopedia; Britannica's own dynasty page at https://www.britannica.com/topic/Satavahana-dynasty avoids giving firm end date)",
+    "date_agreement": "matches (approximately; genuinely contested end date)",
+    "note": "Most sources converge on c.230 BCE-220 CE; a Maharashtra government gazetteer instead argues for c.222 BCE-226 CE, and Britannica itself declines to give firm year bounds."
+  },
+  {
+    "id": "africa.southern.mutapa",
+    "citation": "\"Mutapa Empire\", New World Encyclopedia",
+    "url": "https://www.newworldencyclopedia.org/entry/Mutapa_Empire",
+    "kind": "encyclopaedia (New World Encyclopedia; flagged as lower-tier, Wikipedia-derived)",
+    "date_agreement": "differs: source dates the (first) Mutapa state c.1450-1629, and separately Britannica gives 1301-1700",
+    "note": "Three incompatible ranges exist: New World Encyclopedia's 1450-1629 (+ distinct second polity 1803-1902), Britannica's 1301-1700, and the Wikipedia-consensus 1430-1760 that matches ours."
+  },
+  {
+    "id": "americas.mesoamerica.purepecha",
+    "citation": "\"Purépecha Empire\", Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Pur%C3%A9pecha_Empire",
+    "kind": "wikipedia (flagged: no museum/encyclopaedia source with precise years found)",
+    "date_agreement": "matches",
+    "note": "Wikipedia states the empire was founded in the early 14th century and fell to Spain in 1530, consistent with our 1300-1530 range."
+  },
+  {
+    "id": "europe.mediterranean.rome.empire.severan",
+    "citation": "\"The Severan Dynasty (193-235 A.D.)\", The Metropolitan Museum of Art",
+    "url": "https://www.metmuseum.org/essays/the-severan-dynasty-193-235",
+    "kind": "museum",
+    "date_agreement": "matches",
+    "note": "Met Museum essay title itself states 193-235 A.D., matching our range exactly; Britannica agrees."
+  },
+  {
+    "id": "europe.mediterranean.rome.empire.valentinianic-theodosian",
+    "citation": "\"History of the Roman Empire\", Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/History_of_the_Roman_Empire",
+    "kind": "wikipedia (flagged: no Britannica/museum source treats this as a single combined dynasty era)",
+    "date_agreement": "matches",
+    "note": "Combining the Valentinianic dynasty's start (364) with the Theodosian dynasty's end (Marcian's death, 457) matches our range exactly as a joint era."
+  },
+  {
+    "id": "south-asia.pallava",
+    "citation": "\"Pallava dynasty\", Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Pallava_dynasty",
+    "kind": "wikipedia (flagged: widely corroborated by secondary sources, but Britannica itself is vaguer)",
+    "date_agreement": "matches",
+    "note": "Wikipedia and several history-reference sites give 275-897 CE, matching ours; Britannica instead uses a looser 'early 4th to late 9th century' framing."
+  },
+  {
+    "id": "south-asia.pala",
+    "citation": "\"Pala dynasty\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/topic/Pala-dynasty",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica describes Pala rule as spanning the 8th to 12th century, consistent with our 750-1161 range; precise year figures corroborated by other sources (e.g. Thai Wikipedia: 750-1161)."
+  },
+  {
+    "id": "south-asia.rashtrakuta",
+    "citation": "\"Timeline: Rashtrakuta Dynasty\", World History Encyclopedia",
+    "url": "https://www.worldhistory.org/timeline/Rashtrakuta_Dynasty/",
+    "kind": "encyclopaedia (World History Encyclopedia; corroborated by French/Dutch Wikipedia at 753-982)",
+    "date_agreement": "differs: source's timeline runs 753-982, and Britannica gives 755-975",
+    "note": "Most sources place the dynasty's founding in 753 (Dantidurga's defeat of the last Chalukya king), not 735; the 982 end year (Indra IV's death) matches ours exactly."
+  },
+  {
+    "id": "south-asia.chalukya-badami",
+    "citation": "\"Chalukya dynasty\", Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/topic/Chalukya-dynasty",
+    "kind": "encyclopaedia",
+    "date_agreement": "matches",
+    "note": "Britannica gives 543-757 CE for the Western/Badami Chalukyas, matching our range within a few years (753 vs 757 end)."
+  }
+]

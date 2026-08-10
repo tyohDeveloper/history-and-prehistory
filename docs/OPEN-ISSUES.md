@@ -163,6 +163,36 @@ indistinguishable in search. Expect more of this shape.
 Left as a flat alias deliberately. Needs scholarship on who coined the framing
 and what it obscures before it can be typed as `historical` or `rejected`.
 
+## Essentials repair, 2026-08-10 (v3.32.0.0)
+
+Worked the five items from the audit below. Two of my own claims were wrong and are
+corrected here.
+
+**The Essentials tier was the broken one, and not for the reason issue #21 gave.**
+`foundational` is "Essentials"; `intermediate` is "Standard" and is the default. So the
+claim that "a foundational reader sees no Korean history" was true but overstated -- the
+default view was never affected. The real defect, verified in the browser: **Essentials
+listed 7 of 10 regions.** Central Asia, Oceania and Southeast Asia were absent
+entirely, because their region nodes were `intermediate` and the tier filter does not
+walk the tree. Sixty-five Southeast Asian and fifty-six Central Asian entities were
+unreachable there. 62 entities retiered; tier gaps 31 -> 1.
+
+**`themes` was not dead.** The audit said "16 themes, zero references". Membership is
+stored on the theme as `entity_ids`, not on the entity, and there were **121 curated
+memberships, every one resolving**. The audit checked the wrong side. Built rather than
+deleted: a theme browser plus reverse chips on each entity.
+
+**Sourcing.** Promoting entities moved 47 uncited date ranges into the most prominent
+view, so 29 were researched: 21 matched, **8 did not**. Two dates corrected (Qajar
+1789 -> 1794, Rashtrakuta 735 -> 753), six kept with the disagreement recorded as
+`alternatives`. Foundational unsourced is 54% and all remaining ones are grouping nodes
+or genuinely undated.
+
+**Also fixed:** the three `misconceptions` migrated to `caveats` and sourced (#23); two
+`contested-existence` caveats authored for Gilgamesh and Nitocris, preserving the intent
+of dead code before deleting it; 37 region summaries (#12); 9 unused schema fields
+removed (#25); and a grouping node no longer claims its nonexistent date is unsourced.
+
 ## Audit, 2026-08-10 (before adding more data)
 
 Measured every open issue against data 0.32.0.0. Five new issues came out of it, and

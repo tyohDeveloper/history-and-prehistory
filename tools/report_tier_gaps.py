@@ -10,11 +10,21 @@ look for a gap between consecutive siblings. If a LOWER-tier sibling spans that 
 the gap is an artefact of tier assignment rather than missing research. The data is
 there; the default view hides it.
 
-Prehistoric branches are excluded. A "gap" between Olduvai Gorge and Blombos Cave is
-not a hole -- archaeological sites are not a continuous sequence, and including them
-buried the real findings under 700,000-year non-problems. That is the same error as
-counting all 988 overlapping spans and concluding the dataset could not represent
-simultaneity; raw counts over a mixed population mislead.
+Two populations are excluded, both because including them buries the real findings.
+
+**Prehistoric branches.** A "gap" between Olduvai Gorge and Blombos Cave is not a
+hole; archaeological sites are not a continuous sequence.
+
+**Ruler sequences.** A gap between two reigns means some rulers are filed deeper, not
+that history is missing. Under `east-asia.japan.edo` the visible children are
+individual shoguns, and "promoting" Tokugawa Ietsuna to close a 29-year gap would be
+absurd -- the tier system is working exactly as designed there. So a gap is skipped
+when either side is a `reign`, and a `reign` is never offered as a filler.
+
+Both exclusions are the same lesson twice over: raw counts across a mixed population
+mislead. Reading all 988 overlapping spans as a representational failure was the first
+instance; the unfiltered version of this check reports 149 candidates whose tail is
+Byzantine emperors and Japanese era names.
 
     python3 tools/report_tier_gaps.py
     python3 tools/report_tier_gaps.py --all      # include prehistory
@@ -77,12 +87,16 @@ def main() -> int:
                 hole = right["start_year"] - left["end_year"]
                 if hole < args.min:
                     continue
+                # A gap between two reigns is unlisted rulers, not missing history.
+                if not args.all and "reign" in (left["kind"], right["kind"]):
+                    continue
                 fillers = [c for c in children
                            if RANK[c["tier"]] > RANK[tier]
                            and c.get("start_year") is not None
                            and c.get("end_year") is not None
                            and c["start_year"] < right["start_year"]
-                           and c["end_year"] > left["end_year"]]
+                           and c["end_year"] > left["end_year"]
+                           and (args.all or c["kind"] != "reign")]
                 if fillers:
                     found.append((hole, tier, pid, left, right, fillers))
 

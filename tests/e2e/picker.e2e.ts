@@ -24,8 +24,8 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // The two tracks had been asserted the wrong way round since the renumbering:
   // v0.5.0 is the DATA version and 3.1.0 was the APP version. The test was
   // failing for that reason, not because the header was wrong.
-  await expect(page.getByTestId("text-app-version")).toContainText("v3.31.0.0");
-  await expect(page.getByTestId("text-app-version")).toContainText("data 0.32.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("v3.32.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 0.33.0.0");
   await expect(page.getByTestId("panel-footer-root")).toContainText("1,719 entities");
 });
 
@@ -55,12 +55,18 @@ test("search is diacritic-insensitive", async ({ page }) => {
 });
 
 test("detail tier filters the visible tree", async ({ page }) => {
+  // Probes China rather than East Asia. Every child of `east-asia` is now
+  // foundational -- Korea was promoted so Essentials could reach it -- so that column
+  // no longer changes with the tier and cannot show that filtering works. China keeps a
+  // genuine mix: the Five Dynasties are specialist and two nodes are intermediate.
   await page.getByTestId("select-detail-tier").selectOption("specialist");
   await page.getByTestId("option-tree-node-east-asia").click();
-  const wide = await page.getByTestId("region-column-1").getByRole("option").count();
+  await page.getByTestId("option-tree-node-east-asia.china").click();
+  const wide = await page.getByTestId("region-column-2").getByRole("option").count();
   await page.getByTestId("select-detail-tier").selectOption("foundational");
-  const narrow = await page.getByTestId("region-column-1").getByRole("option").count();
+  const narrow = await page.getByTestId("region-column-2").getByRole("option").count();
   expect(narrow).toBeLessThan(wide);
+  expect(narrow).toBeGreaterThan(0);
 });
 
 test("persists nothing across a reload", async ({ page }) => {
@@ -379,9 +385,18 @@ test("ties a caveat to the source that backs it", async ({ page }) => {
 test("says so when a date is not sourced, instead of implying it is", async ({ page }) => {
   // The handoff used to claim, on every entity, that dates were "not a
   // citation". That is now only true of the uncited ones.
-  await page.getByTestId("option-tree-node-europe").click();
+  // Uses a DATED but uncited entity. `europe` is a grouping node with no date at all,
+  // and the readout no longer claims a nonexistent date is unsourced -- it says the node
+  // is a grouping. So a region can no longer stand in for an unsourced date.
+  await page.getByTestId("input-search-query").fill("Classical Antiquity");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
   const handoff = page.getByTestId("panel-handoff-root");
   await expect(handoff).toContainText("not yet sourced");
+
+  // And the grouping case says what it actually is.
+  await page.getByTestId("input-search-query").fill("");
+  await page.getByTestId("option-tree-node-europe").click();
+  await expect(page.getByTestId("panel-handoff-root")).toContainText("grouping in this dataset");
 
   await page.getByTestId("input-search-query").fill("Neolithic Transition");
   await page.getByTestId("list-search-results").getByRole("option").first().click();
@@ -470,4 +485,35 @@ test("a relation is shown and can be followed", async ({ page }) => {
   await expect(page.getByTestId("text-readout-name")).toHaveText("Fatimid Caliphate");
   // And the relation reads from the other side too.
   await expect(page.getByTestId("panel-links-root")).toContainText("Abbasid Caliphate");
+});
+
+test("Essentials reaches every region, including the three it used to hide", async ({ page }) => {
+  // Central Asia, Oceania and Southeast Asia were absent from Essentials entirely:
+  // their region nodes were intermediate, and the tier filter does not walk the tree.
+  await page.getByTestId("select-detail-tier").selectOption("foundational");
+  for (const id of ["central-asia", "oceania", "southeast-asia"]) {
+    await expect(page.getByTestId(`option-tree-node-${id}`)).toBeVisible();
+  }
+  // Korea ran 1,218 years between the Mumun Period and Goryeo at this tier.
+  await page.getByTestId("option-tree-node-east-asia").click();
+  await page.getByTestId("option-tree-node-east-asia.korea").click();
+  await expect(page.getByTestId("option-tree-node-east-asia.korea.three-kingdoms")).toBeVisible();
+  await expect(page.getByTestId("option-tree-node-east-asia.korea.unified-silla")).toBeVisible();
+  // A grouping node must not claim its (nonexistent) date is unsourced.
+  await expect(page.locator(".handoff-note")).toContainText("grouping in this dataset");
+});
+
+test("browses a theme and follows it to an entity", async ({ page }) => {
+  // 121 curated memberships had no UI at all. Membership lives on the theme, not the
+  // entity, which is why an audit of `entity.themes` reported the feature as empty.
+  await page.getByTestId("button-theme-picker").click();
+  await page.getByTestId("option-theme-women-rulers").click();
+  const members = page.getByTestId("list-theme-members-women-rulers");
+  await expect(members).toContainText("Hatshepsut");
+  await expect(members).toContainText("Empress Wu Zetian");
+
+  await page.getByTestId("button-theme-member-africa.nile.egypt.new-kingdom.dyn18.hatshepsut").click();
+  await expect(page.getByTestId("text-readout-name")).toContainText("Hatshepsut");
+  // And the entity says which themes it belongs to, so the axis works both ways.
+  await expect(page.getByTestId("panel-entity-themes")).toContainText("Women Rulers");
 });

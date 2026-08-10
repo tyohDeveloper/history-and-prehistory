@@ -415,6 +415,12 @@ function renderReadout(): HTMLElement {
     );
   }
   if (em !== undefined && em !== sm) fact("Dated by (end)", DATING_METHOD_LABEL[em]);
+  // The uncertainty itself, which is the point of retiring `date_precision`. Bounds became
+  // required on 1,614 entities and were then displayed nowhere -- the same pattern that left
+  // `links` rendering nowhere for several releases. A width the reader cannot see is a width
+  // the reader cannot use.
+  const spread = uncertaintyLabel(e);
+  if (spread !== null) fact("Uncertainty", spread);
   if (e.date_note !== undefined) {
     const dd = el("dd", { dir: "auto" }, e.date_note);
     const mark = citationMarker(e.source_ids, citationOrder(e));
@@ -621,6 +627,49 @@ function renderSources(order: string[]): HTMLElement | null {
  * a date *means* is worth more than the same date expressed in four calendars.
  */
 /** How each typed relation reads to someone who is not holding the schema. */
+/**
+ * What a `derived` marker means, shown once per panel rather than on every row.
+ *
+ * The distinction between the first two matters and is not pedantry. Consecutive reigns in a
+ * dynasty do succeed one another -- that is what a dynasty is. Consecutive periods merely
+ * follow one another in time, and calling that succession is the error that once let the Five
+ * Dynasties go missing from this dataset unnoticed, because Liao "covered" 907-960 even though
+ * Tang was not succeeded by it.
+ */
+/**
+ * How wide the dates are, phrased the way the bounds actually justify.
+ *
+ * A one-sided bound is a terminus, not a range: a threshold records the oldest known instance
+ * of a behaviour, so new evidence can only move it older, and "3.3 Ma or earlier" is the claim
+ * rather than any interval.
+ */
+function uncertaintyLabel(e: Entity): string | null {
+  const parts: string[] = [];
+  for (const [label, year, lo, hi] of [
+    ["Start", e.start_year, e.start_year_min, e.start_year_max],
+    ["End", e.end_year, e.end_year_min, e.end_year_max],
+  ] as [string, number | null, number | undefined, number | undefined][]) {
+    if (year === null) continue;
+    if (lo === undefined && hi === undefined) continue;
+    // Deep-time bounds use the same magnitude shorthand as the header. Spelling them out gave
+    // "2620000 BCE to 2540000 BCE" -- seven digits on the very numbers whose job is to express
+    // that the date is not known to the year.
+    const show = (v: number): string =>
+      Math.abs(v) >= 100_000 ? `${magnitude(v)}\u2009${v < 0 ? "BCE" : "CE"}` : formatYear(v);
+    if (hi === undefined) parts.push(`${label}: ${show(lo!)} or earlier`);
+    else if (lo === undefined) parts.push(`${label}: ${show(hi)} or later`);
+    else if (year - lo === hi - year) parts.push(`${label}: \u00b1${(year - lo).toLocaleString()} yr`);
+    else parts.push(`${label}: ${show(lo)} to ${show(hi)}`);
+  }
+  return parts.length === 0 ? null : parts.join(" \u00b7 ");
+}
+
+const DERIVED_TITLE: Record<string, string> = {
+  sequence: "Marked relations are the order of rulers within their dynasty, taken from the dataset's own sequence rather than from a source.",
+  chronology: "Marked relations give chronological order only -- what came before or after, in this place -- and are not a claim that one state or culture succeeded another.",
+  reciprocal: "Marked relations are the reverse side of a relation recorded on the other entity.",
+};
+
 const LINK_LABEL: Record<string, string> = {
   successor_state_of: "Successor to",
   predecessor_state_of: "Predecessor of",
@@ -634,6 +683,10 @@ const LINK_LABEL: Record<string, string> = {
   capital_at: "Capital at",
   split_from: "Split from",
   merged_into: "Merged into",
+  preceded_by: "Preceded by",
+  succeeded_by: "Succeeded by",
+  descended_from: "Descended from",
+  ancestor_of: "Ancestor of",
   co_ruler_with: "Co-ruler with",
   regent_for: "Regent for",
   rival_claimant_to: "Rival claimant to",
@@ -679,12 +732,26 @@ function renderLinks(
       onPick(l.entity_id);
     });
     cell.append(btn);
+    if (l.derived !== undefined) {
+      // Marked, not explained inline. The provenance sentence is identical on hundreds of
+      // links, so repeating it per row is both 36 kB of waste and the kind of boilerplate a
+      // reader learns to skip. The panel explains it once, below.
+      cell.append(el("span", { class: "link-derived", title: DERIVED_TITLE[l.derived] ?? "" }, "\u2217"));
+    }
     if (l.note !== undefined) {
       cell.append(el("div", { class: "link-note", dir: "auto" }, l.note));
     }
     grid.append(cell);
   }
   box.append(grid);
+  const kinds = new Set((items.map((l) => l.derived).filter(Boolean)) as string[]);
+  if (kinds.size > 0) {
+    box.append(el(
+      "div",
+      { class: "links-foot", "data-testid": "text-links-derivation" },
+      "\u2217 " + [...kinds].map((k) => DERIVED_TITLE[k] ?? "").join(" "),
+    ));
+  }
   return box;
 }
 

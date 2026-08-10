@@ -424,8 +424,13 @@ describe("Holocene Americas", () => {
     // -8200..-4200. Those were cal BP figures written into the BCE field,
     // putting the site 1,950 years too early. 14,500 cal BP is 12,551 BCE.
     const mv = entities.find((e) => e.id === "global.paleolithic.monte-verde")!;
-    expect(mv.start_year).toBe(-12551);
-    expect(mv.end_year).toBe(-12251);
+    // -12550 rather than -12551. The trailing digit was an artifact of subtracting the
+    // Before-Present epoch, never a measurement, and this entity's own note documents the
+    // published range as 14,200-14,900 cal BP. The point of the test stands: a calendar year,
+    // not a cal BP figure written into the year field.
+    expect(mv.start_year).toBe(-12550);
+    expect(mv.start_year).not.toBe(-14500);
+    expect(mv.end_year).toBe(-12250);
     const alt = mv.alternatives?.find((a) => a.label.includes("Surovell"))!;
     expect(alt.start_year).toBe(-6251);
     expect(alt.end_year).toBe(-2251);
@@ -1149,5 +1154,87 @@ describe("identity", () => {
     // nowhere to say so was half the cause of the reported search failure.
     const hits = searchEntities(entities, "Roman").map((e) => e.id);
     expect(hits).toContain("europe.mediterranean.rome.empire");
+  });
+});
+
+describe("the before-and-after graph", () => {
+  const linkIndex = new Map(entities.map((e) => [e.id, e]));
+  // `links` was populated on 15 of 1,765 entities while the application's stated purpose
+  // includes "important before and after links".
+  it("connects far more than the fifteen entities it started with", () => {
+    const linked = entities.filter((e) => (e.links?.length ?? 0) > 0);
+    expect(linked.length).toBeGreaterThan(1000);
+  });
+
+  it("keeps every reciprocal link symmetric", () => {
+    const inverses: Record<string, string> = {
+      preceded_by: "succeeded_by",
+      succeeded_by: "preceded_by",
+      part_of: "contains",
+      contains: "part_of",
+      descended_from: "ancestor_of",
+      ancestor_of: "descended_from",
+      co_ruler_with: "co_ruler_with",
+      rival_claimant_to: "rival_claimant_to",
+    };
+    for (const e of entities) {
+      for (const l of e.links ?? []) {
+        const inverse = inverses[l.type];
+        if (inverse === undefined) continue;
+        const target = linkIndex.get(l.entity_id);
+        expect(target, `${e.id} links to ${l.entity_id}`).toBeDefined();
+        const back = (target!.links ?? []).some(
+          (b: { type: string; entity_id: string }) => b.type === inverse && b.entity_id === e.id,
+        );
+        expect(back, `${e.id} --${l.type}--> ${l.entity_id} needs ${inverse} back`).toBe(true);
+      }
+    }
+  });
+
+  it("says a derived succession is derived", () => {
+    // A reader has to be able to tell a researched claim from a structural one. If both look
+    // the same, the structural ones quietly acquire the authority of the researched ones.
+    const thutmose = linkIndex.get("africa.nile.egypt.new-kingdom.dyn18.thutmose-iii")!;
+    const next = thutmose.links?.find((l) => l.type === "succeeded_by");
+    expect(next?.entity_id).toContain("amenhotep-ii");
+    // `derived` rather than a note. Writing the explanation onto every link repeated one
+    // sentence eight hundred times and cost 36 kB gzipped; the UI explains it once.
+    expect(next?.derived).toBe("sequence");
+  });
+
+  it("does not claim one culture succeeded another as a state", () => {
+    // Coverage is not continuity. Chronological ordering between periods is a weaker claim
+    // than political succession, and the note must not overstate it.
+    for (const e of entities) {
+      if (e.kind !== "period" && e.kind !== "era") continue;
+      for (const l of e.links ?? []) {
+        if (l.type !== "succeeded_by" || l.derived === undefined) continue;
+        // Periods and eras get `chronology`, never `sequence`: ordering between cultures is a
+        // weaker claim than succession between rulers, and the flag has to say which.
+        expect(l.derived, `${e.id} -> ${l.entity_id}`).toBe("chronology");
+      }
+    }
+  });
+
+  it("refuses to bridge a gap too large to be a handover", () => {
+    // Interregna and rounded dates are real; a century is not a handover. Any derived
+    // succession must abut within tolerance.
+    for (const e of entities) {
+      for (const l of e.links ?? []) {
+        if (l.type !== "succeeded_by" || l.derived === undefined) continue;
+        const target = linkIndex.get(l.entity_id)!;
+        if (e.end_year === null || target.start_year === null) continue;
+        // Tolerance scales with span, as the deriver's does: two thousand years between two
+        // million-year industries is abutment, the same gap between two reigns is not.
+        const span = Math.max(
+          Math.abs((e.end_year ?? e.start_year!) - e.start_year!),
+          Math.abs((target.end_year ?? target.start_year!) - target.start_year!),
+        );
+        const allowed = Math.max(25, Math.floor(span * 0.01));
+        const gap = target.start_year - e.end_year;
+        expect(gap, `${e.id} -> ${target.id} gap`).toBeLessThanOrEqual(allowed);
+        expect(gap, `${e.id} -> ${target.id} overlap`).toBeGreaterThanOrEqual(-allowed);
+      }
+    }
   });
 });

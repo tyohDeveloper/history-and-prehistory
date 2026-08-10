@@ -150,90 +150,86 @@ const SEARCH_STOPWORDS = new Set([
  * that. Matching against the ancestor chain reaches them, ranked below anything whose own
  * name matches, so Ancient Rome still comes first and the rulers follow.
  */
+interface SearchIndex {
+  own: Map<string, string[]>;
+  lineage: (id: string) => string[];
+}
+
+/** Own words per entity, plus a memoised walk up the ancestor chain. */
+function buildSearchIndex(list: readonly Entity[]): SearchIndex {
+  const byId = new Map(list.map((e) => [e.id, e]));
+  const own = new Map<string, string[]>();
+  for (const e of list) {
+    own.set(
+      e.id,
+      [
+        e.name,
+        e.native_name ?? "",
+        ...(e.aliases ?? []),
+        // name_forms was indexed by nothing, so the endonyms, exonyms and scholarly variants
+        // already authored on 99 entities were unreachable. It now also carries `adjectival`
+        // forms, so "Roman" finds the Roman Empire directly and not only via its ancestors.
+        ...(e.name_forms ?? []).map((f) => f.name),
+      ].flatMap(foldToWords),
+    );
+  }
+  const cache = new Map<string, string[]>();
+  const lineage = (id: string): string[] => {
+    const hit = cache.get(id);
+    if (hit !== undefined) return hit;
+    const parentId = byId.get(id)?.parent_id ?? null;
+    const words =
+      parentId === null ? [] : [...(own.get(parentId) ?? []), ...lineage(parentId)];
+    cache.set(id, words);
+    return words;
+  };
+  return { own, lineage };
+}
+
+/** Score one entity against the query terms, or null when nothing matched. */
+function scoreEntity(e: Entity, terms: string[], idx: SearchIndex): number | null {
+  const own = idx.own.get(e.id) ?? [];
+  const inherited = idx.lineage(e.id);
+  let total = 0;
+  let matchedOwn = false;
+  let matched = 0;
+  for (const term of terms) {
+    if (own.some((w) => w === term)) {
+      total += 3;
+      matchedOwn = true;
+      matched += 1;
+    } else if (own.some((w) => w.startsWith(term))) {
+      total += 2;
+      matchedOwn = true;
+      matched += 1;
+    } else if (inherited.some((w) => w === term || w.startsWith(term))) {
+      total += 0.4;
+      matched += 1;
+    }
+    // A word matching nothing is ignored rather than disqualifying the entity: requiring
+    // every word to match meant "rulers of rome" returned nothing at all.
+  }
+  if (matched === 0) return null;
+  const coverage = (matched / terms.length) * 2;
+  // Entities found only through an ancestor rank below every direct match.
+  return (matchedOwn ? total : total - 2) + coverage - TIER_ORDER[e.tier] * 0.1;
+}
+
 export function searchEntities(
   list: readonly Entity[],
   query: string,
   limit = 50,
 ): Entity[] {
   const raw = foldToWords(query);
-  // Keep stopwords only if the query is nothing but stopwords, so searching "the" still
-  // does something rather than silently returning nothing.
   const stripped = raw.filter((w) => !SEARCH_STOPWORDS.has(w));
   const terms = stripped.length > 0 ? stripped : raw;
   if (terms.length === 0) return [];
 
-  const byId = new Map(list.map((e) => [e.id, e]));
-  const ownWords = new Map<string, string[]>();
-  for (const e of list) {
-    ownWords.set(
-      e.id,
-      [
-        e.name,
-        e.native_name ?? "",
-        ...(e.aliases ?? []),
-        // name_forms was indexed by nothing, which meant the endonyms, exonyms, scholarly
-        // and historical variants already authored on 99 entities were unreachable by
-        // search. It now also carries `adjectival` forms, so "Roman" finds the Roman Empire
-        // directly rather than only through its ancestors.
-        ...(e.name_forms ?? []).map((f) => f.name),
-      ].flatMap(foldToWords),
-    );
-  }
-
-  // Ancestor words, memoised: an entity deep in the tree would otherwise walk its whole
-  // lineage once per search term.
-  const lineageWords = new Map<string, string[]>();
-  const lineageOf = (id: string): string[] => {
-    const cached = lineageWords.get(id);
-    if (cached !== undefined) return cached;
-    const entity = byId.get(id);
-    const parentId = entity?.parent_id ?? null;
-    const words =
-      parentId === null || parentId === undefined
-        ? []
-        : [...(ownWords.get(parentId) ?? []), ...lineageOf(parentId)];
-    lineageWords.set(id, words);
-    return words;
-  };
-
-  const hits = (word: string, haystack: string[]): boolean =>
-    haystack.some((w) => w === word || w.startsWith(word));
-
+  const idx = buildSearchIndex(list);
   const scored: { e: Entity; score: number }[] = [];
   for (const e of list) {
-    const own = ownWords.get(e.id) ?? [];
-    const inherited = lineageOf(e.id);
-    let total = 0;
-    let matchedOwn = false;
-    let matchedTerms = 0;
-    for (const term of terms) {
-      if (own.some((w) => w === term)) {
-        total += 3;
-        matchedOwn = true;
-        matchedTerms += 1;
-      } else if (own.some((w) => w.startsWith(term))) {
-        total += 2;
-        matchedOwn = true;
-        matchedTerms += 1;
-      } else if (hits(term, inherited)) {
-        // Reachable through an ancestor, which is weaker than matching on its own name.
-        total += 0.4;
-        matchedTerms += 1;
-      }
-      // A word that matches nothing is ignored rather than disqualifying the entity.
-      // Requiring every word to match meant "rulers of rome" returned nothing at all,
-      // because no entity is named "rulers" and none is named "of". People type
-      // questions into search boxes, and answering with an empty list is the wrong
-      // response to a query that names a real thing.
-    }
-    if (matchedTerms === 0) continue;
-    // Matching more of the query outranks matching one word strongly, so "tang emperor"
-    // puts Tang emperors above everything that merely contains "emperor".
-    const coverage = matchedTerms / terms.length;
-    // An entity found only through its ancestors ranks below every direct match.
-    const score =
-      (matchedOwn ? total : total - 2) + coverage * 2 - TIER_ORDER[e.tier] * 0.1;
-    scored.push({ e, score });
+    const score = scoreEntity(e, terms, idx);
+    if (score !== null) scored.push({ e, score });
   }
   scored.sort((a, b) => b.score - a.score || compareEntities(a.e, b.e));
   return scored.slice(0, limit).map((s) => s.e);

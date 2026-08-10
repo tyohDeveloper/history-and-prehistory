@@ -85,7 +85,7 @@ def _no_year_zero(y: int) -> int:
     return y if y != 0 else -1
 
 
-def _round_deep_time(e, endpoint, stats):
+def _round_deep_time(e, endpoint, stats, authored=True):
     """Strip significant digits a deep-time date cannot support, bounds included.
 
     This is where the 1950-versus-1951 Before-Present epoch problem actually dies. Arguing
@@ -96,12 +96,48 @@ def _round_deep_time(e, endpoint, stats):
     reads as 3.3 million years old rather than as a specific year in it.
     """
     year = e.get(f"{endpoint}_year")
-    # 50,000 rather than 10,000. The false precision this rule exists to remove lived in the
-    # millions -- `-3298051` for a date uncertain by 140,000 years. Applying it from 10,000
-    # instead pushed Monte Verde from its calibrated -12551 out to -13000, discarding
-    # precision that radiocarbon genuinely supports. The rule should strip digits nobody
-    # earned, not digits somebody measured.
-    if year is None or abs(year) < 50_000:
+    # Applies at every magnitude, because the rule is about the ratio between a date and its
+    # uncertainty rather than about how old the date is. A first version triggered only above
+    # 50,000 to protect Monte Verde's calibrated -12551 from being coarsened -- but the step is
+    # derived from that entity's own bounds, so a tightly bounded date is barely moved while a
+    # date uncertain by millennia stops advertising a specific year. It also leaves the
+    # readout free of Before-Present conversion tails like "38051 BCE", which asserted
+    # year-level knowledge of a date good to a few thousand.
+    # 10,000 is the boundary where Before-Present conversion tails start appearing and where a
+    # year-level figure stops being meaningful. Two wrong settings preceded it: 50,000 left
+    # "38051 BCE" and "10051 BCE" on the readout, and no threshold at all let CONVENTION-derived
+    # bounds coarsen genuinely precise historical dates -- an Egyptian date known to the year
+    # was pushed from -1887 to -1900 by a plus-or-minus-100 bound that was itself a guess.
+    # Convention bounds record that we do not know the precision; they must not then be allowed
+    # to overwrite a year somebody did know.
+    if year is None or abs(year) < 10_000:
+        return
+
+    # Convention-derived bounds must not coarsen the year. They record that the precision is
+    # unknown, and letting a guessed plus-or-minus then overwrite the estimate is circular: it
+    # pushed Monte Verde from -12551 to -13000 even though the entity's own note documents a
+    # tighter published range of 14,200-14,900 cal BP, and it moved an Egyptian date known to
+    # the year from -1887 to -1900.
+    #
+    # What is still worth removing in that case is the Before-Present conversion tail. A
+    # trailing "51" on a date tens of thousands of years old is an artifact of subtracting an
+    # epoch, never a measurement, so rounding to the nearest decade strips the artifact and
+    # nothing else.
+    if not authored:
+        # The bounds carry the same artifact and are displayed beside the year, so rounding one
+        # and not the other put "1732051 BCE to 1664051 BCE" on the readout -- six digits of
+        # spurious precision on the very numbers meant to express imprecision.
+        changed_tail = False
+        for key in (f"{endpoint}_year", f"{endpoint}_year_min", f"{endpoint}_year_max"):
+            v = e.get(key)
+            if v is None:
+                continue
+            r = int(round(v / 10) * 10)
+            if r != v:
+                e[key] = _no_year_zero(r)
+                changed_tail = True
+        if changed_tail:
+            stats["BP conversion tail removed"] += 1
         return
     lo, hi = e.get(f"{endpoint}_year_min"), e.get(f"{endpoint}_year_max")
     spreads = [abs(year - lo) for lo in (lo,) if lo is not None]
@@ -111,6 +147,8 @@ def _round_deep_time(e, endpoint, stats):
     # industry runs 140,000 years below its estimate and 8,000 above -- and rounding both
     # sides to the wider one erased the narrow side entirely, putting the upper bound exactly
     # on the estimate and reading as certainty where there was least of it.
+    # With no bounds at all, fall back to one per cent of the age: coarse for deep time, and
+    # for a recent date small enough to leave it alone.
     spread = min(spreads) if spreads else abs(year) // 100
     step = 10 ** max(1, len(str(int(spread))) - 1)
     import math
@@ -206,7 +244,7 @@ def extend(E, entities):
 
             if has_bounds:
                 stats["bounds already authored"] += 1
-                _round_deep_time(e, endpoint, stats)
+                _round_deep_time(e, endpoint, stats, authored=True)
                 continue
 
             # --- bounds ---
@@ -214,7 +252,7 @@ def extend(E, entities):
                 # One-sided: the behaviour is at least this old. Terminus post quem.
                 e[lo_key] = year
                 stats["one-sided bound from minimum"] += 1
-                _round_deep_time(e, endpoint, stats)
+                _round_deep_time(e, endpoint, stats, authored=True)
                 continue
 
             half = ENUM_HALF_WIDTH.get(prec)
@@ -234,7 +272,7 @@ def extend(E, entities):
 
             e[lo_key] = _no_year_zero(year - half)
             e[hi_key] = _no_year_zero(year + half)
-            _round_deep_time(e, endpoint, stats)
+            _round_deep_time(e, endpoint, stats, authored=False)
 
         # --- a threshold is one-sided by definition ---
         # It records the OLDEST KNOWN instance of a behaviour. New evidence can only move

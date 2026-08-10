@@ -1713,6 +1713,7 @@ from fix_rome_parent import extend as _fix_rome_parent
 from migrate_dating import extend as _migrate_dating
 from normalize_ids import extend as _normalize_ids, rewrite_refs as _rewrite_refs
 from name_repair import extend as _name_repair
+from derive_links import extend as _derive_links
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -2023,7 +2024,12 @@ print(f"Name forms: {_nf_entities} entities carry structured names")
 # modules had authored their entities, and one ran after this file had already been written,
 # which meant its work was silently discarded.
 _ID_REDIRECTS = _normalize_ids(E, entities) or {}
+# After the dating migration, not before. Succession is derived from how closely one entity's
+# end abuts the next one's start, and the migration rounds deep-time dates -- so deriving first
+# measured gaps that the rounding then changed, leaving links whose own tolerance rule they no
+# longer satisfied.
 _migrate_dating(E, entities)
+_derive_links(E, entities)
 
 with open(DATA / "entities.json", "w") as f:
     json.dump(_envelope("entities", entities, redirects=_ID_REDIRECTS), f, indent=2, ensure_ascii=False)

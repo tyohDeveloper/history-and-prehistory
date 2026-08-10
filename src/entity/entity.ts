@@ -136,7 +136,19 @@ export interface Entity {
   allow_outside_parent_dates?: boolean;
   summary?: string;
   calendar_ids?: string[];
-  links?: { type: string; entity_id: string; note?: string }[];
+  /**
+   * Typed relations. `derived` marks a link the build generated rather than an author
+   * asserting it, so a reader can tell a researched claim from a structural one:
+   * `sequence` for succession between consecutive reigns in a dynasty, `chronology` for
+   * before-and-after ordering between periods -- which is NOT a claim that one state or
+   * culture succeeded another -- and `reciprocal` for a generated inverse.
+   */
+  links?: {
+    type: string;
+    entity_id: string;
+    note?: string;
+    derived?: "sequence" | "chronology" | "reciprocal";
+  }[];
   /* --- schema 1.1.0 (see 2.0.0 additions below) ------------------------------------------------------ */
   /**
    * Per-boundary dating (schema 3.0.0, resolving Q-30).

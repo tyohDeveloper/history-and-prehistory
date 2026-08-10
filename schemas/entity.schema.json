@@ -257,6 +257,15 @@
           },
           "note": {
             "type": "string"
+          },
+          "derived": {
+            "type": "string",
+            "enum": [
+              "sequence",
+              "chronology",
+              "reciprocal"
+            ],
+            "description": "Present when the build generated this link rather than an author asserting it. `sequence` = succession between consecutive reigns in a dynasty; `chronology` = before-and-after ordering between periods, which is NOT a claim of political or cultural succession; `reciprocal` = the inverse of a link authored on the other entity. A reader must be able to tell a researched claim from a structural one."
           }
         }
       }

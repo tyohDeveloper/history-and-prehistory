@@ -40,10 +40,9 @@ export const idRedirects: ReadonlyMap<string, string> = new Map(
   Object.entries((entitiesFile as { redirects?: Record<string, string> }).redirects ?? {}),
 );
 
-/** Resolve an id that may be stale. Returns the input when it is already current. */
-export function currentId(id: string): string {
-  return idRedirects.get(id) ?? id;
-}
+// A `currentId(id)` helper was added here and used nowhere: `tree.lookup` already resolves
+// through the map, and a second way to do it is surface without a reader. The §3 export-debt
+// guard caught it, which is the guard working as intended.
 
 export const datasetVersion: string = entitiesFile.dataset_version;
 export const schemaVersion: string = entitiesFile.schema_version;

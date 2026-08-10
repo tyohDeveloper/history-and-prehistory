@@ -1,0 +1,1173 @@
+[
+ {
+  "id": "africa.nile.egypt.new-kingdom.dyn20.ramesses-iii",
+  "field": "start_year",
+  "from": -1186,
+  "to": -1184,
+  "why": "Accession was set two years before his father Setnakht's death, overlapping Setnakht's whole reign.",
+  "source_review": "review-findings-reigns.md"
+ },
+ {
+  "id": "africa.nile.egypt.new-kingdom.dyn19.seti-i",
+  "field": "start_year",
+  "from": -1290,
+  "to": -1294,
+  "why": "Seti I succeeded Ramesses I directly, so -1290 leaves four kingless years after -1294.",
+  "source_review": "review-findings-reigns.md"
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.constantine",
+  "field": "parent_id",
+  "from": "europe.mediterranean.rome.empire",
+  "to": "europe.mediterranean.rome.empire.constantinian",
+  "why": "Constantine's 306-337 reign belongs in the Constantinian Dynasty, which already holds his sons.",
+  "source_review": "review-findings-reigns.md"
+ },
+ {
+  "id": "americas.mesoamerica.aztec.tenochtitlan",
+  "field": "end_year",
+  "from": 1521,
+  "to": null,
+  "why": "The 1521 conquest was not an ending: the city was rebuilt as Mexico City on the same island.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.mesoamerica.aztec.tenochtitlan",
+  "field": "extant",
+  "from": null,
+  "to": true,
+  "why": "Tenochtitlan has been continuously inhabited as Mexico City since 1521.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.mesoamerica.aztec.tenochtitlan",
+  "field": "aliases",
+  "from": null,
+  "to": [
+   "México-Tenochtitlan",
+   "Mexico City"
+  ],
+  "why": "Readers arrive under the compound Mexica name and the modern name; neither was searchable.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-aquileia",
+  "field": "end_year",
+  "from": 452,
+  "to": null,
+  "why": "Attila's sack is a conquest, not an ending; Aquileia held a patriarchate for centuries after and is an inhabited comune.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-aquileia",
+  "field": "extant",
+  "from": null,
+  "to": true,
+  "why": "Aquileia is a living Italian comune, so it cannot carry an end year.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-tahert",
+  "field": "end_year",
+  "from": 909,
+  "to": null,
+  "why": "The Fatimid conquest ended the Rustamid imamate, not the settlement, which is modern Tiaret.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-tahert",
+  "field": "extant",
+  "from": null,
+  "to": true,
+  "why": "Tahert survives as Tiaret, a city of several hundred thousand people.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-lindum",
+  "field": "start_year",
+  "from": -60,
+  "to": 60,
+  "why": "Sign error: the legionary fortress at Lincoln is post-conquest Roman, c. AD 48-60, not 60 BCE.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-kyiv",
+  "field": "start_dating_method",
+  "from": "typological",
+  "to": "received",
+  "why": "482 is the 1982 anniversary date taken from chronicle legend, not a typological date.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-thinis",
+  "field": "start_dating_method",
+  "from": "typological",
+  "to": "received",
+  "why": "Thinis is known only from texts and its site is not securely located, so it cannot be dated typologically.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-njimi",
+  "field": "start_dating_method",
+  "from": "typological",
+  "to": "received",
+  "why": "Njimi's site remains unidentified, so there is no assemblage to type; the date is textual.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-alba-longa",
+  "field": "historicity",
+  "from": null,
+  "to": "legendary",
+  "why": "The row's own summary calls it the legendary mother city of Rome, but historicity was null (accepted).",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-lavinium",
+  "field": "historicity",
+  "from": null,
+  "to": "legendary",
+  "why": "The row's own summary calls it the legendary landing city of Aeneas, but historicity was null (accepted).",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-buhen",
+  "field": "aliases",
+  "from": [
+   "flooded by Lake Nasser"
+  ],
+  "to": [],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-faras",
+  "field": "aliases",
+  "from": [
+   "Pachoras",
+   "flooded"
+  ],
+  "to": [
+   "Pachoras"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-mirgissa",
+  "field": "aliases",
+  "from": [
+   "Iken",
+   "flooded"
+  ],
+  "to": [
+   "Iken"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-semna",
+  "field": "aliases",
+  "from": [
+   "Semna West",
+   "flooded"
+  ],
+  "to": [
+   "Semna West"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-mogador",
+  "field": "aliases",
+  "from": [
+   "Essaouira",
+   "Cerne?",
+   "Marrakesh-Safi"
+  ],
+  "to": [
+   "Essaouira",
+   "Marrakesh-Safi"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-ghat",
+  "field": "aliases",
+  "from": [
+   "Ghadamis nearby",
+   "Fezzan"
+  ],
+  "to": [
+   "Fezzan"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-kerma",
+  "field": "aliases",
+  "from": [
+   "Doukki Gel nearby",
+   "Kush",
+   "Northern State"
+  ],
+  "to": [
+   "Kush",
+   "Northern State"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "africa.city-raqqada",
+  "field": "aliases",
+  "from": [
+   "Sabra al-Mansuriyya nearby",
+   "Kairouan"
+  ],
+  "to": [
+   "Kairouan"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-itil",
+  "field": "aliases",
+  "from": [
+   "Itil",
+   "Khazar capital",
+   "Volga delta"
+  ],
+  "to": [
+   "Itil",
+   "Volga delta"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "central-asia.city-khyunglung",
+  "field": "aliases",
+  "from": [
+   "Kyunglung",
+   "Zhangzhung capital",
+   "Ngari"
+  ],
+  "to": [
+   "Kyunglung",
+   "Ngari"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "east-asia.city-taihe-dali",
+  "field": "aliases",
+  "from": [
+   "Yangxiemie",
+   "Nanzhao capital",
+   "Dali"
+  ],
+  "to": [
+   "Yangxiemie",
+   "Dali"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "east-asia.city-jeonju",
+  "field": "aliases",
+  "from": [
+   "Wansan",
+   "Hubaekje capital"
+  ],
+  "to": [
+   "Wansan"
+  ],
+  "why": "Aliases must hold names a reader might arrive with; the removed entry was an annotation, not a name.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-avebury",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-durrington-walls",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-emain-macha",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "central-asia.city-samye",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "central-asia.city-yumbulagang",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.city-canyon-de-chelly",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.city-acre-geoglyphs",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.city-hopewell-earthworks",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.city-newark-earthworks",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.city-fort-ancient",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.city-san-agustin",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.city-tierradentro",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.city-sacsayhuaman",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.city-sitio-conte",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "americas.city-marajo",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Monument, sanctuary, cemetery or multi-site landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-1.md"
+ },
+ {
+  "id": "europe.city-tarxien",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Temple complex, monument or engineered landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "southeast-asia.city-borobudur",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Temple complex, monument or engineered landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "south-asia.city-ajanta",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Temple complex, monument or engineered landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "south-asia.city-ellora",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Temple complex, monument or engineered landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "oceania.city-brewarrina-fish-traps",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Temple complex, monument or engineered landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "oceania.city-kuk-swamp",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Temple complex, monument or engineered landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "oceania.city-budj-bim",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Temple complex, monument or engineered landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "oceania.city-ara-metua",
+  "field": "kind",
+  "from": "city",
+  "to": "site",
+  "why": "Temple complex, monument or engineered landscape rather than a settlement, so `city` is wrong.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "west-asia.mesopotamia.phoenicia.tyre",
+  "field": "end_year",
+  "from": -332,
+  "to": null,
+  "why": "Alexander's 332 BCE conquest is not an ending: Tyre continued through Hellenistic, Roman, Islamic and Ottoman times and is inhabited today.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "west-asia.mesopotamia.phoenicia.tyre",
+  "field": "extant",
+  "from": null,
+  "to": true,
+  "why": "Tyre is a living settlement on the Levantine coast today.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "west-asia.mesopotamia.phoenicia.sidon",
+  "field": "end_year",
+  "from": -332,
+  "to": null,
+  "why": "Alexander's 332 BCE conquest is not an ending: Sidon continued through Hellenistic, Roman, Islamic and Ottoman times and is inhabited today.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "west-asia.mesopotamia.phoenicia.sidon",
+  "field": "extant",
+  "from": null,
+  "to": true,
+  "why": "Sidon is a living settlement on the Levantine coast today.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "west-asia.mesopotamia.phoenicia.byblos",
+  "field": "end_year",
+  "from": -332,
+  "to": null,
+  "why": "Alexander's 332 BCE conquest is not an ending: Byblos continued through Hellenistic, Roman, Islamic and Ottoman times and is inhabited today.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "west-asia.mesopotamia.phoenicia.byblos",
+  "field": "extant",
+  "from": null,
+  "to": true,
+  "why": "Byblos is a living settlement on the Levantine coast today.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "west-asia.mesopotamia.phoenicia.arwad",
+  "field": "end_year",
+  "from": -332,
+  "to": null,
+  "why": "Alexander's 332 BCE conquest is not an ending: Arwad continued through Hellenistic, Roman, Islamic and Ottoman times and is inhabited today.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "west-asia.mesopotamia.phoenicia.arwad",
+  "field": "extant",
+  "from": null,
+  "to": true,
+  "why": "Arwad is a living settlement on the Levantine coast today.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "south-asia.city-anuradhapura",
+  "field": "end_year",
+  "from": 1017,
+  "to": null,
+  "why": "The 1017 Chola conquest ended Anuradhapura's capital function, not the city, which was never abandoned.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "south-asia.city-anuradhapura",
+  "field": "extant",
+  "from": null,
+  "to": true,
+  "why": "Anuradhapura is a substantial living Sri Lankan city and pilgrimage centre.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "europe.city-skalholt",
+  "field": "end_year",
+  "from": 1500,
+  "to": 1785,
+  "why": "Skalholt remained Iceland's principal see until the 1780s, when the see moved to Reykjavik; 1500 is arbitrary.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "southeast-asia.city-lamphun",
+  "field": "start_year",
+  "from": -600,
+  "to": 750,
+  "why": "Hariphunchai was founded in the mid-8th century CE; -600 predates any urbanism in northern Thailand by ~1,350 years.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "southeast-asia.city-mataram-medang",
+  "field": "kind",
+  "from": "city",
+  "to": "polity",
+  "why": "Its own summary calls it a Central Javanese kingdom with a shifting royal centre, so it is a polity, not a city.",
+  "source_review": "review-findings-cities-2.md"
+ },
+ {
+  "id": "east-asia.china.tang",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "global.multi-regional.abbasid",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "global.multi-regional.rashidun",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "global.multi-regional.umayyad",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "europe.western.carolingian",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.china.song",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.china.sui",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.korea.goryeo",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.korea.unified-silla",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "southeast-asia.mainland.dinh",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "southeast-asia.mainland.early-le",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "southeast-asia.mainland.ngo",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.japan.heian",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.japan.nara",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "europe.central.hre",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.iran.buyid",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.iran.saffarid",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.iran.tahirid",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "global.multi-regional.fatimid",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "south-asia.harsha",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "south-asia.chalukya-western",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "central-asia.uyghur-khaganate",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.china.five-dynasties",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.china.liao",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The founding year is fixed to the year (often the month) in contemporary or near-contemporary annals, so `unknown` misstates how the date is known.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.anatolia.lydia",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "Each of these had a king, a capital and a chancery, so `era` is a kind error clustered in the Anatolia and Arabia blocks.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.anatolia.mitanni",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "Each of these had a king, a capital and a chancery, so `era` is a kind error clustered in the Anatolia and Arabia blocks.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.anatolia.urartu",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "Each of these had a king, a capital and a chancery, so `era` is a kind error clustered in the Anatolia and Arabia blocks.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.anatolia.phrygia",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "Each of these had a king, a capital and a chancery, so `era` is a kind error clustered in the Anatolia and Arabia blocks.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.anatolia.hittites",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "Each of these had a king, a capital and a chancery, so `era` is a kind error clustered in the Anatolia and Arabia blocks.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.arabia.pre-islamic.dilmun",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "Each of these had a king, a capital and a chancery, so `era` is a kind error clustered in the Anatolia and Arabia blocks.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.arabia.pre-islamic.nabataeans",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "Each of these had a king, a capital and a chancery, so `era` is a kind error clustered in the Anatolia and Arabia blocks.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.arabia.pre-islamic.saba",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "Each of these had a king, a capital and a chancery, so `era` is a kind error clustered in the Anatolia and Arabia blocks.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "central-asia.qara-khitai",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "A dynastic state with rulers, a capital and an administration is a polity, not an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.china.western-xia",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "A dynastic state with rulers, a capital and an administration is a polity, not an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "europe.northern.kalmar",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "A dynastic state with rulers, a capital and an administration is a polity, not an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "southeast-asia.mainland.lan-xang",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "A dynastic state with rulers, a capital and an administration is a polity, not an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "southeast-asia.maritime.tondo",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "A dynastic state with rulers, a capital and an administration is a polity, not an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "southeast-asia.maritime.kahuripan",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "A dynastic state with rulers, a capital and an administration is a polity, not an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.iran.aq-qoyunlu",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "A dynastic state with rulers, a capital and an administration is a polity, not an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.iran.qara-qoyunlu",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "A dynastic state with rulers, a capital and an administration is a polity, not an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "oceania.polynesia.new-zealand",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "A dynastic state with rulers, a capital and an administration is a polity, not an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "central-asia.hephthalites",
+  "field": "kind",
+  "from": "era",
+  "to": "polity",
+  "why": "A dynastic state with rulers, a capital and an administration is a polity, not an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "central-asia.hephthalites",
+  "field": "historicity",
+  "from": "contested",
+  "to": null,
+  "why": "The Hephthalites are attested in Sasanian, Chinese, Indian and Byzantine sources and minted coins; only their origin is contested.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "central-asia.sogdia",
+  "field": "kind",
+  "from": "era",
+  "to": "culture",
+  "why": "Sogdia was never politically unified, which is the `culture` case rather than a polity or an era.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "central-asia.sogdia",
+  "field": "historicity",
+  "from": "contested",
+  "to": null,
+  "why": "Sogdiana is documented in Achaemenid inscriptions, Greek and Chinese sources and thousands of Sogdian documents.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "southeast-asia.mainland.dvaravati",
+  "field": "kind",
+  "from": "era",
+  "to": "culture",
+  "why": "Dvaravati is a Mon Buddhist material horizon whose political unity is the open question, i.e. a culture.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "southeast-asia.mainland.dvaravati",
+  "field": "historicity",
+  "from": "contested",
+  "to": null,
+  "why": "Its existence as a culture is not contested; only its political unity is, so `contested` misreads the debate.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "europe.reformation",
+  "field": "kind",
+  "from": "polity",
+  "to": "era",
+  "why": "A religious and political upheaval has no government, so it cannot be a polity.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.arabia.rise-islam",
+  "field": "kind",
+  "from": "polity",
+  "to": "era",
+  "why": "The summary describes Muhammad's prophetic career, which is a period rather than a state.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "west-asia.anatolia.hittites.hittite-collapse",
+  "field": "kind",
+  "from": "polity",
+  "to": "event",
+  "why": "A collapse is an event, not a polity with a government inside the Hittite tree.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "europe.mediterranean.greece",
+  "field": "kind",
+  "from": "polity",
+  "to": "era",
+  "why": "Ancient Greece never had a single government; Ancient Rome and Ancient Egypt are already eras here.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "europe.mediterranean.greece.classical",
+  "field": "kind",
+  "from": "polity",
+  "to": "era",
+  "why": "Classical Greece is a period label covering many city-states, not one polity.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "europe.western.britain.victorian",
+  "field": "kind",
+  "from": "polity",
+  "to": "era",
+  "why": "Victorian Britain is a period label; the polity of 1837-1901 is the United Kingdom, and the Georgian Era is already an `era`.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "europe.western.britain.victorian",
+  "field": "parent_id",
+  "from": "europe.western.england",
+  "to": "europe.western",
+  "why": "It should sit as a sibling of The Georgian Era under Western Europe rather than under England.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "south-asia.independence",
+  "field": "kind",
+  "from": "polity",
+  "to": "era",
+  "why": "Post-Independence South Asia is a period covering several sovereign states, not one state.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.china.yuan",
+  "field": "end_year",
+  "from": 1370,
+  "to": 1368,
+  "why": "1370 is Toghon Temur's death in Mongolia; the Yuan ends with the Ming capture of Dadu in 1368, which the Ming row already uses.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "africa.nile.egypt.middle-kingdom.dyn11",
+  "field": "start_year",
+  "from": -2125,
+  "to": -2055,
+  "why": "The reunified phase begins at -2055; -2125 is the whole Theban 11th Dynasty and starts 70 years before its parent period.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "southeast-asia.mainland.vietnam",
+  "field": "aliases",
+  "from": [
+   "Đại Việt",
+   "Đại Cồ Việt",
+   "Đại Ngu",
+   "Đại Việt, 939-1804"
+  ],
+  "to": [
+   "Đại Việt",
+   "Đại Cồ Việt",
+   "Đại Ngu"
+  ],
+  "why": "An alias with a date range embedded in it is malformed and duplicates the first entry.",
+  "source_review": "review-findings-polities.md"
+ },
+ {
+  "id": "east-asia.japan.kenmu.kenmu-era",
+  "field": "end_year",
+  "from": 1336,
+  "to": 1338,
+  "why": "The Northern court kept counting Kenmu until Ryakuo in 1338, so 1336 leaves a two-year gap in the Northern chain.",
+  "source_review": "review-findings-periods.md"
+ },
+ {
+  "id": "east-asia.japan.muromachi.shokei",
+  "field": "parent_id",
+  "from": "east-asia.japan.muromachi",
+  "to": "east-asia.japan.kamakura",
+  "why": "Shokei ran 1332-1333 and ended when Kamakura fell, three years before the Muromachi period begins.",
+  "source_review": "review-findings-periods.md"
+ },
+ {
+  "id": "east-asia.china.neolithic.cishan",
+  "field": "summary",
+  "from": "A north China millet culture whose storage pits produced the claim that cereal farming here began at the Pleistocene boundary.",
+  "to": "A north China millet culture whose storage pits produced the claim that cereal farming here began in the early Holocene.",
+  "why": "The Cishan millet claim is c. 10,000 BP, in the early Holocene, not at the Pleistocene boundary c. 9700 BCE.",
+  "source_review": "review-findings-periods.md"
+ },
+ {
+  "id": "global.neolithic.agricultural-revolution.mesoamerica",
+  "field": "summary",
+  "from": "Squash first, then maize and beans — the squash predates maize by over four thousand years.",
+  "to": "Squash first, then maize and beans — the squash predates maize by roughly a thousand years.",
+  "why": "Guila Naquitz squash is c. 10,000 BP and the Balsas maize evidence c. 9,000 BP, a gap of about one millennium.",
+  "source_review": "review-findings-periods.md"
+ },
+ {
+  "id": "africa.prehistory.nabta-playa",
+  "field": "end_year",
+  "from": -4251,
+  "to": -3451,
+  "why": "Its own Terminal Neolithic sub-phase runs to -3451, eight centuries past the parent's end.",
+  "source_review": "review-findings-periods.md"
+ },
+ {
+  "id": "east-asia.china.han.xin",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "Wang Mang's usurpation in 9 CE is dated to the day in the Han shu, so `unknown` misstates the evidence.",
+  "source_review": "review-findings-periods.md"
+ },
+ {
+  "id": "east-asia.china.han.xin",
+  "field": "end_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "The fall of the Xin in 23 CE is likewise dated precisely in the Han shu.",
+  "source_review": "review-findings-periods.md"
+ },
+ {
+  "id": "europe.western.france.capetian",
+  "field": "start_dating_method",
+  "from": "unknown",
+  "to": "calendar",
+  "why": "987 is the recorded election of Hugh Capet, a documentary calendar date.",
+  "source_review": "review-findings-periods.md"
+ },
+ {
+  "id": "global.prehistory.firsts.cut-marks",
+  "field": "summary",
+  "from": "Bones from Dikika, Ethiopia bearing marks read as stone-tool butchery, roughly 800,000 years before the oldest known stone tools.",
+  "to": "Bones from Dikika, Ethiopia bearing marks read as stone-tool butchery, roughly 90,000 years before the oldest known stone tools.",
+  "why": "This file's own stone-knapping entry puts the oldest tools at 3,300,000 BCE, 90,000 years later, not 800,000.",
+  "source_review": "review-findings-concepts.md"
+ },
+ {
+  "id": "global.milestones.iron-smelting",
+  "field": "summary",
+  "from": "Hittite-era bloomery iron; the metal that made tools cheap rather than precious.",
+  "to": "Pre-Hittite Anatolian bloomery iron; the metal that made tools cheap rather than precious.",
+  "why": "The Hittite Old Kingdom begins c. 1650 BCE, so a -1900 date cannot be Hittite-era.",
+  "source_review": "review-findings-concepts.md"
+ },
+ {
+  "id": "global.traditions.great-schism",
+  "field": "kind",
+  "from": "tradition",
+  "to": "event",
+  "why": "The Great Schism is a dated event, not a religion, philosophy or school.",
+  "source_review": "review-findings-concepts.md"
+ },
+ {
+  "id": "global.traditions.great-schism",
+  "field": "end_year",
+  "from": null,
+  "to": 1054,
+  "why": "A single-day event in 1054 cannot be open-ended.",
+  "source_review": "review-findings-concepts.md"
+ },
+ {
+  "id": "global.traditions.great-schism",
+  "field": "extant",
+  "from": true,
+  "to": null,
+  "why": "An event that happened in 1054 is not an entity continuing to the present.",
+  "source_review": "review-findings-concepts.md"
+ },
+ {
+  "id": "africa.peoples-amazigh",
+  "field": "aliases",
+  "from": null,
+  "to": [
+   "Berbers",
+   "Imazighen",
+   "Amazigh peoples"
+  ],
+  "why": "'Berber' is overwhelmingly the search term an English-language reader arrives with, so the entity was unreachable.",
+  "source_review": "review-findings-concepts.md"
+ }
+]

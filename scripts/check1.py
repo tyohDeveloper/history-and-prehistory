@@ -1,0 +1,66 @@
+import json
+d=json.load(open('/home/user/workspace/hp/src/data/entities.json'))
+es=d['entities']; byid={e['id']:e for e in es}
+ids="""europe.mediterranean.rome.empire.constantine
+africa.nile.egypt.tip.dyn25.piye
+africa.nile.egypt.tip.dyn25.taharqa
+africa.nile.egypt.tip.dyn25-kushite
+americas.mesoamerica.aztec.tenochtitlan
+europe.city-aquileia
+africa.city-tahert
+east-asia.city-otsu
+americas.city-canyon-de-chelly
+africa.city-deir-el-medina
+africa.city-saqqara
+europe.city-delphi
+europe.city-avebury
+central-asia.city-samye
+americas.city-sacsayhuaman
+europe.city-kyiv
+europe.city-lindum
+africa.city-thinis
+africa.city-njimi
+africa.city-buhen
+africa.city-faras
+africa.city-mirgissa
+africa.city-semna
+africa.city-mogador
+west-asia.mesopotamia.phoenicia.tyre
+west-asia.mesopotamia.phoenicia.sidon
+west-asia.mesopotamia.phoenicia.byblos
+west-asia.mesopotamia.phoenicia.arwad
+south-asia.city-anuradhapura
+europe.city-mystras
+europe.city-skalholt
+southeast-asia.city-lamphun
+southeast-asia.city-mataram-medang
+europe.city-tartessos
+oceania.city-rapa-nui
+europe.city-stonehenge
+west-asia.city-masada
+west-asia.city-qumran
+west-asia.city-yazilikaya
+west-asia.city-didyma
+southeast-asia.city-borobudur
+south-asia.city-konark
+south-asia.city-ajanta
+south-asia.city-ellora
+europe.city-olympia
+europe.city-nemea
+europe.city-tara
+europe.city-thingvellir
+europe.city-tarxien
+oceania.city-brewarrina-fish-traps
+oceania.city-kuk-swamp
+oceania.city-budj-bim
+oceania.city-ara-metua
+europe.city-alba-longa
+europe.city-lavinium
+central-asia.city-khyunglung
+central-asia.city-yumbulagang""".split()
+KEYS=['kind','name','start_year','end_year','extant','aliases','historicity','date_standing','start_dating_method','end_dating_method','parent_id','summary']
+for i in ids:
+    e=byid.get(i)
+    if not e: print('MISSING',i); continue
+    print(i, {k:e.get(k) for k in KEYS if k in e})
+    print()

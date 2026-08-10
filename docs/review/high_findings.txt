@@ -1,0 +1,1221 @@
+115
+=== #0 [review-findings-reigns.md]
+### africa.nile.egypt.new-kingdom.dyn20.ramesses-iii
+**Field:** start
+**Currently:** -1186 (reign -1186..-1155), identical to the accession of his father Setnakht
+(-1186..-1184) and to the 20th Dynasty's own start
+**Should be:** -1184 (Ramesses III c. 1184–1153)
+**Confidence:** high
+**Why:** As it stands Ramesses III's reign begins two years before Setnakht's ends, and the two
+overlap for the whole of Setnakht's reign; the conventional chronology this dataset otherwise
+follows puts Ramesses III's accession at Setnakht's death.
+
+=== #1 [review-findings-reigns.md]
+### africa.nile.egypt.new-kingdom.dyn19.seti-i
+**Field:** start
+**Currently:** -1290, leaving a four-year vacancy after Ramesses I ends in -1294
+**Should be:** -1294
+**Confidence:** high
+**Why:** Seti I succeeded his father directly; the 19th Dynasty span (-1295..-1186) and Ramesses I's
+own dates (-1295..-1294) both come from the chronology in which Seti I is 1294–1279, so -1290 is a
+value imported from a different scheme and leaves four years with no king.
+
+=== #2 [review-findings-reigns.md]
+### east-asia.china.tang.zhongzong
+**Field:** start/end
+**Currently:** 684..710, a 26-year reign that entirely contains Ruizong's first reign (684–690) and
+Wu Zetian's Zhou (690–705)
+**Should be:** two tenures — 684 (a few weeks) and 705–710
+**Confidence:** high
+**Why:** Zhongzong was deposed by his mother within months in 684 and only restored in 705; as
+written the row asserts he was emperor throughout Wu Zetian's reign, which the dataset also records.
+
+=== #3 [review-findings-reigns.md]
+### europe.mediterranean.byzantine.justinian-ii
+**Field:** start/end
+**Currently:** 685..711 as one continuous reign
+**Should be:** 685–695 and 705–711
+**Confidence:** high
+**Why:** He was deposed, mutilated and exiled for ten years; a single 26-year span erases the
+Leontios/Tiberios III interval and makes the reign look twice as long as it was.
+
+=== #4 [review-findings-reigns.md]
+### europe.mediterranean.rome.empire.constantine
+**Field:** under (placement)
+**Currently:** `Roman Empire < Ancient Rome < Mediterranean < Europe` — the only reign filed directly
+at that level
+**Should be:** `Constantinian Dynasty` (306–363 in `polities.json`), which his 306–337 fits exactly
+and which already holds his sons
+**Confidence:** high
+**Why:** Constantine's four sons and Julian are in the Constantinian Dynasty and Constantine is not,
+so a reader browsing that dynasty finds it without its founder.
+
+=== #5 [review-findings-reigns.md]
+### west-asia.mesopotamia.old-babylonian.hammurabi
+**Field:** dated_by (and bounds)
+**Currently:** `calendar`, `bounds: [null, null]`, `date_standing: majority`
+**Should be:** not `calendar`; these are middle-chronology dates resting on the Venus tablet of
+Ammisaduqa and eponym/king lists, and they need bounds
+**Confidence:** high
+**Why:** Nothing about -1792..-1750 comes from a calendar. Competing chronologies move Hammurabi by
+roughly 56–64 years in either direction (high 1848–1806, low 1728–1686), so this is precisely the
+case where absent bounds mislead: the row shows zero uncertainty on the most chronology-dependent
+date in the dataset.
+
+=== #6 [review-findings-reigns.md]
+### europe.western.netherlands
+**Field:** kind (and the row's existence in this file)
+**Currently:** `kind: reign`, `name: The Netherlands`, `under: Western Europe < Europe`, 1581..null,
+summary describing "the Dutch Republic and its successors, and the two chartered companies"
+**Should be:** a polity, not a reign — `polities.json` already files the VOC and WIC beneath
+`europe.western.netherlands` as its children
+**Confidence:** high
+**Why:** A country is not a reign and has no ruler; this row is a polity parent that has landed in
+the reigns file, which is why it is the only "reign" in the dataset with no person and no end.
+
+---
+
+## Patterns (stated once)
+
+=== #7 [review-findings-reigns.md]
+### P1. `bounds` are computed from the start date only, so they exclude the end of any reign longer than the bound width
+**Confidence:** high that the values are as described; medium that this is wrong rather than intended
+
+Some 75 rows have an `end` outside their own `bounds` — e.g. Ezana 320..360 with bounds [295, 345],
+Augustus -27..14 with [-52, -2], Basil II 976..1025 with [951, 1001], Ramesses II's dynasty-mates,
+Kumaragupta I, Nandivarman II, Pepi II. In every case bounds = start ± 25 (or ± 50 / ± 100 for
+older rows). If bounds are meant as uncertainty on the accession, they are technically defensible
+but will render as an interval that does not contain the reign; if they are meant as the row's date
+envelope, they are wrong on a tenth of the file. Either way one convention should be stated and
+applied.
+
+=== #8 [review-findings-reigns.md]
+### P2. The bound *widths* are wrong in both directions
+**Confidence:** high
+
+- **Too wide:** Roman emperors carry ±25 years (Caligula 37..41 with bounds [12, 62]; the Year of the
+  Four Emperors rows, dated to the month, carry [43, 93] and [44, 94]). Ptolemies, Achaemenids
+  (Cyrus [-609, -509]), Han and Tang emperors, and Muhammad ([585, 635]) are the same. Achaemenid,
+  Ptolemaic, Han and Roman regnal dates are fixed by documentary and astronomical records to the
+  year or better; ±25 or ±50 years on them is a century-scale error of the kind this brief exists to
+  catch.
+- **Too narrow / absent:** Hammurabi has no bounds at all despite a ~60-year chronology dispute, and
+  every legendary row (Romulus, Dangun, the Three Sovereigns, Gilgamesh, Nitocris) has
+  `bounds: [null, null]` while carrying year-precise start and end.
+
+=== #9 [review-findings-reigns.md]
+### P3. `dated_by: unknown` on dates that are documentary
+**Confidence:** high
+
+All 79 Roman imperial rows, all 18 Ptolemaic rows, the Achaemenids, the Han, Sui and Tang emperors,
+the Sasanians and the early Byzantines are `dated_by: unknown`. These are the best-documented regnal
+dates in antiquity — consular fasti, papyri, coinage, Babylonian astronomical diaries, the *Shiji*
+and the standard histories. `unknown` tells the reader nobody knows where the date came from, which
+is the opposite of the case, and it is the single most widespread metadata error in the file.
+
+=== #10 [review-findings-reigns.md]
+### P4. `dated_by` flips from `unknown` to `calendar` at an arbitrary threshold, mid-dynasty
+**Confidence:** high
+
+The Northern Song splits at Renzong (Taizu, Taizong, Zhenzong `unknown` with ±25 bounds; Renzong
+onwards `calendar` with none). The Cholas split at Rajendra I, the Byzantines at Romanos IV, the
+Korean Three Kingdoms between Jangsu and Seong of Baekje. Nothing changed about how these dates are
+known across those boundaries; the cut appears to be roughly "before/after 1050 CE". Consecutive
+reigns in one dynasty should not disagree about how they are dated.
+
+=== #11 [review-findings-reigns.md]
+### P5. Egyptian dates before ~2000 BCE claim year precision they cannot have
+**Confidence:** high
+
+Every Early Dynastic, Old Kingdom and early 11th Dynasty reign carries single-year accession and
+death dates — Anedjib -2930..-2925, Khaba -2640..-2637, Userkare -2333..-2332, Merenre II
+-2184..-2184. Egyptian chronology before the Middle Kingdom is not resolvable to the year and is
+conventionally cited in round decades with an explicit ± of 50–150 years; the ±100 bounds here are
+the right order of magnitude, but the headline figures read as exact. The knock-on effect is
+visible in the overlaps and gaps reported above: false precision makes each dynasty's arithmetic
+look broken when in reality no one knows the numbers that closely.
+
+Related: Egyptian reigns are all `dated_by: unknown`. They rest on king lists (Turin Canon, Abydos,
+Manetho), dead reckoning from dated regnal-year documents, and astronomical/Assyrian synchronisms.
+If the vocabulary has no `king-list` or `synchronism` value, `received` fits far better than
+`unknown`.
+
+=== #12 [review-findings-reigns.md]
+### P7. Interrupted reigns collapsed into single spans
+**Confidence:** high where flagged individually
+
+The dataset handles this correctly in several places (Humayun / Humayun restored, Ashikaga Yoshitane
+/ Yoshitane restored, Zhengtong / Tianshun, Indira Gandhi, Benazir Bhutto, Sheikh Hasina) and
+incorrectly in others (Zhongzong, Justinian II, Ptolemy IX, Ptolemy VIII). Emperor Ruizong is the
+mirror image: his first reign (684–690) is present, his second (710–712) is missing, which is why
+there is a two-year hole before Xuanzong.
+
+=== #13 [review-findings-reigns.md]
+### P8. Cosmetic but load-bearing: split id prefixes inside the 25th Dynasty
+**Confidence:** high
+
+`africa.nile.egypt.tip.dyn25.piye` and `...dyn25.taharqa` sit beside
+`...dyn25-kushite.shabaka`, `...dyn25-kushite.shebitku`, `...dyn25-kushite.tantamani`, while
+`polities.json` has only `dyn25-kushite`. Two of the five kings are keyed to a parent that does not
+exist.
+
+---
+
+## The twenty worst
+
+1. **east-asia.china.tang.zhongzong** — a 26-year reign that swallows Wu Zetian's entire reign; two
+   short tenures presented as one long one.
+2. **europe.mediterranean.byzantine.justinian-ii** — 685..711 as one span erases a ten-year
+   deposition and exile and doubles the apparent reign.
+3. **P3 — `dated_by: unknown` on ~120 Roman, Ptolemaic, Achaemenid, Han/Tang and Sasanian rows**, the
+   best-documented regnal dates in antiquity.
+4. **P2 — ±25-year bounds on reigns dated to the day**, including the Year of the Four Emperors and
+   Caligula; a reader is told Rome's imperial chronology is uncertain by a generation.
+5. **africa.nile.egypt.new-kingdom.dyn20.ramesses-iii** — accession set two years before his
+   predecessor's death, overlapping Setnakht's whole reign.
+6. **europe.western.netherlands** — a country filed as a reign, with no person, no end, and children
+   in another file.
+7. **west-asia.mesopotamia.old-babylonian.hammurabi** — `dated_by: calendar` with no bounds on the
+   single most chronology-dependent date in the dataset.
+8. **africa.nile.egypt.new-kingdom.dyn19.seti-i** — four kingless years between Ramesses I and Seti I,
+   caused by mixing two chronologies.
+9. **P5 — year-precise Egyptian dates before 2000 BCE**, which manufacture the overlaps and gaps
+   reported throughout the Old Kingdom.
+10. **west-asia.arabia.rise-islam.muhammad** — a reign starting in 610, twelve years before he held
+    any authority.
+11. **europe.mediterranean.rome.empire.constantine** — the Constantinian Dynasty filed without
+    Constantine.
+12. **africa.nile.egypt.tip.dyn25.piye** — seven-year overlap with Shabaka, plus a superseded
+    Shabaka/Shebitku order.
+13. **africa.nile.egypt.ptolemaic.ptolemy-ix** — an interrupted reign shown as continuous and
+    overlapping Ptolemy X.
+14. **east-asia.china.legendary.shennong** — dates copied verbatim from Fuxi.
+15. **africa.nile.egypt.sip.dyn15-hyksos.salitis** — a Manetho-only king presented as accepted
+    history with exact dates.
+16. **P6 — Inca, Aztec, Mali, Songhai and Zulu reigns marked `calendar` with zero uncertainty**, when
+    they rest on colonial chronicles, codices and oral tradition.
+17. **africa.nile.egypt.middle-kingdom.dyn11.intef-i/ii/iii** — three reigns filed inside a Middle
+    Kingdom that had not begun.
+18. **africa.nile.egypt.old-kingdom.dyn3.sanakht** — overlaps Djoser, and the 3rd Dynasty's
+    arithmetic does not close.
+19. **africa.nile.egypt.early-dynastic.dyn1.narmer** — `historicity: contested` for a king attested
+    on his own palette; it is the Menes identification that is contested.
+20. **P4 — `dated_by` flipping mid-dynasty** in the Northern Song, the Cholas, the Byzantines and the
+    Korean Three Kingdoms, at what appears to be an arbitrary date threshold.
+
+## Proposed tests
+
+Each test below is stated so it can be implemented directly against `reigns.json` plus its parent
+files, with the threshold fixed. Violation lists are the current contents of the data, computed
+mechanically, not by judgement. `safe` means I could find no legitimate exception and it can fail a
+build; `advisory` means real history violates it and it should warn only — each advisory test names
+the exception that makes it advisory.
+
+=== #14 [review-findings-cities-1.md]
+### PATTERN-1 — `kind: city` used for monuments, sanctuaries, cemeteries, forts and landscapes
+**Field:** kind (and by implication the file this belongs in)
+**Currently:** ~40 rows are `kind: city`. In 14 of them the summary itself ends with
+"…; not a city", "…; a fort, not a city", "…; sanctuary rather than city", "…; ceremonial,
+not a city".
+**Should be:** these are not cities and should not be in a cities file at all — or `kind`
+should be `site` / `sanctuary` / `necropolis` / `fortress` / `earthwork`.
+**Confidence:** high
+**Why:** A row whose own summary says it is not a city is self-refuting. Individual rows are
+listed below (NOTCITY-*) because the class is not uniform in severity, but the systematic point
+is one bug: the enumeration pulled in the whole archaeological gazetteer, not just cities.
+
+=== #15 [review-findings-cities-1.md]
+### PATTERN-2 — `dated_by: typological` on foundation dates that are documented calendar dates
+**Field:** dated_by
+**Currently:** 610 of 719 rows are `typological`, including foundations known precisely from
+written record: Cairo 969, Kairouan 670, Fez 789, Mahdia 916, Madinat al-Zahra 936, Ashir 936,
+Tahert 761, Raqqada 876, Alexandria −331, Aquileia −181, Ariminum −268, Cremona −218,
+Lugdunum −43, Cologne −38, Emerita Augusta −25, Londinium 47, Deva 74, Thamugadi 100,
+Djemila 96, Kyoto 794, Nara 710, Fujiwara-kyo 694, Nagaoka-kyo 784, Otsu 667, Buyeo 538,
+Kaesong 918, Ordu-Baliq 744, Ai-Khanoum, Sabi, Xianyang −350, Chengdu −311, Guangzhou −214.
+**Should be:** `calendar` (or `received`) for any foundation attested by a dated text; reserve
+`typological` for dates derived from material culture.
+**Confidence:** high
+**Why:** Brief item 4. The 109 `calendar` rows are almost all post-1000 CE with `bounds: [null, null]`,
+which suggests `dated_by` was assigned by date range rather than by evidence type.
+
+=== #16 [review-findings-cities-1.md]
+### PATTERN-3 — `historicity` is null on every row, including legendary foundations
+**Field:** historicity
+**Currently:** null (= accepted) for all 719, including Alba Longa ("Legendary mother city of
+Rome"), Lavinium ("Legendary landing city of Aeneas"), Thinis ("site not securely located"),
+Njimi ("its site remains unidentified"), Khyunglung ("Reputed capital of Zhangzhung"),
+Yumbulagang ("Reputedly Tibet's oldest building"), and the legendary-annal foundation dates
+Kyiv 482, Gimhae 42, Gyeongju −57, Jeonju −57, Pyongyang −1000 (Gojoseon).
+**Should be:** `legendary` or `contested` on those rows.
+**Confidence:** high
+**Why:** Brief item 5. Presenting a traditional/legendary foundation with tight archaeological-looking
+bounds is exactly the failure mode the brief names.
+
+=== #17 [review-findings-cities-1.md]
+### PATTERN-4 — `aliases` polluted with regions, provinces, and non-names
+**Field:** aliases
+**Currently:** a large minority of rows carry a modern governorate/province/county as an "alias"
+(Abydos → "Sohag", Antinoöpolis → "Minya", Adulis → "Northern Red Sea", Italica → "Seville
+province", Conimbriga → "Coimbra district", Madinat al-Zahra → "Córdoba province", plus ~80 more),
+and some carry outright non-names: Buhen → "flooded by Lake Nasser"; Faras, Mirgissa, Semna →
+"flooded"; Mogador → "Cerne?"; Ghat → "Ghadamis nearby"; Kerma → "Doukki Gel nearby";
+Raqqada → "Sabra al-Mansuriyya nearby"; Itil → "Khazar capital"; Khyunglung → "Zhangzhung capital";
+Taihe → "Nanzhao capital"; Jeonju → "Hubaekje capital".
+**Should be:** aliases should hold names a reader might arrive with. Location belongs in a location
+field; "flooded" and "Cerne?" belong nowhere.
+**Confidence:** high
+**Why:** A reader searching aliases for "Sohag" will be handed Abydos and Akhmim; a reader searching
+"flooded" gets four Nubian forts.
+
+---
+
+## Living cities given an end year, or ended at a conquest they survived
+
+=== #18 [review-findings-cities-1.md]
+### americas.mesoamerica.aztec.tenochtitlan
+**Field:** end / extant / aliases / under / id
+**Currently:** `end: 1521`, `extant: null`, `aliases: null`, `under: "Aztec Empire < Mesoamerica < Americas"`.
+**Should be:** `end: null`, `extant: true`, aliases including "México-Tenochtitlan" and "Mexico City";
+`under` and id format matching the other 718 rows.
+**Confidence:** high
+**Why:** This is the file's Constantinople case. Tenochtitlan was not abandoned in 1521 — it was
+renamed and rebuilt as Mexico City on the same island and has been inhabited without interruption
+since. It is also the only row in the file with a nested `under`, a dotted non-`city-` id, and the
+only row with `date_standing`, so it looks like it was authored by a different process.
+
+=== #19 [review-findings-cities-1.md]
+### europe.city-aquileia
+**Field:** end
+**Currently:** `end: 452` — "destroyed by Attila".
+**Should be:** no single end, or an end in the 6th–7th century for the city's collapse; Aquileia
+remained the seat of a patriarchate through the Middle Ages and is an inhabited comune today.
+**Confidence:** high
+**Why:** Attila's sack is precisely the "conquest treated as ending" error. The patriarchate the
+summary itself mentions post-dates 452 by centuries.
+
+=== #20 [review-findings-cities-1.md]
+### africa.city-tahert
+**Field:** end
+**Currently:** `end: 909` — fall of the Rustamid imamate.
+**Should be:** no end / extant true. Tahert is Tiaret, a living Algerian city of several hundred
+thousand people.
+**Confidence:** high
+**Why:** The Fatimid conquest ended the imamate, not the settlement. The alias field already says
+"Tiaret".
+
+=== #21 [review-findings-cities-1.md]
+### east-asia.city-otsu
+**Field:** name / end / extant
+**Currently:** name "Otsu", `end: 672`.
+**Should be:** either name it "Ōtsu-kyō" (the 667–672 palace capital) or set `end: null`,
+`extant: true`. Ōtsu is the capital of Shiga Prefecture today.
+**Confidence:** high
+**Why:** As written it tells the reader a major modern Japanese city ceased to exist in 672.
+
+=== #22 [review-findings-cities-1.md]
+### americas.city-canyon-de-chelly
+**Field:** kind / name
+**Currently:** `kind: city`, `extant: true`, "Continuously inhabited canyon…".
+**Should be:** not a city — a canyon containing many cliff dwellings and farms.
+**Confidence:** high
+**Why:** A canyon is a landscape, not a settlement; "White House Ruin" as an alias confirms the row
+is really about a group of sites.
+
+=== #23 [review-findings-cities-1.md]
+### NOTCITY — self-declared in the summary
+**Field:** kind
+**Currently:** `kind: city` on rows whose own summaries deny it:
+- `africa.city-deir-el-medina` — "village of the tomb-builders … not a city"
+- `africa.city-giza-workers` — "a support settlement, not a city"
+- `africa.city-kahun` — "not a city"
+- `africa.city-saqqara` — "a cemetery complex, not a city"
+- `africa.city-nuri` — "a necropolis, not a city"
+- `africa.city-mirgissa` — "a fort, not a city"
+- `africa.city-semna` — "a fort, not a city"
+- `africa.city-musawwarat` — "ceremonial, not a city"
+- `africa.city-igbo-ukwu` — "a ritual centre, not a city"
+- `africa.city-koumbi-tegdaoust-note` — "ceremonial, not a city"
+- `europe.city-delphi` — "sanctuary, not a city"
+- `europe.city-dodona` — "sanctuary rather than city"
+- `europe.city-isthmia` — "a cult centre, not a city"
+- `europe.city-jelling` — "not a city"
+**Should be:** removed from the cities file, or re-typed.
+**Confidence:** high
+**Why:** No judgement needed; the rows contradict themselves.
+
+=== #24 [review-findings-cities-1.md]
+### NOTCITY — not self-declared but equally clear
+**Field:** kind
+**Currently:** `kind: city` on:
+- `europe.city-avebury` — a stone circle and ceremonial landscape
+- `europe.city-durrington-walls` — a Neolithic enclosure/settlement of Stonehenge builders
+- `europe.city-emain-macha` — Navan Fort, a royal ceremonial earthwork
+- `central-asia.city-samye` — a monastery
+- `central-asia.city-yumbulagang` — a single castle building
+- `americas.city-acre-geoglyphs` — "hundreds of geometric ditched enclosures"
+- `americas.city-hopewell-earthworks` — earthwork complexes, plural
+- `americas.city-newark-earthworks` — an earthwork complex
+- `americas.city-fort-ancient` — a hilltop enclosure
+- `americas.city-san-agustin` — "dispersed funerary and ceremonial landscape"
+- `americas.city-tierradentro` — "ceremonial zone" of shaft tombs
+- `americas.city-sacsayhuaman` — a ceremonial fortress above Cusco (and a district of a city
+  already in the file, Cusco)
+- `americas.city-sitio-conte` — a burial ground
+- `americas.city-marajo` — "mound complexes" across an island
+**Should be:** re-typed or removed.
+**Confidence:** high
+**Why:** Monuments, sanctuaries, cemeteries and multi-site landscapes, exactly the categories the
+objective asks to flag.
+
+=== #25 [review-findings-cities-1.md]
+### central-asia.city-gurganj / central-asia.city-konye-urgench
+**Field:** id (whole rows)
+**Currently:** two rows for the same city — Gurganj `start: 300, end: 1600`, Konye-Urgench
+`start: 400, end: 1600`; each lists the other's name in its aliases.
+**Should be:** one row. Konye-Urgench ("Old Urgench") *is* Gurganj.
+**Confidence:** high
+**Why:** Two rows with conflicting start dates for one place; a reader consulting either gets a
+different founding century.
+
+=== #26 [review-findings-cities-1.md]
+### africa.city-koumbi-tegdaoust-note
+**Field:** id / name / start / end / kind
+**Currently:** id `africa.city-koumbi-tegdaoust-note`, name "Sine-Ngayene", summary about the
+Senegambian megalithic circles, `start: -300, end: 1500`.
+**Should be:** the id belongs to a different place entirely (Kumbi Saleh / Tegdaoust, both of which
+already have their own rows), the word "note" should not be in an id, and the Senegambian stone
+circles are conventionally dated to roughly the 7th–15th centuries CE, not from 300 BCE.
+**Confidence:** high
+**Why:** Three independent errors in one row, including an id that will send readers to the wrong
+country (Mauritania vs Senegal) and a start ~1,000 years too early.
+
+=== #27 [review-findings-cities-1.md]
+### europe.city-cologne-dorestad
+**Field:** id
+**Currently:** id prefixed `cologne-`, name "Dorestad".
+**Should be:** `europe.city-dorestad`. Dorestad is at Wijk bij Duurstede in the Netherlands and has
+nothing to do with Cologne.
+**Confidence:** high
+**Why:** Copy-paste in the id; misfiles a Frisian emporium under a German city.
+
+=== #28 [review-findings-cities-1.md]
+### europe.city-kyiv
+**Field:** start / bounds / dated_by / historicity
+**Currently:** `start: 482`, `bounds: [472, 492]`, `dated_by: typological`.
+**Should be:** late 9th century for the urban settlement (with 6th–7th century occupation traces);
+482 is the anniversary date adopted in 1982 from chronicle legend and should be marked
+`received` / `legendary`, not given ±10 years of archaeological precision.
+**Confidence:** high
+**Why:** Textbook case of a legendary founding presented as archaeology, with false precision on top.
+
+=== #29 [review-findings-cities-1.md]
+### europe.city-lindum
+**Field:** start
+**Currently:** `start: -60`, `bounds: [-85, -35]`.
+**Should be:** c. AD 48–60 — the legionary fortress at Lincoln is post-conquest.
+**Confidence:** high
+**Why:** Britain had no Roman legionary colonies in 60 BCE. Sign error.
+
+=== #30 [review-findings-cities-1.md]
+### africa.city-thinis, africa.city-njimi
+**Field:** dated_by / bounds
+**Currently:** Thinis `-3500` with `bounds [-4025, -2975]`, `typological`, summary "site not securely
+located"; Njimi `900–1400`, `typological`, summary "its site remains unidentified".
+**Should be:** `received` (both are known only from texts); an unlocated site cannot be dated
+typologically because there is no assemblage to type.
+**Confidence:** high
+**Why:** Brief item 4, in its clearest form.
+
+=== #31 [review-findings-cities-1.md]
+### africa.city-jenne-jeno vs africa.city-dia
+**Field:** summary
+**Currently:** Jenne-jeno: "Africa's oldest known city south of the Sahara". Dia: "Early Middle Niger
+urban cluster contemporary with and older than Jenne-jeno".
+**Should be:** one of these has to yield. Also "contemporary with and older than" is internally
+contradictory as a phrase.
+**Confidence:** high
+**Why:** Two rows in one file make incompatible priority claims; a reader hitting both learns nothing.
+
+=== #32 [review-findings-cities-2.md]
+### west-asia.mesopotamia.phoenicia.tyre
+**Field:** end (and aliases)
+**Currently:** `end: -332`, no aliases; summary "fell to Alexander after a seven-month siege"
+**Should be:** `end: null`, `extant: true`; aliases should include Sur / Ṣūr / Ṣur, Ṣurru
+**Confidence:** high
+**Why:** Alexander's siege is a conquest, not an ending — Tyre was refounded within a generation,
+was a major Roman and Crusader city, and is the fourth-largest city in Lebanon today.
+
+=== #33 [review-findings-cities-2.md]
+### west-asia.mesopotamia.phoenicia.sidon
+**Field:** end (and aliases)
+**Currently:** `end: -332`, no aliases
+**Should be:** `end: null`, `extant: true`; aliases Saida / Ṣaydā, Ṣidunu
+**Confidence:** high
+**Why:** Sidon passed to Alexander and continued unbroken as a Hellenistic, Roman, Islamic and
+Ottoman port; it is a living Lebanese city.
+
+=== #34 [review-findings-cities-2.md]
+### west-asia.mesopotamia.phoenicia.byblos
+**Field:** end, start (and aliases)
+**Currently:** `start: -3000`, `end: -332`, no aliases
+**Should be:** `end: null`, `extant: true`; start plausibly −5000 or earlier; aliases Jbeil / Jubayl,
+Gubla, Gebal
+**Confidence:** high
+**Why:** Byblos is routinely cited as one of the oldest *continuously inhabited* cities on earth
+(Neolithic occupation from the 6th–5th millennium), so both a −3000 founding and a 332 BCE ending
+are wrong; modern Jbeil sits on the site.
+
+=== #35 [review-findings-cities-2.md]
+### west-asia.mesopotamia.phoenicia.arwad
+**Field:** end (and aliases, summary)
+**Currently:** `start: -1200`, `end: -332`, no aliases; summary "The northernmost city, on an island"
+**Should be:** `end: null`, `extant: true`; aliases Ruad, Arados, Antaradus-offshore
+**Confidence:** high
+**Why:** Arwad is the only inhabited island in Syria today and was continuously occupied through
+Hellenistic, Roman, Crusader and Ottoman times. The summary also only parses inside its parent
+list ("the northernmost city" of what?).
+
+=== #36 [review-findings-cities-2.md]
+### south-asia.city-anuradhapura
+**Field:** end
+**Currently:** `end: 1017` (the Chola conquest), `extant: null`
+**Should be:** `extant: true`, `end: null` — or an explicit note that the *capital* function ended
+**Confidence:** high
+**Why:** Anuradhapura ceased to be the royal capital after the Chola invasion but the place was
+never abandoned and is a substantial living Sri Lankan city and pilgrimage centre.
+
+=== #37 [review-findings-cities-2.md]
+### europe.city-mystras
+**Field:** end
+**Currently:** `end: 1500`
+**Should be:** c. 1830s
+**Confidence:** high
+**Why:** Mystras was inhabited long past 1500 — Ottoman and Venetian silk town, still populated
+until the founding of modern Sparti in the 1830s drew the inhabitants down to the plain.
+
+=== #38 [review-findings-cities-2.md]
+### europe.city-skalholt
+**Field:** end
+**Currently:** `end: 1500`
+**Should be:** 1785 (or `null`, since a farm and church remain)
+**Confidence:** high
+**Why:** Skálholt was Iceland's principal see until the 1780s, when earthquake damage and the
+Laki disaster caused the see to move to Reykjavík. 1500 is arbitrary.
+
+=== #39 [review-findings-cities-2.md]
+### southeast-asia.city-lamphun
+**Field:** start
+**Currently:** `-600`
+**Should be:** c. 750 CE
+**Confidence:** high
+**Why:** Hariphunchai was a Mon polity founded in the mid-8th century CE; a 600 BCE founding is off
+by roughly 1,350 years and predates any urbanism in northern Thailand.
+
+=== #40 [review-findings-cities-2.md]
+### southeast-asia.city-mataram-medang
+**Field:** kind / whole entity
+**Currently:** filed as a city; summary "Central Javanese **kingdom** whose shifting royal centre…"
+**Should be:** a polity, not a city — and it duplicates `southeast-asia.city-prambanan-mataram`,
+which lists "Medang" as an alias
+**Confidence:** high
+**Why:** By the summary's own admission there is no fixed settlement here; Medang is the state whose
+capital moved. This is exactly the "polity sharing its capital's name" case.
+
+=== #41 [review-findings-cities-2.md]
+### europe.city-tartessos
+**Field:** kind / whole entity
+**Currently:** filed as a city; summary "Legendary silver-rich **kingdom and trading polity**";
+aliases include "lower Guadalquivir"
+**Should be:** a polity/region; `historicity` should also flag that the city of Tartessos is
+unlocated and semi-legendary
+**Confidence:** high
+**Why:** No Tartessian city site is identified; the name denotes a region and a culture. Presenting
+it as a city with archaeological-style bounds (−900 ±135) overstates the evidence badly.
+
+=== #42 [review-findings-cities-2.md]
+### oceania.city-rapa-nui
+**Field:** kind / whole entity
+**Currently:** a city named "Rapa Nui", summary "Island society of **dispersed hamlets**";
+aliases include "Rano Raraku", "Ahu Tongariki" (a quarry and a platform)
+**Should be:** an island/society, not a city — and by its own summary explicitly not nucleated
+**Confidence:** high
+**Why:** Easter Island is an island, not a settlement, and the entry admits the settlement pattern
+was dispersed.
+
+=== #43 [review-findings-cities-2.md]
+### europe.city-stonehenge
+**Field:** kind / whole entity
+**Currently:** city; summary "Iconic ceremonial monument and gathering place; **not a settlement**"
+**Should be:** a monument
+**Confidence:** high
+**Why:** Self-contradicting row; the most reader-misleading of the not-a-city cases.
+
+=== #44 [review-findings-cities-2.md]
+### west-asia.city-masada
+**Field:** kind / whole entity
+**Currently:** city; summary "…a **fortress, not a city**"
+**Should be:** a fortress/palace complex
+**Confidence:** high
+
+=== #45 [review-findings-cities-2.md]
+### west-asia.city-qumran
+**Field:** kind / whole entity
+**Currently:** city; summary "a **community compound, not a city**"
+**Should be:** a settlement/compound
+**Confidence:** high
+
+=== #46 [review-findings-cities-2.md]
+### west-asia.city-yazilikaya
+**Field:** kind / whole entity
+**Currently:** city; summary "Rock sanctuary… **ceremonial, not a city**"
+**Should be:** a sanctuary, and it is an annex of Hattusa rather than an independent place
+**Confidence:** high
+
+=== #47 [review-findings-cities-2.md]
+### west-asia.city-didyma
+**Field:** kind / whole entity
+**Currently:** city; summary "Oracle sanctuary of Apollo attached to Miletus; **ceremonial, not a
+city**"
+**Should be:** a sanctuary, filed under Miletus
+**Confidence:** high
+
+=== #48 [review-findings-cities-2.md]
+### southeast-asia.city-borobudur
+**Field:** kind / whole entity
+**Currently:** city; summary "Largest Buddhist **monument** on earth, a stone mandala"
+**Should be:** a monument
+**Confidence:** high
+
+=== #49 [review-findings-cities-2.md]
+### south-asia.city-konark
+**Field:** kind / whole entity
+**Currently:** city; summary "…a **monument** and port shrine, **not a city**"
+**Should be:** a temple/monument
+**Confidence:** high
+
+=== #50 [review-findings-cities-2.md]
+### south-asia.city-ajanta / south-asia.city-ellora
+**Field:** kind / whole entity
+**Currently:** cities
+**Should be:** rock-cut cave complexes (a monastery and a temple group)
+**Confidence:** high
+**Why:** Caves, explicitly named as such in both summaries; neither was ever a town.
+
+=== #51 [review-findings-cities-2.md]
+### europe.city-olympia / europe.city-nemea
+**Field:** kind / whole entity
+**Currently:** cities; both summaries say "sanctuary… rather than a true city" / "sanctuary, not a
+city"
+**Should be:** Panhellenic sanctuaries
+**Confidence:** high
+
+=== #52 [review-findings-cities-2.md]
+### europe.city-tara / europe.city-thingvellir
+**Field:** kind / whole entity
+**Currently:** cities; summaries "ceremonial inauguration site… **not an urban centre**" and
+"assembly plain… **not a town**"
+**Should be:** ceremonial/assembly sites
+**Confidence:** high
+
+=== #53 [review-findings-cities-2.md]
+### europe.city-tarxien
+**Field:** kind / name / whole entity
+**Currently:** one "city" named "Tarxien and Ġgantija temples", aliases "Ggantija", "Hagar Qim"
+**Should be:** three separate temple complexes on two islands, none of them a city
+**Confidence:** high
+**Why:** Not a city, and it merges three distinct sites (Tarxien and Ħaġar Qim on Malta, Ġgantija
+on Gozo) into a single entity with a single date range.
+
+=== #54 [review-findings-cities-2.md]
+### oceania.city-brewarrina-fish-traps / oceania.city-kuk-swamp / oceania.city-budj-bim / oceania.city-ara-metua
+**Field:** kind / whole entity, and `extant: true`
+**Currently:** cities with `extant: true` and no end
+**Should be:** a fish-trap complex, an agricultural site, an aquaculture landscape, and a road/marae
+network respectively; none is an inhabited city today
+**Confidence:** high
+**Why:** These are landscapes and installations. `extant: true` on Kuk Swamp in particular implies a
+living city where there is an archaeological wetland.
+
+=== #55 [review-findings-cities-2.md]
+### europe.city-ryazan
+**Field:** whole entity — two places conflated
+**Currently:** name "Ryazan", `start: 1095`, `extant: true`, aliases "Old Ryazan", "Staraya Ryazan",
+summary "destroyed by the Mongols in 1237 and relocated"
+**Should be:** split — Old Ryazan (destroyed 1237, abandoned, `extant: null`) versus modern Ryazan
+(the former Pereyaslavl-Ryazansky, extant)
+**Confidence:** high
+**Why:** One row cannot be both the site destroyed in 1237 and the living city, and the aliases
+point at the abandoned one while `extant` points at the living one.
+
+=== #56 [review-findings-cities-2.md]
+### southeast-asia.city-cebu and southeast-asia.city-cebu-sugbu
+**Field:** duplicate entities
+**Currently:** two rows for the same place — "Cebu" (start 1000, alias Sugbu) and "Sugbu"
+(start 1200, alias Cebu), with near-identical summaries
+**Should be:** one entity
+**Confidence:** high
+**Why:** Straight duplication with contradictory start dates.
+
+=== #57 [review-findings-cities-2.md]
+### west-asia.city-dezful-jundishapur
+**Field:** id / name — three cities conflated
+**Currently:** id `dezful-jundishapur`, name "Shushtar", summary about the Shushtar hydraulic system
+**Should be:** Shushtar only; Dezful and Gundeshapur are separate places, and Gundeshapur already
+has its own row (`west-asia.city-gundeshapur`)
+**Confidence:** high
+**Why:** The identifier names two cities that the entry is not about; a reader searching for
+Jundishapur lands on Shushtar.
+
+=== #58 [review-findings-cities-2.md]
+### south-asia.city-sirsukh-sialkot
+**Field:** id
+**Currently:** id `sirsukh-sialkot`, name "Sialkot"
+**Should be:** Sialkot (Sagala); Sirsukh is one of the three mounds of Taxila, 250 km away, and is
+already listed as an alias of `south-asia.city-taxila`
+**Confidence:** high
+
+=== #59 [review-findings-cities-2.md]
+### europe.city-naples-cuma
+**Field:** id
+**Currently:** id `naples-cuma`, name "Puteoli", summary about Pozzuoli's harbour
+**Should be:** id should reference Puteoli/Pozzuoli; Cumae is a different Greek city
+**Confidence:** high
+
+=== #60 [review-findings-polities.md]
+### PATTERN-1 — 59 entries carry ±25-year bounds and `dated_by: unknown` on dates fixed to the year by written record
+**Field:** `dated_by`, `bounds`
+**Currently:** e.g. Tang Dynasty 618 `[593, 643]` `unknown`; Abbasid Caliphate 750 `[725, 775]`; Rashidun 632 `[607, 657]`; Umayyad 661 `[636, 686]`; Kievan Rus' 862 `[837, 887]`; Carolingian Empire 751 `[726, 776]`; Song 960 `[935, 985]`; Sui 581 `[556, 606]`; Goryeo 918 `[893, 943]`; Unified Silla 668; Khmer Empire 802; Đinh Dynasty 968; Early Lê 980; Ngô 939; Heian 794; Nara 710; Rise of Islam 610; HRE 800; France 987; England 927; Buyid 934; Saffarid 861; Tahirid 821; Fatimid 909; Chola 848; Harsha 606; Rashtrakuta 753; Western Chalukya 973; Uyghur Khaganate 744; Five Dynasties 907; Liao 907.
+**Should be:** `dated_by: calendar` with `bounds: [null, null]` for all of these. The Abbasid revolution, the Tang founding, Charlemagne's coronation and the Hijra-era caliphates are dated to the year (often the month) in contemporary or near-contemporary annals.
+**Confidence:** high
+**Why:** This is the mirror image of the Berlin Wall bug in the brief — false uncertainty on precisely known dates. A reader is told the Tang could have begun in 593, which no historian has ever proposed. It appears to be a blanket ±25 applied wherever `dated_by` was left as `unknown`.
+
+=== #61 [review-findings-polities.md]
+### PATTERN-2 — The Anatolia and Arabia blocks file kingdoms as `era`
+**Field:** `kind`
+**Currently:** Lydia, Mitanni, Urartu, Phrygia, Neo-Hittite States, The Hittites, Dilmun, The Nabataeans, Saba are all `era`. So are Aq Qoyunlu and Qara Qoyunlu in Iran.
+**Should be:** `polity` for all of them (Neo-Hittite States is a set of polities, so `era` is at least arguable; the rest are not).
+**Confidence:** high
+**Why:** Every one of these had a king, a capital and a chancery. Urartu fought Assyria as a state; Lydia's Mermnad dynasty is a king-list; Saba's mukarribs built the Marib dam. These are the clearest kind errors in the file and they cluster, which suggests one authoring pass mislabelled the whole region.
+
+=== #62 [review-findings-polities.md]
+### PATTERN-3 — Regional `Prehistory` containers start at wildly inconsistent points, and several start after their own children
+**Field:** `start`
+**Currently:** African Prehistory −3,298,050; European Prehistory −453,050; Central Asian −298,050; Oceanian −73,050; Southeast Asian −44,050; Americas −34,050; West Asian −13,000; South Asian −8,950; East Asian −14,000.
+**Should be:** a stated rule, applied consistently — either "earliest hominin presence in the region" or "earliest anatomically modern human presence". Under any rule West Asia (−13,000), South Asia (−8,950) and East Asia (−14,000) are wrong by hundreds of thousands of years: West Asia has Ubeidiya at c. 1.5 Ma, South Asia has Attirampakkam, East Asia has Zhoukoudian.
+**Confidence:** high
+**Why:** Two of them are self-contradicting: `west-asia.prehistory` starts −13,000 but contains Epipalaeolithic (Levant) at −23,000; `east-asia.prehistory` ends −300 but Late Pleistocene China, in the same tree, starts −40,000. European Prehistory at −453,050 also postdates Atapuerca and Happisburgh by several hundred thousand years.
+
+=== #63 [review-findings-polities.md]
+### europe.reformation
+**Field:** `kind`
+**Currently:** `polity`, "The Reformation", 1517–1648.
+**Should be:** `era`.
+**Confidence:** high
+**Why:** A religious movement has no government. This is the single worst kind error in the file — nothing about the Reformation resembles a state, and its own summary describes an upheaval, not a polity.
+
+=== #64 [review-findings-polities.md]
+### west-asia.arabia.rise-islam
+**Field:** `kind`
+**Currently:** `polity`, "Rise of Islam", 610–632.
+**Should be:** `era` (the span of Muhammad's prophetic career). If a polity is wanted here it is the Medinan community/state from 622, which is a different entity with different dates.
+**Confidence:** high
+**Why:** The summary itself says "Muhammad's prophetic career and the birth of Islam" — a period, not a state.
+
+=== #65 [review-findings-polities.md]
+### west-asia.anatolia.hittites.hittite-collapse
+**Field:** `kind`
+**Currently:** `polity`, "Collapse of the Hittite Empire", −1200 to −1180.
+**Should be:** an event, or failing that `era`.
+**Confidence:** high
+**Why:** A collapse is not a thing with a government. Note also that a polity kind here makes the Hittite tree read as "empire contains two states, one of which is its own destruction".
+
+=== #66 [review-findings-polities.md]
+### europe.mediterranean.greece and europe.mediterranean.greece.classical
+**Field:** `kind`
+**Currently:** both `polity` — "Ancient Greece" −3200 to −146, "Classical Greece" −480 to −323.
+**Should be:** `era` for both, exactly as Ancient Rome and Ancient Egypt are handled.
+**Confidence:** high
+**Why:** Ancient Greece never had a government; that is the defining fact about it. Filing it as a polity while Ancient Rome is an era is also internally inconsistent. The states belong beneath it (Athens, Sparta, Macedon — Macedon is currently a sibling, not a child).
+
+=== #67 [review-findings-polities.md]
+### europe.western.britain.victorian
+**Field:** `kind`, `under`
+**Currently:** `polity`, "Victorian Britain", 1837–1901, under England (Medieval to Modern).
+**Should be:** `era`, and placed as a sibling of The Georgian Era.
+**Confidence:** high
+**Why:** The Georgian Era, the same kind of thing, is correctly an `era` in this file — and sits under Western Europe rather than under England, so the two are inconsistent in both fields. The polity through 1837–1901 is the United Kingdom.
+
+=== #68 [review-findings-polities.md]
+### south-asia.independence.india-prime-ministers, south-asia.independence.pakistan-leaders
+**Field:** `kind`
+**Currently:** `polity` — "Prime Ministers of India", "Leaders of Pakistan".
+**Should be:** not polities at all; these are office/person lists. Their children (reigns) should hang off the Republic of India and Pakistan as states.
+**Confidence:** high
+**Why:** An office-holder list has no span of its own and no government; it is a container. A reader looking for "India" will not find a polity for it.
+
+=== #69 [review-findings-polities.md]
+### south-asia.independence
+**Field:** `kind`
+**Currently:** `polity`, "Post-Independence South Asia", 1947–present.
+**Should be:** `era`, or a region node. Also carries Gandhi (1915–1948), Jinnah (1913–1948), Ambedkar (1927–1956) and Subhas Bose (1938–1945) as children, all of whom largely predate 1947.
+**Confidence:** high
+**Why:** "Post-Independence South Asia" is a period label covering several sovereign states; it is not one state. The four independence-era figures filed under a 1947-start node are misplaced by their own dates.
+
+=== #70 [review-findings-polities.md]
+### global.multi-regional
+**Field:** `kind`, `start`/`end`
+**Currently:** `polity`, "Multi-Regional Empires", −550 to 1997.
+**Should be:** a grouping/category node, not a polity. Its own summary says "Polities that held territory in more than one world region, gathered so they can be compared".
+**Confidence:** high
+**Why:** A polity spanning 2,547 years and containing the Abbasids, the Ottomans and Decolonization is a shelf, not a state.
+
+=== #71 [review-findings-polities.md]
+### central-asia.qara-khitai
+**Field:** `kind`
+**Currently:** `era`, "Qara Khitai", 1124–1218.
+**Should be:** `polity`. The Western Liao was a dynastic state with gurkhans, a capital at Balasagun and Chinese-style administration.
+**Confidence:** high
+
+=== #72 [review-findings-polities.md]
+### east-asia.china.western-xia
+**Field:** `kind`
+**Currently:** `era`, "Western Xia", 1038–1227.
+**Should be:** `polity`. A Tangut empire with emperors, its own script and a bureaucracy; it is an era here apparently only because it lacks an official dynastic history.
+**Confidence:** high
+
+=== #73 [review-findings-polities.md]
+### europe.northern.kalmar
+**Field:** `kind`
+**Currently:** `era`, "Kalmar Union", 1397–1523.
+**Should be:** `polity` — a personal union of three kingdoms under one monarch, which is a government.
+**Confidence:** high
+
+=== #74 [review-findings-polities.md]
+### southeast-asia.mainland.lan-xang
+**Field:** `kind`
+**Currently:** `era`, "Lan Xang", 1353–1707.
+**Should be:** `polity`. Its own summary calls it a "Lao kingdom" with successor kingdoms.
+**Confidence:** high
+
+=== #75 [review-findings-polities.md]
+### southeast-asia.maritime.tondo
+**Field:** `kind`
+**Currently:** `era`, "Tondo", 900–1589.
+**Should be:** `polity`. The summary literally opens "Polity on Manila Bay".
+**Confidence:** high
+
+=== #76 [review-findings-polities.md]
+### southeast-asia.maritime.kahuripan
+**Field:** `kind`
+**Currently:** `era`, "Kahuripan", 1019–1045.
+**Should be:** `polity` — Airlangga's kingdom, partitioned between his heirs.
+**Confidence:** high
+
+=== #77 [review-findings-polities.md]
+### central-asia.hephthalites
+**Field:** `kind`, `historicity`
+**Currently:** `era`, `historicity: contested`, 440–560.
+**Should be:** `polity`, historicity absent (accepted).
+**Confidence:** high
+**Why:** The Hephthalites are attested in Sasanian, Chinese, Indian and Byzantine sources, they minted coins, and they killed a Sasanian shah (Peroz I) in battle. What is contested is their ethno-linguistic origin and internal structure, not their existence. Marking them contested tells the reader they may not have happened.
+
+=== #78 [review-findings-polities.md]
+### west-asia.iran.aq-qoyunlu, west-asia.iran.qara-qoyunlu
+**Field:** `kind`
+**Currently:** `era`.
+**Should be:** `polity`. Both are Turkoman dynastic confederations with rulers, coinage and capitals (Tabriz, Diyarbakır) — the same category as the Safavids who replaced them and who are correctly a polity.
+**Confidence:** high
+
+=== #79 [review-findings-polities.md]
+### oceania.polynesia.new-zealand
+**Field:** `kind`
+**Currently:** `era`, "New Zealand (post-Waitangi)", 1840–present.
+**Should be:** `polity`. New Zealand is a state, and Commonwealth of Australia in the same block is correctly a polity.
+**Confidence:** high
+
+=== #80 [review-findings-polities.md]
+### central-asia.sogdia
+**Field:** `kind`, `historicity`
+**Currently:** `era`, `historicity: contested`, −500 to 750.
+**Should be:** `culture` or a region node; historicity absent.
+**Confidence:** high
+**Why:** Sogdiana is documented in Achaemenid inscriptions, Greek historians, Chinese annals and thousands of Sogdian-language documents; nothing about it is contested in the historicity sense. The summary's real point — "never politically unified" — is the `culture` case, not the `contested` case.
+
+=== #81 [review-findings-polities.md]
+### southeast-asia.mainland.dvaravati
+**Field:** `kind`, `historicity`
+**Currently:** `era`, `historicity: contested`, 600–1100.
+**Should be:** `culture`, historicity absent.
+**Confidence:** high
+**Why:** This is the textbook `culture` case as the brief defines it — a material horizon (Mon Buddhist art, stupas, coins reading *śrīdvāravatī*) whose political unity is the open question. Its existence as a culture is not contested; `contested` here misreads the debate.
+
+=== #82 [review-findings-polities.md]
+### global.bce, global.ce
+**Field:** `kind`, `start`/`end`, `historicity`
+**Currently:** `era`; BCE = −3500 to −1 with bounds `[-3700, -3300]`; CE = 1 to present with bounds `[-24, 26]`; both `historicity: interpretive`.
+**Should be:** not eras at all — they are calendar conventions. If retained, BCE cannot start at 3500 BCE (it covers every year before 1), and CE cannot have ±25 bounds on year 1, which is a definitional boundary, not a measurement.
+**Confidence:** high
+**Why:** ±200 years of uncertainty on the start of "BCE" and ±25 on the start of "CE" are meaningless, and `historicity: interpretive` on a numbering scheme misuses the field.
+
+---
+
+## Dates and spans
+
+=== #83 [review-findings-polities.md]
+### east-asia.china.yuan
+**Field:** `end`
+**Currently:** 1271–1370.
+**Should be:** 1368 (Ming capture of Dadu / Toghon Temür's flight). 1370 is his death in Mongolia, by which point the regime is the Northern Yuan.
+**Confidence:** high
+**Why:** The Ming entry starts 1368, so the file simultaneously has the Yuan and the Ming ruling China for two years, with no note explaining it.
+
+=== #84 [review-findings-polities.md]
+### africa.nile.egypt.middle-kingdom.dyn11
+**Field:** `start`
+**Currently:** "11th Dynasty (reunified)", −2125 to −1985, filed under Middle Kingdom (−2055 to −1650).
+**Should be:** −2055 for the reunified phase. −2125 is the start of the whole Theban 11th Dynasty, most of which falls in the First Intermediate Period.
+**Confidence:** high
+**Why:** The name says "reunified" but the dates are the unreunified dynasty's, so the child begins 70 years before the era containing it.
+
+=== #85 [review-findings-polities.md]
+### west-asia.prehistory
+**Field:** `start`
+**Currently:** −13,000, containing Epipalaeolithic (Levant) at −23,000.
+**Should be:** far earlier (Lower Palaeolithic; Ubeidiya c. 1.5 Ma) if it means the region's prehistory, or renamed to what it actually covers ("West Asian Neolithisation").
+**Confidence:** high
+**Why:** A container that begins 10,000 years after its own first child.
+
+=== #86 [review-findings-polities.md]
+### east-asia.prehistory
+**Field:** `start`, `end`, `summary`
+**Currently:** −14,000 to −300, summary "Jomon Japan and the Chinese Neolithic, gathered here for browsing".
+**Should be:** at minimum start before Late Pleistocene China (−40,000), which sits in the same tree; the end at −300 is the end of Jōmon and has nothing to do with China, whose prehistory ends c. −1600.
+**Confidence:** high
+**Why:** The span is Japan's, applied to all of East Asia.
+
+=== #87 [review-findings-polities.md]
+### americas.north.haudenosaunee
+**Field:** `bounds`
+**Currently:** 1450–present, bounds `[1450, 1450]`, `dated_by: typological`, `date_standing: majority`.
+**Should be:** wide bounds. The founding date of the Confederacy is one of the most genuinely disputed dates in North American history — proposals run from 1142 (Mann/Fields, from the eclipse tradition) through c. 1450 to c. 1600, and Haudenosaunee oral tradition places it much earlier than the archaeological reading.
+**Confidence:** high
+**Why:** Zero-width bounds assert certainty on precisely the date nobody can fix, and `majority` standing overstates it.
+
+=== #88 [review-findings-polities.md]
+### southeast-asia.mainland.vietnam
+**Field:** `aliases`
+**Currently:** `["Đại Việt", "Đại Cồ Việt", "Đại Ngu", "Đại Việt, 939-1804"]`
+**Should be:** drop the fourth entry — an alias with a date range embedded in it is malformed and duplicates the first.
+**Confidence:** high (that it is wrong as data), low importance
+
+=== #89 [review-findings-periods.md]
+### P1. Fabricated ±25-year uncertainty on nengō whose dates are documentary
+
+**Field:** `bounds` and `dated_by`
+**Currently:** 51 nengō rows have `dated_by: unknown` and `bounds` of exactly start−25 / start+25.
+**Should be:** `bounds: [null, null]`, `dated_by: calendar` — as the other 197 Japanese rows
+already correctly have.
+**Confidence:** high
+**Why:** Era changes are recorded to the day in the *Shoku Nihongi*, *Nihon Kiryaku* and the
+kugyō registers. Saying Wadō began somewhere in 683–733 is not caution, it is misinformation: the
+proclamation is dated Wadō 1/1/11. The split is also arbitrary — Chōgen (1028) onward is already
+`calendar` with null bounds, so the file contradicts itself about the same class of fact.
+
+Violating ids: `east-asia.japan.asuka.hakuchi`, `.keiun`, `.shucho`, `.taiho`, `.taika`;
+`east-asia.japan.nara.enryaku`, `.hoki`, `.jingo-keiun`, `.jinki`, `.reiki`, `.ten-o`, `.tenpyo`,
+`.tenpyo-hoji`, `.tenpyo-jingo`, `.tenpyo-kanpo`, `.tenpyo-shoho`, `.wado`, `.yoro`;
+`east-asia.japan.heian.anna`, `.choho-heian`, `.chotoku`, `.daido`, `.eien`, `.eikan`, `.eiso`,
+`.encho`, `.engi`, `.gangyo`, `.jogan`, `.jogen-heian1`, `.johei`, `.jowa-heian`, `.kanna`,
+`.kanpyo-heian`, `.kasho-heian`, `.koho`, `.konin`, `.ninju`, `.ninna`, `.owa`, `.saiko`,
+`.shoryaku`, `.shotai`, `.ten-an`, `.ten-en`, `.tencho`, `.tengen`, `.tengyo`, `.tenroku`,
+`.tenryaku`, `.tentoku`.
+
+Two sub-cases are especially bad: `east-asia.japan.nara.tenpyo-kanpo` is a **three-month** era
+(749/4–749/7), given a fifty-year window; and `east-asia.japan.asuka.shucho` is a **single-year**
+era (686) given 661–711.
+
+=== #90 [review-findings-periods.md]
+### P2. The same fabricated window on non-Japanese dates that are equally exact
+
+**Confidence:** high
+**Why:** `east-asia.china.han.xin` (9–23 CE, Wang Mang) carries `bounds: [-16, 34]` — a window
+that crosses the BC/AD boundary for a usurpation dated to the day in the *Han shu*. The Phoenician
+sub-periods are pinned to events with absolute dates: 883 BC (Ashurnasirpal II's accession),
+612 BC (fall of Nineveh), 539 BC (Cyrus takes Babylon), 332 BC (Alexander at Tyre); all four carry
+±25 or ±50 and `dated_by: unknown`. `europe.western.france.capetian` starts 987, the election of
+Hugh Capet, and carries 962–1012.
+
+Violating ids: `east-asia.china.han.xin`, `west-asia.mesopotamia.phoenicia.assyrian-period`,
+`.babylonian-period`, `.persian-period`, `europe.western.france.capetian`.
+
+=== #91 [review-findings-periods.md]
+### P4. Bare nengō with nothing attached
+
+**Confidence:** high that this is a real defect, medium that it belongs in this review
+**Why:** 218 of the 248 Japanese era rows have a null summary, no aliases, no ruler, and no
+`historicity`. A reader arriving at `east-asia.japan.heian.kaho` learns that Kahō ran 1094–1097 and
+nothing else — not which emperor, not why the era was changed, not that the name is a Chinese-classic
+allusion. The brief's exception applies: an era-name row whose only content is two years only makes
+sense alongside the reign it dates. This matches the prior audit's 256-of-312 finding. Not a
+hundred separate findings, one structural one.
+
+=== #92 [review-findings-periods.md]
+### east-asia.japan.kenmu.kenmu-era
+**Field:** `end`
+**Currently:** Kenmu 1334 → 1336
+**Should be:** 1338, or the row should be split into a Southern usage (1334–1336) and a Northern
+usage (1334–1338)
+**Confidence:** high
+**Why:** The Southern court abandoned Kenmu for Engen in 1336, but the Northern court kept counting
+Kenmu until Ryakuō in 1338. As it stands the Northern chain has a two-year hole: Kenmu ends 1336 and
+`east-asia.japan.muromachi.ryakuo` starts 1338, with nothing in between. This is the one genuine gap
+in the whole Japanese sequence.
+
+=== #93 [review-findings-periods.md]
+### east-asia.japan.muromachi.shokei
+**Field:** `under`
+**Currently:** Shōkei 1332–1333, filed under Muromachi Period
+**Should be:** under Kamakura, alongside `east-asia.japan.kamakura.genko-kamakura2`
+**Confidence:** high
+**Why:** Shōkei is the Jimyōin-line era proclaimed against Go-Daigo's Genkō and ended when Kamakura
+fell in 1333. It sits entirely three years before the Muromachi period begins in 1336. A period
+cannot precede its own parent.
+
+=== #94 [review-findings-periods.md]
+### east-asia.china.neolithic.cishan
+**Field:** `summary`
+**Currently:** "…whose storage pits produced the claim that cereal farming here began at the
+Pleistocene boundary."
+**Should be:** early Holocene, or "ten thousand years ago"
+**Confidence:** high
+**Why:** The Pleistocene ends at 11,700 BP, c. 9700 BC. The Cishan millet claim is c. 10,000 BP
+(8000 BC) and the row itself dates the culture to 6050–5050 BC. The summary overstates by roughly
+two millennia at best, and mislabels the epoch.
+
+=== #95 [review-findings-periods.md]
+### global.neolithic.agricultural-revolution.mesoamerica
+**Field:** `summary`
+**Currently:** "the squash predates maize by over four thousand years"
+**Should be:** roughly a thousand years
+**Confidence:** high
+**Why:** Domesticated *Cucurbita pepo* at Guilá Naquitz is c. 10,000 BP; the Balsas maize evidence is
+c. 9,000 BP. The gap is on the order of one millennium, not four. The row's own span (−8051 to
+−4301) does not accommodate a four-thousand-year internal gap either.
+
+=== #96 [review-findings-periods.md]
+### global.paleolithic.later-stone-age
+**Field:** `end` (or `summary`)
+**Currently:** end −10050, summary "continues into the historical period"
+**Should be:** an end in the last two thousand years, or `null`
+**Confidence:** high
+**Why:** The row contradicts itself in adjacent fields. LSA industries continue to the ethnographic
+present in parts of southern and eastern Africa; ending at 10,050 BC cuts off nine tenths of the
+tradition the summary describes.
+
+=== #97 [review-findings-periods.md]
+### americas.andes.inca.machu-picchu
+**Field:** `bounds`
+**Currently:** `[1450, 1450]`
+**Should be:** `[null, null]`, or a real interval such as 1420–1450
+**Confidence:** high
+**Why:** A zero-width uncertainty interval is not an uncertainty statement. The AMS programme on the
+site gives an occupation from c. 1420, i.e. the start is *less* certain than the point value, not
+infinitely certain.
+
+=== #98 [review-findings-periods.md]
+### africa.prehistory.nabta-playa.terminal-neolithic
+**Field:** `end` vs parent
+**Currently:** Terminal Neolithic ends −3451; parent Nabta Playa ends −4251
+**Should be:** extend the parent to c. −3450
+**Confidence:** high
+**Why:** A sub-phase running eight centuries past the end of the site it belongs to. One of the two
+is wrong and the sub-phase sequence (middle → late → terminal, 6151→3451) is internally consistent,
+so the parent's end is the error.
+
+=== #99 [review-findings-periods.md]
+### southeast-asia.prehistory.yangtze-rice
+**Field:** `under`
+**Currently:** Southeast Asian Prehistory
+**Should be:** East Asia (China), or merged with
+`global.neolithic.agricultural-revolution.yangtze`
+**Confidence:** high
+**Why:** The lower Yangtze is in China. The file already has the same process filed correctly under
+the global Neolithic node with a different span (−8051 to −2351 there, −10550 to −5051 here), so
+this is both a misplacement and a duplicate with inconsistent dates.
+
+=== #100 [review-findings-concepts.md]
+### P1. Thresholds carry zero uncertainty where they need the most
+**Field:** `bounds`
+**Currently:** 24 of the 26 `global.prehistory.firsts.*` thresholds have `bounds[1] = null` and
+`bounds[0]` either equal to `start` or a token 1,000 years below it. So `cooking` is
+`-778000` with `bounds [-779000, null]` — plus-or-minus five hundred years on an 800,000-year-old
+event — and `butchery`, `cut-marks`, `cereal-farming`, `pottery`, `dog`, `irrigation`, `wheel`,
+`writing`, `chicken`, `fermented-drink`, `spun-fibre`, `woven-cloth`, `horse-domestication`,
+`artificial-mummification` and `figurative-art` have `bounds[0] == start` exactly, i.e. no
+uncertainty at all.
+**Should be:** every earliest-known-occurrence date needs a real two-sided interval, and for
+Pleistocene thresholds the interval should be a visible fraction of the age (tens of thousands of
+years at 300–800 ka, not hundreds).
+**Confidence:** high
+**Why:** This is the exact failure mode the brief warns about, inverted: the Berlin Wall got a
+century it did not need, and these get a decade they cannot possibly have. A reader sees
+`-778000 ± 500` and concludes the date of the first cooked meal is known to within a human lifetime.
+
+=== #101 [review-findings-concepts.md]
+### P2. `date_standing: consensus` used on thresholds that rest on one contested site
+**Field:** `date_standing`
+**Currently:** `consensus` on `cooking`, `figurative-art`, `pigment-use`, `spun-fibre`,
+`stone-knapping`, `wood-structure`, `woven-cloth`, `pottery`.
+**Should be:** `majority` or `minority` for most of these; see individual entries below.
+**Confidence:** high
+**Why:** Each of these is a single-site, single-team claim published in the last fifteen years and
+argued about since. `consensus` is the strongest label the schema has and it is being spent on the
+least settled dates in the file.
+
+=== #102 [review-findings-concepts.md]
+### P3. `dated_by: first-attestation` used where nothing is attested
+**Field:** `dated_by`
+**Currently:** all 13 `people` entries and all 18 `tradition` entries are `first-attestation`,
+including `oceania.peoples-aboriginal-australians` (65,000 BCE), `africa.peoples-bantu-peoples`
+(3000 BCE), `europe.peoples-sami` (1000 BCE), `global.traditions.hinduism` (1500 BCE) and
+`global.traditions.zoroastrianism` (1200 BCE).
+**Should be:** `luminescence`/`radiocarbon-calibrated` for the archaeological ones,
+`glottochronology` for the linguistic ones, `received` for the traditional founding dates
+(Buddha's death, Zarathustra, the Vedas). None of these dates comes from a first attestation:
+Aboriginal Australians are dated by OSL at Madjedbebe, the Sami are first *attested* by Tacitus in
+98 CE, and Zoroastrianism is first attested under the Achaemenids.
+**Confidence:** high
+**Why:** `first-attestation` tells a reader a text or inscription exists at that date. For a 65,000
+BCE date that is a straightforwardly false statement about the evidence.
+
+=== #103 [review-findings-concepts.md]
+### P5. Taxon dates carry a −050 artefact and false precision
+**Field:** `start` / `end`
+**Currently:** `-193050`, `-855050`, `-1888050`, `-2398050`, `-398050`, `-333050`, `-144050`,
+`-132050`, `-98050`, `-1898050`. Meanwhile `homo-erectus.end` is `-108000`, `homo-sapiens.start` is
+`-310000` and `homo-heidelbergensis.start` is `-700000` — round.
+**Should be:** consistent rounding. The `-050` is a BP→BCE conversion residue (1950 offset) and
+presents Middle Pleistocene ages as accurate to the decade.
+**Confidence:** high
+**Why:** `-2398050` for the first appearance of *Homo habilis* claims ten-year precision on a
+2.4-million-year-old date. A reader cannot tell it is an artefact.
+
+---
+
+## Thresholds
+
+=== #104 [review-findings-concepts.md]
+### global.prehistory.firsts.cut-marks
+**Field:** `summary`
+**Currently:** "roughly 800,000 years before the oldest known stone tools"
+**Should be:** roughly 90,000 years before — or the sentence should name the Oldowan explicitly.
+**Confidence:** high
+**Why:** This file's own `stone-knapping` entry puts the oldest stone tools at 3,300,000 BCE and
+Dikika at 3,390,000. The 800,000-year gap only works against the 2.6 Ma Oldowan, so the two entries
+contradict each other in the same section.
+
+=== #105 [review-findings-concepts.md]
+### global.prehistory.firsts.stone-knapping
+**Field:** `date_standing`
+**Currently:** `consensus`, with the Lomekwian at 3.3 Ma treated as the point "where human
+prehistory begins"
+**Should be:** `minority`, or `majority` at most
+**Confidence:** high
+**Why:** Lomekwi 3 is actively disputed — the stratigraphic context and the anthropic origin of the
+flakes have both been challenged, and the securely accepted earliest knapping remains Ledi-Geraru /
+Gona at 2.6–2.9 Ma. Making the contested date both `consensus` and a structural anchor for the whole
+app compounds the error.
+
+=== #106 [review-findings-concepts.md]
+### global.prehistory.firsts.cooking
+**Field:** `date_standing` and `bounds`
+**Currently:** `-778000`, `bounds [-779000, -778000]`, `consensus`
+**Should be:** `minority` or `majority`, with bounds of at least ±20,000
+**Confidence:** high
+**Why:** The Gesher Benot Ya'aqov fish-tooth evidence is a 2022 single-site inference, and the
+earliest-cooking question is one of the loudest open arguments in palaeoanthropology (Wrangham puts
+it near 1.8 Ma, sceptics well after 400 ka). `consensus` with a 1,000-year window is the opposite of
+the state of the field.
+
+=== #107 [review-findings-concepts.md]
+### global.milestones.iron-smelting
+**Field:** `summary`
+**Currently:** "Hittite-era bloomery iron" at −1900
+**Should be:** pre-Hittite Anatolian, or the date should move to c. −1500
+**Confidence:** high
+**Why:** The Hittite Old Kingdom begins c. 1650 BCE. A 1900 BCE date sits in the Old Assyrian
+colony period, two and a half centuries before any Hittite state — the entry's date and its
+explanation cannot both be right.
+
+=== #108 [review-findings-concepts.md]
+### west-asia.iran.arab-conquest
+**Field:** `bounds`
+**Currently:** `start 633`, `end 651`, `bounds [608, 658]`
+**Should be:** `[null, null]`
+**Confidence:** high
+**Why:** The lower bound is twenty-five years before the start, i.e. before Muhammad's mission
+began — a ±25 leftover applied to a date fixed by narrative sources. It implies the conquest of Iran
+might have started in the reign of Khosrow II. `dated_by: unknown` is also wrong for a
+well-documented seventh-century campaign.
+
+=== #109 [review-findings-concepts.md]
+### west-asia.anatolia.hittites.sack-of-babylon
+**Field:** `bounds` / `dated_by`
+**Currently:** `-1595`, `bounds [null, null]`, `dated_by: calendar`, `date_standing: majority`
+**Should be:** wide bounds (roughly −1660 to −1500), `dated_by: received` or `typological`
+**Confidence:** high
+**Why:** The entry's own summary says the date is "the hinge the whole Bronze Age chronology turns
+on" — and then gives it no uncertainty at all. 1595 is the Middle Chronology figure; the High, Low
+and Ultra-Low chronologies put it 64, 96 or 120 years apart. This is the one date in the file that
+most needs bounds and has none.
+
+=== #110 [review-findings-concepts.md]
+### global.languages.avestan
+**Field:** `dated_by`
+**Currently:** `first-attestation`, start −1200
+**Should be:** `received` or `typological`
+**Confidence:** high
+**Why:** The entry's own summary says Avestan was "preserved orally for centuries before it was
+written" — the manuscripts are first millennium CE. A 1200 BCE first attestation is contradicted by
+the same row.
+
+=== #111 [review-findings-concepts.md]
+### global.prehistory.hominins.homo-luzonensis
+**Field:** `start`
+**Currently:** `-132050`, `end: null`
+**Should be:** roughly −65,000 to −48,000
+**Confidence:** high
+**Why:** The Callao Cave *H. luzonensis* material is dated to 67,000 and 50,000 years ago by
+uranium-series. A 134,000-year first appearance is roughly twice the published age, and the null end
+implies the taxon never ended.
+
+=== #112 [review-findings-concepts.md]
+### global.traditions.great-schism
+**Field:** `kind` (and `extant`, `bounds`)
+**Currently:** `kind: tradition`, `extant: true`, `end: null`, `bounds [1049, 1059]`
+**Should be:** `kind: event`, `start 1054`, `end 1054`, `bounds [null, null]`, `extant: null`
+**Confidence:** high
+**Why:** The Great Schism is not a religion, philosophy or school — it is a dated event, filed under
+the intended meaning of `tradition` by mistake. It is also marked as currently extant with no end,
+and given a ±5-year window on 16 July 1054, a date known to the day.
+
+=== #113 [review-findings-concepts.md]
+### oceania.peoples-aboriginal-australians
+**Field:** `dated_by`
+**Currently:** `first-attestation` for −65000
+**Should be:** `luminescence`
+**Confidence:** high
+**Why:** The 65,000-year figure is the OSL date for the lowest artefact-bearing horizon at
+Madjedbebe, itself contested. Calling it a first attestation asserts a written record 65,000 years
+old.
+
+=== #114 [review-findings-concepts.md]
+### africa.peoples-amazigh
+**Field:** `aliases`
+**Currently:** `null`
+**Should be:** `["Berbers", "Imazighen", "Amazigh peoples"]`
+**Confidence:** high
+**Why:** "Berber" is overwhelmingly the name an English-language reader searches for. With no alias,
+this entity is effectively unreachable.
+

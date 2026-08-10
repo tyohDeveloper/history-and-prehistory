@@ -32,7 +32,10 @@ describe("dataset envelope", () => {
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(3301);
+    // 3,301 -> 5,507. The modern era was almost absent: 69 entities began in the nineteenth
+    // century and 71 in the twentieth, worldwide, and the entire United States subtree was two
+    // rows. 2,241 were authored and 215 dropped as duplicates during reconciliation.
+    expect(entities.length).toBe(5507);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -122,7 +125,7 @@ describe("gap-analysis baseline", () => {
     // populated endpoint, and bounds are required unless the method is `calendar` (an
     // attested year is not an estimate) or `received` (a traditional figure is the
     // tradition's claim, not a measurement).
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(3255);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(5461);
         // 1,036, down from 1,700. The drop is the fix, not a regression: 664 entities dated after
     // 1000 CE had been given plus-or-minus a century by a convention that keyed on abs(year) and
     // so treated 1989 CE like 1989 BCE. The Fall of the Berlin Wall read 1889 to 2089.
@@ -147,7 +150,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(2517);
+    expect(withEnd.length).toBe(4385);
 
     // The differing set was a hand-listed dozen and is now 233, which is the property working
     // rather than breaking: a city founded in prehistory and abandoned in the documentary era

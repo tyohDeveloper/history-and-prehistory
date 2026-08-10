@@ -1,6 +1,6 @@
 {
-  "gzipBytes": 465728,
+  "gzipBytes": 608960,
   "recordedAt": "2026-08-10",
   "note": "v3.33.1.0 Three Sovereigns, inclusion-over-citation policy (data 0.34.1.0). Measured with zlib.gzipSync.",
-  "reason": "Raised for 1,433 cities. Kyoto and Athens were reported missing from use, and the dataset held five cities against 1,504 enumerated -- Byblos and Tyre had been filed as eras and Tenochtitlan as a period, so cities barely existed as a category. The entity count goes from 1,868 to 3,301 and costs about 100 kB gzipped, which for an offline single-file reference is the right trade."
+  "reason": "Raised for the modern era, which the dataset had almost entirely skipped. 69 entities began in the nineteenth century and 71 in the twentieth, worldwide, and the whole United States subtree was two rows -- itself and the Civil War -- while India had ten prime ministers listed and Britain none. 2,241 rows were authored and 215 dropped in reconciliation, taking the corpus from 3,301 to 5,507 at a cost of about 140 kB gzipped. Deleting the fabricated uncertainty gave some of that back."
 }

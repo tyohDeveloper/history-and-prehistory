@@ -2008,16 +2008,34 @@ print(
 # "Roman" indexed nowhere, which is the bug this was meant to fix.
 _new_kinds(E, entities)
 _author_cities(E, entities)
+# Also before normalisation, for the same reason: these are new entities, and the canonical form
+# of their ids has to be settled before anything references them.
+from author_modern import extend as _author_modern
+_author_modern(E, entities)
+# Immediately after, and still before normalisation: rule 9 compares people by overlapping dates
+# rather than by name, and caught 24 tenures the merge's string comparison could not see.
+from modern_dedupe import extend as _modern_dedupe
+_modern_dedupe(E, entities)
+from modern_dedupe import reparent_anachronisms as _reparent_anachronisms, \
+    resolve_collisions as _resolve_collisions
+from modern_dedupe import reparent_off_places as _reparent_off_places
+_reparent_off_places(E, entities)
+_reparent_anachronisms(E, entities)
 
 # Immediately after the last module that authors entities, and before every module that
 # REFERENCES one by id. Running it last meant polity_split was matching against pre-normalisation
 # ids -- it looked for `ur-iii` while the entity was still `ur3` -- so a correct id list failed.
 # Canonicalise once, then let everything downstream use the canonical form.
 _ID_REDIRECTS = _normalize_ids(E, entities) or {}
+# AFTER normalisation, because it names entities by id and the seed carried `william1` where the
+# canonical form is `william-i`. Placed before it, the lookup silently matched nothing and the
+# duplicate survived -- the same ordering mistake this file already documents twice above.
+_resolve_collisions(E, entities)
+from modern_dedupe import resolve_cross_tree_names as _resolve_cross_tree
+_resolve_cross_tree(E, entities)
 # After new_kinds, so names introduced there are checked for collisions too.
 _name_repair(E, entities)
 _migrate_dating(E, entities)
-_derive_links(E, entities)
 _historicity(E, entities)
 _search_phrases(E, entities)
 _polity_split(E, entities)
@@ -2025,6 +2043,18 @@ _contemporary_placement(E, entities)
 _review_triage(E, entities)
 _review_dating(E, entities)
 _drop_derived_bounds(E, entities)
+
+# Last of the correction modules, and after normalisation, because every patch names an entity
+# by id.
+from apply_corrections import extend as _apply_corrections
+_apply_corrections(E, entities)
+from apply_corrections import flag_overruns as _flag_overruns
+_flag_overruns(E, entities)
+
+# Link derivation runs AFTER the corrections, because it reads dates to decide what succeeds what.
+# Placed before them, it derived a succession from Lamphun at 600 BCE and the correction then moved
+# Lamphun to 750 CE, leaving a link asserting abutment across thirteen centuries.
+_derive_links(E, entities)
 
 # Aliases are derived from name_forms LAST, because several later modules add name forms and
 # this has now been got wrong in both directions: running it before name_repair left the

@@ -1270,9 +1270,16 @@ function renderContext(): HTMLElement | null {
     return box;
   }
 
-  const neighbours = contextNeighbours(entities, focus, state.contextBudget, index);
-  const top = neighbours[0]?.score ?? 0;
-  const bottom = neighbours[neighbours.length - 1]?.score ?? top - 1;
+  const scored = contextNeighbours(entities, focus, state.contextBudget, index);
+  // Interest decides WHICH neighbours appear and how prominent each one is. It must not decide
+  // the order they are read in: a context panel is a timeline, and a timeline that is not in
+  // chronological order is just a list. The focus row sorts with everything else rather than
+  // being pinned, because seeing what came immediately before and after it is the whole point.
+  const top = scored[0]?.score ?? 0;
+  const bottom = scored[scored.length - 1]?.score ?? top - 1;
+  const neighbours = [...scored].sort(
+    (a, b) => (a.entity.start_year ?? 0) - (b.entity.start_year ?? 0),
+  );
   const list = el("div", { class: "context-body", role: "listbox", "data-testid": "list-context" });
 
   for (const n of neighbours) {

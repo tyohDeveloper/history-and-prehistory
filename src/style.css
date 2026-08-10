@@ -247,6 +247,28 @@ footer a { color: var(--ink-dim); }
   cursor: pointer;
 }
 .cal-picker-toggle:hover { border-color: var(--accent); }
+
+/* "In context" carried the class `toggle`, which was never given a rule, so it rendered as a raw
+   browser default button: a light box on a dark page that looked permanently pressed whichever
+   way the state actually sat. It now matches its siblings when off, and reads unmistakably as
+   pressed when on. */
+.toggle {
+  background: var(--panel-2);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 6px 9px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.toggle:hover { border-color: var(--accent); }
+.toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.toggle.is-on {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
 .cal-picker-toggle:focus-visible,
 .cal-option:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
@@ -293,7 +315,7 @@ footer a { color: var(--ink-dim); }
   margin: 0.35rem 0 0;
   font-size: 0.85rem;
   line-height: 1.45;
-  color: var(--muted, #666);
+  color: var(--ink-dim);
 }
 
 /* --- Focus+context lens -------------------------------------------------
@@ -327,14 +349,14 @@ footer a { color: var(--ink-dim); }
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--muted, #666);
+  color: var(--ink-dim);
   margin-bottom: 0.4rem;
 }
 
 .context-empty {
   margin: 0;
   font-size: 0.85rem;
-  color: var(--muted, #666);
+  color: var(--ink-dim);
 }
 
 .context-body { display: flex; flex-direction: column; }
@@ -346,28 +368,40 @@ footer a { color: var(--ink-dim); }
   align-items: baseline;
   cursor: pointer;
   border-radius: 4px;
-  /* The three effects move together so the falloff reads as one gradient. */
+  /* Size and weight still move together so the falloff reads as one gradient, but interest is
+     no longer expressed as opacity. At --doi 0 the old rule left text at 45% over a dark panel,
+     which is unreadable rather than merely de-emphasised. Ramping the colour between two inks the
+     theme actually defines keeps the least interesting row legible while still receding. */
   padding: calc(0.08rem + 0.20rem * var(--doi)) 0.4rem;
   font-size: calc(0.74rem + 0.20rem * var(--doi));
-  opacity: calc(0.45 + 0.55 * var(--doi));
+  color: color-mix(in oklab, var(--ink) calc(45% + 55% * var(--doi)), var(--ink-faint));
 }
 
 .context-row:hover {
-  background: var(--hover, #eee);
-  opacity: 1;
+  /* --hover was undefined and fell through to #eee. */
+  background: var(--panel-2);
+  color: var(--ink);
 }
+
+.context-row.is-focus:hover { background: var(--accent); color: var(--accent-ink); }
+
+/* The date sits in --ink-dim, which is tuned for a dark panel and disappears against the accent. */
+.context-row.is-focus .context-when,
+.context-row.is-focus .context-name::before { color: var(--accent-ink); }
 
 .context-row.is-focus {
   font-weight: 600;
-  background: var(--sel, #e8eefc);
-  opacity: 1;
+  /* --sel was never defined, so this fell through to #e8eefc: a near-white light-theme swatch
+     rendered behind light text on a dark panel. The accent already carries a matched ink. */
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
 /* A contemporary from another branch is the thing Miller columns can never
    show, so it is marked rather than left to blend in. */
 .context-row.is-elsewhere .context-name::before {
   content: "\2197\00a0";
-  color: var(--muted, #888);
+  color: var(--ink-dim);
 }
 
 .context-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -375,7 +409,7 @@ footer a { color: var(--ink-dim); }
 .context-when {
   flex: none;
   font-variant-numeric: tabular-nums;
-  color: var(--muted, #666);
+  color: var(--ink-dim);
   font-size: 0.72rem;
 }
 
@@ -385,7 +419,7 @@ footer a { color: var(--ink-dim); }
   gap: 0.5rem;
   margin-top: 0.5rem;
   font-size: 0.78rem;
-  color: var(--muted, #666);
+  color: var(--ink-dim);
 }
 
 .context-budget input { flex: 1; }

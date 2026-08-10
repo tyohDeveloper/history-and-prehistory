@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
   "dataset_version": "0.34.1.0",
-  "generated_at": "2026-08-10T18:12:02Z",
+  "generated_at": "2026-08-10T18:31:51Z",
   "entities": [
     {
       "id": "global",
@@ -20,10 +20,10 @@
           "note": "The earlier name, which invited world events and multi-region empires into the same bucket."
         }
       ],
+      "extant": true,
       "aliases": [
         "Global"
-      ],
-      "extant": true
+      ]
     },
     {
       "id": "europe",
@@ -256,10 +256,10 @@
         "europe",
         "west-asia"
       ],
+      "extant": true,
       "aliases": [
         "Persia"
-      ],
-      "extant": true
+      ]
     },
     {
       "id": "west-asia.arabia",
@@ -544,11 +544,11 @@
         "europe",
         "west-asia"
       ],
+      "extant": true,
       "aliases": [
         "Maghreb",
         "Barbary Coast"
-      ],
-      "extant": true
+      ]
     },
     {
       "id": "africa.west",
@@ -787,15 +787,15 @@
           "lang": "en-GB"
         }
       ],
-      "aliases": [
-        "Old Stone Age",
-        "Palaeolithic"
-      ],
       "start_year_min": -3366000,
       "start_year_max": -3234000,
       "end_dating_method": "unknown",
       "end_year_min": -11000,
-      "end_year_max": -9000
+      "end_year_max": -9000,
+      "aliases": [
+        "Old Stone Age",
+        "Palaeolithic"
+      ]
     },
     {
       "id": "global.mesolithic",
@@ -865,15 +865,15 @@
         }
       ],
       "end_dating_method": "radiocarbon-calibrated",
-      "aliases": [
-        "New Stone Age"
-      ],
       "start_year_min": -11000,
       "start_year_max": -9000,
       "end_year_min": -3500,
       "end_year_max": -3100,
       "date_standing": "consensus",
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "aliases": [
+        "New Stone Age"
+      ]
     },
     {
       "id": "global.bronze-age",
@@ -2540,9 +2540,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Ptolemaic"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": -357,
       "start_year_max": -307,
@@ -2561,6 +2558,9 @@
           "entity_id": "africa.nile.egypt.late-period",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Ptolemaic"
       ]
     },
     {
@@ -11280,9 +11280,6 @@
           ]
         }
       ],
-      "aliases": [
-        "Chou"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": -1146,
       "start_year_max": -946,
@@ -11296,6 +11293,9 @@
           "entity_id": "east-asia.china.shang",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Chou"
       ]
     },
     {
@@ -11414,9 +11414,6 @@
           ]
         }
       ],
-      "aliases": [
-        "Ch'in"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": -246,
       "start_year_max": -196,
@@ -11430,6 +11427,9 @@
           "entity_id": "east-asia.china.han",
           "derived": "chronology"
         }
+      ],
+      "aliases": [
+        "Ch'in"
       ]
     },
     {
@@ -11472,9 +11472,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Han"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": -231,
       "start_year_max": -181,
@@ -11493,6 +11490,9 @@
           "entity_id": "east-asia.china.qin",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Han"
       ]
     },
     {
@@ -11678,9 +11678,6 @@
         }
       ],
       "native_name": "晉",
-      "aliases": [
-        "Chin"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 241,
       "start_year_max": 291,
@@ -11698,6 +11695,9 @@
           "entity_id": "east-asia.china.three-kingdoms",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Chin"
       ]
     },
     {
@@ -11725,9 +11725,6 @@
         }
       ],
       "native_name": "南北朝",
-      "aliases": [
-        "Nan-Pei Ch'ao"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 395,
       "start_year_max": 445,
@@ -11746,6 +11743,9 @@
           "entity_id": "east-asia.china.jin",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Nan-Pei Ch'ao"
       ]
     },
     {
@@ -11803,10 +11803,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "T'ang",
-        "Tang"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 568,
       "start_year_max": 668,
@@ -11825,6 +11821,10 @@
           "entity_id": "east-asia.china.sui",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "T'ang",
+        "Tang"
       ]
     },
     {
@@ -11929,9 +11929,6 @@
         }
       ],
       "native_name": "五代十國",
-      "aliases": [
-        "Wu-tai"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 857,
       "start_year_max": 957,
@@ -11945,6 +11942,9 @@
           "entity_id": "east-asia.china.tang",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Wu-tai"
       ]
     },
     {
@@ -11972,17 +11972,17 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Sung",
-        "Song"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 910,
       "start_year_max": 1010,
       "end_dating_method": "unknown",
       "end_year_min": 1179,
       "end_year_max": 1379,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "aliases": [
+        "Sung",
+        "Song"
+      ]
     },
     {
       "id": "east-asia.china.song.northern",
@@ -12086,15 +12086,15 @@
         "central-asia",
         "east-asia"
       ],
-      "aliases": [
-        "Yüan"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1171,
       "start_year_max": 1371,
       "end_dating_method": "unknown",
       "end_year_min": 1270,
-      "end_year_max": 1470
+      "end_year_max": 1470,
+      "aliases": [
+        "Yüan"
+      ]
     },
     {
       "id": "east-asia.china.yuan.kublai",
@@ -12141,9 +12141,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Ming"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1268,
       "start_year_max": 1468,
@@ -12167,6 +12164,9 @@
           "entity_id": "east-asia.china.yuan",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Ming"
       ]
     },
     {
@@ -12250,11 +12250,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Ch'ing",
-        "Qing",
-        "Manchu"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1544,
       "start_year_max": 1744,
@@ -12273,6 +12268,11 @@
           "entity_id": "east-asia.china.ming",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Ch'ing",
+        "Qing",
+        "Manchu"
       ]
     },
     {
@@ -12858,9 +12858,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Sumerian"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": -3000,
       "start_year_max": -2800,
@@ -12874,6 +12871,9 @@
           "entity_id": "west-asia.mesopotamia.akkadian",
           "derived": "chronology"
         }
+      ],
+      "aliases": [
+        "Sumerian"
       ]
     },
     {
@@ -13294,16 +13294,16 @@
         "africa",
         "west-asia"
       ],
-      "aliases": [
-        "Phoenicia",
-        "Canaanite"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": -1600,
       "start_year_max": -1400,
       "end_dating_method": "unknown",
       "end_year_min": -357,
-      "end_year_max": -307
+      "end_year_max": -307,
+      "aliases": [
+        "Phoenicia",
+        "Canaanite"
+      ]
     },
     {
       "id": "west-asia.iran.elam",
@@ -13371,10 +13371,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Achaemenid",
-        "Persian"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": -600,
       "start_year_max": -500,
@@ -13393,6 +13389,10 @@
           "entity_id": "west-asia.iran.median",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Achaemenid",
+        "Persian"
       ]
     },
     {
@@ -13568,9 +13568,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Parthian"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": -272,
       "start_year_max": -222,
@@ -13584,6 +13581,9 @@
           "entity_id": "west-asia.iran.sasanian",
           "derived": "chronology"
         }
+      ],
+      "aliases": [
+        "Parthian"
       ]
     },
     {
@@ -13621,10 +13621,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Sasanian",
-        "Sassanid"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 199,
       "start_year_max": 249,
@@ -13638,6 +13634,10 @@
           "entity_id": "west-asia.iran.parthian",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Sasanian",
+        "Sassanid"
       ]
     },
     {
@@ -14208,19 +14208,19 @@
         "europe",
         "west-asia"
       ],
-      "aliases": [
-        "Devlet-i ʿAlīye-i ʿOsmānīye",
-        "Devlet-i Aliyye",
-        "Osmanlı İmparatorluğu",
-        "Turkish Empire"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1199,
       "start_year_max": 1399,
       "end_dating_method": "unknown",
       "end_year_min": 1822,
       "end_year_max": 2022,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "aliases": [
+        "Devlet-i ʿAlīye-i ʿOsmānīye",
+        "Devlet-i Aliyye",
+        "Osmanlı İmparatorluğu",
+        "Turkish Empire"
+      ]
     },
     {
       "id": "global.multi-regional.ottoman.mehmed-ii",
@@ -14303,13 +14303,13 @@
           "kind": "adjectival"
         }
       ],
+      "start_year_min": -3250,
+      "start_year_max": -3150,
+      "date_standing": "majority",
       "aliases": [
         "Greek",
         "Hellenic"
-      ],
-      "start_year_min": -3250,
-      "start_year_max": -3150,
-      "date_standing": "majority"
+      ]
     },
     {
       "id": "europe.mediterranean.greece.minoan",
@@ -14411,9 +14411,6 @@
         }
       ],
       "summary": "The centuries between the collapse of Mycenaean palace society and the emergence of the city-states: writing was lost and populations fell, but iron came into use and the epics took shape.",
-      "aliases": [
-        "Early Iron Age"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": -1200,
       "start_year_max": -1000,
@@ -14432,6 +14429,9 @@
           "entity_id": "europe.mediterranean.greece.mycenaean",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Early Iron Age"
       ]
     },
     {
@@ -14707,10 +14707,10 @@
           "kind": "adjectival"
         }
       ],
+      "date_standing": "traditional",
       "aliases": [
         "Roman"
-      ],
-      "date_standing": "traditional"
+      ]
     },
     {
       "id": "europe.mediterranean.rome.kingdom",
@@ -14729,9 +14729,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Roman"
-      ],
       "date_standing": "traditional",
       "links": [
         {
@@ -14739,6 +14736,9 @@
           "entity_id": "europe.mediterranean.rome.republic",
           "derived": "chronology"
         }
+      ],
+      "aliases": [
+        "Roman"
       ]
     },
     {
@@ -14772,9 +14772,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Roman Republican"
-      ],
       "date_standing": "majority",
       "links": [
         {
@@ -14787,6 +14784,9 @@
           "entity_id": "europe.mediterranean.rome.kingdom",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Roman Republican"
       ]
     },
     {
@@ -14953,10 +14953,6 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Roman",
-        "Imperial Roman"
-      ],
       "date_standing": "majority",
       "links": [
         {
@@ -14964,6 +14960,10 @@
           "entity_id": "europe.mediterranean.rome.republic",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Roman",
+        "Imperial Roman"
       ]
     },
     {
@@ -16006,18 +16006,18 @@
         "heraldica-holy-roman-empire",
         "oup-sacrum-imperium-lombard"
       ],
-      "aliases": [
-        "Sacrum Romanum Imperium",
-        "Heiliges Römisches Reich",
-        "Holy Roman Empire of the German Nation",
-        "Sacrum Imperium Romanum Nationis Germanicae"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 750,
       "start_year_max": 850,
       "end_dating_method": "unknown",
       "end_year_min": 1706,
-      "end_year_max": 1906
+      "end_year_max": 1906,
+      "aliases": [
+        "Sacrum Romanum Imperium",
+        "Heiliges Römisches Reich",
+        "Holy Roman Empire of the German Nation",
+        "Sacrum Imperium Romanum Nationis Germanicae"
+      ]
     },
     {
       "id": "europe.central.hre.ottonian",
@@ -16118,18 +16118,18 @@
       ],
       "date_note": "1526 is Ferdinand I's acquisition of the Hungarian and Bohemian crowns, forming the composite realm. Habsburg rule in Austria alone goes back to 1282. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "summary": "A composite realm assembled by marriage rather than conquest, holding together Austrians, Hungarians, Czechs, Poles, Croats, Romanians and Italians until nationalism pulled it apart in 1918.",
-      "aliases": [
-        "Austria-Hungary",
-        "Habsburg Empire",
-        "Österreich-Ungarn",
-        "Austrian Empire"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1426,
       "start_year_max": 1626,
       "end_dating_method": "unknown",
       "end_year_min": 1818,
-      "end_year_max": 2018
+      "end_year_max": 2018,
+      "aliases": [
+        "Austria-Hungary",
+        "Habsburg Empire",
+        "Österreich-Ungarn",
+        "Austrian Empire"
+      ]
     },
     {
       "id": "europe.central.prussia",
@@ -16294,14 +16294,6 @@
         }
       ],
       "summary": "Federal Republic of Germany from 1949 (reunified 1990).",
-      "aliases": [
-        "Bundesrepublik Deutschland",
-        "Federal Republic of Germany",
-        "Deutschland",
-        "Germany",
-        "West Germany",
-        "Deutsche Demokratische Republik"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1845,
       "start_year_max": 2045,
@@ -16312,6 +16304,14 @@
           "entity_id": "europe.central.nazi-germany",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Bundesrepublik Deutschland",
+        "Federal Republic of Germany",
+        "Deutschland",
+        "Germany",
+        "West Germany",
+        "Deutsche Demokratische Republik"
       ]
     },
     {
@@ -16532,11 +16532,6 @@
         "global.multi-regional"
       ],
       "summary": "Multi-national empire from Peter the Great to the abdication of Nicholas II.",
-      "aliases": [
-        "Rossiyskaya Imperiya",
-        "Imperial Russia",
-        "Tsarist Russia"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1621,
       "start_year_max": 1821,
@@ -16550,6 +16545,11 @@
           "entity_id": "europe.eastern.soviet",
           "derived": "chronology"
         }
+      ],
+      "aliases": [
+        "Rossiyskaya Imperiya",
+        "Imperial Russia",
+        "Tsarist Russia"
       ]
     },
     {
@@ -16704,19 +16704,19 @@
     },
     {
       "id": "central-asia.scythians",
-      "kind": "era",
+      "kind": "people",
       "name": "Scythians",
       "parent_id": "central-asia.steppe",
       "start_year": -900,
       "end_year": -200,
       "tier": "intermediate",
+      "date_note": "Re-filed from `era` to `people`: the earlier kind misdescribed what this is. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "start_dating_method": "unknown",
       "start_year_min": -950,
       "start_year_max": -850,
       "end_dating_method": "unknown",
       "end_year_min": -225,
-      "end_year_max": -175,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "end_year_max": -175
     },
     {
       "id": "central-asia.xiongnu",
@@ -16898,11 +16898,6 @@
         {
           "type": "predecessor_state_of",
           "entity_id": "east-asia.china.yuan",
-          "derived": "reciprocal"
-        },
-        {
-          "type": "preceded_by",
-          "entity_id": "central-asia.prehistory",
           "derived": "reciprocal"
         }
       ]
@@ -17394,14 +17389,7 @@
       "start_year_max": -550,
       "end_dating_method": "unknown",
       "end_year_min": -370,
-      "end_year_max": -320,
-      "links": [
-        {
-          "type": "succeeded_by",
-          "entity_id": "south-asia.maurya",
-          "derived": "chronology"
-        }
-      ]
+      "end_year_max": -320
     },
     {
       "id": "south-asia.maurya",
@@ -17418,14 +17406,7 @@
       "end_dating_method": "unknown",
       "end_year_min": -210,
       "end_year_max": -160,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
-      "links": [
-        {
-          "type": "preceded_by",
-          "entity_id": "south-asia.mahajanapadas",
-          "derived": "reciprocal"
-        }
-      ]
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
       "id": "south-asia.maurya.chandragupta",
@@ -17561,14 +17542,7 @@
       "end_dating_method": "unknown",
       "end_year_min": 500,
       "end_year_max": 600,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
-      "links": [
-        {
-          "type": "succeeded_by",
-          "entity_id": "south-asia.chalukya-badami",
-          "derived": "chronology"
-        }
-      ]
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
       "id": "south-asia.gupta.chandragupta-ii",
@@ -18004,17 +17978,17 @@
           ]
         }
       ],
-      "aliases": [
-        "Campā",
-        "Lin-yi",
-        "Chiêm Thành"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 167,
       "start_year_max": 217,
       "end_dating_method": "unknown",
       "end_year_min": 1732,
-      "end_year_max": 1932
+      "end_year_max": 1932,
+      "aliases": [
+        "Campā",
+        "Lin-yi",
+        "Chiêm Thành"
+      ]
     },
     {
       "id": "southeast-asia.mainland.khmer",
@@ -18127,18 +18101,18 @@
           ]
         }
       ],
-      "aliases": [
-        "Đại Việt",
-        "Đại Cồ Việt",
-        "Đại Ngu",
-        "Đại Việt, 939-1804"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 889,
       "start_year_max": 989,
       "end_dating_method": "unknown",
       "end_year_min": 1845,
-      "end_year_max": 2045
+      "end_year_max": 2045,
+      "aliases": [
+        "Đại Việt",
+        "Đại Cồ Việt",
+        "Đại Ngu",
+        "Đại Việt, 939-1804"
+      ]
     },
     {
       "id": "southeast-asia.mainland.pagan",
@@ -18174,16 +18148,16 @@
           ]
         }
       ],
-      "aliases": [
-        "Siam"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1251,
       "start_year_max": 1451,
       "end_dating_method": "unknown",
       "end_year_min": 1667,
       "end_year_max": 1867,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "aliases": [
+        "Siam"
+      ]
     },
     {
       "id": "southeast-asia.mainland.rattanakosin",
@@ -18309,16 +18283,16 @@
           ]
         }
       ],
-      "aliases": [
-        "Melaka"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1300,
       "start_year_max": 1500,
       "end_dating_method": "unknown",
       "end_year_min": 1411,
       "end_year_max": 1611,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "aliases": [
+        "Melaka"
+      ]
     },
     {
       "id": "southeast-asia.maritime.dutch-eic",
@@ -19084,16 +19058,16 @@
           ]
         }
       ],
-      "aliases": [
-        "Anasazi",
-        "Hisatsinom",
-        "Ancestral Pueblo culture"
-      ],
       "start_year_min": 50,
       "start_year_max": 150,
       "end_year_min": 1550,
       "end_year_max": 1650,
-      "date_standing": "majority"
+      "date_standing": "majority",
+      "aliases": [
+        "Anasazi",
+        "Hisatsinom",
+        "Ancestral Pueblo culture"
+      ]
     },
     {
       "id": "americas.north.haudenosaunee",
@@ -19151,15 +19125,15 @@
           ]
         }
       ],
+      "start_year_min": 1350,
+      "start_year_max": 1550,
+      "date_standing": "majority",
       "aliases": [
         "Haudenosaunee",
         "Iroquois",
         "Iroquois Confederacy",
         "Six Nations"
-      ],
-      "start_year_min": 1350,
-      "start_year_max": 1550,
-      "date_standing": "majority"
+      ]
     },
     {
       "id": "americas.north.comanche",
@@ -19218,15 +19192,15 @@
         }
       ],
       "summary": "United States of America from independence (1776) to the present.",
+      "start_dating_method": "unknown",
+      "start_year_min": 1676,
+      "start_year_max": 1876,
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "aliases": [
         "United States of America",
         "USA",
         "America"
-      ],
-      "start_dating_method": "unknown",
-      "start_year_min": 1676,
-      "start_year_max": 1876,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      ]
     },
     {
       "id": "americas.north.usa.civil-war",
@@ -19289,15 +19263,15 @@
           ]
         }
       ],
-      "aliases": [
-        "Olmeca",
-        "Tenocelome"
-      ],
       "start_year_min": -1250,
       "start_year_max": -1150,
       "end_year_min": -450,
       "end_year_max": -350,
-      "date_standing": "majority"
+      "date_standing": "majority",
+      "aliases": [
+        "Olmeca",
+        "Tenocelome"
+      ]
     },
     {
       "id": "americas.mesoamerica.zapotec",
@@ -19389,16 +19363,16 @@
           "kind": "adjectival"
         }
       ],
-      "aliases": [
-        "Mayan",
-        "Maya"
-      ],
       "start_year_min": -2100,
       "start_year_max": -1900,
       "end_year_min": 1597,
       "end_year_max": 1797,
       "date_standing": "majority",
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "aliases": [
+        "Mayan",
+        "Maya"
+      ]
     },
     {
       "id": "americas.mesoamerica.maya.classic",
@@ -19526,11 +19500,11 @@
         "src-americas-mesoamerica-purepecha"
       ],
       "summary": "The Aztecs' most effective rival, never conquered by them, and the only Mesoamerican state working metal for tools and weapons at scale.",
+      "date_standing": "majority",
       "aliases": [
         "Purépecha",
         "Tarascan"
-      ],
-      "date_standing": "majority"
+      ]
     },
     {
       "id": "americas.mesoamerica.aztec",
@@ -19795,15 +19769,15 @@
         }
       ],
       "date_note": "Monumental construction in the third millennium BCE, established by a radiocarbon programme published in Nature.",
-      "aliases": [
-        "Caral",
-        "Caral-Supe"
-      ],
       "start_year_min": -3050,
       "start_year_max": -2950,
       "end_year_min": -1850,
       "end_year_max": -1750,
-      "date_standing": "majority"
+      "date_standing": "majority",
+      "aliases": [
+        "Caral",
+        "Caral-Supe"
+      ]
     },
     {
       "id": "americas.andes.chavin",
@@ -19967,12 +19941,6 @@
           ]
         }
       ],
-      "aliases": [
-        "Tawantinsuyu",
-        "Tahuantinsuyu",
-        "Inca",
-        "Incan"
-      ],
       "date_standing": "majority",
       "links": [
         {
@@ -19980,6 +19948,12 @@
           "entity_id": "americas.andes.vilcabamba",
           "derived": "chronology"
         }
+      ],
+      "aliases": [
+        "Tawantinsuyu",
+        "Tahuantinsuyu",
+        "Inca",
+        "Incan"
       ]
     },
     {
@@ -20572,17 +20546,17 @@
         "southeast-asia"
       ],
       "summary": "European maritime exploration and colonial expansion, roughly Columbus to Napoleon.",
-      "aliases": [
-        "Age of Exploration",
-        "Age of Discovery"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1318,
       "start_year_max": 1518,
       "end_dating_method": "unknown",
       "end_year_min": 1715,
       "end_year_max": 1915,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "aliases": [
+        "Age of Exploration",
+        "Age of Discovery"
+      ]
     },
     {
       "id": "global.multi-regional.columbus",
@@ -20679,14 +20653,7 @@
       "end_dating_method": "unknown",
       "end_year_min": 1500,
       "end_year_max": 1700,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
-      "links": [
-        {
-          "type": "preceded_by",
-          "entity_id": "europe.prehistory",
-          "derived": "reciprocal"
-        }
-      ]
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
       "id": "europe.renaissance.italian",
@@ -33240,7 +33207,7 @@
       "links": [
         {
           "type": "preceded_by",
-          "entity_id": "south-asia.gupta",
+          "entity_id": "south-asia.persons-aryabhata",
           "derived": "reciprocal"
         }
       ]
@@ -38421,7 +38388,7 @@
       "links": [
         {
           "type": "succeeded_by",
-          "entity_id": "europe.renaissance",
+          "entity_id": "europe.persons-socrates",
           "derived": "chronology"
         }
       ]
@@ -38768,7 +38735,7 @@
       "links": [
         {
           "type": "succeeded_by",
-          "entity_id": "central-asia.mongol-empire",
+          "entity_id": "central-asia.persons-zoroaster",
           "derived": "chronology"
         }
       ]
@@ -44799,17 +44766,17 @@
           ]
         }
       ],
+      "start_year_min": -4050,
+      "start_year_max": -3950,
+      "end_year_min": -3150,
+      "end_year_max": -3050,
+      "date_standing": "majority",
       "aliases": [
         "Unug",
         "Uruk",
         "Erech",
         "Warka"
-      ],
-      "start_year_min": -4050,
-      "start_year_max": -3950,
-      "end_year_min": -3150,
-      "end_year_max": -3050,
-      "date_standing": "majority"
+      ]
     },
     {
       "id": "west-asia.prehistory.late-chalcolithic-mesopotamia.uruk-period.uruk-city",
@@ -45460,14 +45427,14 @@
     },
     {
       "id": "west-asia.anatolia.lydia.coinage",
-      "kind": "event",
+      "kind": "threshold",
       "name": "The Invention of Coinage",
       "parent_id": "west-asia.anatolia.lydia",
       "start_year": -650,
       "end_year": null,
       "tier": "foundational",
       "start_dating_method": "typological",
-      "date_note": "About 650 BCE. The basis is numismatic rather than scientific: hoard finds, chiefly the foundation deposit under the Temple of Artemis at Ephesus, combined with die and style sequencing. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "date_note": "About 650 BCE. The basis is numismatic rather than scientific: hoard finds, chiefly the foundation deposit under the Temple of Artemis at Ephesus, combined with die and style sequencing. Re-filed from `event` to `threshold`: the earlier kind misdescribed what this is. Published range extended to 600 BCE; recorded as a lower bound only, because a threshold can only move older. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "caveats": [
         {
           "kind": "misconception",
@@ -45484,7 +45451,6 @@
       ],
       "summary": "Struck electrum pieces of guaranteed weight appear in Lydia, and money stops having to be weighed out.",
       "start_year_min": -700,
-      "start_year_max": -600,
       "date_standing": "majority"
     },
     {
@@ -45804,7 +45770,7 @@
     },
     {
       "id": "west-asia.arabia.pre-islamic.incense-trade",
-      "kind": "period",
+      "kind": "network",
       "name": "The Incense Route",
       "parent_id": "west-asia.arabia.pre-islamic",
       "start_year": -700,
@@ -45812,13 +45778,18 @@
       "tier": "intermediate",
       "start_dating_method": "calendar",
       "end_dating_method": "calendar",
-      "date_note": "Conventionally described as flourishing between the 3rd century BCE and the 2nd century CE, but the route is argued to have been in use since at least the 7th century BCE and possibly the 8th. A radiocarbon date from Hajar bin Humeid of about 852 BCE with a +/-160 year error supports early South Arabian urban development, though the range is too wide to pin the trade to.",
+      "date_note": "Conventionally described as flourishing between the 3rd century BCE and the 2nd century CE, but the route is argued to have been in use since at least the 7th century BCE and possibly the 8th. A radiocarbon date from Hajar bin Humeid of about 852 BCE with a +/-160 year error supports early South Arabian urban development, though the range is too wide to pin the trade to. Re-filed from `period` to `network`: the earlier kind misdescribed what this is.",
       "source_ids": [
         "jordan-antiquities-nabataeans-oriental-trade",
         "orient-frankincense-and-myrrh",
         "south-arabian-kingdoms-overview"
       ],
       "summary": "Frankincense and myrrh moving north out of South Arabia, the trade that paid for Saba, Qataban and eventually Petra.",
+      "regions": [
+        "west-asia",
+        "africa",
+        "europe"
+      ],
       "date_standing": "majority"
     },
     {
@@ -46462,7 +46433,7 @@
     },
     {
       "id": "americas.mesoamerica.aztec.tenochtitlan",
-      "kind": "period",
+      "kind": "city",
       "name": "Tenochtitlan",
       "parent_id": "americas.mesoamerica.aztec",
       "start_year": 1325,
@@ -46470,7 +46441,7 @@
       "tier": "foundational",
       "start_dating_method": "calendar",
       "end_dating_method": "calendar",
-      "date_note": "1325 is the traditional founding date. The city fell on 13 August 1521. It predates the Triple Alliance by a century: the capital is older than the empire it came to head.",
+      "date_note": "1325 is the traditional founding date. The city fell on 13 August 1521. It predates the Triple Alliance by a century: the capital is older than the empire it came to head. Re-filed from `period` to `city`: the earlier kind misdescribed what this is.",
       "allow_outside_parent_dates": true,
       "caveats": [
         {
@@ -46623,12 +46594,12 @@
       ],
       "summary": "A chartered company with the power to wage war, coin money and hold territory, which for two centuries was the Dutch presence in Asia.",
       "native_name": "Vereenigde Oostindische Compagnie",
+      "date_standing": "majority",
       "aliases": [
         "VOC",
         "Vereenigde Oostindische Compagnie",
         "United East India Company"
-      ],
-      "date_standing": "majority"
+      ]
     },
     {
       "id": "europe.western.netherlands.wic-first",
@@ -46802,12 +46773,12 @@
         "univ-oeb-georgian-britain"
       ],
       "summary": "Hanoverian Britain: the Jacobite risings, the loss of America, the Regency, and the industrial transformation that reshaped the country.",
+      "date_standing": "majority",
       "aliases": [
         "Hanoverian Britain",
         "House of Hanover",
         "Regency era"
-      ],
-      "date_standing": "majority"
+      ]
     },
     {
       "id": "global.columbian-exchange",
@@ -46876,10 +46847,6 @@
         "population-history-indigenous-americas"
       ],
       "summary": "The transfer of crops, animals, people and above all disease between hemispheres, and the demographic collapse that followed in the Americas.",
-      "aliases": [
-        "Columbian Exchange",
-        "Great Dying"
-      ],
       "date_standing": "majority",
       "links": [
         {
@@ -46887,6 +46854,10 @@
           "entity_id": "global.middle-ages",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Columbian Exchange",
+        "Great Dying"
       ]
     },
     {
@@ -47031,15 +47002,15 @@
         }
       ],
       "summary": "Annexed after the Third Anglo-Burmese War and governed as a province of British India until 1937.",
-      "aliases": [
-        "Burma"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1785,
       "start_year_max": 1985,
       "end_dating_method": "unknown",
       "end_year_min": 1848,
-      "end_year_max": 2048
+      "end_year_max": 2048,
+      "aliases": [
+        "Burma"
+      ]
     },
     {
       "id": "southeast-asia.mainland.sukhothai",
@@ -47362,9 +47333,6 @@
         }
       ],
       "summary": "Administered by the Ming as the province of Jiaozhi, not as a Vietnamese state at all.",
-      "aliases": [
-        "Jiaozhi"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1307,
       "start_year_max": 1507,
@@ -47382,6 +47350,9 @@
           "entity_id": "southeast-asia.mainland.ho",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Jiaozhi"
       ]
     },
     {
@@ -47498,9 +47469,6 @@
       ],
       "summary": "The last dynasty; adopted the name Việt Nam, then ruled under French protection from the 1880s.",
       "native_name": "Việt Nam",
-      "aliases": [
-        "Việt Nam"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1702,
       "start_year_max": 1902,
@@ -47514,6 +47482,9 @@
           "entity_id": "southeast-asia.mainland.tay-son",
           "derived": "reciprocal"
         }
+      ],
+      "aliases": [
+        "Việt Nam"
       ]
     },
     {
@@ -47569,15 +47540,15 @@
         }
       ],
       "summary": "The Central Javanese period, which built Borobudur and Prambanan.",
-      "aliases": [
-        "Mataram Kingdom"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 682,
       "start_year_max": 782,
       "end_dating_method": "unknown",
       "end_year_min": 906,
-      "end_year_max": 1106
+      "end_year_max": 1106,
+      "aliases": [
+        "Mataram Kingdom"
+      ]
     },
     {
       "id": "southeast-asia.maritime.kahuripan",
@@ -47964,16 +47935,16 @@
         }
       ],
       "summary": "Steppe power that dominated Bactria and pressed both Sasanian Iran and the Gupta empire.",
-      "aliases": [
-        "White Huns"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 415,
       "start_year_max": 465,
       "end_dating_method": "unknown",
       "end_year_min": 510,
       "end_year_max": 610,
-      "historicity": "contested"
+      "historicity": "contested",
+      "aliases": [
+        "White Huns"
+      ]
     },
     {
       "id": "central-asia.uyghur-khaganate",
@@ -48113,15 +48084,15 @@
         }
       ],
       "summary": "Khitan successor state in Central Asia, founded by refugees from the fall of the Liao.",
-      "aliases": [
-        "Western Liao"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1024,
       "start_year_max": 1224,
       "end_dating_method": "unknown",
       "end_year_min": 1118,
-      "end_year_max": 1318
+      "end_year_max": 1318,
+      "aliases": [
+        "Western Liao"
+      ]
     },
     {
       "id": "central-asia.bukhara",
@@ -48623,13 +48594,13 @@
     },
     {
       "id": "west-asia.mesopotamia.phoenicia.byblos",
-      "kind": "era",
+      "kind": "city",
       "name": "Byblos",
       "parent_id": "west-asia.mesopotamia.phoenicia",
       "start_year": -3000,
       "end_year": -332,
       "tier": "foundational",
-      "date_note": "Occupied far earlier than the Phoenician period proper; the start marks its Egyptian trade rather than a founding. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "date_note": "Occupied far earlier than the Phoenician period proper; the start marks its Egyptian trade rather than a founding. Re-filed from `era` to `city`: the earlier kind misdescribed what this is. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "source_ids": [
         "britannica-byblos"
       ],
@@ -48645,7 +48616,7 @@
     },
     {
       "id": "west-asia.mesopotamia.phoenicia.sidon",
-      "kind": "era",
+      "kind": "city",
       "name": "Sidon",
       "parent_id": "west-asia.mesopotamia.phoenicia",
       "start_year": -1200,
@@ -48655,17 +48626,17 @@
         "britannica-sidon"
       ],
       "summary": "Held primacy between the Byblian and Tyrian phases, and revolted against Persia in the 350s.",
+      "date_note": "Re-filed from `era` to `city`: the earlier kind misdescribed what this is. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "start_dating_method": "unknown",
       "start_year_min": -1400,
       "start_year_max": -1000,
       "end_dating_method": "unknown",
       "end_year_min": -532,
-      "end_year_max": -132,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "end_year_max": -132
     },
     {
       "id": "west-asia.mesopotamia.phoenicia.tyre",
-      "kind": "era",
+      "kind": "city",
       "name": "Tyre",
       "parent_id": "west-asia.mesopotamia.phoenicia",
       "start_year": -1200,
@@ -48676,17 +48647,17 @@
         "britannica-siege-of-tyre"
       ],
       "summary": "Dominant from the tenth century, founded Carthage and the western colonies, and fell to Alexander after a seven-month siege.",
+      "date_note": "Re-filed from `era` to `city`: the earlier kind misdescribed what this is. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "start_dating_method": "unknown",
       "start_year_min": -1400,
       "start_year_max": -1000,
       "end_dating_method": "unknown",
       "end_year_min": -532,
-      "end_year_max": -132,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "end_year_max": -132
     },
     {
       "id": "west-asia.mesopotamia.phoenicia.arwad",
-      "kind": "era",
+      "kind": "city",
       "name": "Arwad",
       "parent_id": "west-asia.mesopotamia.phoenicia",
       "start_year": -1200,
@@ -48696,13 +48667,13 @@
         "britannica-jazirat-arwad"
       ],
       "summary": "The northernmost city, on an island off the Syrian coast.",
+      "date_note": "Re-filed from `era` to `city`: the earlier kind misdescribed what this is. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "start_dating_method": "unknown",
       "start_year_min": -1450,
       "start_year_max": -950,
       "end_dating_method": "unknown",
       "end_year_min": -582,
-      "end_year_max": -82,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "end_year_max": -82
     },
     {
       "id": "south-asia.vedic.rigvedic",
@@ -48875,15 +48846,15 @@
         "central-asia",
         "east-asia"
       ],
-      "aliases": [
-        "Khitan Empire"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 857,
       "start_year_max": 957,
       "end_dating_method": "unknown",
       "end_year_min": 1025,
-      "end_year_max": 1225
+      "end_year_max": 1225,
+      "aliases": [
+        "Khitan Empire"
+      ]
     },
     {
       "id": "east-asia.china.jin-jurchen",
@@ -48927,16 +48898,16 @@
         "central-asia",
         "east-asia"
       ],
-      "aliases": [
-        "Chin",
-        "Jurchen Jin"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 1015,
       "start_year_max": 1215,
       "end_dating_method": "unknown",
       "end_year_min": 1134,
-      "end_year_max": 1334
+      "end_year_max": 1334,
+      "aliases": [
+        "Chin",
+        "Jurchen Jin"
+      ]
     },
     {
       "id": "east-asia.china.jin-jurchen.jingkang",
@@ -49001,16 +48972,16 @@
       ],
       "allow_outside_parent_dates": true,
       "summary": "Tangut state in the northwest, with its own script and no official dynastic history.",
-      "aliases": [
-        "Xi Xia",
-        "Tangut Empire"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": 938,
       "start_year_max": 1138,
       "end_dating_method": "unknown",
       "end_year_min": 1127,
-      "end_year_max": 1327
+      "end_year_max": 1327,
+      "aliases": [
+        "Xi Xia",
+        "Tangut Empire"
+      ]
     },
     {
       "id": "east-asia.china.xia",
@@ -49057,9 +49028,6 @@
       ],
       "allow_outside_parent_dates": true,
       "summary": "Traditionally the first Chinese dynasty. Whether it existed as a state is disputed.",
-      "aliases": [
-        "Hsia"
-      ],
       "start_dating_method": "unknown",
       "start_year_min": -2170,
       "start_year_max": -1970,
@@ -49078,7 +49046,10 @@
           "derived": "reciprocal"
         }
       ],
-      "historicity": "contested"
+      "historicity": "contested",
+      "aliases": [
+        "Hsia"
+      ]
     },
     {
       "id": "east-asia.china.legendary.fuxi",
@@ -50860,6 +50831,1629 @@
       "end_dating_method": "unknown",
       "end_year_min": -784,
       "end_year_max": -684
+    },
+    {
+      "id": "global.languages",
+      "kind": "region",
+      "name": "Languages",
+      "parent_id": "global",
+      "start_year": null,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Language families and the languages descended from them. Placement here is by linguistic descent, not geography.",
+      "extant": true
+    },
+    {
+      "id": "global.traditions",
+      "kind": "region",
+      "name": "Religions & Traditions",
+      "parent_id": "global",
+      "start_year": null,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Religions, denominations, schools and legal traditions, filed by descent from what they grew out of.",
+      "extant": true
+    },
+    {
+      "id": "global.networks",
+      "kind": "region",
+      "name": "Trade & Exchange Networks",
+      "parent_id": "global",
+      "start_year": null,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Systems of exchange that were neither states nor places, and that moved goods, people, faith and disease.",
+      "extant": true
+    },
+    {
+      "id": "global.milestones",
+      "kind": "region",
+      "name": "Technological Thresholds",
+      "parent_id": "global",
+      "start_year": null,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "First attainments of a capability after the prehistoric record, each a lower bound that new evidence can only move older.",
+      "extant": true
+    },
+    {
+      "id": "global.languages.proto-afroasiatic",
+      "kind": "language",
+      "name": "Proto-Afroasiatic",
+      "parent_id": "global.languages",
+      "start_year": -12000,
+      "end_year": -8000,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "Reconstructed ancestor of Semitic, Egyptian, Berber, Chadic and Cushitic; among the deepest families with a serious reconstruction.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -14000,
+      "start_year_max": -10000,
+      "end_dating_method": "glottochronology",
+      "end_year_min": -10000,
+      "end_year_max": -6000
+    },
+    {
+      "id": "global.languages.proto-semitic",
+      "kind": "language",
+      "name": "Proto-Semitic",
+      "parent_id": "global.languages.proto-afroasiatic",
+      "start_year": -3800,
+      "end_year": -3000,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "Ancestor of Akkadian, Hebrew, Aramaic and Arabic, reconstructed largely from their shared triconsonantal roots.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -4300,
+      "start_year_max": -3300,
+      "end_dating_method": "glottochronology",
+      "end_year_min": -3500,
+      "end_year_max": -2500
+    },
+    {
+      "id": "global.languages.akkadian",
+      "kind": "language",
+      "name": "Akkadian",
+      "parent_id": "global.languages.proto-semitic",
+      "start_year": -2500,
+      "end_year": 100,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "The first Semitic language written down, and the diplomatic language of the Bronze Age Near East.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -2700,
+      "start_year_max": -2300,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -100,
+      "end_year_max": 300
+    },
+    {
+      "id": "global.languages.aramaic",
+      "kind": "language",
+      "name": "Aramaic",
+      "parent_id": "global.languages.proto-semitic",
+      "start_year": -1100,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Administrative language of the Achaemenid Empire and still spoken by small communities today.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1250,
+      "start_year_max": -950
+    },
+    {
+      "id": "global.languages.hebrew",
+      "kind": "language",
+      "name": "Hebrew",
+      "parent_id": "global.languages.proto-semitic",
+      "start_year": -1000,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Ceased to be a vernacular for roughly seventeen centuries and was revived as one, which almost no other language has managed.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1150,
+      "start_year_max": -850
+    },
+    {
+      "id": "global.languages.arabic",
+      "kind": "language",
+      "name": "Arabic",
+      "parent_id": "global.languages.proto-semitic",
+      "start_year": 300,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Spread with Islam from a peninsular vernacular to the liturgical and literary language of much of Afro-Eurasia.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 150,
+      "start_year_max": 450
+    },
+    {
+      "id": "global.languages.egyptian",
+      "kind": "language",
+      "name": "Egyptian",
+      "parent_id": "global.languages.proto-afroasiatic",
+      "start_year": -3250,
+      "end_year": 1700,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Attested across four thousand years, from hieroglyphs to Coptic, the longest documented history of any language.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -3400,
+      "start_year_max": -3100,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 1550,
+      "end_year_max": 1850
+    },
+    {
+      "id": "global.languages.proto-indo-european",
+      "kind": "language",
+      "name": "Proto-Indo-European",
+      "parent_id": "global.languages",
+      "start_year": -4500,
+      "end_year": -2500,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "Reconstructed ancestor of most languages of Europe and much of South Asia; its homeland is still argued.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -5500,
+      "start_year_max": -3500,
+      "end_dating_method": "glottochronology",
+      "end_year_min": -3500,
+      "end_year_max": -1500
+    },
+    {
+      "id": "global.languages.proto-indo-iranian",
+      "kind": "language",
+      "name": "Proto-Indo-Iranian",
+      "parent_id": "global.languages.proto-indo-european",
+      "start_year": -2500,
+      "end_year": -1800,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "The branch that carried Indo-European speech into Iran and South Asia.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -2800,
+      "start_year_max": -2200,
+      "end_dating_method": "glottochronology",
+      "end_year_min": -2100,
+      "end_year_max": -1500
+    },
+    {
+      "id": "global.languages.sanskrit",
+      "kind": "language",
+      "name": "Sanskrit",
+      "parent_id": "global.languages.proto-indo-iranian",
+      "start_year": -1500,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Language of the Vedas, and the grammar Panini wrote for it is still the most complete description of any ancient language.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1700,
+      "start_year_max": -1300
+    },
+    {
+      "id": "global.languages.avestan",
+      "kind": "language",
+      "name": "Avestan",
+      "parent_id": "global.languages.proto-indo-iranian",
+      "start_year": -1200,
+      "end_year": -400,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "summary": "Language of the Zoroastrian liturgy, preserved orally for centuries before it was written.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1500,
+      "start_year_max": -900,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -700,
+      "end_year_max": -100
+    },
+    {
+      "id": "global.languages.hittite",
+      "kind": "language",
+      "name": "Hittite",
+      "parent_id": "global.languages.proto-indo-european",
+      "start_year": -1650,
+      "end_year": -1180,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "summary": "The earliest attested Indo-European language, and its decipherment reshaped the whole reconstruction.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1750,
+      "start_year_max": -1550,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -1280,
+      "end_year_max": -1080
+    },
+    {
+      "id": "global.languages.ancient-greek",
+      "kind": "language",
+      "name": "Ancient Greek",
+      "parent_id": "global.languages.proto-indo-european",
+      "start_year": -1400,
+      "end_year": 300,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Written first in Linear B, then in the alphabet that carried Homer, tragedy and Greek philosophy.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1550,
+      "start_year_max": -1250,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 150,
+      "end_year_max": 450
+    },
+    {
+      "id": "global.languages.latin",
+      "kind": "language",
+      "name": "Latin",
+      "parent_id": "global.languages.proto-indo-european",
+      "start_year": -700,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Ancestor of the Romance languages and the learned language of western Europe long after it stopped being anyone's first.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -850,
+      "start_year_max": -550
+    },
+    {
+      "id": "global.languages.proto-uralic",
+      "kind": "language",
+      "name": "Proto-Uralic",
+      "parent_id": "global.languages",
+      "start_year": -4000,
+      "end_year": -2000,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "Reconstructed ancestor of Finnish, Hungarian, Estonian and the Samoyedic languages of Siberia.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -5000,
+      "start_year_max": -3000,
+      "end_dating_method": "glottochronology",
+      "end_year_min": -3000,
+      "end_year_max": -1000
+    },
+    {
+      "id": "global.languages.proto-sino-tibetan",
+      "kind": "language",
+      "name": "Proto-Sino-Tibetan",
+      "parent_id": "global.languages",
+      "start_year": -4500,
+      "end_year": -2500,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "Reconstructed ancestor of Chinese, Tibetan and Burmese; its internal structure is much less settled than Indo-European's.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -5500,
+      "start_year_max": -3500,
+      "end_dating_method": "glottochronology",
+      "end_year_min": -3500,
+      "end_year_max": -1500
+    },
+    {
+      "id": "global.languages.old-chinese",
+      "kind": "language",
+      "name": "Old Chinese",
+      "parent_id": "global.languages.proto-sino-tibetan",
+      "start_year": -1250,
+      "end_year": -200,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "The language of the oracle bones and the Confucian classics, reconstructed partly from rhymes in early poetry.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1400,
+      "start_year_max": -1100,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -350,
+      "end_year_max": -50
+    },
+    {
+      "id": "global.languages.proto-austronesian",
+      "kind": "language",
+      "name": "Proto-Austronesian",
+      "parent_id": "global.languages",
+      "start_year": -3500,
+      "end_year": -2500,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "Ancestor of a family that spread from Taiwan across the Pacific to Madagascar, the widest pre-modern dispersal of any.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -4000,
+      "start_year_max": -3000,
+      "end_dating_method": "glottochronology",
+      "end_year_min": -3000,
+      "end_year_max": -2000
+    },
+    {
+      "id": "global.languages.proto-bantu",
+      "kind": "language",
+      "name": "Proto-Bantu",
+      "parent_id": "global.languages",
+      "start_year": -3000,
+      "end_year": -1500,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "Ancestor of some five hundred languages across sub-Saharan Africa, spread by the Bantu expansion.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -3500,
+      "start_year_max": -2500,
+      "end_dating_method": "glottochronology",
+      "end_year_min": -2000,
+      "end_year_max": -1000
+    },
+    {
+      "id": "global.languages.proto-dravidian",
+      "kind": "language",
+      "name": "Proto-Dravidian",
+      "parent_id": "global.languages",
+      "start_year": -4000,
+      "end_year": -2000,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "Reconstructed ancestor of Tamil, Telugu, Kannada and Malayalam; possibly the language family of the Indus cities.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -5000,
+      "start_year_max": -3000,
+      "end_dating_method": "glottochronology",
+      "end_year_min": -3000,
+      "end_year_max": -1000
+    },
+    {
+      "id": "global.languages.proto-japonic",
+      "kind": "language",
+      "name": "Proto-Japonic",
+      "parent_id": "global.languages",
+      "start_year": -1000,
+      "end_year": 200,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "Ancestor of Japanese and the Ryukyuan languages, probably carried to the islands with wet-rice farming.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -1400,
+      "start_year_max": -600,
+      "end_dating_method": "glottochronology",
+      "end_year_min": -200,
+      "end_year_max": 600
+    },
+    {
+      "id": "global.languages.proto-koreanic",
+      "kind": "language",
+      "name": "Proto-Koreanic",
+      "parent_id": "global.languages",
+      "start_year": -500,
+      "end_year": 500,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
+      "summary": "Ancestor of Korean, whose relationship to Japonic remains one of the open questions of Asian linguistics.",
+      "start_dating_method": "glottochronology",
+      "start_year_min": -900,
+      "start_year_max": -100,
+      "end_dating_method": "glottochronology",
+      "end_year_min": 100,
+      "end_year_max": 900
+    },
+    {
+      "id": "global.languages.sumerian",
+      "kind": "language",
+      "name": "Sumerian",
+      "parent_id": "global.languages",
+      "start_year": -3100,
+      "end_year": -1800,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "The first written language, and an isolate: no relative has ever been established for it.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -3250,
+      "start_year_max": -2950,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -1950,
+      "end_year_max": -1650
+    },
+    {
+      "id": "global.languages.elamite",
+      "kind": "language",
+      "name": "Elamite",
+      "parent_id": "global.languages",
+      "start_year": -2600,
+      "end_year": -400,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "summary": "Written beside Sumerian and Akkadian for two millennia and, like Sumerian, without known relatives.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -2800,
+      "start_year_max": -2400,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -600,
+      "end_year_max": -200
+    },
+    {
+      "id": "global.languages.etruscan",
+      "kind": "language",
+      "name": "Etruscan",
+      "parent_id": "global.languages",
+      "start_year": -700,
+      "end_year": 100,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "summary": "Non-Indo-European language of pre-Roman Italy, readable in script but still largely not understood.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -800,
+      "start_year_max": -600,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -1,
+      "end_year_max": 200
+    },
+    {
+      "id": "global.languages.classical-maya",
+      "kind": "language",
+      "name": "Classical Maya",
+      "parent_id": "global.languages",
+      "start_year": 250,
+      "end_year": 900,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "summary": "The only pre-Columbian American writing system fully deciphered, recording dynastic history in its own words.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 150,
+      "start_year_max": 350,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 800,
+      "end_year_max": 1000
+    },
+    {
+      "id": "global.languages.quechua",
+      "kind": "language",
+      "name": "Quechua",
+      "parent_id": "global.languages",
+      "start_year": 1000,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Spread as the administrative language of the Inca state and still spoken by millions across the Andes.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 700,
+      "start_year_max": 1300
+    },
+    {
+      "id": "global.languages.nahuatl",
+      "kind": "language",
+      "name": "Nahuatl",
+      "parent_id": "global.languages",
+      "start_year": 600,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Language of the Aztec state, and the source of chocolate, tomato, avocado and coyote.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 300,
+      "start_year_max": 900
+    },
+    {
+      "id": "global.traditions.zoroastrianism",
+      "kind": "tradition",
+      "name": "Zoroastrianism",
+      "parent_id": "global.traditions",
+      "start_year": -1200,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Persian tradition whose ideas about judgement, a final reckoning and cosmic dualism reached Judaism, Christianity and Islam.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1600,
+      "start_year_max": -800
+    },
+    {
+      "id": "global.traditions.judaism",
+      "kind": "tradition",
+      "name": "Judaism",
+      "parent_id": "global.traditions",
+      "start_year": -600,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Took its lasting shape around exile and return, and around a text rather than a temple.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -800,
+      "start_year_max": -400
+    },
+    {
+      "id": "global.traditions.hinduism",
+      "kind": "tradition",
+      "name": "Hinduism",
+      "parent_id": "global.traditions",
+      "start_year": -1500,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Less a single founding than a continuity of Vedic ritual, Upanishadic philosophy and devotional practice.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1800,
+      "start_year_max": -1200
+    },
+    {
+      "id": "global.traditions.jainism",
+      "kind": "tradition",
+      "name": "Jainism",
+      "parent_id": "global.traditions",
+      "start_year": -600,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Holds non-violence as the first principle, extended to every living thing.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -700,
+      "start_year_max": -500
+    },
+    {
+      "id": "global.traditions.buddhism",
+      "kind": "tradition",
+      "name": "Buddhism",
+      "parent_id": "global.traditions",
+      "start_year": -450,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Began as a teaching about the causes of suffering and became the first tradition to spread across Asia by persuasion.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -550,
+      "start_year_max": -350
+    },
+    {
+      "id": "global.traditions.theravada",
+      "kind": "tradition",
+      "name": "Theravada Buddhism",
+      "parent_id": "global.traditions.buddhism",
+      "start_year": -250,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "The school that kept the Pali canon, dominant across Sri Lanka and mainland Southeast Asia.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -350,
+      "start_year_max": -150
+    },
+    {
+      "id": "global.traditions.mahayana",
+      "kind": "tradition",
+      "name": "Mahayana Buddhism",
+      "parent_id": "global.traditions.buddhism",
+      "start_year": 100,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Shifted the goal from personal liberation to universal awakening, and carried Buddhism to China, Korea and Japan.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1,
+      "start_year_max": 200
+    },
+    {
+      "id": "global.traditions.vajrayana",
+      "kind": "tradition",
+      "name": "Vajrayana Buddhism",
+      "parent_id": "global.traditions.mahayana",
+      "start_year": 600,
+      "end_year": null,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Tantric Buddhism, transmitted into Tibet and the Himalaya.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 500,
+      "start_year_max": 700
+    },
+    {
+      "id": "global.traditions.confucianism",
+      "kind": "tradition",
+      "name": "Confucianism",
+      "parent_id": "global.traditions",
+      "start_year": -500,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "A tradition about conduct, family and government rather than gods, and the framework of Chinese administration for two millennia.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -600,
+      "start_year_max": -400
+    },
+    {
+      "id": "global.traditions.daoism",
+      "kind": "tradition",
+      "name": "Daoism",
+      "parent_id": "global.traditions",
+      "start_year": -400,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Philosophy and later religion built on acting with the grain of things rather than against it.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -550,
+      "start_year_max": -250
+    },
+    {
+      "id": "global.traditions.shinto",
+      "kind": "tradition",
+      "name": "Shinto",
+      "parent_id": "global.traditions",
+      "start_year": 500,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Japanese practice centred on kami and place, defined as a distinct religion largely in response to Buddhism.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 300,
+      "start_year_max": 700
+    },
+    {
+      "id": "global.traditions.christianity",
+      "kind": "tradition",
+      "name": "Christianity",
+      "parent_id": "global.traditions",
+      "start_year": 30,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Began as a movement within Judaism and became the state religion of the empire that had executed its founder.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 20,
+      "start_year_max": 40
+    },
+    {
+      "id": "global.traditions.islam",
+      "kind": "tradition",
+      "name": "Islam",
+      "parent_id": "global.traditions",
+      "start_year": 610,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Began at Mecca and Medina and within a century governed from Iberia to the Indus.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 605,
+      "start_year_max": 615
+    },
+    {
+      "id": "global.traditions.sunni-shia-split",
+      "kind": "tradition",
+      "name": "The Sunni-Shia Split",
+      "parent_id": "global.traditions.islam",
+      "start_year": 632,
+      "end_year": 680,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "A dispute over succession to Muhammad that hardened into the enduring division of the Muslim world.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 627,
+      "start_year_max": 637,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 675,
+      "end_year_max": 685
+    },
+    {
+      "id": "global.traditions.sufism",
+      "kind": "tradition",
+      "name": "Sufism",
+      "parent_id": "global.traditions.islam",
+      "start_year": 800,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "The mystical current of Islam, and the form in which it most often spread through South Asia and West Africa.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 700,
+      "start_year_max": 900
+    },
+    {
+      "id": "global.traditions.great-schism",
+      "kind": "tradition",
+      "name": "The Great Schism",
+      "parent_id": "global.traditions.christianity",
+      "start_year": 1054,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Formal separation of the Latin and Greek churches, after centuries of drift over authority and doctrine.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 1049,
+      "start_year_max": 1059
+    },
+    {
+      "id": "global.traditions.sikhism",
+      "kind": "tradition",
+      "name": "Sikhism",
+      "parent_id": "global.traditions",
+      "start_year": 1500,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Founded by Nanak in Punjab, rejecting caste and ritual in favour of one God and honest work.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 1480,
+      "start_year_max": 1520
+    },
+    {
+      "id": "global.traditions.manichaeism",
+      "kind": "tradition",
+      "name": "Manichaeism",
+      "parent_id": "global.traditions",
+      "start_year": 240,
+      "end_year": 1400,
+      "tier": "specialist",
+      "allow_outside_parent_dates": true,
+      "summary": "A deliberately universal religion that reached from Rome to China and then was extinguished almost everywhere.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 190,
+      "start_year_max": 290,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 1350,
+      "end_year_max": 1450
+    },
+    {
+      "id": "central-asia.peoples-sarmatians",
+      "kind": "people",
+      "name": "Sarmatians",
+      "parent_id": "central-asia",
+      "start_year": -400,
+      "end_year": 400,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "summary": "Successors to the Scythians on the western steppe, and heavy cavalry the Romans learned from.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -500,
+      "start_year_max": -300,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 300,
+      "end_year_max": 500
+    },
+    {
+      "id": "central-asia.peoples-xiongnu",
+      "kind": "people",
+      "name": "Xiongnu",
+      "parent_id": "central-asia",
+      "start_year": -300,
+      "end_year": 100,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Steppe confederation whose pressure shaped Han policy, the frontier walls, and the westward movement of peoples.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -400,
+      "start_year_max": -200,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -1,
+      "end_year_max": 200
+    },
+    {
+      "id": "central-asia.peoples-huns",
+      "kind": "people",
+      "name": "Huns",
+      "parent_id": "central-asia",
+      "start_year": 370,
+      "end_year": 470,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Arrived on the Danube within a generation and broke the Roman order in the west without ever holding a city.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 340,
+      "start_year_max": 400,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 440,
+      "end_year_max": 500
+    },
+    {
+      "id": "central-asia.peoples-turkic-peoples",
+      "kind": "people",
+      "name": "Turkic Peoples",
+      "parent_id": "central-asia",
+      "start_year": 550,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Spread from Mongolia to Anatolia over a millennium, founding states from the Gokturks to the Ottomans.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 450,
+      "start_year_max": 650
+    },
+    {
+      "id": "west-asia.peoples-sea-peoples",
+      "kind": "people",
+      "name": "Sea Peoples",
+      "parent_id": "west-asia",
+      "start_year": -1200,
+      "end_year": -1150,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Raiders named in Egyptian inscriptions, associated with the collapse of the Bronze Age eastern Mediterranean.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1250,
+      "start_year_max": -1150,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -1200,
+      "end_year_max": -1100
+    },
+    {
+      "id": "europe.peoples-celts",
+      "kind": "people",
+      "name": "Celtic Peoples",
+      "parent_id": "europe",
+      "start_year": -800,
+      "end_year": 100,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "A shared language, art and metalwork across Iron Age Europe, never a single state.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -950,
+      "start_year_max": -650,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -50,
+      "end_year_max": 250
+    },
+    {
+      "id": "europe.peoples-germanic-peoples",
+      "kind": "people",
+      "name": "Germanic Peoples",
+      "parent_id": "europe",
+      "start_year": -500,
+      "end_year": 800,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Named as an outside threat by Rome and eventually the founders of its successor kingdoms.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -650,
+      "start_year_max": -350,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 650,
+      "end_year_max": 950
+    },
+    {
+      "id": "europe.peoples-slavs",
+      "kind": "people",
+      "name": "Slavic Peoples",
+      "parent_id": "europe",
+      "start_year": 400,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Expanded across eastern and southeastern Europe in the centuries after Rome, with little written trace of the process.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 250,
+      "start_year_max": 550
+    },
+    {
+      "id": "europe.peoples-sami",
+      "kind": "people",
+      "name": "Sami",
+      "parent_id": "europe",
+      "start_year": -1000,
+      "end_year": null,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Reindeer-herding people of Fennoscandia, and among the few European peoples never to form a state.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1500,
+      "start_year_max": -500
+    },
+    {
+      "id": "africa.peoples-bantu-peoples",
+      "kind": "people",
+      "name": "Bantu-Speaking Peoples",
+      "parent_id": "africa",
+      "start_year": -3000,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Their expansion carried farming, ironworking and a language family across a third of a continent.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -3500,
+      "start_year_max": -2500
+    },
+    {
+      "id": "africa.peoples-amazigh",
+      "kind": "people",
+      "name": "Amazigh",
+      "parent_id": "africa",
+      "start_year": -2000,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "Indigenous peoples of North Africa, continuous through Punic, Roman, Arab and French rule.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -2500,
+      "start_year_max": -1500
+    },
+    {
+      "id": "americas.peoples-thule",
+      "kind": "people",
+      "name": "Thule",
+      "parent_id": "americas",
+      "start_year": 1000,
+      "end_year": 1600,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "summary": "Ancestors of the Inuit, who crossed the American Arctic in a few centuries with dog sleds and toggling harpoons.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 900,
+      "start_year_max": 1100,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 1500,
+      "end_year_max": 1700
+    },
+    {
+      "id": "oceania.peoples-aboriginal-australians",
+      "kind": "people",
+      "name": "Aboriginal Australians",
+      "parent_id": "oceania",
+      "start_year": -65000,
+      "end_year": null,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "extant": true,
+      "summary": "The longest continuous cultural tradition known, with oral accounts that appear to record post-glacial sea-level rise.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -70000,
+      "start_year_max": -60000
+    },
+    {
+      "id": "global.networks.silk-road",
+      "kind": "network",
+      "name": "The Silk Road",
+      "parent_id": "global.networks",
+      "start_year": -130,
+      "end_year": 1450,
+      "tier": "foundational",
+      "regions": [
+        "east-asia",
+        "central-asia",
+        "south-asia",
+        "west-asia",
+        "europe"
+      ],
+      "summary": "Not one road but a relay of routes moving silk, horses, faith and plague between China, India, Persia and Rome.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -180,
+      "start_year_max": -80,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 1400,
+      "end_year_max": 1500
+    },
+    {
+      "id": "global.networks.indian-ocean-trade",
+      "kind": "network",
+      "name": "Indian Ocean Trade",
+      "parent_id": "global.networks",
+      "start_year": -1000,
+      "end_year": null,
+      "tier": "foundational",
+      "regions": [
+        "africa",
+        "west-asia",
+        "south-asia",
+        "southeast-asia",
+        "east-asia"
+      ],
+      "extant": true,
+      "summary": "Monsoon-driven and older than the Silk Road, carrying more goods by volume than any overland route.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1200,
+      "start_year_max": -800
+    },
+    {
+      "id": "global.networks.trans-saharan-trade",
+      "kind": "network",
+      "name": "Trans-Saharan Trade",
+      "parent_id": "global.networks",
+      "start_year": 300,
+      "end_year": 1600,
+      "tier": "foundational",
+      "regions": [
+        "africa",
+        "europe",
+        "west-asia"
+      ],
+      "summary": "Gold north, salt south, and the wealth that built Mali, Songhai and the libraries of Timbuktu.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 200,
+      "start_year_max": 400,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 1500,
+      "end_year_max": 1700
+    },
+    {
+      "id": "global.networks.amber-road",
+      "kind": "network",
+      "name": "The Amber Road",
+      "parent_id": "global.networks",
+      "start_year": -1600,
+      "end_year": 1000,
+      "tier": "specialist",
+      "regions": [
+        "europe"
+      ],
+      "summary": "Baltic amber reaching the Mediterranean, and evidence of long-distance exchange well before any empire organised it.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1800,
+      "start_year_max": -1400,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 800,
+      "end_year_max": 1200
+    },
+    {
+      "id": "global.networks.hanseatic-league",
+      "kind": "network",
+      "name": "The Hanseatic League",
+      "parent_id": "global.networks",
+      "start_year": 1150,
+      "end_year": 1669,
+      "tier": "foundational",
+      "regions": [
+        "europe"
+      ],
+      "summary": "A league of merchant towns that ran the northern European economy without being a state.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 1120,
+      "start_year_max": 1180,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 1639,
+      "end_year_max": 1699
+    },
+    {
+      "id": "global.networks.atlantic-slave-trade",
+      "kind": "network",
+      "name": "The Atlantic Slave Trade",
+      "parent_id": "global.networks",
+      "start_year": 1501,
+      "end_year": 1867,
+      "tier": "foundational",
+      "regions": [
+        "africa",
+        "americas",
+        "europe"
+      ],
+      "summary": "Some twelve million people shipped from Africa to the Americas, and the demographic and economic foundation of the Atlantic world.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 1496,
+      "start_year_max": 1506,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 1862,
+      "end_year_max": 1872
+    },
+    {
+      "id": "global.networks.manila-galleon",
+      "kind": "network",
+      "name": "The Manila Galleon Trade",
+      "parent_id": "global.networks",
+      "start_year": 1565,
+      "end_year": 1815,
+      "tier": "intermediate",
+      "regions": [
+        "americas",
+        "southeast-asia",
+        "east-asia"
+      ],
+      "summary": "Silver from Mexico for Chinese silk and porcelain, and the first sustained commercial link across the Pacific.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 1560,
+      "start_year_max": 1570,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 1810,
+      "end_year_max": 1820
+    },
+    {
+      "id": "east-asia.persons-confucius",
+      "kind": "person",
+      "name": "Confucius",
+      "parent_id": "east-asia",
+      "start_year": -551,
+      "end_year": -479,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Taught that government rests on the character of those who govern; had no office of consequence and shaped a civilisation.",
+      "start_dating_method": "calendar",
+      "start_year_min": -556,
+      "start_year_max": -546,
+      "end_dating_method": "calendar",
+      "end_year_min": -484,
+      "end_year_max": -474
+    },
+    {
+      "id": "east-asia.persons-laozi",
+      "kind": "person",
+      "name": "Laozi",
+      "parent_id": "east-asia",
+      "start_year": -600,
+      "end_year": -500,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "historicity": "legendary",
+      "summary": "Traditional author of the Daodejing, and possibly a composite of several figures.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -700,
+      "start_year_max": -500,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -600,
+      "end_year_max": -400
+    },
+    {
+      "id": "south-asia.persons-siddhartha-gautama",
+      "kind": "person",
+      "name": "Siddhartha Gautama",
+      "parent_id": "south-asia",
+      "start_year": -480,
+      "end_year": -400,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Left a princely household to answer why there is suffering, and founded the tradition that became Buddhism.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -520,
+      "start_year_max": -440,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -440,
+      "end_year_max": -360
+    },
+    {
+      "id": "south-asia.persons-mahavira",
+      "kind": "person",
+      "name": "Mahavira",
+      "parent_id": "south-asia",
+      "start_year": -599,
+      "end_year": -527,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "summary": "Contemporary of the Buddha and the figure Jainism takes its historical shape from.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -629,
+      "start_year_max": -569,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -557,
+      "end_year_max": -497
+    },
+    {
+      "id": "central-asia.persons-zoroaster",
+      "kind": "person",
+      "name": "Zoroaster",
+      "parent_id": "central-asia",
+      "start_year": -1200,
+      "end_year": -1000,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "historicity": "legendary",
+      "summary": "Prophet of the first tradition to frame history as a moral struggle with an end.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1500,
+      "start_year_max": -900,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -1300,
+      "end_year_max": -700,
+      "links": [
+        {
+          "type": "preceded_by",
+          "entity_id": "central-asia.prehistory",
+          "derived": "reciprocal"
+        }
+      ]
+    },
+    {
+      "id": "europe.persons-socrates",
+      "kind": "person",
+      "name": "Socrates",
+      "parent_id": "europe",
+      "start_year": -470,
+      "end_year": -399,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Wrote nothing, was executed by his own city, and set the shape of philosophical argument since.",
+      "start_dating_method": "calendar",
+      "start_year_min": -475,
+      "start_year_max": -465,
+      "end_dating_method": "calendar",
+      "end_year_min": -404,
+      "end_year_max": -394,
+      "links": [
+        {
+          "type": "succeeded_by",
+          "entity_id": "europe.persons-aristotle",
+          "derived": "sequence"
+        },
+        {
+          "type": "preceded_by",
+          "entity_id": "europe.prehistory",
+          "derived": "reciprocal"
+        }
+      ]
+    },
+    {
+      "id": "europe.persons-aristotle",
+      "kind": "person",
+      "name": "Aristotle",
+      "parent_id": "europe",
+      "start_year": -384,
+      "end_year": -322,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Attempted a systematic account of everything, and his errors held authority nearly as long as his insights.",
+      "start_dating_method": "calendar",
+      "start_year_min": -387,
+      "start_year_max": -381,
+      "end_dating_method": "calendar",
+      "end_year_min": -325,
+      "end_year_max": -319,
+      "links": [
+        {
+          "type": "preceded_by",
+          "entity_id": "europe.persons-socrates",
+          "derived": "reciprocal"
+        }
+      ]
+    },
+    {
+      "id": "europe.persons-archimedes",
+      "kind": "person",
+      "name": "Archimedes",
+      "parent_id": "europe",
+      "start_year": -287,
+      "end_year": -212,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Came nearer to calculus than anyone would for eighteen centuries.",
+      "start_dating_method": "calendar",
+      "start_year_min": -292,
+      "start_year_max": -282,
+      "end_dating_method": "calendar",
+      "end_year_min": -217,
+      "end_year_max": -207
+    },
+    {
+      "id": "central-asia.persons-al-khwarizmi",
+      "kind": "person",
+      "name": "Al-Khwarizmi",
+      "parent_id": "central-asia",
+      "start_year": 780,
+      "end_year": 850,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "His name became algorithm and his book's title became algebra.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 765,
+      "start_year_max": 795,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 835,
+      "end_year_max": 865
+    },
+    {
+      "id": "central-asia.persons-ibn-sina",
+      "kind": "person",
+      "name": "Ibn Sina",
+      "parent_id": "central-asia",
+      "start_year": 980,
+      "end_year": 1037,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "His medical canon was the standard text in Europe and the Islamic world for six hundred years.",
+      "start_dating_method": "calendar",
+      "start_year_min": 977,
+      "start_year_max": 983,
+      "end_dating_method": "calendar",
+      "end_year_min": 1034,
+      "end_year_max": 1040
+    },
+    {
+      "id": "south-asia.persons-aryabhata",
+      "kind": "person",
+      "name": "Aryabhata",
+      "parent_id": "south-asia",
+      "start_year": 476,
+      "end_year": 550,
+      "tier": "intermediate",
+      "allow_outside_parent_dates": true,
+      "summary": "Gave a place-value system, an accurate value for pi, and a rotating Earth.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 466,
+      "start_year_max": 486,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 540,
+      "end_year_max": 560,
+      "links": [
+        {
+          "type": "succeeded_by",
+          "entity_id": "south-asia.chalukya-badami",
+          "derived": "sequence"
+        }
+      ]
+    },
+    {
+      "id": "europe.persons-gutenberg",
+      "kind": "person",
+      "name": "Johannes Gutenberg",
+      "parent_id": "europe",
+      "start_year": 1400,
+      "end_year": 1468,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "summary": "Combined movable type, oil ink and the press into something that made copying cheap enough to change what could be thought.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": 1390,
+      "start_year_max": 1410,
+      "end_dating_method": "first-attestation",
+      "end_year_min": 1458,
+      "end_year_max": 1478
+    },
+    {
+      "id": "global.milestones.iron-smelting",
+      "kind": "threshold",
+      "name": "Iron Smelting",
+      "parent_id": "global.milestones",
+      "start_year": -1900,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Hittite-era bloomery iron; the metal that made tools cheap rather than precious.",
+      "start_dating_method": "typological",
+      "start_year_min": -2100
+    },
+    {
+      "id": "global.milestones.alphabet",
+      "kind": "threshold",
+      "name": "Alphabetic Writing",
+      "parent_id": "global.milestones",
+      "start_year": -1850,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "One sign per sound rather than per syllable or word, which made literacy learnable in weeks.",
+      "start_dating_method": "typological",
+      "start_year_min": -2000
+    },
+    {
+      "id": "global.milestones.zero-as-number",
+      "kind": "threshold",
+      "name": "Zero as a Number",
+      "parent_id": "global.milestones",
+      "start_year": 628,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Brahmagupta gave rules for arithmetic with zero and with negatives, not merely a placeholder.",
+      "start_dating_method": "typological",
+      "start_year_min": 608
+    },
+    {
+      "id": "global.milestones.papermaking",
+      "kind": "threshold",
+      "name": "Papermaking",
+      "parent_id": "global.milestones",
+      "start_year": -100,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Cheap writing material from plant fibre, in China centuries before it reached the west.",
+      "start_dating_method": "typological",
+      "start_year_min": -200
+    },
+    {
+      "id": "global.milestones.woodblock-printing",
+      "kind": "threshold",
+      "name": "Woodblock Printing",
+      "parent_id": "global.milestones",
+      "start_year": 650,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Text carved and reproduced in quantity in Tang China, long before movable type.",
+      "start_dating_method": "typological",
+      "start_year_min": 550
+    },
+    {
+      "id": "global.milestones.movable-type",
+      "kind": "threshold",
+      "name": "Movable Type",
+      "parent_id": "global.milestones",
+      "start_year": 1040,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Bi Sheng's ceramic type; reusable characters four centuries before Gutenberg.",
+      "start_dating_method": "typological",
+      "start_year_min": 1020
+    },
+    {
+      "id": "global.milestones.gunpowder",
+      "kind": "threshold",
+      "name": "Gunpowder",
+      "parent_id": "global.milestones",
+      "start_year": 850,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "A Chinese alchemical accident that ended the military logic of the walled city.",
+      "start_dating_method": "typological",
+      "start_year_min": 800
+    },
+    {
+      "id": "global.milestones.magnetic-compass",
+      "kind": "threshold",
+      "name": "Magnetic Compass",
+      "parent_id": "global.milestones",
+      "start_year": 1040,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Made open-water navigation repeatable rather than lucky.",
+      "start_dating_method": "typological",
+      "start_year_min": 990
+    },
+    {
+      "id": "global.milestones.printing-press",
+      "kind": "threshold",
+      "name": "The Printing Press",
+      "parent_id": "global.milestones",
+      "start_year": 1440,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Movable metal type and a screw press in Mainz; the first information technology with a mass market.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.telescope",
+      "kind": "threshold",
+      "name": "The Telescope",
+      "parent_id": "global.milestones",
+      "start_year": 1608,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Turned the sky into something to be examined rather than contemplated.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.steam-engine",
+      "kind": "threshold",
+      "name": "The Steam Engine",
+      "parent_id": "global.milestones",
+      "start_year": 1712,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Newcomen's atmospheric engine; work no longer limited by muscle, wind or falling water.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.vaccination",
+      "kind": "threshold",
+      "name": "Vaccination",
+      "parent_id": "global.milestones",
+      "start_year": 1796,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Jenner's cowpox inoculation, and the beginning of deliberate control of infectious disease.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.germ-theory",
+      "kind": "threshold",
+      "name": "Germ Theory of Disease",
+      "parent_id": "global.milestones",
+      "start_year": 1861,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Established that specific microbes cause specific diseases, which made surgery survivable.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.electric-light",
+      "kind": "threshold",
+      "name": "Practical Electric Lighting",
+      "parent_id": "global.milestones",
+      "start_year": 1879,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Decoupled the working day from daylight.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.powered-flight",
+      "kind": "threshold",
+      "name": "Powered Flight",
+      "parent_id": "global.milestones",
+      "start_year": 1903,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Twelve seconds at Kitty Hawk.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.antibiotics",
+      "kind": "threshold",
+      "name": "Antibiotics",
+      "parent_id": "global.milestones",
+      "start_year": 1928,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Fleming's penicillin; bacterial infection stopped being a common cause of death.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.nuclear-fission",
+      "kind": "threshold",
+      "name": "Controlled Nuclear Fission",
+      "parent_id": "global.milestones",
+      "start_year": 1942,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "The first self-sustaining chain reaction, under a squash court in Chicago.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.transistor",
+      "kind": "threshold",
+      "name": "The Transistor",
+      "parent_id": "global.milestones",
+      "start_year": 1947,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "The switch that made computing small, cheap and eventually universal.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.integrated-circuit",
+      "kind": "threshold",
+      "name": "The Integrated Circuit",
+      "parent_id": "global.milestones",
+      "start_year": 1958,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "Many components on one wafer, which is why computing kept getting cheaper.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.packet-switching",
+      "kind": "threshold",
+      "name": "Packet-Switched Networking",
+      "parent_id": "global.milestones",
+      "start_year": 1969,
+      "end_year": null,
+      "tier": "foundational",
+      "summary": "The first ARPANET link; messages broken into pieces that route themselves.",
+      "start_dating_method": "calendar"
+    },
+    {
+      "id": "global.milestones.genome-sequencing",
+      "kind": "threshold",
+      "name": "The Human Genome Sequenced",
+      "parent_id": "global.milestones",
+      "start_year": 2003,
+      "end_year": null,
+      "tier": "intermediate",
+      "summary": "A species reading its own instructions.",
+      "start_dating_method": "calendar"
     }
   ],
   "redirects": {

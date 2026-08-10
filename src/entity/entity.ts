@@ -25,6 +25,11 @@ export type EntityKind =
   | "reign"
   | "event"
   | "city"
+  | "language"
+  | "tradition"
+  | "people"
+  | "network"
+  | "person"
   | "taxon"
   | "threshold";
 export type Tier = "foundational" | "intermediate" | "specialist";

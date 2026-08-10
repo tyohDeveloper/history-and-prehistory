@@ -1715,6 +1715,7 @@ from normalize_ids import extend as _normalize_ids, rewrite_refs as _rewrite_ref
 from name_repair import extend as _name_repair
 from derive_links import extend as _derive_links
 from historicity import extend as _historicity
+from new_kinds import extend as _new_kinds
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1999,8 +2000,18 @@ print(
 # Adjectival and qualified names are added before aliases are derived, so the adjectival
 # forms become searchable aliases like every other name form. Running it afterwards left
 # "Roman" indexed nowhere, which is the bug this was meant to fix.
+_new_kinds(E, entities)
+# After new_kinds, so names introduced there are checked for collisions too.
 _name_repair(E, entities)
+_migrate_dating(E, entities)
+_derive_links(E, entities)
+_historicity(E, entities)
 
+# Aliases are derived from name_forms LAST, because several later modules add name forms and
+# this has now been got wrong in both directions: running it before name_repair left the
+# adjectival forms ("Roman" for the Roman Empire) indexed nowhere, and moving name_repair after
+# it to fix a different ordering bug re-broke exactly that. Deriving at the end is the only
+# position that does not depend on which module ran when.
 # Search must match on every name a reader might arrive with, including ones
 # the UI files under headings like "Rejected name". Deriving `aliases` from
 # `name_forms` rather than asking authors to maintain both is the only way the
@@ -2029,9 +2040,6 @@ _ID_REDIRECTS = _normalize_ids(E, entities) or {}
 # end abuts the next one's start, and the migration rounds deep-time dates -- so deriving first
 # measured gaps that the rounding then changed, leaving links whose own tolerance rule they no
 # longer satisfied.
-_migrate_dating(E, entities)
-_derive_links(E, entities)
-_historicity(E, entities)
 
 with open(DATA / "entities.json", "w") as f:
     json.dump(_envelope("entities", entities, redirects=_ID_REDIRECTS), f, indent=2, ensure_ascii=False)

@@ -31,6 +31,11 @@ const GLYPH: Record<EntityKind, string> = {
   reign: "\u25CF",
   event: "\u25C7",
   city: "\u2302",
+  language: "\u2635",
+  tradition: "\u269B",
+  people: "\u26AA",
+  network: "\u2726",
+  person: "\u25CF",
   taxon: "\u25D0",
   threshold: "\u25B3",
 };
@@ -92,6 +97,11 @@ const KIND_LABEL: Record<EntityKind, string> = {
   reign: "Reign",
   event: "Event",
   city: "City",
+  language: "Language",
+  tradition: "Tradition",
+  people: "People",
+  network: "Network",
+  person: "Person",
   taxon: "Species",
   threshold: "Earliest known",
 };

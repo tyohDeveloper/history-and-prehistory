@@ -1,3 +1,4 @@
+import { displayRange } from "../src/chrono/displayRange";
 import entitiesFile from "../src/data/entities.json";
 import { describe, expect, it } from "vitest";
 import { calendars, datasetVersion, entities, referenceFrames, schemaVersion, sources, themes } from "../src/dataset/dataset";
@@ -27,7 +28,7 @@ describe("dataset envelope", () => {
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1765);
+    expect(entities.length).toBe(1868);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -117,8 +118,8 @@ describe("gap-analysis baseline", () => {
     // populated endpoint, and bounds are required unless the method is `calendar` (an
     // attested year is not an estimate) or `received` (a traditional figure is the
     // tradition's claim, not a measurement).
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(1723);
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(1614);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(1822);
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(1700);
   });
 
   it("dates each boundary on its own evidence", () => {
@@ -129,7 +130,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(1648);
+    expect(withEnd.length).toBe(1696);
 
     const differing = entities
       .filter(
@@ -211,7 +212,7 @@ describe("gap-analysis baseline", () => {
     // entities in the app -- a reader clicking "China" or "Africa" lands on one -- and
     // they were the emptiest. Now an invariant rather than a record of the gap.
     const regions = entities.filter((e) => e.kind === "region");
-    expect(regions.length).toBe(42);
+    expect(regions.length).toBe(46);
     const missing = regions.filter((e) => (e.summary ?? "").trim() === "").map((e) => e.id);
     expect(missing).toEqual([]);
   });
@@ -1301,5 +1302,80 @@ describe("historicity", () => {
     // of Rome comes second to the man who lost it because the emperor sits at a higher tier.
     const hits = searchEntities(entities, "Romulus").map((e) => e.id);
     expect(hits[0]).toBe("europe.mediterranean.rome.kingdom.romulus");
+  });
+});
+
+describe("the new kinds", () => {
+  // The audit found whole categories absent: not one religion existed as an entity, no trade
+  // network did, and 39% of the dataset was individual reigns, which cannot represent a society
+  // without kings.
+  it("holds all five new kinds", () => {
+    for (const kind of ["language", "tradition", "people", "network", "person"]) {
+      const of = entities.filter((e) => e.kind === kind);
+      expect(of.length, `${kind} entities`).toBeGreaterThan(5);
+    }
+  });
+
+  it("files languages by descent, not geography", () => {
+    // parent_id means linguistic ancestor here. Akkadian's parent is Proto-Semitic, not
+    // Mesopotamia -- and ids stay flat so re-subgrouping a family never changes identity.
+    const akkadian = entities.find((e) => e.id === "global.languages.akkadian")!;
+    expect(akkadian.parent_id).toBe("global.languages.proto-semitic");
+    const semitic = entities.find((e) => e.id === "global.languages.proto-semitic")!;
+    expect(semitic.parent_id).toBe("global.languages.proto-afroasiatic");
+  });
+
+  it("marks proto-languages reconstructed, not doubtful", () => {
+    // A reconstructed proto-language is known by inference, which is a different claim from a
+    // contested one. Nobody doubts Proto-Indo-European; nobody has heard it either.
+    for (const e of entities.filter((x) => x.kind === "language")) {
+      if (!e.name.startsWith("Proto-")) continue;
+      expect(e.historicity, `${e.id}`).toBe("reconstructed");
+      expect(e.start_dating_method, `${e.id}`).toBe("glottochronology");
+    }
+  });
+
+  it("does not give a living tradition an end year", () => {
+    for (const e of entities.filter((x) => x.kind === "tradition")) {
+      if (e.end_year !== null) continue;
+      expect(e.extant, `${e.id} says it continues`).toBe(true);
+    }
+  });
+
+  it("requires a network to name the regions it crossed", () => {
+    // A network is not in a region, which is the point of the kind; but it has to say which
+    // ones it connected or it is untethered.
+    for (const e of entities.filter((x) => x.kind === "network")) {
+      expect((e.regions ?? []).length, `${e.id} names its regions`).toBeGreaterThan(0);
+    }
+  });
+
+  it("stops filing cities as periods", () => {
+    // Byblos and Tyre were `era`, Tenochtitlan was `period`. A period ends; Damascus does not.
+    for (const id of [
+      "west-asia.mesopotamia.phoenicia.byblos",
+      "west-asia.mesopotamia.phoenicia.tyre",
+      "americas.mesoamerica.aztec.tenochtitlan",
+    ]) {
+      expect(entities.find((e) => e.id === id)?.kind, id).toBe("city");
+    }
+  });
+
+  it("carries thresholds past 1650 BCE", () => {
+    // The kind existed and stopped dead at the domestic chicken, so the dataset held the first
+    // controlled fire but not iron, the alphabet, or the transistor.
+    const late = entities.filter((e) => e.kind === "threshold" && (e.start_year ?? 0) > -1650);
+    expect(late.length).toBeGreaterThan(15);
+    const transistor = entities.find((e) => e.id === "global.milestones.transistor")!;
+    expect(transistor.kind).toBe("threshold");
+    expect(transistor.end_year).toBeNull();
+  });
+
+  it("renders a religion in calendar years, not Before Present", () => {
+    // Buddhism read as "2,399 BP - present" because its dating method was classed as
+    // scientific. BP is a frame built for geology; the test is whether a method yields an
+    // absolute calendar year, which first attestation does.
+    const buddhism = entities.find((e) => e.id === "global.traditions.buddhism")!;
+    expect(displayRange(buddhism).frame).toBe("calendar");
   });
 });

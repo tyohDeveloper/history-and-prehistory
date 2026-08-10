@@ -112,6 +112,22 @@ export type DatingMethod =
   /** Ice-core and varve annual layer counting. Reports a maximum counting error. */
   | "layer-counting"
   | "magnetostratigraphy"
+  /** Years counted along a king list or set of annals. Most Egyptian dynasty dates rest on
+   *  this, and it yields a calendar year, so it reads in calendar reckoning. */
+  | "regnal-reckoning"
+  /** Anchored by correlation to a dated event in another culture -- a named eclipse, a letter
+   *  from a known reign, an imported datable object. */
+  | "synchronism"
+  /** Retrocalculation of a recorded astronomical event. Can fix a date to the day. */
+  | "astronomical"
+  /** Rate-of-change estimates on reconstructed vocabulary. Deliberately wide, and deep enough
+   *  that it reads in BP rather than in a calendar nobody was keeping. */
+  | "glottochronology"
+  /** The earliest dated text or inscription in which the thing appears. A terminus ante quem:
+   *  it existed by then, and probably earlier. */
+  | "first-attestation"
+  /** Molecular clock or ancient DNA. Wide, and about populations rather than events. */
+  | "genetic"
   /**
    * Handed down rather than derived: Rome's 753 BCE from the annalists, the
    * Namazga phase brackets from Masson's typology. Distinct from `typological`,
@@ -374,6 +390,15 @@ export function uncertaintyOf(v: YearValue): number | undefined {
  */
 const CALENDAR_METHODS: ReadonlySet<DatingMethod> = new Set([
   "calendar", "dendrochronology", "received", "unknown",
+  // Schema 3.6.0 methods that likewise yield an absolute calendar year. The test is what the
+  // method produces, not how scientific it sounds -- which is why dendrochronology was already
+  // on this side. Regnal reckoning counts years along a king list, synchronism anchors to a
+  // dated event in another culture, astronomical retrocalculation fixes an eclipse to a day,
+  // and first attestation is the date of a text. All four give a year in a calendar.
+  //
+  // Without this, Buddhism rendered as "2,399 BP - present" and Proto-Indo-European as
+  // "6,449 - 4,449 BP", which is a frame built for geology applied to a religion.
+  "regnal-reckoning", "synchronism", "astronomical", "first-attestation",
 ]);
 
 /**
@@ -446,6 +471,12 @@ export function isScientificDating(v: YearValue): boolean {
 }
 
 export const DATING_METHOD_LABEL: Record<DatingMethod, string> = {
+  "regnal-reckoning": "Counted along a king list",
+  synchronism: "Anchored to a dated event elsewhere",
+  astronomical: "Astronomical retrocalculation",
+  glottochronology: "Linguistic rate estimate",
+  "first-attestation": "Earliest dated attestation",
+  genetic: "Molecular clock / ancient DNA",
   calendar: "Calendar / historically attested",
   dendrochronology: "Tree rings",
   "radiocarbon-calibrated": "Radiocarbon, calibrated",

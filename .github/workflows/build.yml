@@ -23,7 +23,16 @@ jobs:
         with:
           node-version: "20"
           cache: npm
+      # The lockfile is generated in Replit and pins every URL to a host that
+      # exists only there. Without this, npm ci crashes with "Exit handler never
+      # called!", the step still passes, and the build fails later with a
+      # misleading TypeScript error.
+      - run: node scripts/normalize-lockfile.mjs
       - run: npm ci
+      - name: Verify the install actually completed
+        # npm ci can exit 0 after an internal crash, leaving devDependencies
+        # missing. Check for one directly rather than trusting the exit code.
+        run: node -e "require.resolve('vitest/package.json'); console.log('devDependencies present')"
       - name: Composed build (check + test + bundle + minify + verify)
         run: npm run build
       - uses: actions/upload-artifact@v4
@@ -41,6 +50,7 @@ jobs:
         with:
           node-version: "20"
           cache: npm
+      - run: node scripts/normalize-lockfile.mjs
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - name: Build artifact for e2e

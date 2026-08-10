@@ -163,6 +163,28 @@ indistinguishable in search. Expect more of this shape.
 Left as a flat alias deliberately. Needs scholarship on who coined the framing
 and what it obscures before it can be typed as `historical` or `rejected`.
 
+## Editorial policy: include it, then label it
+
+Settled 2026-08-10 after a review question — was anything being dropped for want of a
+citation, even where the topic plainly existed?
+
+**Answer: the dataset had it right and my research brief had it wrong.** 1,180 of 1,763
+entities (66%) carry no citation and are included regardless, and the readout says so on the
+entity: "This date is not yet sourced in the dataset. Treat it as a starting point and verify
+it." A missing source is a labelling problem, not grounds for omission.
+
+The brief, however, said **"Every ruler needs a source with a real, working URL"**, which is
+a gate that pushes a researcher to silently drop anyone hard to source. Rewritten: never omit
+a real figure for lack of a citation, include with `source: null` and say what you checked,
+and never fabricate a URL — a guessed citation is worse than none because it looks like
+verification.
+
+One real omission was found and fixed. The Three Sovereigns had been left out on the
+reasoning that five competing lists appear in Han classics so picking one would misrepresent
+the tradition. Wrong call: omission hides the tradition altogether, and **Fuxi and Shennong
+appear in all five lists** — only the third slot is contested. Both are now authored and the
+contested slot is described rather than filled.
+
 ## Essentials repair, 2026-08-10 (v3.32.0.0)
 
 Worked the five items from the audit below. Two of my own claims were wrong and are

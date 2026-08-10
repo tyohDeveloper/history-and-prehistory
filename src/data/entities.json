@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
-  "dataset_version": "0.34.0.0",
-  "generated_at": "2026-08-10T09:13:21Z",
+  "dataset_version": "0.34.1.0",
+  "generated_at": "2026-08-10T09:16:52Z",
   "entities": [
     {
       "id": "global",
@@ -5699,7 +5699,7 @@
       "standing": "traditional",
       "native_name": "三皇五帝",
       "summary": "The sage-rulers of Chinese tradition, placed before the Xia: god-kings credited with agriculture, medicine, writing and silk, then five emperors held up for millennia as the model of virtuous rule.",
-      "date_note": "Traditional bounds, not findings. The tradition has no single canonical form — five different lists of the Three Sovereigns appear in Han-dynasty classics, and the Five Emperors have as many competing groupings. Only the Five Emperors are authored beneath, because theirs is the list carrying dates; picking one of five Sovereign lists and presenting it as the tradition would misrepresent it.",
+      "date_note": "Traditional bounds, not findings. The tradition has no single canonical form — five different lists of the Three Sovereigns appear in Han-dynasty classics, and the Five Emperors have as many competing groupings. Fuxi and Shennong appear in every list of Sovereigns and are authored beneath; the third slot is variously Suiren, Nüwa, Zhurong, Gonggong or the Yellow Emperor, so it is described here rather than filled by picking one list.",
       "source_ids": [
         "berkshire-three-sovereigns",
         "nwe-three-sovereigns"
@@ -29817,6 +29817,73 @@
       "aliases": [
         "Hsia"
       ]
+    },
+    {
+      "id": "east-asia.china.legendary.fuxi",
+      "kind": "reign",
+      "name": "Fuxi",
+      "parent_id": "east-asia.china.legendary",
+      "start_year": -2852,
+      "end_year": -2697,
+      "tier": "intermediate",
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "source_ids": [
+        "berkshire-three-sovereigns",
+        "nwe-three-sovereigns"
+      ],
+      "date_note": "The tradition assigns the Three Sovereigns no usable regnal years — one account gives the Heavenly Sovereign a reign of 18,000 years — so these bounds mark the window before the Yellow Emperor rather than a reign length.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "A mythological figure, described in the sources as a god-king or demigod rather than a ruler with a reign.",
+          "source_ids": [
+            "nwe-three-sovereigns"
+          ]
+        }
+      ],
+      "summary": "Credited in the tradition with writing, divination and the trigrams, and with Nüwa the creation of humanity.",
+      "aliases": [
+        "Fu Hsi",
+        "Paoxi"
+      ],
+      "native_name": "伏羲"
+    },
+    {
+      "id": "east-asia.china.legendary.shennong",
+      "kind": "reign",
+      "name": "Shennong",
+      "parent_id": "east-asia.china.legendary",
+      "start_year": -2852,
+      "end_year": -2697,
+      "tier": "intermediate",
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "source_ids": [
+        "berkshire-three-sovereigns",
+        "nwe-three-sovereigns"
+      ],
+      "date_note": "The tradition assigns the Three Sovereigns no usable regnal years — one account gives the Heavenly Sovereign a reign of 18,000 years — so these bounds mark the window before the Yellow Emperor rather than a reign length.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "A mythological figure, described in the sources as a god-king or demigod rather than a ruler with a reign.",
+          "source_ids": [
+            "nwe-three-sovereigns"
+          ]
+        }
+      ],
+      "summary": "The Divine Farmer, credited with agriculture, the plough, herbal medicine and tea; later identified with the Yan Emperor.",
+      "aliases": [
+        "Divine Farmer",
+        "Shen Nung",
+        "Yan Emperor"
+      ],
+      "native_name": "神農"
     },
     {
       "id": "east-asia.china.legendary.huangdi",

@@ -214,10 +214,10 @@ def _emit_rows(R, rows, parent, url_to_sid, *, legendary: bool, tier: str,
                 continue
         src = row.get("source") or {}
         sid = url_to_sid.get(src.get("url"))
-        if sid is None:
-            raise ValueError(f"reigns_from_research: {row.get('slug')} has no usable source")
-
-        kw: dict = {"source_ids": [sid]}
+        # A row with no source is authored anyway. Two thirds of this dataset carries no
+        # citation and the readout says so on the entity; dropping a real figure for want
+        # of a URL would hide the gap instead of showing it.
+        kw: dict = {"source_ids": [sid]} if sid is not None else {}
         precision = row.get("date_precision") or ("traditional" if legendary else "approx")
         kw["date_precision"] = precision
         if precision == "traditional":

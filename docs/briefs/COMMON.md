@@ -26,10 +26,20 @@ Write a JSON array to the file named in your specific brief. One object per rule
 
 - **Negative years are BCE.** -715 = 715 BCE. Year 0 does not exist; do not emit it.
 - **`slug`** must be lowercase ASCII, hyphenated, no diacritics: `tarquinius-superbus`.
-- **Every ruler needs a `source` with a real, working URL** to a specific page. Prefer
-  encyclopaedias, museums, universities. Wikipedia is acceptable where nothing better
-  exists — say so in `kind` by writing `reference` and noting it.
-  One shared source for the whole list is fine — repeat the same object.
+- **Never omit a real figure because you could not source them.** This is the most
+  important rule here, and an earlier version of this brief got it backwards by demanding a
+  working URL for every entry. Two thirds of this dataset is included with no citation at
+  all, and the app says so on the entity itself: "This date is not yet sourced in the
+  dataset. Treat it as a starting point and verify it." A missing citation is a labelling
+  problem, not a reason to drop someone who demonstrably existed.
+  So: if the person or reign is real and you cannot find a source you trust, **include them
+  anyway** with `"source": null` and a `date_agreement` saying what you looked at and what
+  you could not confirm. Omission hides the gap; inclusion shows it.
+- **Try hard for a source first.** Prefer encyclopaedias, museums, universities. Wikipedia
+  is acceptable where nothing better exists — say so in `kind`. One shared source for the
+  whole list is fine — repeat the same object.
+- **Do not invent a source, ever.** A fabricated or guessed URL is far worse than
+  `"source": null`, because it looks like verification.
 - **Do not invent dates.** If a reign's dates are unknown or wildly disputed, say so in
   `date_agreement` and give the conventional figures with `date_precision: traditional`.
 - **Flag legendary or semi-legendary figures** with `contested`. This dataset cares more

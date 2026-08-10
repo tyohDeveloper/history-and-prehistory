@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 300692,
+  "gzipBytes": 301117,
   "recordedAt": "2026-08-10",
-  "note": "v3.33.0.0 rulers for Rome and Korea, co-rulers and regents, source upgrades (data 0.34.0.0). Measured with zlib.gzipSync."
+  "note": "v3.33.1.0 Three Sovereigns, inclusion-over-citation policy (data 0.34.1.0). Measured with zlib.gzipSync."
 }

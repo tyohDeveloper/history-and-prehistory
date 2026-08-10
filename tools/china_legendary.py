@@ -105,6 +105,29 @@ FIVE_EMPERORS = [
      "outrank birth; traditionally passed the throne to Yu, founder of the Xia.", None),
 ]
 
+# The Three Sovereigns, or the part of them every list agrees on.
+#
+# The first version of this module authored none of them, reasoning that five competing
+# lists appear in Han classics and picking one would misrepresent the tradition. That was
+# the wrong call: omission hides the tradition entirely, and the disagreement is
+# representable. **Fuxi and Shennong appear in all five lists.** Only the third slot is
+# contested, variously Suiren, Nüwa, Zhurong, Gonggong, or the Yellow Emperor — who is
+# already authored here as a Five Emperor.
+#
+# So the two undisputed Sovereigns are authored and the contested slot is described rather
+# than filled. No individual regnal years: the tradition assigns none usable, and one
+# account gives the Heavenly Sovereign twelve heads and a reign of 18,000 years. Both share
+# the window before the Yellow Emperor, which is a statement about placement, not length.
+THREE_SOVEREIGNS = [
+    ("fuxi", "Fuxi", "伏羲", -2852, -2697,
+     "Credited in the tradition with writing, divination and the trigrams, and with Nüwa "
+     "the creation of humanity.", ["Fu Hsi", "Paoxi"]),
+    ("shennong", "Shennong", "神農", -2852, -2697,
+     "The Divine Farmer, credited with agriculture, the plough, herbal medicine and tea; "
+     "later identified with the Yan Emperor.",
+     ["Divine Farmer", "Shen Nung", "Yan Emperor"]),
+]
+
 LEGENDARY_ID = "east-asia.china.legendary"
 XIA_ID = "east-asia.china.xia"
 ERLITOU_OLD = "east-asia.china.legendary.erlitou"
@@ -138,9 +161,10 @@ def extend(E, entities):
     node["date_note"] = (
         "Traditional bounds, not findings. The tradition has no single canonical form — "
         "five different lists of the Three Sovereigns appear in Han-dynasty classics, and "
-        "the Five Emperors have as many competing groupings. Only the Five Emperors are "
-        "authored beneath, because theirs is the list carrying dates; picking one of five "
-        "Sovereign lists and presenting it as the tradition would misrepresent it.")
+        "the Five Emperors have as many competing groupings. Fuxi and Shennong appear in "
+        "every list of Sovereigns and are authored beneath; the third slot is variously "
+        "Suiren, Nüwa, Zhurong, Gonggong or the Yellow Emperor, so it is described here "
+        "rather than filled by picking one list.")
     node["source_ids"] = sorted(set(node.get("source_ids", [])) |
                                 {S_BERKSHIRE, S_NWE_SANHUANG})
     caveats = list(node.get("caveats", []))
@@ -158,6 +182,23 @@ def extend(E, entities):
         if not any(c["text"] == text for c in caveats):
             caveats.append({"kind": kind, "text": text, "source_ids": warrant})
     node["caveats"] = caveats
+
+    for slug, name, native, start, end, summary, aliases in THREE_SOVEREIGNS:
+        R(slug, name, LEGENDARY_ID, start, end, "intermediate",
+          summary=summary, aliases=aliases, native=native,
+          date_precision="traditional",
+          start_dating_method="received",
+          end_dating_method="received",
+          standing="traditional",
+          source_ids=[S_BERKSHIRE, S_NWE_SANHUANG],
+          date_note="The tradition assigns the Three Sovereigns no usable regnal years — "
+                    "one account gives the Heavenly Sovereign a reign of 18,000 years — so "
+                    "these bounds mark the window before the Yellow Emperor rather than a "
+                    "reign length.",
+          caveats=[{"kind": "contested-existence",
+                    "text": "A mythological figure, described in the sources as a god-king "
+                            "or demigod rather than a ruler with a reign.",
+                    "source_ids": [S_NWE_SANHUANG]}])
 
     for slug, name, native, start, end, summary, aliases in FIVE_EMPERORS:
         R(slug, name, LEGENDARY_ID, start, end, "intermediate",
@@ -201,5 +242,6 @@ def extend(E, entities):
                      "source_ids": [S_WIKI_ERLITOU, S_BRIT_ERLITOU]})
     erlitou["caveats"] = ecav
 
-    print(f"China legendary age: rebuilt as a tradition, {len(FIVE_EMPERORS)} emperors "
-          f"authored, Erlitou moved to the Xia")
+    print(f"China legendary age: rebuilt as a tradition, "
+          f"{len(THREE_SOVEREIGNS)} sovereigns and {len(FIVE_EMPERORS)} emperors authored, "
+          f"Erlitou moved to the Xia")

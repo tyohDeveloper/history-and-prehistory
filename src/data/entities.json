@@ -1,7 +1,7 @@
 {
   "schema_version": "3.6.0",
   "dataset_version": "0.36.0.0",
-  "generated_at": "2026-08-10T20:48:11Z",
+  "generated_at": "2026-08-10T21:25:15Z",
   "entities": [
     {
       "id": "global",
@@ -3439,12 +3439,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 620,
-      "start_year_max": 670,
-      "end_dating_method": "unknown",
-      "end_year_min": 625,
-      "end_year_max": 675,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3467,12 +3463,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 625,
-      "start_year_max": 675,
-      "end_dating_method": "unknown",
-      "end_year_min": 629,
-      "end_year_max": 679,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3495,12 +3487,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 661,
-      "start_year_max": 711,
-      "end_dating_method": "unknown",
-      "end_year_min": 661,
-      "end_year_max": 711,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3523,12 +3511,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 676,
-      "start_year_max": 726,
-      "end_dating_method": "unknown",
-      "end_year_min": 679,
-      "end_year_max": 729,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3556,12 +3540,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 679,
-      "start_year_max": 729,
-      "end_dating_method": "unknown",
-      "end_year_min": 683,
-      "end_year_max": 733,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3586,12 +3566,8 @@
       ],
       "allow_outside_parent_dates": true,
       "date_note": "Nengō began 708 in Asuka, continued into Nara (710). Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
-      "start_dating_method": "unknown",
-      "start_year_min": 683,
-      "start_year_max": 733,
-      "end_dating_method": "unknown",
-      "end_year_min": 690,
-      "end_year_max": 740,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "links": [
         {
           "type": "succeeded_by",
@@ -3613,12 +3589,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 690,
-      "start_year_max": 740,
-      "end_dating_method": "unknown",
-      "end_year_min": 692,
-      "end_year_max": 742,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3646,12 +3618,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 692,
-      "start_year_max": 742,
-      "end_dating_method": "unknown",
-      "end_year_min": 699,
-      "end_year_max": 749,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3679,12 +3647,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 699,
-      "start_year_max": 749,
-      "end_dating_method": "unknown",
-      "end_year_min": 704,
-      "end_year_max": 754,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3712,12 +3676,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 704,
-      "start_year_max": 754,
-      "end_dating_method": "unknown",
-      "end_year_min": 724,
-      "end_year_max": 774,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3745,12 +3705,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 724,
-      "start_year_max": 774,
-      "end_dating_method": "unknown",
-      "end_year_min": 724,
-      "end_year_max": 774,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3777,12 +3733,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 724,
-      "start_year_max": 774,
-      "end_dating_method": "unknown",
-      "end_year_min": 732,
-      "end_year_max": 782,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3809,12 +3761,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 732,
-      "start_year_max": 782,
-      "end_dating_method": "unknown",
-      "end_year_min": 740,
-      "end_year_max": 790,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3841,12 +3789,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 740,
-      "start_year_max": 790,
-      "end_dating_method": "unknown",
-      "end_year_min": 742,
-      "end_year_max": 792,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3873,12 +3817,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 742,
-      "start_year_max": 792,
-      "end_dating_method": "unknown",
-      "end_year_min": 745,
-      "end_year_max": 795,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3905,12 +3845,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 745,
-      "start_year_max": 795,
-      "end_dating_method": "unknown",
-      "end_year_min": 756,
-      "end_year_max": 806,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3938,12 +3874,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 756,
-      "start_year_max": 806,
-      "end_dating_method": "unknown",
-      "end_year_min": 757,
-      "end_year_max": 807,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -3973,12 +3905,8 @@
       ],
       "allow_outside_parent_dates": true,
       "date_note": "Nengō 782-806 spans the Nara-Heian boundary (794). Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
-      "start_dating_method": "unknown",
-      "start_year_min": 757,
-      "start_year_max": 807,
-      "end_dating_method": "unknown",
-      "end_year_min": 781,
-      "end_year_max": 831,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "links": [
         {
           "type": "preceded_by",
@@ -4000,12 +3928,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 781,
-      "start_year_max": 831,
-      "end_dating_method": "unknown",
-      "end_year_min": 785,
-      "end_year_max": 835,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4028,12 +3952,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 785,
-      "start_year_max": 835,
-      "end_dating_method": "unknown",
-      "end_year_min": 799,
-      "end_year_max": 849,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4061,12 +3981,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 799,
-      "start_year_max": 849,
-      "end_dating_method": "unknown",
-      "end_year_min": 809,
-      "end_year_max": 859,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4095,12 +4011,8 @@
         "japanese-nengo"
       ],
       "qualified_name": "Jōwa (Heian Period)",
-      "start_dating_method": "unknown",
-      "start_year_min": 809,
-      "start_year_max": 859,
-      "end_dating_method": "unknown",
-      "end_year_min": 823,
-      "end_year_max": 873,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4128,12 +4040,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 823,
-      "start_year_max": 873,
-      "end_dating_method": "unknown",
-      "end_year_min": 826,
-      "end_year_max": 876,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4161,12 +4069,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 826,
-      "start_year_max": 876,
-      "end_dating_method": "unknown",
-      "end_year_min": 829,
-      "end_year_max": 879,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4194,12 +4098,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 829,
-      "start_year_max": 879,
-      "end_dating_method": "unknown",
-      "end_year_min": 832,
-      "end_year_max": 882,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4227,12 +4127,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 832,
-      "start_year_max": 882,
-      "end_dating_method": "unknown",
-      "end_year_min": 834,
-      "end_year_max": 884,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4260,12 +4156,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 834,
-      "start_year_max": 884,
-      "end_dating_method": "unknown",
-      "end_year_min": 852,
-      "end_year_max": 902,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4293,12 +4185,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 852,
-      "start_year_max": 902,
-      "end_dating_method": "unknown",
-      "end_year_min": 860,
-      "end_year_max": 910,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4326,12 +4214,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 860,
-      "start_year_max": 910,
-      "end_dating_method": "unknown",
-      "end_year_min": 864,
-      "end_year_max": 914,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4359,12 +4243,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 864,
-      "start_year_max": 914,
-      "end_dating_method": "unknown",
-      "end_year_min": 873,
-      "end_year_max": 923,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4392,12 +4272,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 873,
-      "start_year_max": 923,
-      "end_dating_method": "unknown",
-      "end_year_min": 876,
-      "end_year_max": 926,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4425,12 +4301,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 876,
-      "start_year_max": 926,
-      "end_dating_method": "unknown",
-      "end_year_min": 898,
-      "end_year_max": 948,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4458,12 +4330,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 898,
-      "start_year_max": 948,
-      "end_dating_method": "unknown",
-      "end_year_min": 906,
-      "end_year_max": 956,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4491,12 +4359,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 906,
-      "start_year_max": 956,
-      "end_dating_method": "unknown",
-      "end_year_min": 913,
-      "end_year_max": 963,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4524,12 +4388,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 913,
-      "start_year_max": 963,
-      "end_dating_method": "unknown",
-      "end_year_min": 922,
-      "end_year_max": 972,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4557,12 +4417,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 922,
-      "start_year_max": 972,
-      "end_dating_method": "unknown",
-      "end_year_min": 932,
-      "end_year_max": 982,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4590,12 +4446,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 932,
-      "start_year_max": 982,
-      "end_dating_method": "unknown",
-      "end_year_min": 936,
-      "end_year_max": 986,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4623,12 +4475,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 936,
-      "start_year_max": 986,
-      "end_dating_method": "unknown",
-      "end_year_min": 939,
-      "end_year_max": 989,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4656,12 +4504,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 939,
-      "start_year_max": 989,
-      "end_dating_method": "unknown",
-      "end_year_min": 943,
-      "end_year_max": 993,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4689,12 +4533,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 943,
-      "start_year_max": 993,
-      "end_dating_method": "unknown",
-      "end_year_min": 945,
-      "end_year_max": 995,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4722,12 +4562,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 945,
-      "start_year_max": 995,
-      "end_dating_method": "unknown",
-      "end_year_min": 949,
-      "end_year_max": 999,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4755,12 +4591,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 949,
-      "start_year_max": 999,
-      "end_dating_method": "unknown",
-      "end_year_min": 951,
-      "end_year_max": 1001,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4789,12 +4621,8 @@
         "japanese-nengo"
       ],
       "qualified_name": "Jōgen (Heian Period)",
-      "start_dating_method": "unknown",
-      "start_year_min": 951,
-      "start_year_max": 1001,
-      "end_dating_method": "unknown",
-      "end_year_min": 953,
-      "end_year_max": 1003,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4822,12 +4650,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 953,
-      "start_year_max": 1003,
-      "end_dating_method": "unknown",
-      "end_year_min": 958,
-      "end_year_max": 1008,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4855,12 +4679,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 958,
-      "start_year_max": 1008,
-      "end_dating_method": "unknown",
-      "end_year_min": 960,
-      "end_year_max": 1010,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4888,12 +4708,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 960,
-      "start_year_max": 1010,
-      "end_dating_method": "unknown",
-      "end_year_min": 962,
-      "end_year_max": 1012,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4921,12 +4737,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 962,
-      "start_year_max": 1012,
-      "end_dating_method": "unknown",
-      "end_year_min": 964,
-      "end_year_max": 1014,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4954,12 +4766,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 964,
-      "start_year_max": 1014,
-      "end_dating_method": "unknown",
-      "end_year_min": 965,
-      "end_year_max": 1015,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -4987,12 +4795,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 965,
-      "start_year_max": 1015,
-      "end_dating_method": "unknown",
-      "end_year_min": 970,
-      "end_year_max": 1020,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -5020,12 +4824,8 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 970,
-      "start_year_max": 1020,
-      "end_dating_method": "unknown",
-      "end_year_min": 974,
-      "end_year_max": 1024,
+      "start_dating_method": "calendar",
+      "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
         {
@@ -5053,9 +4853,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
-      "start_dating_method": "unknown",
-      "start_year_min": 974,
-      "start_year_max": 1024,
+      "start_dating_method": "calendar",
       "end_dating_method": "calendar",
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "links": [
@@ -43785,7 +43583,7 @@
     },
     {
       "id": "europe.western.netherlands",
-      "kind": "reign",
+      "kind": "polity",
       "name": "The Netherlands",
       "parent_id": "europe.western",
       "start_year": 1581,
@@ -53397,7 +53195,7 @@
     },
     {
       "id": "americas.city-moundville",
-      "kind": "city",
+      "kind": "site",
       "name": "Moundville",
       "parent_id": "americas",
       "start_year": 1000,
@@ -53419,7 +53217,7 @@
     },
     {
       "id": "americas.city-etowah",
-      "kind": "city",
+      "kind": "site",
       "name": "Etowah",
       "parent_id": "americas",
       "start_year": 1000,
@@ -53441,7 +53239,7 @@
     },
     {
       "id": "americas.city-spiro",
-      "kind": "city",
+      "kind": "site",
       "name": "Spiro Mounds",
       "parent_id": "americas",
       "start_year": 800,
@@ -54862,7 +54660,7 @@
     },
     {
       "id": "oceania.city-honaunau",
-      "kind": "city",
+      "kind": "site",
       "name": "Hōnaunau",
       "parent_id": "oceania",
       "start_year": 1200,
@@ -61195,7 +60993,7 @@
     },
     {
       "id": "south-asia.city-konark",
-      "kind": "city",
+      "kind": "site",
       "name": "Konark",
       "parent_id": "south-asia",
       "start_year": 1250,
@@ -62468,7 +62266,7 @@
     },
     {
       "id": "southeast-asia.city-myson",
-      "kind": "city",
+      "kind": "site",
       "name": "My Son",
       "parent_id": "southeast-asia",
       "start_year": 400,
@@ -67760,7 +67558,7 @@
     },
     {
       "id": "europe.city-nemea",
-      "kind": "city",
+      "kind": "site",
       "name": "Nemea",
       "parent_id": "europe",
       "start_year": -800,
@@ -67791,7 +67589,7 @@
     },
     {
       "id": "europe.city-isthmia",
-      "kind": "city",
+      "kind": "site",
       "name": "Isthmia",
       "parent_id": "europe",
       "start_year": -1000,
@@ -67951,7 +67749,7 @@
     },
     {
       "id": "europe.city-olympia",
-      "kind": "city",
+      "kind": "site",
       "name": "Olympia",
       "parent_id": "europe",
       "start_year": -1000,
@@ -68008,7 +67806,7 @@
     },
     {
       "id": "europe.city-delphi",
-      "kind": "city",
+      "kind": "site",
       "name": "Delphi",
       "parent_id": "europe",
       "start_year": -1400,
@@ -68921,7 +68719,7 @@
     },
     {
       "id": "europe.city-dodona",
-      "kind": "city",
+      "kind": "site",
       "name": "Dodona",
       "parent_id": "europe",
       "start_year": -1200,
@@ -69765,7 +69563,7 @@
     },
     {
       "id": "europe.city-vinca",
-      "kind": "city",
+      "kind": "site",
       "name": "Vinča",
       "parent_id": "europe",
       "start_year": -5700,
@@ -72349,7 +72147,7 @@
     },
     {
       "id": "europe.city-pantalica",
-      "kind": "city",
+      "kind": "site",
       "name": "Pantalica",
       "parent_id": "europe",
       "start_year": -1250,
@@ -75511,7 +75309,7 @@
     },
     {
       "id": "europe.city-maiden-castle",
-      "kind": "city",
+      "kind": "site",
       "name": "Maiden Castle",
       "parent_id": "europe",
       "start_year": -600,
@@ -75668,7 +75466,7 @@
     },
     {
       "id": "europe.city-stonehenge",
-      "kind": "city",
+      "kind": "site",
       "name": "Stonehenge",
       "parent_id": "europe",
       "start_year": -3000,
@@ -75720,7 +75518,7 @@
     },
     {
       "id": "europe.city-tara",
-      "kind": "city",
+      "kind": "site",
       "name": "Tara",
       "parent_id": "europe",
       "start_year": -2500,
@@ -76232,7 +76030,7 @@
     },
     {
       "id": "europe.city-jelling",
-      "kind": "city",
+      "kind": "site",
       "name": "Jelling",
       "parent_id": "europe",
       "start_year": 900,
@@ -76313,7 +76111,7 @@
     },
     {
       "id": "europe.city-trelleborg",
-      "kind": "city",
+      "kind": "site",
       "name": "Trelleborg (Slagelse)",
       "parent_id": "europe",
       "start_year": 980,
@@ -76649,7 +76447,7 @@
     },
     {
       "id": "europe.city-thingvellir",
-      "kind": "city",
+      "kind": "site",
       "name": "Þingvellir",
       "parent_id": "europe",
       "start_year": 930,
@@ -80180,7 +79978,7 @@
     },
     {
       "id": "west-asia.city-tell-es-sawwan",
-      "kind": "city",
+      "kind": "site",
       "name": "Tell es-Sawwan",
       "parent_id": "west-asia",
       "start_year": -6300,
@@ -80206,7 +80004,7 @@
     },
     {
       "id": "west-asia.city-jarmo",
-      "kind": "city",
+      "kind": "site",
       "name": "Jarmo",
       "parent_id": "west-asia",
       "start_year": -7500,
@@ -80237,7 +80035,7 @@
     },
     {
       "id": "west-asia.city-samarra-prehistoric",
-      "kind": "city",
+      "kind": "site",
       "name": "Tell Samarra (Samarran culture)",
       "parent_id": "west-asia",
       "start_year": -6200,
@@ -80268,7 +80066,7 @@
     },
     {
       "id": "west-asia.city-choga-mami",
-      "kind": "city",
+      "kind": "site",
       "name": "Choga Mami",
       "parent_id": "west-asia",
       "start_year": -6000,
@@ -81589,7 +81387,7 @@
     },
     {
       "id": "west-asia.city-beidha",
-      "kind": "city",
+      "kind": "site",
       "name": "Beidha",
       "parent_id": "west-asia",
       "start_year": -7200,
@@ -82501,7 +82299,7 @@
     },
     {
       "id": "west-asia.city-shiloh",
-      "kind": "city",
+      "kind": "site",
       "name": "Shiloh",
       "parent_id": "west-asia",
       "start_year": -1600,
@@ -82953,7 +82751,7 @@
     },
     {
       "id": "west-asia.city-masada",
-      "kind": "city",
+      "kind": "site",
       "name": "Masada",
       "parent_id": "west-asia",
       "start_year": -100,
@@ -82984,7 +82782,7 @@
     },
     {
       "id": "west-asia.city-qumran",
-      "kind": "city",
+      "kind": "site",
       "name": "Qumran",
       "parent_id": "west-asia",
       "start_year": -150,
@@ -83432,7 +83230,7 @@
     },
     {
       "id": "west-asia.city-timna-copper",
-      "kind": "city",
+      "kind": "site",
       "name": "Timna",
       "parent_id": "west-asia",
       "start_year": -1300,
@@ -83497,7 +83295,7 @@
     },
     {
       "id": "west-asia.city-karahan-tepe",
-      "kind": "city",
+      "kind": "site",
       "name": "Karahan Tepe",
       "parent_id": "west-asia",
       "start_year": -9400,
@@ -83528,7 +83326,7 @@
     },
     {
       "id": "west-asia.city-nevali-cori",
-      "kind": "city",
+      "kind": "site",
       "name": "Nevalı Çori",
       "parent_id": "west-asia",
       "start_year": -8600,
@@ -83559,7 +83357,7 @@
     },
     {
       "id": "west-asia.city-cayonu",
-      "kind": "city",
+      "kind": "site",
       "name": "Çayönü",
       "parent_id": "west-asia",
       "start_year": -8600,
@@ -83590,7 +83388,7 @@
     },
     {
       "id": "west-asia.city-asikli-hoyuk",
-      "kind": "city",
+      "kind": "site",
       "name": "Aşıklı Höyük",
       "parent_id": "west-asia",
       "start_year": -8400,
@@ -83621,7 +83419,7 @@
     },
     {
       "id": "west-asia.city-hacilar",
-      "kind": "city",
+      "kind": "site",
       "name": "Hacılar",
       "parent_id": "west-asia",
       "start_year": -7000,
@@ -83652,7 +83450,7 @@
     },
     {
       "id": "west-asia.city-can-hasan",
-      "kind": "city",
+      "kind": "site",
       "name": "Can Hasan",
       "parent_id": "west-asia",
       "start_year": -6500,
@@ -83914,7 +83712,7 @@
     },
     {
       "id": "west-asia.city-yazilikaya",
-      "kind": "city",
+      "kind": "site",
       "name": "Yazılıkaya",
       "parent_id": "west-asia",
       "start_year": -1500,
@@ -84133,7 +83931,7 @@
     },
     {
       "id": "west-asia.city-didyma",
-      "kind": "city",
+      "kind": "site",
       "name": "Didyma",
       "parent_id": "west-asia",
       "start_year": -700,
@@ -86514,7 +86312,7 @@
     },
     {
       "id": "west-asia.city-takht-e-soleyman",
-      "kind": "city",
+      "kind": "site",
       "name": "Shiz",
       "parent_id": "west-asia",
       "start_year": 400,
@@ -87771,7 +87569,7 @@
     },
     {
       "id": "africa.city-giza-workers",
-      "kind": "city",
+      "kind": "site",
       "name": "Heit el-Ghurab",
       "parent_id": "africa",
       "start_year": -2600,
@@ -87807,7 +87605,7 @@
     },
     {
       "id": "africa.city-saqqara",
-      "kind": "city",
+      "kind": "site",
       "name": "Saqqara",
       "parent_id": "africa",
       "start_year": -3000,
@@ -88120,7 +87918,7 @@
     },
     {
       "id": "africa.city-deir-el-medina",
-      "kind": "city",
+      "kind": "site",
       "name": "Deir el-Medina",
       "parent_id": "africa",
       "start_year": -1550,
@@ -88822,7 +88620,7 @@
     },
     {
       "id": "africa.city-kahun",
-      "kind": "city",
+      "kind": "site",
       "name": "Kahun",
       "parent_id": "africa",
       "start_year": -1895,
@@ -89368,7 +89166,7 @@
     },
     {
       "id": "africa.city-mirgissa",
-      "kind": "city",
+      "kind": "site",
       "name": "Mirgissa",
       "parent_id": "africa",
       "start_year": -1900,
@@ -89399,7 +89197,7 @@
     },
     {
       "id": "africa.city-semna",
-      "kind": "city",
+      "kind": "site",
       "name": "Semna",
       "parent_id": "africa",
       "start_year": -1900,
@@ -89526,7 +89324,7 @@
     },
     {
       "id": "africa.city-nuri",
-      "kind": "city",
+      "kind": "site",
       "name": "Nuri",
       "parent_id": "africa",
       "start_year": -700,
@@ -89650,7 +89448,7 @@
     },
     {
       "id": "africa.city-musawwarat",
-      "kind": "city",
+      "kind": "site",
       "name": "Musawwarat es-Sufra",
       "parent_id": "africa",
       "start_year": -300,
@@ -92137,7 +91935,7 @@
     },
     {
       "id": "africa.city-igbo-ukwu",
-      "kind": "city",
+      "kind": "site",
       "name": "Igbo-Ukwu",
       "parent_id": "africa",
       "start_year": 800,
@@ -92215,7 +92013,7 @@
     },
     {
       "id": "africa.city-koumbi-tegdaoust-note",
-      "kind": "city",
+      "kind": "site",
       "name": "Sine-Ngayene",
       "parent_id": "africa",
       "start_year": -300,

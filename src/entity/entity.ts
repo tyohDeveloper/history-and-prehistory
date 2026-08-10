@@ -33,6 +33,9 @@ export type EntityKind =
   | "reign"
   | "event"
   | "city"
+  // A place that mattered without being a town: a sanctuary, a mound centre, a temple complex.
+  // Fifty-seven of these had been filed as cities, and most said so in their own summaries.
+  | "site"
   | "language"
   | "tradition"
   | "people"

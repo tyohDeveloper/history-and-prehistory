@@ -126,7 +126,10 @@ describe("gap-analysis baseline", () => {
         // 1,036, down from 1,700. The drop is the fix, not a regression: 664 entities dated after
     // 1000 CE had been given plus-or-minus a century by a convention that keyed on abs(year) and
     // so treated 1989 CE like 1989 BCE. The Fall of the Berlin Wall read 1889 to 2089.
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(2254);
+    // Down 51 from 2,254: the Japanese court eras had carried a fabricated plus-or-minus 25 years,
+    // and a proclaimed era recorded in court documents has no measurement error. Shucho lasted
+    // three months in 686 and had been given a window of 661 to 711.
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(2203);
   });
 
   it("dates each boundary on its own evidence", () => {

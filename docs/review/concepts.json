@@ -1,0 +1,3263 @@
+[
+ {
+  "id": "africa.nile.egypt.predynastic.narmer-palette",
+  "name": "The Narmer Palette",
+  "kind": "event",
+  "under": "Predynastic Egypt < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -3100,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -3150,
+   -3050
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "A carved schist palette showing a king smiting an enemy, and probably the most over-read object in Egyptology.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.egypt.predynastic.state-formation",
+  "name": "The Speed of Egyptian State Formation",
+  "kind": "event",
+  "under": "Predynastic Egypt < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -3800,
+  "end": -3085,
+  "extant": null,
+  "bounds": [
+   -3850,
+   -3750
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Egypt went from pre-state to unified state in six or seven centuries, where the same journey in Southwest Asia took four or five millennia.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.peoples-amazigh",
+  "name": "Amazigh",
+  "kind": "people",
+  "under": "Africa",
+  "start": -2000,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -2500,
+   -1500
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Indigenous peoples of North Africa, continuous through Punic, Roman, Arab and French rule.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.peoples-bantu-peoples",
+  "name": "Bantu-Speaking Peoples",
+  "kind": "people",
+  "under": "Africa",
+  "start": -3000,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -3500,
+   -2500
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Their expansion carried farming, ironworking and a language family across a third of a continent.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.prehistory.african-cattle",
+  "name": "Cattle Herding in Africa",
+  "kind": "threshold",
+  "under": "African Prehistory < Africa",
+  "start": -5750,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -5750,
+   null
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": "minority",
+  "summary": "The oldest uncontroversial domestic cattle in Africa, in Egypt's Western Desert -- introduced from the Near East rather than domesticated locally.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.prehistory.african-cereals",
+  "name": "African Cereal Domestication",
+  "kind": "threshold",
+  "under": "African Prehistory < Africa",
+  "start": -4000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -4000,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Pearl millet in the West African Sahel and sorghum in eastern Sudan: two independent African domestications of indigenous cereals.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "americas.peoples-thule",
+  "name": "Thule",
+  "kind": "people",
+  "under": "Americas",
+  "start": 1000,
+  "end": 1600,
+  "extant": null,
+  "bounds": [
+   900,
+   1100
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Ancestors of the Inuit, who crossed the American Arctic in a few centuries with dog sleds and toggling harpoons.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.prehistory.megafaunal-extinction",
+  "name": "North American Megafaunal Extinction",
+  "kind": "event",
+  "under": "Americas Prehistory < Americas",
+  "start": -11850,
+  "end": -9451,
+  "extant": null,
+  "bounds": [
+   -12850,
+   -10850
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "At least 37 genera, some four-fifths of North America's large mammals, disappear near the end of the Pleistocene.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.peoples-huns",
+  "name": "Huns",
+  "kind": "people",
+  "under": "Central Asia & the Steppe",
+  "start": 370,
+  "end": 470,
+  "extant": null,
+  "bounds": [
+   340,
+   400
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Arrived on the Danube within a generation and broke the Roman order in the west without ever holding a city.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "central-asia.peoples-sarmatians",
+  "name": "Sarmatians",
+  "kind": "people",
+  "under": "Central Asia & the Steppe",
+  "start": -400,
+  "end": 400,
+  "extant": null,
+  "bounds": [
+   -500,
+   -300
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Successors to the Scythians on the western steppe, and heavy cavalry the Romans learned from.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "central-asia.peoples-turkic-peoples",
+  "name": "Turkic Peoples",
+  "kind": "people",
+  "under": "Central Asia & the Steppe",
+  "start": 550,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   450,
+   650
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Spread from Mongolia to Anatolia over a millennium, founding states from the Gokturks to the Ottomans.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "central-asia.peoples-xiongnu",
+  "name": "Xiongnu",
+  "kind": "people",
+  "under": "Central Asia & the Steppe",
+  "start": -300,
+  "end": 100,
+  "extant": null,
+  "bounds": [
+   -400,
+   -200
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Steppe confederation whose pressure shaped Han policy, the frontier walls, and the westward movement of peoples.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "central-asia.scythians",
+  "name": "Scythians",
+  "kind": "people",
+  "under": "Eurasian Steppe < Central Asia & the Steppe",
+  "start": -900,
+  "end": -200,
+  "extant": null,
+  "bounds": [
+   -950,
+   -850
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.yayoi.yayoi-redating",
+  "name": "The Yayoi Redating Controversy",
+  "kind": "event",
+  "under": "Yayoi Period < Japan < East Asia",
+  "start": -1000,
+  "end": -400,
+  "extant": null,
+  "bounds": [
+   -1100,
+   -900
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "In 2003 a national museum used AMS dating to move the start of the Yayoi back five centuries, and the field has still not settled where it lands.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.republic.late.actium",
+  "name": "Battle of Actium",
+  "kind": "event",
+  "under": "Late Republic < Roman Republic < Ancient Rome < Mediterranean < Europe",
+  "start": -31,
+  "end": -31,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Octavian's naval victory over Antony and Cleopatra; effective end of the Republic.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.republic.late.caesar-assassination",
+  "name": "Assassination of Julius Caesar",
+  "kind": "event",
+  "under": "Late Republic < Roman Republic < Ancient Rome < Mediterranean < Europe",
+  "start": -44,
+  "end": -44,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Caesar assassinated on the Ides of March, 44 BCE, by a conspiracy of senators.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.peoples-celts",
+  "name": "Celtic Peoples",
+  "kind": "people",
+  "under": "Europe",
+  "start": -800,
+  "end": 100,
+  "extant": null,
+  "bounds": [
+   -950,
+   -650
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A shared language, art and metalwork across Iron Age Europe, never a single state.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.peoples-germanic-peoples",
+  "name": "Germanic Peoples",
+  "kind": "people",
+  "under": "Europe",
+  "start": -500,
+  "end": 800,
+  "extant": null,
+  "bounds": [
+   -650,
+   -350
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Named as an outside threat by Rome and eventually the founders of its successor kingdoms.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.peoples-sami",
+  "name": "Sami",
+  "kind": "people",
+  "under": "Europe",
+  "start": -1000,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -1500,
+   -500
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Reindeer-herding people of Fennoscandia, and among the few European peoples never to form a state.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.peoples-slavs",
+  "name": "Slavic Peoples",
+  "kind": "people",
+  "under": "Europe",
+  "start": 400,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   250,
+   550
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Expanded across eastern and southeastern Europe in the centuries after Rome, with little written trace of the process.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.prehistory.event-8point2ka",
+  "name": "The 8.2 Kiloyear Event",
+  "kind": "event",
+  "under": "European Prehistory < Europe",
+  "start": -6300,
+  "end": -6140,
+  "extant": null,
+  "bounds": [
+   -6350,
+   -6250
+  ],
+  "dated_by": "layer-counting",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "An abrupt cooling that hit Mesolithic Europe unevenly — collapse in Scotland, apparent resilience in Belgium, and growth on the Atlantic coast.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.prehistory.steppe-influx",
+  "name": "The Steppe Ancestry Influx",
+  "kind": "event",
+  "under": "European Prehistory < Europe",
+  "start": -3000,
+  "end": -2900,
+  "extant": null,
+  "bounds": [
+   -3200,
+   -2800
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "A second large population movement, out of the Pontic-Caspian steppe, which reshaped northern Europe and is widely tied to the arrival of Indo-European languages.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.prehistory.storegga",
+  "name": "Storegga Slide Tsunami",
+  "kind": "event",
+  "under": "European Prehistory < Europe",
+  "start": -6191,
+  "end": -6191,
+  "extant": null,
+  "bounds": [
+   -6391,
+   -5991
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "One of the largest known Holocene tsunamis, generated by a submarine landslide off Norway and striking what remained of Doggerland.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.reformation.thirty-years-war",
+  "name": "Thirty Years' War",
+  "kind": "event",
+  "under": "The Reformation < Europe",
+  "start": 1618,
+  "end": 1648,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Devastating pan-European religious and political war ending with the Peace of Westphalia.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.britain.acts-of-union",
+  "name": "The Acts of Union",
+  "kind": "event",
+  "under": "Western Europe < Europe",
+  "start": 1707,
+  "end": 1707,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "England and Scotland became one state, which is the point at which an English empire can properly be called British.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.western.france.napoleon.austerlitz",
+  "name": "Battle of Austerlitz",
+  "kind": "event",
+  "under": "Napoleonic Era < France (Medieval to Modern) < Western Europe < Europe",
+  "start": 1805,
+  "end": 1805,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Napoleon's masterpiece; defeat of the Third Coalition (Austria and Russia).",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.france.napoleon.trafalgar",
+  "name": "Battle of Trafalgar",
+  "kind": "event",
+  "under": "Napoleonic Era < France (Medieval to Modern) < Western Europe < Europe",
+  "start": 1805,
+  "end": 1805,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Nelson's decisive naval victory over the Franco-Spanish fleet; secured British naval supremacy for a century.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.france.napoleon.waterloo",
+  "name": "Battle of Waterloo",
+  "kind": "event",
+  "under": "Napoleonic Era < France (Medieval to Modern) < Western Europe < Europe",
+  "start": 1815,
+  "end": 1815,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Napoleon's final defeat at the hands of Wellington and Blücher; end of the Napoleonic era.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.bronze-age.collapse",
+  "name": "Late Bronze Age Collapse",
+  "kind": "event",
+  "under": "Bronze Age < Global & Multi-Regional",
+  "start": -1200,
+  "end": -1150,
+  "extant": null,
+  "bounds": [
+   -1220,
+   -1180
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Systemic collapse of Mediterranean and Near Eastern civilizations c. 1200 BCE.",
+  "aliases": [
+   "Bronze Age Collapse"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.contemporary.covid",
+  "name": "COVID-19 Pandemic",
+  "kind": "event",
+  "under": "Contemporary < Global & Multi-Regional",
+  "start": 2020,
+  "end": 2023,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Global pandemic caused by SARS-CoV-2; declared over as an emergency by the WHO in May 2023.",
+  "aliases": [
+   "COVID pandemic",
+   "Coronavirus pandemic"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.contemporary.gfc",
+  "name": "Global Financial Crisis",
+  "kind": "event",
+  "under": "Contemporary < Global & Multi-Regional",
+  "start": 2007,
+  "end": 2009,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Worldwide financial crisis triggered by the US subprime mortgage collapse; deepest downturn since the Great Depression.",
+  "aliases": [
+   "Great Recession",
+   "2008 Financial Crisis"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.contemporary.september-11",
+  "name": "September 11 Attacks",
+  "kind": "event",
+  "under": "Contemporary < Global & Multi-Regional",
+  "start": 2001,
+  "end": 2001,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Coordinated al-Qaeda attacks on the United States; triggered the War on Terror.",
+  "aliases": [
+   "9/11",
+   "9-11"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.languages.akkadian",
+  "name": "Akkadian",
+  "kind": "language",
+  "under": "Proto-Semitic < Proto-Afroasiatic < Languages < Global & Multi-Regional",
+  "start": -2500,
+  "end": 100,
+  "extant": null,
+  "bounds": [
+   -2700,
+   -2300
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The first Semitic language written down, and the diplomatic language of the Bronze Age Near East.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.ancient-greek",
+  "name": "Ancient Greek",
+  "kind": "language",
+  "under": "Proto-Indo-European < Languages < Global & Multi-Regional",
+  "start": -1400,
+  "end": 300,
+  "extant": null,
+  "bounds": [
+   -1550,
+   -1250
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Written first in Linear B, then in the alphabet that carried Homer, tragedy and Greek philosophy.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.arabic",
+  "name": "Arabic",
+  "kind": "language",
+  "under": "Proto-Semitic < Proto-Afroasiatic < Languages < Global & Multi-Regional",
+  "start": 300,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   150,
+   450
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Spread with Islam from a peninsular vernacular to the liturgical and literary language of much of Afro-Eurasia.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.aramaic",
+  "name": "Aramaic",
+  "kind": "language",
+  "under": "Proto-Semitic < Proto-Afroasiatic < Languages < Global & Multi-Regional",
+  "start": -1100,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -1250,
+   -950
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Administrative language of the Achaemenid Empire and still spoken by small communities today.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.avestan",
+  "name": "Avestan",
+  "kind": "language",
+  "under": "Proto-Indo-Iranian < Proto-Indo-European < Languages < Global & Multi-Regional",
+  "start": -1200,
+  "end": -400,
+  "extant": null,
+  "bounds": [
+   -1500,
+   -900
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Language of the Zoroastrian liturgy, preserved orally for centuries before it was written.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.classical-maya",
+  "name": "Classical Maya",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": 250,
+  "end": 900,
+  "extant": null,
+  "bounds": [
+   150,
+   350
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The only pre-Columbian American writing system fully deciphered, recording dynastic history in its own words.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.egyptian",
+  "name": "Egyptian",
+  "kind": "language",
+  "under": "Proto-Afroasiatic < Languages < Global & Multi-Regional",
+  "start": -3250,
+  "end": 1700,
+  "extant": null,
+  "bounds": [
+   -3400,
+   -3100
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Attested across four thousand years, from hieroglyphs to Coptic, the longest documented history of any language.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.elamite",
+  "name": "Elamite",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -2600,
+  "end": -400,
+  "extant": null,
+  "bounds": [
+   -2800,
+   -2400
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Written beside Sumerian and Akkadian for two millennia and, like Sumerian, without known relatives.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.etruscan",
+  "name": "Etruscan",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -700,
+  "end": 100,
+  "extant": null,
+  "bounds": [
+   -800,
+   -600
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Non-Indo-European language of pre-Roman Italy, readable in script but still largely not understood.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.hebrew",
+  "name": "Hebrew",
+  "kind": "language",
+  "under": "Proto-Semitic < Proto-Afroasiatic < Languages < Global & Multi-Regional",
+  "start": -1000,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -1150,
+   -850
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Ceased to be a vernacular for roughly seventeen centuries and was revived as one, which almost no other language has managed.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.hittite",
+  "name": "Hittite",
+  "kind": "language",
+  "under": "Proto-Indo-European < Languages < Global & Multi-Regional",
+  "start": -1650,
+  "end": -1180,
+  "extant": null,
+  "bounds": [
+   -1750,
+   -1550
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The earliest attested Indo-European language, and its decipherment reshaped the whole reconstruction.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.latin",
+  "name": "Latin",
+  "kind": "language",
+  "under": "Proto-Indo-European < Languages < Global & Multi-Regional",
+  "start": -700,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -850,
+   -550
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Ancestor of the Romance languages and the learned language of western Europe long after it stopped being anyone's first.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.nahuatl",
+  "name": "Nahuatl",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": 600,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   300,
+   900
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Language of the Aztec state, and the source of chocolate, tomato, avocado and coyote.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.old-chinese",
+  "name": "Old Chinese",
+  "kind": "language",
+  "under": "Proto-Sino-Tibetan < Languages < Global & Multi-Regional",
+  "start": -1250,
+  "end": -200,
+  "extant": null,
+  "bounds": [
+   -1400,
+   -1100
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The language of the oracle bones and the Confucian classics, reconstructed partly from rhymes in early poetry.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-afroasiatic",
+  "name": "Proto-Afroasiatic",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -12000,
+  "end": -8000,
+  "extant": null,
+  "bounds": [
+   -14000,
+   -10000
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "Reconstructed ancestor of Semitic, Egyptian, Berber, Chadic and Cushitic; among the deepest families with a serious reconstruction.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-austronesian",
+  "name": "Proto-Austronesian",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -3500,
+  "end": -2500,
+  "extant": null,
+  "bounds": [
+   -4000,
+   -3000
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "Ancestor of a family that spread from Taiwan across the Pacific to Madagascar, the widest pre-modern dispersal of any.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-bantu",
+  "name": "Proto-Bantu",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -3000,
+  "end": -1500,
+  "extant": null,
+  "bounds": [
+   -3500,
+   -2500
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "Ancestor of some five hundred languages across sub-Saharan Africa, spread by the Bantu expansion.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-dravidian",
+  "name": "Proto-Dravidian",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -4000,
+  "end": -2000,
+  "extant": null,
+  "bounds": [
+   -5000,
+   -3000
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "Reconstructed ancestor of Tamil, Telugu, Kannada and Malayalam; possibly the language family of the Indus cities.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-indo-european",
+  "name": "Proto-Indo-European",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -4500,
+  "end": -2500,
+  "extant": null,
+  "bounds": [
+   -5500,
+   -3500
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "Reconstructed ancestor of most languages of Europe and much of South Asia; its homeland is still argued.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-indo-iranian",
+  "name": "Proto-Indo-Iranian",
+  "kind": "language",
+  "under": "Proto-Indo-European < Languages < Global & Multi-Regional",
+  "start": -2500,
+  "end": -1800,
+  "extant": null,
+  "bounds": [
+   -2800,
+   -2200
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "The branch that carried Indo-European speech into Iran and South Asia.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-japonic",
+  "name": "Proto-Japonic",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -1000,
+  "end": 200,
+  "extant": null,
+  "bounds": [
+   -1400,
+   -600
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "Ancestor of Japanese and the Ryukyuan languages, probably carried to the islands with wet-rice farming.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-koreanic",
+  "name": "Proto-Koreanic",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -500,
+  "end": 500,
+  "extant": null,
+  "bounds": [
+   -900,
+   -100
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "Ancestor of Korean, whose relationship to Japonic remains one of the open questions of Asian linguistics.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-semitic",
+  "name": "Proto-Semitic",
+  "kind": "language",
+  "under": "Proto-Afroasiatic < Languages < Global & Multi-Regional",
+  "start": -3800,
+  "end": -3000,
+  "extant": null,
+  "bounds": [
+   -4300,
+   -3300
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "Ancestor of Akkadian, Hebrew, Aramaic and Arabic, reconstructed largely from their shared triconsonantal roots.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-sino-tibetan",
+  "name": "Proto-Sino-Tibetan",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -4500,
+  "end": -2500,
+  "extant": null,
+  "bounds": [
+   -5500,
+   -3500
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "Reconstructed ancestor of Chinese, Tibetan and Burmese; its internal structure is much less settled than Indo-European's.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.proto-uralic",
+  "name": "Proto-Uralic",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -4000,
+  "end": -2000,
+  "extant": null,
+  "bounds": [
+   -5000,
+   -3000
+  ],
+  "dated_by": "glottochronology",
+  "historicity": "reconstructed",
+  "date_standing": null,
+  "summary": "Reconstructed ancestor of Finnish, Hungarian, Estonian and the Samoyedic languages of Siberia.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.quechua",
+  "name": "Quechua",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": 1000,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   700,
+   1300
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Spread as the administrative language of the Inca state and still spoken by millions across the Andes.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.sanskrit",
+  "name": "Sanskrit",
+  "kind": "language",
+  "under": "Proto-Indo-Iranian < Proto-Indo-European < Languages < Global & Multi-Regional",
+  "start": -1500,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -1700,
+   -1300
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Language of the Vedas, and the grammar Panini wrote for it is still the most complete description of any ancient language.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.languages.sumerian",
+  "name": "Sumerian",
+  "kind": "language",
+  "under": "Languages < Global & Multi-Regional",
+  "start": -3100,
+  "end": -1800,
+  "extant": null,
+  "bounds": [
+   -3250,
+   -2950
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The first written language, and an isolate: no relative has ever been established for it.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.middle-ages.black-death",
+  "name": "Black Death",
+  "kind": "event",
+  "under": "Middle Ages < Global & Multi-Regional",
+  "start": 1346,
+  "end": 1353,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Bubonic plague pandemic that killed 30–60% of Europe's population and swept Asia and North Africa.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.alphabet",
+  "name": "Alphabetic Writing",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": -1850,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -2000,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "One sign per sound rather than per syllable or word, which made literacy learnable in weeks.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.antibiotics",
+  "name": "Antibiotics",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1928,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Fleming's penicillin; bacterial infection stopped being a common cause of death.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.electric-light",
+  "name": "Practical Electric Lighting",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1879,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Decoupled the working day from daylight.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.genome-sequencing",
+  "name": "The Human Genome Sequenced",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 2003,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A species reading its own instructions.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.germ-theory",
+  "name": "Germ Theory of Disease",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1861,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Established that specific microbes cause specific diseases, which made surgery survivable.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.gunpowder",
+  "name": "Gunpowder",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 850,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   800,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A Chinese alchemical accident that ended the military logic of the walled city.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.integrated-circuit",
+  "name": "The Integrated Circuit",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1958,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Many components on one wafer, which is why computing kept getting cheaper.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.iron-smelting",
+  "name": "Iron Smelting",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": -1900,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -2100,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Hittite-era bloomery iron; the metal that made tools cheap rather than precious.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.magnetic-compass",
+  "name": "Magnetic Compass",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1040,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   990,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Made open-water navigation repeatable rather than lucky.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.movable-type",
+  "name": "Movable Type",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1040,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   1020,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Bi Sheng's ceramic type; reusable characters four centuries before Gutenberg.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.nuclear-fission",
+  "name": "Controlled Nuclear Fission",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1942,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The first self-sustaining chain reaction, under a squash court in Chicago.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.packet-switching",
+  "name": "Packet-Switched Networking",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1969,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The first ARPANET link; messages broken into pieces that route themselves.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.papermaking",
+  "name": "Papermaking",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": -100,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -200,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Cheap writing material from plant fibre, in China centuries before it reached the west.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.powered-flight",
+  "name": "Powered Flight",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1903,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Twelve seconds at Kitty Hawk.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.printing-press",
+  "name": "The Printing Press",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1440,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Movable metal type and a screw press in Mainz; the first information technology with a mass market.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.steam-engine",
+  "name": "The Steam Engine",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1712,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Newcomen's atmospheric engine; work no longer limited by muscle, wind or falling water.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.telescope",
+  "name": "The Telescope",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1608,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Turned the sky into something to be examined rather than contemplated.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.transistor",
+  "name": "The Transistor",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1947,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The switch that made computing small, cheap and eventually universal.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.vaccination",
+  "name": "Vaccination",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 1796,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Jenner's cowpox inoculation, and the beginning of deliberate control of infectious disease.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.woodblock-printing",
+  "name": "Woodblock Printing",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 650,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   550,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Text carved and reproduced in quantity in Tang China, long before movable type.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.milestones.zero-as-number",
+  "name": "Zero as a Number",
+  "kind": "threshold",
+  "under": "Technological Thresholds < Global & Multi-Regional",
+  "start": 628,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   608,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Brahmagupta gave rules for arithmetic with zero and with negatives, not merely a placeholder.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.multi-regional.berlin-conference",
+  "name": "Berlin Conference",
+  "kind": "event",
+  "under": "Scramble for Africa < Multi-Regional Empires < Global & Multi-Regional",
+  "start": 1884,
+  "end": 1885,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "European powers agreed rules for the partition of Africa; no African representatives present.",
+  "aliases": [
+   "Congo Conference",
+   "West Africa Conference",
+   "Kongokonferenz"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.multi-regional.columbus",
+  "name": "Columbus reaches the Americas",
+  "kind": "event",
+  "under": "Multi-Regional Empires < Global & Multi-Regional",
+  "start": 1492,
+  "end": 1492,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Christopher Columbus's first landfall in the Bahamas; opened sustained contact between the Old World and the Americas.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.networks.amber-road",
+  "name": "The Amber Road",
+  "kind": "network",
+  "under": "Trade & Exchange Networks < Global & Multi-Regional",
+  "start": -1600,
+  "end": 1000,
+  "extant": null,
+  "bounds": [
+   -1800,
+   -1400
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Baltic amber reaching the Mediterranean, and evidence of long-distance exchange well before any empire organised it.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.networks.atlantic-slave-trade",
+  "name": "The Atlantic Slave Trade",
+  "kind": "network",
+  "under": "Trade & Exchange Networks < Global & Multi-Regional",
+  "start": 1501,
+  "end": 1867,
+  "extant": null,
+  "bounds": [
+   1496,
+   1506
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Some twelve million people shipped from Africa to the Americas, and the demographic and economic foundation of the Atlantic world.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.networks.hanseatic-league",
+  "name": "The Hanseatic League",
+  "kind": "network",
+  "under": "Trade & Exchange Networks < Global & Multi-Regional",
+  "start": 1150,
+  "end": 1669,
+  "extant": null,
+  "bounds": [
+   1120,
+   1180
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A league of merchant towns that ran the northern European economy without being a state.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.networks.indian-ocean-trade",
+  "name": "Indian Ocean Trade",
+  "kind": "network",
+  "under": "Trade & Exchange Networks < Global & Multi-Regional",
+  "start": -1000,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -1200,
+   -800
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Monsoon-driven and older than the Silk Road, carrying more goods by volume than any overland route.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.networks.manila-galleon",
+  "name": "The Manila Galleon Trade",
+  "kind": "network",
+  "under": "Trade & Exchange Networks < Global & Multi-Regional",
+  "start": 1565,
+  "end": 1815,
+  "extant": null,
+  "bounds": [
+   1560,
+   1570
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Silver from Mexico for Chinese silk and porcelain, and the first sustained commercial link across the Pacific.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.networks.silk-road",
+  "name": "The Silk Road",
+  "kind": "network",
+  "under": "Trade & Exchange Networks < Global & Multi-Regional",
+  "start": -130,
+  "end": 1450,
+  "extant": null,
+  "bounds": [
+   -180,
+   -80
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Not one road but a relay of routes moving silk, horses, faith and plague between China, India, Persia and Rome.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.networks.trans-saharan-trade",
+  "name": "Trans-Saharan Trade",
+  "kind": "network",
+  "under": "Trade & Exchange Networks < Global & Multi-Regional",
+  "start": 300,
+  "end": 1600,
+  "extant": null,
+  "bounds": [
+   200,
+   400
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Gold north, salt south, and the wealth that built Mali, Songhai and the libraries of Timbuktu.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.prehistory.firsts.artificial-mummification",
+  "name": "Artificial Mummification",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -6051,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -6051,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Deliberate preparation of the dead, practised on the Atacama coast two thousand years before anyone in Egypt attempted it.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.butchery",
+  "name": "Butchery of Animals",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -2600000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -2600000,
+   null
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Cutting meat from bone with stone tools, which opened a food source that had been out of reach.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.cereal-farming",
+  "name": "Cereal Domestication",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -8651,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -8651,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Einkorn and emmer wheat at Cayonu and Cafer Hoyuk: the beginning of the crop package that spread across three continents.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.chicken",
+  "name": "Domestic Chicken",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -1650,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -1650,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The world's most numerous bird was domesticated in mainland Southeast Asia, far later and further east than long assumed.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.controlled-fire",
+  "name": "Controlled Use of Fire",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -1000000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -1300000,
+   null
+  ],
+  "dated_by": "magnetostratigraphy",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Keeping and using fire on purpose, which changed diet, safety and how far north people could live.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.cooking",
+  "name": "Cooking of Food",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -778000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -779000,
+   null
+  ],
+  "dated_by": "magnetostratigraphy",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Applying controlled heat to food, evidenced by fish teeth heated to a temperature that implies cooking rather than burning.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.cut-marks",
+  "name": "Cut-Marked Bone",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -3390000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -3390000,
+   null
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": "minority",
+  "summary": "Bones from Dikika, Ethiopia bearing marks read as stone-tool butchery, roughly 800,000 years before the oldest known stone tools.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.deliberate-burial",
+  "name": "Deliberate Burial",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -428000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -447000,
+   null
+  ],
+  "dated_by": "uranium-series",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Placing the dead somewhere on purpose rather than leaving them where they fell.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.dog",
+  "name": "Domestic Dog",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -13900,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -13900,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The first domesticated animal, and the only one domesticated by hunter-gatherers rather than farmers.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.fermented-drink",
+  "name": "Fermented Drink",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -11800,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -11800,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Residues of fermented wheat and barley in stone mortars at Raqefet Cave, made by Natufian foragers from wild cereals.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.figurative-art",
+  "name": "Figurative Art",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -49300,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -49300,
+   null
+  ],
+  "dated_by": "uranium-series",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Pictures of recognisable things — animals and people — rather than patterns.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.horse-domestication",
+  "name": "Horse Domestication",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -2200,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -2200,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "The ancestry of every modern domestic horse traces to the lower Volga-Don steppe, not to the older Botai husbandry once assumed to be its origin.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.irrigation",
+  "name": "Irrigation",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -6200,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -6200,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Canals and ditches at Choga Mami in Mesopotamia, the first farming that reshaped the land to suit itself.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.pigment-use",
+  "name": "Use of Pigment",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -298000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -299000,
+   null
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Collecting and working coloured earth, the earliest hint of decoration or marking.",
+  "aliases": [
+   "Ochre use"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.pottery",
+  "name": "Pottery",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -18100,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -18100,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Ceramic vessels from Xianrendong Cave, Jiangxi — made by hunter-gatherers ten thousand years before anyone in the region farmed.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.seafaring",
+  "name": "Intentional Seafaring",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -63000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -70000,
+   null
+  ],
+  "dated_by": "luminescence",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Crossing open water on purpose, out of sight of the far shore, which requires planning and a built craft.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.shell-beads",
+  "name": "Personal Ornaments",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -140000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -170000,
+   null
+  ],
+  "dated_by": "uranium-series",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Shells pierced and strung to be worn, which means signalling something about yourself to other people.",
+  "aliases": [
+   "Shell beads"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.spun-fibre",
+  "name": "Spun Fibre",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -30100,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -30100,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Wild flax from Dzudzuana Cave, Georgia, twisted into cordage and dyed turquoise, pink and black.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.stone-knapping",
+  "name": "Stone Knapping",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -3300000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -3440000,
+   null
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "The first deliberate shaping of stone into tools — the behaviour this app uses to mark where human prehistory begins.",
+  "aliases": [
+   "Lomekwian",
+   "Earliest lithic technology"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.symbolic-engraving",
+  "name": "Abstract Engraving",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -75000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -82000,
+   null
+  ],
+  "dated_by": "luminescence",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Deliberate cross-hatched patterns cut into ochre — marks that mean something without depicting anything.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.wheel",
+  "name": "The Wheel",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -3500,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -3500,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Wheeled wagons appear in Mesopotamia and central Europe at nearly the same moment, and which came first is unresolved.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.wood-structure",
+  "name": "Structural Use of Wood",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -474000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -475000,
+   null
+  ],
+  "dated_by": "luminescence",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Two interlocking notched logs from Kalambo Falls, Zambia: the oldest known wooden structure, built before Homo sapiens appears in the record.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.woven-cloth",
+  "name": "Woven Cloth",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -6700,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -6700,
+   null
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Preserved woven textile from Catalhoyuk — spinning and weaving, as distinct from the far older twisting of fibre into cord.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts.writing",
+  "name": "Writing",
+  "kind": "threshold",
+  "under": "Behavioural Firsts < Human Prehistory < Global & Multi-Regional",
+  "start": -3400,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -3400,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Proto-cuneiform at Uruk and hieroglyphic tags at Abydos — two independent inventions whose dates overlap.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.denisovans",
+  "name": "Denisovans",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -193050,
+  "end": -50000,
+  "extant": null,
+  "bounds": [
+   -203050,
+   -183050
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "A human population known mainly from DNA, identified from fragments in a Siberian cave and traceable in living people.",
+  "aliases": [
+   "Denisova hominin"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-antecessor",
+  "name": "Homo antecessor",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -855050,
+  "end": -778050,
+  "extant": null,
+  "bounds": [
+   -865050,
+   -845050
+  ],
+  "dated_by": "esr",
+  "historicity": null,
+  "date_standing": "minority",
+  "summary": "An early European human from a Spanish cave, about 800,000 years old, whose status as a separate species is still argued.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-erectus",
+  "name": "Homo erectus",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -1888050,
+  "end": -108000,
+  "extant": null,
+  "bounds": [
+   -1926050,
+   -1850050
+  ],
+  "dated_by": "uranium-series",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "The first widely travelled human species, present from about 1.9 million years ago until roughly 110,000 years ago in Java.",
+  "aliases": [
+   "Homo ergaster",
+   "Java Man",
+   "Peking Man",
+   "Pithecanthropus erectus",
+   "Sinanthropus pekinensis"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-floresiensis",
+  "name": "Homo floresiensis",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -98050,
+  "end": -58050,
+  "extant": null,
+  "bounds": [
+   -100050,
+   -96050
+  ],
+  "dated_by": "luminescence",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "A small-bodied human on the Indonesian island of Flores, known from Liang Bua cave.",
+  "aliases": [
+   "Flores hobbit"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-habilis",
+  "name": "Homo habilis",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -2398050,
+  "end": -1398050,
+  "extant": null,
+  "bounds": [
+   -2446050,
+   -2350050
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "An early, small-brained human in Africa from about 2.4 to 1.4 million years ago, overlapping with other human species.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-heidelbergensis",
+  "name": "Homo heidelbergensis",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -700000,
+  "end": -198050,
+  "extant": null,
+  "bounds": [
+   -1300000,
+   -600000
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "A large-brained Middle Pleistocene human in Europe, Africa and the Near East, roughly 700,000 to 200,000 years ago.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-longi",
+  "name": "Homo longi",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -144050,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -154050,
+   -134050
+  ],
+  "dated_by": "uranium-series",
+  "historicity": null,
+  "date_standing": "minority",
+  "summary": "A single large skull from Harbin, China, whose identity was overturned by protein analysis in 2025.",
+  "aliases": [
+   "Dragon Man",
+   "Harbin cranium"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-luzonensis",
+  "name": "Homo luzonensis",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -132050,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -142050,
+   -122050
+  ],
+  "dated_by": "uranium-series",
+  "historicity": null,
+  "date_standing": "minority",
+  "summary": "A human species known from a handful of bones and teeth in a cave on Luzon, the Philippines.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-naledi",
+  "name": "Homo naledi",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -333050,
+  "end": -234050,
+  "extant": null,
+  "bounds": [
+   -343050,
+   -323050
+  ],
+  "dated_by": "uranium-series",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "A small-brained human found deep in a South African cave system, surprisingly recent at 335,000 to 236,000 years ago.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-neanderthalensis",
+  "name": "Homo neanderthalensis",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -398050,
+  "end": -38050,
+  "extant": null,
+  "bounds": [
+   -408050,
+   -388050
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Cold-adapted humans across Europe and western Asia, from about 400,000 years ago until roughly 40,000 years ago.",
+  "aliases": [
+   "Neanderthal",
+   "Neandertal",
+   "Neandertaler"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-rudolfensis",
+  "name": "Homo rudolfensis",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -1898050,
+  "end": -1798050,
+  "extant": null,
+  "bounds": [
+   -1936050,
+   -1860050
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": "minority",
+  "summary": "A flat-faced, big-toothed early human from Kenya about 1.9 million years ago whose place in the human genus is still argued over.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.hominins.homo-sapiens",
+  "name": "Homo sapiens",
+  "kind": "taxon",
+  "under": "Hominins < Human Prehistory < Global & Multi-Regional",
+  "start": -310000,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -350000,
+   -270000
+  ],
+  "dated_by": "luminescence",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Our own species, first recognisable in Africa around 300,000 years ago.",
+  "aliases": [
+   "Anatomically modern humans"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.short-20c.berlin-wall-fall",
+  "name": "Fall of the Berlin Wall",
+  "kind": "event",
+  "under": "Cold War < Short 20th Century < Global & Multi-Regional",
+  "start": 1989,
+  "end": 1989,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Symbolic end of the Cold War division of Europe; East Germans crossed freely on 9 November 1989.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.short-20c.cuban-missile-crisis",
+  "name": "Cuban Missile Crisis",
+  "kind": "event",
+  "under": "Cold War < Short 20th Century < Global & Multi-Regional",
+  "start": 1962,
+  "end": 1962,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Thirteen-day nuclear standoff between the US and USSR over Soviet missiles in Cuba — the closest the Cold War came to nuclear war.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.short-20c.korean-war",
+  "name": "Korean War",
+  "kind": "event",
+  "under": "Cold War < Short 20th Century < Global & Multi-Regional",
+  "start": 1950,
+  "end": 1953,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First major hot conflict of the Cold War; UN-backed South Korea vs. Chinese/Soviet-backed North.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.short-20c.moon-landing",
+  "name": "Apollo 11 Moon Landing",
+  "kind": "event",
+  "under": "Cold War < Short 20th Century < Global & Multi-Regional",
+  "start": 1969,
+  "end": 1969,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Neil Armstrong and Buzz Aldrin became the first humans to walk on the Moon (20 July 1969).",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.short-20c.soviet-dissolution",
+  "name": "Dissolution of the Soviet Union",
+  "kind": "event",
+  "under": "Cold War < Short 20th Century < Global & Multi-Regional",
+  "start": 1991,
+  "end": 1991,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Formal end of the USSR on 26 December 1991; 15 successor republics.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.short-20c.vietnam-war",
+  "name": "Vietnam War",
+  "kind": "event",
+  "under": "Cold War < Short 20th Century < Global & Multi-Regional",
+  "start": 1955,
+  "end": 1975,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Prolonged conflict ending with North Vietnamese victory and reunification.",
+  "aliases": [
+   "Second Indochina War",
+   "American War in Vietnam"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.short-20c.ww1",
+  "name": "World War I",
+  "kind": "event",
+  "under": "Short 20th Century < Global & Multi-Regional",
+  "start": 1914,
+  "end": 1918,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "World War I — the first industrialized total war; ended four empires.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.short-20c.ww2",
+  "name": "World War II",
+  "kind": "event",
+  "under": "Short 20th Century < Global & Multi-Regional",
+  "start": 1939,
+  "end": 1945,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "World War II — the deadliest conflict in human history; ended with the atomic bombings of Japan.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.buddhism",
+  "name": "Buddhism",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": -450,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -550,
+   -350
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Began as a teaching about the causes of suffering and became the first tradition to spread across Asia by persuasion.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.christianity",
+  "name": "Christianity",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": 30,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   20,
+   40
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Began as a movement within Judaism and became the state religion of the empire that had executed its founder.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.confucianism",
+  "name": "Confucianism",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": -500,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -600,
+   -400
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A tradition about conduct, family and government rather than gods, and the framework of Chinese administration for two millennia.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.daoism",
+  "name": "Daoism",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": -400,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -550,
+   -250
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Philosophy and later religion built on acting with the grain of things rather than against it.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.great-schism",
+  "name": "The Great Schism",
+  "kind": "tradition",
+  "under": "Christianity < Religions & Traditions < Global & Multi-Regional",
+  "start": 1054,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   1049,
+   1059
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Formal separation of the Latin and Greek churches, after centuries of drift over authority and doctrine.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.hinduism",
+  "name": "Hinduism",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": -1500,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -1800,
+   -1200
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Less a single founding than a continuity of Vedic ritual, Upanishadic philosophy and devotional practice.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.islam",
+  "name": "Islam",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": 610,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   605,
+   615
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Began at Mecca and Medina and within a century governed from Iberia to the Indus.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.jainism",
+  "name": "Jainism",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": -600,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -700,
+   -500
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Holds non-violence as the first principle, extended to every living thing.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.judaism",
+  "name": "Judaism",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": -600,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -800,
+   -400
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Took its lasting shape around exile and return, and around a text rather than a temple.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.mahayana",
+  "name": "Mahayana Buddhism",
+  "kind": "tradition",
+  "under": "Buddhism < Religions & Traditions < Global & Multi-Regional",
+  "start": 100,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -1,
+   200
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Shifted the goal from personal liberation to universal awakening, and carried Buddhism to China, Korea and Japan.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.manichaeism",
+  "name": "Manichaeism",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": 240,
+  "end": 1400,
+  "extant": null,
+  "bounds": [
+   190,
+   290
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A deliberately universal religion that reached from Rome to China and then was extinguished almost everywhere.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.shinto",
+  "name": "Shinto",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": 500,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   300,
+   700
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Japanese practice centred on kami and place, defined as a distinct religion largely in response to Buddhism.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.sikhism",
+  "name": "Sikhism",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": 1500,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   1480,
+   1520
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Founded by Nanak in Punjab, rejecting caste and ritual in favour of one God and honest work.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.sufism",
+  "name": "Sufism",
+  "kind": "tradition",
+  "under": "Islam < Religions & Traditions < Global & Multi-Regional",
+  "start": 800,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   700,
+   900
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The mystical current of Islam, and the form in which it most often spread through South Asia and West Africa.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.sunni-shia-split",
+  "name": "The Sunni-Shia Split",
+  "kind": "tradition",
+  "under": "Islam < Religions & Traditions < Global & Multi-Regional",
+  "start": 632,
+  "end": 680,
+  "extant": null,
+  "bounds": [
+   627,
+   637
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A dispute over succession to Muhammad that hardened into the enduring division of the Muslim world.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.theravada",
+  "name": "Theravada Buddhism",
+  "kind": "tradition",
+  "under": "Buddhism < Religions & Traditions < Global & Multi-Regional",
+  "start": -250,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -350,
+   -150
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The school that kept the Pali canon, dominant across Sri Lanka and mainland Southeast Asia.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.vajrayana",
+  "name": "Vajrayana Buddhism",
+  "kind": "tradition",
+  "under": "Mahayana Buddhism < Buddhism < Religions & Traditions < Global & Multi-Regional",
+  "start": 600,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   500,
+   700
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Tantric Buddhism, transmitted into Tibet and the Himalaya.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.traditions.zoroastrianism",
+  "name": "Zoroastrianism",
+  "kind": "tradition",
+  "under": "Religions & Traditions < Global & Multi-Regional",
+  "start": -1200,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -1600,
+   -800
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Persian tradition whose ideas about judgement, a final reckoning and cosmic dualism reached Judaism, Christianity and Islam.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.peoples-aboriginal-australians",
+  "name": "Aboriginal Australians",
+  "kind": "people",
+  "under": "Oceania",
+  "start": -65000,
+  "end": null,
+  "extant": true,
+  "bounds": [
+   -70000,
+   -60000
+  ],
+  "dated_by": "first-attestation",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The longest continuous cultural tradition known, with oral accounts that appear to record post-glacial sea-level rise.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.prehistory.dingo-arrival",
+  "name": "Arrival of the Dingo",
+  "kind": "event",
+  "under": "Oceanian Prehistory < Oceania",
+  "start": -1399,
+  "end": -1132,
+  "extant": null,
+  "bounds": [
+   -1499,
+   -1299
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "A dog carried to Australia by sea, and the clearest evidence of outside contact before Europeans.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.british-raj.jallianwala",
+  "name": "Jallianwala Bagh Massacre",
+  "kind": "event",
+  "under": "British Raj < South Asia",
+  "start": 1919,
+  "end": 1919,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "British troops opened fire on unarmed civilians in Amritsar; a decisive turning point in Indian nationalism.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.british-raj.partition",
+  "name": "Partition of India",
+  "kind": "event",
+  "under": "British Raj < South Asia",
+  "start": 1947,
+  "end": 1947,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Division of British India into India and Pakistan; one of history's largest forced migrations, with mass violence.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.british-raj.salt-march",
+  "name": "Salt March / Salt Satyagraha",
+  "kind": "event",
+  "under": "British Raj < South Asia",
+  "start": 1930,
+  "end": 1930,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Gandhi's 240-mile march to defy the British salt monopoly; galvanized mass civil disobedience.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.east-india-company.rebellion-1857",
+  "name": "Indian Rebellion of 1857",
+  "kind": "event",
+  "under": "East India Company Rule < South Asia",
+  "start": 1857,
+  "end": 1858,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Massive uprising against Company rule; suppressed with great violence. Led directly to the establishment of the British Raj.",
+  "aliases": [
+   "First War of Independence",
+   "Sepoy Mutiny",
+   "Great Rebellion",
+   "Indian Mutiny",
+   "Revolt of 1857"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "south-asia.independence.bangladesh-liberation",
+  "name": "Bangladesh Liberation War",
+  "kind": "event",
+  "under": "Post-Independence South Asia < South Asia",
+  "start": 1971,
+  "end": 1971,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "East Pakistan's independence war; India intervened decisively. Birth of Bangladesh.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.independence.sri-lanka-civil-war",
+  "name": "Sri Lankan Civil War",
+  "kind": "event",
+  "under": "Post-Independence South Asia < South Asia",
+  "start": 1983,
+  "end": 2009,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Long conflict between the Sri Lankan government and the LTTE (Tamil Tigers); ended with the military defeat of the LTTE.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.indus.rakhigarhi-genome",
+  "name": "The Rakhigarhi Genome",
+  "kind": "event",
+  "under": "Indus Valley Civilization < South Asia",
+  "start": -2800,
+  "end": -2300,
+  "extant": null,
+  "bounds": [
+   -2850,
+   -2750
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "A single woman's DNA, recovered after 61 attempts, showed the Harappans carried no steppe ancestry and no Anatolian farmer ancestry.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.prehistory.austronesian-expansion.isea-pottery",
+  "name": "Pottery Reaches Island Southeast Asia",
+  "kind": "event",
+  "under": "The Austronesian Expansion < Southeast Asian Prehistory < Southeast Asia",
+  "start": -3481,
+  "end": -2341,
+  "extant": null,
+  "bounds": [
+   -3681,
+   -3281
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Pottery appears in Borneo and the northern Philippines at the same time, not one after the other.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.prehistory.neolithic-migration-sea",
+  "name": "Neolithic Migration into Southeast Asia",
+  "kind": "event",
+  "under": "Southeast Asian Prehistory < Southeast Asia",
+  "start": -2051,
+  "end": -2051,
+  "extant": null,
+  "bounds": [
+   -2151,
+   -1951
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "East Asian farming populations move south and mix with resident Hoabinhian-descended foragers rather than replacing them.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.hittites.kadesh",
+  "name": "Battle of Kadesh",
+  "kind": "event",
+  "under": "The Hittites < Anatolia < West Asia",
+  "start": -1274,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Hittites and Egyptians fight the best-documented battle of the Bronze Age to a stalemate, then sign a treaty a copy of which hangs at the UN.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.hittites.sack-of-babylon",
+  "name": "Mursili I Sacks Babylon",
+  "kind": "event",
+  "under": "The Hittites < Anatolia < West Asia",
+  "start": -1595,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "A Hittite raid ends Hammurabi's dynasty, and the date it happened is the hinge the whole Bronze Age chronology turns on.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.lydia.coinage",
+  "name": "The Invention of Coinage",
+  "kind": "threshold",
+  "under": "Lydia < Anatolia < West Asia",
+  "start": -650,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -700,
+   null
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Struck electrum pieces of guaranteed weight appear in Lydia, and money stops having to be weighed out.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.arabia.pre-islamic.incense-trade",
+  "name": "The Incense Route",
+  "kind": "network",
+  "under": "Pre-Islamic Arabia < Arabia < West Asia",
+  "start": -700,
+  "end": 200,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Frankincense and myrrh moving north out of South Arabia, the trade that paid for Saba, Qataban and eventually Petra.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.arab-conquest",
+  "name": "Arab Conquest of Iran",
+  "kind": "event",
+  "under": "Iran < West Asia",
+  "start": 633,
+  "end": 651,
+  "extant": null,
+  "bounds": [
+   608,
+   658
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Eighteen years that ended the Sasanian empire and began the Islamic period in Iran.",
+  "aliases": null,
+  "sourced": true
+ }
+]

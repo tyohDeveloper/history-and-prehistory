@@ -1,0 +1,8350 @@
+[
+ {
+  "id": "africa.central.kongo",
+  "name": "Kingdom of Kongo",
+  "kind": "polity",
+  "under": "Central Africa < Africa",
+  "start": 1390,
+  "end": 1914,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.central.luba",
+  "name": "Luba Empire",
+  "kind": "polity",
+  "under": "Central Africa < Africa",
+  "start": 1585,
+  "end": 1889,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.central.lunda",
+  "name": "Lunda Empire",
+  "kind": "polity",
+  "under": "Central Africa < Africa",
+  "start": 1665,
+  "end": 1887,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.east.swahili",
+  "name": "Swahili Coast City-States",
+  "kind": "era",
+  "under": "East Africa < Africa",
+  "start": 900,
+  "end": 1500,
+  "extant": null,
+  "bounds": [
+   875,
+   925
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Network of Indian-Ocean trading cities: Kilwa, Mombasa, Zanzibar, Sofala.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.east.zanzibar-sultanate",
+  "name": "Sultanate of Zanzibar",
+  "kind": "polity",
+  "under": "East Africa < Africa",
+  "start": 1856,
+  "end": 1964,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.aksum",
+  "name": "Kingdom of Aksum",
+  "kind": "polity",
+  "under": "Nile Valley & Northeast Africa < Africa",
+  "start": 100,
+  "end": 940,
+  "extant": null,
+  "bounds": [
+   75,
+   125
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Highland Ethiopian empire; converted to Christianity under Ezana (c. 330 CE).",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.egypt",
+  "name": "Ancient Egypt",
+  "kind": "era",
+  "under": "Nile Valley & Northeast Africa < Africa",
+  "start": -6000,
+  "end": 641,
+  "extant": null,
+  "bounds": [
+   -6200,
+   -5800
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Continuous Nile Valley civilization from Predynastic cultures through Narmer's unification, the pharaonic dynasties, and Ptolemaic/Roman/Byzantine rule.",
+  "aliases": [
+   "Pharaonic Egypt",
+   "Nile Valley civilization",
+   "Kemet",
+   "Aigyptos",
+   "Egyptian"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.early-dynastic",
+  "name": "Early Dynastic Period",
+  "kind": "era",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -3100,
+  "end": -2686,
+  "extant": null,
+  "bounds": [
+   -3300,
+   -2900
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Unification of Upper and Lower Egypt under the 1st and 2nd Dynasties.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.early-dynastic.dyn1",
+  "name": "1st Dynasty",
+  "kind": "polity",
+  "under": "Early Dynastic Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -3100,
+  "end": -2890,
+  "extant": null,
+  "bounds": [
+   -3300,
+   -2900
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.early-dynastic.dyn2",
+  "name": "2nd Dynasty",
+  "kind": "polity",
+  "under": "Early Dynastic Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -2890,
+  "end": -2686,
+  "extant": null,
+  "bounds": [
+   -2990,
+   -2790
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.fip",
+  "name": "First Intermediate Period",
+  "kind": "era",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -2181,
+  "end": -2055,
+  "extant": null,
+  "bounds": [
+   -2281,
+   -2081
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Political fragmentation between the Old and Middle Kingdoms.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.egypt.late-period",
+  "name": "Late Period",
+  "kind": "era",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -664,
+  "end": -332,
+  "extant": null,
+  "bounds": [
+   -714,
+   -614
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The last era of native and Persian rule, ending with Alexander's conquest. Egypt was twice a Persian province and twice independent again.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.egypt.late-period.dyn26-saite",
+  "name": "26th Dynasty — Saite Renaissance",
+  "kind": "polity",
+  "under": "Late Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -664,
+  "end": -525,
+  "extant": null,
+  "bounds": [
+   -714,
+   -614
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.late-period.dyn27-persian1",
+  "name": "27th Dynasty — First Persian",
+  "kind": "polity",
+  "under": "Late Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -525,
+  "end": -404,
+  "extant": null,
+  "bounds": [
+   -575,
+   -475
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.egypt.late-period.dyn28",
+  "name": "28th Dynasty",
+  "kind": "polity",
+  "under": "Late Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -404,
+  "end": -398,
+  "extant": null,
+  "bounds": [
+   -429,
+   -379
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.late-period.dyn29",
+  "name": "29th Dynasty",
+  "kind": "polity",
+  "under": "Late Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -398,
+  "end": -380,
+  "extant": null,
+  "bounds": [
+   -423,
+   -373
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.late-period.dyn30",
+  "name": "30th Dynasty",
+  "kind": "polity",
+  "under": "Late Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -380,
+  "end": -343,
+  "extant": null,
+  "bounds": [
+   -405,
+   -355
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.late-period.dyn31",
+  "name": "31st Dynasty (Second Persian)",
+  "kind": "polity",
+  "under": "Late Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -343,
+  "end": -332,
+  "extant": null,
+  "bounds": [
+   -368,
+   -318
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.middle-kingdom",
+  "name": "Middle Kingdom",
+  "kind": "era",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -2055,
+  "end": -1650,
+  "extant": null,
+  "bounds": [
+   -2155,
+   -1955
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Second great age of pharaonic Egypt after reunification under Mentuhotep II; classical Egyptian literature.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.middle-kingdom.dyn11",
+  "name": "11th Dynasty (reunified)",
+  "kind": "polity",
+  "under": "Middle Kingdom < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -2125,
+  "end": -1985,
+  "extant": null,
+  "bounds": [
+   -2225,
+   -2025
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.middle-kingdom.dyn12",
+  "name": "12th Dynasty",
+  "kind": "polity",
+  "under": "Middle Kingdom < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -1985,
+  "end": -1773,
+  "extant": null,
+  "bounds": [
+   -2085,
+   -1885
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.middle-kingdom.dyn13",
+  "name": "13th Dynasty",
+  "kind": "polity",
+  "under": "Middle Kingdom < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -1773,
+  "end": -1650,
+  "extant": null,
+  "bounds": [
+   -1873,
+   -1673
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.new-kingdom",
+  "name": "New Kingdom",
+  "kind": "era",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -1550,
+  "end": -1069,
+  "extant": null,
+  "bounds": [
+   -1650,
+   -1450
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Imperial age of Egypt; Valley of the Kings; Karnak/Luxor expansion.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.new-kingdom.dyn18",
+  "name": "18th Dynasty",
+  "kind": "polity",
+  "under": "New Kingdom < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -1550,
+  "end": -1292,
+  "extant": null,
+  "bounds": [
+   -1650,
+   -1450
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.new-kingdom.dyn19",
+  "name": "19th Dynasty (Ramesside)",
+  "kind": "polity",
+  "under": "New Kingdom < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -1295,
+  "end": -1186,
+  "extant": null,
+  "bounds": [
+   -1395,
+   -1195
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.new-kingdom.dyn20",
+  "name": "20th Dynasty",
+  "kind": "polity",
+  "under": "New Kingdom < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -1186,
+  "end": -1069,
+  "extant": null,
+  "bounds": [
+   -1286,
+   -1086
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.old-kingdom",
+  "name": "Old Kingdom",
+  "kind": "era",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -2686,
+  "end": -2181,
+  "extant": null,
+  "bounds": [
+   -2786,
+   -2586
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Pyramid-building age. Djoser, Khufu, Khafre, Menkaure.",
+  "aliases": [
+   "Age of the Pyramids"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.old-kingdom.dyn3",
+  "name": "3rd Dynasty",
+  "kind": "polity",
+  "under": "Old Kingdom < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -2686,
+  "end": -2613,
+  "extant": null,
+  "bounds": [
+   -2786,
+   -2586
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.old-kingdom.dyn4",
+  "name": "4th Dynasty",
+  "kind": "polity",
+  "under": "Old Kingdom < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -2613,
+  "end": -2494,
+  "extant": null,
+  "bounds": [
+   -2713,
+   -2513
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.old-kingdom.dyn5",
+  "name": "5th Dynasty",
+  "kind": "polity",
+  "under": "Old Kingdom < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -2494,
+  "end": -2345,
+  "extant": null,
+  "bounds": [
+   -2594,
+   -2394
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.old-kingdom.dyn6",
+  "name": "6th Dynasty",
+  "kind": "polity",
+  "under": "Old Kingdom < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -2345,
+  "end": -2181,
+  "extant": null,
+  "bounds": [
+   -2445,
+   -2245
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.predynastic",
+  "name": "Predynastic Egypt",
+  "kind": "era",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -6000,
+  "end": -3100,
+  "extant": null,
+  "bounds": [
+   -6200,
+   -5800
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.predynastic.dynasty-0",
+  "name": "Dynasty 0",
+  "kind": "polity",
+  "under": "Predynastic Egypt < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -3200,
+  "end": -3085,
+  "extant": null,
+  "bounds": [
+   -3250,
+   -3150
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The rulers before the First Dynasty — Iry-Hor, Ka, Narmer — and the best argument that unification was a process rather than a moment.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.egypt.ptolemaic",
+  "name": "Ptolemaic Egypt",
+  "kind": "polity",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -332,
+  "end": -30,
+  "extant": null,
+  "bounds": [
+   -357,
+   -307
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Greek-Macedonian dynasty founded after Alexander's conquest. Capital: Alexandria.",
+  "aliases": [
+   "Ptolemaic"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.egypt.roman-byzantine",
+  "name": "Roman & Byzantine Egypt",
+  "kind": "era",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -30,
+  "end": 641,
+  "extant": null,
+  "bounds": [
+   -55,
+   -5
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.egypt.sip",
+  "name": "Second Intermediate Period",
+  "kind": "era",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -1650,
+  "end": -1550,
+  "extant": null,
+  "bounds": [
+   -1750,
+   -1550
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Hyksos rule in the Delta; Theban resistance in the south.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.egypt.sip.dyn15-hyksos",
+  "name": "15th Dynasty — Hyksos",
+  "kind": "polity",
+  "under": "Second Intermediate Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -1650,
+  "end": -1550,
+  "extant": null,
+  "bounds": [
+   -1750,
+   -1550
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Semitic-speaking rulers who introduced the horse and chariot, composite bow, and bronze weapons.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.tip",
+  "name": "Third Intermediate Period",
+  "kind": "era",
+  "under": "Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -1069,
+  "end": -656,
+  "extant": null,
+  "bounds": [
+   -1169,
+   -969
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Egypt fragmented after the New Kingdom: Libyan and Nubian dynasties ruled in parallel from different cities, and the Kushite 25th Dynasty took the whole country.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.egypt.tip.dyn21",
+  "name": "21st Dynasty (Tanis)",
+  "kind": "polity",
+  "under": "Third Intermediate Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -1069,
+  "end": -945,
+  "extant": null,
+  "bounds": [
+   -1169,
+   -969
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.tip.dyn22",
+  "name": "22nd Dynasty (Libyan/Bubastite)",
+  "kind": "polity",
+  "under": "Third Intermediate Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -945,
+  "end": -720,
+  "extant": null,
+  "bounds": [
+   -995,
+   -895
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.egypt.tip.dyn25-kushite",
+  "name": "25th Dynasty — Kushite (Nubian)",
+  "kind": "polity",
+  "under": "Third Intermediate Period < Ancient Egypt < Nile Valley & Northeast Africa < Africa",
+  "start": -744,
+  "end": -656,
+  "extant": null,
+  "bounds": [
+   -794,
+   -694
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Nubian pharaohs from Kush ruled all Egypt.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.nile.ethiopia",
+  "name": "Ethiopian Empire",
+  "kind": "polity",
+  "under": "Nile Valley & Northeast Africa < Africa",
+  "start": 1270,
+  "end": 1974,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Solomonic dynasty ruled Ethiopia for seven centuries; never fully colonized.",
+  "aliases": [
+   "Solomonic Dynasty",
+   "Abyssinia"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "africa.nile.kush",
+  "name": "Kingdom of Kush",
+  "kind": "polity",
+  "under": "Nile Valley & Northeast Africa < Africa",
+  "start": -2500,
+  "end": 350,
+  "extant": null,
+  "bounds": [
+   -2600,
+   -2400
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Nubian civilization south of Egypt with capitals successively at Kerma, Napata, and Meroë.",
+  "aliases": [
+   "Nubia",
+   "Kush",
+   "Aethiopia"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "africa.north.almohad",
+  "name": "Almohad Caliphate",
+  "kind": "polity",
+  "under": "North Africa < Africa",
+  "start": 1121,
+  "end": 1269,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.north.almoravid",
+  "name": "Almoravid Empire",
+  "kind": "polity",
+  "under": "North Africa < Africa",
+  "start": 1040,
+  "end": 1147,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.north.carthage",
+  "name": "Carthaginian Empire",
+  "kind": "polity",
+  "under": "North Africa < Africa",
+  "start": -814,
+  "end": -146,
+  "extant": null,
+  "bounds": [
+   -864,
+   -764
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Phoenician-founded maritime empire of the western Mediterranean.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.north.morocco-alaouite",
+  "name": "Alaouite Morocco",
+  "kind": "polity",
+  "under": "North Africa < Africa",
+  "start": 1631,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.prehistory",
+  "name": "African Prehistory",
+  "kind": "era",
+  "under": "Africa",
+  "start": -3298050,
+  "end": -3000,
+  "extant": null,
+  "bounds": [
+   -3364050,
+   -3232050
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "The continent where the human story begins, and where it stays for most of its length.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.southern.great-zimbabwe",
+  "name": "Great Zimbabwe",
+  "kind": "polity",
+  "under": "Southern Africa < Africa",
+  "start": 1100,
+  "end": 1450,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Shona kingdom in southern Africa; famed for its stone-built capital.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.southern.mutapa",
+  "name": "Mutapa Empire",
+  "kind": "polity",
+  "under": "Southern Africa < Africa",
+  "start": 1430,
+  "end": 1760,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A gold-trading state that succeeded Great Zimbabwe, dealt with Swahili and later Portuguese merchants, and was progressively undermined by them.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.southern.zulu",
+  "name": "Zulu Kingdom",
+  "kind": "polity",
+  "under": "Southern Africa < Africa",
+  "start": 1816,
+  "end": 1897,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "South African kingdom that fiercely resisted British colonization.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.west.ashanti",
+  "name": "Ashanti Empire",
+  "kind": "polity",
+  "under": "West Africa & Sahel < Africa",
+  "start": 1670,
+  "end": 1902,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.west.benin",
+  "name": "Benin Empire",
+  "kind": "polity",
+  "under": "West Africa & Sahel < Africa",
+  "start": 1180,
+  "end": 1897,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "africa.west.dahomey",
+  "name": "Kingdom of Dahomey",
+  "kind": "polity",
+  "under": "West Africa & Sahel < Africa",
+  "start": 1600,
+  "end": 1904,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.west.ghana",
+  "name": "Ghana Empire",
+  "kind": "polity",
+  "under": "West Africa & Sahel < Africa",
+  "start": 300,
+  "end": 1240,
+  "extant": null,
+  "bounds": [
+   275,
+   325
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Sahelian trading empire, unrelated to the modern nation of Ghana.",
+  "aliases": [
+   "Wagadu"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "africa.west.kanem-bornu",
+  "name": "Kanem–Bornu Empire",
+  "kind": "polity",
+  "under": "West Africa & Sahel < Africa",
+  "start": 700,
+  "end": 1900,
+  "extant": null,
+  "bounds": [
+   675,
+   725
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.west.mali",
+  "name": "Mali Empire",
+  "kind": "polity",
+  "under": "West Africa & Sahel < Africa",
+  "start": 1235,
+  "end": 1670,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "West African empire; the world's largest gold source in the 14th century.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.west.oyo",
+  "name": "Oyo Empire",
+  "kind": "polity",
+  "under": "West Africa & Sahel < Africa",
+  "start": 1400,
+  "end": 1836,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.west.sokoto",
+  "name": "Sokoto Caliphate",
+  "kind": "polity",
+  "under": "West Africa & Sahel < Africa",
+  "start": 1804,
+  "end": 1903,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "africa.west.songhai",
+  "name": "Songhai Empire",
+  "kind": "polity",
+  "under": "West Africa & Sahel < Africa",
+  "start": 1464,
+  "end": 1591,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Largest state in West African history; overthrown by a Moroccan invasion in 1591.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.amazon-southern.mapuche",
+  "name": "Mapuche / Araucanía",
+  "kind": "polity",
+  "under": "Amazon & Southern Cone < Americas",
+  "start": 1000,
+  "end": 1883,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.amazon-southern.marajoara",
+  "name": "Marajoara Culture",
+  "kind": "culture",
+  "under": "Amazon & Southern Cone < Americas",
+  "start": 400,
+  "end": 1400,
+  "extant": null,
+  "bounds": [
+   375,
+   425
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.andes.chavin",
+  "name": "Chavín",
+  "kind": "culture",
+  "under": "Andes < Americas",
+  "start": -900,
+  "end": -200,
+  "extant": null,
+  "bounds": [
+   -950,
+   -850
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "americas.andes.chimu",
+  "name": "Chimú (Chimor)",
+  "kind": "polity",
+  "under": "Andes < Americas",
+  "start": 900,
+  "end": 1470,
+  "extant": null,
+  "bounds": [
+   850,
+   950
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "americas.andes.inca",
+  "name": "Inca Empire",
+  "kind": "polity",
+  "under": "Andes < Americas",
+  "start": 1438,
+  "end": 1533,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Largest pre-Columbian empire; stretched ~4,000 km along the Andes.",
+  "aliases": [
+   "Tawantinsuyu",
+   "Tahuantinsuyu",
+   "Inca",
+   "Incan"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "americas.andes.moche",
+  "name": "Moche",
+  "kind": "culture",
+  "under": "Andes < Americas",
+  "start": 100,
+  "end": 800,
+  "extant": null,
+  "bounds": [
+   50,
+   150
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "americas.andes.nazca",
+  "name": "Nazca",
+  "kind": "culture",
+  "under": "Andes < Americas",
+  "start": -100,
+  "end": 800,
+  "extant": null,
+  "bounds": [
+   -125,
+   -75
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.andes.norte-chico",
+  "name": "Norte Chico / Caral",
+  "kind": "culture",
+  "under": "Andes < Americas",
+  "start": -3000,
+  "end": -1800,
+  "extant": null,
+  "bounds": [
+   -3050,
+   -2950
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Oldest known civilization in the Americas.",
+  "aliases": [
+   "Caral",
+   "Caral-Supe"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "americas.andes.tiwanaku",
+  "name": "Tiwanaku",
+  "kind": "polity",
+  "under": "Andes < Americas",
+  "start": 500,
+  "end": 1000,
+  "extant": null,
+  "bounds": [
+   475,
+   525
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.andes.viceroyalty-peru",
+  "name": "Viceroyalty of Peru",
+  "kind": "polity",
+  "under": "Andes < Americas",
+  "start": 1542,
+  "end": 1824,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.andes.vilcabamba",
+  "name": "Neo-Inca State at Vilcabamba",
+  "kind": "polity",
+  "under": "Andes < Americas",
+  "start": 1537,
+  "end": 1572,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.andes.wari",
+  "name": "Wari Empire",
+  "kind": "polity",
+  "under": "Andes < Americas",
+  "start": 600,
+  "end": 1000,
+  "extant": null,
+  "bounds": [
+   550,
+   650
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "americas.intermediate.taino",
+  "name": "Taíno Chiefdoms",
+  "kind": "era",
+  "under": "Intermediate Area & Caribbean < Americas",
+  "start": 1200,
+  "end": 1500,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.mesoamerica.aztec",
+  "name": "Aztec Empire",
+  "kind": "polity",
+  "under": "Mesoamerica < Americas",
+  "start": 1428,
+  "end": 1521,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Mexica Triple Alliance dominating central Mexico until Spanish conquest.",
+  "aliases": [
+   "Mexica Triple Alliance",
+   "Mexica",
+   "Excan Tlatoloyan",
+   "Triple Alliance",
+   "Aztec"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "americas.mesoamerica.maya",
+  "name": "Maya Civilization",
+  "kind": "culture",
+  "under": "Mesoamerica < Americas",
+  "start": -2000,
+  "end": 1697,
+  "extant": null,
+  "bounds": [
+   -2100,
+   -1900
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Long-lived Mesoamerican civilization known for writing, mathematics, and monumental architecture.",
+  "aliases": [
+   "Mayan",
+   "Maya"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "americas.mesoamerica.mexico",
+  "name": "Mexico (independent)",
+  "kind": "polity",
+  "under": "Mesoamerica < Americas",
+  "start": 1821,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Independent Mexico from 1821 to the present.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.mesoamerica.new-spain",
+  "name": "Viceroyalty of New Spain",
+  "kind": "polity",
+  "under": "Mesoamerica < Americas",
+  "start": 1521,
+  "end": 1821,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Spanish colonial viceroyalty covering Mexico, Central America, and the Caribbean.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.mesoamerica.olmec",
+  "name": "Olmec Civilization",
+  "kind": "culture",
+  "under": "Mesoamerica < Americas",
+  "start": -1200,
+  "end": -400,
+  "extant": null,
+  "bounds": [
+   -1250,
+   -1150
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Mother culture of Mesoamerica.",
+  "aliases": [
+   "Olmeca",
+   "Tenocelome"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "americas.mesoamerica.purepecha",
+  "name": "Purépecha Empire",
+  "kind": "polity",
+  "under": "Mesoamerica < Americas",
+  "start": 1300,
+  "end": 1530,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The Aztecs' most effective rival, never conquered by them, and the only Mesoamerican state working metal for tools and weapons at scale.",
+  "aliases": [
+   "Purépecha",
+   "Tarascan"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "americas.mesoamerica.teotihuacan",
+  "name": "Teotihuacan",
+  "kind": "polity",
+  "under": "Mesoamerica < Americas",
+  "start": -100,
+  "end": 550,
+  "extant": null,
+  "bounds": [
+   -150,
+   -50
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "One of the largest cities in the ancient world.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "americas.mesoamerica.toltec",
+  "name": "Toltec Empire",
+  "kind": "polity",
+  "under": "Mesoamerica < Americas",
+  "start": 900,
+  "end": 1150,
+  "extant": null,
+  "bounds": [
+   875,
+   925
+  ],
+  "dated_by": "typological",
+  "historicity": "contested",
+  "date_standing": "minority",
+  "summary": "A central Mexican power at Tula that later Mesoamericans, the Aztecs above all, treated as the model of civilisation and claimed descent from.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "americas.mesoamerica.zapotec",
+  "name": "Zapotec (Monte Albán)",
+  "kind": "polity",
+  "under": "Mesoamerica < Americas",
+  "start": -500,
+  "end": 1521,
+  "extant": null,
+  "bounds": [
+   -550,
+   -450
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Builders of Monte Albán, a city levelled from a mountaintop, and users of one of the earliest writing systems in the Americas.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "americas.north.ancestral-puebloan",
+  "name": "Ancestral Puebloan",
+  "kind": "culture",
+  "under": "North America < Americas",
+  "start": 100,
+  "end": 1600,
+  "extant": null,
+  "bounds": [
+   50,
+   150
+  ],
+  "dated_by": "dendrochronology",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": null,
+  "aliases": [
+   "Anasazi",
+   "Hisatsinom",
+   "Ancestral Pueblo culture"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "americas.north.colonial",
+  "name": "Colonial North America",
+  "kind": "era",
+  "under": "North America < Americas",
+  "start": 1492,
+  "end": 1783,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "European colonial presence in North America from Columbus to the American Revolution.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.north.comanche",
+  "name": "Comanche Empire",
+  "kind": "polity",
+  "under": "North America < Americas",
+  "start": 1750,
+  "end": 1875,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "americas.north.haudenosaunee",
+  "name": "Haudenosaunee Confederacy",
+  "kind": "polity",
+  "under": "North America < Americas",
+  "start": 1450,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   1450,
+   1450
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": null,
+  "aliases": [
+   "Haudenosaunee",
+   "Iroquois",
+   "Iroquois Confederacy",
+   "Six Nations"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "americas.north.mississippian",
+  "name": "Mississippian Culture",
+  "kind": "culture",
+  "under": "North America < Americas",
+  "start": 800,
+  "end": 1600,
+  "extant": null,
+  "bounds": [
+   750,
+   850
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Mound-building cultures across the American southeast and midwest. Cahokia was North America's largest pre-Columbian city.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "americas.north.usa",
+  "name": "United States",
+  "kind": "polity",
+  "under": "North America < Americas",
+  "start": 1776,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "United States of America from independence (1776) to the present.",
+  "aliases": [
+   "United States of America",
+   "USA",
+   "America"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "americas.prehistory",
+  "name": "Americas Prehistory",
+  "kind": "era",
+  "under": "Americas",
+  "start": -34050,
+  "end": 500,
+  "extant": null,
+  "bounds": [
+   -36050,
+   -32050
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The earliest peopling of the Americas and the long sequence of regional traditions that followed.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.bukhara",
+  "name": "Khanate of Bukhara",
+  "kind": "polity",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 1501,
+  "end": 1920,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Uzbek state in Transoxiana; an emirate from 1785 and a Russian protectorate from 1868.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.ghaznavid",
+  "name": "Ghaznavid Empire",
+  "kind": "polity",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 977,
+  "end": 1186,
+  "extant": null,
+  "bounds": [
+   952,
+   1002
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Turkic dynasty ruling from Ghazna, whose raids into northern India opened the way for later Muslim rule there.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.hephthalites",
+  "name": "Hephthalites",
+  "kind": "era",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 440,
+  "end": 560,
+  "extant": null,
+  "bounds": [
+   415,
+   465
+  ],
+  "dated_by": "unknown",
+  "historicity": "contested",
+  "date_standing": null,
+  "summary": "Steppe power that dominated Bactria and pressed both Sasanian Iran and the Gupta empire.",
+  "aliases": [
+   "White Huns"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "central-asia.kara-khanid",
+  "name": "Kara-Khanid Khanate",
+  "kind": "polity",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 840,
+  "end": 1212,
+  "extant": null,
+  "bounds": [
+   815,
+   865
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The first Turkic dynasty to adopt Islam, ruling Transoxiana and Kashgaria.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.khiva",
+  "name": "Khanate of Khiva",
+  "kind": "polity",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 1511,
+  "end": 1920,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Uzbek khanate on the lower Amu Darya, a Russian protectorate from 1873.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.khwarazmian",
+  "name": "Khwarazmian Empire",
+  "kind": "polity",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 1077,
+  "end": 1231,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Briefly the dominant power from Transoxiana to western Iran, destroyed by the Mongol invasion.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.kokand",
+  "name": "Khanate of Kokand",
+  "kind": "polity",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 1709,
+  "end": 1876,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Ferghana valley khanate, annexed outright by Russia rather than left as a protectorate.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.kushan",
+  "name": "Kushan Empire",
+  "kind": "polity",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 30,
+  "end": 375,
+  "extant": null,
+  "bounds": [
+   5,
+   55
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Yuezhi-descended empire linking China, India, and Rome via the Silk Road.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.mongol-empire",
+  "name": "Mongol Empire",
+  "kind": "polity",
+  "under": "Central Asia & the Steppe",
+  "start": 1206,
+  "end": 1368,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Largest contiguous empire in world history.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "central-asia.mongol-empire.chagatai",
+  "name": "Chagatai Khanate",
+  "kind": "polity",
+  "under": "Mongol Empire < Central Asia & the Steppe",
+  "start": 1226,
+  "end": 1687,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "central-asia.mongol-empire.golden-horde",
+  "name": "Golden Horde",
+  "kind": "polity",
+  "under": "Mongol Empire < Central Asia & the Steppe",
+  "start": 1242,
+  "end": 1502,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The Jochid inheritance of the Mongol empire, ruling the western steppe and the Rus principalities. It called itself the Great State.",
+  "aliases": [
+   "Ulus of Jochi",
+   "Jochid ulus",
+   "Kipchak Khanate",
+   "Ulug Ulus"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "central-asia.prehistory",
+  "name": "Central Asian Prehistory",
+  "kind": "era",
+  "under": "Central Asia & the Steppe",
+  "start": -298050,
+  "end": -1400,
+  "extant": null,
+  "bounds": [
+   -308050,
+   -288050
+  ],
+  "dated_by": "luminescence",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "The deep history of Inner Asia, including early hominins, horse herding, and the Bronze Age steppe networks.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.prehistory.mountain-corridor",
+  "name": "Inner Asian Mountain Corridor",
+  "kind": "era",
+  "under": "Central Asian Prehistory < Central Asia & the Steppe",
+  "start": -2840,
+  "end": -1250,
+  "extant": null,
+  "bounds": [
+   -2940,
+   -2740
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Wheat and barley moved east and millet moved west across the mountains of Inner Asia, carried by herders rather than farmers.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.prehistory.namazga",
+  "name": "Namazga Sequence",
+  "kind": "era",
+  "under": "Central Asian Prehistory < Central Asia & the Steppe",
+  "start": -4800,
+  "end": -1500,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "received",
+  "historicity": null,
+  "date_standing": "traditional",
+  "summary": "The six-phase framework that every account of Central Asian prehistory is written in, and which rests on pottery typology rather than radiocarbon.",
+  "aliases": [
+   "Namazga I-VI",
+   "Namazga-depe sequence"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "central-asia.qara-khitai",
+  "name": "Qara Khitai",
+  "kind": "era",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 1124,
+  "end": 1218,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Khitan successor state in Central Asia, founded by refugees from the fall of the Liao.",
+  "aliases": [
+   "Western Liao"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "central-asia.russian-turkestan",
+  "name": "Russian Conquest of Central Asia",
+  "kind": "era",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 1865,
+  "end": 1895,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Russian annexation of the three khanates, closing the last independent steppe polities.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.saka",
+  "name": "Saka",
+  "kind": "era",
+  "under": "Eurasian Steppe < Central Asia & the Steppe",
+  "start": -600,
+  "end": -100,
+  "extant": null,
+  "bounds": [
+   -650,
+   -550
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Eastern Iranian steppe peoples, known by the Persian name for them.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.samanid",
+  "name": "Samanid Empire",
+  "kind": "polity",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 819,
+  "end": 999,
+  "extant": null,
+  "bounds": [
+   794,
+   844
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A Persian revival in Bukhara and Samarkand: the dynasty under which New Persian became a literary language again, patronising Rudaki, Ferdowsi's sources and Avicenna's education.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.second-turkic-khaganate",
+  "name": "Second Turkic Khaganate",
+  "kind": "polity",
+  "under": "Eurasian Steppe < Central Asia & the Steppe",
+  "start": 682,
+  "end": 744,
+  "extant": null,
+  "bounds": [
+   657,
+   707
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Re-established Turkic power on the steppe after fifty years of Tang control, and left the Orkhon inscriptions.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.seljuk",
+  "name": "Seljuk Empire",
+  "kind": "polity",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 1037,
+  "end": 1194,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.sogdia",
+  "name": "Sogdia",
+  "kind": "era",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": -500,
+  "end": 750,
+  "extant": null,
+  "bounds": [
+   -550,
+   -450
+  ],
+  "dated_by": "unknown",
+  "historicity": "contested",
+  "date_standing": null,
+  "summary": "City-states around Samarkand and Bukhara whose merchants ran the Silk Road network. Never politically unified.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.tibet.dalai-lama",
+  "name": "Ganden Phodrang (Dalai Lama Rule)",
+  "kind": "polity",
+  "under": "Tibet & Himalaya < Central Asia & the Steppe",
+  "start": 1642,
+  "end": 1959,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "central-asia.tibet.empire",
+  "name": "Tibetan Empire",
+  "kind": "polity",
+  "under": "Tibet & Himalaya < Central Asia & the Steppe",
+  "start": 618,
+  "end": 842,
+  "extant": null,
+  "bounds": [
+   593,
+   643
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "central-asia.timurid",
+  "name": "Timurid Empire",
+  "kind": "polity",
+  "under": "Central Asia < Central Asia & the Steppe",
+  "start": 1370,
+  "end": 1507,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Timur's conquests were devastating and short-lived, but the dynasty he founded made Samarkand and Herat centres of astronomy, miniature painting and architecture, and produced the founder of Mughal India.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.turkic-khaganate",
+  "name": "First Turkic Khaganate",
+  "kind": "polity",
+  "under": "Eurasian Steppe < Central Asia & the Steppe",
+  "start": 552,
+  "end": 603,
+  "extant": null,
+  "bounds": [
+   527,
+   577
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.uyghur-khaganate",
+  "name": "Uyghur Khaganate",
+  "kind": "polity",
+  "under": "Eurasian Steppe < Central Asia & the Steppe",
+  "start": 744,
+  "end": 840,
+  "extant": null,
+  "bounds": [
+   719,
+   769
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Steppe empire centred on Ordu-Baliq, and for a century the Tang dynasty's indispensable ally.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "central-asia.xiongnu",
+  "name": "Xiongnu Empire",
+  "kind": "polity",
+  "under": "Eurasian Steppe < Central Asia & the Steppe",
+  "start": -209,
+  "end": 93,
+  "extant": null,
+  "bounds": [
+   -234,
+   -184
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First great nomadic empire on the Mongolian plateau.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.five-dynasties",
+  "name": "Five Dynasties and Ten Kingdoms",
+  "kind": "era",
+  "under": "China < East Asia",
+  "start": 907,
+  "end": 979,
+  "extant": null,
+  "bounds": [
+   882,
+   932
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Five short-lived dynasties in the north and roughly ten kingdoms in the south, between the Tang and the Song. Printing spread and paper money first appeared in this fragmentation, not in spite of it.",
+  "aliases": [
+   "Wu-tai"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.han",
+  "name": "Han Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": -206,
+  "end": 220,
+  "extant": null,
+  "bounds": [
+   -231,
+   -181
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Classical Chinese empire; namesake of the Han Chinese ethnicity.",
+  "aliases": [
+   "Han"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.han.eastern",
+  "name": "Eastern Han",
+  "kind": "polity",
+  "under": "Han Dynasty < China < East Asia",
+  "start": 25,
+  "end": 220,
+  "extant": null,
+  "bounds": [
+   -1,
+   50
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Paper invented by Cai Lun (c. 105); Buddhism enters China.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.han.western",
+  "name": "Western Han",
+  "kind": "polity",
+  "under": "Han Dynasty < China < East Asia",
+  "start": -206,
+  "end": 9,
+  "extant": null,
+  "bounds": [
+   -231,
+   -181
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.jin",
+  "name": "Jin Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 266,
+  "end": 420,
+  "extant": null,
+  "bounds": [
+   241,
+   291
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Briefly reunified China after the Three Kingdoms, then lost the north to steppe powers and fled south — the beginning of nearly three centuries of division.",
+  "aliases": [
+   "Chin"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.jin-jurchen",
+  "name": "Jin Dynasty (Jurchen)",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 1115,
+  "end": 1234,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Jurchen empire that took northern China from the Song, ruling from Kaifeng until the Mongol conquest.",
+  "aliases": [
+   "Chin",
+   "Jurchen Jin"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.jin-jurchen.jingkang",
+  "name": "Jingkang Incident",
+  "kind": "era",
+  "under": "Jin Dynasty (Jurchen) < China < East Asia",
+  "start": 1126,
+  "end": 1127,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Jin forces sacked Kaifeng and carried off emperors Huizong and Qinzong, ending the Northern Song.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.late-pleistocene",
+  "name": "Late Pleistocene China",
+  "kind": "era",
+  "under": "China < East Asia",
+  "start": -40000,
+  "end": -10550,
+  "extant": null,
+  "bounds": [
+   -42000,
+   -38000
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "China before farming: the earliest modern human remains in the region, and foragers making pottery thousands of years before any crop.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.legendary",
+  "name": "Legendary Age (Three Sovereigns & Five Emperors)",
+  "kind": "era",
+  "under": "China < East Asia",
+  "start": -2852,
+  "end": -2070,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "received",
+  "historicity": "legendary",
+  "date_standing": "traditional",
+  "summary": "The sage-rulers of Chinese tradition, placed before the Xia: god-kings credited with agriculture, medicine, writing and silk, then five emperors held up for millennia as the model of virtuous rule.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.liao",
+  "name": "Liao Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 907,
+  "end": 1125,
+  "extant": null,
+  "bounds": [
+   882,
+   932
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Khitan empire ruling Manchuria, Mongolia and the northern edge of the North China Plain, governed through separate steppe and Chinese administrations.",
+  "aliases": [
+   "Khitan Empire"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.ming",
+  "name": "Ming Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 1368,
+  "end": 1644,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Restored Han Chinese rule; Zheng He's voyages; Forbidden City built.",
+  "aliases": [
+   "Ming"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.neolithic",
+  "name": "Chinese Neolithic",
+  "kind": "era",
+  "under": "China < East Asia",
+  "start": -10550,
+  "end": -1700,
+  "extant": null,
+  "bounds": [
+   -11550,
+   -9550
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The long transition in China from foraging to farming villages, regional cultures, towns, and large waterworks.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.north-south",
+  "name": "Northern and Southern Dynasties",
+  "kind": "era",
+  "under": "China < East Asia",
+  "start": 420,
+  "end": 589,
+  "extant": null,
+  "bounds": [
+   395,
+   445
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Rival northern and southern courts, the north under non-Han dynasties that progressively adopted Chinese administration. Buddhism spread widely in both.",
+  "aliases": [
+   "Nan-Pei Ch'ao"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.prc",
+  "name": "People's Republic of China",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 1949,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Founded by Mao Zedong in 1949; the world's most populous state until 2023.",
+  "aliases": [
+   "PRC",
+   "Communist China",
+   "Mainland China",
+   "中华人民共和国",
+   "China"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.qin",
+  "name": "Qin Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": -221,
+  "end": -206,
+  "extant": null,
+  "bounds": [
+   -246,
+   -196
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First unified imperial state.",
+  "aliases": [
+   "Ch'in"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.qing",
+  "name": "Qing Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 1644,
+  "end": 1912,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Manchu-ruled last imperial dynasty.",
+  "aliases": [
+   "Ch'ing",
+   "Qing",
+   "Manchu"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.roc",
+  "name": "Republic of China",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 1912,
+  "end": 1949,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Post-imperial China, ending on the mainland with the Communist victory in 1949; continues on Taiwan.",
+  "aliases": [
+   "ROC",
+   "Nationalist China",
+   "Republican Era",
+   "中華民國",
+   "Taiwan"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.shang",
+  "name": "Shang Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": -1600,
+  "end": -1046,
+  "extant": null,
+  "bounds": [
+   -1700,
+   -1500
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First historically confirmed Chinese dynasty. Oracle bones; bronze ritual vessels.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.song",
+  "name": "Song Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 960,
+  "end": 1279,
+  "extant": null,
+  "bounds": [
+   935,
+   985
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Economic and technological golden age: printing, gunpowder, compass, paper money.",
+  "aliases": [
+   "Sung",
+   "Song"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.song.northern",
+  "name": "Northern Song",
+  "kind": "polity",
+  "under": "Song Dynasty < China < East Asia",
+  "start": 960,
+  "end": 1127,
+  "extant": null,
+  "bounds": [
+   935,
+   985
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.song.southern",
+  "name": "Southern Song",
+  "kind": "polity",
+  "under": "Song Dynasty < China < East Asia",
+  "start": 1127,
+  "end": 1279,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.sui",
+  "name": "Sui Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 581,
+  "end": 618,
+  "extant": null,
+  "bounds": [
+   556,
+   606
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Reunified China after nearly four centuries of division and built the Grand Canal, at ruinous cost, in two generations.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.tang",
+  "name": "Tang Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 618,
+  "end": 907,
+  "extant": null,
+  "bounds": [
+   593,
+   643
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Golden age of Chinese poetry and cosmopolitan trade.",
+  "aliases": [
+   "T'ang",
+   "Tang"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.three-kingdoms",
+  "name": "Three Kingdoms",
+  "kind": "era",
+  "under": "China < East Asia",
+  "start": 220,
+  "end": 280,
+  "extant": null,
+  "bounds": [
+   195,
+   245
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Wei, Shu, and Wu — the era of the Romance of the Three Kingdoms.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.china.western-xia",
+  "name": "Western Xia",
+  "kind": "era",
+  "under": "China < East Asia",
+  "start": 1038,
+  "end": 1227,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Tangut state in the northwest, with its own script and no official dynastic history.",
+  "aliases": [
+   "Xi Xia",
+   "Tangut Empire"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.xia",
+  "name": "Xia Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": -2070,
+  "end": -1600,
+  "extant": null,
+  "bounds": [
+   -2170,
+   -1970
+  ],
+  "dated_by": "unknown",
+  "historicity": "contested",
+  "date_standing": null,
+  "summary": "Traditionally the first Chinese dynasty. Whether it existed as a state is disputed.",
+  "aliases": [
+   "Hsia"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.yuan",
+  "name": "Yuan Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": 1271,
+  "end": 1370,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Mongol-ruled China under the descendants of Genghis Khan.",
+  "aliases": [
+   "Yüan"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.china.zhou",
+  "name": "Zhou Dynasty",
+  "kind": "polity",
+  "under": "China < East Asia",
+  "start": -1046,
+  "end": -256,
+  "extant": null,
+  "bounds": [
+   -1146,
+   -946
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Longest dynasty in Chinese history. Split into Western and Eastern (Spring-Autumn + Warring States).",
+  "aliases": [
+   "Chou"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.asuka",
+  "name": "Asuka Period",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": 538,
+  "end": 710,
+  "extant": null,
+  "bounds": [
+   513,
+   563
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.azuchi-momoyama",
+  "name": "Azuchi–Momoyama Period",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": 1573,
+  "end": 1603,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Unification wars under Oda Nobunaga, Toyotomi Hideyoshi, and Tokugawa Ieyasu.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.edo",
+  "name": "Edo Period",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": 1603,
+  "end": 1868,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Tokugawa shogunate; long peace, sakoku isolation, cultural flowering.",
+  "aliases": [
+   "Tokugawa Period",
+   "Edo Jidai"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.heian",
+  "name": "Heian Period",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": 794,
+  "end": 1185,
+  "extant": null,
+  "bounds": [
+   769,
+   819
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Classical age of Japanese court culture; The Tale of Genji.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.jomon",
+  "name": "Jōmon Period",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": -14000,
+  "end": -300,
+  "extant": null,
+  "bounds": [
+   -15000,
+   -13000
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Hunter-gatherers who made pottery, settled in villages and grew rich on the sea — without ever taking up farming.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "east-asia.japan.kamakura",
+  "name": "Kamakura Period",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": 1185,
+  "end": 1333,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First shogunate; repelled two Mongol invasions.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.kenmu",
+  "name": "Kenmu Restoration",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": 1333,
+  "end": 1336,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.kofun",
+  "name": "Kofun Period",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": 300,
+  "end": 538,
+  "extant": null,
+  "bounds": [
+   275,
+   325
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Age of keyhole-shaped tumulus tombs.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.modern",
+  "name": "Modern Japan",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": 1868,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "From the Meiji Restoration to the present. One nengō per emperor.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.muromachi",
+  "name": "Muromachi / Nanboku-chō Period",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": 1336,
+  "end": 1573,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Ashikaga shōgunate; culturally rich but politically fragmenting into the Sengoku warring-states era.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.nara",
+  "name": "Nara Period",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": 710,
+  "end": 794,
+  "extant": null,
+  "bounds": [
+   685,
+   735
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.japan.yayoi",
+  "name": "Yayoi Period",
+  "kind": "era",
+  "under": "Japan < East Asia",
+  "start": -300,
+  "end": 300,
+  "extant": null,
+  "bounds": [
+   -325,
+   -275
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.korea.chulmun",
+  "name": "Chulmun Period",
+  "kind": "era",
+  "under": "Korea < East Asia",
+  "start": -6000,
+  "end": -1500,
+  "extant": null,
+  "bounds": [
+   -6200,
+   -5800
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Korea's Neolithic: comb-patterned pottery, coastal foraging, and the slow arrival of millet from northeast China.",
+  "aliases": [
+   "Jeulmun pottery period"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.korea.colonial",
+  "name": "Japanese Colonial Rule",
+  "kind": "era",
+  "under": "Korea < East Asia",
+  "start": 1910,
+  "end": 1945,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Japanese annexation of Korea (1910–1945); ended by WWII.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.korea.divided",
+  "name": "Divided Korea",
+  "kind": "era",
+  "under": "Korea < East Asia",
+  "start": 1945,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Postwar division into North and South Korea after the Korean War.",
+  "aliases": [
+   "North Korea",
+   "South Korea",
+   "DPRK",
+   "Republic of Korea",
+   "Democratic People's Republic of Korea",
+   "ROK",
+   "Chosŏn",
+   "Hanguk"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.korea.gojoseon",
+  "name": "Gojoseon",
+  "kind": "polity",
+  "under": "Korea < East Asia",
+  "start": -2333,
+  "end": -108,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "received",
+  "historicity": "contested",
+  "date_standing": "traditional",
+  "summary": "The first Korean state in the traditional account, in the peninsula's northwest and southern Manchuria, ended by Han conquest in 108 BCE.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "east-asia.korea.goryeo",
+  "name": "Goryeo Dynasty",
+  "kind": "polity",
+  "under": "Korea < East Asia",
+  "start": 918,
+  "end": 1392,
+  "extant": null,
+  "bounds": [
+   893,
+   943
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Origin of the name 'Korea'; celadon ceramics; movable metal type.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.korea.joseon",
+  "name": "Joseon Dynasty",
+  "kind": "polity",
+  "under": "Korea < East Asia",
+  "start": 1392,
+  "end": 1897,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Long-lived Confucian monarchy; Hangul script created under Sejong the Great.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.korea.korean-empire",
+  "name": "Korean Empire",
+  "kind": "polity",
+  "under": "Korea < East Asia",
+  "start": 1897,
+  "end": 1910,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "east-asia.korea.mumun",
+  "name": "Mumun Period",
+  "kind": "era",
+  "under": "Korea < East Asia",
+  "start": -1500,
+  "end": -300,
+  "extant": null,
+  "bounds": [
+   -1600,
+   -1400
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Korea's Bronze Age transition: undecorated pottery, megalithic burial, and the arrival of paddy rice from the Liaodong route.",
+  "aliases": [
+   "Mumun pottery period"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "east-asia.korea.three-kingdoms",
+  "name": "Three Kingdoms of Korea",
+  "kind": "era",
+  "under": "Korea < East Asia",
+  "start": -57,
+  "end": 668,
+  "extant": null,
+  "bounds": [
+   -82,
+   -32
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Goguryeo, Baekje, Silla.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "east-asia.korea.unified-silla",
+  "name": "Unified Silla",
+  "kind": "polity",
+  "under": "Korea < East Asia",
+  "start": 668,
+  "end": 935,
+  "extant": null,
+  "bounds": [
+   643,
+   693
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Silla, allied with Tang China, defeated Baekje and Goguryeo and then turned on its ally, unifying most of the peninsula for the first time and presiding over a Buddhist cultural peak.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "east-asia.prehistory",
+  "name": "East Asian Prehistory",
+  "kind": "era",
+  "under": "East Asia",
+  "start": -14000,
+  "end": -300,
+  "extant": null,
+  "bounds": [
+   -15000,
+   -13000
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Jomon Japan and the Chinese Neolithic, gathered here for browsing. Both also sit in their own national sequences, where they belong.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.central.german-empire",
+  "name": "German Empire",
+  "kind": "polity",
+  "under": "Central Europe < Europe",
+  "start": 1871,
+  "end": 1918,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Unified German state 1871–1918 under the Hohenzollerns; collapsed at the end of WWI.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.central.germany-modern",
+  "name": "Post-War Germany",
+  "kind": "polity",
+  "under": "Central Europe < Europe",
+  "start": 1945,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Federal Republic of Germany from 1949 (reunified 1990).",
+  "aliases": [
+   "Bundesrepublik Deutschland",
+   "Federal Republic of Germany",
+   "Deutschland",
+   "Germany",
+   "West Germany",
+   "Deutsche Demokratische Republik"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "europe.central.habsburg-monarchy",
+  "name": "The Habsburg Monarchy",
+  "kind": "polity",
+  "under": "Central Europe < Europe",
+  "start": 1526,
+  "end": 1918,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A composite realm assembled by marriage rather than conquest, holding together Austrians, Hungarians, Czechs, Poles, Croats, Romanians and Italians until nationalism pulled it apart in 1918.",
+  "aliases": [
+   "Austria-Hungary",
+   "Habsburg Empire",
+   "Österreich-Ungarn",
+   "Austrian Empire"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.central.hre",
+  "name": "Holy Roman Empire",
+  "kind": "polity",
+  "under": "Central Europe < Europe",
+  "start": 800,
+  "end": 1806,
+  "extant": null,
+  "bounds": [
+   775,
+   825
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Multi-ethnic complex of European territories notionally under an elected emperor.",
+  "aliases": [
+   "Sacrum Romanum Imperium",
+   "Heiliges Römisches Reich",
+   "Holy Roman Empire of the German Nation",
+   "Sacrum Imperium Romanum Nationis Germanicae"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.central.hre.hohenstaufen",
+  "name": "Hohenstaufen Dynasty",
+  "kind": "polity",
+  "under": "Holy Roman Empire < Central Europe < Europe",
+  "start": 1138,
+  "end": 1254,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.central.hre.ottonian",
+  "name": "Ottonian Dynasty",
+  "kind": "polity",
+  "under": "Holy Roman Empire < Central Europe < Europe",
+  "start": 919,
+  "end": 1024,
+  "extant": null,
+  "bounds": [
+   894,
+   944
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.central.nazi-germany",
+  "name": "Nazi Germany",
+  "kind": "polity",
+  "under": "Central Europe < Europe",
+  "start": 1933,
+  "end": 1945,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Totalitarian state under Hitler; started WWII in Europe and perpetrated the Holocaust.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.central.prussia",
+  "name": "Rise of Prussia",
+  "kind": "polity",
+  "under": "Central Europe < Europe",
+  "start": 1701,
+  "end": 1871,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A minor Baltic state that turned military and administrative reform into great-power status, then unified Germany around itself.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.central.weimar",
+  "name": "Weimar Republic",
+  "kind": "polity",
+  "under": "Central Europe < Europe",
+  "start": 1918,
+  "end": 1933,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.eastern.kievan-rus",
+  "name": "Kievan Rus'",
+  "kind": "polity",
+  "under": "Eastern Europe < Europe",
+  "start": 862,
+  "end": 1240,
+  "extant": null,
+  "bounds": [
+   837,
+   887
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Medieval East Slavic federation; ancestor state of modern Russia, Ukraine, and Belarus.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.eastern.moscow",
+  "name": "Grand Duchy of Moscow",
+  "kind": "polity",
+  "under": "Eastern Europe < Europe",
+  "start": 1263,
+  "end": 1547,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A minor principality under Mongol overlordship that outmanoeuvred its rivals, absorbed them, stopped paying tribute, and became the core of the Russian state.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.eastern.plc",
+  "name": "Polish-Lithuanian Commonwealth",
+  "kind": "polity",
+  "under": "Eastern Europe < Europe",
+  "start": 1569,
+  "end": 1795,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.eastern.russia-modern",
+  "name": "Russian Federation",
+  "kind": "polity",
+  "under": "Eastern Europe < Europe",
+  "start": 1991,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Russian Federation from 1991 to the present.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.eastern.russian-empire",
+  "name": "Russian Empire",
+  "kind": "polity",
+  "under": "Eastern Europe < Europe",
+  "start": 1721,
+  "end": 1917,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Multi-national empire from Peter the Great to the abdication of Nicholas II.",
+  "aliases": [
+   "Rossiyskaya Imperiya",
+   "Imperial Russia",
+   "Tsarist Russia"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "europe.eastern.soviet",
+  "name": "Soviet Union",
+  "kind": "polity",
+  "under": "Eastern Europe < Europe",
+  "start": 1922,
+  "end": 1991,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Union of Soviet Socialist Republics (USSR); communist superpower 1922–1991.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.eastern.tsardom",
+  "name": "Tsardom of Russia",
+  "kind": "polity",
+  "under": "Eastern Europe < Europe",
+  "start": 1547,
+  "end": 1721,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Russian state from Ivan IV's assumption of the tsar title to Peter I's imperial declaration.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.enlightenment",
+  "name": "The Enlightenment",
+  "kind": "era",
+  "under": "Europe",
+  "start": 1680,
+  "end": 1815,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Intellectual movement emphasizing reason, individual liberty, and skepticism of tradition; foundation of modern democratic thought.",
+  "aliases": [
+   "Age of Reason",
+   "Age of Enlightenment"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "europe.mediterranean.byzantine",
+  "name": "Byzantine Empire",
+  "kind": "polity",
+  "under": "Mediterranean < Europe",
+  "start": 330,
+  "end": 1453,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Roman Empire's Greek-speaking continuation, based in Constantinople.",
+  "aliases": [
+   "Basileia ton Rhomaion",
+   "Byzantium",
+   "Eastern Roman Empire",
+   "Rhomania",
+   "Βασιλεία τῶν Ῥωμαίων",
+   "Byzantine"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.greece",
+  "name": "Ancient Greece",
+  "kind": "polity",
+  "under": "Mediterranean < Europe",
+  "start": -3200,
+  "end": -146,
+  "extant": null,
+  "bounds": [
+   -3250,
+   -3150
+  ],
+  "dated_by": "typological",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Cradle of Western philosophy, drama, historiography, and democracy.",
+  "aliases": [
+   "Greek",
+   "Hellenic"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.greece.classical",
+  "name": "Classical Greece",
+  "kind": "polity",
+  "under": "Ancient Greece < Mediterranean < Europe",
+  "start": -480,
+  "end": -323,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Age of Athens' Golden Age, the Peloponnesian War, and philosophers Socrates, Plato, and Aristotle.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.hellenistic",
+  "name": "Hellenistic Period",
+  "kind": "era",
+  "under": "Mediterranean < Europe",
+  "start": -323,
+  "end": -31,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Age of Greek-influenced kingdoms from Alexander's death to Actium.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.macedon",
+  "name": "Kingdom of Macedon",
+  "kind": "polity",
+  "under": "Mediterranean < Europe",
+  "start": -700,
+  "end": -146,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Northern Greek kingdom that under Philip II and Alexander conquered the classical world.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome",
+  "name": "Ancient Rome",
+  "kind": "era",
+  "under": "Mediterranean < Europe",
+  "start": -753,
+  "end": 476,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "received",
+  "historicity": null,
+  "date_standing": "traditional",
+  "summary": "From the legendary founding to the fall of the Western Empire; the political and cultural core of the ancient Mediterranean.",
+  "aliases": [
+   "Roman"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.empire",
+  "name": "Roman Empire",
+  "kind": "polity",
+  "under": "Ancient Rome < Mediterranean < Europe",
+  "start": -27,
+  "end": 476,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Monarchical Roman state from Augustus's Principate to the deposition of Romulus Augustulus.",
+  "aliases": [
+   "Roman",
+   "Imperial Roman"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.constantinian",
+  "name": "Constantinian Dynasty",
+  "kind": "polity",
+  "under": "Roman Empire < Ancient Rome < Mediterranean < Europe",
+  "start": 306,
+  "end": 363,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Roman imperial dynasty led by Constantine the Great and his successors; Christianization of the Empire.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.dominate-tetrarchy",
+  "name": "Dominate / Tetrarchy",
+  "kind": "polity",
+  "under": "Roman Empire < Ancient Rome < Mediterranean < Europe",
+  "start": 284,
+  "end": 324,
+  "extant": null,
+  "bounds": [
+   259,
+   309
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.flavian",
+  "name": "Flavian Dynasty",
+  "kind": "polity",
+  "under": "Roman Empire < Ancient Rome < Mediterranean < Europe",
+  "start": 69,
+  "end": 96,
+  "extant": null,
+  "bounds": [
+   44,
+   94
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.julio-claudian",
+  "name": "Julio-Claudian Dynasty",
+  "kind": "polity",
+  "under": "Roman Empire < Ancient Rome < Mediterranean < Europe",
+  "start": -27,
+  "end": 68,
+  "extant": null,
+  "bounds": [
+   -52,
+   -2
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.nerva-antonine",
+  "name": "Nerva–Antonine Dynasty",
+  "kind": "polity",
+  "under": "Roman Empire < Ancient Rome < Mediterranean < Europe",
+  "start": 96,
+  "end": 192,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Five Good Emperors; Pax Romana at its peak.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.severan",
+  "name": "Severan Dynasty",
+  "kind": "polity",
+  "under": "Roman Empire < Ancient Rome < Mediterranean < Europe",
+  "start": 193,
+  "end": 235,
+  "extant": null,
+  "bounds": [
+   168,
+   218
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A dynasty of provincial origin that widened citizenship, leaned openly on the army for legitimacy, and ended in the assassination that opened the third-century crisis.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.valentinianic-theodosian",
+  "name": "Valentinianic & Theodosian Dynasties",
+  "kind": "polity",
+  "under": "Roman Empire < Ancient Rome < Mediterranean < Europe",
+  "start": 364,
+  "end": 457,
+  "extant": null,
+  "bounds": [
+   339,
+   389
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The last dynasties to rule a single empire: Christianity became the state religion, the Goths won at Adrianople, and the final administrative division of east and west set in.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.western-collapse",
+  "name": "Western Collapse",
+  "kind": "polity",
+  "under": "Roman Empire < Ancient Rome < Mediterranean < Europe",
+  "start": 455,
+  "end": 480,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "minority",
+  "summary": "Final disintegration of the Western Roman Empire during a rapid succession of short-lived emperors.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.year-of-five",
+  "name": "Year of the Five Emperors",
+  "kind": "polity",
+  "under": "Roman Empire < Ancient Rome < Mediterranean < Europe",
+  "start": 193,
+  "end": 193,
+  "extant": null,
+  "bounds": [
+   168,
+   218
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.mediterranean.rome.empire.year-of-four",
+  "name": "Year of the Four Emperors",
+  "kind": "polity",
+  "under": "Roman Empire < Ancient Rome < Mediterranean < Europe",
+  "start": 69,
+  "end": 69,
+  "extant": null,
+  "bounds": [
+   44,
+   94
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.mediterranean.rome.kingdom",
+  "name": "Roman Kingdom",
+  "kind": "polity",
+  "under": "Ancient Rome < Mediterranean < Europe",
+  "start": -753,
+  "end": -509,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "received",
+  "historicity": null,
+  "date_standing": "traditional",
+  "summary": "Seven legendary kings from Romulus to Tarquin the Proud.",
+  "aliases": [
+   "Roman"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "europe.mediterranean.rome.republic",
+  "name": "Roman Republic",
+  "kind": "polity",
+  "under": "Ancient Rome < Mediterranean < Europe",
+  "start": -509,
+  "end": -27,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "received",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Non-monarchical Rome governed by the Senate and elected magistrates.",
+  "aliases": [
+   "Roman Republican"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.republic.early",
+  "name": "Early Republic",
+  "kind": "polity",
+  "under": "Roman Republic < Ancient Rome < Mediterranean < Europe",
+  "start": -509,
+  "end": -287,
+  "extant": null,
+  "bounds": [
+   -559,
+   -459
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.mediterranean.rome.republic.late",
+  "name": "Late Republic",
+  "kind": "polity",
+  "under": "Roman Republic < Ancient Rome < Mediterranean < Europe",
+  "start": -133,
+  "end": -27,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Era of Marius, Sulla, Pompey, Caesar, and Octavian; ended by civil wars that produced the Empire.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.mediterranean.rome.republic.middle",
+  "name": "Middle Republic (Punic Wars)",
+  "kind": "polity",
+  "under": "Roman Republic < Ancient Rome < Mediterranean < Europe",
+  "start": -287,
+  "end": -133,
+  "extant": null,
+  "bounds": [
+   -312,
+   -262
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.northern.kalmar",
+  "name": "Kalmar Union",
+  "kind": "era",
+  "under": "Northern Europe < Europe",
+  "start": 1397,
+  "end": 1523,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.northern.swedish-empire",
+  "name": "Swedish Empire",
+  "kind": "polity",
+  "under": "Northern Europe < Europe",
+  "start": 1611,
+  "end": 1721,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.northern.viking-age",
+  "name": "Viking Age",
+  "kind": "era",
+  "under": "Northern Europe < Europe",
+  "start": 793,
+  "end": 1066,
+  "extant": null,
+  "bounds": [
+   768,
+   818
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Norse expansion across northern Europe and the North Atlantic.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.prehistory",
+  "name": "European Prehistory",
+  "kind": "era",
+  "under": "Europe",
+  "start": -453050,
+  "end": -1500,
+  "extant": null,
+  "bounds": [
+   -463050,
+   -443050
+  ],
+  "dated_by": "uranium-series",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "The deep human past of Europe, from Neanderthals and cave art to farming, monuments, and metal-age cultures.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.prehistory.chalcolithic-balkans",
+  "name": "Chalcolithic (Southeast Europe)",
+  "kind": "era",
+  "under": "European Prehistory < Europe",
+  "start": -5000,
+  "end": -3700,
+  "extant": null,
+  "bounds": [
+   -5200,
+   -4800
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "The Balkan Copper Age: the world's earliest known copper smelting, and the gold of the Varna cemetery.",
+  "aliases": [
+   "Copper Age",
+   "Eneolithic"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.prehistory.farmer-turnover",
+  "name": "The Anatolian Farmer Turnover",
+  "kind": "era",
+  "under": "European Prehistory < Europe",
+  "start": -6500,
+  "end": -4000,
+  "extant": null,
+  "bounds": [
+   -6700,
+   -6300
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": "reconstructed",
+  "date_standing": "consensus",
+  "summary": "Farming spread into Europe substantially as people, not as ideas: incoming Anatolian-descended farmers replaced most of the resident forager ancestry.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.prehistory.neolithic-routes",
+  "name": "The Two Routes of Neolithic Spread",
+  "kind": "era",
+  "under": "European Prehistory < Europe",
+  "start": -6500,
+  "end": -4000,
+  "extant": null,
+  "bounds": [
+   -6700,
+   -6300
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Farming crossed Europe by an inland Danubian route and a Mediterranean sea route, at different speeds and with different outcomes.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.reformation",
+  "name": "The Reformation",
+  "kind": "polity",
+  "under": "Europe",
+  "start": 1517,
+  "end": 1648,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Religious and political upheaval that fractured Latin Christendom, triggered by Luther's Ninety-Five Theses and ended by the Peace of Westphalia.",
+  "aliases": [
+   "Protestant Reformation",
+   "European Reformation"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "europe.renaissance",
+  "name": "The Renaissance",
+  "kind": "era",
+  "under": "Europe",
+  "start": 1300,
+  "end": 1600,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "European cultural, artistic, and intellectual rebirth beginning in Italy and radiating outward; recovery of Greco-Roman texts; humanism.",
+  "aliases": [
+   "European Renaissance",
+   "Italian Renaissance"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "europe.scientific-revolution",
+  "name": "Scientific Revolution",
+  "kind": "era",
+  "under": "Europe",
+  "start": 1543,
+  "end": 1700,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Emergence of modern science: Copernicus, Galileo, Kepler, Newton. Overturned Aristotelian and Ptolemaic worldviews.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.britain.empire",
+  "name": "The British Empire",
+  "kind": "polity",
+  "under": "Western Europe < Europe",
+  "start": 1583,
+  "end": 1997,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The largest empire in history by area, and an entity whose beginning and end are both matters of definition rather than record.",
+  "aliases": [
+   "First British Empire",
+   "Second British Empire"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.western.britain.georgian",
+  "name": "The Georgian Era",
+  "kind": "era",
+  "under": "Western Europe < Europe",
+  "start": 1714,
+  "end": 1837,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Hanoverian Britain: the Jacobite risings, the loss of America, the Regency, and the industrial transformation that reshaped the country.",
+  "aliases": [
+   "Hanoverian Britain",
+   "House of Hanover",
+   "Regency era"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.western.britain.victorian",
+  "name": "Victorian Britain",
+  "kind": "polity",
+  "under": "England (Medieval to Modern) < Western Europe < Europe",
+  "start": 1837,
+  "end": 1901,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Long reign of Queen Victoria; peak of the British Empire.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.carolingian",
+  "name": "Carolingian Empire",
+  "kind": "polity",
+  "under": "Western Europe < Europe",
+  "start": 751,
+  "end": 888,
+  "extant": null,
+  "bounds": [
+   726,
+   776
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Frankish empire founded by Charlemagne; briefly reunified western Europe.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.england",
+  "name": "England (Medieval to Modern)",
+  "kind": "polity",
+  "under": "Western Europe < Europe",
+  "start": 927,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   902,
+   952
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Kingdom of England (later Great Britain, then United Kingdom).",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.england.norman",
+  "name": "Norman England",
+  "kind": "polity",
+  "under": "England (Medieval to Modern) < Western Europe < Europe",
+  "start": 1066,
+  "end": 1154,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Norman-French dynasty founded by William the Conqueror.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.england.tudor",
+  "name": "Tudor England",
+  "kind": "polity",
+  "under": "England (Medieval to Modern) < Western Europe < Europe",
+  "start": 1485,
+  "end": 1603,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "House that ruled England 1485–1603 including Henry VIII and Elizabeth I.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.france",
+  "name": "France (Medieval to Modern)",
+  "kind": "polity",
+  "under": "Western Europe < Europe",
+  "start": 987,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   962,
+   1012
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Kingdom (later republic) of France from Hugh Capet to the present.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.france.bourbon",
+  "name": "Bourbon France",
+  "kind": "polity",
+  "under": "France (Medieval to Modern) < Western Europe < Europe",
+  "start": 1589,
+  "end": 1792,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Longest-ruling French royal house; ended by the French Revolution.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.france.colonial-empire-first",
+  "name": "First French Colonial Empire",
+  "kind": "era",
+  "under": "France (Medieval to Modern) < Western Europe < Europe",
+  "start": 1534,
+  "end": 1814,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "New France, the Caribbean sugar islands and the Indian trading posts, most of it lost or sold within two generations.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.western.france.colonial-empire-second",
+  "name": "Second French Colonial Empire",
+  "kind": "era",
+  "under": "France (Medieval to Modern) < Western Europe < Europe",
+  "start": 1830,
+  "end": 1962,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Rebuilt around Algeria and expanded across West and Central Africa and Indochina, and dismantled in fifteen years after 1945.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.western.france.napoleon.napoleonic-wars",
+  "name": "Napoleonic Wars",
+  "kind": "era",
+  "under": "Napoleonic Era < France (Medieval to Modern) < Western Europe < Europe",
+  "start": 1803,
+  "end": 1815,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Series of conflicts pitting Napoleon's France against shifting European coalitions. Reshaped the continent.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.iberia.portuguese-empire",
+  "name": "Portuguese Empire",
+  "kind": "polity",
+  "under": "Western Europe < Europe",
+  "start": 1415,
+  "end": 1999,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Pioneered European maritime exploration; earliest and longest-lived colonial empire.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.western.iberia.reconquista",
+  "name": "Reconquista & Iberian Unification",
+  "kind": "era",
+  "under": "Western Europe < Europe",
+  "start": 711,
+  "end": 1492,
+  "extant": null,
+  "bounds": [
+   686,
+   736
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The long, discontinuous Christian expansion against Muslim al-Andalus, ending in 1492 with Granada — the same year as the expulsion of the Jews and Columbus's first voyage.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.western.iberia.spanish-empire",
+  "name": "Spanish Empire",
+  "kind": "polity",
+  "under": "Western Europe < Europe",
+  "start": 1492,
+  "end": 1898,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "First truly global empire; the leading colonial power of the 16th century.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.western.migration",
+  "name": "Migration Period",
+  "kind": "era",
+  "under": "Western Europe < Europe",
+  "start": 376,
+  "end": 800,
+  "extant": null,
+  "bounds": [
+   351,
+   401
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "europe.western.netherlands.voc",
+  "name": "Dutch East India Company",
+  "kind": "era",
+  "under": "The Netherlands < Western Europe < Europe",
+  "start": 1602,
+  "end": 1799,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "A chartered company with the power to wage war, coin money and hold territory, which for two centuries was the Dutch presence in Asia.",
+  "aliases": [
+   "VOC",
+   "Vereenigde Oostindische Compagnie",
+   "United East India Company"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "europe.western.netherlands.wic-first",
+  "name": "Dutch West India Company",
+  "kind": "era",
+  "under": "The Netherlands < Western Europe < Europe",
+  "start": 1621,
+  "end": 1674,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The Atlantic counterpart of the VOC: Brazil, the Caribbean, New Netherland, and a dominant share of the Dutch slave trade.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "europe.western.netherlands.wic-second",
+  "name": "Second Dutch West India Company",
+  "kind": "era",
+  "under": "The Netherlands < Western Europe < Europe",
+  "start": 1675,
+  "end": 1792,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The successor company, narrower in remit and increasingly dependent on the slave trade.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.bce",
+  "name": "BCE (Before Common Era)",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": -3500,
+  "end": -1,
+  "extant": null,
+  "bounds": [
+   -3700,
+   -3300
+  ],
+  "dated_by": "unknown",
+  "historicity": "interpretive",
+  "date_standing": null,
+  "summary": "The 'before Common Era' convention for years prior to year 1. Equivalent to BC.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.bronze-age",
+  "name": "Bronze Age",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": -3300,
+  "end": -1200,
+  "extant": null,
+  "bounds": [
+   -3500,
+   -3000
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Age of bronze metallurgy, ending in the systemic Late Bronze Age Collapse c. 1200 BCE.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.ce",
+  "name": "CE (Common Era)",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": 1,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -24,
+   26
+  ],
+  "dated_by": "unknown",
+  "historicity": "interpretive",
+  "date_standing": null,
+  "summary": "The 'Common Era' convention for years from year 1 onward. Equivalent to AD.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.classical-antiquity",
+  "name": "Classical Antiquity",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": -800,
+  "end": 500,
+  "extant": null,
+  "bounds": [
+   -850,
+   -750
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The Greek and Roman world, roughly from Homer to the fall of Western Rome.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.classical-antiquity.axial-age",
+  "name": "Axial Age",
+  "kind": "era",
+  "under": "Classical Antiquity < Global & Multi-Regional",
+  "start": -800,
+  "end": -200,
+  "extant": null,
+  "bounds": [
+   -850,
+   -750
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Concurrent religious and philosophical revolutions: Buddha, Confucius, Zoroaster, Hebrew prophets, Greek philosophers.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.columbian-exchange",
+  "name": "The Columbian Exchange",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": 1492,
+  "end": 1700,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The transfer of crops, animals, people and above all disease between hemispheres, and the demographic collapse that followed in the Americas.",
+  "aliases": [
+   "Columbian Exchange",
+   "Great Dying"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.contemporary",
+  "name": "Contemporary",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": 1991,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Post-Cold-War world: globalization, digital revolution, climate crisis.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.contemporary.war-on-terror",
+  "name": "War on Terror",
+  "kind": "era",
+  "under": "Contemporary < Global & Multi-Regional",
+  "start": 2001,
+  "end": 2021,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "US-led military campaign following 9/11; wars in Afghanistan (2001–2021) and Iraq (2003–2011).",
+  "aliases": [
+   "Global War on Terrorism"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.early-modern",
+  "name": "Early Modern",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": 1500,
+  "end": 1800,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Age of exploration, colonial empires, and gunpowder; from ~1500 to the eve of the Napoleonic Wars.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.industrial-revolution",
+  "name": "Industrial Revolution",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": 1760,
+  "end": 1840,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Transition from agrarian and craft economies to mechanized industry, beginning in Britain and spreading globally. Steam power, textiles, railways.",
+  "aliases": [
+   "First Industrial Revolution"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.iron-age",
+  "name": "Iron Age",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": -1200,
+  "end": -550,
+  "extant": null,
+  "bounds": [
+   -1350,
+   -1050
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Widespread adoption of iron for weapons and tools; the age of classical antiquity's origins.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.late-antiquity",
+  "name": "Late Antiquity",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": 250,
+  "end": 750,
+  "extant": null,
+  "bounds": [
+   225,
+   275
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.long-19c",
+  "name": "Long 19th Century",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": 1789,
+  "end": 1914,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Historians' 'long nineteenth century' from the French Revolution to World War I.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.mesolithic",
+  "name": "Mesolithic (Eurasia)",
+  "kind": "era",
+  "under": "Human Prehistory < Global & Multi-Regional",
+  "start": -10000,
+  "end": -5000,
+  "extant": null,
+  "bounds": [
+   -11000,
+   -9000
+  ],
+  "dated_by": "typological",
+  "historicity": "interpretive",
+  "date_standing": "minority",
+  "summary": "A European period name that much of the world does not use, and a live argument about whether it describes a real stage at all.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.middle-ages",
+  "name": "Middle Ages",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": 500,
+  "end": 1500,
+  "extant": null,
+  "bounds": [
+   475,
+   525
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Between the fall of Rome and the Renaissance; medieval Christendom, the Islamic Golden Age, Tang-Song China, and Kamakura Japan.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.multi-regional",
+  "name": "Multi-Regional Empires",
+  "kind": "polity",
+  "under": "Global & Multi-Regional",
+  "start": -550,
+  "end": 1997,
+  "extant": null,
+  "bounds": [
+   -600,
+   -500
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Polities that held territory in more than one world region, gathered so they can be compared with each other.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.multi-regional.abbasid",
+  "name": "Abbasid Caliphate",
+  "kind": "polity",
+  "under": "Multi-Regional Empires < Global & Multi-Regional",
+  "start": 750,
+  "end": 1258,
+  "extant": null,
+  "bounds": [
+   725,
+   775
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Ruled from Baghdad; Islamic Golden Age. Ended by Mongol sack of Baghdad.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.multi-regional.age-of-sail",
+  "name": "Age of Exploration / Age of Sail",
+  "kind": "era",
+  "under": "Multi-Regional Empires < Global & Multi-Regional",
+  "start": 1418,
+  "end": 1815,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "European maritime exploration and colonial expansion, roughly Columbus to Napoleon.",
+  "aliases": [
+   "Age of Exploration",
+   "Age of Discovery"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.multi-regional.decolonization",
+  "name": "Decolonization",
+  "kind": "era",
+  "under": "Multi-Regional Empires < Global & Multi-Regional",
+  "start": 1945,
+  "end": 1997,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Dissolution of European colonial empires after WWII; independence for most of Africa, Asia, and the Pacific.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.multi-regional.fatimid",
+  "name": "Fatimid Caliphate",
+  "kind": "polity",
+  "under": "Multi-Regional Empires < Global & Multi-Regional",
+  "start": 909,
+  "end": 1171,
+  "extant": null,
+  "bounds": [
+   884,
+   934
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Isma'ili Shia caliphate; founded Cairo and Al-Azhar.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.multi-regional.ottoman",
+  "name": "Ottoman Empire",
+  "kind": "polity",
+  "under": "Multi-Regional Empires < Global & Multi-Regional",
+  "start": 1299,
+  "end": 1922,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Multi-continental empire spanning Anatolia, the Balkans, North Africa, and the Arab world.",
+  "aliases": [
+   "Devlet-i ʿAlīye-i ʿOsmānīye",
+   "Devlet-i Aliyye",
+   "Osmanlı İmparatorluğu",
+   "Turkish Empire"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.multi-regional.rashidun",
+  "name": "Rashidun Caliphate",
+  "kind": "polity",
+  "under": "Multi-Regional Empires < Global & Multi-Regional",
+  "start": 632,
+  "end": 661,
+  "extant": null,
+  "bounds": [
+   607,
+   657
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First four 'rightly guided' caliphs; rapid conquest of Persia, Levant, and Egypt.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.multi-regional.scramble-for-africa",
+  "name": "Scramble for Africa",
+  "kind": "era",
+  "under": "Multi-Regional Empires < Global & Multi-Regional",
+  "start": 1881,
+  "end": 1914,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "European colonial partition of Africa, formalized by the Berlin Conference (1884–85).",
+  "aliases": [
+   "Partition of Africa",
+   "Colonization of Africa"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.multi-regional.umayyad",
+  "name": "Umayyad Caliphate",
+  "kind": "polity",
+  "under": "Multi-Regional Empires < Global & Multi-Regional",
+  "start": 661,
+  "end": 750,
+  "extant": null,
+  "bounds": [
+   636,
+   686
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Dynasty ruling from Damascus. Reached from Iberia to Central Asia.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.neolithic",
+  "name": "Neolithic",
+  "kind": "era",
+  "under": "Human Prehistory < Global & Multi-Regional",
+  "start": -10000,
+  "end": -3300,
+  "extant": null,
+  "bounds": [
+   -11000,
+   -9000
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Beginnings of agriculture, animal domestication, and permanent villages.",
+  "aliases": [
+   "New Stone Age"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.neolithic.agricultural-revolution",
+  "name": "Neolithic Transition",
+  "kind": "era",
+  "under": "Neolithic < Human Prehistory < Global & Multi-Regional",
+  "start": -10000,
+  "end": -1800,
+  "extant": null,
+  "bounds": [
+   -11000,
+   -9000
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": "interpretive",
+  "date_standing": "majority",
+  "summary": "Independent, and largely unconscious, transitions to farming in at least seven regions. A process of millennia, not an event.",
+  "aliases": [
+   "Neolithic Revolution",
+   "Agricultural Revolution",
+   "First Agricultural Revolution"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "global.paleolithic",
+  "name": "Paleolithic",
+  "kind": "era",
+  "under": "Human Prehistory < Global & Multi-Regional",
+  "start": -3300000,
+  "end": -10000,
+  "extant": null,
+  "bounds": [
+   -3366000,
+   -3234000
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The long first chapter: stone tools, fire, and hunter-gatherer life, from the earliest knapped stone through the whole span of the genus Homo.",
+  "aliases": [
+   "Old Stone Age",
+   "Palaeolithic"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.prehistory",
+  "name": "Human Prehistory",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": -3300000,
+  "end": -3000,
+  "extant": null,
+  "bounds": [
+   -3366000,
+   -3234000
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "From the earliest stone toolmaking to the first written records. Dated by measurement rather than reckoning, so quoted in years before present.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.prehistory.firsts",
+  "name": "Behavioural Firsts",
+  "kind": "era",
+  "under": "Human Prehistory < Global & Multi-Regional",
+  "start": -3390000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -3458000,
+   -3322000
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The earliest known evidence for each human behaviour — toolmaking, fire, pigment, burial, art, seafaring. Each date is a floor, not an estimate.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.prehistory.hominins",
+  "name": "Hominins",
+  "kind": "era",
+  "under": "Human Prehistory < Global & Multi-Regional",
+  "start": -2800000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -2800000,
+   -2740000
+  ],
+  "dated_by": "argon-argon",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Humans, proto-humans and near-humans: a dozen or so named species, most of which overlapped with others rather than succeeding them in a line.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "global.second-industrial-revolution",
+  "name": "Second Industrial Revolution",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": 1870,
+  "end": 1914,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Steel, electricity, chemicals, internal combustion, mass production; the age of Edison, Tesla, Ford.",
+  "aliases": [
+   "Technological Revolution"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "global.short-20c",
+  "name": "Short 20th Century",
+  "kind": "era",
+  "under": "Global & Multi-Regional",
+  "start": 1914,
+  "end": 1991,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Hobsbawm's 'short twentieth century' from WWI to the collapse of the Soviet Union.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "global.short-20c.cold-war",
+  "name": "Cold War",
+  "kind": "era",
+  "under": "Short 20th Century < Global & Multi-Regional",
+  "start": 1947,
+  "end": 1991,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "US–USSR geopolitical rivalry, 1947–1991; defined the second half of the 20th century.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.australia.aboriginal",
+  "name": "Aboriginal Australia",
+  "kind": "era",
+  "under": "Australia < Oceania",
+  "start": -65000,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   -67000,
+   -63000
+  ],
+  "dated_by": "luminescence",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "One of the longest continuous cultural traditions in human history.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "oceania.australia.colonial",
+  "name": "Colonial Australia",
+  "kind": "era",
+  "under": "Australia < Oceania",
+  "start": 1788,
+  "end": 1901,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "British colonial period in Australia, 1788–1901.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.australia.commonwealth",
+  "name": "Commonwealth of Australia",
+  "kind": "polity",
+  "under": "Australia < Oceania",
+  "start": 1901,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Federated Commonwealth of Australia from 1901.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.melanesia.fijian-chiefdoms",
+  "name": "Fijian Chiefdoms",
+  "kind": "era",
+  "under": "Melanesia < Oceania",
+  "start": 500,
+  "end": 1874,
+  "extant": null,
+  "bounds": [
+   475,
+   525
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.melanesia.lapita",
+  "name": "Lapita Culture",
+  "kind": "culture",
+  "under": "Melanesia < Oceania",
+  "start": -1501,
+  "end": -734,
+  "extant": null,
+  "bounds": [
+   -1601,
+   -1401
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "An ancestral Austronesian seafaring culture that spread from the Bismarck Archipelago into Remote Oceania.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "oceania.micronesia.saudeleur",
+  "name": "Saudeleur Dynasty (Nan Madol)",
+  "kind": "polity",
+  "under": "Micronesia < Oceania",
+  "start": 1100,
+  "end": 1628,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Built the megalithic city of Nan Madol on Pohnpei.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.micronesia.yap",
+  "name": "Yapese Empire (Sawei)",
+  "kind": "polity",
+  "under": "Micronesia < Oceania",
+  "start": 1400,
+  "end": 1700,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.polynesia.aotearoa",
+  "name": "Māori Aotearoa",
+  "kind": "polity",
+  "under": "Polynesia < Oceania",
+  "start": 1250,
+  "end": 1840,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Māori settlement and society of New Zealand before 1840.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.polynesia.hawaii",
+  "name": "Kingdom of Hawaii",
+  "kind": "polity",
+  "under": "Polynesia < Oceania",
+  "start": 1795,
+  "end": 1898,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Unified Hawaiian Kingdom under the Kamehameha dynasty until US annexation in 1898.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.polynesia.new-zealand",
+  "name": "New Zealand (post-Waitangi)",
+  "kind": "era",
+  "under": "Polynesia < Oceania",
+  "start": 1840,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Post-Treaty-of-Waitangi Aotearoa/New Zealand.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.polynesia.settlement",
+  "name": "Polynesian Voyaging & Settlement",
+  "kind": "era",
+  "under": "Polynesia < Oceania",
+  "start": 1025,
+  "end": 1290,
+  "extant": null,
+  "bounds": [
+   1025,
+   1025
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "A rapid expansion from West to East Polynesia that reached remote islands, including Aotearoa, in the late thirteenth century.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "oceania.polynesia.tonga",
+  "name": "Kingdom of Tonga",
+  "kind": "polity",
+  "under": "Polynesia < Oceania",
+  "start": 1845,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.polynesia.tui-tonga",
+  "name": "Tuʻi Tonga Empire",
+  "kind": "polity",
+  "under": "Polynesia < Oceania",
+  "start": 950,
+  "end": 1865,
+  "extant": null,
+  "bounds": [
+   925,
+   975
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.prehistory",
+  "name": "Oceanian Prehistory",
+  "kind": "era",
+  "under": "Oceania",
+  "start": -73050,
+  "end": -734,
+  "extant": null,
+  "bounds": [
+   -75050,
+   -71050
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The Pleistocene settlement of Sahul and the Lapita expansion into the Pacific, gathered here for browsing.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "oceania.prehistory.australian-intensification",
+  "name": "Australian Mid-Holocene Intensification",
+  "kind": "era",
+  "under": "Oceanian Prehistory < Oceania",
+  "start": -3051,
+  "end": -51,
+  "extant": null,
+  "bounds": [
+   -3251,
+   -2851
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "minority",
+  "summary": "More people, more sites and far more backed artefacts across Australia, tracking the onset of a more variable climate.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.bahmani",
+  "name": "Bahmani Sultanate",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1347,
+  "end": 1527,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First independent Muslim kingdom of the Deccan; the great rival of Vijayanagara.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.bengal-sultanate",
+  "name": "Bengal Sultanate",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1352,
+  "end": 1576,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Independent Muslim sultanate of Bengal; a major trading power in the Indian Ocean.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.british-raj",
+  "name": "British Raj",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1858,
+  "end": 1947,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Direct British Crown rule of India, 1858–1947.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.chalcolithic-south-asia",
+  "name": "Chalcolithic (South Asia)",
+  "kind": "era",
+  "under": "South Asia",
+  "start": -3000,
+  "end": -700,
+  "extant": null,
+  "bounds": [
+   -3200,
+   -2800
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The Deccan and central Indian copper-using farming cultures — Kayatha, Ahar-Banas, Malwa and Jorwe — which are not a pre-Bronze stage at all.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.chalukya-badami",
+  "name": "Chalukyas of Badami",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 543,
+  "end": 753,
+  "extant": null,
+  "bounds": [
+   518,
+   568
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Deccan dynasty that dominated south-central India during the 6th–8th centuries.",
+  "aliases": [
+   "Early Western Chalukyas"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "south-asia.chalukya-western",
+  "name": "Western Chalukya Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 973,
+  "end": 1189,
+  "extant": null,
+  "bounds": [
+   948,
+   998
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Kalyani-based revival of Chalukya power.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.chola",
+  "name": "Chola Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 848,
+  "end": 1279,
+  "extant": null,
+  "bounds": [
+   823,
+   873
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Great Tamil maritime empire; reached Southeast Asia.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.deccan-sultanates",
+  "name": "Deccan Sultanates",
+  "kind": "era",
+  "under": "South Asia",
+  "start": 1490,
+  "end": 1687,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Five successor states to the Bahmani Sultanate: Ahmadnagar, Berar, Bidar, Bijapur, Golconda. Together they defeated Vijayanagara at Talikota (1565).",
+  "aliases": [
+   "Five Sultanates of the Deccan"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "south-asia.delhi-sultanate",
+  "name": "Delhi Sultanate",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1206,
+  "end": 1526,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Muslim sultanates ruling northern India from Delhi (1206–1526).",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.delhi-sultanate.khalji",
+  "name": "Khalji Dynasty",
+  "kind": "polity",
+  "under": "Delhi Sultanate < South Asia",
+  "start": 1290,
+  "end": 1320,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Second Delhi Sultanate dynasty; Turco-Afghan.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.delhi-sultanate.lodi",
+  "name": "Lodi Dynasty",
+  "kind": "polity",
+  "under": "Delhi Sultanate < South Asia",
+  "start": 1451,
+  "end": 1526,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Final Delhi Sultanate dynasty; Afghan Pashtuns.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.delhi-sultanate.mamluk",
+  "name": "Mamluk (Slave) Dynasty",
+  "kind": "polity",
+  "under": "Delhi Sultanate < South Asia",
+  "start": 1206,
+  "end": 1290,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First Delhi Sultanate dynasty; Turkic ex-slave rulers.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.delhi-sultanate.sayyid",
+  "name": "Sayyid Dynasty",
+  "kind": "polity",
+  "under": "Delhi Sultanate < South Asia",
+  "start": 1414,
+  "end": 1451,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.delhi-sultanate.tughlaq",
+  "name": "Tughlaq Dynasty",
+  "kind": "polity",
+  "under": "Delhi Sultanate < South Asia",
+  "start": 1320,
+  "end": 1414,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.east-india-company",
+  "name": "East India Company Rule",
+  "kind": "era",
+  "under": "South Asia",
+  "start": 1757,
+  "end": 1858,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "British East India Company ruled increasingly large parts of India from Plassey (1757) to the Government of India Act (1858).",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.gupta",
+  "name": "Gupta Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 319,
+  "end": 550,
+  "extant": null,
+  "bounds": [
+   294,
+   344
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Classical Indian empire often called the 'Golden Age of India'.",
+  "aliases": [
+   "Golden Age of India",
+   "Gupta"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "south-asia.harsha",
+  "name": "Harsha's Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 606,
+  "end": 647,
+  "extant": null,
+  "bounds": [
+   581,
+   631
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Last great pre-Islamic north Indian empire; centered on Kannauj.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.hoysala",
+  "name": "Hoysala Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1026,
+  "end": 1343,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Karnataka dynasty famed for its ornate temple architecture (Belur, Halebidu).",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.independence",
+  "name": "Post-Independence South Asia",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1947,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Post-1947 independent states of the subcontinent.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.independence.india-prime-ministers",
+  "name": "Prime Ministers of India",
+  "kind": "polity",
+  "under": "Post-Independence South Asia < South Asia",
+  "start": 1947,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Heads of government of the Republic of India from Independence to the present.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.independence.pakistan-leaders",
+  "name": "Leaders of Pakistan",
+  "kind": "polity",
+  "under": "Post-Independence South Asia < South Asia",
+  "start": 1947,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Heads of state and government of Pakistan.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.indo-greek",
+  "name": "Indo-Greek Kingdoms",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": -200,
+  "end": 10,
+  "extant": null,
+  "bounds": [
+   -225,
+   -175
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Greek-speaking kings ruling in Bactria and northwest India after Alexander, issuing bilingual coinage and, in Menander's case, appearing in Buddhist literature as a convert.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.indus",
+  "name": "Indus Valley Civilization",
+  "kind": "culture",
+  "under": "South Asia",
+  "start": -3300,
+  "end": -1300,
+  "extant": null,
+  "bounds": [
+   -3500,
+   -3100
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Bronze Age civilization along the Indus and the Ghaggar-Hakra.",
+  "aliases": [
+   "Harappan Civilization",
+   "Sindhu-Sarasvati Civilization"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "south-asia.kakatiya",
+  "name": "Kakatiya Dynasty",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1163,
+  "end": 1323,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Telugu dynasty of Warangal; extensive irrigation and temple-building.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.mahajanapadas",
+  "name": "Mahajanapadas (Second Urbanization)",
+  "kind": "era",
+  "under": "South Asia",
+  "start": -600,
+  "end": -345,
+  "extant": null,
+  "bounds": [
+   -650,
+   -550
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "India's second urbanisation: sixteen or so states across the Ganges plain, some kingdoms and some republics, the setting in which Buddhism and Jainism emerged.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.maratha",
+  "name": "Maratha Confederacy",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1674,
+  "end": 1818,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The power that broke Mughal dominance in the Deccan and governed much of the subcontinent through a confederacy of chiefs, until the British defeated it in three wars.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.maurya",
+  "name": "Maurya Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": -322,
+  "end": -185,
+  "extant": null,
+  "bounds": [
+   -347,
+   -297
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First empire to unify most of the Indian subcontinent.",
+  "aliases": [
+   "Mauryan"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "south-asia.mughal",
+  "name": "Mughal Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1526,
+  "end": 1857,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Turco-Mongol Muslim empire that ruled most of South Asia at its peak.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.mughal.suri",
+  "name": "Sur Empire (interregnum)",
+  "kind": "polity",
+  "under": "Mughal Empire < South Asia",
+  "start": 1540,
+  "end": 1555,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Afghan dynasty that ousted the Mughals for 15 years.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.mysore",
+  "name": "Kingdom of Mysore",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1399,
+  "end": 1947,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "South Indian kingdom that under Haidar Ali and Tipu Sultan resisted British expansion.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.pala",
+  "name": "Pala Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 750,
+  "end": 1161,
+  "extant": null,
+  "bounds": [
+   725,
+   775
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Buddhist dynasty of Bengal and Bihar; patronized Nalanda and founded Vikramashila.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.pallava",
+  "name": "Pallava Dynasty",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 275,
+  "end": 897,
+  "extant": null,
+  "bounds": [
+   250,
+   300
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "South Indian dynasty ruling from Kanchipuram; commissioned the great rock-cut temples at Mahabalipuram.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.prehistory",
+  "name": "South Asian Prehistory",
+  "kind": "era",
+  "under": "South Asia",
+  "start": -8950,
+  "end": -1500,
+  "extant": null,
+  "bounds": [
+   -9150,
+   -8750
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Early farming, rice cultivation, and pre-urban settlement traditions across South Asia.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.rashtrakuta",
+  "name": "Rashtrakuta Dynasty",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 753,
+  "end": 982,
+  "extant": null,
+  "bounds": [
+   728,
+   778
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Deccan-based empire that patronized both Hinduism and Jainism; commissioned Kailasa Temple at Ellora.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.satavahana",
+  "name": "Satavahana Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": -230,
+  "end": 220,
+  "extant": null,
+  "bounds": [
+   -255,
+   -205
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The dominant power of the Deccan between the Maurya and Gupta empires, controlling the trade that carried Roman coinage into central India.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.shunga",
+  "name": "Shunga Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": -185,
+  "end": -73,
+  "extant": null,
+  "bounds": [
+   -210,
+   -160
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.sikh-empire",
+  "name": "Sikh Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1799,
+  "end": 1849,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Ranjit Singh's state in Punjab, which absorbed Kashmir and Peshawar, kept the British at the Sutlej for a generation, and fell within a decade of his death.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.southern-neolithic",
+  "name": "Southern Neolithic",
+  "kind": "era",
+  "under": "South Asia",
+  "start": -2500,
+  "end": -1000,
+  "extant": null,
+  "bounds": [
+   -2550,
+   -2450
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "A separate Neolithic in the South Deccan, built on cattle, native millets and enormous mounds of burnt dung.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.vedic",
+  "name": "Vedic Period",
+  "kind": "era",
+  "under": "South Asia",
+  "start": -1500,
+  "end": -500,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "received",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The period of the Vedic corpus in northern South Asia, dated from the texts rather than from excavation.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.vedic.corpus",
+  "name": "The Vedic Corpus",
+  "kind": "era",
+  "under": "Vedic Period < South Asia",
+  "start": -1500,
+  "end": -500,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "received",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Rigveda, then the other three Vedas, the Brahmanas, and the Upanishads.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "south-asia.vijayanagara",
+  "name": "Vijayanagara Empire",
+  "kind": "polity",
+  "under": "South Asia",
+  "start": 1336,
+  "end": 1646,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.vijayanagara.aravidu",
+  "name": "Aravidu Dynasty",
+  "kind": "polity",
+  "under": "Vijayanagara Empire < South Asia",
+  "start": 1542,
+  "end": 1646,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Rump dynasty after the catastrophic defeat at the Battle of Talikota (1565).",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.vijayanagara.saluva",
+  "name": "Saluva Dynasty",
+  "kind": "polity",
+  "under": "Vijayanagara Empire < South Asia",
+  "start": 1485,
+  "end": 1505,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.vijayanagara.sangama",
+  "name": "Sangama Dynasty",
+  "kind": "polity",
+  "under": "Vijayanagara Empire < South Asia",
+  "start": 1336,
+  "end": 1485,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "south-asia.vijayanagara.tuluva",
+  "name": "Tuluva Dynasty",
+  "kind": "polity",
+  "under": "Vijayanagara Empire < South Asia",
+  "start": 1491,
+  "end": 1570,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "southeast-asia.mainland.ayutthaya",
+  "name": "Ayutthaya Kingdom",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 1351,
+  "end": 1767,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": [
+   "Siam"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "southeast-asia.mainland.british-burma",
+  "name": "British Burma",
+  "kind": "era",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 1885,
+  "end": 1948,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Annexed after the Third Anglo-Burmese War and governed as a province of British India until 1937.",
+  "aliases": [
+   "Burma"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.champa",
+  "name": "Champa",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 192,
+  "end": 1832,
+  "extant": null,
+  "bounds": [
+   167,
+   217
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": [
+   "Campā",
+   "Lin-yi",
+   "Chiêm Thành"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.dinh",
+  "name": "Đinh Dynasty",
+  "kind": "polity",
+  "under": "Vietnam (dynastic) < Mainland Southeast Asia < Southeast Asia",
+  "start": 968,
+  "end": 980,
+  "extant": null,
+  "bounds": [
+   943,
+   993
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Declared the state Đại Cồ Việt and an imperial title to match.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.dvaravati",
+  "name": "Dvaravati",
+  "kind": "era",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 600,
+  "end": 1100,
+  "extant": null,
+  "bounds": [
+   575,
+   625
+  ],
+  "dated_by": "unknown",
+  "historicity": "contested",
+  "date_standing": null,
+  "summary": "Mon Buddhist culture of the Chao Phraya basin, of disputed political unity.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.early-le",
+  "name": "Early Lê Dynasty",
+  "kind": "polity",
+  "under": "Vietnam (dynastic) < Mainland Southeast Asia < Southeast Asia",
+  "start": 980,
+  "end": 1009,
+  "extant": null,
+  "bounds": [
+   955,
+   1005
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Repelled a Song invasion, then gave way to the Lý.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.french-indochina",
+  "name": "French Indochina",
+  "kind": "era",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 1887,
+  "end": 1954,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The colonial union of Vietnamese, Cambodian and Lao territories.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.funan",
+  "name": "Funan",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 68,
+  "end": 550,
+  "extant": null,
+  "bounds": [
+   43,
+   93
+  ],
+  "dated_by": "unknown",
+  "historicity": "contested",
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.ho",
+  "name": "Hồ Dynasty",
+  "kind": "polity",
+  "under": "Vietnam (dynastic) < Mainland Southeast Asia < Southeast Asia",
+  "start": 1400,
+  "end": 1407,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Seven years of forced reform; renamed the state Đại Ngu and fell to the Ming.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.khmer",
+  "name": "Khmer Empire (Angkor)",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 802,
+  "end": 1431,
+  "extant": null,
+  "bounds": [
+   777,
+   827
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Southeast Asia's greatest classical empire. Built Angkor Wat and Angkor Thom.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.konbaung",
+  "name": "Konbaung Dynasty",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 1752,
+  "end": 1885,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The last Burmese dynasty, ended by British annexation after the third of three Anglo-Burmese wars.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.lan-xang",
+  "name": "Lan Xang",
+  "kind": "era",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 1353,
+  "end": 1707,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Lao kingdom of the middle Mekong, which broke into three rival successor kingdoms.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.later-le",
+  "name": "Later Lê Dynasty",
+  "kind": "polity",
+  "under": "Vietnam (dynastic) < Mainland Southeast Asia < Southeast Asia",
+  "start": 1428,
+  "end": 1789,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Nominally ruled for three and a half centuries, though for most of them real power lay with the Trịnh and Nguyễn lords.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.ly",
+  "name": "Lý Dynasty",
+  "kind": "polity",
+  "under": "Vietnam (dynastic) < Mainland Southeast Asia < Southeast Asia",
+  "start": 1009,
+  "end": 1225,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Two centuries of consolidation; renamed the state Đại Việt in 1054.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.mac",
+  "name": "Mạc Dynasty",
+  "kind": "polity",
+  "under": "Vietnam (dynastic) < Mainland Southeast Asia < Southeast Asia",
+  "start": 1527,
+  "end": 1592,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Usurped the throne and held the north, overlapping the Lê rather than succeeding them.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.ngo",
+  "name": "Ngô Dynasty",
+  "kind": "polity",
+  "under": "Vietnam (dynastic) < Mainland Southeast Asia < Southeast Asia",
+  "start": 939,
+  "end": 965,
+  "extant": null,
+  "bounds": [
+   914,
+   964
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Founded after Bạch Đằng ended Chinese rule; collapsed into a period of warlords.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.nguyen",
+  "name": "Nguyễn Dynasty",
+  "kind": "polity",
+  "under": "Vietnam (dynastic) < Mainland Southeast Asia < Southeast Asia",
+  "start": 1802,
+  "end": 1945,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The last dynasty; adopted the name Việt Nam, then ruled under French protection from the 1880s.",
+  "aliases": [
+   "Việt Nam"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.pagan",
+  "name": "Pagan Kingdom",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 849,
+  "end": 1297,
+  "extant": null,
+  "bounds": [
+   824,
+   874
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "southeast-asia.mainland.post-pagan",
+  "name": "Post-Pagan Burma",
+  "kind": "era",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 1297,
+  "end": 1510,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Two centuries of competing successor states after Pagan fell, principally Ava in the interior and Hanthawaddy in the delta.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.rattanakosin",
+  "name": "Rattanakosin (Chakri Dynasty)",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 1782,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "southeast-asia.mainland.sukhothai",
+  "name": "Sukhothai Kingdom",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 1238,
+  "end": 1438,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Tai kingdom of the upper Chao Phraya, traditionally cast as the first Thai state.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.tay-son",
+  "name": "Tây Sơn Dynasty",
+  "kind": "polity",
+  "under": "Vietnam (dynastic) < Mainland Southeast Asia < Southeast Asia",
+  "start": 1778,
+  "end": 1802,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "A rising from the south that swept away the Trịnh, the Nguyễn lords and the Lê, and repelled a Qing invasion.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.thonburi",
+  "name": "Thonburi Kingdom",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 1767,
+  "end": 1782,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Fifteen years under Taksin, between the Burmese sack of Ayutthaya and the founding of the Chakri dynasty.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "southeast-asia.mainland.toungoo",
+  "name": "Toungoo Dynasty",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 1510,
+  "end": 1752,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Reunified Burma and briefly built the largest empire in mainland Southeast Asia.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.tran",
+  "name": "Trần Dynasty",
+  "kind": "polity",
+  "under": "Vietnam (dynastic) < Mainland Southeast Asia < Southeast Asia",
+  "start": 1225,
+  "end": 1400,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Repelled three Mongol invasions.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.mainland.vietnam",
+  "name": "Vietnam (dynastic)",
+  "kind": "polity",
+  "under": "Mainland Southeast Asia < Southeast Asia",
+  "start": 939,
+  "end": 1945,
+  "extant": null,
+  "bounds": [
+   914,
+   964
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Independent Vietnamese states from the end of Chinese rule to the abdication of the last emperor.",
+  "aliases": [
+   "Đại Việt",
+   "Đại Cồ Việt",
+   "Đại Ngu",
+   "Đại Việt, 939-1804"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.aceh",
+  "name": "Aceh Sultanate",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1496,
+  "end": 1903,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "North Sumatran sultanate and a major pepper power, which fought the Dutch for three decades.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.brunei",
+  "name": "Bruneian Empire",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1368,
+  "end": 1888,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Bornean sultanate that dominated the northwest coast before contracting under British and Sarawak pressure.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.demak",
+  "name": "Demak Sultanate",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1475,
+  "end": 1554,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The first Islamic state on Java, and the power that finished Majapahit.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.dutch-eic",
+  "name": "Dutch East Indies",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1800,
+  "end": 1949,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": null,
+  "aliases": [
+   "Netherlands East Indies",
+   "Nederlands-Indie",
+   "Nederlands-Indië",
+   "Indonesia"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.indonesia",
+  "name": "Republic of Indonesia",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1945,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Southeast Asian archipelagic republic; world's fourth-most-populous country.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.kahuripan",
+  "name": "Kahuripan",
+  "kind": "era",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1019,
+  "end": 1045,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Airlangga's kingdom, divided between his sons at his abdication.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.kediri",
+  "name": "Kediri Kingdom",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1042,
+  "end": 1222,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "East Javanese kingdom, remembered above all for its literature.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.majapahit",
+  "name": "Majapahit Empire",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1293,
+  "end": 1527,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Javanese thalassocracy at Southeast Asia's peak of classical influence.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.malacca",
+  "name": "Sultanate of Malacca",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1400,
+  "end": 1511,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": [
+   "Melaka"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.mataram-sultanate",
+  "name": "Mataram Sultanate",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1587,
+  "end": 1755,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The dominant Javanese state of the 17th century, partitioned under Dutch pressure.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.medang",
+  "name": "Medang Kingdom",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 732,
+  "end": 1006,
+  "extant": null,
+  "bounds": [
+   707,
+   757
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The Central Javanese period, which built Borobudur and Prambanan.",
+  "aliases": [
+   "Mataram Kingdom"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.singhasari",
+  "name": "Singhasari Kingdom",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1222,
+  "end": 1292,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Displaced Kediri and expanded Javanese power outward; ended in the succession crisis that produced Majapahit.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.spanish-philippines",
+  "name": "Spanish Philippines",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1565,
+  "end": 1898,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.srivijaya",
+  "name": "Srivijaya",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 650,
+  "end": 1377,
+  "extant": null,
+  "bounds": [
+   625,
+   675
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Sumatran maritime empire that dominated the Malacca Strait.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.sulu",
+  "name": "Sultanate of Sulu",
+  "kind": "polity",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 1405,
+  "end": 1915,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Sultanate of the Sulu archipelago, which resisted Spanish control for three centuries.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.maritime.tondo",
+  "name": "Tondo",
+  "kind": "era",
+  "under": "Maritime Southeast Asia < Southeast Asia",
+  "start": 900,
+  "end": 1589,
+  "extant": null,
+  "bounds": [
+   875,
+   925
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Polity on Manila Bay, attested from 900 CE by the earliest surviving Philippine document.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.prehistory",
+  "name": "Southeast Asian Prehistory",
+  "kind": "era",
+  "under": "Southeast Asia",
+  "start": -44050,
+  "end": -500,
+  "extant": null,
+  "bounds": [
+   -46050,
+   -42050
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The long prehistory of mainland and island Southeast Asia, including cave traditions, metal-age communities, and early human remains.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "southeast-asia.prehistory.austronesian-expansion",
+  "name": "The Austronesian Expansion",
+  "kind": "era",
+  "under": "Southeast Asian Prehistory < Southeast Asia",
+  "start": -3551,
+  "end": -1130,
+  "extant": null,
+  "bounds": [
+   -3751,
+   -3351
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": "reconstructed",
+  "date_standing": "majority",
+  "summary": "From Taiwan to the edge of Remote Oceania: the widest maritime dispersal in prehistory, and one that kept stopping.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.hittites",
+  "name": "The Hittites",
+  "kind": "era",
+  "under": "Anatolia < West Asia",
+  "start": -1650,
+  "end": -1180,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "An Anatolian empire that fought Egypt to a draw at Kadesh and left the oldest surviving international peace treaty.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.hittites.hittite-collapse",
+  "name": "Collapse of the Hittite Empire",
+  "kind": "polity",
+  "under": "The Hittites < Anatolia < West Asia",
+  "start": -1200,
+  "end": -1180,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The empire dissolves in the first quarter of the 12th century, during a drought that tree rings date to three specific years.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.hittites.hittite-old-kingdom",
+  "name": "Hittite Old Kingdom",
+  "kind": "polity",
+  "under": "The Hittites < Anatolia < West Asia",
+  "start": -1650,
+  "end": -1500,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Hattusa becomes the capital and Hittite armies reach Babylon.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.lydia",
+  "name": "Lydia",
+  "kind": "era",
+  "under": "Anatolia < West Asia",
+  "start": -680,
+  "end": -546,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "A western Anatolian kingdom rich enough on electrum to invent coined money, ending when Cyrus took Sardis.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.mitanni",
+  "name": "Mitanni",
+  "kind": "era",
+  "under": "Anatolia < West Asia",
+  "start": -1600,
+  "end": -1260,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "A Hurrian kingdom of northern Syria, rival and then in-law to both Egypt and Hatti, which left the world's oldest horse-training manual.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.neo-hittite",
+  "name": "Neo-Hittite States",
+  "kind": "era",
+  "under": "Anatolia < West Asia",
+  "start": -1180,
+  "end": -708,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Luwian- and Aramaic-speaking successor kingdoms that kept Hittite hieroglyphs alive for four centuries after the empire died.",
+  "aliases": [
+   "Syro-Hittite states"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.phrygia",
+  "name": "Phrygia",
+  "kind": "era",
+  "under": "Anatolia < West Asia",
+  "start": -900,
+  "end": -540,
+  "extant": null,
+  "bounds": [
+   -950,
+   -850
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "An Anatolian kingdom centred on Gordion whose king Midas turns out to be documented in Assyrian records.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.anatolia.urartu",
+  "name": "Urartu",
+  "kind": "era",
+  "under": "Anatolia < West Asia",
+  "start": -840,
+  "end": -590,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "An Iron Age kingdom around Lake Van, Assyria's most persistent northern rival, built on fortresses and irrigation.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.arabia.pre-islamic",
+  "name": "Pre-Islamic Arabia",
+  "kind": "era",
+  "under": "Arabia < West Asia",
+  "start": -3000,
+  "end": 610,
+  "extant": null,
+  "bounds": [
+   -3200,
+   -2800
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.arabia.pre-islamic.dilmun",
+  "name": "Dilmun",
+  "kind": "era",
+  "under": "Pre-Islamic Arabia < Arabia < West Asia",
+  "start": -3300,
+  "end": -510,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The Gulf trading power that stood between Mesopotamia and the Indus, and which Mesopotamian literature remembered as a kind of paradise.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.arabia.pre-islamic.nabataeans",
+  "name": "The Nabataeans",
+  "kind": "era",
+  "under": "Pre-Islamic Arabia < Arabia < West Asia",
+  "start": -312,
+  "end": 106,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Caravan traders who took the northern end of the incense route, cut Petra out of sandstone, and were annexed by Rome without a fight.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.arabia.pre-islamic.saba",
+  "name": "Saba",
+  "kind": "era",
+  "under": "Pre-Islamic Arabia < Arabia < West Asia",
+  "start": -800,
+  "end": 275,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The incense kingdom of the Yemeni highlands, the Sheba of later legend, and the builder of the Marib Dam.",
+  "aliases": [
+   "Sheba"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "west-asia.arabia.rise-islam",
+  "name": "Rise of Islam",
+  "kind": "polity",
+  "under": "Arabia < West Asia",
+  "start": 610,
+  "end": 632,
+  "extant": null,
+  "bounds": [
+   585,
+   635
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Muhammad's prophetic career and the birth of Islam.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.culture-sea-peoples",
+  "name": "Sea Peoples",
+  "kind": "culture",
+  "under": "West Asia",
+  "start": -1200,
+  "end": -1150,
+  "extant": null,
+  "bounds": [
+   -1250,
+   -1150
+  ],
+  "dated_by": "first-attestation",
+  "historicity": "contested",
+  "date_standing": null,
+  "summary": "A name Egyptian scribes gave to raiders from several origins, tied to the collapse of the Bronze Age eastern Mediterranean.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.iran.achaemenid",
+  "name": "Achaemenid Empire",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": -550,
+  "end": -330,
+  "extant": null,
+  "bounds": [
+   -600,
+   -500
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First Persian empire; largest of its time.",
+  "aliases": [
+   "Achaemenid",
+   "Persian"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "west-asia.iran.afsharid",
+  "name": "Afsharid Dynasty",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": 1736,
+  "end": 1796,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Nader Shah's conquest state, which outlasted him only in Khorasan.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.aq-qoyunlu",
+  "name": "Aq Qoyunlu",
+  "kind": "era",
+  "under": "Iran < West Asia",
+  "start": 1378,
+  "end": 1501,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Turkoman confederation that displaced the Qara Qoyunlu and was in turn displaced by the Safavids.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.buyid",
+  "name": "Buyid Dynasty",
+  "kind": "polity",
+  "under": "The Iranian Intermezzo < Iran < West Asia",
+  "start": 934,
+  "end": 1062,
+  "extant": null,
+  "bounds": [
+   909,
+   959
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Shia dynasty from the Caspian highlands that took Baghdad and ruled through the Abbasid caliphs it kept as figureheads.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.elam",
+  "name": "Elam",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": -3200,
+  "end": -539,
+  "extant": null,
+  "bounds": [
+   -3400,
+   -3000
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.iran.elam.middle-elamite",
+  "name": "Middle Elamite Period",
+  "kind": "era",
+  "under": "Elam < Iran < West Asia",
+  "start": -1450,
+  "end": -1050,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Elam at its most powerful, building Chogha Zanbil and carrying Babylonian monuments home as loot — including the Code of Hammurabi.",
+  "aliases": [
+   "Meso-Elamite"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.elam.neo-elamite",
+  "name": "Neo-Elamite Period",
+  "kind": "era",
+  "under": "Elam < Iran < West Asia",
+  "start": -1050,
+  "end": -539,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Elam's last independent centuries, spent largely in coalition against Assyria, and known mostly through Assyrian accounts of defeating it.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.elam.old-elamite",
+  "name": "Old Elamite Period",
+  "kind": "era",
+  "under": "Elam < Iran < West Asia",
+  "start": -2400,
+  "end": -1450,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Elam's first documented dynasties — Awan, Simaški, Sukkalmah — locked in alternating war and marriage with Akkad, Ur and Babylon.",
+  "aliases": [
+   "Paleo-Elamite"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.intermezzo",
+  "name": "The Iranian Intermezzo",
+  "kind": "era",
+  "under": "Iran < West Asia",
+  "start": 821,
+  "end": 1055,
+  "extant": null,
+  "bounds": [
+   796,
+   846
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Native Iranian dynasties ruling between Arab and Turkic domination.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.islamic-republic",
+  "name": "Islamic Republic of Iran",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": 1979,
+  "end": null,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Theocratic state established by Ayatollah Khomeini after the 1979 revolution.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.iran.median",
+  "name": "Median Empire",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": -678,
+  "end": -549,
+  "extant": null,
+  "bounds": [
+   -728,
+   -628
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.iran.pahlavi",
+  "name": "Pahlavi Dynasty",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": 1925,
+  "end": 1979,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Last royal dynasty of Iran; overthrown by the 1979 Islamic Revolution.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.iran.parthian",
+  "name": "Parthian (Arsacid) Empire",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": -247,
+  "end": 224,
+  "extant": null,
+  "bounds": [
+   -272,
+   -222
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Iranian empire that ruled Persia and Mesopotamia for four centuries; Rome's chief eastern rival.",
+  "aliases": [
+   "Parthian"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "west-asia.iran.qajar",
+  "name": "Qajar Dynasty",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": 1794,
+  "end": 1925,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The dynasty that lost the Caucasus to Russia, granted the concessions that made Iran a field of Anglo-Russian competition, and was forced into a constitution in 1906.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.qara-qoyunlu",
+  "name": "Qara Qoyunlu",
+  "kind": "era",
+  "under": "Iran < West Asia",
+  "start": 1374,
+  "end": 1468,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Turkoman confederation holding Azerbaijan and western Iran.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.safavid",
+  "name": "Safavid Empire",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": 1501,
+  "end": 1736,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Made Shia Islam the state religion.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.iran.saffarid",
+  "name": "Saffarid Dynasty",
+  "kind": "polity",
+  "under": "The Iranian Intermezzo < Iran < West Asia",
+  "start": 861,
+  "end": 1003,
+  "extant": null,
+  "bounds": [
+   836,
+   886
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Rose from Sistan under a coppersmith turned warlord and briefly threatened Baghdad itself.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.sasanian",
+  "name": "Sasanian Empire",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": 224,
+  "end": 651,
+  "extant": null,
+  "bounds": [
+   199,
+   249
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Last pre-Islamic Persian empire; peer superpower of Rome/Byzantium.",
+  "aliases": [
+   "Sasanian",
+   "Sassanid"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "west-asia.iran.seleucid",
+  "name": "Seleucid Empire",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": -312,
+  "end": -63,
+  "extant": null,
+  "bounds": [
+   -337,
+   -287
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Hellenistic successor state to Alexander's eastern conquests; the biggest single Diadochi kingdom.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.tahirid",
+  "name": "Tahirid Dynasty",
+  "kind": "polity",
+  "under": "The Iranian Intermezzo < Iran < West Asia",
+  "start": 821,
+  "end": 873,
+  "extant": null,
+  "bounds": [
+   796,
+   846
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Governed Khorasan from Nishapur, nominally for the Abbasids and in practice for themselves.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.iran.zand",
+  "name": "Zand Dynasty",
+  "kind": "polity",
+  "under": "Iran < West Asia",
+  "start": 1751,
+  "end": 1794,
+  "extant": null,
+  "bounds": [
+   null,
+   null
+  ],
+  "dated_by": "calendar",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Ruled Iran except Khorasan from Shiraz, remembered for an unusually peaceful reign.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.mesopotamia.akkadian",
+  "name": "Akkadian Empire",
+  "kind": "polity",
+  "under": "Mesopotamia & Levant < West Asia",
+  "start": -2334,
+  "end": -2154,
+  "extant": null,
+  "bounds": [
+   -2434,
+   -2234
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "First empire in world history.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.mesopotamia.assyrian",
+  "name": "Assyrian Empires",
+  "kind": "polity",
+  "under": "Mesopotamia & Levant < West Asia",
+  "start": -2025,
+  "end": -609,
+  "extant": null,
+  "bounds": [
+   -2125,
+   -1925
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Ancient Mesopotamian empires that dominated the Near East in the Iron Age.",
+  "aliases": [
+   "Assyrian"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "west-asia.mesopotamia.assyrian.middle",
+  "name": "Middle Assyrian Empire",
+  "kind": "polity",
+  "under": "Assyrian Empires < Mesopotamia & Levant < West Asia",
+  "start": -1365,
+  "end": -1050,
+  "extant": null,
+  "bounds": [
+   -1465,
+   -1265
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": null,
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.mesopotamia.assyrian.neo",
+  "name": "Neo-Assyrian Empire",
+  "kind": "polity",
+  "under": "Assyrian Empires < Mesopotamia & Levant < West Asia",
+  "start": -911,
+  "end": -609,
+  "extant": null,
+  "bounds": [
+   -961,
+   -861
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Mass deportations as imperial policy; library of Nineveh.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.mesopotamia.israel-judah",
+  "name": "Kingdoms of Israel and Judah",
+  "kind": "polity",
+  "under": "Mesopotamia & Levant < West Asia",
+  "start": -1050,
+  "end": -586,
+  "extant": null,
+  "bounds": [
+   -1150,
+   -950
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Iron Age Hebrew kingdoms.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.mesopotamia.kassite",
+  "name": "Kassite Babylon",
+  "kind": "polity",
+  "under": "Mesopotamia & Levant < West Asia",
+  "start": -1595,
+  "end": -1155,
+  "extant": null,
+  "bounds": [
+   -1695,
+   -1495
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Four centuries of stable Babylonian rule under a dynasty of foreign origin, during which Babylon became a recognised great power in the diplomacy of the Late Bronze Age.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.mesopotamia.neo-babylonian",
+  "name": "Neo-Babylonian Empire",
+  "kind": "polity",
+  "under": "Mesopotamia & Levant < West Asia",
+  "start": -626,
+  "end": -539,
+  "extant": null,
+  "bounds": [
+   -676,
+   -576
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Chaldean dynasty that overthrew Assyria; Nebuchadnezzar destroyed Jerusalem in 587 BCE.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.mesopotamia.old-babylonian",
+  "name": "Old Babylonian Empire",
+  "kind": "polity",
+  "under": "Mesopotamia & Levant < West Asia",
+  "start": -2000,
+  "end": -1600,
+  "extant": null,
+  "bounds": [
+   -2100,
+   -1900
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Amorite dynasty of Babylon; Hammurabi's law code.",
+  "aliases": [
+   "Babylonian"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "west-asia.mesopotamia.phoenicia",
+  "name": "Phoenician City-States",
+  "kind": "era",
+  "under": "Mesopotamia & Levant < West Asia",
+  "start": -1500,
+  "end": -332,
+  "extant": null,
+  "bounds": [
+   -1600,
+   -1400
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "Independent Canaanite-speaking city-states on the Levantine coast, never politically unified.",
+  "aliases": [
+   "Phoenicia",
+   "Canaanite"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "west-asia.mesopotamia.sumerian",
+  "name": "Sumerian Early Dynastic",
+  "kind": "polity",
+  "under": "Mesopotamia & Levant < West Asia",
+  "start": -2900,
+  "end": -2334,
+  "extant": null,
+  "bounds": [
+   -3000,
+   -2800
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "World's first cities: Uruk, Ur, Lagash, Kish.",
+  "aliases": [
+   "Sumerian"
+  ],
+  "sourced": false
+ },
+ {
+  "id": "west-asia.mesopotamia.ur-iii",
+  "name": "Ur III (Neo-Sumerian)",
+  "kind": "polity",
+  "under": "Mesopotamia & Levant < West Asia",
+  "start": -2112,
+  "end": -2004,
+  "extant": null,
+  "bounds": [
+   -2212,
+   -2012
+  ],
+  "dated_by": "unknown",
+  "historicity": null,
+  "date_standing": null,
+  "summary": "The last Sumerian-speaking dynasty, which left the earliest surviving law code and an administrative archive of tens of thousands of tablets.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.prehistory",
+  "name": "West Asian Prehistory",
+  "kind": "era",
+  "under": "West Asia",
+  "start": -13000,
+  "end": -3800,
+  "extant": null,
+  "bounds": [
+   -14000,
+   -12000
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "Where farming, villages and monumental building appear first, and hand off to Sumer.",
+  "aliases": null,
+  "sourced": false
+ },
+ {
+  "id": "west-asia.prehistory.chalcolithic",
+  "name": "Chalcolithic (Southern Levant)",
+  "kind": "era",
+  "under": "West Asian Prehistory < West Asia",
+  "start": -4700,
+  "end": -3600,
+  "extant": null,
+  "bounds": [
+   -4900,
+   -4500
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The southern Levantine Copper Age, with copper hoards, ossuary burial and the Ghassulian culture.",
+  "aliases": [
+   "Copper Age",
+   "Ghassulian"
+  ],
+  "sourced": true
+ },
+ {
+  "id": "west-asia.prehistory.chalcolithic-anatolia",
+  "name": "Chalcolithic (Anatolia)",
+  "kind": "era",
+  "under": "West Asian Prehistory < West Asia",
+  "start": -5500,
+  "end": -3000,
+  "extant": null,
+  "bounds": [
+   -5700,
+   -5300
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The Anatolian Copper Age, spanning the long interval between the Neolithic villages and the Early Bronze Age.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.prehistory.epipalaeolithic",
+  "name": "Epipalaeolithic (Levant)",
+  "kind": "era",
+  "under": "West Asian Prehistory < West Asia",
+  "start": -23000,
+  "end": -10000,
+  "extant": null,
+  "bounds": [
+   -24000,
+   -22000
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "consensus",
+  "summary": "The long Levantine hunter-gatherer sequence between the Upper Palaeolithic and farming, ending where the Mesolithic begins.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.prehistory.late-chalcolithic-mesopotamia",
+  "name": "Late Chalcolithic (Mesopotamia)",
+  "kind": "era",
+  "under": "West Asian Prehistory < West Asia",
+  "start": -4500,
+  "end": -3100,
+  "extant": null,
+  "bounds": [
+   -4700,
+   -4300
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "Terminal Ubaid through Late Uruk, the LC1-LC5 sequence that ends with the first cities and the first writing.",
+  "aliases": null,
+  "sourced": true
+ },
+ {
+  "id": "west-asia.prehistory.late-chalcolithic-mesopotamia.uruk-period",
+  "name": "Uruk Period",
+  "kind": "era",
+  "under": "Late Chalcolithic (Mesopotamia) < West Asian Prehistory < West Asia",
+  "start": -4000,
+  "end": -3100,
+  "extant": null,
+  "bounds": [
+   -4050,
+   -3950
+  ],
+  "dated_by": "radiocarbon-calibrated",
+  "historicity": null,
+  "date_standing": "majority",
+  "summary": "The centuries in which southern Mesopotamia produced the first cities, the first bureaucracy, and the first writing.",
+  "aliases": [
+   "Unug",
+   "Uruk",
+   "Erech",
+   "Warka"
+  ],
+  "sourced": true
+ }
+]

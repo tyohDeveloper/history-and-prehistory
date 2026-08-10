@@ -26,7 +26,7 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // failing for that reason, not because the header was wrong.
   await expect(page.getByTestId("text-app-version")).toContainText("v3.32.1.0");
   await expect(page.getByTestId("text-app-version")).toContainText("data 0.33.1.0");
-  await expect(page.getByTestId("panel-footer-root")).toContainText("1,719 entities");
+  await expect(page.getByTestId("panel-footer-root")).toContainText("1,724 entities");
 });
 
 test("drills Region -> Era -> Period through the columns", async ({ page }) => {

@@ -352,11 +352,29 @@ function renderReadout(): HTMLElement {
   // and being told you are in Global & Multi-Regional looks like a bug. Naming
   // the other regions makes the multiple placement visible instead of
   // surprising.
-  if (e.regions !== undefined && e.regions.length > 1) {
+  // Where else this entity can be reached.
+  //
+  // This used to read `regions` alone -- a hand-maintained list sitting beside
+  // `cross_parent_ids`, which is what actually places an entity in a second branch of
+  // the tree. The two drifted: 14 entities, the Spanish, Portuguese and Russian empires
+  // among them, were reachable by two paths while the readout mentioned only one. The
+  // breadcrumb shows a single canonical path, so nothing told the reader the other
+  // existed.
+  //
+  // Now derived from the real placements and merged with `regions`, so the two cannot
+  // disagree. `global` is excluded: Multi-Regional Empires and the era frames are this
+  // dataset's own taxonomy, not a claim that the entity was somewhere else, and listing
+  // it would put "Also under Global & Multi-Regional" on nearly every large empire.
+  {
     const here = pathTo(index, e.id)[0]?.id;
-    const others = e.regions.filter((r) => r !== here);
+    const reachable = new Set<string>(e.regions ?? []);
+    for (const cp of e.cross_parent_ids ?? []) {
+      const root = pathTo(index, cp)[0]?.id;
+      if (root !== undefined) reachable.add(root);
+    }
+    const others = [...reachable].filter((r) => r !== here && r !== "global");
     if (others.length > 0) {
-      const names = others.map((r) => index.byId.get(r)?.name ?? r);
+      const names = others.map((r) => index.byId.get(r)?.name ?? r).sort();
       box.append(el("div", { class: "also-in", "data-testid": "text-readout-also-in" },
         `Also under ${names.join(", ")}`));
     }

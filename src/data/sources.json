@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
   "dataset_version": "0.33.1.0",
-  "generated_at": "2026-08-10T06:47:43Z",
+  "generated_at": "2026-08-10T08:55:25Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2515,6 +2515,48 @@
       "citation": "\"Chalukya dynasty\", Encyclopaedia Britannica",
       "url": "https://www.britannica.com/topic/Chalukya-dynasty",
       "note": "Britannica gives 543-757 CE for the Western/Badami Chalukyas, matching our range within a few years (753 vs 757 end)."
+    },
+    {
+      "id": "berkshire-three-sovereigns",
+      "kind": "reference",
+      "citation": "'Three Sovereigns and Five Emperors', Encyclopedia of China (Berkshire Publishing)",
+      "url": "https://www.berkshirepublishing.com/ecph-china/2018/01/13/three-sovereigns-and-five-emperors/",
+      "note": "Records five different lists of the Three Sovereigns in Han-dynasty classics and at least five competing groupings of the Five Emperors."
+    },
+    {
+      "id": "nwe-three-sovereigns",
+      "kind": "reference",
+      "citation": "'Three Sovereigns and Five Emperors', New World Encyclopedia",
+      "url": "https://www.newworldencyclopedia.org/entry/Three_Sovereigns_and_Five_Emperors",
+      "note": "Places the mythological rulers c.2852-2205 BCE, preceding the Xia, and gives the Shiji list of the Five Emperors."
+    },
+    {
+      "id": "sinica-yellow-emperor-era",
+      "kind": "scholarly",
+      "citation": "'The Origin of the Yellow Emperor Era Chronology', Institute of History and Philology, Academia Sinica",
+      "url": "https://www11.ihp.sinica.edu.tw/storage/w2_file/1097kaBVwNb.pdf",
+      "note": "Traces the 2697 BCE accession date to Jesuit calculation from Chinese chronicles, reproduced by Mayers (1874) and Giles (1892)."
+    },
+    {
+      "id": "britannica-erlitou-culture",
+      "kind": "reference",
+      "citation": "'Erlitou culture', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Erlitou-culture",
+      "note": "The first state-level society in China, with palatial buildings, royal tombs and advanced bronze technology; its remains are taken as correlates of the Xia."
+    },
+    {
+      "id": "radiocarbon-erlitou-dating",
+      "kind": "scholarly",
+      "citation": "'14C Dating of the Erlitou Site', Radiocarbon (Cambridge University Press)",
+      "url": "https://www.cambridge.org/core/journals/radiocarbon/article/abs/14c-dating-of-the-erlitou-site/475359D750D8F9AE70E5126CF4744A4C",
+      "note": "Wiggle-matched radiocarbon work under the Xia-Shang-Zhou Chronology Project; the site's dating was contested for decades before it."
+    },
+    {
+      "id": "wikipedia-erlitou-culture",
+      "kind": "reference",
+      "citation": "'Erlitou culture', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Erlitou_culture",
+      "note": "States both positions: Chinese archaeologists generally identify Erlitou as Xia, while others note no contemporary writing exists to confirm it. Wikipedia-tier; used for the shape of the dispute, not for dates."
     },
     {
       "id": "carson-hung-2022-luzon",

@@ -1700,6 +1700,7 @@ from tier_promotions import extend as _tier_promotions
 from misconception_migration import extend as _misconception_migration
 from container_summaries import extend as _container_summaries
 from promoted_sourcing import extend as _promoted_sourcing
+from china_legendary import extend as _china_legendary
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1732,6 +1733,9 @@ _promoted_sourcing(E, entities)
 _cross_region_citations(E, entities)
 _song_era_states(E, entities)
 _fix_china_tiers(E, entities)
+# After _song_era_states (which authors the Xia) and _fix_china_tiers, so the Xia
+# exists to reparent Erlitou onto and the rebuilt tier is not overwritten.
+_china_legendary(E, entities)
 _romanisation_chinese(E, entities)
 _regions_multiregional(E, entities)
 
@@ -3184,6 +3188,7 @@ from rival_claims import RIVAL_SOURCES  # noqa: E402
 from misconception_migration import MISCONCEPTION_SOURCES  # noqa: E402
 from misconception_migration import LEGENDARY_SOURCES  # noqa: E402
 from promoted_sourcing import PROMOTED_SOURCES  # noqa: E402
+from china_legendary import CHINA_LEGENDARY_SOURCES  # noqa: E402
 sources.extend(CENTRAL_ASIA_SOURCES)
 sources.extend(CENTRAL_ASIA_MEDIEVAL_SOURCES)
 sources.extend(IRAN_ISLAMIC_SOURCES)
@@ -3194,6 +3199,7 @@ sources.extend(RIVAL_SOURCES)
 sources.extend(MISCONCEPTION_SOURCES)
 sources.extend(LEGENDARY_SOURCES)
 sources.extend(PROMOTED_SOURCES)
+sources.extend(CHINA_LEGENDARY_SOURCES)
 from extensions_seasia_oceania import SEASIA_OCEANIA_SOURCES  # noqa: E402
 from extensions_indus import INDUS_SOURCES  # noqa: E402
 from extensions_east_asia import EAST_ASIA_SOURCES  # noqa: E402

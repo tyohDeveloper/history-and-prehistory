@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
   "dataset_version": "0.33.1.0",
-  "generated_at": "2026-08-10T06:47:43Z",
+  "generated_at": "2026-08-10T08:55:25Z",
   "entities": [
     {
       "id": "global",
@@ -5661,12 +5661,39 @@
     {
       "id": "east-asia.china.legendary",
       "kind": "era",
-      "name": "Legendary & Neolithic China",
+      "name": "Legendary Age (Three Sovereigns & Five Emperors)",
       "parent_id": "east-asia.china",
-      "start_year": -5000,
-      "end_year": -1600,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "start_year": -2852,
+      "end_year": -2070,
+      "tier": "foundational",
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "native_name": "三皇五帝",
+      "summary": "The sage-rulers of Chinese tradition, placed before the Xia: god-kings credited with agriculture, medicine, writing and silk, then five emperors held up for millennia as the model of virtuous rule.",
+      "date_note": "Traditional bounds, not findings. The tradition has no single canonical form — five different lists of the Three Sovereigns appear in Han-dynasty classics, and the Five Emperors have as many competing groupings. Only the Five Emperors are authored beneath, because theirs is the list carrying dates; picking one of five Sovereign lists and presenting it as the tradition would misrepresent it.",
+      "source_ids": [
+        "berkshire-three-sovereigns",
+        "nwe-three-sovereigns"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "These are mythological figures. The tradition is real and consequential; the rulers are not attested archaeologically.",
+          "source_ids": [
+            "berkshire-three-sovereigns",
+            "nwe-three-sovereigns"
+          ]
+        },
+        {
+          "kind": "naming-confusion",
+          "text": "The regnal dates were calculated by 17th-century Jesuits from Chinese chronicles, then adopted in China via Sun Yat-sen and the 1938 Cihai.",
+          "source_ids": [
+            "sinica-yellow-emperor-era"
+          ]
+        }
+      ]
     },
     {
       "id": "east-asia.china.shang",
@@ -25866,7 +25893,7 @@
       "id": "east-asia.china.legendary.erlitou",
       "kind": "period",
       "name": "Erlitou",
-      "parent_id": "east-asia.china.legendary",
+      "parent_id": "east-asia.china.xia",
       "start_year": -1750,
       "end_year": -1520,
       "tier": "foundational",
@@ -25874,7 +25901,7 @@
       "end_dating_method": "radiocarbon-calibrated",
       "standing": "majority",
       "date_precision": "century",
-      "date_note": "Wiggle-matched radiocarbon compresses the occupation to roughly 1750-1520 BCE, about two centuries. The date has moved repeatedly: broadly 2100-1300 BC on 20th-century radiocarbon, 1880-1520 BC from the Xia-Shang-Zhou Chronology Project, about 1900-1500 BC in the general literature, and later still after Wu Xiaohong's 2007 work on lower-layer samples. There is also a middle position: Liu Li and Chen Xingcan read phase II as state-level organisation but prefer the neutral label 'the Erlitou State', on the grounds that Chinese scholarship has spent too much effort on dynastic labelling and too little on craft production and settlement patterns.",
+      "date_note": "Wiggle-matched radiocarbon compresses the occupation to roughly 1750-1520 BCE, about two centuries. The date has moved repeatedly: broadly 2100-1300 BC on 20th-century radiocarbon, 1880-1520 BC from the Xia-Shang-Zhou Chronology Project, about 1900-1500 BC in the general literature, and later still after Wu Xiaohong's 2007 work on lower-layer samples. There is also a middle position: Liu Li and Chen Xingcan read phase II as state-level organisation but prefer the neutral label 'the Erlitou State', on the grounds that Chinese scholarship has spent too much effort on dynastic labelling and too little on craft production and settlement patterns. These are the 2007 accelerator-mass-spectrometry figures. Earlier radiocarbon work gave c.1900-1500 BCE and Britannica still prints 1900-1350. The redating matters for the Xia question in the opposite direction to the one usually assumed: it pushes Erlitou later, so the site was still developing when the Xia is conventionally said to have ended, which makes identifying the two harder.",
       "alternatives": [
         {
           "label": "Erlitou is the Xia dynasty",
@@ -25894,15 +25921,25 @@
             "chen-chun-erlitou-xia-dispute",
             "li-liu-2009-xia-erlitou-debate"
           ]
+        },
+        {
+          "kind": "contested-existence",
+          "text": "Chinese archaeologists generally read Erlitou as the Xia's material remains. No contemporary writing confirms it — the earliest Chinese script is late Shang.",
+          "source_ids": [
+            "wikipedia-erlitou-culture",
+            "britannica-erlitou-culture"
+          ]
         }
       ],
       "allow_outside_parent_dates": true,
       "as_of": "2026-08-08",
       "source_ids": [
-        "li-liu-2009-xia-erlitou-debate",
+        "britannica-erlitou-culture",
         "chen-chun-erlitou-xia-dispute",
+        "escholarship-erlitou-wiggle-match",
         "lawler-science-founding-dynasty",
-        "escholarship-erlitou-wiggle-match"
+        "li-liu-2009-xia-erlitou-debate",
+        "radiocarbon-erlitou-dating"
       ],
       "summary": "A large early Bronze Age centre in Henan with palace foundations and bronze workshops, and the site the entire Xia argument is actually about."
     },
@@ -29702,6 +29739,157 @@
       "aliases": [
         "Hsia"
       ]
+    },
+    {
+      "id": "east-asia.china.legendary.huangdi",
+      "kind": "reign",
+      "name": "Yellow Emperor",
+      "parent_id": "east-asia.china.legendary",
+      "start_year": -2697,
+      "end_year": -2597,
+      "tier": "intermediate",
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "source_ids": [
+        "nwe-three-sovereigns",
+        "sinica-yellow-emperor-era"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "A legendary figure. The dates are traditional, and were fixed in their modern form by Jesuit calculation from Chinese chronicles.",
+          "source_ids": [
+            "sinica-yellow-emperor-era"
+          ]
+        }
+      ],
+      "summary": "Traditionally united the Yellow River tribes and founded Chinese statecraft; Sima Qian began his history here.",
+      "aliases": [
+        "Huangdi",
+        "Xuan Yuan",
+        "Yellow Thearch"
+      ],
+      "native_name": "黃帝"
+    },
+    {
+      "id": "east-asia.china.legendary.zhuanxu",
+      "kind": "reign",
+      "name": "Zhuanxu",
+      "parent_id": "east-asia.china.legendary",
+      "start_year": -2514,
+      "end_year": -2436,
+      "tier": "intermediate",
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "source_ids": [
+        "nwe-three-sovereigns",
+        "sinica-yellow-emperor-era"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "A legendary figure. The dates are traditional, and were fixed in their modern form by Jesuit calculation from Chinese chronicles.",
+          "source_ids": [
+            "sinica-yellow-emperor-era"
+          ]
+        }
+      ],
+      "summary": "Grandson of the Yellow Emperor in the traditional genealogy, credited with reforming religious observance.",
+      "aliases": [
+        "Gaoyang"
+      ],
+      "native_name": "顓頊"
+    },
+    {
+      "id": "east-asia.china.legendary.emperor-ku",
+      "kind": "reign",
+      "name": "Emperor Ku",
+      "parent_id": "east-asia.china.legendary",
+      "start_year": -2436,
+      "end_year": -2366,
+      "tier": "intermediate",
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "source_ids": [
+        "nwe-three-sovereigns",
+        "sinica-yellow-emperor-era"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "A legendary figure. The dates are traditional, and were fixed in their modern form by Jesuit calculation from Chinese chronicles.",
+          "source_ids": [
+            "sinica-yellow-emperor-era"
+          ]
+        }
+      ],
+      "summary": "Credited in the tradition with regulating the calendar and the seasons.",
+      "aliases": [
+        "Gaoxin"
+      ],
+      "native_name": "帝嚳"
+    },
+    {
+      "id": "east-asia.china.legendary.emperor-yao",
+      "kind": "reign",
+      "name": "Emperor Yao",
+      "parent_id": "east-asia.china.legendary",
+      "start_year": -2358,
+      "end_year": -2258,
+      "tier": "intermediate",
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "source_ids": [
+        "nwe-three-sovereigns",
+        "sinica-yellow-emperor-era"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "A legendary figure. The dates are traditional, and were fixed in their modern form by Jesuit calculation from Chinese chronicles.",
+          "source_ids": [
+            "sinica-yellow-emperor-era"
+          ]
+        }
+      ],
+      "summary": "The model sage-ruler of Confucian political thought, remembered for passing the throne to the ablest man rather than to his son.",
+      "native_name": "堯"
+    },
+    {
+      "id": "east-asia.china.legendary.emperor-shun",
+      "kind": "reign",
+      "name": "Emperor Shun",
+      "parent_id": "east-asia.china.legendary",
+      "start_year": -2255,
+      "end_year": -2195,
+      "tier": "intermediate",
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "source_ids": [
+        "nwe-three-sovereigns",
+        "sinica-yellow-emperor-era"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "A legendary figure. The dates are traditional, and were fixed in their modern form by Jesuit calculation from Chinese chronicles.",
+          "source_ids": [
+            "sinica-yellow-emperor-era"
+          ]
+        }
+      ],
+      "summary": "Chosen by Yao over his own son and held up ever after as proof that virtue should outrank birth; traditionally passed the throne to Yu, founder of the Xia.",
+      "native_name": "舜"
     },
     {
       "id": "global.multi-regional",

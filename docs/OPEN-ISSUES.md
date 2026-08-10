@@ -163,6 +163,14 @@ indistinguishable in search. Expect more of this shape.
 Left as a flat alias deliberately. Needs scholarship on who coined the framing
 and what it obscures before it can be typed as `historical` or `rejected`.
 
+## Contested sovereignty
+
+See `overlap-and-rival-claims.md`. Short version: the "988 overlapping pairs" figure
+was misleading — overlap is normal and the dataset handles it. The real gap was
+`rival_claimant_to`, now applied to four pairs, and `links` now renders at all.
+More rival pairs remain (antipopes, Japan's Northern and Southern Courts, the Three
+Kingdoms); each needs judgement, and none can be found by measuring dates.
+
 ## Updating the pinned baselines
 
 `python3 tools/baselines.py` prints committed versus current for the fifteen pinned

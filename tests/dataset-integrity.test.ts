@@ -19,14 +19,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.31.0.0");
-    expect(schemaVersion).toBe("3.4.0");
+    expect(datasetVersion).toBe("0.32.0.0");
+    expect(schemaVersion).toBe("3.5.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1717);
+    expect(entities.length).toBe(1719);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -106,7 +106,7 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(495);
+    expect(cited.length).toBe(498);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
@@ -834,6 +834,70 @@ describe("Central Asia and the Austronesian world", () => {
   it("marks Lapita's own start as unresolved", () => {
     const l = entities.find((e) => e.id === "oceania.melanesia.lapita")!;
     expect(l.date_precision).toBe("disputed");
+  });
+});
+
+describe("typed relations", () => {
+  // These were authored and schema-checked for several releases while reaching no
+  // part of the interface. Now that they render, they are worth asserting.
+  it("every link points at an entity that exists", () => {
+    const ids = new Set(entities.map((e) => e.id));
+    const broken = entities.flatMap((e) =>
+      (e.links ?? [])
+        .filter((l) => !ids.has(l.entity_id))
+        .map((l) => `${e.id} -> ${l.entity_id}`),
+    );
+    expect(broken).toEqual([]);
+  });
+
+  it("records rival claims on both sides", () => {
+    // Symmetric by meaning: if the Fatimids contested the caliphate with the
+    // Abbasids, the Abbasids were in the same contest. One-sided would make the
+    // readout depend on which entity the reader opened.
+    const rivals = new Set<string>();
+    for (const e of entities) {
+      for (const l of e.links ?? []) {
+        if (l.type === "rival_claimant_to") rivals.add(`${e.id}|${l.entity_id}`);
+      }
+    }
+    const oneSided = [...rivals].filter((k) => {
+      const [a, b] = k.split("|");
+      return !rivals.has(`${b}|${a}`);
+    });
+    expect(oneSided).toEqual([]);
+    expect(rivals.size).toBeGreaterThanOrEqual(8);
+  });
+
+  it("marks the caliphates as contested rather than successive", () => {
+    // The four caliphates read as a clean succession in the column, because the
+    // Fatimids are listed after the Abbasids. They overlapped by 262 years.
+    const abbasid = entities.find((e) => e.id === "global.multi-regional.abbasid");
+    const fatimid = entities.find((e) => e.id === "global.multi-regional.fatimid");
+    expect(abbasid).toBeDefined();
+    expect(fatimid).toBeDefined();
+    expect(
+      abbasid!.links?.some(
+        (l) =>
+          l.type === "rival_claimant_to" &&
+          l.entity_id === "global.multi-regional.fatimid",
+      ),
+    ).toBe(true);
+    // The overlap is the point, so assert it is real.
+    expect(fatimid!.start_year!).toBeLessThan(abbasid!.end_year!);
+  });
+
+  it("authors the Trinh and Nguyen lords as simultaneous, not successive", () => {
+    const trinh = entities.find((e) => e.id === "southeast-asia.mainland.trinh");
+    const nguyen = entities.find(
+      (e) => e.id === "southeast-asia.mainland.nguyen-lords",
+    );
+    expect(trinh).toBeDefined();
+    expect(nguyen).toBeDefined();
+    // Same nominal sovereign, and at war with each other.
+    expect(trinh!.parent_id).toBe(nguyen!.parent_id);
+    expect(trinh!.start_year!).toBeLessThan(nguyen!.end_year!);
+    // Distinct from the later Nguyen Dynasty, which took the throne outright.
+    expect(nguyen!.id).not.toBe("southeast-asia.mainland.nguyen");
   });
 });
 

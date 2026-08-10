@@ -198,6 +198,40 @@ for _e in entities:
                 f"entity {_e['id']}: sources[].url must be http(s), got {_u!r}"
             )
 
+# Rule 8: a typed relation must point at something, and a rival claim has two sides.
+#
+# Dangling link targets were already covered elsewhere -- planting one produced two
+# error lines, which is how that overlap came to light. So this rule keeps only what
+# was genuinely unchecked: self-links, and the symmetry of a rival claim.
+#
+# `rival_claimant_to` is symmetric by meaning: if the Fatimids claimed the caliphate
+# against the Abbasids, the Abbasids were in the same contest. Recording it on one
+# side only would make the readout depend on which entity the reader happened to
+# open, so both sides are required. Every other link type is directional and is
+# left alone.
+def _check_links(entities, errors):
+    by = {e["id"]: e for e in entities}
+    rivals = set()
+    for e in entities:
+        for link in e.get("links") or []:
+            target = link.get("entity_id")
+            if target not in by:
+                # Dangling targets are already reported by the schema-adjacent
+                # reference check above. Reporting them here too produced two errors
+                # for one defect, so this only skips.
+                continue
+            if target == e["id"]:
+                errors.append(f"entity {e['id']}: links[] points at itself")
+            if link.get("type") == "rival_claimant_to":
+                rivals.add((e["id"], target))
+    for a_id, b_id in sorted(rivals):
+        if (b_id, a_id) not in rivals:
+            errors.append(
+                f"entity {a_id}: rival_claimant_to {b_id} is one-sided; the same "
+                f"relation must be recorded on {b_id} as well"
+            )
+
+
 # Rule 7: a cross-region placement is a factual claim, so it needs a source.
 # Twice now a pass has added cross_parent_ids asserting that a polity held
 # territory in another world region, with no citation, while an open issue said
@@ -483,6 +517,9 @@ for e in entities:
                      f"entity {e['id']} alternatives[{i}] start_year")
         _check_units(alt.get("end_year"), alt_prose,
                      f"entity {e['id']} alternatives[{i}] end_year")
+
+
+_check_links(entities, errors)
 
 
 if warnings:

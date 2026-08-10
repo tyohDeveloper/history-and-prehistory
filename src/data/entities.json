@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.4.0",
-  "dataset_version": "0.31.0.0",
-  "generated_at": "2026-08-10T05:04:48Z",
+  "schema_version": "3.5.0",
+  "dataset_version": "0.32.0.0",
+  "generated_at": "2026-08-10T05:35:11Z",
   "entities": [
     {
       "id": "global",
@@ -7092,7 +7092,26 @@
         "west-asia.mesopotamia"
       ],
       "source_ids": [
+        "britannica-caliphate",
+        "britannica-fatimid-dynasty",
         "britannica-iran-islamic-conquest"
+      ],
+      "links": [
+        {
+          "type": "rival_claimant_to",
+          "entity_id": "global.multi-regional.fatimid",
+          "note": "Held Baghdad while the Fatimids claimed the same office from Cairo."
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "The four caliphates were not a clean succession: the Fatimids claimed the same office from Cairo for 262 years of Abbasid rule.",
+          "source_ids": [
+            "britannica-caliphate",
+            "britannica-fatimid-dynasty"
+          ]
+        }
       ],
       "regions": [
         "central-asia",
@@ -7127,6 +7146,17 @@
       ],
       "summary": "Isma'ili Shia caliphate; founded Cairo and Al-Azhar.",
       "date_precision": "approx",
+      "links": [
+        {
+          "type": "rival_claimant_to",
+          "entity_id": "global.multi-regional.abbasid",
+          "note": "Claimed the caliphate as Ismaili Shia imams against the Abbasids in Baghdad."
+        }
+      ],
+      "source_ids": [
+        "britannica-caliphate",
+        "britannica-fatimid-dynasty"
+      ],
       "cross_parent_ids": [
         "africa.nile",
         "west-asia.mesopotamia"
@@ -28091,12 +28121,20 @@
       "start_year": 1428,
       "end_year": 1789,
       "tier": "foundational",
-      "date_note": "The Lê emperors became figureheads after 1533. The Trịnh-Nguyễn division that actually governed the country is not yet modelled here.",
+      "date_note": "The Lê emperors became figureheads after 1533. The Trịnh in the north and the Nguyễn in the south are now authored beneath, as rivals to each other rather than as successive periods: they were simultaneous, and neither displaced the other — the Tây Sơn displaced both.",
       "source_ids": [
-        "wikipedia-le-dynasty"
+        "wikipedia-le-dynasty",
+        "wikipedia-trinh-lords"
       ],
       "summary": "Nominally ruled for three and a half centuries, though for most of them real power lay with the Trịnh and Nguyễn lords.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "links": [
+        {
+          "type": "rival_claimant_to",
+          "entity_id": "southeast-asia.mainland.mac",
+          "note": "Continued to claim the throne through the Mạc usurpation."
+        }
+      ]
     },
     {
       "id": "southeast-asia.mainland.mac",
@@ -28108,11 +28146,19 @@
       "tier": "intermediate",
       "date_note": "Driven from the capital in 1592; a rump state survived in the far north until 1677. Deliberately overlaps the Later Lê, because both claimed legitimacy at once.",
       "source_ids": [
-        "wikipedia-mac-dynasty"
+        "wikipedia-mac-dynasty",
+        "wikipedia-trinh-lords"
       ],
       "allow_outside_parent_dates": true,
       "summary": "Usurped the throne and held the north, overlapping the Lê rather than succeeding them.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "links": [
+        {
+          "type": "rival_claimant_to",
+          "entity_id": "southeast-asia.mainland.later-le",
+          "note": "Usurped the throne and held the north; the Lê claim continued against it."
+        }
+      ]
     },
     {
       "id": "southeast-asia.mainland.tay-son",
@@ -28801,11 +28847,19 @@
       "tier": "foundational",
       "date_note": "Founded in 1736 when Nader deposed the last Safavid. After his assassination in 1747 the dynasty held only Khorasan, under his grandson Shahrokh, until the Qajar victory in 1796.",
       "source_ids": [
+        "britannica-vietnam-partition",
         "wikipedia-afsharid-dynasty",
         "wikipedia-list-monarchs-iran"
       ],
       "summary": "Nader Shah's conquest state, which outlasted him only in Khorasan.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "links": [
+        {
+          "type": "rival_claimant_to",
+          "entity_id": "west-asia.iran.zand",
+          "note": "Held Khorasan after 1747 while the Zand held the rest of Iran."
+        }
+      ]
     },
     {
       "id": "west-asia.iran.zand",
@@ -28817,8 +28871,9 @@
       "tier": "foundational",
       "date_note": "Encyclopaedia Iranica gives 1751-94; Britannica gives 1750-79, which counts only Karim Khan's own rule. He never took the title shahanshah, governing as vakil for a Safavid figurehead. Overlaps the Afsharids, who held Khorasan throughout.",
       "source_ids": [
-        "iranica-zand-dynasty",
+        "britannica-vietnam-partition",
         "britannica-zand-dynasty",
+        "iranica-zand-dynasty",
         "wikipedia-list-monarchs-iran"
       ],
       "alternatives": [
@@ -28833,7 +28888,14 @@
         }
       ],
       "summary": "Ruled Iran except Khorasan from Shiraz, remembered for an unusually peaceful reign.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "links": [
+        {
+          "type": "rival_claimant_to",
+          "entity_id": "west-asia.iran.afsharid",
+          "note": "Held Iran except Khorasan, which remained Afsharid."
+        }
+      ]
     },
     {
       "id": "west-asia.mesopotamia.phoenicia.canaanite-phase",
@@ -29019,6 +29081,54 @@
       "start_dating_method": "received",
       "date_precision": "approx",
       "summary": "Rigveda, then the other three Vedas, the Brahmanas, and the Upanishads."
+    },
+    {
+      "id": "southeast-asia.mainland.trinh",
+      "kind": "period",
+      "name": "Trịnh Lords (Đàng Ngoài)",
+      "parent_id": "southeast-asia.mainland.later-le",
+      "start_year": 1545,
+      "end_year": 1787,
+      "tier": "foundational",
+      "date_note": "The Lê dynasty continued as the source of legitimacy throughout, which is why this sits under it rather than beside it. Ended by the Tây Sơn.",
+      "source_ids": [
+        "wikipedia-trinh-lords",
+        "britannica-vietnam-partition"
+      ],
+      "allow_outside_parent_dates": true,
+      "summary": "Ruled the north in the Lê emperor's name, holding real power for two and a half centuries.",
+      "date_precision": "approx",
+      "links": [
+        {
+          "type": "rival_claimant_to",
+          "entity_id": "southeast-asia.mainland.nguyen-lords",
+          "note": "Fought the Nguyễn for the country while both claimed to serve the same emperor."
+        }
+      ]
+    },
+    {
+      "id": "southeast-asia.mainland.nguyen-lords",
+      "kind": "period",
+      "name": "Nguyễn Lords (Đàng Trong)",
+      "parent_id": "southeast-asia.mainland.later-le",
+      "start_year": 1558,
+      "end_year": 1777,
+      "tier": "foundational",
+      "date_note": "Nominally subordinate to the same Lê emperor as the Trịnh, and at war with them for much of the period. Ended by the Tây Sơn, from whom the surviving Nguyễn later took the throne outright in 1802.",
+      "source_ids": [
+        "wikipedia-nguyen-lords",
+        "britannica-vietnam-partition"
+      ],
+      "allow_outside_parent_dates": true,
+      "summary": "Ruled the south independently in practice, expanding into the Mekong delta at Cham and Khmer expense.",
+      "date_precision": "approx",
+      "links": [
+        {
+          "type": "rival_claimant_to",
+          "entity_id": "southeast-asia.mainland.trinh",
+          "note": "Fought the Trịnh for the country while both claimed to serve the same emperor."
+        }
+      ]
     },
     {
       "id": "east-asia.china.liao",

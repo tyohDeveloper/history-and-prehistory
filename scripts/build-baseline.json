@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 272829,
+  "gzipBytes": 274575,
   "recordedAt": "2026-08-10",
-  "note": "v3.30.0.0 Phoenicia and Vedic (data 0.31.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.31.0.0 relations rendered, rival claims (data 0.32.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

@@ -24,9 +24,9 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // The two tracks had been asserted the wrong way round since the renumbering:
   // v0.5.0 is the DATA version and 3.1.0 was the APP version. The test was
   // failing for that reason, not because the header was wrong.
-  await expect(page.getByTestId("text-app-version")).toContainText("v3.30.0.0");
-  await expect(page.getByTestId("text-app-version")).toContainText("data 0.31.0.0");
-  await expect(page.getByTestId("panel-footer-root")).toContainText("1,717 entities");
+  await expect(page.getByTestId("text-app-version")).toContainText("v3.31.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 0.32.0.0");
+  await expect(page.getByTestId("panel-footer-root")).toContainText("1,719 entities");
 });
 
 test("drills Region -> Era -> Period through the columns", async ({ page }) => {
@@ -452,4 +452,22 @@ test("shows a point event as a single date in both the gutter and the readout", 
   await page.waitForTimeout(400);
   const panel = await page.getByTestId("panel-readout-root").innerText();
   expect(panel).not.toContain("present");
+});
+
+test("a relation is shown and can be followed", async ({ page }) => {
+  // `links` was populated and tested for several releases while rendering nowhere,
+  // so this asserts the display exists, not just the data behind it.
+  await page.getByTestId("input-search-query").fill("Abbasid");
+  await page.getByTestId("list-search-results").getByRole("option").first().click();
+  await expect(page.getByTestId("text-readout-name")).toContainText("Abbasid");
+
+  const relations = page.getByTestId("panel-links-root");
+  await expect(relations).toContainText("Rival claimant to");
+  await expect(relations).toContainText("Fatimid Caliphate");
+
+  // Following the relation must actually move the reader there.
+  await page.getByTestId("button-link-global.multi-regional.fatimid").click();
+  await expect(page.getByTestId("text-readout-name")).toHaveText("Fatimid Caliphate");
+  // And the relation reads from the other side too.
+  await expect(page.getByTestId("panel-links-root")).toContainText("Abbasid Caliphate");
 });

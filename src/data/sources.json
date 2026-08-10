@@ -1,7 +1,7 @@
 {
-  "schema_version": "3.4.0",
-  "dataset_version": "0.31.0.0",
-  "generated_at": "2026-08-10T05:04:48Z",
+  "schema_version": "3.5.0",
+  "dataset_version": "0.32.0.0",
+  "generated_at": "2026-08-10T05:35:11Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2235,6 +2235,41 @@
       "citation": "'Mahajanapada', Encyclopaedia Britannica",
       "url": "https://www.britannica.com/topic/mahajanapada",
       "note": "The sixteen great realms and the second urbanisation of the Ganges plain."
+    },
+    {
+      "id": "britannica-fatimid-dynasty",
+      "kind": "reference",
+      "citation": "'Fatimid dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Fatimid-dynasty",
+      "note": "The Fatimids claimed the caliphate as Ismaili Shia imams while the Abbasids held Baghdad, so the two claims were simultaneous and mutually exclusive."
+    },
+    {
+      "id": "britannica-caliphate",
+      "kind": "reference",
+      "citation": "'Caliphate', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/caliphate",
+      "note": "The office was singular in theory and contested in fact; more than one claimant held it at once for long stretches."
+    },
+    {
+      "id": "wikipedia-trinh-lords",
+      "kind": "reference",
+      "citation": "'Trịnh lords', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tr%E1%BB%8Bnh_lords",
+      "note": "Ruled the north as Đàng Ngoài from 1545 while the Lê emperors reigned nominally."
+    },
+    {
+      "id": "wikipedia-nguyen-lords",
+      "kind": "reference",
+      "citation": "'Nguyễn lords', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_lords",
+      "note": "Ruled the south as Đàng Trong from 1558 until the Tây Sơn rising."
+    },
+    {
+      "id": "britannica-vietnam-partition",
+      "kind": "reference",
+      "citation": "'Vietnam: The Trịnh and the Nguyễn', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Vietnam/The-Trinh-and-the-Nguyen",
+      "note": "The two lordly houses divided the country under nominal Lê sovereignty."
     },
     {
       "id": "carson-hung-2022-luzon",

@@ -356,10 +356,12 @@
               "merged_into",
               "co_ruler_with",
               "regent_for",
+              "rival_claimant_to",
               "appears_under",
               "same_entity_as",
               "other"
-            ]
+            ],
+            "description": "The semantic relation. `rival_claimant_to` is for two entities claiming the SAME sovereignty or office at the same time, which is different from ordinary overlap: Champa and Vietnam coexisted as neighbours, but the Fatimids and Abbasids both claimed the caliphate. Simple coexistence needs no link at all — most of history overlaps."
           },
           "entity_id": {
             "type": "string"

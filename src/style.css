@@ -649,3 +649,41 @@ a.source-cite:focus-visible { outline: 2px solid var(--accent); outline-offset: 
   opacity: 0.85;
   font-style: normal;
 }
+
+/* Typed relations. Authored and schema-checked for several releases while
+   reaching no part of the interface, which is why they are rendered before
+   anything more is added to the field. */
+.links { margin-top: 1.1rem; }
+.links-head {
+  font-size: 0.72em;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 0.4rem;
+}
+.link-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.3rem 0.9rem;
+  align-items: baseline;
+}
+.link-kind {
+  font-size: 0.78em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.62;
+  white-space: nowrap;
+}
+.link-goto {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--accent, #d8a24a);
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.link-goto:hover, .link-goto:focus-visible { opacity: 0.8; }
+.link-note { font-size: 0.86em; opacity: 0.7; margin-top: 0.12rem; }

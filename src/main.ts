@@ -12,6 +12,7 @@ import {
   visibleAtTier,
 } from "./entity/tree";
 import { formatYear } from "./entity/tree";
+import type { TreeIndex } from "./entity/tree";
 import type { CaveatKindId, Entity, EntityKind, NameForm, StandingId, Tier } from "./entity/entity";
 import type { Source } from "./dataset/dataset";
 import { readYearIn, type CalendarReading } from "./calendars/convert";
@@ -443,6 +444,8 @@ function renderReadout(): HTMLElement {
   const order = citationOrder(e);
   const caveats = renderCaveats(e, order);
   if (caveats !== null) box.append(caveats);
+  const relations = renderLinks(e, index, selectEntity);
+  if (relations !== null) box.append(relations);
   const alternatives = renderAlternatives(e, order);
   if (alternatives !== null) box.append(alternatives);
   const calendars = renderCalendarRows(e);
@@ -587,6 +590,74 @@ function renderSources(order: string[]): HTMLElement | null {
  * They sit above the calendar readout deliberately. A misconception about what
  * a date *means* is worth more than the same date expressed in four calendars.
  */
+/** How each typed relation reads to someone who is not holding the schema. */
+const LINK_LABEL: Record<string, string> = {
+  successor_state_of: "Successor to",
+  predecessor_state_of: "Predecessor of",
+  part_of: "Part of",
+  contains: "Contains",
+  conquered_by: "Conquered by",
+  conquered: "Conquered",
+  vassal_of: "Vassal of",
+  suzerain_of: "Overlord of",
+  ruled_by_dynasty: "Ruled by",
+  capital_at: "Capital at",
+  split_from: "Split from",
+  merged_into: "Merged into",
+  co_ruler_with: "Co-ruler with",
+  regent_for: "Regent for",
+  rival_claimant_to: "Rival claimant to",
+  appears_under: "Also appears under",
+  same_entity_as: "Same as",
+  other: "Related",
+};
+
+/**
+ * Typed relations to other entities.
+ *
+ * These were authored, schema-checked and tested for several releases while
+ * reaching no part of the interface: the Yuan has carried
+ * `successor_state_of: central-asia.mongol-empire` that no reader could see. That
+ * is the same failure as `researchNote` being exported and tested but wired to
+ * nothing — a field whose presence implies a capability the app does not have.
+ *
+ * Rendered before adding anything to it, because populating an invisible field is
+ * how the problem got this far.
+ */
+function renderLinks(
+  entity: Entity,
+  index: TreeIndex,
+  onPick: (id: string) => void,
+): HTMLElement | null {
+  const items = entity.links ?? [];
+  if (items.length === 0) return null;
+  const box = el("div", { class: "links", "data-testid": "panel-links-root" });
+  box.append(el("div", { class: "links-head" }, "Relations"));
+  const grid = el("div", { class: "link-grid" });
+  for (const l of items) {
+    grid.append(el("span", { class: "link-kind" }, LINK_LABEL[l.type] ?? l.type));
+    const target = index.byId.get(l.entity_id);
+    const cell = el("span", { class: "link-target" });
+    // A relation naming an entity the reader cannot reach is half a relation.
+    const btn = el(
+      "button",
+      { class: "link-goto", type: "button", "data-testid": `button-link-${l.entity_id}` },
+      target?.name ?? l.entity_id,
+    );
+    btn.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      onPick(l.entity_id);
+    });
+    cell.append(btn);
+    if (l.note !== undefined) {
+      cell.append(el("div", { class: "link-note", dir: "auto" }, l.note));
+    }
+    grid.append(cell);
+  }
+  box.append(grid);
+  return box;
+}
+
 function renderCaveats(entity: Entity, order: string[]): HTMLElement | null {
   const items = entity.caveats ?? [];
   if (items.length === 0) return null;

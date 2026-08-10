@@ -87,15 +87,45 @@ export interface Entity {
   start_year_max?: number;
   end_year_min?: number;
   end_year_max?: number;
-  date_precision?: Precision;
-  start_precision?: Precision;
-  end_precision?: Precision;
+
+  /**
+   * True when the entity continues to the present.
+   *
+   * Exists because an absent `end_year` meant two different things and the reader could not
+   * tell which: Homo sapiens is extant, Homo luzonensis simply has no dated final
+   * appearance. The old code inferred "present" by default, so undated became immortal.
+   * Never set alongside `end_year`.
+   */
+  extant?: boolean;
+
+  /**
+   * How much standing the topic itself has, as distinct from its dating.
+   *
+   * The two vary independently and conflating them was a real loss of information. Dangun's
+   * existence is `mythological` while his date is a `traditional` reckoning; the Lomekwian
+   * industry is `accepted` and its 3.3 Ma date is genuinely argued. Omitted means `accepted`.
+   */
+  historicity?: "interpretive" | "reconstructed" | "contested" | "legendary" | "mythological";
+
+  /**
+   * Standing of the primary dating. Renamed from `standing` so it cannot be mistaken for a
+   * claim about the topic, which is now `historicity`. Absent reads as `majority`.
+   * `superseded` lives only in `alternatives[].standing`.
+   */
+  date_standing?: "consensus" | "majority" | "minority" | "traditional";
+
+  /**
+   * The phrase a reader would search to research this further.
+   *
+   * Explicitly not an identifier and never a link key: display names collide fifteen times
+   * in this dataset, including two distinct places called Andes, so anything keyed on a
+   * human-readable phrase resolves ambiguously. Links key on `id`.
+   */
+  search_phrase?: string;
   date_note?: string;
   allow_outside_parent_dates?: boolean;
   summary?: string;
   calendar_ids?: string[];
-  notable_figures?: string[];
-  capital?: string;
   links?: { type: string; entity_id: string; note?: string }[];
   /* --- schema 1.1.0 (see 2.0.0 additions below) ------------------------------------------------------ */
   /**
@@ -110,7 +140,6 @@ export interface Entity {
    */
   start_dating_method?: DatingMethodId;
   end_dating_method?: DatingMethodId;
-  standing?: StandingId;
   /** ISO date this dating was last checked. Live disputes only. */
   as_of?: string;
   alternatives?: {

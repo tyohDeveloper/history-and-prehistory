@@ -218,13 +218,13 @@ function shortRange(e: Entity): string {
   // the same failure as converting uncalibrated ages: the column is where most
   // reading happens, and a caveat one click away does not reach it. The dagger
   // is the conventional "there is a note" mark and costs one character.
-  const dagger = e.standing === "traditional" ? "\u2009\u2020" : "";
+  const dagger = e.date_standing === "traditional" ? "\u2009\u2020" : "";
   // A trailing dash reads as "and onwards", which is right for an era with no
   // end and wrong for a battle. Point events were added in 0.16.0.0 and the
   // gutter showed Kadesh as "1274 BCE-". Same bug as formatRange had, in a
   // second formatter -- worth noting that two places format ranges at all.
   if (t === null) {
-    const open = e.kind === "event" && e.end_precision === undefined ? "" : DASH;
+    const open = e.kind === "event" && e.extant !== true ? "" : DASH;
     return `${magnitude(s)}${s < 0 ? "\u2009BCE" : ""}${open}${dagger}`;
   }
   if (s < 0 && t < 0) return `${magnitude(s)}${DASH}${magnitude(t)}\u2009BCE${dagger}`;
@@ -400,7 +400,10 @@ function renderReadout(): HTMLElement {
   fact("Kind", KIND_LABEL[e.kind]);
   fact("Detail tier", e.tier);
   fact("Identifier", e.id);
-  if (e.date_precision !== undefined) fact("Date precision", e.date_precision);
+  // Precision is no longer authored; it is implied by the bounds, which are shown beside
+  // each endpoint's dating method below.
+  if (e.historicity !== undefined) fact("Historicity", e.historicity);
+  if (e.extant === true) fact("Continues to", "the present");
   const sm = e.start_dating_method;
   const em = e.end_dating_method;
   if (sm !== undefined) {
@@ -463,8 +466,7 @@ function renderReadout(): HTMLElement {
   if (e.calendar_ids !== undefined && e.calendar_ids.length > 0) {
     fact("Calendars", e.calendar_ids.join(", "));
   }
-  if (e.standing !== undefined) fact("Standing", STANDING_LABEL[e.standing]);
-  if (e.capital !== undefined) fact("Capital", e.capital);
+  if (e.date_standing !== undefined) fact("Dating standing", STANDING_LABEL[e.date_standing]);
   if (e.as_of !== undefined) fact("Dispute last checked", e.as_of);
   box.append(dl);
   const order = citationOrder(e);
@@ -499,7 +501,7 @@ function renderReadout(): HTMLElement {
  * standing, and rendered identically to a radiocarbon date.
  */
 function renderStandingBanner(entity: Entity): HTMLElement | null {
-  if (entity.standing !== "traditional") return null;
+  if (entity.date_standing !== "traditional") return null;
   const box = el("div", { class: "standing-banner", "data-testid": "panel-standing-banner" });
   box.append(el("span", { class: "standing-banner-mark", "aria-hidden": "true" }, "\u2020"));
   box.append(

@@ -75,7 +75,11 @@ function valueFor(
 }
 
 function claimFor(value: YearValue, entity: Entity): DatingClaim {
-  const traditional = entity.date_precision === "traditional";
+  // Was `date_precision === "traditional"`. A traditional date is now identified by the
+  // dating METHOD that produced it -- `received` -- which is what it always meant: a figure
+  // handed down rather than measured.
+  const traditional =
+    entity.start_dating_method === "received" || entity.date_standing === "traditional";
   return {
     value,
     label: traditional ? "Traditional date" : "Conventional date",

@@ -39,7 +39,12 @@ export interface DisplayRange {
  * date older. "from 3.3 Ma ago" says that; a range does not.
  */
 function isThreshold(e: Entity): boolean {
-  return e.kind === "threshold" || e.date_precision === "minimum";
+  // Was `kind === "threshold" || date_precision === "minimum"`. The precision enum is gone;
+  // a one-sided bound is now expressed as it should always have been -- a lower bound with
+  // no upper one, which is exactly what a terminus post quem is.
+  const oneSided =
+    e.start_year_min !== undefined && e.start_year_max === undefined && e.end_year === null;
+  return e.kind === "threshold" || oneSided;
 }
 
 /**
@@ -54,7 +59,9 @@ function isThreshold(e: Entity): boolean {
  * left recorded here rather than fixed under cover of a data release.
  */
 function isPoint(e: Entity): boolean {
-  return e.kind === "event" && e.end_year === null && e.end_precision === undefined;
+  // A point event has no end because it is a moment. Distinguished from an ongoing thing by
+  // `extant`, which is the field that exists to end this ambiguity.
+  return e.kind === "event" && e.end_year === null && e.extant !== true;
 }
 
 /**
@@ -64,7 +71,10 @@ function isPoint(e: Entity): boolean {
  */
 function openEndLabel(e: Entity): string | undefined {
   if (e.end_year !== null) return undefined;
-  return e.end_precision === "unknown" ? "unknown" : "present";
+  // `extant` replaces the inference this used to make from `end_precision === "unknown"`.
+  // The old default was "present", so an undated final appearance read as though the thing
+  // were still with us -- which for Homo luzonensis it is not.
+  return e.extant === true ? "present" : "unknown";
 }
 
 export function displayRange(e: Entity, preference: FramePreference = "auto"): DisplayRange {
@@ -80,7 +90,7 @@ export function displayRange(e: Entity, preference: FramePreference = "auto"): D
   // the user has asked for a frame they get it; on `auto` a traditional date
   // stays in the calendar reckoning it was actually handed down in.
   const frame =
-    preference === "auto" && e.standing === "traditional"
+    preference === "auto" && e.date_standing === "traditional"
       ? "calendar"
       : resolveFrame(startValue, preference);
 

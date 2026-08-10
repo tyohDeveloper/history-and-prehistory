@@ -38,6 +38,14 @@ _STRUCTURAL = {"id", "kind", "name", "parent_id", "start_year", "end_year"}
 try:
     with open(_SCHEMA_PATH, encoding="utf-8") as _f:
         ALLOWED_FIELDS = frozenset(json.load(_f)["properties"]) - _STRUCTURAL
+        # Authoring shorthands retired from the stored schema but still written by ~30
+        # modules. `migrate_dating` converts each into method-and-bounds and strips it, so
+        # they never reach the output. Kept accepted here rather than editing 30 modules at
+        # once; the validator reports how many remain so this does not become permanent.
+        ALLOWED_FIELDS = ALLOWED_FIELDS | {
+            "date_precision", "start_precision", "end_precision",
+            "standing", "capital", "notable_figures",
+        }
 except OSError:  # pragma: no cover - schema is committed alongside this file
     ALLOWED_FIELDS = frozenset()
 

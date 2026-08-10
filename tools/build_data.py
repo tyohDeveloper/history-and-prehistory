@@ -1706,6 +1706,7 @@ from reigns_from_research import extend as _reigns_from_research
 from upgrade_sources import extend as _upgrade_sources
 from co_rulers import extend as _co_rulers
 from fix_rome_parent import extend as _fix_rome_parent
+from migrate_dating import extend as _migrate_dating
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -2005,6 +2006,12 @@ for _e in entities:
     if _merged:
         _e["aliases"] = _merged
 print(f"Name forms: {_nf_entities} entities carry structured names")
+
+# Immediately before the write, because this rewrites every entity's dating fields and so
+# must see the final state. Two earlier placements were both wrong: one ran before later
+# modules had authored their entities, and one ran after this file had already been written,
+# which meant its work was silently discarded.
+_migrate_dating(E, entities)
 
 with open(DATA / "entities.json", "w") as f:
     json.dump(_envelope("entities", entities), f, indent=2, ensure_ascii=False)

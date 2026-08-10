@@ -118,7 +118,7 @@ describe("year formatting", () => {
     expect(formatYear(null)).toBe("\u2014");
   });
   it("renders ongoing ranges", () => {
-    expect(formatRange(mk({ id: "x", start_year: 2019, end_year: null }))).toBe("2019 CE \u2013 present");
+    expect(formatRange(mk({ id: "x", start_year: 2019, end_year: null, extant: true }))).toBe("2019 CE \u2013 present");
   });
 
   it("prints a point event as one date, not as ongoing", () => {
@@ -130,7 +130,7 @@ describe("year formatting", () => {
     ).toBe("3100 BCE");
     // An era with no end is still ongoing, not a point.
     expect(
-      formatRange(mk({ id: "era", kind: "era", start_year: -3100, end_year: null })),
+      formatRange(mk({ id: "era", kind: "era", start_year: -3100, end_year: null, extant: true })),
     ).toBe("3100 BCE \u2013 present");
   });
 });
@@ -144,8 +144,11 @@ describe("compareEntities", () => {
 });
 
 describe("an absent end year means two different things", () => {
+  // These fixtures now say `extant: true` rather than relying on a null end year. That
+  // reliance was the bug: "no end year" was read as "still going", so anything whose end was
+  // merely undated was rendered as ongoing.
   it("renders an extant taxon as present", () => {
-    expect(formatRange(mk({ id: "sapiens", start_year: -313050, end_year: null }))).toContain(
+    expect(formatRange(mk({ id: "sapiens", start_year: -313050, end_year: null, extant: true }))).toContain(
       "present",
     );
   });
@@ -155,7 +158,7 @@ describe("an absent end year means two different things", () => {
     // dated. "present" would assert it is still walking around.
     expect(
       formatRange(
-        mk({ id: "luzonensis", start_year: -132050, end_year: null, end_precision: "unknown" }),
+        mk({ id: "luzonensis", start_year: -132050, end_year: null, extant: undefined }),
       ),
     ).toContain("unknown");
   });

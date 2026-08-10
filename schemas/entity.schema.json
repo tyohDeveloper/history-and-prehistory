@@ -30,7 +30,12 @@
         "event",
         "city",
         "taxon",
-        "threshold"
+        "threshold",
+        "person",
+        "people",
+        "network",
+        "tradition",
+        "language"
       ],
       "description": "region = geographic bucket; era = long civilizational chunk; period = dynasty/named sub-era/nengō; reign = single ruler; event = discrete moment (battle, treaty, disaster); taxon = a biological species or population (a taxon is NOT a period — several outlive the eras they are filed near, and Homo sapiens is extant); threshold = the earliest known instance of a behaviour, e.g. controlled fire. A threshold is a ONE-SIDED bound: new evidence can only move it older, and the behaviour continues after it. Use date_precision 'minimum' with it."
     },
@@ -77,7 +82,9 @@
               "translation",
               "scholarly",
               "historical",
-              "rejected"
+              "rejected",
+              "adjectival",
+              "orthographic"
             ],
             "description": "endonym: what it called itself. exonym: an outsiders' name. formal: official long form. common: everyday short form. translation: the same referent in another language. scholarly: a modern academic coinage with no ancient referent. historical: used only during a stated period. rejected: actively repudiated by descendant communities."
           },
@@ -104,6 +111,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "system": {
+            "type": "string",
+            "description": "Romanisation system for this form: pinyin, wade-giles, postal, hepburn, mccune-reischauer, ..."
           }
         }
       }
@@ -161,54 +172,6 @@
       "type": "integer",
       "description": "Latest plausible end year. Defaults to end_year."
     },
-    "date_precision": {
-      "type": "string",
-      "enum": [
-        "year",
-        "decade",
-        "century",
-        "millennium",
-        "approx",
-        "traditional",
-        "disputed",
-        "unknown",
-        "exact",
-        "minimum"
-      ],
-      "description": "Overall precision when a single value fits both endpoints. If start and end have different precisions, use start_precision / end_precision instead. 'exact' is retained as an alias for 'year'. 'minimum' means the date is a floor, not an estimate: the behaviour or occurrence is at least this old and may be older. It is the correct precision for a threshold, where the record can only be pushed back."
-    },
-    "start_precision": {
-      "type": "string",
-      "enum": [
-        "year",
-        "decade",
-        "century",
-        "millennium",
-        "approx",
-        "traditional",
-        "disputed",
-        "unknown",
-        "exact",
-        "minimum"
-      ],
-      "description": "Precision for start_year specifically."
-    },
-    "end_precision": {
-      "type": "string",
-      "enum": [
-        "year",
-        "decade",
-        "century",
-        "millennium",
-        "approx",
-        "traditional",
-        "disputed",
-        "unknown",
-        "exact",
-        "minimum"
-      ],
-      "description": "Precision for end_year specifically."
-    },
     "date_note": {
       "type": "string",
       "description": "Free-text note about dating (source disagreement, traditional-vs-attested, calendar transitions, etc.)."
@@ -237,18 +200,6 @@
       "items": {
         "type": "string"
       }
-    },
-    "notable_figures": {
-      "type": "array",
-      "uniqueItems": true,
-      "description": "Free-text notable people not modeled as separate reign entities.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "capital": {
-      "type": "string",
-      "description": "Capital city (if applicable, and if a single value suffices)."
     },
     "links": {
       "type": "array",
@@ -281,7 +232,11 @@
               "rival_claimant_to",
               "appears_under",
               "same_entity_as",
-              "other"
+              "other",
+              "preceded_by",
+              "succeeded_by",
+              "descended_from",
+              "ancestor_of"
             ],
             "description": "The semantic relation. `rival_claimant_to` is for two entities claiming the SAME sovereignty or office at the same time, which is different from ordinary overlap: Champa and Vietnam coexisted as neighbours, but the Fatimids and Abbasids both claimed the caliphate. Simple coexistence needs no link at all — most of history overlaps."
           },
@@ -308,7 +263,7 @@
     },
     "start_dating_method": {
       "type": "string",
-      "description": "How the START boundary's date was arrived at. Orthogonal to precision: a calibrated radiocarbon date and an attested king-list date can share a precision while being entirely different kinds of claim. Selects whether the readout leads in BP or in calendar reckoning, which is computed from the start. Schema 3.0.0 split the former single `dating_method` into per-boundary fields (Q-30): one field cannot describe an entity whose boundaries rest on different science. Schema 3.1.0 adds `received`, for a date arrived at by transmission rather than by measurement or attestation: Rome's 753 BCE from the annalists, Narmer's 3100 from king-lists, the Namazga phase brackets from Masson's ceramic typology. Before it, such entities carried no method at all, because calling them `typological` or `unknown` misdescribed a date whose provenance is in fact perfectly well known — it is just not evidence. Schema 3.3.0 adds `dendrochronology`. Its absence was conspicuous: the American Southwest is where Douglass invented tree-ring dating, and filing Chaco under radiocarbon made the readout offer 'cal BP' for sites dated to the year.",
+      "description": "Required for any populated endpoint. What kind of claim the date is.",
       "enum": [
         "calendar",
         "dendrochronology",
@@ -324,12 +279,18 @@
         "magnetostratigraphy",
         "received",
         "typological",
-        "unknown"
+        "unknown",
+        "regnal-reckoning",
+        "synchronism",
+        "astronomical",
+        "glottochronology",
+        "first-attestation",
+        "genetic"
       ]
     },
     "end_dating_method": {
       "type": "string",
-      "description": "How the END boundary's date was arrived at, when it differs from the start. Neanderthals appear at ~400 ka by uranium-series and disappear at ~40 ka by radiocarbon; recording one method for both is the error this field exists to prevent. Omit when the end is undated or the method is unrecorded -- it is NOT inherited from the start, because silently inheriting is what produced the mislabelling. Schema 3.1.0 adds `received`, for a date arrived at by transmission rather than by measurement or attestation: Rome's 753 BCE from the annalists, Narmer's 3100 from king-lists, the Namazga phase brackets from Masson's ceramic typology. Before it, such entities carried no method at all, because calling them `typological` or `unknown` misdescribed a date whose provenance is in fact perfectly well known — it is just not evidence.",
+      "description": "Required for any populated endpoint. What kind of claim the date is.",
       "enum": [
         "calendar",
         "dendrochronology",
@@ -345,18 +306,13 @@
         "magnetostratigraphy",
         "received",
         "typological",
-        "unknown"
-      ]
-    },
-    "standing": {
-      "type": "string",
-      "description": "How the date stands relative to the field. `traditional` is deliberately separate: received dates such as Rome's 753 BCE founding are not findings, and presenting them with the same weight as measured or attested dates is the commonest way a history reference misleads.",
-      "enum": [
-        "consensus",
-        "majority",
-        "minority",
-        "traditional",
-        "superseded"
+        "unknown",
+        "regnal-reckoning",
+        "synchronism",
+        "astronomical",
+        "glottochronology",
+        "first-attestation",
+        "genetic"
       ]
     },
     "as_of": {
@@ -481,6 +437,35 @@
       "items": {
         "type": "string"
       }
+    },
+    "extant": {
+      "type": "boolean",
+      "description": "True when the entity continues to the present. Never set alongside end_year; removes the ambiguity of an absent end_year."
+    },
+    "historicity": {
+      "type": "string",
+      "enum": [
+        "interpretive",
+        "reconstructed",
+        "contested",
+        "legendary",
+        "mythological"
+      ],
+      "description": "Grades the topic itself, independently of its dating. Omit for the default, 'accepted'."
+    },
+    "search_phrase": {
+      "type": "string",
+      "description": "Phrase a reader would search to research further. Not unique, not an identifier, never a link key."
+    },
+    "date_standing": {
+      "type": "string",
+      "description": "Standing of the primary dating. Absent reads as 'majority'. 'superseded' lives only in alternatives[].standing.",
+      "enum": [
+        "consensus",
+        "majority",
+        "minority",
+        "traditional"
+      ]
     }
   }
 }

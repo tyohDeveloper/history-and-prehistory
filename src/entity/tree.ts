@@ -240,8 +240,10 @@ export function formatRange(e: Entity): string {
   const start = formatYear(e.start_year);
   if (e.end_year === null) {
     if (e.start_year === null) return "—";
-    if (e.kind === "event" && e.end_precision === undefined) return start;
-    return e.end_precision === "unknown" ? `${start} – unknown` : `${start} – present`;
+    if (e.kind === "event" && e.extant !== true) return start;
+    // `extant` decides this now. The old default was "present", so anything whose end was
+    // merely undated was rendered as ongoing.
+    return e.extant === true ? `${start} – present` : `${start} – unknown`;
   }
   return `${start} – ${formatYear(e.end_year)}`;
 }

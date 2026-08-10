@@ -110,8 +110,14 @@ describe("gap-analysis baseline", () => {
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(416);
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
+    // These two numbers are the whole point of retiring the precision enums. Before the
+    // migration: 416 entities carried a dating method and 26 carried a lower bound, while
+    // 1,493 said `approx` and left the width unstated. A method is now required on every
+    // populated endpoint, and bounds are required unless the method is `calendar` (an
+    // attested year is not an estimate) or `received` (a traditional figure is the
+    // tradition's claim, not a measurement).
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(1723);
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(1614);
   });
 
   it("dates each boundary on its own evidence", () => {
@@ -122,13 +128,18 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(344);
+    expect(withEnd.length).toBe(1648);
 
     const differing = entities
       .filter(
         (e) =>
           e.end_dating_method !== undefined &&
-          e.end_dating_method !== e.start_dating_method,
+          e.end_dating_method !== e.start_dating_method &&
+          // "unknown" at one end is an admission, not a different kind of evidence. The
+          // dating migration set it wherever no method had been recorded, which added 17
+          // pairs that say nothing about the science behind either endpoint.
+          e.end_dating_method !== "unknown" &&
+          e.start_dating_method !== "unknown",
       )
       .map((e) => e.id)
       .sort();
@@ -181,10 +192,13 @@ describe("gap-analysis baseline", () => {
     // bones among the living.
     const sapiens = entities.find((e) => e.id === "global.prehistory.hominins.homo-sapiens");
     const luzon = entities.find((e) => e.id === "global.prehistory.hominins.homo-luzonensis");
+    // `extant` now carries this distinction outright, instead of it being inferred from the
+    // absence of an end_precision -- an inference that defaulted to "present" and so quietly
+    // listed anything undated among the living.
     expect(sapiens?.end_year).toBeNull();
-    expect(sapiens?.end_precision).toBeUndefined();
+    expect(sapiens?.extant).toBe(true);
     expect(luzon?.end_year).toBeNull();
-    expect(luzon?.end_precision).toBe("unknown");
+    expect(luzon?.extant).toBeUndefined();
   });
 
   it("has calendar_ids on only 267 entities", () => {
@@ -224,15 +238,19 @@ describe("the behavioural gate", () => {
     // If an older knapping site is accepted the date moves and scope does not.
     const k = byId.get("global.prehistory.firsts.stone-knapping");
     expect(k?.kind).toBe("threshold");
-    expect(k?.date_precision).toBe("minimum");
-    expect(k?.start_year).toBe(-3298051);
+    // A terminus post quem is now a lower bound with no upper one, rather than an enum value
+    // named "minimum". And the year no longer claims more significant digits than its
+    // uncertainty supports: 3.3 Ma, not a specific year inside it.
+    expect(k?.start_year_min).toBeDefined();
+    expect(k?.start_year_max).toBeUndefined();
+    expect(k?.start_year).toBe(-3300000);
   });
 
   it("gives every threshold a minimum precision and no end", () => {
     const t = entities.filter((e) => e.kind === "threshold");
     expect(t.length).toBeGreaterThanOrEqual(10);
     for (const e of t) {
-      expect(e.date_precision).toBe("minimum");
+      expect(e.start_year_max).toBeUndefined();
       expect(e.end_year).toBeNull();
     }
   });
@@ -380,7 +398,9 @@ describe("Europe 10,000-2,500 BCE", () => {
   it("refuses a single pan-European Sauveterrian date", () => {
     // Italian AMS and French typological dating differ by about a millennium.
     const s = entities.find((e) => e.id === "europe.prehistory.sauveterrian")!;
-    expect(s.date_precision).toBe("disputed");
+    // "disputed" was a precision value; the dispute now lives in the bounds and the note.
+    expect(s.start_year_min).toBeDefined();
+    expect(s.start_year_max).toBeDefined();
     expect(s.date_note).toMatch(/REGIONAL, NOT PAN-EUROPEAN/);
   });
 
@@ -462,8 +482,9 @@ describe("Central Asia and the Austronesian world", () => {
     // under `standing: "traditional"`, which is only defensible because that
     // standing now leads the readout and marks the picker gutter.
     const n = entities.find((e) => e.id === "central-asia.prehistory.namazga")!;
-    expect(n.standing).toBe("traditional");
-    expect(n.date_precision).toBe("traditional");
+    expect(n.date_standing).toBe("traditional");
+    // The precision enum is retired; `received` as the dating method is what "this is a
+    // handed-down figure, not a measurement" now means, and it always was the better signal.
     expect(n.start_dating_method).toBe("received");
     expect(n.date_note).toMatch(/RECEIVED FRAMEWORK, NOT A DATED ONE/);
   });
@@ -477,9 +498,11 @@ describe("Central Asia and the Austronesian world", () => {
     // "handed down", and calling Rome's 753 BCE `typological` or `unknown`
     // would have misdescribed a date whose provenance is perfectly well known.
     // Schema 3.1.0 adds `received` and the gap closes.
-    for (const e of entities.filter((x) => x.standing === "traditional")) {
-      expect(e.date_precision, `${e.id} precision`).toBe("traditional");
+    for (const e of entities.filter((x) => x.date_standing === "traditional")) {
       expect(e.start_dating_method, `${e.id} method`).toBe("received");
+      // A received figure is the tradition's claim rather than an estimate, so it carries no
+      // uncertainty bounds -- there is nothing to be uncertain between.
+      expect(e.start_year_min, `${e.id} has no bounds`).toBeUndefined();
     }
   });
 
@@ -521,7 +544,13 @@ describe("Central Asia and the Austronesian world", () => {
     ]) {
       const e = entities.find((x) => x.id === id)!;
       expect(e, `${id} exists`).toBeDefined();
-      expect(e.date_precision, `${id} precision`).toBe("disputed");
+      // "disputed" was a precision value. A dispute is now carried either by bounds or by
+      // named alternatives. Hammurabi is the case that forces the "either": his dates come
+      // from rival Mesopotamian chronologies, so the method is `received` and bounds would be
+      // meaningless -- the disagreement is between whole schemes, not a width around a number.
+      const carriesDispute =
+        e.start_year_min !== undefined || (e.alternatives?.length ?? 0) > 0;
+      expect(carriesDispute, `${id} carries the dispute`).toBe(true);
       expect(/[Cc]hronology/.test(e.date_note ?? ""), `${id} names the scheme`).toBe(true);
     }
   });
@@ -737,7 +766,7 @@ describe("Central Asia and the Austronesian world", () => {
     // than naming-confusion.
     const roc = entities.find((e) => e.id === "east-asia.china.roc")!;
     expect(roc.caveats?.some((c) => c.kind === "contested-existence")).toBe(true);
-    expect(roc.date_precision).toBe("disputed");
+    expect(roc.start_year_min).toBeDefined();
     // Both governments' positions must be present, each with a source.
     expect((roc.alternatives ?? []).length).toBeGreaterThanOrEqual(2);
     for (const a of roc.alternatives ?? []) {
@@ -769,7 +798,7 @@ describe("Central Asia and the Austronesian world", () => {
     // issue is whether the GLOBAL category exists at all, so the node carries
     // the argument instead of pretending to contain the world.
     const m = entities.find((e) => e.id === "global.mesolithic")!;
-    expect(m.standing).toBe("minority");
+    expect(m.date_standing).toBe("minority");
     expect((m.source_ids ?? []).length).toBeGreaterThan(0);
     expect(m.caveats?.some((c) => c.kind === "contested-existence")).toBe(true);
     // Regional alternatives must be named, or the entity is still Eurocentric
@@ -791,13 +820,14 @@ describe("Central Asia and the Austronesian world", () => {
     // Different case: a peer-reviewed source does give it a millennium-scale
     // range. Thin, but sourced — so it is a minority claim, not a convention.
     const k = entities.find((e) => e.id === "central-asia.prehistory.kelteminar")!;
-    expect(k.standing).toBe("minority");
-    expect(k.date_precision).toBe("millennium");
+    expect(k.date_standing).toBe("minority");
+    // Was precision "millennium"; that now means explicit bounds a millennium wide.
+    expect(k.start_year_max! - k.start_year_min!).toBe(1000);
   });
 
   it("keeps three rival Seima-Turbino chronologies apart", () => {
     const st = entities.find((e) => e.id === "central-asia.prehistory.seima-turbino")!;
-    expect(st.date_precision).toBe("disputed");
+    expect(st.start_year_min).toBeDefined();
     expect(st.alternatives?.length).toBe(2);
     expect(st.alternatives?.some((a) => a.standing === "superseded")).toBe(true);
   });
@@ -837,7 +867,8 @@ describe("Central Asia and the Austronesian world", () => {
 
   it("marks Lapita's own start as unresolved", () => {
     const l = entities.find((e) => e.id === "oceania.melanesia.lapita")!;
-    expect(l.date_precision).toBe("disputed");
+    expect(l.start_year_min).toBeDefined();
+    expect(l.start_year_max).toBeDefined();
   });
 });
 

@@ -544,6 +544,13 @@ def _bp_figures(text):
 def _check_units(year, prose, label):
     if year is None or year >= 0:
         return
+    # Deep-time years are now deliberately rounded to the scale their bounds justify, so a
+    # date like -200000 is the intended value rather than a skipped conversion. This check
+    # relies on a correctly converted year landing on an odd number like -12551 and therefore
+    # never matching a round figure quoted in its own prose -- an inference the rounding rule
+    # invalidates above 50,000. Below that the discriminator still works and the check stands.
+    if abs(year) >= 50_000:
+        return
     figures = _bp_figures(prose)
     if not figures:
         return
@@ -587,6 +594,70 @@ if warnings:
         print(f"  {w}")
     if len(warnings) > 60:
         print(f"  ... and {len(warnings) - 60} more warnings")
+
+
+# ---------------------------------------------------------------------------
+# Rule 10: the dating spine. Every populated endpoint says how it was dated,
+# and says how wide the uncertainty is unless the method makes width meaningless.
+#
+# This is the rule the retired `date_precision` could never be. That field
+# offered ten values, 1,493 of 1,765 entities chose `approx`, and the bounds
+# that would have quantified the approximation were populated 26 times. So the
+# dataset said "about" constantly and said how much about it almost never.
+#
+# `calendar` and `received` are exempt on purpose and for different reasons. An
+# attested year is not an estimate, so it has no interval. A received figure --
+# 2333 BCE for Dangun, 753 BCE for Rome -- is the tradition's claim rather than
+# a measurement, and bracketing it would invent a scholarly range where there is
+# a text.
+# ---------------------------------------------------------------------------
+
+NO_BOUNDS_METHODS = {"calendar", "received"}
+
+
+def _check_dating_spine(entities):
+    missing_method, missing_bounds, bad_interval = [], [], []
+    for e in entities:
+        for ep in ("start", "end"):
+            year = e.get(f"{ep}_year")
+            if year is None:
+                continue
+            method = e.get(f"{ep}_dating_method")
+            if method is None:
+                missing_method.append(f"{e['id']} {ep}")
+                continue
+            if method in NO_BOUNDS_METHODS:
+                continue
+            lo, hi = e.get(f"{ep}_year_min"), e.get(f"{ep}_year_max")
+            if lo is None and hi is None:
+                # A threshold is one-sided by definition, so a lower bound alone satisfies it.
+                missing_bounds.append(f"{e['id']} {ep} ({method})")
+                continue
+            if lo is not None and lo > year:
+                bad_interval.append(f"{e['id']} {ep}: min {lo} above estimate {year}")
+            if hi is not None and hi < year:
+                bad_interval.append(f"{e['id']} {ep}: max {hi} below estimate {year}")
+
+    for label, rows in (("no dating method", missing_method),
+                        ("no uncertainty bounds", missing_bounds),
+                        ("bounds do not bracket the estimate", bad_interval)):
+        if rows:
+            errors.append(f"dating spine — {label} on {len(rows)} endpoint(s): "
+                          + "; ".join(rows[:5]) + (" …" if len(rows) > 5 else ""))
+
+
+_check_dating_spine(entities)
+
+# Retired authoring shorthands. Accepted by the builders during the migration window so that
+# ~30 modules did not have to change at once; reported here so the window does not quietly
+# become permanent.
+_SHORTHANDS = ("date_precision", "start_precision", "end_precision",
+               "standing", "capital", "notable_figures")
+_left = {f: sum(1 for e in entities if f in e) for f in _SHORTHANDS}
+_left = {f: n for f, n in _left.items() if n}
+if _left:
+    errors.append(f"retired fields still present in output: {_left}")
+
 
 if errors:
     print(f"\n✗ ERRORS ({len(errors)}):")

@@ -163,6 +163,24 @@ indistinguishable in search. Expect more of this shape.
 Left as a flat alias deliberately. Needs scholarship on who coined the framing
 and what it obscures before it can be typed as `historical` or `rejected`.
 
+## The gap report
+
+`python3 tools/report_gaps.py` looks for places where the dataset **implies an
+entity it does not contain**. It is a report, not a validator, and the build does
+not fail on it: every heuristic has honest false positives, and deep-prehistory
+branches dominate the raw output because gaps of 100,000 years there are real.
+
+It was written after the same structural failure turned up twice by accident, in
+unrelated regions — the Song split at 1127 with none of the states that caused
+it, and Majapahit standing with no predecessor. Nothing in a schema can express
+"this entity implies a missing one", so no test could have caught either.
+
+On first run it found the two largest remaining holes immediately:
+
+- **Central Asia** had nothing between 1400 BCE and 1206 CE in one branch.
+- **Iran** jumps from the Sasanians ending 651 to the Safavids starting 1501 —
+  an 850-year hole across the entire Islamic medieval period.
+
 ## Method note: where bugs actually come from
 
 Five bugs have been found by rendering the app and looking at it, and **none** by

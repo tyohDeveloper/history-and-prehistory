@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
   "dataset_version": "0.34.1.0",
-  "generated_at": "2026-08-10T18:31:51Z",
+  "generated_at": "2026-08-10T18:41:17Z",
   "entities": [
     {
       "id": "global",
@@ -656,7 +656,8 @@
       "tier": "foundational",
       "summary": "The Pacific coast and highlands from Norte Chico through Moche, Nazca and Wari to the Inca — states built without the wheel, the arch or a writing system as usually defined.",
       "qualified_name": "Andes (Americas)",
-      "extant": true
+      "extant": true,
+      "search_phrase": "Andes region history archaeology"
     },
     {
       "id": "americas.amazon-southern",
@@ -747,7 +748,8 @@
           "derived": "reciprocal"
         }
       ],
-      "historicity": "interpretive"
+      "historicity": "interpretive",
+      "search_phrase": "BCE Before Common Era dating"
     },
     {
       "id": "global.ce",
@@ -762,7 +764,8 @@
       "start_year_min": -24,
       "start_year_max": 26,
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
-      "historicity": "interpretive"
+      "historicity": "interpretive",
+      "search_phrase": "CE Common Era dating"
     },
     {
       "id": "global.paleolithic",
@@ -1098,7 +1101,8 @@
           "entity_id": "global.short-20c",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "contemporary history since 1991"
     },
     {
       "id": "africa.nile.egypt",
@@ -1360,7 +1364,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn3.sanakht",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Djoser pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn4",
@@ -1411,7 +1416,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn4.khufu",
           "derived": "sequence"
         }
-      ]
+      ],
+      "search_phrase": "Sneferu pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn4.khufu",
@@ -1456,7 +1462,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn4.sneferu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Khufu pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn4.khafre",
@@ -1501,7 +1508,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn4.djedefre",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Khafre pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn4.menkaure",
@@ -1529,7 +1537,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn4.khafre",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Menkaure pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn5",
@@ -2108,7 +2117,8 @@
           "entity_id": "africa.nile.egypt.new-kingdom.dyn18.amenhotep-iii",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Akhenaten pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn18.tutankhamun",
@@ -2390,7 +2400,8 @@
           "entity_id": "africa.nile.egypt.tip.dyn25-kushite.shabaka",
           "derived": "sequence"
         }
-      ]
+      ],
+      "search_phrase": "Piye pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.tip.dyn25.taharqa",
@@ -2418,7 +2429,8 @@
           "entity_id": "africa.nile.egypt.tip.dyn25-kushite.shebitku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Taharqa pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.late-period",
@@ -3385,7 +3397,8 @@
           "entity_id": "east-asia.japan.modern.taisho",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Meiji Japanese era name"
     },
     {
       "id": "east-asia.japan.modern.taisho",
@@ -3418,7 +3431,8 @@
           "entity_id": "east-asia.japan.modern.meiji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Taishō Japanese era name"
     },
     {
       "id": "east-asia.japan.modern.showa",
@@ -3452,7 +3466,8 @@
           "entity_id": "east-asia.japan.modern.taisho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōwa Japanese era name"
     },
     {
       "id": "east-asia.japan.modern.heisei",
@@ -3485,7 +3500,8 @@
           "entity_id": "east-asia.japan.modern.showa",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Heisei Japanese era name"
     },
     {
       "id": "east-asia.japan.modern.reiwa",
@@ -3510,7 +3526,8 @@
           "entity_id": "east-asia.japan.modern.heisei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Reiwa Japanese era name"
     },
     {
       "id": "east-asia.japan.asuka.taika",
@@ -3537,7 +3554,8 @@
           "entity_id": "east-asia.japan.asuka.hakuchi",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Taika Japanese era name"
     },
     {
       "id": "east-asia.japan.asuka.hakuchi",
@@ -3564,7 +3582,8 @@
           "entity_id": "east-asia.japan.asuka.taika",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hakuchi Japanese era name"
     },
     {
       "id": "east-asia.japan.asuka.shucho",
@@ -3591,7 +3610,8 @@
           "entity_id": "east-asia.japan.asuka.taiho",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Shuchō Japanese era name"
     },
     {
       "id": "east-asia.japan.asuka.taiho",
@@ -3623,7 +3643,8 @@
           "entity_id": "east-asia.japan.asuka.shucho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Taihō Japanese era name"
     },
     {
       "id": "east-asia.japan.asuka.keiun",
@@ -3650,7 +3671,8 @@
           "entity_id": "east-asia.japan.asuka.taiho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Keiun Japanese era name"
     },
     {
       "id": "east-asia.japan.nara.wado",
@@ -3678,7 +3700,8 @@
           "entity_id": "east-asia.japan.nara.reiki",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Wadō Japanese era name"
     },
     {
       "id": "east-asia.japan.nara.reiki",
@@ -3710,7 +3733,8 @@
           "entity_id": "east-asia.japan.nara.wado",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Reiki Japanese era name"
     },
     {
       "id": "east-asia.japan.nara.yoro",
@@ -3742,7 +3766,8 @@
           "entity_id": "east-asia.japan.nara.reiki",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Yōrō Japanese era name"
     },
     {
       "id": "east-asia.japan.nara.jinki",
@@ -3774,7 +3799,8 @@
           "entity_id": "east-asia.japan.nara.yoro",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jinki Japanese era name"
     },
     {
       "id": "east-asia.japan.nara.tenpyo",
@@ -3806,7 +3832,8 @@
           "entity_id": "east-asia.japan.nara.jinki",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenpyō Japanese era name"
     },
     {
       "id": "east-asia.japan.nara.tenpyo-kanpo",
@@ -3998,7 +4025,8 @@
           "entity_id": "east-asia.japan.nara.jingo-keiun",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hōki Japanese era name"
     },
     {
       "id": "east-asia.japan.nara.ten-o",
@@ -4030,7 +4058,8 @@
           "entity_id": "east-asia.japan.nara.hoki",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ten'ō Japanese era name"
     },
     {
       "id": "east-asia.japan.nara.enryaku",
@@ -4058,7 +4087,8 @@
           "entity_id": "east-asia.japan.nara.ten-o",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Enryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.daido",
@@ -4085,7 +4115,8 @@
           "entity_id": "east-asia.japan.heian.konin",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Daidō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.konin",
@@ -4117,7 +4148,8 @@
           "entity_id": "east-asia.japan.heian.daido",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōnin Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.tencho",
@@ -4149,7 +4181,8 @@
           "entity_id": "east-asia.japan.heian.konin",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenchō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.jowa-heian",
@@ -4182,7 +4215,8 @@
           "entity_id": "east-asia.japan.heian.tencho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōwa Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kasho-heian",
@@ -4214,7 +4248,8 @@
           "entity_id": "east-asia.japan.heian.jowa-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kashō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.ninju",
@@ -4246,7 +4281,8 @@
           "entity_id": "east-asia.japan.heian.kasho-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ninju Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.saiko",
@@ -4278,7 +4314,8 @@
           "entity_id": "east-asia.japan.heian.ninju",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Saikō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.ten-an",
@@ -4310,7 +4347,8 @@
           "entity_id": "east-asia.japan.heian.saiko",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ten'an Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.jogan",
@@ -4342,7 +4380,8 @@
           "entity_id": "east-asia.japan.heian.ten-an",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōgan Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.gangyo",
@@ -4374,7 +4413,8 @@
           "entity_id": "east-asia.japan.heian.jogan",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Gangyō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.ninna",
@@ -4406,7 +4446,8 @@
           "entity_id": "east-asia.japan.heian.gangyo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ninna Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kanpyo-heian",
@@ -4438,7 +4479,8 @@
           "entity_id": "east-asia.japan.heian.ninna",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kanpyō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.shotai",
@@ -4470,7 +4512,8 @@
           "entity_id": "east-asia.japan.heian.kanpyo-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōtai Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.engi",
@@ -4502,7 +4545,8 @@
           "entity_id": "east-asia.japan.heian.shotai",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Engi Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.encho",
@@ -4534,7 +4578,8 @@
           "entity_id": "east-asia.japan.heian.engi",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Enchō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.johei",
@@ -4566,7 +4611,8 @@
           "entity_id": "east-asia.japan.heian.encho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōhei Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.tengyo",
@@ -4598,7 +4644,8 @@
           "entity_id": "east-asia.japan.heian.johei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tengyō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.tenryaku",
@@ -4630,7 +4677,8 @@
           "entity_id": "east-asia.japan.heian.tengyo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.tentoku",
@@ -4662,7 +4710,8 @@
           "entity_id": "east-asia.japan.heian.tenryaku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tentoku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.owa",
@@ -4694,7 +4743,8 @@
           "entity_id": "east-asia.japan.heian.tentoku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ōwa Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.koho",
@@ -4726,7 +4776,8 @@
           "entity_id": "east-asia.japan.heian.owa",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōhō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.anna",
@@ -4758,7 +4809,8 @@
           "entity_id": "east-asia.japan.heian.koho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Anna Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.tenroku",
@@ -4790,7 +4842,8 @@
           "entity_id": "east-asia.japan.heian.anna",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenroku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.ten-en",
@@ -4822,7 +4875,8 @@
           "entity_id": "east-asia.japan.heian.tenroku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ten'en Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.jogen-heian1",
@@ -4855,7 +4909,8 @@
           "entity_id": "east-asia.japan.heian.ten-en",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōgen Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.tengen",
@@ -4887,7 +4942,8 @@
           "entity_id": "east-asia.japan.heian.jogen-heian1",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tengen Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.eikan",
@@ -4919,7 +4975,8 @@
           "entity_id": "east-asia.japan.heian.tengen",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eikan Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kanna",
@@ -4951,7 +5008,8 @@
           "entity_id": "east-asia.japan.heian.eikan",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kanna Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.eien",
@@ -4983,7 +5041,8 @@
           "entity_id": "east-asia.japan.heian.kanna",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eien Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.eiso",
@@ -5015,7 +5074,8 @@
           "entity_id": "east-asia.japan.heian.eien",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eiso Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.shoryaku",
@@ -5047,7 +5107,8 @@
           "entity_id": "east-asia.japan.heian.eiso",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.chotoku",
@@ -5079,7 +5140,8 @@
           "entity_id": "east-asia.japan.heian.shoryaku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōtoku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.choho-heian",
@@ -5111,7 +5173,8 @@
           "entity_id": "east-asia.japan.heian.chotoku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōhō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kanko",
@@ -5143,7 +5206,8 @@
           "entity_id": "east-asia.japan.heian.choho-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kankō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.chowa",
@@ -5175,7 +5239,8 @@
           "entity_id": "east-asia.japan.heian.kanko",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōwa Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kannin",
@@ -5207,7 +5272,8 @@
           "entity_id": "east-asia.japan.heian.chowa",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kannin Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.jian",
@@ -5239,7 +5305,8 @@
           "entity_id": "east-asia.japan.heian.kannin",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jian Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.manju",
@@ -5271,7 +5338,8 @@
           "entity_id": "east-asia.japan.heian.jian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Manju Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.chogen-heian",
@@ -5303,7 +5371,8 @@
           "entity_id": "east-asia.japan.heian.manju",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōgen Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.choryaku",
@@ -5335,7 +5404,8 @@
           "entity_id": "east-asia.japan.heian.chogen-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.chokyu-heian",
@@ -5367,7 +5437,8 @@
           "entity_id": "east-asia.japan.heian.choryaku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōkyū Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kantoku",
@@ -5399,7 +5470,8 @@
           "entity_id": "east-asia.japan.heian.chokyu-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kantoku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.eisho-heian1",
@@ -5432,7 +5504,8 @@
           "entity_id": "east-asia.japan.heian.kantoku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eishō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.tengi",
@@ -5464,7 +5537,8 @@
           "entity_id": "east-asia.japan.heian.eisho-heian1",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tengi Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kohei",
@@ -5496,7 +5570,8 @@
           "entity_id": "east-asia.japan.heian.tengi",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōhei Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.jiryaku",
@@ -5528,7 +5603,8 @@
           "entity_id": "east-asia.japan.heian.kohei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jiryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.enkyu",
@@ -5560,7 +5636,8 @@
           "entity_id": "east-asia.japan.heian.jiryaku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Enkyū Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.joho",
@@ -5592,7 +5669,8 @@
           "entity_id": "east-asia.japan.heian.enkyu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōhō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.joryaku",
@@ -5624,7 +5702,8 @@
           "entity_id": "east-asia.japan.heian.joho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.eiho",
@@ -5656,7 +5735,8 @@
           "entity_id": "east-asia.japan.heian.joryaku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eihō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.otoku",
@@ -5688,7 +5768,8 @@
           "entity_id": "east-asia.japan.heian.eiho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ōtoku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kanji-heian",
@@ -5720,7 +5801,8 @@
           "entity_id": "east-asia.japan.heian.otoku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kanji Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kaho",
@@ -5752,7 +5834,8 @@
           "entity_id": "east-asia.japan.heian.kanji-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kahō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.eicho",
@@ -5784,7 +5867,8 @@
           "entity_id": "east-asia.japan.heian.kaho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eichō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.jotoku",
@@ -5816,7 +5900,8 @@
           "entity_id": "east-asia.japan.heian.eicho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōtoku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kowa-heian",
@@ -5849,7 +5934,8 @@
           "entity_id": "east-asia.japan.heian.jotoku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōwa Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.choji",
@@ -5881,7 +5967,8 @@
           "entity_id": "east-asia.japan.heian.kowa-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōji Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kajo-heian",
@@ -5913,7 +6000,8 @@
           "entity_id": "east-asia.japan.heian.choji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kajō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.tennin",
@@ -5945,7 +6033,8 @@
           "entity_id": "east-asia.japan.heian.kajo-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tennin Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.ten-ei",
@@ -5977,7 +6066,8 @@
           "entity_id": "east-asia.japan.heian.tennin",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ten'ei Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.eikyu",
@@ -6009,7 +6099,8 @@
           "entity_id": "east-asia.japan.heian.ten-ei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eikyū Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.gen-ei",
@@ -6041,7 +6132,8 @@
           "entity_id": "east-asia.japan.heian.eikyu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Gen'ei Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.hoan",
@@ -6073,7 +6165,8 @@
           "entity_id": "east-asia.japan.heian.gen-ei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hōan Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.tenji-heian",
@@ -6105,7 +6198,8 @@
           "entity_id": "east-asia.japan.heian.hoan",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenji Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.daiji",
@@ -6137,7 +6231,8 @@
           "entity_id": "east-asia.japan.heian.tenji-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Daiji Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.tensho-heian",
@@ -6170,7 +6265,8 @@
           "entity_id": "east-asia.japan.heian.daiji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenshō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.chosho",
@@ -6202,7 +6298,8 @@
           "entity_id": "east-asia.japan.heian.tensho-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōshō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.hoen",
@@ -6234,7 +6331,8 @@
           "entity_id": "east-asia.japan.heian.chosho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hōen Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.eiji",
@@ -6266,7 +6364,8 @@
           "entity_id": "east-asia.japan.heian.hoen",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eiji Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.koji-heian",
@@ -6299,7 +6398,8 @@
           "entity_id": "east-asia.japan.heian.eiji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōji Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.ten-yo",
@@ -6331,7 +6431,8 @@
           "entity_id": "east-asia.japan.heian.koji-heian",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ten'yō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kyuan",
@@ -6363,7 +6464,8 @@
           "entity_id": "east-asia.japan.heian.ten-yo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kyūan Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.ninpei",
@@ -6395,7 +6497,8 @@
           "entity_id": "east-asia.japan.heian.kyuan",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ninpei Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kyuju",
@@ -6427,7 +6530,8 @@
           "entity_id": "east-asia.japan.heian.ninpei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kyūju Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.hogen",
@@ -6459,7 +6563,8 @@
           "entity_id": "east-asia.japan.heian.kyuju",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hōgen Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.heiji",
@@ -6491,7 +6596,8 @@
           "entity_id": "east-asia.japan.heian.hogen",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Heiji Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.eiryaku",
@@ -6523,7 +6629,8 @@
           "entity_id": "east-asia.japan.heian.heiji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eiryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.oho",
@@ -6555,7 +6662,8 @@
           "entity_id": "east-asia.japan.heian.eiryaku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ōhō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.chokan",
@@ -6587,7 +6695,8 @@
           "entity_id": "east-asia.japan.heian.oho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōkan Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.eiman",
@@ -6619,7 +6728,8 @@
           "entity_id": "east-asia.japan.heian.chokan",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eiman Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.nin-an",
@@ -6651,7 +6761,8 @@
           "entity_id": "east-asia.japan.heian.eiman",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Nin'an Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.kao",
@@ -6683,7 +6794,8 @@
           "entity_id": "east-asia.japan.heian.nin-an",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kaō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.joan",
@@ -6715,7 +6827,8 @@
           "entity_id": "east-asia.japan.heian.kao",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōan Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.angen",
@@ -6747,7 +6860,8 @@
           "entity_id": "east-asia.japan.heian.joan",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Angen Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.jisho",
@@ -6779,7 +6893,8 @@
           "entity_id": "east-asia.japan.heian.angen",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jishō Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.yowa",
@@ -6811,7 +6926,8 @@
           "entity_id": "east-asia.japan.heian.jisho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Yōwa Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.juei",
@@ -6843,7 +6959,8 @@
           "entity_id": "east-asia.japan.heian.yowa",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Juei Japanese era name"
     },
     {
       "id": "east-asia.japan.heian.genryaku",
@@ -6870,7 +6987,8 @@
           "entity_id": "east-asia.japan.heian.juei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Genryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.bunji",
@@ -6897,7 +7015,8 @@
           "entity_id": "east-asia.japan.kamakura.kenkyu",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Bunji Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kenkyu",
@@ -6929,7 +7048,8 @@
           "entity_id": "east-asia.japan.kamakura.bunji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kenkyū Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.shoji",
@@ -6961,7 +7081,8 @@
           "entity_id": "east-asia.japan.kamakura.shogun-yoritomo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōji Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kennin",
@@ -6993,7 +7114,8 @@
           "entity_id": "east-asia.japan.kamakura.shoji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kennin Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.genkyu",
@@ -7025,7 +7147,8 @@
           "entity_id": "east-asia.japan.kamakura.shogun-sanetomo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Genkyū Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.ken-ei",
@@ -7057,7 +7180,8 @@
           "entity_id": "east-asia.japan.kamakura.genkyu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ken'ei Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.jogen-kamakura",
@@ -7090,7 +7214,8 @@
           "entity_id": "east-asia.japan.kamakura.ken-ei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōgen Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kenryaku",
@@ -7122,7 +7247,8 @@
           "entity_id": "east-asia.japan.kamakura.jogen-kamakura",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kenryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kenpo",
@@ -7154,7 +7280,8 @@
           "entity_id": "east-asia.japan.kamakura.kenryaku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kenpō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.jokyu",
@@ -7186,7 +7313,8 @@
           "entity_id": "east-asia.japan.kamakura.kenpo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōkyū Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.joo-kamakura",
@@ -7219,7 +7347,8 @@
           "entity_id": "east-asia.japan.kamakura.jokyu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.gennin",
@@ -7251,7 +7380,8 @@
           "entity_id": "east-asia.japan.kamakura.joo-kamakura",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Gennin Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.karoku",
@@ -7283,7 +7413,8 @@
           "entity_id": "east-asia.japan.kamakura.gennin",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Karoku Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.antei",
@@ -7310,7 +7441,8 @@
           "entity_id": "east-asia.japan.kamakura.kangi",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Antei Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kangi",
@@ -7342,7 +7474,8 @@
           "entity_id": "east-asia.japan.kamakura.antei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kangi Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.joei",
@@ -7374,7 +7507,8 @@
           "entity_id": "east-asia.japan.kamakura.kangi",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōei Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.tenpuku",
@@ -7406,7 +7540,8 @@
           "entity_id": "east-asia.japan.kamakura.joei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenpuku Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.bunryaku",
@@ -7438,7 +7573,8 @@
           "entity_id": "east-asia.japan.kamakura.tenpuku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.katei",
@@ -7470,7 +7606,8 @@
           "entity_id": "east-asia.japan.kamakura.bunryaku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Katei Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.ryakunin",
@@ -7502,7 +7639,8 @@
           "entity_id": "east-asia.japan.kamakura.katei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ryakunin Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.en-o",
@@ -7534,7 +7672,8 @@
           "entity_id": "east-asia.japan.kamakura.ryakunin",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "En'ō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.ninji",
@@ -7566,7 +7705,8 @@
           "entity_id": "east-asia.japan.kamakura.en-o",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ninji Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kangen",
@@ -7598,7 +7738,8 @@
           "entity_id": "east-asia.japan.kamakura.ninji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kangen Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.hoji",
@@ -7630,7 +7771,8 @@
           "entity_id": "east-asia.japan.kamakura.shogun-yoritsugu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hōji Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kencho",
@@ -7662,7 +7804,8 @@
           "entity_id": "east-asia.japan.kamakura.hoji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kenchō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kogen",
@@ -7694,7 +7837,8 @@
           "entity_id": "east-asia.japan.kamakura.shogun-munetaka",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōgen Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.shoka",
@@ -7726,7 +7870,8 @@
           "entity_id": "east-asia.japan.kamakura.kogen",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōka Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.shogen",
@@ -7758,7 +7903,8 @@
           "entity_id": "east-asia.japan.kamakura.shoka",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōgen Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.bun-o",
@@ -7790,7 +7936,8 @@
           "entity_id": "east-asia.japan.kamakura.shogen",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bun'ō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kocho",
@@ -7822,7 +7969,8 @@
           "entity_id": "east-asia.japan.kamakura.bun-o",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōchō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.bun-ei",
@@ -7854,7 +8002,8 @@
           "entity_id": "east-asia.japan.kamakura.kocho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bun'ei Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kenji",
@@ -7886,7 +8035,8 @@
           "entity_id": "east-asia.japan.kamakura.shogun-koreyasu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kenji Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.koan-kamakura",
@@ -7919,7 +8069,8 @@
           "entity_id": "east-asia.japan.kamakura.kenji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōan Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.shoo",
@@ -7951,7 +8102,8 @@
           "entity_id": "east-asia.japan.kamakura.koan-kamakura",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.einin",
@@ -7983,7 +8135,8 @@
           "entity_id": "east-asia.japan.kamakura.shogun-hisaaki",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Einin Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.shoan",
@@ -8015,7 +8168,8 @@
           "entity_id": "east-asia.japan.kamakura.einin",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōan Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kengen",
@@ -8047,7 +8201,8 @@
           "entity_id": "east-asia.japan.kamakura.shoan",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kengen Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.kagen",
@@ -8079,7 +8234,8 @@
           "entity_id": "east-asia.japan.kamakura.kengen",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kagen Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.tokuji",
@@ -8111,7 +8267,8 @@
           "entity_id": "east-asia.japan.kamakura.kagen",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tokuji Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.enkyo-kamakura",
@@ -8144,7 +8301,8 @@
           "entity_id": "east-asia.japan.kamakura.tokuji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Enkyō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.ocho",
@@ -8171,7 +8329,8 @@
           "entity_id": "east-asia.japan.kamakura.showa-kamakura",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Ōchō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.showa-kamakura",
@@ -8204,7 +8363,8 @@
           "entity_id": "east-asia.japan.kamakura.ocho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōwa Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.bunpo",
@@ -8236,7 +8396,8 @@
           "entity_id": "east-asia.japan.kamakura.showa-kamakura",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunpō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.gen-o",
@@ -8268,7 +8429,8 @@
           "entity_id": "east-asia.japan.kamakura.bunpo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Gen'ō Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.genko-kamakura1",
@@ -8332,7 +8494,8 @@
           "entity_id": "east-asia.japan.kamakura.genko-kamakura1",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōchū Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.karyaku",
@@ -8364,7 +8527,8 @@
           "entity_id": "east-asia.japan.kamakura.shochu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Karyaku Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.gentoku",
@@ -8396,7 +8560,8 @@
           "entity_id": "east-asia.japan.kamakura.karyaku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Gentoku Japanese era name"
     },
     {
       "id": "east-asia.japan.kamakura.genko-kamakura2",
@@ -8444,7 +8609,8 @@
       "end_dating_method": "unknown",
       "end_year_min": 1236,
       "end_year_max": 1436,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "search_phrase": "Kenmu Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.engen",
@@ -8477,7 +8643,8 @@
           "entity_id": "east-asia.japan.muromachi.shokei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Engen Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.kokoku",
@@ -8505,7 +8672,8 @@
           "entity_id": "east-asia.japan.muromachi.koei",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Kōkoku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.shohei",
@@ -8533,7 +8701,8 @@
           "entity_id": "east-asia.japan.muromachi.jowa-nanboku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōhei Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.kentoku",
@@ -8561,7 +8730,8 @@
           "entity_id": "east-asia.japan.muromachi.bunchu",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Kentoku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.bunchu",
@@ -8594,7 +8764,8 @@
           "entity_id": "east-asia.japan.muromachi.kentoku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunchū Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.tenju",
@@ -8627,7 +8798,8 @@
           "entity_id": "east-asia.japan.muromachi.eiwa",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenju Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.kowa-nanboku",
@@ -8661,7 +8833,8 @@
           "entity_id": "east-asia.japan.muromachi.koryaku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōwa Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.genchu",
@@ -8694,7 +8867,8 @@
           "entity_id": "east-asia.japan.muromachi.shitoku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Genchū Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.shokei",
@@ -8723,7 +8897,8 @@
           "entity_id": "east-asia.japan.muromachi.engen",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Shōkei Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.ryakuo",
@@ -8756,7 +8931,8 @@
           "entity_id": "east-asia.japan.muromachi.engen",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ryakuō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.koei",
@@ -8789,7 +8965,8 @@
           "entity_id": "east-asia.japan.muromachi.kokoku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōei Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.jowa-nanboku",
@@ -8823,7 +9000,8 @@
           "entity_id": "east-asia.japan.muromachi.koei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōwa Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.kanno",
@@ -8851,7 +9029,8 @@
           "entity_id": "east-asia.japan.muromachi.bunna",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Kannō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.bunna",
@@ -8884,7 +9063,8 @@
           "entity_id": "east-asia.japan.muromachi.kanno",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunna Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.enbun",
@@ -8917,7 +9097,8 @@
           "entity_id": "east-asia.japan.muromachi.bunna",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Enbun Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.koan-nanboku",
@@ -8951,7 +9132,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshiakira",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōan Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.joji",
@@ -8984,7 +9166,8 @@
           "entity_id": "east-asia.japan.muromachi.koan-nanboku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōji Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.oan",
@@ -9017,7 +9200,8 @@
           "entity_id": "east-asia.japan.muromachi.joji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ōan Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.eiwa",
@@ -9050,7 +9234,8 @@
           "entity_id": "east-asia.japan.muromachi.bunchu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eiwa Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.koryaku",
@@ -9083,7 +9268,8 @@
           "entity_id": "east-asia.japan.muromachi.tenju",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōryaku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.eitoku",
@@ -9116,7 +9302,8 @@
           "entity_id": "east-asia.japan.muromachi.kowa-nanboku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eitoku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.shitoku",
@@ -9149,7 +9336,8 @@
           "entity_id": "east-asia.japan.muromachi.eitoku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shitoku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.kakei",
@@ -9182,7 +9370,8 @@
           "entity_id": "east-asia.japan.muromachi.genchu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kakei Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.koo",
@@ -9215,7 +9404,8 @@
           "entity_id": "east-asia.japan.muromachi.kakei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.meitoku",
@@ -9248,7 +9438,8 @@
           "entity_id": "east-asia.japan.muromachi.koo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Meitoku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.oei",
@@ -9275,7 +9466,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshikazu",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Ōei Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.shocho",
@@ -9307,7 +9499,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshikazu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōchō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.eikyo",
@@ -9339,7 +9532,8 @@
           "entity_id": "east-asia.japan.muromachi.shocho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eikyō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.kakitsu",
@@ -9371,7 +9565,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshinori",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kakitsu Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.bun-an",
@@ -9403,7 +9598,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshikatsu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bun'an Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.hotoku",
@@ -9435,7 +9631,8 @@
           "entity_id": "east-asia.japan.muromachi.bun-an",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hōtoku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.kyotoku",
@@ -9462,7 +9659,8 @@
           "entity_id": "east-asia.japan.muromachi.kosho",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Kyōtoku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.kosho",
@@ -9494,7 +9692,8 @@
           "entity_id": "east-asia.japan.muromachi.kyotoku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōshō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.choroku",
@@ -9526,7 +9725,8 @@
           "entity_id": "east-asia.japan.muromachi.kosho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōroku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.kansho",
@@ -9558,7 +9758,8 @@
           "entity_id": "east-asia.japan.muromachi.choroku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kanshō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.bunsho",
@@ -9590,7 +9791,8 @@
           "entity_id": "east-asia.japan.muromachi.kansho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunshō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.onin",
@@ -9622,7 +9824,8 @@
           "entity_id": "east-asia.japan.muromachi.bunsho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ōnin Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.bunmei",
@@ -9654,7 +9857,8 @@
           "entity_id": "east-asia.japan.muromachi.onin",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunmei Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.chokyo",
@@ -9686,7 +9890,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshihisa",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Chōkyō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.entoku",
@@ -9718,7 +9923,8 @@
           "entity_id": "east-asia.japan.muromachi.chokyo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Entoku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.meio",
@@ -9750,7 +9956,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshitane",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Meiō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.bunki",
@@ -9782,7 +9989,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshizumi",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunki Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.eisho-muromachi",
@@ -9815,7 +10023,8 @@
           "entity_id": "east-asia.japan.muromachi.bunki",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eishō Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.daiei",
@@ -9847,7 +10056,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshitane-2",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Daiei Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.kyoroku",
@@ -9874,7 +10084,8 @@
           "entity_id": "east-asia.japan.muromachi.tenbun",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Kyōroku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.tenbun",
@@ -9906,7 +10117,8 @@
           "entity_id": "east-asia.japan.muromachi.kyoroku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenbun Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.koji-muromachi",
@@ -9939,7 +10151,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshiteru",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōji Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.eiroku",
@@ -9971,7 +10184,8 @@
           "entity_id": "east-asia.japan.muromachi.koji-muromachi",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Eiroku Japanese era name"
     },
     {
       "id": "east-asia.japan.muromachi.genki",
@@ -9998,7 +10212,8 @@
           "entity_id": "east-asia.japan.muromachi.shogun-yoshiaki",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Genki Japanese era name"
     },
     {
       "id": "east-asia.japan.azuchi-momoyama.tensho-azuchi",
@@ -10031,7 +10246,8 @@
           "entity_id": "east-asia.japan.azuchi-momoyama.nobunaga",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenshō Japanese era name"
     },
     {
       "id": "east-asia.japan.azuchi-momoyama.bunroku",
@@ -10063,7 +10279,8 @@
           "entity_id": "east-asia.japan.azuchi-momoyama.hideyoshi",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunroku Japanese era name"
     },
     {
       "id": "east-asia.japan.azuchi-momoyama.keicho",
@@ -10091,7 +10308,8 @@
           "entity_id": "east-asia.japan.azuchi-momoyama.bunroku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Keichō Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.genna",
@@ -10123,7 +10341,8 @@
           "entity_id": "east-asia.japan.edo.shogun-hidetada",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Genna Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.kan-ei",
@@ -10150,7 +10369,8 @@
           "entity_id": "east-asia.japan.edo.shoho",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Kan'ei Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.shoho",
@@ -10182,7 +10402,8 @@
           "entity_id": "east-asia.japan.edo.kan-ei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōhō Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.keian",
@@ -10214,7 +10435,8 @@
           "entity_id": "east-asia.japan.edo.shoho",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Keian Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.joo-edo",
@@ -10242,7 +10464,8 @@
           "entity_id": "east-asia.japan.edo.meireki",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Jōō Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.meireki",
@@ -10274,7 +10497,8 @@
           "entity_id": "east-asia.japan.edo.joo-edo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Meireki Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.manji",
@@ -10306,7 +10530,8 @@
           "entity_id": "east-asia.japan.edo.meireki",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Manji Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.kanbun",
@@ -10338,7 +10563,8 @@
           "entity_id": "east-asia.japan.edo.manji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kanbun Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.enpo",
@@ -10370,7 +10596,8 @@
           "entity_id": "east-asia.japan.edo.kanbun",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Enpō Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.tenna",
@@ -10397,7 +10624,8 @@
           "entity_id": "east-asia.japan.edo.jokyo",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Tenna Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.jokyo",
@@ -10429,7 +10657,8 @@
           "entity_id": "east-asia.japan.edo.tenna",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Jōkyō Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.genroku",
@@ -10461,7 +10690,8 @@
           "entity_id": "east-asia.japan.edo.jokyo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Genroku Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.hoei",
@@ -10493,7 +10723,8 @@
           "entity_id": "east-asia.japan.edo.genroku",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hōei Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.shotoku-edo",
@@ -10525,7 +10756,8 @@
           "entity_id": "east-asia.japan.edo.shogun-ienobu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shōtoku Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.kyoho",
@@ -10552,7 +10784,8 @@
           "entity_id": "east-asia.japan.edo.shogun-ietsugu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kyōhō Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.genbun",
@@ -10584,7 +10817,8 @@
           "entity_id": "east-asia.japan.edo.shogun-yoshimune",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Genbun Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.kanpo",
@@ -10616,7 +10850,8 @@
           "entity_id": "east-asia.japan.edo.genbun",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kanpō Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.enkyo-edo",
@@ -10649,7 +10884,8 @@
           "entity_id": "east-asia.japan.edo.kanpo",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Enkyō Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.kan-en",
@@ -10681,7 +10917,8 @@
           "entity_id": "east-asia.japan.edo.shogun-ieshige",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kan'en Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.horeki",
@@ -10713,7 +10950,8 @@
           "entity_id": "east-asia.japan.edo.kan-en",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hōreki Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.meiwa",
@@ -10740,7 +10978,8 @@
           "entity_id": "east-asia.japan.edo.an-ei",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Meiwa Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.an-ei",
@@ -10772,7 +11011,8 @@
           "entity_id": "east-asia.japan.edo.meiwa",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "An'ei Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.tenmei",
@@ -10804,7 +11044,8 @@
           "entity_id": "east-asia.japan.edo.an-ei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenmei Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.kansei",
@@ -10831,7 +11072,8 @@
           "entity_id": "east-asia.japan.edo.kyowa",
           "derived": "chronology"
         }
-      ]
+      ],
+      "search_phrase": "Kansei Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.kyowa",
@@ -10863,7 +11105,8 @@
           "entity_id": "east-asia.japan.edo.kansei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kyōwa Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.bunka",
@@ -10895,7 +11138,8 @@
           "entity_id": "east-asia.japan.edo.kyowa",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunka Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.bunsei",
@@ -10927,7 +11171,8 @@
           "entity_id": "east-asia.japan.edo.bunka",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunsei Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.tenpo-edo",
@@ -10959,7 +11204,8 @@
           "entity_id": "east-asia.japan.edo.bunsei",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tenpō Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.koka",
@@ -10991,7 +11237,8 @@
           "entity_id": "east-asia.japan.edo.shogun-ieyoshi",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kōka Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.kaei",
@@ -11023,7 +11270,8 @@
           "entity_id": "east-asia.japan.edo.koka",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Kaei Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.ansei",
@@ -11055,7 +11303,8 @@
           "entity_id": "east-asia.japan.edo.shogun-iesada",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ansei Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.man-en",
@@ -11087,7 +11336,8 @@
           "entity_id": "east-asia.japan.edo.shogun-iemochi",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Man'en Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.bunkyu",
@@ -11119,7 +11369,8 @@
           "entity_id": "east-asia.japan.edo.man-en",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Bunkyū Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.genji",
@@ -11151,7 +11402,8 @@
           "entity_id": "east-asia.japan.edo.bunkyu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Genji Japanese era name"
     },
     {
       "id": "east-asia.japan.edo.keio",
@@ -11183,7 +11435,8 @@
           "entity_id": "east-asia.japan.edo.genji",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Keiō Japanese era name"
     },
     {
       "id": "east-asia.china.legendary",
@@ -11227,7 +11480,8 @@
           "derived": "chronology"
         }
       ],
-      "historicity": "legendary"
+      "historicity": "legendary",
+      "search_phrase": "Three Sovereigns Five Emperors Chinese mythology"
     },
     {
       "id": "east-asia.china.shang",
@@ -13028,7 +13282,8 @@
       "source_ids": [
         "isac-dating-fall-of-babylon"
       ],
-      "date_standing": "majority"
+      "date_standing": "majority",
+      "search_phrase": "Hammurabi Mesopotamian ruler"
     },
     {
       "id": "west-asia.mesopotamia.kassite",
@@ -13193,7 +13448,8 @@
           "derived": "sequence"
         }
       ],
-      "historicity": "contested"
+      "historicity": "contested",
+      "search_phrase": "King David united monarchy historicity"
     },
     {
       "id": "west-asia.mesopotamia.israel-judah.solomon",
@@ -13214,7 +13470,8 @@
           "derived": "reciprocal"
         }
       ],
-      "historicity": "contested"
+      "historicity": "contested",
+      "search_phrase": "King Solomon united monarchy historicity"
     },
     {
       "id": "west-asia.mesopotamia.phoenicia",
@@ -19608,7 +19865,8 @@
           "entity_id": "americas.mesoamerica.aztec.moctezuma-i",
           "derived": "sequence"
         }
-      ]
+      ],
+      "search_phrase": "Itzcoatl ruler"
     },
     {
       "id": "americas.mesoamerica.aztec.moctezuma-i",
@@ -19664,7 +19922,8 @@
           "entity_id": "americas.mesoamerica.aztec.moctezuma-i",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ahuitzotl ruler"
     },
     {
       "id": "americas.mesoamerica.aztec.moctezuma-ii",
@@ -19971,7 +20230,8 @@
       "end_dating_method": "unknown",
       "end_year_min": 1371,
       "end_year_max": 1571,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "search_phrase": "Pachacuti ruler"
     },
     {
       "id": "americas.andes.inca.topa",
@@ -20046,7 +20306,8 @@
           "entity_id": "americas.andes.inca.huayna-capac",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Atahualpa ruler"
     },
     {
       "id": "americas.andes.vilcabamba",
@@ -27287,7 +27548,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn1.narmer",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hor-Aha pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn1.djer",
@@ -27315,7 +27577,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn1.hor-aha",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Djer pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn1.djet",
@@ -27343,7 +27606,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn1.djer",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Djet pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn1.merneith",
@@ -27400,7 +27664,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn1.merneith",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Den pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn1.anedjib",
@@ -27428,7 +27693,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn1.den",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Anedjib pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn1.semerkhet",
@@ -27456,7 +27722,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn1.anedjib",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Semerkhet pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn1.qa-a",
@@ -27479,7 +27746,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn1.semerkhet",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Qa'a pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn2.hotepsekhemwy",
@@ -27530,7 +27798,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn2.hotepsekhemwy",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Raneb pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn2.nynetjer",
@@ -27553,7 +27822,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn2.raneb",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Nynetjer pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn2.peribsen",
@@ -27576,7 +27846,8 @@
           "entity_id": "africa.nile.egypt.early-dynastic.dyn2.khasekhemwy",
           "derived": "sequence"
         }
-      ]
+      ],
+      "search_phrase": "Peribsen pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn2.khasekhemwy",
@@ -27623,7 +27894,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn3.djoser",
           "derived": "sequence"
         }
-      ]
+      ],
+      "search_phrase": "Sanakht pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn3.sekhemkhet",
@@ -27679,7 +27951,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn3.sekhemkhet",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Khaba pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn3.huni",
@@ -27702,7 +27975,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn3.khaba",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Huni pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn4.djedefre",
@@ -27730,7 +28004,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn4.khufu",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Djedefre pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn4.shepseskaf",
@@ -27776,7 +28051,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn5.sahure",
           "derived": "sequence"
         }
-      ]
+      ],
+      "search_phrase": "Userkaf pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn5.sahure",
@@ -27804,7 +28080,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn5.userkaf",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Sahure pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn5.neferirkare",
@@ -27888,7 +28165,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn5.shepseskare",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Neferefre pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn5.nyuserre",
@@ -27944,7 +28222,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn5.nyuserre",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Menkauhor pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn5.djedkare",
@@ -27996,7 +28275,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn5.djedkare",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Unas pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn6.teti",
@@ -28019,7 +28299,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn6.userkare",
           "derived": "sequence"
         }
-      ]
+      ],
+      "search_phrase": "Teti pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn6.userkare",
@@ -28047,7 +28328,8 @@
           "entity_id": "africa.nile.egypt.old-kingdom.dyn6.teti",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Userkare pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn6.pepi-i",
@@ -28813,7 +29095,8 @@
           "entity_id": "africa.nile.egypt.new-kingdom.dyn18.tutankhamun",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Ay pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn18.horemheb",
@@ -28837,7 +29120,8 @@
           "entity_id": "africa.nile.egypt.new-kingdom.dyn18.ay",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Horemheb pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn19.ramesses-i",
@@ -28889,7 +29173,8 @@
           "entity_id": "africa.nile.egypt.new-kingdom.dyn19.ramesses-ii",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Merneptah pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn19.amenmesse",
@@ -28917,7 +29202,8 @@
           "entity_id": "africa.nile.egypt.new-kingdom.dyn19.merneptah",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Amenmesse pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn19.seti-ii",
@@ -28973,7 +29259,8 @@
           "entity_id": "africa.nile.egypt.new-kingdom.dyn19.seti-ii",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Siptah pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn19.tausret",
@@ -28997,7 +29284,8 @@
           "entity_id": "africa.nile.egypt.new-kingdom.dyn19.siptah",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tausret pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn20.setnakht",
@@ -29020,7 +29308,8 @@
           "entity_id": "africa.nile.egypt.new-kingdom.dyn20.ramesses-iii",
           "derived": "sequence"
         }
-      ]
+      ],
+      "search_phrase": "Setnakht pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn20.ramesses-iv",
@@ -29286,7 +29575,8 @@
           "entity_id": "africa.nile.egypt.tip.dyn21.psusennes-i",
           "derived": "sequence"
         }
-      ]
+      ],
+      "search_phrase": "Smendes pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.tip.dyn21.psusennes-i",
@@ -29343,7 +29633,8 @@
           "entity_id": "africa.nile.egypt.tip.dyn21.psusennes-i",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Amenemope pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.tip.dyn21.osorkon-elder",
@@ -29399,7 +29690,8 @@
           "entity_id": "africa.nile.egypt.tip.dyn21.osorkon-elder",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Siamun pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.tip.dyn21.psusennes-ii",
@@ -29576,7 +29868,8 @@
           "entity_id": "africa.nile.egypt.tip.dyn25.piye",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shabaka pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.tip.dyn25-kushite.shebitku",
@@ -29604,7 +29897,8 @@
           "entity_id": "africa.nile.egypt.tip.dyn25-kushite.shabaka",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Shebitku pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.tip.dyn25-kushite.tantamani",
@@ -29628,7 +29922,8 @@
           "entity_id": "africa.nile.egypt.tip.dyn25.taharqa",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Tantamani pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.late-period.dyn26-saite.psamtik-i",
@@ -29737,7 +30032,8 @@
           "entity_id": "africa.nile.egypt.late-period.dyn26-saite.psamtik-ii",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Apries pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.late-period.dyn26-saite.amasis-ii",
@@ -29952,7 +30248,8 @@
       "end_dating_method": "unknown",
       "end_year_min": -423,
       "end_year_max": -373,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "search_phrase": "Amyrtaeus pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.late-period.dyn29",
@@ -30054,7 +30351,8 @@
           "entity_id": "africa.nile.egypt.late-period.dyn29.nepherites-i",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Hakor pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.late-period.dyn30",
@@ -30133,7 +30431,8 @@
           "entity_id": "africa.nile.egypt.late-period.dyn30.nectanebo-i",
           "derived": "reciprocal"
         }
-      ]
+      ],
+      "search_phrase": "Teos pharaoh Egypt"
     },
     {
       "id": "africa.nile.egypt.late-period.dyn30.nectanebo-ii",
@@ -40646,7 +40945,8 @@
       "start_year_max": -27050,
       "end_year_min": -28050,
       "end_year_max": -26050,
-      "date_standing": "consensus"
+      "date_standing": "consensus",
+      "search_phrase": "Apollo 11 Cave Namibia rock art"
     },
     {
       "id": "africa.prehistory.jebel-irhoud",
@@ -46063,7 +46363,8 @@
       "start_year_max": -3150,
       "end_year_min": -3135,
       "end_year_max": -3035,
-      "date_standing": "majority"
+      "date_standing": "majority",
+      "search_phrase": "Dynasty 0 Egypt predynastic rulers"
     },
     {
       "id": "africa.nile.egypt.predynastic.narmer-palette",
@@ -49933,7 +50234,8 @@
       ],
       "native_name": "단군",
       "date_standing": "traditional",
-      "historicity": "mythological"
+      "historicity": "mythological",
+      "search_phrase": "Dangun Wanggeom Gojoseon foundation myth"
     },
     {
       "id": "east-asia.korea.three-kingdoms.gwanggaeto-the-great",
@@ -50491,7 +50793,8 @@
       "start_year_max": -500,
       "end_dating_method": "unknown",
       "end_year_min": 1897,
-      "end_year_max": 2097
+      "end_year_max": 2097,
+      "search_phrase": "multi-regional empires world history"
     },
     {
       "id": "central-asia.prehistory.namazga",
@@ -51159,7 +51462,8 @@
       "start_year_max": -1100,
       "end_dating_method": "first-attestation",
       "end_year_min": -350,
-      "end_year_max": -50
+      "end_year_max": -50,
+      "search_phrase": "Old Chinese reconstruction Shijing rhymes"
     },
     {
       "id": "global.languages.proto-austronesian",
@@ -51317,7 +51621,8 @@
       "start_year_max": 350,
       "end_dating_method": "first-attestation",
       "end_year_min": 800,
-      "end_year_max": 1000
+      "end_year_max": 1000,
+      "search_phrase": "Classical Maya script decipherment"
     },
     {
       "id": "global.languages.quechua",
@@ -51559,7 +51864,8 @@
       "start_year_max": 637,
       "end_dating_method": "first-attestation",
       "end_year_min": 675,
-      "end_year_max": 685
+      "end_year_max": 685,
+      "search_phrase": "Sunni Shia split succession to Muhammad"
     },
     {
       "id": "global.traditions.sufism",
@@ -51589,7 +51895,8 @@
       "summary": "Formal separation of the Latin and Greek churches, after centuries of drift over authority and doctrine.",
       "start_dating_method": "first-attestation",
       "start_year_min": 1049,
-      "start_year_max": 1059
+      "start_year_max": 1059,
+      "search_phrase": "East-West Schism 1054"
     },
     {
       "id": "global.traditions.sikhism",
@@ -52250,7 +52557,8 @@
       "tier": "foundational",
       "summary": "Brahmagupta gave rules for arithmetic with zero and with negatives, not merely a placeholder.",
       "start_dating_method": "typological",
-      "start_year_min": 608
+      "start_year_min": 608,
+      "search_phrase": "Brahmagupta zero as a number Brahmasphutasiddhanta"
     },
     {
       "id": "global.milestones.papermaking",
@@ -52286,7 +52594,8 @@
       "tier": "foundational",
       "summary": "Bi Sheng's ceramic type; reusable characters four centuries before Gutenberg.",
       "start_dating_method": "typological",
-      "start_year_min": 1020
+      "start_year_min": 1020,
+      "search_phrase": "Bi Sheng movable type Song dynasty"
     },
     {
       "id": "global.milestones.gunpowder",
@@ -52442,7 +52751,8 @@
       "end_year": null,
       "tier": "foundational",
       "summary": "The first ARPANET link; messages broken into pieces that route themselves.",
-      "start_dating_method": "calendar"
+      "start_dating_method": "calendar",
+      "search_phrase": "ARPANET packet switching 1969"
     },
     {
       "id": "global.milestones.genome-sequencing",

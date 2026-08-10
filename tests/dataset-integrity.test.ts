@@ -1,3 +1,4 @@
+import { searchQuery } from "../src/research/handoff";
 import { displayRange } from "../src/chrono/displayRange";
 import entitiesFile from "../src/data/entities.json";
 import { describe, expect, it } from "vitest";
@@ -1377,5 +1378,50 @@ describe("the new kinds", () => {
     // absolute calendar year, which first attestation does.
     const buddhism = entities.find((e) => e.id === "global.traditions.buddhism")!;
     expect(displayRange(buddhism).frame).toBe("calendar");
+  });
+});
+
+describe("search phrases", () => {
+  it("gives a bare era name the domain it needs", () => {
+    // `Wadō` appears once in the dataset, so the collision-based generator never flagged it and
+    // sent the bare word out as the query. In the world it is a coin, a martial arts style and
+    // several companies. `Shōwa` appears twice and therefore did get context -- the rule was
+    // measuring ambiguity in this dataset rather than in the world.
+    const wado = entities.find((e) => e.name === "Wadō")!;
+    expect(wado.search_phrase).toBe("Wadō Japanese era name");
+  });
+
+  it("separates two things called Apollo 11", () => {
+    // A Moon landing and a cave in Namibia holding some of the oldest figurative art known.
+    const cave = entities.find((e) => e.id === "africa.prehistory.apollo-11-cave")!;
+    expect(cave.search_phrase).toMatch(/Namibia/);
+  });
+
+  it("adds no phrase where the name is already the best query", () => {
+    // A search_phrase that restates the name is another field to keep in sync for no gain.
+    for (const id of [
+      "global.networks.silk-road",
+      "global.languages.proto-semitic",
+      "europe.mediterranean.rome.empire.hadrian",
+    ]) {
+      expect(entities.find((e) => e.id === id)?.search_phrase, id).toBeUndefined();
+    }
+  });
+
+  it("never restates the name verbatim as the phrase", () => {
+    for (const e of entities) {
+      if (e.search_phrase === undefined) continue;
+      // Longer was the wrong proxy: the legendary age of China is named "Legendary Age (Three
+      // Sovereigns and Five Emperors)" and its phrase drops the framing to search the figures
+      // themselves, which is shorter and better. What matters is that it is not a restatement.
+      expect(e.search_phrase, `${e.id}`).not.toBe(e.name);
+      expect(e.search_phrase.trim().length, `${e.id}`).toBeGreaterThan(3);
+    }
+  });
+
+  it("prefers an authored phrase over the generated one", () => {
+    const idx = buildIndex(entities);
+    const dangun = entities.find((e) => e.id === "east-asia.korea.gojoseon.dangun")!;
+    expect(searchQuery(dangun, idx)).toBe(dangun.search_phrase);
   });
 });

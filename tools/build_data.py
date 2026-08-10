@@ -1715,6 +1715,7 @@ from normalize_ids import extend as _normalize_ids, rewrite_refs as _rewrite_ref
 from name_repair import extend as _name_repair
 from derive_links import extend as _derive_links
 from historicity import extend as _historicity
+from search_phrases import extend as _search_phrases
 from new_kinds import extend as _new_kinds
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
@@ -2006,6 +2007,7 @@ _name_repair(E, entities)
 _migrate_dating(E, entities)
 _derive_links(E, entities)
 _historicity(E, entities)
+_search_phrases(E, entities)
 
 # Aliases are derived from name_forms LAST, because several later modules add name forms and
 # this has now been got wrong in both directions: running it before name_repair left the

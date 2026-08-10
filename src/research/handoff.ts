@@ -81,6 +81,14 @@ export function searchQuery(
   index: TreeIndex,
   options: { ambiguous?: ReadonlySet<string>; force?: boolean } = {},
 ): string {
+  // An authored phrase wins outright. The generated one appends an ancestor's name when the
+  // entity's name collides with another INSIDE this dataset, and that is the wrong universe to
+  // measure ambiguity in: `Wadō` appears once here, so nothing flagged it, and the query went
+  // out as the bare word -- which in the world is a coin, a martial arts style and several
+  // companies. `Shōwa` appears twice and therefore did get context. Both are equally useless
+  // alone; only one was being fixed.
+  if (entity.search_phrase !== undefined) return entity.search_phrase;
+
   const needsContext = options.force === true || (options.ambiguous?.has(entity.name) ?? false);
   if (!needsContext) return entity.name;
 

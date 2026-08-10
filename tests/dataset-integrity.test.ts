@@ -23,7 +23,10 @@ describe("dataset envelope", () => {
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
     expect(datasetVersion).toBe("0.34.1.0");
-    expect(schemaVersion).toBe("3.5.0");
+    // 3.6.0: retired the three precision enums, added extant, historicity, date_standing,
+    // search_phrase, qualified_name and redirects, and added the polity, culture, language,
+    // tradition, people, network, person and city kinds.
+    expect(schemaVersion).toBe("3.6.0");
   });
 
   it("has the expected collection sizes", () => {

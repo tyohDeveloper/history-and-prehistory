@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.4.0"
-DATASET_VERSION = "0.27.0.0"
+DATASET_VERSION = "0.28.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1285,7 +1285,7 @@ E(f"{sea}.mainland.khmer.suryavarman2", "reign", "Suryavarman II", f"{sea}.mainl
   summary="Built Angkor Wat.")
 E(f"{sea}.mainland.khmer.jayavarman7", "reign", "Jayavarman VII", f"{sea}.mainland.khmer", start=1181, end=1218, tier="intermediate",
   summary="Built Angkor Thom and the Bayon.")
-E(f"{sea}.mainland.dai-viet", "era", "Đại Việt", f"{sea}.mainland", start=939, end=1804, tier="intermediate")
+E(f"{sea}.mainland.vietnam", "era", "Đại Việt", f"{sea}.mainland", start=939, end=1804, tier="intermediate")
 E(f"{sea}.mainland.pagan", "era", "Pagan Kingdom", f"{sea}.mainland", start=849, end=1297, tier="intermediate")
 E(f"{sea}.mainland.ayutthaya", "era", "Ayutthaya Kingdom", f"{sea}.mainland", start=1351, end=1767, tier="intermediate")
 E(f"{sea}.mainland.rattanakosin", "era", "Rattanakosin (Chakri Dynasty)", f"{sea}.mainland", start=1782, end=None, tier="intermediate")
@@ -1691,6 +1691,8 @@ from extensions_gaps import extend as _extend_gaps
 from regions_multiregional import extend as _regions_multiregional
 from romanisation_chinese import extend as _romanisation_chinese
 from extensions_song_era_states import extend as _song_era_states, fix_tiers as _fix_china_tiers
+from extensions_sea_mainland import extend as _sea_mainland
+from extensions_sea_maritime import extend as _sea_maritime
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1709,6 +1711,8 @@ _naming_formal_historical_3(E, entities)
 _naming_formal_historical_4(E, entities)
 _cross_regional_definition(E, entities)
 _extend_gaps(E, entities)
+_sea_mainland(E, entities)
+_sea_maritime(E, entities)
 _song_era_states(E, entities)
 _fix_china_tiers(E, entities)
 _romanisation_chinese(E, entities)
@@ -3164,6 +3168,8 @@ from extensions_egypt import EGYPT_SOURCES  # noqa: E402
 from citations_mediterranean import MEDITERRANEAN_SOURCES  # noqa: E402
 from romanisation_chinese import ROMANISATION_SOURCES  # noqa: E402
 from extensions_song_era_states import SONG_ERA_SOURCES  # noqa: E402
+from extensions_sea_mainland import SEA_MAINLAND_SOURCES  # noqa: E402
+from extensions_sea_maritime import SEA_MARITIME_SOURCES  # noqa: E402
 from extensions_mesolithic import MESOLITHIC_SOURCES  # noqa: E402
 from extensions_empires import EMPIRE_SOURCES  # noqa: E402
 from extensions_naming import NAMING_SOURCES  # noqa: E402
@@ -3181,6 +3187,8 @@ sources.extend(EGYPT_SOURCES)
 sources.extend(MEDITERRANEAN_SOURCES)
 sources.extend(ROMANISATION_SOURCES)
 sources.extend(SONG_ERA_SOURCES)
+sources.extend(SEA_MAINLAND_SOURCES)
+sources.extend(SEA_MARITIME_SOURCES)
 sources.extend(MESOLITHIC_SOURCES)
 sources.extend(EMPIRE_SOURCES)
 sources.extend(NAMING_SOURCES)

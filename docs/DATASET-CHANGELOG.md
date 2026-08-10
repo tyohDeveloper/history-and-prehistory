@@ -1,5 +1,97 @@
 # Changelog
 
+## 0.28.0.0 — Southeast Asia (2026-08-09)
+
+Southeast Asia was the thinnest region in the dataset by a wide margin: **35
+entities against East Asia's 491**. The imbalance was not evenly spread. Its
+*prehistory* was well covered and fully sourced. Its *history* was eighteen
+entities, of which **one** carried a source.
+
+Now 65 entities, 25 foundational, and 39 of the 49 historical ones sourced.
+
+### Three specific failures
+
+**Burma stopped in 1297.** Pagan ended and nothing followed — 588 years blank
+through the Toungoo and Konbaung dynasties, the Anglo-Burmese wars and the
+colonial period. Now: Dvaravati, post-Pagan fragmentation, Toungoo, Konbaung,
+British Burma.
+
+**Majapahit had no predecessor.** A reader met the largest empire in Javanese
+history arriving from nowhere in 1293, with the four centuries that produced
+Borobudur and Prambanan absent. Now: Medang, Kahuripan, Kediri, Singhasari before
+it, and Demak and the Mataram Sultanate after.
+
+That is the *same failure* the Song had before the Jin was added — a consequence
+with its cause deleted — found independently in a different region. Worth
+checking for deliberately rather than stumbling on.
+
+**Đại Việt was one node covering 939-1804**, in a dataset that gives China
+individual emperors. Eleven dynasties now sit under it.
+
+### The name was also wrong, which matters more
+
+Đại Việt was in use **1054-1400 and 1428-1804**. Before that the state was Đại Cồ
+Việt; under the Hồ it was Đại Ngu; during the Ming occupation it was the province
+of Jiaozhi. Applying one name across 865 years asserted a continuity of
+self-designation that never existed — the same error the Byzantine and Golden
+Horde passes addressed.
+
+The container is renamed Vietnam (dynastic), the three real names are recorded
+with their actual spans, and **the dataset's own former span is entered as a
+`rejected` form** so the correction is visible rather than silent.
+
+### Dates that look precise and are not
+
+Recorded as `alternatives` rather than smoothed into ranges, because a wide range
+implies the middle is likeliest when the claim is that sources disagree:
+
+* **Majapahit's 1527** is conventional, tied to Demak's conquest of Kediri; a
+  chronogram gives 1478 and recent work dates the collapse to 1513-1528.
+* **Sukhothai's 1238** and its "first Thai kingdom" framing both rest on the Ram
+  Khamhaeng inscription, whose authenticity has been disputed since the 1980s.
+  Entered as `traditional`.
+* **Aceh** has four competing founding dates; **Sulu** two; **Lan Xang's** split
+  is dated 1694 or 1707; the **Ngô** dynasty ends 965 or 968.
+* **Indonesia** was proclaimed in 1945 and recognised in 1949. Both kept — which
+  counts is a political question, not a factual one.
+
+### Two entities needing opposite kinds of care
+
+**Srivijaya was not identified until 1918**, when Cœdès assembled it from Chinese
+accounts and inscriptions. Its nature is still argued and its capital unsettled,
+so it carries a `contested-existence` caveat saying it is a modern reconstruction
+rather than a state that named itself in its own surviving documents.
+
+**The pre-Spanish Philippines runs the opposite risk.** Only **Tondo** is
+authored, on the Laguna Copperplate Inscription. Cebu, Butuan and Maynila are far
+thinner, and this literature contains the **Code of Kalantiaw**, a 1913
+fabrication treated as authentic for decades. The honest answer to "what
+pre-colonial states were there" is "one we can evidence here, and others we
+cannot" — not a tidy list.
+
+**Brunei** ends at 1888 rather than running to the present, because it was a
+British protectorate until 1984 and an unbroken span would assert sovereignty
+that lapsed for ninety-six years.
+
+### Exonyms recorded, not suppressed
+
+Funan is a Chinese exonym with no attested indigenous name. Siam is what
+outsiders called Ayutthaya. Burma is the colonial-era form. Champa's own
+attested self-designation was Campā, against Chinese Lin-yi and Vietnamese Chiêm
+Thành. Champa is also marked as a confederation of five polities rather than one
+continuous kingdom.
+
+### Not done
+
+The Trịnh-Nguyễn division is left unauthored. Modelling it as two co-existing
+lord-domains under nominal Lê rule is right, but it needs the care the caliphate
+overlap needs, and is filed as an open question.
+
+### Counts
+
+1,653 → 1,683 entities. 578 → 623 sources. Entities carrying a source 402 → 440.
+Unsourced foundational dates 298 → 279.
+
 ## 0.27.0.0 — Old spellings, and the states the Song shared China with (2026-08-09)
 
 ### Wade-Giles, because half the library uses it

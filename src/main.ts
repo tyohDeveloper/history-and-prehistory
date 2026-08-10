@@ -414,9 +414,19 @@ function renderReadout(): HTMLElement {
         const mark = citationMarker(f.source_ids, citationOrder(e));
         if (mark !== null) dd.append(" ", mark);
       });
-      const notes = forms.map((f) => f.note).filter((n): n is string => n !== undefined);
-      if (notes.length > 0) {
-        dd.append(el("div", { class: "name-form-note" }, notes.join(" ")));
+      // Notes were joined into one paragraph, so with two annotated forms in the
+      // same group a reader could not tell which note belonged to which name --
+      // Đại Việt's "two separate stretches" ran straight into Đại Ngu's "the Hồ
+      // dynasty's name". When only one form in the group carries a note the name
+      // is redundant and stays omitted.
+      const annotated = forms.filter((f) => f.note !== undefined);
+      for (const f of annotated) {
+        const note = el("div", { class: "name-form-note" });
+        if (annotated.length > 1) {
+          note.append(el("span", { class: "name-form-note-for", dir: "auto" }, `${f.name}: `));
+        }
+        note.append(f.note as string);
+        dd.append(note);
       }
       dl.append(el("dt", {}, NAME_FORM_LABEL[kind]), dd);
     }

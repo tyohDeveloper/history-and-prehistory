@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.27.0.0",
-  "generated_at": "2026-08-10T03:04:06Z",
+  "dataset_version": "0.28.0.0",
+  "generated_at": "2026-08-10T03:27:44Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -3002,6 +3002,321 @@
       "citation": "'Xia-Shang-Zhou Chronology Project', Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Xia%E2%80%93Shang%E2%80%93Zhou_Chronology_Project",
       "note": "The state-sponsored project assigning the Xia 2070-1600 BCE and identifying it with Erlitou, and the substantial Western criticism of its method."
+    },
+    {
+      "id": "britannica-history-of-myanmar",
+      "kind": "reference",
+      "citation": "'History of Myanmar', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/history-of-Myanmar",
+      "note": "The Pagan, post-Pagan, Toungoo and Konbaung sequence."
+    },
+    {
+      "id": "britannica-british-in-burma",
+      "kind": "reference",
+      "citation": "'The British in Burma, 1885-1948', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/history-of-Myanmar/The-British-in-Burma-1885-1948",
+      "note": "The annexation following the Third Anglo-Burmese War and the road to independence in 1948."
+    },
+    {
+      "id": "britannica-toungoo-dynasty",
+      "kind": "reference",
+      "citation": "'Toungoo dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Toungoo-dynasty",
+      "note": "Competing start dates are reported for the dynasty; Britannica and Wikipedia do not agree on which to lead with."
+    },
+    {
+      "id": "wikipedia-toungoo-dynasty",
+      "kind": "reference",
+      "citation": "'Toungoo dynasty', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Toungoo_dynasty",
+      "note": "Sets out the First and Second Toungoo distinction and the 1510 date."
+    },
+    {
+      "id": "britannica-dvaravati",
+      "kind": "reference",
+      "citation": "'Dvaravati', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Dvaravati",
+      "note": "The Mon culture of the Chao Phraya basin."
+    },
+    {
+      "id": "britannica-mon-kingdom",
+      "kind": "reference",
+      "citation": "'Mon kingdom', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Mon-kingdom",
+      "note": "Background on the Mon polities."
+    },
+    {
+      "id": "jseas-proto-dvaravati",
+      "kind": "scholarly",
+      "citation": "'The Case for Proto-Dvaravati', Journal of Southeast Asian Studies",
+      "url": "https://www.cambridge.org/core/journals/journal-of-southeast-asian-studies/article/abs/case-for-protodvaravati-a-review-of-the-art-historical-and-archaeological-evidence/6ABA16AADF5C3B4D62086719BEEF6A5C",
+      "note": "Reviews the art-historical and archaeological evidence, and bears on whether Dvaravati was one state or a network of them."
+    },
+    {
+      "id": "britannica-sukhothai-kingdom",
+      "kind": "reference",
+      "citation": "'Sukhothai kingdom', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Sukhothai-kingdom",
+      "note": "The traditional 1238 founding, which Michael Vickery and others have challenged along with the authenticity of the Ram Khamhaeng inscription."
+    },
+    {
+      "id": "britannica-history-of-laos",
+      "kind": "reference",
+      "citation": "'History of Laos', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/history-of-Laos",
+      "note": "Lan Xang and its division into Vientiane, Luang Phrabang and Champasak."
+    },
+    {
+      "id": "wikipedia-lan-xang",
+      "kind": "reference",
+      "citation": "'Lan Xang', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lan_Xang",
+      "note": "Gives 1707 for the split; other accounts date the break-up to 1694."
+    },
+    {
+      "id": "ebsco-kingdom-of-funan",
+      "kind": "reference",
+      "citation": "'Kingdom of Funan', EBSCO Research Starters",
+      "url": "https://www.ebsco.com/research-starters/anthropology/kingdom-funan",
+      "note": "Funan is a Chinese exonym and its status as a unified state is disputed, notably by Michael Vickery."
+    },
+    {
+      "id": "wikipedia-khmer-empire",
+      "kind": "reference",
+      "citation": "'Khmer Empire', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Khmer_Empire",
+      "note": "The 802 consecration of Jayavarman II and the 1431 Ayutthayan capture of Angkor."
+    },
+    {
+      "id": "britannica-champa",
+      "kind": "reference",
+      "citation": "'Champa', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Champa-ancient-kingdom-Indochina",
+      "note": "Britannica's own account is internally inconsistent about whether Champa ended in the 15th or the 17th century."
+    },
+    {
+      "id": "wikipedia-champa",
+      "kind": "reference",
+      "citation": "'Champa', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Champa",
+      "note": "Treats Champa as a confederation of polities -- Indrapura, Amaravati, Vijaya, Kauthara, Panduranga -- rather than one continuous kingdom, with annexation completed in 1832."
+    },
+    {
+      "id": "wikipedia-dai-viet",
+      "kind": "reference",
+      "citation": "'Đại Việt', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/%C4%90%E1%BA%A1i_Vi%E1%BB%87t",
+      "note": "The name was in use 1054-1400 and 1428-1804, not continuously from 939."
+    },
+    {
+      "id": "wikipedia-ngo-dynasty",
+      "kind": "reference",
+      "citation": "'Ngô dynasty', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ng%C3%B4_dynasty",
+      "note": "Sources give both 965 and 968 for the end, depending on whether the interregnum is counted."
+    },
+    {
+      "id": "wikipedia-dinh-dynasty",
+      "kind": "reference",
+      "citation": "'Đinh dynasty', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/%C4%90inh_dynasty",
+      "note": "Đại Cồ Việt, the state's name from 968."
+    },
+    {
+      "id": "britannica-ly-thai-to",
+      "kind": "reference",
+      "citation": "'Ly Thai To', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Ly-Thai-To",
+      "note": "Founder of the Lý dynasty in 1009."
+    },
+    {
+      "id": "wikipedia-ly-thanh-tong",
+      "kind": "reference",
+      "citation": "'Lý Thánh Tông', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/L%C3%BD_Th%C3%A1nh_T%C3%B4ng",
+      "note": "Credited with the 1054 renaming to Đại Việt, though the traditional account of that renaming has been questioned."
+    },
+    {
+      "id": "britannica-tran-dynasty",
+      "kind": "reference",
+      "citation": "'Tran dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Tran-dynasty",
+      "note": "The dynasty that repelled three Mongol invasions."
+    },
+    {
+      "id": "wikipedia-ho-dynasty",
+      "kind": "reference",
+      "citation": "'Hồ dynasty', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/H%E1%BB%93_dynasty",
+      "note": "Renamed the state Đại Ngu, and fell to the Ming in 1407."
+    },
+    {
+      "id": "wikipedia-fourth-chinese-domination",
+      "kind": "reference",
+      "citation": "'Fourth Chinese domination of Vietnam', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fourth_Chinese_domination_of_Vietnam",
+      "note": "The Ming administered the territory as the province of Jiaozhi, 1407-1427."
+    },
+    {
+      "id": "wikipedia-le-dynasty",
+      "kind": "reference",
+      "citation": "'Lê dynasty', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/L%C3%AA_dynasty",
+      "note": "The Later Lê, under whom real power passed to the Trịnh and Nguyễn lords."
+    },
+    {
+      "id": "wikipedia-mac-dynasty",
+      "kind": "reference",
+      "citation": "'Mạc dynasty', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/M%E1%BA%A1c_dynasty",
+      "note": "The usurpation of 1527-1592, overlapping the Lê, with a rump state surviving to 1677."
+    },
+    {
+      "id": "britannica-tay-son-brothers",
+      "kind": "reference",
+      "citation": "'Tay Son brothers', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Tay-Son-brothers",
+      "note": "The rising that displaced both the Trịnh and the Nguyễn."
+    },
+    {
+      "id": "wikipedia-tay-son-dynasty",
+      "kind": "reference",
+      "citation": "'Tây Sơn dynasty', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/T%C3%A2y_S%C6%A1n_dynasty",
+      "note": "1778-1802."
+    },
+    {
+      "id": "wikipedia-french-indochina",
+      "kind": "reference",
+      "citation": "'French Indochina', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/French_Indochina",
+      "note": "The union formed in 1887 and dissolved in 1954."
+    },
+    {
+      "id": "britannica-indonesia-central-java",
+      "kind": "reference",
+      "citation": "'Indonesia: Central Java from c. 700 to c. 1000', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Indonesia/Central-Java-from-c-700-to-c-1000",
+      "note": "The Central Javanese period, Borobudur and Prambanan, and the Sailendra and Sanjaya question."
+    },
+    {
+      "id": "wikipedia-medang-kingdom",
+      "kind": "reference",
+      "citation": "'Medang Kingdom', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Medang_Kingdom",
+      "note": "Whether Sailendra and Sanjaya were two dynasties, one, or a power-sharing arrangement is unresolved."
+    },
+    {
+      "id": "britannica-kadiri",
+      "kind": "reference",
+      "citation": "'Kadiri', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Kadiri",
+      "note": "The Kediri kingdom, 1042-1222."
+    },
+    {
+      "id": "wikipedia-singhasari",
+      "kind": "reference",
+      "citation": "'Singhasari', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Singhasari",
+      "note": "1222-1292, ending in the succession crisis that produced Majapahit."
+    },
+    {
+      "id": "britannica-majapahit-empire",
+      "kind": "reference",
+      "citation": "'Majapahit empire', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Majapahit-empire",
+      "note": "Founded 1293 after the Yuan expedition was repelled."
+    },
+    {
+      "id": "wikipedia-majapahit",
+      "kind": "reference",
+      "citation": "'Majapahit', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Majapahit",
+      "note": "The 1527 end date is conventional; a chronogram gives 1478 and recent work dates the collapse to 1513-1528."
+    },
+    {
+      "id": "wikipedia-srivijaya",
+      "kind": "reference",
+      "citation": "'Srivijaya', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Srivijaya",
+      "note": "Identified as a polity by George Cœdès in 1918 from Chinese and inscriptional sources. Its nature and capital remain disputed."
+    },
+    {
+      "id": "britannica-sultanate-of-malacca",
+      "kind": "reference",
+      "citation": "'Sultanate of Malacca', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/sultanate-of-Malacca",
+      "note": "Founded about 1400 and taken by the Portuguese in 1511."
+    },
+    {
+      "id": "wikipedia-aceh-sultanate",
+      "kind": "reference",
+      "citation": "'Aceh Sultanate', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Aceh_Sultanate",
+      "note": "Founding variously given as 1496, 1480, 1507 and 1514."
+    },
+    {
+      "id": "wikipedia-bruneian-empire",
+      "kind": "reference",
+      "citation": "'Bruneian Empire', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bruneian_Empire",
+      "note": "A British protectorate from 1888 until full independence in 1984."
+    },
+    {
+      "id": "wikipedia-sultanate-of-sulu",
+      "kind": "reference",
+      "citation": "'Sultanate of Sulu', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sultanate_of_Sulu",
+      "note": "Founding given as 1405 or 1457."
+    },
+    {
+      "id": "wikipedia-tondo-polity",
+      "kind": "reference",
+      "citation": "'Tondo (historical polity)', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tondo_(historical_polity)",
+      "note": "The best-evidenced pre-colonial Philippine polity."
+    },
+    {
+      "id": "wikipedia-laguna-copperplate",
+      "kind": "primary",
+      "citation": "'Laguna Copperplate Inscription', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Laguna_Copperplate_Inscription",
+      "note": "Dated 900 CE, the earliest known written document from the Philippines, and the principal evidence for Tondo."
+    },
+    {
+      "id": "wikipedia-code-of-kalantiaw",
+      "kind": "reference",
+      "citation": "'Code of Kalantiaw', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Code_of_Kalantiaw",
+      "note": "A 1913 fabrication that circulated as authentic pre-colonial law for decades. The reason claims about Philippine pre-colonial states need checking individually."
+    },
+    {
+      "id": "wikipedia-demak-sultanate",
+      "kind": "reference",
+      "citation": "'Demak Sultanate', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Demak_Sultanate",
+      "note": "The first Islamic state on Java; its end is given as 1548 or 1554."
+    },
+    {
+      "id": "wikipedia-mataram-sultanate",
+      "kind": "reference",
+      "citation": "'Mataram Sultanate', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mataram_Sultanate",
+      "note": "1587-1755, ending with the Treaty of Giyanti. Distinct from the much earlier Medang/Mataram kingdom."
+    },
+    {
+      "id": "wikipedia-indonesian-independence",
+      "kind": "reference",
+      "citation": "'Proclamation of Indonesian Independence', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Proclamation_of_Indonesian_Independence",
+      "note": "Proclaimed 17 August 1945; Dutch recognition followed the 1949 Hague agreement."
+    },
+    {
+      "id": "britannica-philippines-spanish-period",
+      "kind": "reference",
+      "citation": "'Philippines: The Spanish period', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Philippines/The-Spanish-period",
+      "note": "Spanish rule from 1565 and its end in 1898."
     },
     {
       "id": "elliott-warren-2023-colonialism-mesolithic",

@@ -14,6 +14,22 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.27.0.0-app] — 2026-08-09
+
+### Fixed
+
+- Notes on grouped name forms were joined into one paragraph, so with two
+  annotated forms in a group a reader could not tell which note belonged to
+  which name. Each note now names its form; single-note groups stay unlabelled.
+
+### Changed
+
+- `southeast-asia.mainland.dai-viet` becomes `...vietnam`, since the entity is no
+  longer named Đại Việt. Same identifier drift fixed for `cross-regional.*` in
+  3.24.0.0.
+- Ships dataset 0.28.0.0 — Southeast Asia goes from 35 entities to 65. Size
+  baseline 260,987 bytes gzip.
+
 ## [3.26.0.0-app] — 2026-08-09
 
 ### Added

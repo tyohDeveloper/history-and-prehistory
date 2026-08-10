@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.27.0.0",
-  "generated_at": "2026-08-10T03:04:06Z",
+  "dataset_version": "0.28.0.0",
+  "generated_at": "2026-08-10T03:27:44Z",
   "entities": [
     {
       "id": "global",
@@ -9280,7 +9280,27 @@
       "start_year": 68,
       "end_year": 550,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "ebsco-kingdom-of-funan"
+      ],
+      "date_note": "Funan is what Chinese sources called it; no indigenous name is attested. Whether it was a unified kingdom at all is disputed, notably by Michael Vickery, who read the Chinese accounts as describing a looser set of polities.",
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "A Chinese exonym. What the polity called itself is unknown.",
+          "source_ids": [
+            "ebsco-kingdom-of-funan"
+          ]
+        },
+        {
+          "kind": "contested-existence",
+          "text": "Its existence as a single state is questioned; the evidence may describe several polities.",
+          "source_ids": [
+            "ebsco-kingdom-of-funan"
+          ]
+        }
+      ]
     },
     {
       "id": "southeast-asia.mainland.champa",
@@ -9290,7 +9310,59 @@
       "start_year": 192,
       "end_year": 1832,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "wikipedia-champa",
+        "britannica-champa"
+      ],
+      "native_name": "Campā",
+      "date_note": "Champa was a confederation of polities -- Indrapura, Amaravati, Vijaya, Kauthara, Panduranga -- rather than one continuous kingdom, and it ended in stages: Vijaya fell in 1471, Kauthara was annexed in 1653, and Panduranga in 1832, which is the conventional end date used here.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Usually written as one kingdom, but scholarship treats it as a confederation of polities sharing a culture.",
+          "source_ids": [
+            "wikipedia-champa"
+          ]
+        },
+        {
+          "kind": "naming-confusion",
+          "text": "Campā is attested as a self-designation. Lin-yi and Chiêm Thành are Chinese and Vietnamese names for it.",
+          "source_ids": [
+            "wikipedia-champa"
+          ]
+        }
+      ],
+      "name_forms": [
+        {
+          "name": "Campā",
+          "kind": "endonym",
+          "source_ids": [
+            "wikipedia-champa"
+          ]
+        },
+        {
+          "name": "Lin-yi",
+          "kind": "exonym",
+          "lang": "zh",
+          "source_ids": [
+            "wikipedia-champa"
+          ]
+        },
+        {
+          "name": "Chiêm Thành",
+          "kind": "exonym",
+          "lang": "vi",
+          "source_ids": [
+            "wikipedia-champa"
+          ]
+        }
+      ],
+      "aliases": [
+        "Campā",
+        "Lin-yi",
+        "Chiêm Thành"
+      ]
     },
     {
       "id": "southeast-asia.mainland.khmer",
@@ -9301,7 +9373,11 @@
       "end_year": 1431,
       "tier": "foundational",
       "summary": "Southeast Asia's greatest classical empire. Built Angkor Wat and Angkor Thom.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "wikipedia-khmer-empire"
+      ],
+      "date_note": "Dated from the consecration of Jayavarman II in 802 to the Ayutthayan capture of Angkor in 1431. Both ends are conventional markers: Khmer kingship neither began nor ended in a single year."
     },
     {
       "id": "southeast-asia.mainland.khmer.suryavarman2",
@@ -9326,14 +9402,69 @@
       "date_precision": "approx"
     },
     {
-      "id": "southeast-asia.mainland.dai-viet",
+      "id": "southeast-asia.mainland.vietnam",
       "kind": "era",
-      "name": "Đại Việt",
+      "name": "Vietnam (dynastic)",
       "parent_id": "southeast-asia.mainland",
       "start_year": 939,
-      "end_year": 1804,
-      "tier": "intermediate",
-      "date_precision": "approx"
+      "end_year": 1945,
+      "tier": "foundational",
+      "date_precision": "approx",
+      "native_name": "Việt Nam",
+      "summary": "Independent Vietnamese states from the end of Chinese rule to the abdication of the last emperor.",
+      "date_note": "A container, not a polity. It previously stood as a single entity named Đại Việt covering 939-1804, which was wrong twice over: it flattened eight dynasties into one node, and Đại Việt was not the state's name for most of that time. The name applied 1054-1400 and 1428-1804; in between the state was Đại Cồ Việt, then Đại Ngu, then a Ming province.",
+      "source_ids": [
+        "wikipedia-dai-viet"
+      ],
+      "name_forms": [
+        {
+          "name": "Đại Việt",
+          "kind": "historical",
+          "lang": "vi",
+          "from": 1054,
+          "to": 1804,
+          "note": "The name in two separate stretches, 1054-1400 and 1428-1804 -- not continuously.",
+          "source_ids": [
+            "wikipedia-dai-viet",
+            "wikipedia-ly-thanh-tong"
+          ]
+        },
+        {
+          "name": "Đại Cồ Việt",
+          "kind": "historical",
+          "lang": "vi",
+          "from": 968,
+          "to": 1054,
+          "source_ids": [
+            "wikipedia-dinh-dynasty"
+          ]
+        },
+        {
+          "name": "Đại Ngu",
+          "kind": "historical",
+          "lang": "vi",
+          "from": 1400,
+          "to": 1407,
+          "note": "The Hồ dynasty's name for the state.",
+          "source_ids": [
+            "wikipedia-ho-dynasty"
+          ]
+        },
+        {
+          "name": "Đại Việt, 939-1804",
+          "kind": "rejected",
+          "note": "This dataset's earlier single span. The name did not apply before 1054 and lapsed twice.",
+          "source_ids": [
+            "wikipedia-dai-viet"
+          ]
+        }
+      ],
+      "aliases": [
+        "Đại Việt",
+        "Đại Cồ Việt",
+        "Đại Ngu",
+        "Đại Việt, 939-1804"
+      ]
     },
     {
       "id": "southeast-asia.mainland.pagan",
@@ -9353,7 +9484,20 @@
       "start_year": 1351,
       "end_year": 1767,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Siam",
+          "kind": "exonym",
+          "note": "The name outsiders used. Not the kingdom's name for itself.",
+          "source_ids": [
+            "britannica-sukhothai-kingdom"
+          ]
+        }
+      ],
+      "aliases": [
+        "Siam"
+      ]
     },
     {
       "id": "southeast-asia.mainland.rattanakosin",
@@ -9374,7 +9518,20 @@
       "end_year": 1377,
       "tier": "intermediate",
       "summary": "Sumatran maritime empire that dominated the Malacca Strait.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "wikipedia-srivijaya"
+      ],
+      "date_note": "Srivijaya was not identified as a polity until 1918, when George Cœdès reconstructed it from Chinese accounts and inscriptions. Its nature is still argued -- thalassocracy, mandala, or a looser arrangement -- and even its capital is unsettled, with Palembang the usual candidate. Treat the span as the period the reconstruction covers, not as a reign-list.",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "A modern scholarly reconstruction from fragmentary evidence, not a state that named itself in surviving documents of its own.",
+          "source_ids": [
+            "wikipedia-srivijaya"
+          ]
+        }
+      ]
     },
     {
       "id": "southeast-asia.maritime.majapahit",
@@ -9385,7 +9542,22 @@
       "end_year": 1527,
       "tier": "foundational",
       "summary": "Javanese thalassocracy at Southeast Asia's peak of classical influence.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "britannica-majapahit-empire",
+        "wikipedia-majapahit"
+      ],
+      "date_note": "Founded 1293 after the Yuan expedition was repelled. The 1527 end is conventional, tied to Demak's conquest of Kediri; a chronogram gives 1478, and recent work dates the actual collapse to 1513-1528.",
+      "alternatives": [
+        {
+          "label": "1478, from the traditional chronogram",
+          "standing": "traditional",
+          "end_year": 1478,
+          "source_ids": [
+            "wikipedia-majapahit"
+          ]
+        }
+      ]
     },
     {
       "id": "southeast-asia.maritime.majapahit.hayam-wuruk",
@@ -9405,7 +9577,23 @@
       "start_year": 1400,
       "end_year": 1511,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "britannica-sultanate-of-malacca"
+      ],
+      "name_forms": [
+        {
+          "name": "Melaka",
+          "kind": "endonym",
+          "lang": "ms",
+          "source_ids": [
+            "britannica-sultanate-of-malacca"
+          ]
+        }
+      ],
+      "aliases": [
+        "Melaka"
+      ]
     },
     {
       "id": "southeast-asia.maritime.dutch-eic",
@@ -9482,7 +9670,10 @@
       "start_year": 1565,
       "end_year": 1898,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "britannica-philippines-spanish-period"
+      ]
     },
     {
       "id": "southeast-asia.maritime.indonesia",
@@ -9493,6 +9684,21 @@
       "end_year": null,
       "tier": "foundational",
       "date_precision": "approx",
+      "source_ids": [
+        "wikipedia-indonesian-independence"
+      ],
+      "date_note": "Independence was proclaimed on 17 August 1945; the Netherlands did not recognise it until the Hague agreement of 1949. Both dates are defensible and the choice between them is a political question, not a factual one.",
+      "alternatives": [
+        {
+          "label": "1949, Dutch recognition",
+          "standing": "minority",
+          "start_year": 1949,
+          "note": "The date the former colonial power accepted.",
+          "source_ids": [
+            "wikipedia-indonesian-independence"
+          ]
+        }
+      ],
       "summary": "Southeast Asian archipelagic republic; world's fourth-most-populous country."
     },
     {
@@ -27312,6 +27518,620 @@
         "Columbian Exchange",
         "Great Dying"
       ]
+    },
+    {
+      "id": "southeast-asia.mainland.dvaravati",
+      "kind": "era",
+      "name": "Dvaravati",
+      "parent_id": "southeast-asia.mainland",
+      "start_year": 600,
+      "end_year": 1100,
+      "tier": "intermediate",
+      "date_note": "Whether Dvaravati was a single kingdom or a network of related polities sharing a culture is unsettled. The span is approximate at both ends; its close is especially unclear, being a gradual absorption by Khmer and then Thai power rather than a conquest.",
+      "source_ids": [
+        "britannica-dvaravati",
+        "britannica-mon-kingdom",
+        "jseas-proto-dvaravati"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Often described as a kingdom, but the evidence may support a cultural network of separate polities instead.",
+          "source_ids": [
+            "jseas-proto-dvaravati",
+            "britannica-dvaravati"
+          ]
+        }
+      ],
+      "date_precision": "approx",
+      "summary": "Mon Buddhist culture of the Chao Phraya basin, of disputed political unity."
+    },
+    {
+      "id": "southeast-asia.mainland.post-pagan",
+      "kind": "era",
+      "name": "Post-Pagan Burma",
+      "parent_id": "southeast-asia.mainland",
+      "start_year": 1297,
+      "end_year": 1510,
+      "tier": "foundational",
+      "date_note": "A period of coexisting rivals rather than one polity: Myinsaing, Pinya, Sagaing, then Ava against Mon Hanthawaddy. Entered as a single span because the dataset previously left these 213 years blank entirely, which was worse than a container.",
+      "source_ids": [
+        "britannica-history-of-myanmar"
+      ],
+      "summary": "Two centuries of competing successor states after Pagan fell, principally Ava in the interior and Hanthawaddy in the delta.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.toungoo",
+      "kind": "era",
+      "name": "Toungoo Dynasty",
+      "parent_id": "southeast-asia.mainland",
+      "start_year": 1510,
+      "end_year": 1752,
+      "tier": "foundational",
+      "date_note": "Scholars divide it into a First and Second Toungoo, and give competing start dates; 1510 follows the founding of the Toungoo state itself rather than a later imperial expansion.",
+      "source_ids": [
+        "wikipedia-toungoo-dynasty",
+        "britannica-toungoo-dynasty"
+      ],
+      "alternatives": [
+        {
+          "label": "Later start, dating the dynasty from its imperial phase",
+          "standing": "minority",
+          "note": "Britannica and Wikipedia do not lead with the same year.",
+          "source_ids": [
+            "britannica-toungoo-dynasty"
+          ]
+        }
+      ],
+      "summary": "Reunified Burma and briefly built the largest empire in mainland Southeast Asia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.konbaung",
+      "kind": "era",
+      "name": "Konbaung Dynasty",
+      "parent_id": "southeast-asia.mainland",
+      "start_year": 1752,
+      "end_year": 1885,
+      "tier": "foundational",
+      "source_ids": [
+        "britannica-history-of-myanmar",
+        "britannica-british-in-burma"
+      ],
+      "summary": "The last Burmese dynasty, ended by British annexation after the third of three Anglo-Burmese wars.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.british-burma",
+      "kind": "era",
+      "name": "British Burma",
+      "parent_id": "southeast-asia.mainland",
+      "start_year": 1885,
+      "end_year": 1948,
+      "tier": "foundational",
+      "date_note": "Annexation followed the war of 1885; the formal proclamation and administrative reorganisation ran into 1886. Independence came in January 1948.",
+      "source_ids": [
+        "britannica-british-in-burma"
+      ],
+      "name_forms": [
+        {
+          "name": "Burma",
+          "kind": "exonym",
+          "note": "The colonial-era English name. Myanmar and Burma both derive from the same root, and the choice between them remains politically loaded.",
+          "source_ids": [
+            "britannica-history-of-myanmar"
+          ]
+        }
+      ],
+      "summary": "Annexed after the Third Anglo-Burmese War and governed as a province of British India until 1937.",
+      "date_precision": "approx",
+      "aliases": [
+        "Burma"
+      ]
+    },
+    {
+      "id": "southeast-asia.mainland.sukhothai",
+      "kind": "era",
+      "name": "Sukhothai Kingdom",
+      "parent_id": "southeast-asia.mainland",
+      "start_year": 1238,
+      "end_year": 1438,
+      "tier": "foundational",
+      "date_note": "Both the 1238 founding date and the 'first Thai kingdom' framing rest on the Ram Khamhaeng inscription, whose authenticity Michael Vickery and others have questioned. Treat the date as traditional rather than attested. Absorbed by Ayutthaya in 1438.",
+      "source_ids": [
+        "britannica-sukhothai-kingdom"
+      ],
+      "alternatives": [
+        {
+          "label": "1238, from the Ram Khamhaeng inscription",
+          "standing": "traditional",
+          "start_year": 1238,
+          "note": "The inscription's authenticity has been disputed since the 1980s.",
+          "source_ids": [
+            "britannica-sukhothai-kingdom"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Called the first Thai kingdom by convention, but Tai polities existed before it and the claim originates in later national historiography.",
+          "source_ids": [
+            "britannica-sukhothai-kingdom"
+          ]
+        }
+      ],
+      "date_precision": "approx",
+      "summary": "Tai kingdom of the upper Chao Phraya, traditionally cast as the first Thai state.",
+      "native_name": "สุโขทัย"
+    },
+    {
+      "id": "southeast-asia.mainland.thonburi",
+      "kind": "era",
+      "name": "Thonburi Kingdom",
+      "parent_id": "southeast-asia.mainland",
+      "start_year": 1767,
+      "end_year": 1782,
+      "tier": "intermediate",
+      "summary": "Fifteen years under Taksin, between the Burmese sack of Ayutthaya and the founding of the Chakri dynasty.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.lan-xang",
+      "kind": "era",
+      "name": "Lan Xang",
+      "parent_id": "southeast-asia.mainland",
+      "start_year": 1353,
+      "end_year": 1707,
+      "tier": "foundational",
+      "date_note": "Divided into Vientiane, Luang Phrabang and Champasak. Accounts differ on whether the break-up dates from 1694 or 1707.",
+      "source_ids": [
+        "britannica-history-of-laos",
+        "wikipedia-lan-xang"
+      ],
+      "alternatives": [
+        {
+          "label": "1694, dating the split from the succession crisis",
+          "standing": "minority",
+          "end_year": 1694,
+          "source_ids": [
+            "britannica-history-of-laos"
+          ]
+        }
+      ],
+      "summary": "Lao kingdom of the middle Mekong, which broke into three rival successor kingdoms.",
+      "native_name": "ລ້ານຊ້າງ",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.ngo",
+      "kind": "period",
+      "name": "Ngô Dynasty",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 939,
+      "end_year": 965,
+      "tier": "intermediate",
+      "date_note": "Sources give 965 or 968 for the end, depending on whether the interregnum of the twelve warlords is counted as part of the dynasty.",
+      "source_ids": [
+        "wikipedia-ngo-dynasty"
+      ],
+      "alternatives": [
+        {
+          "label": "968, counting the interregnum",
+          "standing": "minority",
+          "end_year": 968,
+          "source_ids": [
+            "wikipedia-ngo-dynasty"
+          ]
+        }
+      ],
+      "summary": "Founded after Bạch Đằng ended Chinese rule; collapsed into a period of warlords.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.dinh",
+      "kind": "period",
+      "name": "Đinh Dynasty",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 968,
+      "end_year": 980,
+      "tier": "intermediate",
+      "source_ids": [
+        "wikipedia-dinh-dynasty"
+      ],
+      "summary": "Declared the state Đại Cồ Việt and an imperial title to match.",
+      "native_name": "大瞿越",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.early-le",
+      "kind": "period",
+      "name": "Early Lê Dynasty",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 980,
+      "end_year": 1009,
+      "tier": "intermediate",
+      "source_ids": [
+        "wikipedia-le-dynasty"
+      ],
+      "summary": "Repelled a Song invasion, then gave way to the Lý.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.ly",
+      "kind": "period",
+      "name": "Lý Dynasty",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 1009,
+      "end_year": 1225,
+      "tier": "foundational",
+      "date_note": "The traditional account of the 1054 renaming has itself been questioned. Sources give 1225 or 1226 for the handover to the Trần.",
+      "source_ids": [
+        "britannica-ly-thai-to",
+        "wikipedia-ly-thanh-tong"
+      ],
+      "summary": "Two centuries of consolidation; renamed the state Đại Việt in 1054.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.tran",
+      "kind": "period",
+      "name": "Trần Dynasty",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 1225,
+      "end_year": 1400,
+      "tier": "foundational",
+      "source_ids": [
+        "britannica-tran-dynasty"
+      ],
+      "summary": "Repelled three Mongol invasions.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.ho",
+      "kind": "period",
+      "name": "Hồ Dynasty",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 1400,
+      "end_year": 1407,
+      "tier": "intermediate",
+      "source_ids": [
+        "wikipedia-ho-dynasty"
+      ],
+      "summary": "Seven years of forced reform; renamed the state Đại Ngu and fell to the Ming.",
+      "native_name": "大虞",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.ming-occupation",
+      "kind": "period",
+      "name": "Ming Occupation",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 1407,
+      "end_year": 1427,
+      "tier": "intermediate",
+      "date_note": "Ended by Lê Lợi's rising; the Lê dynasty dates from 1428.",
+      "source_ids": [
+        "wikipedia-fourth-chinese-domination"
+      ],
+      "name_forms": [
+        {
+          "name": "Jiaozhi",
+          "kind": "exonym",
+          "lang": "zh",
+          "note": "The Ming province name. The period is also called the fourth Chinese domination.",
+          "source_ids": [
+            "wikipedia-fourth-chinese-domination"
+          ]
+        }
+      ],
+      "summary": "Administered by the Ming as the province of Jiaozhi, not as a Vietnamese state at all.",
+      "date_precision": "approx",
+      "aliases": [
+        "Jiaozhi"
+      ]
+    },
+    {
+      "id": "southeast-asia.mainland.later-le",
+      "kind": "period",
+      "name": "Later Lê Dynasty",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 1428,
+      "end_year": 1789,
+      "tier": "foundational",
+      "date_note": "The Lê emperors became figureheads after 1533. The Trịnh-Nguyễn division that actually governed the country is not yet modelled here.",
+      "source_ids": [
+        "wikipedia-le-dynasty"
+      ],
+      "summary": "Nominally ruled for three and a half centuries, though for most of them real power lay with the Trịnh and Nguyễn lords.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.mac",
+      "kind": "period",
+      "name": "Mạc Dynasty",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 1527,
+      "end_year": 1592,
+      "tier": "intermediate",
+      "date_note": "Driven from the capital in 1592; a rump state survived in the far north until 1677. Deliberately overlaps the Later Lê, because both claimed legitimacy at once.",
+      "source_ids": [
+        "wikipedia-mac-dynasty"
+      ],
+      "allow_outside_parent_dates": true,
+      "summary": "Usurped the throne and held the north, overlapping the Lê rather than succeeding them.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.tay-son",
+      "kind": "period",
+      "name": "Tây Sơn Dynasty",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 1778,
+      "end_year": 1802,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-tay-son-brothers",
+        "wikipedia-tay-son-dynasty"
+      ],
+      "summary": "A rising from the south that swept away the Trịnh, the Nguyễn lords and the Lê, and repelled a Qing invasion.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.mainland.nguyen",
+      "kind": "period",
+      "name": "Nguyễn Dynasty",
+      "parent_id": "southeast-asia.mainland.vietnam",
+      "start_year": 1802,
+      "end_year": 1945,
+      "tier": "foundational",
+      "source_ids": [
+        "wikipedia-french-indochina"
+      ],
+      "name_forms": [
+        {
+          "name": "Việt Nam",
+          "kind": "formal",
+          "lang": "vi",
+          "from": 1804,
+          "source_ids": [
+            "wikipedia-dai-viet"
+          ]
+        }
+      ],
+      "summary": "The last dynasty; adopted the name Việt Nam, then ruled under French protection from the 1880s.",
+      "native_name": "Việt Nam",
+      "date_precision": "approx",
+      "aliases": [
+        "Việt Nam"
+      ]
+    },
+    {
+      "id": "southeast-asia.mainland.french-indochina",
+      "kind": "era",
+      "name": "French Indochina",
+      "parent_id": "southeast-asia.mainland",
+      "start_year": 1887,
+      "end_year": 1954,
+      "tier": "foundational",
+      "date_note": "Formed in 1887 and dissolved in 1954 after Dien Bien Phu and the Geneva agreements.",
+      "source_ids": [
+        "wikipedia-french-indochina"
+      ],
+      "summary": "The colonial union of Vietnamese, Cambodian and Lao territories.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.maritime.medang",
+      "kind": "era",
+      "name": "Medang Kingdom",
+      "parent_id": "southeast-asia.maritime",
+      "start_year": 732,
+      "end_year": 1006,
+      "tier": "foundational",
+      "date_note": "Also called Mataram, and not to be confused with the Islamic Mataram Sultanate of 1587-1755. Whether the Sailendra and Sanjaya lines were two dynasties, one, or a power-sharing arrangement is unresolved. The end is given as 1006 or 1016.",
+      "source_ids": [
+        "britannica-indonesia-central-java",
+        "wikipedia-medang-kingdom"
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Frequently called Mataram, which collides with the later Islamic sultanate of the same name.",
+          "source_ids": [
+            "wikipedia-medang-kingdom"
+          ]
+        }
+      ],
+      "name_forms": [
+        {
+          "name": "Mataram Kingdom",
+          "kind": "common",
+          "note": "Ambiguous: the Islamic Mataram Sultanate is a different state six centuries later.",
+          "source_ids": [
+            "wikipedia-medang-kingdom"
+          ]
+        }
+      ],
+      "date_precision": "approx",
+      "summary": "The Central Javanese period, which built Borobudur and Prambanan.",
+      "aliases": [
+        "Mataram Kingdom"
+      ]
+    },
+    {
+      "id": "southeast-asia.maritime.kahuripan",
+      "kind": "era",
+      "name": "Kahuripan",
+      "parent_id": "southeast-asia.maritime",
+      "start_year": 1019,
+      "end_year": 1045,
+      "tier": "intermediate",
+      "date_note": "The division produced Kediri and Janggala.",
+      "source_ids": [
+        "britannica-kadiri"
+      ],
+      "summary": "Airlangga's kingdom, divided between his sons at his abdication.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.maritime.kediri",
+      "kind": "era",
+      "name": "Kediri Kingdom",
+      "parent_id": "southeast-asia.maritime",
+      "start_year": 1042,
+      "end_year": 1222,
+      "tier": "foundational",
+      "source_ids": [
+        "britannica-kadiri"
+      ],
+      "summary": "East Javanese kingdom, remembered above all for its literature.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.maritime.singhasari",
+      "kind": "era",
+      "name": "Singhasari Kingdom",
+      "parent_id": "southeast-asia.maritime",
+      "start_year": 1222,
+      "end_year": 1292,
+      "tier": "foundational",
+      "source_ids": [
+        "wikipedia-singhasari"
+      ],
+      "summary": "Displaced Kediri and expanded Javanese power outward; ended in the succession crisis that produced Majapahit.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.maritime.demak",
+      "kind": "era",
+      "name": "Demak Sultanate",
+      "parent_id": "southeast-asia.maritime",
+      "start_year": 1475,
+      "end_year": 1554,
+      "tier": "intermediate",
+      "date_note": "The end is given as either 1548 or 1554.",
+      "source_ids": [
+        "wikipedia-demak-sultanate"
+      ],
+      "alternatives": [
+        {
+          "label": "1548",
+          "standing": "minority",
+          "end_year": 1548,
+          "source_ids": [
+            "wikipedia-demak-sultanate"
+          ]
+        }
+      ],
+      "summary": "The first Islamic state on Java, and the power that finished Majapahit.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.maritime.mataram-sultanate",
+      "kind": "era",
+      "name": "Mataram Sultanate",
+      "parent_id": "southeast-asia.maritime",
+      "start_year": 1587,
+      "end_year": 1755,
+      "tier": "foundational",
+      "date_note": "Ended with the Treaty of Giyanti in 1755, which split it between Yogyakarta and Surakarta. A different state from the Medang/Mataram kingdom of 732-1006.",
+      "source_ids": [
+        "wikipedia-mataram-sultanate"
+      ],
+      "summary": "The dominant Javanese state of the 17th century, partitioned under Dutch pressure.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.maritime.aceh",
+      "kind": "era",
+      "name": "Aceh Sultanate",
+      "parent_id": "southeast-asia.maritime",
+      "start_year": 1496,
+      "end_year": 1903,
+      "tier": "foundational",
+      "date_note": "Four founding dates circulate -- 1496, 1480, 1507 and 1514. Ended by Dutch conquest in 1903 after the Aceh War.",
+      "source_ids": [
+        "wikipedia-aceh-sultanate"
+      ],
+      "alternatives": [
+        {
+          "label": "1480",
+          "standing": "minority",
+          "start_year": 1480,
+          "source_ids": [
+            "wikipedia-aceh-sultanate"
+          ]
+        },
+        {
+          "label": "1507",
+          "standing": "minority",
+          "start_year": 1507,
+          "source_ids": [
+            "wikipedia-aceh-sultanate"
+          ]
+        }
+      ],
+      "summary": "North Sumatran sultanate and a major pepper power, which fought the Dutch for three decades.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.maritime.brunei",
+      "kind": "era",
+      "name": "Bruneian Empire",
+      "parent_id": "southeast-asia.maritime",
+      "start_year": 1368,
+      "end_year": 1888,
+      "tier": "foundational",
+      "date_note": "Ends here in 1888, when Brunei became a British protectorate. The sultanate itself continues and is independent again from 1984, so this span covers its sovereign period rather than its existence -- running it unbroken to the present would assert a sovereignty that lapsed for ninety-six years.",
+      "source_ids": [
+        "wikipedia-bruneian-empire"
+      ],
+      "date_precision": "approx",
+      "summary": "Bornean sultanate that dominated the northwest coast before contracting under British and Sarawak pressure."
+    },
+    {
+      "id": "southeast-asia.maritime.sulu",
+      "kind": "era",
+      "name": "Sultanate of Sulu",
+      "parent_id": "southeast-asia.maritime",
+      "start_year": 1405,
+      "end_year": 1915,
+      "tier": "intermediate",
+      "date_note": "Founding given as 1405 or 1457. Sovereignty was relinquished in 1915 under American administration.",
+      "source_ids": [
+        "wikipedia-sultanate-of-sulu"
+      ],
+      "alternatives": [
+        {
+          "label": "1457",
+          "standing": "minority",
+          "start_year": 1457,
+          "source_ids": [
+            "wikipedia-sultanate-of-sulu"
+          ]
+        }
+      ],
+      "summary": "Sultanate of the Sulu archipelago, which resisted Spanish control for three centuries.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "southeast-asia.maritime.tondo",
+      "kind": "era",
+      "name": "Tondo",
+      "parent_id": "southeast-asia.maritime",
+      "start_year": 900,
+      "end_year": 1589,
+      "tier": "intermediate",
+      "date_note": "The 900 date comes from the Laguna Copperplate Inscription, which gives a floor rather than a founding. Other pre-colonial polities -- Cebu, Butuan, Maynila -- are much more thinly evidenced and are not authored here; the literature also contains the Code of Kalantiaw, a 1913 fabrication long treated as genuine, so claims in this area need checking one at a time.",
+      "source_ids": [
+        "wikipedia-tondo-polity",
+        "wikipedia-laguna-copperplate",
+        "wikipedia-code-of-kalantiaw"
+      ],
+      "date_precision": "approx",
+      "summary": "Polity on Manila Bay, attested from 900 CE by the earliest surviving Philippine document."
     },
     {
       "id": "east-asia.china.liao",

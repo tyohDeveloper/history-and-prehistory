@@ -14,6 +14,21 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.26.0.0-app] — 2026-08-09
+
+### Added
+
+- Wade-Giles forms for the nine Chinese dynasties whose romanisation actually
+  changed, so pre-1980s books remain searchable. Ships dataset 0.27.0.0.
+- Liao, Jurchen Jin, Western Xia, the Xia, and the Jingkang Incident.
+
+### Changed
+
+- The Sui is promoted to `foundational`. It had been hidden at the default tier
+  while newly-added conquest dynasties were visible, so a reader would have met
+  the Liao before the dynasty that reunified China.
+- Size baseline 252,213 bytes gzip.
+
 ## [3.25.0.0-app] — 2026-08-09
 
 ### Fixed

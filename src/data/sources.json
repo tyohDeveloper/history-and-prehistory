@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.26.0.0",
-  "generated_at": "2026-08-10T02:23:37Z",
+  "dataset_version": "0.27.0.0",
+  "generated_at": "2026-08-10T03:04:06Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2883,6 +2883,125 @@
       "kind": "scholarly",
       "citation": "Olive-shrub study of the Thera eruption, Scientific Reports (2023)",
       "url": "https://www.nature.com/srep/"
+    },
+    {
+      "id": "loc-chinese-romanization-table",
+      "kind": "primary",
+      "citation": "Library of Congress, ALA-LC Romanization Tables: Chinese",
+      "url": "https://www.loc.gov/catdir/cpso/romanization/chinese.pdf",
+      "note": "The authority for Wade-Giles/Pinyin correspondence. Draws its Wade-Giles forms from the 1997 ALA-LC tables and its Pinyin from Xiandai Hanyu Cidian (1983)."
+    },
+    {
+      "id": "britannica-jin-dynasty-jurchen",
+      "kind": "reference",
+      "citation": "Encyclopaedia Britannica, Jin dynasty (1115-1234)",
+      "url": "https://www.britannica.com/topic/Jin-dynasty-China-Mongolia-1115-1234",
+      "note": "Gives the Jurchen dynasty's Wade-Giles form as Chin -- identical to the earlier Jin, which is the collision."
+    },
+    {
+      "id": "britannica-five-dynasties",
+      "kind": "reference",
+      "citation": "Encyclopaedia Britannica, Five Dynasties",
+      "url": "https://www.britannica.com/event/Five-Dynasties",
+      "note": "Confirms Wade-Giles Wu-tai against Pinyin Wudai."
+    },
+    {
+      "id": "wikipedia-xia-dynasty-romanisation",
+      "kind": "reference",
+      "citation": "Wikipedia, Xia dynasty",
+      "url": "https://en.wikipedia.org/wiki/Xia_dynasty",
+      "note": "Gives Wade-Giles Hsia. Used because the Library of Congress table does not list dynasty names as such, only the syllable correspondence hsia/xia that this follows."
+    },
+    {
+      "id": "wikipedia-northern-southern-dynasties",
+      "kind": "reference",
+      "citation": "Wikipedia, Northern and Southern dynasties",
+      "url": "https://en.wikipedia.org/wiki/Northern_and_Southern_dynasties",
+      "note": "Source for characters and Pinyin. The Wade-Giles hyphenation could not be confirmed against the Library of Congress or Britannica and is recorded as probable rather than certain."
+    },
+    {
+      "id": "britannica-liao-dynasty",
+      "kind": "reference",
+      "citation": "'Liao dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Liao-dynasty",
+      "note": "'Traditionally, the start of the Liao period is given as 907, the last year of the Tang', while noting Chinese historians often prefer 916. Also: 'The Liao dynasty was destroyed in 1125 by the Juchen tribes.'"
+    },
+    {
+      "id": "sdu-liao-chronology",
+      "kind": "scholarly",
+      "citation": "Shandong University, study of Liao dynastic chronology",
+      "url": "https://www.lhp.sdu.edu.cn/__local/C/16/CF/EADF85A008182C64BAE7A905CC6_F35AACA5_2BB5F.pdf",
+      "note": "Argues scholarship agrees Abaoji proclaimed the dynasty in 916, and that the Liaoshi's use of 907 was a deliberate choice rather than an error."
+    },
+    {
+      "id": "berkshire-liao-dynasty",
+      "kind": "reference",
+      "citation": "'Liao Dynasty (907-1125)', Berkshire Encyclopedia of China",
+      "url": "https://www.berkshirepublishing.com/ecph-china/2018/01/08/liao-dynasty-907-1125/",
+      "note": "Frames 907 and 916 as two counting conventions rather than a factual dispute."
+    },
+    {
+      "id": "britannica-jin-dynasty-jurchen",
+      "kind": "reference",
+      "citation": "'Jin dynasty (1115-1234)', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Jin-dynasty-China-Mongolia-1115-1234",
+      "note": "Gives the Jurchen dynasty's Wade-Giles form as Chin, identical to the earlier Jin (晉)."
+    },
+    {
+      "id": "wikipedia-jingkang-incident",
+      "kind": "reference",
+      "citation": "'Jingkang incident', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jingkang_incident",
+      "note": "The 1127 sack of Kaifeng and capture of Huizong and Qinzong, and the flight south that established the Southern Song under Gaozong."
+    },
+    {
+      "id": "britannica-jingkang-incident",
+      "kind": "reference",
+      "citation": "'Jingkang Incident', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/event/Jingkang-Incident-1126-1127",
+      "note": "Dates the incident across 1126-1127."
+    },
+    {
+      "id": "britannica-xi-xia",
+      "kind": "reference",
+      "citation": "'Xi Xia', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Xi-Xia",
+      "note": "The Tangut state, and its destruction by the Mongols in 1227."
+    },
+    {
+      "id": "britannica-li-yuanhao",
+      "kind": "reference",
+      "citation": "'Li Yuanhao', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Li-Yuanhao",
+      "note": "Declared himself emperor in 1038, the conventional founding of Western Xia."
+    },
+    {
+      "id": "chinaknowledge-xixia",
+      "kind": "reference",
+      "citation": "'The Western Xia dynasty', ChinaKnowledge.de",
+      "url": "http://www.chinaknowledge.de/History/Song/xixia.html",
+      "note": "Background on the Tangut state and its script."
+    },
+    {
+      "id": "britannica-xia-dynasty",
+      "kind": "reference",
+      "citation": "'Xia dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Xia-dynasty",
+      "note": "Treats the Xia as legendary rather than as an established dynasty."
+    },
+    {
+      "id": "cambridge-history-ancient-china",
+      "kind": "scholarly",
+      "citation": "The Cambridge History of Ancient China",
+      "url": "https://www.cambridge.org/core/books/cambridge-history-of-ancient-china/1274DEAA9CE3A6D0AC700076B70D5C22",
+      "note": "Begins its historical treatment with the Shang rather than the Xia."
+    },
+    {
+      "id": "wikipedia-xia-shang-zhou-chronology-project",
+      "kind": "reference",
+      "citation": "'Xia-Shang-Zhou Chronology Project', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Xia%E2%80%93Shang%E2%80%93Zhou_Chronology_Project",
+      "note": "The state-sponsored project assigning the Xia 2070-1600 BCE and identifying it with Erlitou, and the substantial Western criticism of its method."
     },
     {
       "id": "elliott-warren-2023-colonialism-mesolithic",

@@ -1,5 +1,91 @@
 # Changelog
 
+## 0.27.0.0 — Old spellings, and the states the Song shared China with (2026-08-09)
+
+### Wade-Giles, because half the library uses it
+
+Anyone holding a book printed before about 1980 meets Ch'ing, Chou, Sung and
+T'ang, and the dataset returned **nothing** for any of them. Nine dynasties now
+carry their Wade-Giles form, sourced to the Library of Congress ALA-LC table.
+
+**Only the forms that actually differ are recorded.** Shang, Han, Sui, Ming and
+the Three Kingdoms states Wei, Shu and Wu are spelled identically in both
+systems, so an alias would claim a name change where none happened.
+
+Two cases are more interesting than the rest. **Yüan** differs from Pinyin only
+by an umlaut that older printing frequently dropped, so one book may contain both
+spellings. And **Wade-Giles renders both Jin dynasties as "Chin"** -- 晉 for
+266-420 and 金 for the Jurchen state -- so the older system is strictly *less*
+able to distinguish them than the modern one. That is the mirror image of the
+Japanese era problem fixed in the previous release, where romanisation collapsed
+two distinct kanji.
+
+Searching "Chin" now correctly returns both the Qin and the Jurchen Jin, because
+an unapostrophed "Chin" in an old book genuinely is ambiguous between Ch'in and
+Chin.
+
+**Postal romanisation was deliberately not done.** Peking, Nanking, Canton and
+Amoy apply to *place* names, and the dataset contains no Chinese cities -- there
+is nothing to attach them to. Recorded as an open issue rather than half-applied.
+
+### The Song did not rule China alone
+
+The dataset split the Song into Northern (960-1127) and Southern (1127-1279) but
+contained **none of the states that caused the split**. The Southern Song exists
+because the Jurchen Jin took Kaifeng in 1127 and carried off two emperors; the
+consequence was in the data with the cause deleted.
+
+Added: **Liao** (Khitan), **Jin** (Jurchen), **Western Xia** (Tangut), and the
+**Jingkang Incident** itself, placed under the Jin that carried it out and
+cross-linked to the Northern Song it ended, so it is reachable from either side.
+
+Traditional historiography supports treating these as dynasties rather than
+intrusions: the Yuan commissioned official histories of Liao, Jin and Song as
+three parallel legitimate states. Western Xia notably received no official
+history, which is recorded as a fact about the historiography rather than about
+the state.
+
+### Liao keeps both of its founding dates
+
+907 is traditional and the year Yelü Abaoji became khagan; 916 is when he
+proclaimed himself emperor in the Chinese manner, which most scholarship prefers.
+The dataset leads with 907 because it is the date a reader arrives with, and
+records 916 as a `majority` alternative against 907 as `traditional` -- using the
+standing field added for exactly this. A Shandong University study argues the
+*Liaoshi*'s own use of 907 was deliberate rather than an error.
+
+### The Xia is entered as a dispute, not a dynasty
+
+Britannica calls it legendary; the Cambridge History of Ancient China begins with
+the Shang; the state-sponsored Xia-Shang-Zhou Chronology Project assigns it
+2070-1600 BCE and identifies every Erlitou phase with it, on a method that drew
+sustained criticism in Western sinology. It carries two `contested-existence`
+caveats holding both positions, in the shape established for the ROC, and the
+date note says plainly that its span is that project's position rather than an
+established chronology.
+
+This also makes "Hsia" findable, which was the original complaint.
+
+### What adding things exposed
+
+Two problems surfaced only because new entities sat next to old ones.
+
+**The Sui was `intermediate`** -- invisible at the default tier -- while the
+conquest dynasties were about to become visible. A reader at Standard tier would
+have met the Liao before the dynasty that reunified China after four centuries of
+division. Promoted, and the promotion immediately failed validation for having no
+summary: the entity had been hidden, so nothing ever demanded one.
+
+**The Five Dynasties sits at `specialist`**, so the interregnum between Tang and
+Song is invisible by default and the two appear adjacent. Left alone
+deliberately, because how much division a default view should show is an
+editorial judgement rather than an error, and it is filed as an open question.
+
+### Counts
+
+1,648 → 1,653 entities. 561 → 578 sources, 402 cited. 86 entities carry
+`name_forms`, up from 70.
+
 ## 0.26.0.0 — Multi-regional, not cross-regional (2026-08-09)
 
 ### The word was wrong, and so was the placement

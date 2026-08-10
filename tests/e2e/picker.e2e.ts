@@ -24,9 +24,9 @@ test("shows the version stamp and entity count", async ({ page }) => {
   // The two tracks had been asserted the wrong way round since the renumbering:
   // v0.5.0 is the DATA version and 3.1.0 was the APP version. The test was
   // failing for that reason, not because the header was wrong.
-  await expect(page.getByTestId("text-app-version")).toContainText("v3.25.0.0");
-  await expect(page.getByTestId("text-app-version")).toContainText("data 0.26.0.0");
-  await expect(page.getByTestId("panel-footer-root")).toContainText("1,648 entities");
+  await expect(page.getByTestId("text-app-version")).toContainText("v3.26.0.0");
+  await expect(page.getByTestId("text-app-version")).toContainText("data 0.27.0.0");
+  await expect(page.getByTestId("panel-footer-root")).toContainText("1,653 entities");
 });
 
 test("drills Region -> Era -> Period through the columns", async ({ page }) => {
@@ -234,7 +234,14 @@ test("the lens reaches contemporaries in other branches", async ({ page }) => {
   }
   await page.getByTestId("input-context-budget").fill("40");
   await page.getByTestId("input-context-budget").dispatchEvent("input");
-  await expect(page.locator(".context-row.is-elsewhere").first()).toContainText("Song Dynasty");
+  // Kohei is a Heian era of 1058-1065, so its contemporaries in China are the
+  // Northern Song and the states that shared the period with it. Asserting the
+  // FIRST row was brittle -- adding Western Xia legitimately reordered it. What
+  // matters is that the lens reaches the other branch at all, and that adding
+  // the Song's neighbours made the picture more complete rather than less.
+  const elsewhere = page.locator(".context-row.is-elsewhere");
+  await expect(elsewhere.filter({ hasText: "Song Dynasty" }).first()).toBeVisible();
+  await expect(elsewhere.filter({ hasText: "Western Xia" }).first()).toBeVisible();
 });
 
 test("clicking in the lens moves the selection", async ({ page }) => {

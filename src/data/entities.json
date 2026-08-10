@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.26.0.0",
-  "generated_at": "2026-08-10T02:23:37Z",
+  "dataset_version": "0.27.0.0",
+  "generated_at": "2026-08-10T03:04:06Z",
   "entities": [
     {
       "id": "global",
@@ -293,6 +293,7 @@
       ],
       "regions": [
         "central-asia",
+        "east-asia",
         "west-asia"
       ]
     },
@@ -5584,7 +5585,21 @@
       "tier": "foundational",
       "native_name": "周朝",
       "summary": "Longest dynasty in Chinese history. Split into Western and Eastern (Spring-Autumn + Warring States).",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Chou",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "source_ids": [
+            "loc-chinese-romanization-table"
+          ]
+        }
+      ],
+      "aliases": [
+        "Chou"
+      ]
     },
     {
       "id": "east-asia.china.zhou.western",
@@ -5640,7 +5655,21 @@
       "tier": "foundational",
       "native_name": "秦朝",
       "summary": "First unified imperial state.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Ch'in",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "source_ids": [
+            "loc-chinese-romanization-table"
+          ]
+        }
+      ],
+      "aliases": [
+        "Ch'in"
+      ]
     },
     {
       "id": "east-asia.china.qin.shi-huang",
@@ -5737,7 +5766,23 @@
       "start_year": 266,
       "end_year": 420,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Chin",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "source_ids": [
+            "loc-chinese-romanization-table"
+          ],
+          "note": "Wade-Giles gives Chin for both this dynasty (晉) and the later Jurchen Jin (金), so it cannot tell them apart. The characters can."
+        }
+      ],
+      "native_name": "晉",
+      "aliases": [
+        "Chin"
+      ]
     },
     {
       "id": "east-asia.china.north-south",
@@ -5747,7 +5792,23 @@
       "start_year": 420,
       "end_year": 589,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Nan-Pei Ch'ao",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "source_ids": [
+            "wikipedia-northern-southern-dynasties"
+          ],
+          "note": "Hyphenation not confirmed against a primary romanisation table. Older literature often calls the era the Six Dynasties instead."
+        }
+      ],
+      "native_name": "南北朝",
+      "aliases": [
+        "Nan-Pei Ch'ao"
+      ]
     },
     {
       "id": "east-asia.china.sui",
@@ -5756,9 +5817,10 @@
       "parent_id": "east-asia.china",
       "start_year": 581,
       "end_year": 618,
-      "tier": "intermediate",
+      "tier": "foundational",
       "native_name": "隋朝",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "summary": "Reunified China after nearly four centuries of division and built the Grand Canal, at ruinous cost, in two generations."
     },
     {
       "id": "east-asia.china.tang",
@@ -5770,7 +5832,21 @@
       "tier": "foundational",
       "native_name": "唐朝",
       "summary": "Golden age of Chinese poetry and cosmopolitan trade.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "T'ang",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "source_ids": [
+            "loc-chinese-romanization-table"
+          ]
+        }
+      ],
+      "aliases": [
+        "T'ang"
+      ]
     },
     {
       "id": "east-asia.china.tang.taizong",
@@ -5811,7 +5887,22 @@
       "start_year": 907,
       "end_year": 979,
       "tier": "specialist",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Wu-tai",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "source_ids": [
+            "britannica-five-dynasties"
+          ]
+        }
+      ],
+      "native_name": "五代十國",
+      "aliases": [
+        "Wu-tai"
+      ]
     },
     {
       "id": "east-asia.china.song",
@@ -5823,7 +5914,21 @@
       "tier": "foundational",
       "native_name": "宋朝",
       "summary": "Economic and technological golden age: printing, gunpowder, compass, paper money.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Sung",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "source_ids": [
+            "loc-chinese-romanization-table"
+          ]
+        }
+      ],
+      "aliases": [
+        "Sung"
+      ]
     },
     {
       "id": "east-asia.china.song.northern",
@@ -5833,7 +5938,11 @@
       "start_year": 960,
       "end_year": 1127,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
     },
     {
       "id": "east-asia.china.song.southern",
@@ -5874,9 +5983,24 @@
         }
       ],
       "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Yüan",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "source_ids": [
+            "loc-chinese-romanization-table"
+          ],
+          "note": "Differs from Pinyin only by the umlaut, which older printing often dropped, so one book may use both spellings."
+        }
+      ],
       "regions": [
         "central-asia",
         "east-asia"
+      ],
+      "aliases": [
+        "Yüan"
       ]
     },
     {
@@ -5939,7 +6063,21 @@
       "tier": "foundational",
       "native_name": "清朝",
       "summary": "Manchu-ruled last imperial dynasty.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "name_forms": [
+        {
+          "name": "Ch'ing",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "source_ids": [
+            "loc-chinese-romanization-table"
+          ]
+        }
+      ],
+      "aliases": [
+        "Ch'ing"
+      ]
     },
     {
       "id": "east-asia.china.qing.kangxi",
@@ -27173,6 +27311,228 @@
       "aliases": [
         "Columbian Exchange",
         "Great Dying"
+      ]
+    },
+    {
+      "id": "east-asia.china.liao",
+      "kind": "era",
+      "name": "Liao Dynasty",
+      "parent_id": "east-asia.china",
+      "start_year": 907,
+      "end_year": 1125,
+      "tier": "foundational",
+      "native_name": "遼朝",
+      "date_note": "Two founding dates are both defensible and both in use. 907 is traditional and the year Yelü Abaoji became khagan; 916 is when he proclaimed himself emperor in the Chinese manner, which most Chinese scholarship prefers. A Shandong University study argues the Liaoshi's own use of 907 was deliberate rather than an error. Ended 1125 when Jurchen forces captured Emperor Tianzuo.",
+      "alternatives": [
+        {
+          "label": "916, the imperial proclamation",
+          "standing": "majority",
+          "start_year": 916,
+          "note": "When Abaoji took the title huangdi, proclaimed an era name and built a Confucian temple.",
+          "source_ids": [
+            "sdu-liao-chronology",
+            "berkshire-liao-dynasty"
+          ]
+        },
+        {
+          "label": "907, the traditional date",
+          "standing": "traditional",
+          "start_year": 907,
+          "note": "The Liaoshi's own date, which Britannica leads with.",
+          "source_ids": [
+            "britannica-liao-dynasty"
+          ]
+        }
+      ],
+      "source_ids": [
+        "britannica-liao-dynasty",
+        "sdu-liao-chronology",
+        "berkshire-liao-dynasty"
+      ],
+      "name_forms": [
+        {
+          "name": "Khitan Empire",
+          "kind": "historical",
+          "note": "The founding state was the Great Khitan State, 大契丹; the Chinese-style dynastic name came later.",
+          "source_ids": [
+            "britannica-liao-dynasty"
+          ]
+        }
+      ],
+      "cross_parent_ids": [
+        "central-asia"
+      ],
+      "allow_outside_parent_dates": true,
+      "summary": "Khitan empire ruling Manchuria, Mongolia and the northern edge of the North China Plain, governed through separate steppe and Chinese administrations.",
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ],
+      "aliases": [
+        "Khitan Empire"
+      ]
+    },
+    {
+      "id": "east-asia.china.jin-jurchen",
+      "kind": "era",
+      "name": "Jin Dynasty (Jurchen)",
+      "parent_id": "east-asia.china",
+      "start_year": 1115,
+      "end_year": 1234,
+      "tier": "foundational",
+      "native_name": "金",
+      "date_note": "Founded 1115 by Wanyan Aguda; ended with the fall of Caizhou in February 1234 under Mongol attack. Distinct from the earlier Jin (晉, 266-420) despite the identical English spelling.",
+      "source_ids": [
+        "britannica-jin-dynasty-jurchen"
+      ],
+      "name_forms": [
+        {
+          "name": "Chin",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "note": "Wade-Giles renders this dynasty and the earlier Jin (晉) identically, so the older romanisation cannot tell them apart.",
+          "source_ids": [
+            "britannica-jin-dynasty-jurchen"
+          ]
+        },
+        {
+          "name": "Jurchen Jin",
+          "kind": "common",
+          "note": "Used in English to separate it from the Jin of 266-420.",
+          "source_ids": [
+            "britannica-jin-dynasty-jurchen"
+          ]
+        }
+      ],
+      "cross_parent_ids": [
+        "central-asia"
+      ],
+      "allow_outside_parent_dates": true,
+      "summary": "Jurchen empire that took northern China from the Song, ruling from Kaifeng until the Mongol conquest.",
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ],
+      "aliases": [
+        "Chin",
+        "Jurchen Jin"
+      ]
+    },
+    {
+      "id": "east-asia.china.jin-jurchen.jingkang",
+      "kind": "era",
+      "name": "Jingkang Incident",
+      "parent_id": "east-asia.china.jin-jurchen",
+      "start_year": 1126,
+      "end_year": 1127,
+      "tier": "foundational",
+      "date_note": "Britannica dates the incident across 1126-1127. The surviving prince fled south and took the throne as Gaozong, which is why this dataset's Song splits at 1127.",
+      "source_ids": [
+        "wikipedia-jingkang-incident",
+        "britannica-jingkang-incident"
+      ],
+      "cross_parent_ids": [
+        "east-asia.china.song.northern"
+      ],
+      "allow_outside_parent_dates": true,
+      "summary": "Jin forces sacked Kaifeng and carried off emperors Huizong and Qinzong, ending the Northern Song.",
+      "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "east-asia"
+      ]
+    },
+    {
+      "id": "east-asia.china.western-xia",
+      "kind": "era",
+      "name": "Western Xia",
+      "parent_id": "east-asia.china",
+      "start_year": 1038,
+      "end_year": 1227,
+      "tier": "foundational",
+      "native_name": "西夏",
+      "date_note": "Founded 1038 when Li Yuanhao declared himself emperor, though Tangut autonomy in the region long predates that. Destroyed by the Mongols in 1227, the year Genghis Khan died. Unlike Liao, Jin and Song, it received no official history from the Yuan, which is a fact about the historiography rather than about the state.",
+      "source_ids": [
+        "britannica-xi-xia",
+        "britannica-li-yuanhao",
+        "chinaknowledge-xixia"
+      ],
+      "name_forms": [
+        {
+          "name": "Xi Xia",
+          "kind": "scholarly",
+          "note": "The form Britannica files it under.",
+          "source_ids": [
+            "britannica-xi-xia"
+          ]
+        },
+        {
+          "name": "Tangut Empire",
+          "kind": "common",
+          "source_ids": [
+            "chinaknowledge-xixia"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "summary": "Tangut state in the northwest, with its own script and no official dynastic history.",
+      "date_precision": "approx",
+      "aliases": [
+        "Xi Xia",
+        "Tangut Empire"
+      ]
+    },
+    {
+      "id": "east-asia.china.xia",
+      "kind": "era",
+      "name": "Xia Dynasty",
+      "parent_id": "east-asia.china",
+      "start_year": -2070,
+      "end_year": -1600,
+      "tier": "foundational",
+      "native_name": "夏朝",
+      "date_note": "The 2070-1600 BCE span comes from the state-sponsored Xia-Shang-Zhou Chronology Project, which identifies the Xia with the Erlitou culture. Those dates should be read as that project's position rather than as an established chronology; Britannica treats the dynasty as legendary and the Cambridge History of Ancient China begins with the Shang.",
+      "source_ids": [
+        "britannica-xia-dynasty",
+        "cambridge-history-ancient-china",
+        "wikipedia-xia-shang-zhou-chronology-project"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Britannica describes the Xia as legendary, and the Cambridge History of Ancient China starts its account at the Shang.",
+          "source_ids": [
+            "britannica-xia-dynasty",
+            "cambridge-history-ancient-china"
+          ]
+        },
+        {
+          "kind": "contested-existence",
+          "text": "The Xia-Shang-Zhou Chronology Project assigns the Xia 2070-1600 BCE and identifies every Erlitou phase with it. Its method drew sustained criticism in Western sinology.",
+          "source_ids": [
+            "wikipedia-xia-shang-zhou-chronology-project"
+          ]
+        }
+      ],
+      "name_forms": [
+        {
+          "name": "Hsia",
+          "kind": "scholarly",
+          "lang": "en",
+          "to": 1982,
+          "source_ids": [
+            "wikipedia-xia-dynasty-romanisation"
+          ]
+        }
+      ],
+      "allow_outside_parent_dates": true,
+      "summary": "Traditionally the first Chinese dynasty. Whether it existed as a state is disputed.",
+      "date_precision": "approx",
+      "aliases": [
+        "Hsia"
       ]
     },
     {

@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
-  "dataset_version": "0.33.0.0",
-  "generated_at": "2026-08-10T06:22:39Z",
+  "dataset_version": "0.33.1.0",
+  "generated_at": "2026-08-10T06:47:43Z",
   "entities": [
     {
       "id": "global",
@@ -6000,8 +6000,9 @@
       "parent_id": "east-asia.china",
       "start_year": 907,
       "end_year": 979,
-      "tier": "specialist",
+      "tier": "foundational",
       "date_precision": "approx",
+      "summary": "Five short-lived dynasties in the north and roughly ten kingdoms in the south, between the Tang and the Song. Printing spread and paper money first appeared in this fragmentation, not in spite of it.",
       "name_forms": [
         {
           "name": "Wu-tai",

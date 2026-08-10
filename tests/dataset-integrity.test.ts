@@ -19,7 +19,7 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.33.0.0");
+    expect(datasetVersion).toBe("0.33.1.0");
     expect(schemaVersion).toBe("3.5.0");
   });
 

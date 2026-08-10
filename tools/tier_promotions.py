@@ -111,6 +111,12 @@ GAP_FILLERS_TO_FOUNDATIONAL = [
     # the Tang-Song gap that issue #13 was filed about and previously unnoticed.
     "east-asia.china.jin",
     "east-asia.china.north-south",
+    # The gap tool did not flag this one, and cannot: after promoting the Jin and the
+    # Northern and Southern Dynasties, the 907-960 window at Essentials was *covered* --
+    # by the Liao, a Khitan state. So there was no date gap, but the sequence read
+    # Tang -> Liao -> Song, implying a steppe dynasty succeeded the Tang in China proper.
+    # Coverage is not the same as continuity, which is the limit of measuring by dates.
+    "east-asia.china.five-dynasties",
     # Africa
     "africa.southern.mutapa",
     # Iran and Central Asia

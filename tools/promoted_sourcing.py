@@ -323,6 +323,9 @@ SUMMARIES = {
     "east-asia.china.jin": "Briefly reunified China after the Three Kingdoms, then lost "
         "the north to steppe powers and fled south \u2014 the beginning of nearly three "
         "centuries of division.",
+    "east-asia.china.five-dynasties": "Five short-lived dynasties in the north and "
+        "roughly ten kingdoms in the south, between the Tang and the Song. Printing "
+        "spread and paper money first appeared in this fragmentation, not in spite of it.",
     "east-asia.china.north-south": "Rival northern and southern courts, the north under "
         "non-Han dynasties that progressively adopted Chinese administration. Buddhism "
         "spread widely in both.",

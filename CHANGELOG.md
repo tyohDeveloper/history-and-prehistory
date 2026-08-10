@@ -14,6 +14,25 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.25.0.0-app] — 2026-08-09
+
+### Fixed
+
+- Search showed two identical rows for names that collide under romanisation.
+  Searching "Showa" returned "Shōwa 1926-1989" and "Shōwa 1312-1317" with
+  nothing but dates to tell them apart, in an app whose stated purpose is
+  findability. Twelve Japanese era pairs were affected.
+
+  There are two collisions with two different causes. Japanese era names are
+  **distinct kanji flattened by romanisation** -- 昭和 against 正和 -- so the
+  native form separates them. Chinese temple names are the **same characters
+  reused by a later dynasty**: Tang Taizong and Song Taizong are both 太宗, and
+  no native form can ever separate those, so the dynasty is shown instead. The
+  disambiguator prefers the native form when it actually distinguishes and falls
+  back to the nearest ancestor that does.
+
+  Unambiguous names are untouched.
+
 ## [3.24.0.0-app] — 2026-08-09
 
 ### Added

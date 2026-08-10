@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { calendars, datasetVersion, entities, referenceFrames, schemaVersion, sources, themes } from "../src/dataset/dataset";
+import type { Entity } from "../src/entity/entity";
 import { buildIndex } from "../src/entity/tree";
 import { datingOf } from "../src/chrono/fromEntity";
 import { isScientificDating } from "../src/chrono/year";
@@ -833,5 +834,39 @@ describe("Central Asia and the Austronesian world", () => {
   it("marks Lapita's own start as unresolved", () => {
     const l = entities.find((e) => e.id === "oceania.melanesia.lapita")!;
     expect(l.date_precision).toBe("disputed");
+  });
+});
+
+describe("homograph disambiguation", () => {
+  // Romanisation collapses distinct kanji into one Latin string: Shōwa 1926 is
+  // 昭和 and Shōwa 1312 is 正和. Search rendered two identical rows separated
+  // only by dates. Screenshot found it; no test would have.
+  it("gives every colliding display name a distinguishing native form", () => {
+    const byName = new Map<string, Entity[]>();
+    for (const e of entities) {
+      const list = byName.get(e.name) ?? [];
+      list.push(e);
+      byName.set(e.name, list);
+    }
+    for (const [name, list] of byName) {
+      if (list.length < 2) continue;
+      // Region-vs-process pairs (Mesoamerica, Andes) are disambiguated by their
+      // position in the tree, which the reader can see. Era homographs are not.
+      const eras = list.filter((e) => e.id.includes(".japan."));
+      if (eras.length >= 2) {
+        // Japanese eras: distinct kanji flattened by romanisation, so the native
+        // form must be present and must differ.
+        const forms = new Set(eras.map((e) => e.native_name));
+        expect(forms.has(undefined), `${name} needs kanji to be told apart`).toBe(false);
+        expect(forms.size, `${name} native forms must differ`).toBe(eras.length);
+      }
+      // Chinese temple names are the SAME characters reused by later dynasties,
+      // so no native form can separate them -- the parent chain must.
+      const han = list.filter((e) => e.id.includes(".china."));
+      if (han.length >= 2) {
+        expect(new Set(han.map((e) => e.parent_id)).size, `${name} needs distinct dynasties`)
+          .toBe(han.length);
+      }
+    }
   });
 });

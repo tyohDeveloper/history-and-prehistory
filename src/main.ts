@@ -236,8 +236,49 @@ function renderColumns(): HTMLElement {
     if (hits.length === 0) {
       body.append(el("div", { class: "empty" }, "No matches."));
     }
+    // Japanese era names collide under romanisation: Shōwa 1926 is 昭和 and
+    // Shōwa 1312 is 正和, different kanji reduced to one Latin string. Twelve
+    // such pairs exist. Two identical rows separated only by dates make the
+    // reader guess, so when a name is ambiguous within the results the native
+    // form is shown beside it -- the data already distinguishes them.
+    const nameCounts = new Map<string, number>();
+    for (const e of hits) nameCounts.set(e.name, (nameCounts.get(e.name) ?? 0) + 1);
     for (const e of hits) {
       const row = renderRow(e, 0, false);
+      // Two different collisions needing two different answers. Japanese era
+      // names are distinct kanji flattened by romanisation (昭和 vs 正和), so
+      // the native form separates them. Chinese temple names are the SAME
+      // characters reused by later dynasties -- Tang Taizong and Song Taizong
+      // are both 太宗 -- so only the dynasty separates those. Prefer the native
+      // form when it is actually distinguishing, and fall back to the ancestor.
+      if ((nameCounts.get(e.name) ?? 0) > 1) {
+        const sameName = hits.filter((h) => h.name === e.name);
+        const nativeDistinguishes =
+          e.native_name !== undefined &&
+          new Set(sameName.map((h) => h.native_name)).size === sameName.length;
+        let tag = nativeDistinguishes ? e.native_name : undefined;
+        if (tag === undefined) {
+          // Nearest ancestor whose name differs across the colliding entities.
+          for (const anc of pathTo(index, e.id).slice(0, -1).reverse()) {
+            const others = sameName
+              .filter((h) => h.id !== e.id)
+              .map((h) => pathTo(index, h.id).map((n) => n.id));
+            if (others.every((chain) => !chain.includes(anc.id))) {
+              tag = anc.name;
+              break;
+            }
+          }
+        }
+        if (tag !== undefined) {
+          const label = row.querySelector(".row-name");
+          if (label !== null) {
+            label.append(
+              el("span", { class: "disambig", dir: "auto", "data-testid": "text-search-disambig" },
+                ` ${tag}`),
+            );
+          }
+        }
+      }
       row.addEventListener("click", (ev) => {
         ev.stopPropagation();
         selectEntity(e.id);

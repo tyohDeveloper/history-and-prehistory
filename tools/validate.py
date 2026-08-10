@@ -185,6 +185,18 @@ for _e in entities:
         _u = _l.get("url")
         if _u is not None and not _SAFE_URL.match(_u):
             errors.append(f"entity {_e['id']}: link url must be http(s), got {_u!r}")
+    # entity.sources[].url is a schema field that no entity currently populates
+    # and nothing renders, so it is inert -- but it reaches no guard either, and
+    # the schema's "format": "uri" does not fire because jsonschema ignores
+    # format without a format_checker. That is exactly how the source-url hole
+    # existed before it was closed. Guarding it now costs nothing and removes a
+    # trap for whoever first fills the field.
+    for _es in _e.get("sources", []):
+        _u = _es.get("url")
+        if _u is not None and not _SAFE_URL.match(_u):
+            errors.append(
+                f"entity {_e['id']}: sources[].url must be http(s), got {_u!r}"
+            )
 
 # Rule 7: a cross-region placement is a factual claim, so it needs a source.
 # Twice now a pass has added cross_parent_ids asserting that a polity held

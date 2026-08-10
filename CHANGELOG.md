@@ -14,6 +14,22 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.24.0.0-app] — 2026-08-09
+
+### Added
+
+- An "Also under ..." line in the readout when an entity is placed in more than
+  one region. The breadcrumb can only show one path, so arriving via Africa and
+  being told you are in Global & Multi-Regional read as a bug.
+
+### Changed
+
+- "Cross-Regional Empires" is retired as a top-level entry and becomes
+  `global.multi-regional`. The thirteen `cross-regional.*` identifiers are
+  renamed to `global.multi-regional.*`, since the old word no longer names
+  anything in the app.
+- Ships dataset 0.26.0.0. Size baseline 248,035 bytes gzip.
+
 ## [3.23.0.0-app] — 2026-08-09
 
 ### Added

@@ -18,7 +18,7 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.25.0.0");
+    expect(datasetVersion).toBe("0.26.0.0");
     expect(schemaVersion).toBe("3.4.0");
   });
 
@@ -190,10 +190,10 @@ describe("gap-analysis baseline", () => {
     expect(entities.filter((e) => (e.calendar_ids?.length ?? 0) > 0).length).toBe(267);
   });
 
-  it("still has summaries on only 6 of 43 region nodes", () => {
+  it("still has summaries on only 5 of 42 region nodes", () => {
     const regions = entities.filter((e) => e.kind === "region");
-    expect(regions.length).toBe(43);
-    expect(regions.filter((e) => e.summary !== undefined).length).toBe(6);
+    expect(regions.length).toBe(42);
+    expect(regions.filter((e) => e.summary !== undefined).length).toBe(5);
   });
 });
 
@@ -563,13 +563,24 @@ describe("Central Asia and the Austronesian world", () => {
     expect(legend.dating_method).toBe("received");
   });
 
-  it("keeps Cross-Regional Empires about empires", () => {
-    // The category was almost exactly inverted from its name: it held two world
-    // wars, the Cold War, a pandemic and the Bronze Age Collapse, while every
-    // actual multi-region empire sat filed under one region. The test now
-    // written into the entity: a polity spanning more than one region, or a
-    // process of imperial expansion or contraction. A worldwide event that
-    // belongs to nobody is global.
+  it("keeps multi-regional empires out of the top-level region list", () => {
+    // "Cross-Regional Empires" was a top-level peer of real geographies while
+    // not being a place, and "cross" implies crossing from one region to
+    // another rather than being in several at once. It is now
+    // global.multi-regional, and each empire is cross-linked to the regions it
+    // held -- so Suleiman is reachable from Anatolia, the Nile and here.
+    expect(entities.find((e) => e.id === "cross-regional")).toBeUndefined();
+    const mr = entities.find((e) => e.id === "global.multi-regional")!;
+    expect(mr.parent_id).toBe("global");
+    const ottoman = entities.find((e) => e.id === "global.multi-regional.ottoman")!;
+    expect(ottoman.parent_id).toBe("global.multi-regional");
+    for (const r of ["west-asia.anatolia", "africa.nile"]) {
+      expect(ottoman.cross_parent_ids, `Ottomans reachable from ${r}`).toContain(r);
+    }
+    // The reach is inherited: cross-linking the empire carries its reigns, so
+    // Suleiman spans three regions without his entity being touched.
+    const suleiman = entities.find((e) => e.id === "global.multi-regional.ottoman.suleiman")!;
+    expect(suleiman.regions).toEqual(["africa", "europe", "west-asia"]);
     const strays = ["ww1", "ww2", "cold-war", "black-death", "axial-age", "bronze-collapse"];
     for (const s of strays) {
       expect(
@@ -591,7 +602,7 @@ describe("Central Asia and the Austronesian world", () => {
     // that says where a polity came from is worth keeping.
     const mongols = entities.find((e) => e.id === "central-asia.mongol-empire")!;
     expect(mongols.parent_id).toBe("central-asia");
-    expect(mongols.cross_parent_ids).toContain("cross-regional");
+    expect(mongols.cross_parent_ids).toContain("global.multi-regional");
   });
 
   it("has a label for every source kind actually present", () => {

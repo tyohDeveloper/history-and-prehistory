@@ -68,6 +68,11 @@ export interface Entity {
   aliases?: string[];
   name_forms?: NameForm[];
   cross_parent_ids?: string[];
+  /** DERIVED at build time, never authored: the top-level geographies this
+   *  entity is reachable from, following parent_id and cross_parent_ids in both
+   *  directions. Present only when more than one. Records where an entity is
+   *  PLACED, not where a polity RULED. */
+  regions?: string[];
   redirect_ids?: string[];
   start_year_min?: number;
   start_year_max?: number;

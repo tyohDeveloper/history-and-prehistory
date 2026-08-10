@@ -70,6 +70,28 @@ def extend(E, entities):
                      "into the same bucket."},
         ]
 
+    # A container for the empires, one level under Global & Multi-Regional.
+    # Not directly under `global`: it already holds fifteen chronological
+    # frames, and the Abbasid Caliphate between the Bronze Age and the Middle
+    # Ages mixes polities with periodisation.
+    from builders import make_builders
+    _, _, G_ERA, _, _, _ = make_builders(E, id_prefix="global")
+    G_ERA("multi-regional", "Multi-Regional Empires", "global", -550, 1997, "foundational",
+          summary="Polities that held territory in more than one world region, gathered so "
+                  "they can be compared with each other.",
+          date_note="The span runs from the Achaemenids to the Hong Kong handover and is a "
+                    "container rather than a claim. Each empire here is also reachable from "
+                    "every region it held, so a reader browsing Anatolia or the Nile finds the "
+                    "Ottomans without coming here first.",
+          allow_outside_parent_dates=True)
+
+    # Order matters: the container must exist before the fold can reparent into
+    # it, and the fold must finish before regions are derived, or the derived
+    # list describes the old shape.
+    from multiregional_fold import extend as _fold
+    _fold(E, entities)
+    by_id = {e["id"]: e for e in entities}
+
     # ---------------------------------------------------- derive `regions`
 
     # `global` and `cross-regional` are top-level nodes but they are not

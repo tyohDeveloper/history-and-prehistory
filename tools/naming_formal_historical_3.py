@@ -232,7 +232,7 @@ def extend(E, entities):
 
     # ------------------------------------------- labels that are arguments
 
-    forms("cross-regional.vietnam-war",
+    forms("global.multi-regional.vietnam-war",
           name_forms=[
               {"name": "Kháng chiến chống Mỹ", "kind": "endonym", "lang": "vi",
                "note": "'Resistance war against America', the Vietnamese name. The war is "
@@ -243,7 +243,7 @@ def extend(E, entities):
                        "national name does."},
           ])
 
-    forms("cross-regional.age-of-sail",
+    forms("global.multi-regional.age-of-sail",
           name_forms=[
               {"name": "Age of Exploration", "kind": "common"},
               {"name": "Age of Discovery", "kind": "common",

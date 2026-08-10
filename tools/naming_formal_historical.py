@@ -190,7 +190,7 @@ def extend(E, entities):
         hre["source_ids"] = sorted(set(list(hre.get("source_ids", [])) +
                                        [S_OUP_SACRUM, S_HERALDICA_HRE, S_ENCYC_HRE, S_BRIT_HRE]))
 
-    forms("cross-regional.ottoman",
+    forms("global.multi-regional.ottoman",
           native="دولت عليه عثمانیه",
           name_forms=[
               {"name": "Devlet-i ʿAlīye-i ʿOsmānīye", "kind": "formal", "lang": "ota",

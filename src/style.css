@@ -623,3 +623,13 @@ a.source-cite:focus-visible { outline: 2px solid var(--accent); outline-offset: 
   opacity: 0.75;
   line-height: 1.4;
 }
+
+/* Multiple placement. The breadcrumb can only show one path; this says the
+   others exist, so arriving via Africa and being told you are in Global does
+   not read as a bug. */
+.also-in {
+  margin-top: 0.15rem;
+  font-size: 0.82em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+}

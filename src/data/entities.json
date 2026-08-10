@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.25.0.0",
-  "generated_at": "2026-08-10T02:07:24Z",
+  "dataset_version": "0.26.0.0",
+  "generated_at": "2026-08-10T02:23:37Z",
   "entities": [
     {
       "id": "global",
@@ -34,7 +34,14 @@
       "end_year": null,
       "tier": "foundational",
       "summary": "From the Aegean Bronze Age through the modern EU. Split into Mediterranean, Western, Central, Northern, and Eastern sub-branches.",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "regions": [
+        "africa",
+        "americas",
+        "europe",
+        "south-asia",
+        "southeast-asia"
+      ]
     },
     {
       "id": "europe.mediterranean",
@@ -54,7 +61,12 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "regions": [
+        "africa",
+        "europe",
+        "west-asia"
+      ]
     },
     {
       "id": "europe.central",
@@ -86,8 +98,10 @@
       "tier": "intermediate",
       "date_precision": "unknown",
       "regions": [
+        "africa",
         "central-asia",
-        "europe"
+        "europe",
+        "west-asia"
       ]
     },
     {
@@ -145,6 +159,12 @@
       "source_ids": [
         "middle-east-term-origins",
         "tandf-mahan-gordon-middle-east"
+      ],
+      "regions": [
+        "africa",
+        "south-asia",
+        "southeast-asia",
+        "west-asia"
       ]
     },
     {
@@ -155,7 +175,13 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "regions": [
+        "africa",
+        "central-asia",
+        "europe",
+        "west-asia"
+      ]
     },
     {
       "id": "west-asia.anatolia",
@@ -165,7 +191,12 @@
       "start_year": null,
       "end_year": null,
       "tier": "intermediate",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "regions": [
+        "africa",
+        "europe",
+        "west-asia"
+      ]
     },
     {
       "id": "west-asia.iran",
@@ -228,7 +259,11 @@
       "start_year": null,
       "end_year": null,
       "tier": "intermediate",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "regions": [
+        "africa",
+        "west-asia"
+      ]
     },
     {
       "id": "central-asia",
@@ -255,6 +290,10 @@
           "kind": "historical",
           "note": "The 19th-century Russian and British name for the region, divided into Russian and Chinese halves."
         }
+      ],
+      "regions": [
+        "central-asia",
+        "west-asia"
       ]
     },
     {
@@ -314,8 +353,13 @@
         }
       ],
       "regions": [
+        "africa",
+        "americas",
         "central-asia",
-        "south-asia"
+        "europe",
+        "south-asia",
+        "southeast-asia",
+        "west-asia"
       ]
     },
     {
@@ -366,7 +410,15 @@
       "start_year": null,
       "end_year": null,
       "tier": "intermediate",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "regions": [
+        "africa",
+        "americas",
+        "europe",
+        "south-asia",
+        "southeast-asia",
+        "west-asia"
+      ]
     },
     {
       "id": "southeast-asia.mainland",
@@ -416,7 +468,15 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "regions": [
+        "africa",
+        "americas",
+        "europe",
+        "south-asia",
+        "southeast-asia",
+        "west-asia"
+      ]
     },
     {
       "id": "africa.nile",
@@ -426,7 +486,12 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "regions": [
+        "africa",
+        "europe",
+        "west-asia"
+      ]
     },
     {
       "id": "africa.north",
@@ -449,6 +514,11 @@
           "kind": "historical",
           "note": "An early modern European name for the coast, now avoided."
         }
+      ],
+      "regions": [
+        "africa",
+        "europe",
+        "west-asia"
       ],
       "aliases": [
         "Maghreb",
@@ -503,7 +573,14 @@
       "start_year": null,
       "end_year": null,
       "tier": "foundational",
-      "date_precision": "unknown"
+      "date_precision": "unknown",
+      "regions": [
+        "africa",
+        "americas",
+        "europe",
+        "south-asia",
+        "southeast-asia"
+      ]
     },
     {
       "id": "americas.north",
@@ -604,36 +681,6 @@
       "end_year": null,
       "tier": "intermediate",
       "date_precision": "unknown"
-    },
-    {
-      "id": "cross-regional",
-      "kind": "region",
-      "name": "Cross-Regional Empires",
-      "parent_id": null,
-      "start_year": null,
-      "end_year": null,
-      "tier": "foundational",
-      "summary": "Empires that spanned more than one world region, and the processes that built and dismantled them.",
-      "date_precision": "unknown",
-      "date_note": "The test for this category: a single polity whose territory crossed more than one of this dataset's regions, or a process of imperial expansion or contraction that did the same. A worldwide event that belongs to nobody -- a war, a pandemic, a moon landing -- is filed under Global instead. Grouping the caliphates, the Mongols and the European maritime empires for comparison is a deliberate scholarly move, not a filing convenience: Burbank and Cooper treat them as comparable, and the Oxford World History of Empire frames the comparison as a corrective to older single-region imperial history.",
-      "source_ids": [
-        "burbank-cooper-empires-world-history",
-        "oxford-world-history-of-empire"
-      ],
-      "caveats": [
-        {
-          "kind": "naming-confusion",
-          "text": "Most empires here are cross-linked from the region they came from, not moved. The caliphates are the exception: they are the only ones with no single regional home.",
-          "source_ids": [
-            "burbank-cooper-empires-world-history"
-          ]
-        }
-      ],
-      "regions": [
-        "central-asia",
-        "europe",
-        "west-asia"
-      ]
     },
     {
       "id": "global.bce",
@@ -6493,7 +6540,7 @@
       "summary": "First Persian empire; largest of its time.",
       "date_precision": "approx",
       "cross_parent_ids": [
-        "cross-regional"
+        "global.multi-regional"
       ],
       "regions": [
         "africa",
@@ -6739,10 +6786,10 @@
       "summary": "Founder of Islam; united most of Arabia under his rule by 632."
     },
     {
-      "id": "cross-regional.rashidun",
+      "id": "global.multi-regional.rashidun",
       "kind": "era",
       "name": "Rashidun Caliphate",
-      "parent_id": "cross-regional",
+      "parent_id": "global.multi-regional",
       "start_year": 632,
       "end_year": 661,
       "tier": "foundational",
@@ -6750,13 +6797,21 @@
         "hijri"
       ],
       "summary": "First four 'rightly guided' caliphs; rapid conquest of Persia, Levant, and Egypt.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "africa.nile",
+        "west-asia.arabia"
+      ],
+      "regions": [
+        "africa",
+        "west-asia"
+      ]
     },
     {
-      "id": "cross-regional.umayyad",
+      "id": "global.multi-regional.umayyad",
       "kind": "era",
       "name": "Umayyad Caliphate",
-      "parent_id": "cross-regional",
+      "parent_id": "global.multi-regional",
       "start_year": 661,
       "end_year": 750,
       "tier": "foundational",
@@ -6764,13 +6819,23 @@
         "hijri"
       ],
       "summary": "Dynasty ruling from Damascus. Reached from Iberia to Central Asia.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "africa.north",
+        "europe.western",
+        "west-asia.mesopotamia"
+      ],
+      "regions": [
+        "africa",
+        "europe",
+        "west-asia"
+      ]
     },
     {
-      "id": "cross-regional.abbasid",
+      "id": "global.multi-regional.abbasid",
       "kind": "era",
       "name": "Abbasid Caliphate",
-      "parent_id": "cross-regional",
+      "parent_id": "global.multi-regional",
       "start_year": 750,
       "end_year": 1258,
       "tier": "foundational",
@@ -6778,24 +6843,36 @@
         "hijri"
       ],
       "summary": "Ruled from Baghdad; Islamic Golden Age. Ended by Mongol sack of Baghdad.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "central-asia",
+        "west-asia.mesopotamia"
+      ],
+      "regions": [
+        "central-asia",
+        "west-asia"
+      ]
     },
     {
-      "id": "cross-regional.abbasid.harun",
+      "id": "global.multi-regional.abbasid.harun",
       "kind": "reign",
       "name": "Harun al-Rashid",
-      "parent_id": "cross-regional.abbasid",
+      "parent_id": "global.multi-regional.abbasid",
       "start_year": 786,
       "end_year": 809,
       "tier": "foundational",
       "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "west-asia"
+      ],
       "summary": "Fifth Abbasid caliph; his court is the setting of many One Thousand and One Nights tales."
     },
     {
-      "id": "cross-regional.fatimid",
+      "id": "global.multi-regional.fatimid",
       "kind": "era",
       "name": "Fatimid Caliphate",
-      "parent_id": "cross-regional",
+      "parent_id": "global.multi-regional",
       "start_year": 909,
       "end_year": 1171,
       "tier": "intermediate",
@@ -6803,13 +6880,21 @@
         "hijri"
       ],
       "summary": "Isma'ili Shia caliphate; founded Cairo and Al-Azhar.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "africa.nile",
+        "west-asia.mesopotamia"
+      ],
+      "regions": [
+        "africa",
+        "west-asia"
+      ]
     },
     {
-      "id": "cross-regional.ottoman",
+      "id": "global.multi-regional.ottoman",
       "kind": "era",
       "name": "Ottoman Empire",
-      "parent_id": "cross-regional",
+      "parent_id": "global.multi-regional",
       "start_year": 1299,
       "end_year": 1922,
       "tier": "foundational",
@@ -6854,6 +6939,16 @@
       "source_ids": [
         "epfl-ottoman-empire"
       ],
+      "cross_parent_ids": [
+        "africa.nile",
+        "europe.eastern",
+        "west-asia.anatolia"
+      ],
+      "regions": [
+        "africa",
+        "europe",
+        "west-asia"
+      ],
       "aliases": [
         "Devlet-i ʿAlīye-i ʿOsmānīye",
         "Devlet-i Aliyye",
@@ -6862,25 +6957,35 @@
       ]
     },
     {
-      "id": "cross-regional.ottoman.mehmed2",
+      "id": "global.multi-regional.ottoman.mehmed2",
       "kind": "reign",
       "name": "Mehmed II the Conqueror",
-      "parent_id": "cross-regional.ottoman",
+      "parent_id": "global.multi-regional.ottoman",
       "start_year": 1451,
       "end_year": 1481,
       "tier": "foundational",
       "summary": "Conquered Constantinople in 1453, ending the Byzantine Empire.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe",
+        "west-asia"
+      ]
     },
     {
-      "id": "cross-regional.ottoman.suleiman",
+      "id": "global.multi-regional.ottoman.suleiman",
       "kind": "reign",
       "name": "Suleiman I the Magnificent",
-      "parent_id": "cross-regional.ottoman",
+      "parent_id": "global.multi-regional.ottoman",
       "start_year": 1520,
       "end_year": 1566,
       "tier": "foundational",
       "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe",
+        "west-asia"
+      ],
       "summary": "Longest-reigning Ottoman sultan; peak of Ottoman power and cultural achievement."
     },
     {
@@ -7347,7 +7452,7 @@
         }
       ],
       "cross_parent_ids": [
-        "cross-regional"
+        "global.multi-regional"
       ],
       "regions": [
         "africa",
@@ -7890,7 +7995,7 @@
         "murcia-1898-spanish-empire"
       ],
       "cross_parent_ids": [
-        "cross-regional"
+        "global.multi-regional"
       ],
       "summary": "First truly global empire; the leading colonial power of the 16th century."
     },
@@ -7913,7 +8018,7 @@
         "brown-ejph-portuguese-empire"
       ],
       "cross_parent_ids": [
-        "cross-regional"
+        "global.multi-regional"
       ],
       "summary": "Pioneered European maritime exploration; earliest and longest-lived colonial empire."
     },
@@ -8291,7 +8396,7 @@
         }
       ],
       "cross_parent_ids": [
-        "cross-regional"
+        "global.multi-regional"
       ],
       "summary": "Multi-national empire from Peter the Great to the abdication of Nicholas II.",
       "aliases": [
@@ -8484,7 +8589,7 @@
       "summary": "Largest contiguous empire in world history.",
       "date_precision": "approx",
       "cross_parent_ids": [
-        "cross-regional"
+        "global.multi-regional"
       ],
       "regions": [
         "central-asia",
@@ -8667,7 +8772,7 @@
       "tier": "intermediate",
       "date_precision": "approx",
       "cross_parent_ids": [
-        "cross-regional"
+        "global.multi-regional"
       ]
     },
     {
@@ -10666,10 +10771,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "cross-regional.age-of-sail",
+      "id": "global.multi-regional.age-of-sail",
       "kind": "era",
       "name": "Age of Exploration / Age of Sail",
-      "parent_id": "cross-regional",
+      "parent_id": "global.multi-regional",
       "start_year": 1418,
       "end_year": 1815,
       "tier": "foundational",
@@ -10691,6 +10796,20 @@
           "text": "'Discovery' presumes whose knowledge counts as new. The places discovered were, without exception, already inhabited."
         }
       ],
+      "cross_parent_ids": [
+        "africa",
+        "americas",
+        "europe",
+        "south-asia",
+        "southeast-asia"
+      ],
+      "regions": [
+        "africa",
+        "americas",
+        "europe",
+        "south-asia",
+        "southeast-asia"
+      ],
       "summary": "European maritime exploration and colonial expansion, roughly Columbus to Napoleon.",
       "aliases": [
         "Age of Exploration",
@@ -10698,14 +10817,22 @@
       ]
     },
     {
-      "id": "cross-regional.columbus",
+      "id": "global.multi-regional.columbus",
       "kind": "event",
       "name": "Columbus reaches the Americas",
-      "parent_id": "cross-regional",
+      "parent_id": "global.multi-regional",
       "start_year": 1492,
       "end_year": 1492,
       "tier": "foundational",
       "date_precision": "approx",
+      "cross_parent_ids": [
+        "americas",
+        "europe"
+      ],
+      "regions": [
+        "americas",
+        "europe"
+      ],
       "summary": "Christopher Columbus's first landfall in the Bahamas; opened sustained contact between the Old World and the Americas."
     },
     {
@@ -10884,10 +11011,10 @@
       "date_precision": "approx"
     },
     {
-      "id": "cross-regional.scramble-for-africa",
+      "id": "global.multi-regional.scramble-for-africa",
       "kind": "era",
       "name": "Scramble for Africa",
-      "parent_id": "cross-regional",
+      "parent_id": "global.multi-regional",
       "start_year": 1881,
       "end_year": 1914,
       "tier": "foundational",
@@ -10896,29 +11023,53 @@
         "Colonization of Africa"
       ],
       "summary": "European colonial partition of Africa, formalized by the Berlin Conference (1884–85).",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "africa",
+        "europe"
+      ],
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
-      "id": "cross-regional.berlin-conference",
+      "id": "global.multi-regional.berlin-conference",
       "kind": "event",
       "name": "Berlin Conference",
-      "parent_id": "cross-regional.scramble-for-africa",
+      "parent_id": "global.multi-regional.scramble-for-africa",
       "start_year": 1884,
       "end_year": 1885,
       "tier": "intermediate",
       "summary": "European powers agreed rules for the partition of Africa; no African representatives present.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "regions": [
+        "africa",
+        "europe"
+      ]
     },
     {
-      "id": "cross-regional.decolonization",
+      "id": "global.multi-regional.decolonization",
       "kind": "era",
       "name": "Decolonization",
-      "parent_id": "cross-regional",
+      "parent_id": "global.multi-regional",
       "start_year": 1945,
       "end_year": 1997,
       "tier": "foundational",
       "summary": "Dissolution of European colonial empires after WWII; independence for most of Africa, Asia, and the Pacific.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "africa",
+        "south-asia",
+        "southeast-asia",
+        "west-asia"
+      ],
+      "regions": [
+        "africa",
+        "south-asia",
+        "southeast-asia",
+        "west-asia"
+      ]
     },
     {
       "id": "europe.western.france.napoleon.napoleonic-wars",
@@ -26553,7 +26704,7 @@
         "Second British Empire"
       ],
       "cross_parent_ids": [
-        "cross-regional"
+        "global.multi-regional"
       ]
     },
     {
@@ -27022,6 +27173,37 @@
       "aliases": [
         "Columbian Exchange",
         "Great Dying"
+      ]
+    },
+    {
+      "id": "global.multi-regional",
+      "kind": "era",
+      "name": "Multi-Regional Empires",
+      "parent_id": "global",
+      "start_year": -550,
+      "end_year": 1997,
+      "tier": "foundational",
+      "date_note": "The span runs from the Achaemenids to the Hong Kong handover and is a container rather than a claim. Each empire here is also reachable from every region it held, so a reader browsing Anatolia or the Nile finds the Ottomans without coming here first. Grouping the caliphates, the Mongols and the European maritime empires for comparison is a deliberate scholarly move: Burbank and Cooper treat them as comparable, and the Oxford World History of Empire frames the comparison as a corrective to older single-region imperial history.",
+      "allow_outside_parent_dates": true,
+      "summary": "Polities that held territory in more than one world region, gathered so they can be compared with each other.",
+      "date_precision": "approx",
+      "source_ids": [
+        "burbank-cooper-empires-world-history",
+        "oxford-world-history-of-empire"
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Called multi-regional, not cross-regional: these polities were in several regions at once rather than crossing from one to another.",
+          "source_ids": [
+            "burbank-cooper-empires-world-history"
+          ]
+        }
+      ],
+      "regions": [
+        "central-asia",
+        "europe",
+        "west-asia"
       ]
     },
     {

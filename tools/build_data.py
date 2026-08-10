@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.4.0"
-DATASET_VERSION = "0.25.0.0"
+DATASET_VERSION = "0.26.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -994,25 +994,25 @@ E(f"{isl}.rise-islam.muhammad", "reign", "Prophet Muhammad", f"{isl}.rise-islam"
   start=610, end=632, tier="foundational",
   calendar_ids=["hijri"])
 
-E("cross-regional.rashidun", "era", "Rashidun Caliphate", "cross-regional", start=632, end=661, tier="foundational",
+E("global.multi-regional.rashidun", "era", "Rashidun Caliphate", "cross-regional", start=632, end=661, tier="foundational",
   calendar_ids=["hijri"],
   summary="First four 'rightly guided' caliphs; rapid conquest of Persia, Levant, and Egypt.")
-E("cross-regional.umayyad", "era", "Umayyad Caliphate", "cross-regional", start=661, end=750, tier="foundational",
+E("global.multi-regional.umayyad", "era", "Umayyad Caliphate", "cross-regional", start=661, end=750, tier="foundational",
   calendar_ids=["hijri"],
   summary="Dynasty ruling from Damascus. Reached from Iberia to Central Asia.")
-E("cross-regional.abbasid", "era", "Abbasid Caliphate", "cross-regional", start=750, end=1258, tier="foundational",
+E("global.multi-regional.abbasid", "era", "Abbasid Caliphate", "cross-regional", start=750, end=1258, tier="foundational",
   calendar_ids=["hijri"],
   summary="Ruled from Baghdad; Islamic Golden Age. Ended by Mongol sack of Baghdad.")
-E("cross-regional.abbasid.harun", "reign", "Harun al-Rashid", "cross-regional.abbasid", start=786, end=809, tier="foundational")
-E("cross-regional.fatimid", "era", "Fatimid Caliphate", "cross-regional", start=909, end=1171, tier="intermediate",
+E("global.multi-regional.abbasid.harun", "reign", "Harun al-Rashid", "global.multi-regional.abbasid", start=786, end=809, tier="foundational")
+E("global.multi-regional.fatimid", "era", "Fatimid Caliphate", "cross-regional", start=909, end=1171, tier="intermediate",
   calendar_ids=["hijri"],
   summary="Isma'ili Shia caliphate; founded Cairo and Al-Azhar.")
-E("cross-regional.ottoman", "era", "Ottoman Empire", "cross-regional", start=1299, end=1922, tier="foundational",
+E("global.multi-regional.ottoman", "era", "Ottoman Empire", "cross-regional", start=1299, end=1922, tier="foundational",
   calendar_ids=["hijri"],
   summary="Multi-continental empire spanning Anatolia, the Balkans, North Africa, and the Arab world.")
-E("cross-regional.ottoman.mehmed2", "reign", "Mehmed II the Conqueror", "cross-regional.ottoman", start=1451, end=1481, tier="foundational",
+E("global.multi-regional.ottoman.mehmed2", "reign", "Mehmed II the Conqueror", "global.multi-regional.ottoman", start=1451, end=1481, tier="foundational",
   summary="Conquered Constantinople in 1453, ending the Byzantine Empire.")
-E("cross-regional.ottoman.suleiman", "reign", "Suleiman I the Magnificent", "cross-regional.ottoman", start=1520, end=1566, tier="foundational")
+E("global.multi-regional.ottoman.suleiman", "reign", "Suleiman I the Magnificent", "global.multi-regional.ottoman", start=1520, end=1566, tier="foundational")
 
 
 # =============================================================================
@@ -1489,8 +1489,8 @@ E("global.classical-antiquity.axial-age", "era", "Axial Age", "global.classical-
   summary="Concurrent religious and philosophical revolutions: Buddha, Confucius, Zoroaster, Hebrew prophets, Greek philosophers.")
 E("global.middle-ages.black-death", "event", "Black Death", "global.middle-ages", start=1346, end=1353, tier="foundational",
   summary="Bubonic plague pandemic that killed 30–60% of Europe's population and swept Asia and North Africa.")
-E("cross-regional.age-of-sail", "era", "Age of Exploration / Age of Sail", "cross-regional", start=1418, end=1815, tier="foundational")
-E("cross-regional.columbus", "event", "Columbus reaches the Americas", "cross-regional", start=1492, end=1492, tier="foundational")
+E("global.multi-regional.age-of-sail", "era", "Age of Exploration / Age of Sail", "cross-regional", start=1418, end=1815, tier="foundational")
+E("global.multi-regional.columbus", "event", "Columbus reaches the Americas", "cross-regional", start=1492, end=1492, tier="foundational")
 E("global.short-20c.ww1", "event", "World War I", "global.short-20c", start=1914, end=1918, tier="foundational")
 E("global.short-20c.ww2", "event", "World War II", "global.short-20c", start=1939, end=1945, tier="foundational")
 E("global.short-20c.cold-war", "era", "Cold War", "global.short-20c", start=1947, end=1991, tier="foundational")
@@ -1545,15 +1545,15 @@ E("global.second-industrial-revolution", "era", "Second Industrial Revolution", 
   aliases=["Technological Revolution"],
   summary="Steel, electricity, chemicals, internal combustion, mass production; the age of Edison, Tesla, Ford.")
 
-E("cross-regional.scramble-for-africa", "era", "Scramble for Africa", "cross-regional",
+E("global.multi-regional.scramble-for-africa", "era", "Scramble for Africa", "cross-regional",
   start=1881, end=1914, tier="foundational",
   aliases=["Partition of Africa", "Colonization of Africa"],
   summary="European colonial partition of Africa, formalized by the Berlin Conference (1884–85).")
-E("cross-regional.berlin-conference", "event", "Berlin Conference", "cross-regional.scramble-for-africa",
+E("global.multi-regional.berlin-conference", "event", "Berlin Conference", "global.multi-regional.scramble-for-africa",
   start=1884, end=1885, tier="intermediate",
   summary="European powers agreed rules for the partition of Africa; no African representatives present.")
 
-E("cross-regional.decolonization", "era", "Decolonization", "cross-regional",
+E("global.multi-regional.decolonization", "era", "Decolonization", "cross-regional",
   start=1945, end=1997, tier="foundational",
   summary="Dissolution of European colonial empires after WWII; independence for most of Africa, Asia, and the Pacific.")
 
@@ -1686,7 +1686,7 @@ from naming_formal_historical_2 import extend as _naming_formal_historical_2
 from naming_formal_historical_3 import extend as _naming_formal_historical_3
 from naming_formal_historical_4 import extend as _naming_formal_historical_4
 from extensions_gaps import GAP_SOURCES  # noqa: E402
-from cross_regional_definition import extend as _cross_regional_definition
+from multiregional_definition import extend as _cross_regional_definition
 from extensions_gaps import extend as _extend_gaps
 from regions_multiregional import extend as _regions_multiregional
 _extend_seasia_oceania(E, entities)
@@ -1817,8 +1817,8 @@ _backfill_summaries = {
     "west-asia.iran.islamic-republic": "Theocratic state established by Ayatollah Khomeini after the 1979 revolution.",
     "west-asia.arabia.rise-islam": "Muhammad's prophetic career and the birth of Islam.",
     "west-asia.arabia.rise-islam.muhammad": "Founder of Islam; united most of Arabia under his rule by 632.",
-    "cross-regional.abbasid.harun": "Fifth Abbasid caliph; his court is the setting of many One Thousand and One Nights tales.",
-    "cross-regional.ottoman.suleiman": "Longest-reigning Ottoman sultan; peak of Ottoman power and cultural achievement.",
+    "global.multi-regional.abbasid.harun": "Fifth Abbasid caliph; his court is the setting of many One Thousand and One Nights tales.",
+    "global.multi-regional.ottoman.suleiman": "Longest-reigning Ottoman sultan; peak of Ottoman power and cultural achievement.",
     # Europe (Mediterranean)
     "europe.mediterranean.greece": "Cradle of Western philosophy, drama, historiography, and democracy.",
     "europe.mediterranean.greece.mycenaean": "Late Bronze Age Greek civilization; the world of Homer's epics.",
@@ -1903,8 +1903,8 @@ _backfill_summaries = {
     "oceania.polynesia.aotearoa": "Māori settlement and society of New Zealand before 1840.",
     "oceania.polynesia.new-zealand": "Post-Treaty-of-Waitangi Aotearoa/New Zealand.",
     "global.classical-antiquity.axial-age": "Concurrent religious/philosophical revolutions in Greece, Israel, Persia, India, and China.",
-    "cross-regional.age-of-sail": "European maritime exploration and colonial expansion, roughly Columbus to Napoleon.",
-    "cross-regional.columbus": "Christopher Columbus's first landfall in the Bahamas; opened sustained contact between the Old World and the Americas.",
+    "global.multi-regional.age-of-sail": "European maritime exploration and colonial expansion, roughly Columbus to Napoleon.",
+    "global.multi-regional.columbus": "Christopher Columbus's first landfall in the Bahamas; opened sustained contact between the Old World and the Americas.",
     "global.short-20c.ww1": "World War I — the first industrialized total war; ended four empires.",
     "global.short-20c.ww2": "World War II — the deadliest conflict in human history; ended with the atomic bombings of Japan.",
     "global.short-20c.cold-war": "US–USSR geopolitical rivalry, 1947–1991; defined the second half of the 20th century.",
@@ -2267,7 +2267,7 @@ themes = [
               "south-asia.gupta",
               "east-asia.china.tang",
               "east-asia.japan.heian",
-              "cross-regional.abbasid",
+              "global.multi-regional.abbasid",
               "east-asia.china.song",
               "east-asia.japan.edo",
               "south-asia.mughal",
@@ -2277,10 +2277,10 @@ themes = [
           [
               "west-asia.iran.achaemenid",
               f"{rome}.empire",
-              "cross-regional.umayyad",
-              "cross-regional.abbasid",
+              "global.multi-regional.umayyad",
+              "global.multi-regional.abbasid",
               "central-asia.mongol-empire",
-              "cross-regional.ottoman",
+              "global.multi-regional.ottoman",
               "south-asia.mughal",
               "europe.western.iberia.spanish-empire",
               "europe.western.france.napoleon",
@@ -2313,7 +2313,7 @@ themes = [
               "east-asia.china.han.western",
               "central-asia.kushan",
               "east-asia.china.tang",
-              "cross-regional.abbasid",
+              "global.multi-regional.abbasid",
               "central-asia.mongol-empire",
               "central-asia.timurid",
           ]),
@@ -2362,13 +2362,13 @@ themes = [
           "Muslim-ruled polities from the Rashidun conquests through the great early-modern empires.",
           [
               "west-asia.arabia.rise-islam",
-              "cross-regional.rashidun",
-              "cross-regional.umayyad",
-              "cross-regional.abbasid",
-              "cross-regional.fatimid",
+              "global.multi-regional.rashidun",
+              "global.multi-regional.umayyad",
+              "global.multi-regional.abbasid",
+              "global.multi-regional.fatimid",
               "west-asia.iran.safavid",
               "south-asia.mughal",
-              "cross-regional.ottoman",
+              "global.multi-regional.ottoman",
               "africa.west.mali",
               "africa.west.songhai",
               "africa.west.sokoto",
@@ -2407,7 +2407,7 @@ themes = [
     theme("decolonization", "Decolonization",
           "Dissolution of European colonial empires and emergence of independent post-colonial states.",
           [
-              "cross-regional.decolonization",
+              "global.multi-regional.decolonization",
               "south-asia.independence",
               f"{sea}.maritime.indonesia",
               "africa.nile.ethiopia.haile-selassie",
@@ -3245,10 +3245,10 @@ frames = [
      "entity_id": f"{rome}.empire"},
     {"id": "fall-constantinople", "name": "Fall of Constantinople", "year": 1453, "anchor_set": "western",
      "summary": "Ottoman conquest ends the Byzantine Empire; conventional end of the Middle Ages.",
-     "entity_id": "cross-regional.ottoman.mehmed2"},
+     "entity_id": "global.multi-regional.ottoman.mehmed2"},
     {"id": "columbus", "name": "Columbus reaches the Americas", "year": 1492, "anchor_set": "western",
      "summary": "Christopher Columbus's first landfall in the Bahamas; the beginning of sustained European contact with the Americas.",
-     "entity_id": "cross-regional.columbus"},
+     "entity_id": "global.multi-regional.columbus"},
     {"id": "american-revolution", "name": "American Revolution", "year": 1775, "end_year": 1783, "anchor_set": "western",
      "summary": "Colonial revolt that produced the first successful independence movement in the Americas."},
     {"id": "french-revolution", "name": "French Revolution", "year": 1789, "anchor_set": "western",
@@ -3284,7 +3284,7 @@ frames = [
      "summary": "Year 1 of the Islamic calendar."},
     {"id": "sack-baghdad", "name": "Mongol Sack of Baghdad", "year": 1258, "anchor_set": "islamic",
      "summary": "Hülegü Khan's Mongols destroyed Baghdad and ended the Abbasid Caliphate; a symbolic close to the Islamic Golden Age.",
-     "entity_id": "cross-regional.abbasid"},
+     "entity_id": "global.multi-regional.abbasid"},
 
     # South Asian
     {"id": "ashoka-conversion", "name": "Ashoka's conversion (Kalinga War)", "year": -261, "anchor_set": "south-asian",

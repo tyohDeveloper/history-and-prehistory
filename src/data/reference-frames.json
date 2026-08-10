@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.25.0.0",
-  "generated_at": "2026-08-10T02:07:24Z",
+  "dataset_version": "0.26.0.0",
+  "generated_at": "2026-08-10T02:23:37Z",
   "frames": [
     {
       "id": "lucy",
@@ -97,7 +97,7 @@
       "year": 1453,
       "anchor_set": "western",
       "summary": "Ottoman conquest ends the Byzantine Empire; conventional end of the Middle Ages.",
-      "entity_id": "cross-regional.ottoman.mehmed2"
+      "entity_id": "global.multi-regional.ottoman.mehmed2"
     },
     {
       "id": "columbus",
@@ -105,7 +105,7 @@
       "year": 1492,
       "anchor_set": "western",
       "summary": "Christopher Columbus's first landfall in the Bahamas; the beginning of sustained European contact with the Americas.",
-      "entity_id": "cross-regional.columbus"
+      "entity_id": "global.multi-regional.columbus"
     },
     {
       "id": "american-revolution",
@@ -203,7 +203,7 @@
       "year": 1258,
       "anchor_set": "islamic",
       "summary": "Hülegü Khan's Mongols destroyed Baghdad and ended the Abbasid Caliphate; a symbolic close to the Islamic Golden Age.",
-      "entity_id": "cross-regional.abbasid"
+      "entity_id": "global.multi-regional.abbasid"
     },
     {
       "id": "ashoka-conversion",

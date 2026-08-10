@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 247636,
+  "gzipBytes": 248035,
   "recordedAt": "2026-08-09",
-  "note": "v3.23.0.0 + restructure, gaps and derived regions (data 0.25.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
+  "note": "v3.24.0.0 + multi-regional fold (data 0.26.0.0). Measured with zlib.gzipSync, matching scripts/verify-build.mjs."
 }

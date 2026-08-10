@@ -299,6 +299,20 @@ function renderReadout(): HTMLElement {
     .map((n) => n.name)
     .join(" \u203A ");
   box.append(el("div", { class: "breadcrumb", "data-testid": "text-readout-breadcrumb" }, trail));
+  // The breadcrumb shows the canonical path, which is disorienting when you
+  // arrived by another one: clicking Africa > Nile Valley > Ottoman > Suleiman
+  // and being told you are in Global & Multi-Regional looks like a bug. Naming
+  // the other regions makes the multiple placement visible instead of
+  // surprising.
+  if (e.regions !== undefined && e.regions.length > 1) {
+    const here = pathTo(index, e.id)[0]?.id;
+    const others = e.regions.filter((r) => r !== here);
+    if (others.length > 0) {
+      const names = others.map((r) => index.byId.get(r)?.name ?? r);
+      box.append(el("div", { class: "also-in", "data-testid": "text-readout-also-in" },
+        `Also under ${names.join(", ")}`));
+    }
+  }
   box.append(el("h2", { "data-testid": "text-readout-name" }, e.name));
   if (e.native_name !== undefined) {
     box.append(el("p", { class: "native", dir: "auto", "data-testid": "text-readout-native" }, e.native_name));

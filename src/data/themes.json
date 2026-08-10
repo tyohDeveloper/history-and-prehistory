@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.25.0.0",
-  "generated_at": "2026-08-10T02:07:24Z",
+  "dataset_version": "0.26.0.0",
+  "generated_at": "2026-08-10T02:23:37Z",
   "themes": [
     {
       "id": "empires-classical",
@@ -31,7 +31,7 @@
         "south-asia.gupta",
         "east-asia.china.tang",
         "east-asia.japan.heian",
-        "cross-regional.abbasid",
+        "global.multi-regional.abbasid",
         "east-asia.china.song",
         "east-asia.japan.edo",
         "south-asia.mughal"
@@ -45,10 +45,10 @@
       "entity_ids": [
         "west-asia.iran.achaemenid",
         "europe.mediterranean.rome.empire",
-        "cross-regional.umayyad",
-        "cross-regional.abbasid",
+        "global.multi-regional.umayyad",
+        "global.multi-regional.abbasid",
         "central-asia.mongol-empire",
-        "cross-regional.ottoman",
+        "global.multi-regional.ottoman",
         "south-asia.mughal",
         "europe.western.iberia.spanish-empire",
         "europe.western.france.napoleon",
@@ -93,7 +93,7 @@
         "east-asia.china.han.western",
         "central-asia.kushan",
         "east-asia.china.tang",
-        "cross-regional.abbasid",
+        "global.multi-regional.abbasid",
         "central-asia.mongol-empire",
         "central-asia.timurid"
       ],
@@ -157,13 +157,13 @@
       "description": "Muslim-ruled polities from the Rashidun conquests through the great early-modern empires.",
       "entity_ids": [
         "west-asia.arabia.rise-islam",
-        "cross-regional.rashidun",
-        "cross-regional.umayyad",
-        "cross-regional.abbasid",
-        "cross-regional.fatimid",
+        "global.multi-regional.rashidun",
+        "global.multi-regional.umayyad",
+        "global.multi-regional.abbasid",
+        "global.multi-regional.fatimid",
         "west-asia.iran.safavid",
         "south-asia.mughal",
-        "cross-regional.ottoman",
+        "global.multi-regional.ottoman",
         "africa.west.mali",
         "africa.west.songhai",
         "africa.west.sokoto",
@@ -218,7 +218,7 @@
       "name": "Decolonization",
       "description": "Dissolution of European colonial empires and emergence of independent post-colonial states.",
       "entity_ids": [
-        "cross-regional.decolonization",
+        "global.multi-regional.decolonization",
         "south-asia.independence",
         "southeast-asia.maritime.indonesia",
         "africa.nile.ethiopia.haile-selassie",

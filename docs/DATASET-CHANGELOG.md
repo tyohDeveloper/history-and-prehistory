@@ -1,5 +1,68 @@
 # Changelog
 
+## 0.26.0.0 — Multi-regional, not cross-regional (2026-08-09)
+
+### The word was wrong, and so was the placement
+
+"Cross-regional" implies crossing *from* one region *to* another. These polities
+were in several at once, which is a different claim. The category is renamed
+**Multi-Regional Empires** and stops being a top-level peer of real geographies,
+because it never was a place.
+
+It now sits at `global.multi-regional`, one level under Global & Multi-Regional
+-- not directly under `global`, which already holds fifteen chronological
+frames. The Abbasid Caliphate between the Bronze Age and the Middle Ages would
+mix polities with periodisation.
+
+The thirteen `cross-regional.*` identifiers are renamed to
+`global.multi-regional.*`. The identifier is visible in the readout, and leaving
+it pointing at a word the app no longer uses is the same drift that was flagged
+on `dutch-eic`.
+
+### Nothing was lost, and reach is inherited
+
+Each empire is cross-linked to the regions it actually held. Because the tree
+places an entity under every cross-link, **its children come with it**:
+cross-linking the Ottoman Empire to Anatolia, the Nile Valley and Eastern Europe
+makes Suleiman reachable by all three paths without touching his entity at all.
+Nine cross-link lists cover several hundred descendants.
+
+Verified by walking each path in the browser:
+
+* West Asia → Anatolia → Ottoman Empire → Suleiman ✓
+* Africa → Nile Valley & Northeast Africa → Ottoman Empire → Suleiman ✓
+* Global & Multi-Regional → Multi-Regional Empires → Ottoman Empire → Suleiman ✓
+
+The Ottoman Empire now appears in the Nile Valley column beside Kush, Aksum and
+the Fatimids, which reads as it should.
+
+### These are authored claims, unlike `regions`
+
+The previous release drew a line: a *derived* list can say where an entity is
+placed, but where a polity *ruled* has to be asserted. These cross-link lists
+are that assertion, and they are deliberately coarse -- the regions a polity
+substantially held, not every province it raided.
+
+Two judgement calls recorded in the module: the **Rashidun** caliphate is given
+West Asia and Africa but not Central Asia, since it reached Khorasan only at the
+very end and the eastward push belongs to the Umayyads; and **Columbus** gets
+the Americas and Europe rather than everywhere the consequences reached, which
+would be the whole dataset.
+
+### What the screenshot caught
+
+The breadcrumb shows the canonical path. Navigating Africa → Nile Valley →
+Ottoman → Suleiman and then being told "Global & Multi-Regional › ..." looks
+like a bug. The readout now adds **"Also under Africa, Europe, West Asia"**,
+which turns a surprise into information and uses the derived `regions` field to
+do it.
+
+### Counts
+
+1,648 entities unchanged; this pass moved and relabelled. Region nodes 43 → 42.
+85 entities now span more than one region, up from 60, because folding the
+category made the empires' reach explicit.
+
 ## 0.25.0.0 — Cross-Regional means empires, and the deferred gaps are filled (2026-08-09)
 
 ### The category was inverted, and the fix was already waiting

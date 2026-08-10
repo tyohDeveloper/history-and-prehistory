@@ -1,0 +1,6428 @@
+[
+  {
+    "slug": "erlitou",
+    "name": "Erlitou",
+    "aliases": [
+      "Yanshi Erlitou"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1900,
+    "end_year": -1500,
+    "date_precision": "approx",
+    "modern_name": "Yanshi, Henan, China",
+    "still_inhabited": false,
+    "peak": "c. 1750 BCE",
+    "summary": "Earliest large palace-city in China, widely identified with the Xia or earliest Shang state.",
+    "confidence": "high"
+  },
+  {
+    "slug": "zhengzhou-shang",
+    "name": "Zhengzhou",
+    "aliases": [
+      "Ao",
+      "Zhengzhou Shang City",
+      "Erligang"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1600,
+    "end_year": -1046,
+    "date_precision": "approx",
+    "modern_name": "Zhengzhou, Henan, China",
+    "still_inhabited": false,
+    "peak": "16th-14th c. BCE",
+    "summary": "Vast walled early Shang capital whose Erligang phase defines the first Chinese urban expansion.",
+    "confidence": "medium",
+    "contested": "Modern Zhengzhou occupies the site and is still inhabited"
+  },
+  {
+    "slug": "anyang-yin",
+    "name": "Anyang",
+    "aliases": [
+      "Yin",
+      "Yinxu",
+      "Great Settlement Shang"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1300,
+    "end_year": -1046,
+    "date_precision": "approx",
+    "modern_name": "Anyang, Henan, China",
+    "still_inhabited": false,
+    "peak": "13th-11th c. BCE",
+    "summary": "Last Shang capital; source of the oracle-bone archive that begins Chinese written history.",
+    "confidence": "high"
+  },
+  {
+    "slug": "haojing",
+    "name": "Haojing",
+    "aliases": [
+      "Hao",
+      "Zongzhou"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1046,
+    "end_year": -771,
+    "date_precision": "approx",
+    "modern_name": "Xi'an, Shaanxi, China",
+    "still_inhabited": false,
+    "peak": "10th c. BCE",
+    "summary": "Western Zhou royal capital and ritual centre of the Zhou mandate.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "fenghao",
+    "name": "Fenghao",
+    "aliases": [
+      "Fengjing",
+      "Feng-Hao"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1100,
+    "end_year": -771,
+    "date_precision": "approx",
+    "modern_name": "Xi'an, Shaanxi, China",
+    "still_inhabited": false,
+    "peak": "10th c. BCE",
+    "summary": "Twin Zhou capital complex of Feng and Hao on the Feng River, sacked by the Quanrong.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "luoyang",
+    "name": "Luoyang",
+    "aliases": [
+      "Chengzhou",
+      "Wangcheng",
+      "Luoyi",
+      "Eastern Capital"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1040,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Luoyang, Henan, China",
+    "still_inhabited": true,
+    "peak": "1st-6th c. CE",
+    "summary": "Capital of thirteen dynasties and eastern terminus of the Silk Road.",
+    "confidence": "high"
+  },
+  {
+    "slug": "changan",
+    "name": "Chang'an",
+    "aliases": [
+      "Xi'an",
+      "Daxing",
+      "Xijing"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Xi'an, Shaanxi, China",
+    "still_inhabited": true,
+    "peak": "8th c. CE",
+    "summary": "Han and Tang imperial capital, at its height the largest city on earth and Silk Road head.",
+    "confidence": "high"
+  },
+  {
+    "slug": "xianyang",
+    "name": "Xianyang",
+    "aliases": [
+      "Hsien-yang"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -350,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Xianyang, Shaanxi, China",
+    "still_inhabited": true,
+    "peak": "3rd c. BCE",
+    "summary": "First capital of a unified China under Qin Shi Huang.",
+    "confidence": "high"
+  },
+  {
+    "slug": "linzi",
+    "name": "Linzi",
+    "aliases": [
+      "Ying Qiu",
+      "Linzi of Qi"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Zibo, Shandong, China",
+    "still_inhabited": true,
+    "peak": "4th c. BCE",
+    "summary": "Capital of the state of Qi and the largest, richest commercial city of the Warring States.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "handan",
+    "name": "Handan",
+    "aliases": [
+      "Han-tan"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Handan, Hebei, China",
+    "still_inhabited": true,
+    "peak": "3rd c. BCE",
+    "summary": "Capital of Zhao, major iron-working and military centre of the Warring States.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ying-jiangling",
+    "name": "Ying",
+    "aliases": [
+      "Jinancheng",
+      "Ji'nan Cheng",
+      "Chu Ying"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -700,
+    "end_year": -278,
+    "date_precision": "approx",
+    "modern_name": "Jingzhou, Hubei, China",
+    "still_inhabited": false,
+    "peak": "5th-4th c. BCE",
+    "summary": "Long-lived capital of the southern state of Chu, sacked by Qin in 278 BCE.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "jingzhou",
+    "name": "Jingzhou",
+    "aliases": [
+      "Jiangling"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -278,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Jingzhou, Hubei, China",
+    "still_inhabited": true,
+    "peak": "3rd c. CE",
+    "summary": "Strategic middle-Yangtze fortress city controlling river traffic through the Three Kingdoms era.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "qufu",
+    "name": "Qufu",
+    "aliases": [
+      "Lu",
+      "Chüfu"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Qufu, Shandong, China",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Capital of the state of Lu and birthplace of Confucius; enduring Chinese pilgrimage city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kaifeng",
+    "name": "Kaifeng",
+    "aliases": [
+      "Bianjing",
+      "Daliang",
+      "Dongjing"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -360,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kaifeng, Henan, China",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Northern Song capital, possibly the world's largest city c. 1100, hub of a commercial revolution.",
+    "confidence": "high"
+  },
+  {
+    "slug": "hangzhou",
+    "name": "Hangzhou",
+    "aliases": [
+      "Lin'an",
+      "Quinsai",
+      "Kinsai"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Hangzhou, Zhejiang, China",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Southern Song capital at the Grand Canal's southern end; Marco Polo's greatest city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "nanjing",
+    "name": "Nanjing",
+    "aliases": [
+      "Jiankang",
+      "Jianye",
+      "Jinling",
+      "Yingtian"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -495,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nanjing, Jiangsu, China",
+    "still_inhabited": true,
+    "peak": "5th c. and 14th c. CE",
+    "summary": "Southern capital of six dynasties and first Ming capital, seat of the Yangtze cultural south.",
+    "confidence": "high"
+  },
+  {
+    "slug": "beijing",
+    "name": "Beijing",
+    "aliases": [
+      "Dadu",
+      "Khanbaliq",
+      "Yanjing",
+      "Zhongdu",
+      "Ji"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1045,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Beijing, China",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Mongol Khanbaliq then Ming-Qing imperial capital; northern frontier city turned world capital.",
+    "confidence": "high"
+  },
+  {
+    "slug": "suzhou",
+    "name": "Suzhou",
+    "aliases": [
+      "Wu",
+      "Gusu",
+      "Pingjiang"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -514,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Suzhou, Jiangsu, China",
+    "still_inhabited": true,
+    "peak": "12th-15th c. CE",
+    "summary": "Canal city and silk capital, byword for wealth and garden urbanism in late imperial China.",
+    "confidence": "high"
+  },
+  {
+    "slug": "guangzhou",
+    "name": "Guangzhou",
+    "aliases": [
+      "Panyu",
+      "Canton",
+      "Khanfu"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -214,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Guangzhou, Guangdong, China",
+    "still_inhabited": true,
+    "peak": "8th-13th c. CE",
+    "summary": "China's principal southern seaport, terminus of the maritime route to India and Arabia.",
+    "confidence": "high"
+  },
+  {
+    "slug": "quanzhou",
+    "name": "Quanzhou",
+    "aliases": [
+      "Zayton",
+      "Citong"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Quanzhou, Fujian, China",
+    "still_inhabited": true,
+    "peak": "12th-14th c. CE",
+    "summary": "Song-Yuan world emporium, the greatest port of maritime Asia and rival to Alexandria.",
+    "confidence": "high"
+  },
+  {
+    "slug": "chengdu",
+    "name": "Chengdu",
+    "aliases": [
+      "Yizhou",
+      "Brocade City"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -311,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Chengdu, Sichuan, China",
+    "still_inhabited": true,
+    "peak": "8th-13th c. CE",
+    "summary": "Sichuan basin metropolis, birthplace of printed books and the world's first paper money.",
+    "confidence": "high"
+  },
+  {
+    "slug": "dunhuang",
+    "name": "Dunhuang",
+    "aliases": [
+      "Shazhou",
+      "Tunhuang"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -111,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Dunhuang, Gansu, China",
+    "still_inhabited": true,
+    "peak": "6th-10th c. CE",
+    "summary": "Silk Road gateway city whose Mogao cave library preserved medieval Inner Asian Buddhism.",
+    "confidence": "high"
+  },
+  {
+    "slug": "turpan",
+    "name": "Turpan",
+    "aliases": [
+      "Turfan",
+      "Jushi"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Turpan, Xinjiang, China",
+    "still_inhabited": true,
+    "peak": "9th-13th c. CE",
+    "summary": "Oasis city of the Turpan depression, centre of the Uyghur Buddhist and Manichaean kingdom.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gaochang",
+    "name": "Gaochang",
+    "aliases": [
+      "Qocho",
+      "Karakhoja",
+      "Khocho"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -100,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Turpan, Xinjiang, China",
+    "still_inhabited": false,
+    "peak": "9th-12th c. CE",
+    "summary": "Walled Silk Road capital of the Uyghur Qocho kingdom, abandoned after the Mongol wars.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "jiaohe",
+    "name": "Jiaohe",
+    "aliases": [
+      "Yarkhoto",
+      "Yar-khoto"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -200,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Turpan, Xinjiang, China",
+    "still_inhabited": false,
+    "peak": "2nd c. BCE-5th c. CE",
+    "summary": "Capital of the Jushi kingdom, a whole city carved down into a river-island plateau.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kashgar",
+    "name": "Kashgar",
+    "aliases": [
+      "Kashi",
+      "Shule",
+      "Qeshqer"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kashgar, Xinjiang, China",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Junction of the northern and southern Tarim routes, first great Turkic-Islamic learning centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "khotan",
+    "name": "Khotan",
+    "aliases": [
+      "Hotan",
+      "Yotkan",
+      "Yutian"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Hotan, Xinjiang, China",
+    "still_inhabited": true,
+    "peak": "3rd-8th c. CE",
+    "summary": "Silk Road jade and silk kingdom, key conduit of Buddhism and Indic script into China.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "loulan",
+    "name": "Loulan",
+    "aliases": [
+      "Kroraina",
+      "Kroran",
+      "Shanshan"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -200,
+    "end_year": 630,
+    "date_precision": "approx",
+    "modern_name": "Lop Nur, Xinjiang, China",
+    "still_inhabited": false,
+    "peak": "1st-3rd c. CE",
+    "summary": "Desert entrepot on the Lop Nur route, abandoned when its river shifted.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "niya",
+    "name": "Niya",
+    "aliases": [
+      "Cadota",
+      "Minfeng ruins"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -100,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Minfeng, Xinjiang, China",
+    "still_inhabited": false,
+    "peak": "1st-3rd c. CE",
+    "summary": "Tarim oasis town whose Kharosthi wooden documents record daily Gandharan-influenced life.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kucha",
+    "name": "Kucha",
+    "aliases": [
+      "Qiuci",
+      "Kuqa"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kuqa, Xinjiang, China",
+    "still_inhabited": true,
+    "peak": "4th-8th c. CE",
+    "summary": "Largest northern Tarim kingdom, home of Kumarajiva and of Central Asian Buddhist art and music.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "karashahr",
+    "name": "Karashahr",
+    "aliases": [
+      "Yanqi",
+      "Agni",
+      "Qarasahr"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Yanqi, Xinjiang, China",
+    "still_inhabited": true,
+    "peak": "5th-8th c. CE",
+    "summary": "Tocharian-speaking oasis kingdom guarding the road between Turpan and Kucha.",
+    "confidence": "low"
+  },
+  {
+    "slug": "yarkand",
+    "name": "Yarkand",
+    "aliases": [
+      "Shache",
+      "Soju"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Shache, Xinjiang, China",
+    "still_inhabited": true,
+    "peak": "16th c. CE",
+    "summary": "Southern Tarim caravan city and later Yarkand khanate capital on the route to Ladakh.",
+    "confidence": "low"
+  },
+  {
+    "slug": "miran",
+    "name": "Miran",
+    "aliases": [
+      "Milan ruins"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 100,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Ruoqiang, Xinjiang, China",
+    "still_inhabited": false,
+    "peak": "3rd c. CE",
+    "summary": "Fort and monastery town whose winged-angel murals show Roman-Gandharan artistic reach.",
+    "confidence": "low"
+  },
+  {
+    "slug": "beshbalik",
+    "name": "Beshbalik",
+    "aliases": [
+      "Beiting",
+      "Beshbaliq"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 600,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Jimsar, Xinjiang, China",
+    "still_inhabited": false,
+    "peak": "9th-11th c. CE",
+    "summary": "Tang protectorate seat and Uyghur summer capital north of the Tianshan.",
+    "confidence": "low"
+  },
+  {
+    "slug": "liangzhu",
+    "name": "Liangzhu",
+    "aliases": [
+      "Liangzhu Ancient City"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -3300,
+    "end_year": -2300,
+    "date_precision": "approx",
+    "modern_name": "Hangzhou, Zhejiang, China",
+    "still_inhabited": false,
+    "peak": "c. 3000 BCE",
+    "summary": "Walled Neolithic city with monumental dams and jade elite, China's earliest state-scale settlement.",
+    "confidence": "high"
+  },
+  {
+    "slug": "sanxingdui",
+    "name": "Sanxingdui",
+    "aliases": [
+      "San-hsing-tui"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1700,
+    "end_year": -1100,
+    "date_precision": "approx",
+    "modern_name": "Guanghan, Sichuan, China",
+    "still_inhabited": false,
+    "peak": "13th-12th c. BCE",
+    "summary": "Bronze Age Shu capital whose giant bronze masks reveal a civilisation outside the Shang world.",
+    "confidence": "high"
+  },
+  {
+    "slug": "jinsha",
+    "name": "Jinsha",
+    "aliases": [
+      "Chin-sha"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1200,
+    "end_year": -600,
+    "date_precision": "approx",
+    "modern_name": "Chengdu, Sichuan, China",
+    "still_inhabited": false,
+    "peak": "11th-9th c. BCE",
+    "summary": "Successor centre to Sanxingdui and ritual heart of the Shu kingdom in the Chengdu plain.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "taosi",
+    "name": "Taosi",
+    "aliases": [
+      "T'ao-ssu"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -2300,
+    "end_year": -1900,
+    "date_precision": "approx",
+    "modern_name": "Xiangfen, Shanxi, China",
+    "still_inhabited": false,
+    "peak": "c. 2100 BCE",
+    "summary": "Huge walled Longshan city with an astronomical observatory, a candidate for legendary Yao's capital.",
+    "confidence": "high"
+  },
+  {
+    "slug": "shimao",
+    "name": "Shimao",
+    "aliases": [
+      "Shih-mao"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -2300,
+    "end_year": -1800,
+    "date_precision": "approx",
+    "modern_name": "Shenmu, Shaanxi, China",
+    "still_inhabited": false,
+    "peak": "c. 2000 BCE",
+    "summary": "Stone-walled 4 sq km citadel on the Ordos loess, the largest known Neolithic city in China.",
+    "confidence": "high"
+  },
+  {
+    "slug": "shijiahe",
+    "name": "Shijiahe",
+    "aliases": [
+      "Shijiahe",
+      "Shih-chia-ho"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -2600,
+    "end_year": -2000,
+    "date_precision": "approx",
+    "modern_name": "Tianmen, Hubei, China",
+    "still_inhabited": false,
+    "peak": "c. 2400 BCE",
+    "summary": "Great middle-Yangtze walled settlement cluster and rice-farming rival to northern Longshan centres.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "banpo",
+    "name": "Banpo",
+    "aliases": [
+      "Pan-p'o"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -4800,
+    "end_year": -3750,
+    "date_precision": "approx",
+    "modern_name": "Xi'an, Shaanxi, China",
+    "still_inhabited": false,
+    "peak": "5th millennium BCE",
+    "summary": "Type site of the Yangshao culture; a planned Neolithic village with a communal great house.",
+    "confidence": "medium",
+    "contested": "Village rather than city"
+  },
+  {
+    "slug": "jiahu",
+    "name": "Jiahu",
+    "aliases": [
+      "Chia-hu"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -7000,
+    "end_year": -5700,
+    "date_precision": "approx",
+    "modern_name": "Wuyang, Henan, China",
+    "still_inhabited": false,
+    "peak": "7th millennium BCE",
+    "summary": "Early Neolithic village with bone flutes, proto-writing marks and the oldest known rice wine.",
+    "confidence": "medium",
+    "contested": "Village rather than city"
+  },
+  {
+    "slug": "chengtoushan",
+    "name": "Chengtoushan",
+    "aliases": [
+      "Ch'eng-t'ou-shan"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -4500,
+    "end_year": -2800,
+    "date_precision": "approx",
+    "modern_name": "Li County, Hunan, China",
+    "still_inhabited": false,
+    "peak": "4th millennium BCE",
+    "summary": "Oldest known walled and moated settlement in China, with the earliest excavated paddy fields.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "yanshi-shangcheng",
+    "name": "Yanshi Shang City",
+    "aliases": [
+      "Yanshi Shangcheng"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1600,
+    "end_year": -1400,
+    "date_precision": "approx",
+    "modern_name": "Yanshi, Henan, China",
+    "still_inhabited": false,
+    "peak": "16th c. BCE",
+    "summary": "Early Shang garrison capital built beside Erlitou, evidence of dynastic replacement.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "yecheng",
+    "name": "Ye",
+    "aliases": [
+      "Yecheng",
+      "Yeh"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -500,
+    "end_year": 580,
+    "date_precision": "approx",
+    "modern_name": "Linzhang, Hebei, China",
+    "still_inhabited": false,
+    "peak": "4th-6th c. CE",
+    "summary": "Capital of six northern dynasties and template of axial Chinese city planning; razed in 580.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "pingcheng",
+    "name": "Pingcheng",
+    "aliases": [
+      "Datong"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 398,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Datong, Shanxi, China",
+    "still_inhabited": true,
+    "peak": "5th c. CE",
+    "summary": "Northern Wei capital where Buddhist cave sculpture and steppe-Chinese synthesis took form.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "jinyang",
+    "name": "Jinyang",
+    "aliases": [
+      "Taiyuan"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -497,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Taiyuan, Shanxi, China",
+    "still_inhabited": true,
+    "peak": "6th-7th c. CE",
+    "summary": "Northern military capital and springboard of the Tang founders' rebellion.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "yangzhou",
+    "name": "Yangzhou",
+    "aliases": [
+      "Guangling",
+      "Jiangdu"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -486,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Yangzhou, Jiangsu, China",
+    "still_inhabited": true,
+    "peak": "8th-9th c. CE",
+    "summary": "Grand Canal salt and tea entrepot with large Persian and Arab merchant communities.",
+    "confidence": "high"
+  },
+  {
+    "slug": "ningbo",
+    "name": "Ningbo",
+    "aliases": [
+      "Mingzhou",
+      "Siming"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ningbo, Zhejiang, China",
+    "still_inhabited": true,
+    "peak": "11th-13th c. CE",
+    "summary": "Chief port for trade with Japan and Korea and for Song maritime customs.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "xiangyang",
+    "name": "Xiangyang",
+    "aliases": [
+      "Hsiang-yang",
+      "Xiangfan"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Xiangyang, Hubei, China",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Fortress guarding the Han River corridor; its six-year siege decided the Mongol conquest of Song.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "chongqing",
+    "name": "Chongqing",
+    "aliases": [
+      "Jiangzhou",
+      "Yuzhou"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Chongqing, China",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Upper-Yangtze river city and Song mountain-fortress network hub against the Mongols.",
+    "confidence": "low"
+  },
+  {
+    "slug": "taihe-dali",
+    "name": "Taihe",
+    "aliases": [
+      "Yangxiemie",
+      "Nanzhao capital"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 750,
+    "end_year": 1250,
+    "date_precision": "approx",
+    "modern_name": "Dali, Yunnan, China",
+    "still_inhabited": false,
+    "peak": "8th-9th c. CE",
+    "summary": "Capital of the Nanzhao kingdom that defeated Tang armies and dominated upland Southeast Asia.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "dali",
+    "name": "Dali",
+    "aliases": [
+      "Yangjumie",
+      "Dali Old Town"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 937,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Dali, Yunnan, China",
+    "still_inhabited": true,
+    "peak": "11th-13th c. CE",
+    "summary": "Capital of the Dali kingdom, Buddhist and horse-trade hub linking Tibet, Burma and China.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kunming",
+    "name": "Kunming",
+    "aliases": [
+      "Tuodong",
+      "Yachi"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 765,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kunming, Yunnan, China",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Yuan-era Yunnan capital and node on the Burma road described by Marco Polo.",
+    "confidence": "low"
+  },
+  {
+    "slug": "yinchuan",
+    "name": "Yinchuan",
+    "aliases": [
+      "Xingqing",
+      "Zhongxing"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 1020,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Yinchuan, Ningxia, China",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Capital of the Tangut Western Xia empire with its own script and Buddhist canon.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "liao-shangjing",
+    "name": "Shangjing Linhuang",
+    "aliases": [
+      "Linhuang",
+      "Liao Upper Capital"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 918,
+    "end_year": 1220,
+    "date_precision": "approx",
+    "modern_name": "Baarin Left Banner, Inner Mongolia, China",
+    "still_inhabited": false,
+    "peak": "10th-11th c. CE",
+    "summary": "Twin-walled Khitan Liao supreme capital, half steppe camp and half Chinese city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "jin-shangjing",
+    "name": "Shangjing Huining",
+    "aliases": [
+      "Huiningfu",
+      "Jin Upper Capital"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 1115,
+    "end_year": 1215,
+    "date_precision": "approx",
+    "modern_name": "Harbin, Heilongjiang, China",
+    "still_inhabited": false,
+    "peak": "12th c. CE",
+    "summary": "First capital of the Jurchen Jin empire, abandoned after the Mongol invasions.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "shangdu",
+    "name": "Shangdu",
+    "aliases": [
+      "Xanadu",
+      "Kaiping"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 1256,
+    "end_year": 1430,
+    "date_precision": "approx",
+    "modern_name": "Zhenglan Banner, Inner Mongolia, China",
+    "still_inhabited": false,
+    "peak": "13th c. CE",
+    "summary": "Kublai Khan's summer capital, the Xanadu of European legend.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kharakhoto",
+    "name": "Khara-Khoto",
+    "aliases": [
+      "Etsina",
+      "Heicheng"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 1032,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Ejin Banner, Inner Mongolia, China",
+    "still_inhabited": false,
+    "peak": "12th-13th c. CE",
+    "summary": "Tangut desert garrison city whose buried library was recovered from the sands in 1908.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "changsha",
+    "name": "Changsha",
+    "aliases": [
+      "Linxiang"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Changsha, Hunan, China",
+    "still_inhabited": true,
+    "peak": "8th-10th c. CE",
+    "summary": "Xiang River city, Chu regional centre and later Changsha-kiln ceramics export hub.",
+    "confidence": "low"
+  },
+  {
+    "slug": "fuzhou",
+    "name": "Fuzhou",
+    "aliases": [
+      "Minhou",
+      "Yeh"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -202,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Fuzhou, Fujian, China",
+    "still_inhabited": true,
+    "peak": "10th-15th c. CE",
+    "summary": "Min kingdom capital and shipbuilding port from which Zheng He's fleets partly sailed.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "xuzhou",
+    "name": "Xuzhou",
+    "aliases": [
+      "Pengcheng"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Xuzhou, Jiangsu, China",
+    "still_inhabited": true,
+    "peak": "3rd c. BCE",
+    "summary": "Strategic canal-and-road crossroads fought over in nearly every Chinese civil war.",
+    "confidence": "low"
+  },
+  {
+    "slug": "guilin",
+    "name": "Guilin",
+    "aliases": [
+      "Shi'an",
+      "Jingjiang"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -314,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Guilin, Guangxi, China",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Administrative centre of Guangxi controlling the Lingqu canal link between Yangtze and Pearl.",
+    "confidence": "low"
+  },
+  {
+    "slug": "wuwei",
+    "name": "Wuwei",
+    "aliases": [
+      "Liangzhou",
+      "Guzang"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -121,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Wuwei, Gansu, China",
+    "still_inhabited": true,
+    "peak": "4th-5th c. CE",
+    "summary": "Hexi Corridor capital of several Liang states and a major Buddhist translation centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "zhangye",
+    "name": "Zhangye",
+    "aliases": [
+      "Ganzhou",
+      "Ganzhou of Ganzhou Uyghurs"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -111,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Zhangye, Gansu, China",
+    "still_inhabited": true,
+    "peak": "9th-13th c. CE",
+    "summary": "Hexi Corridor garrison city and later Ganzhou Uyghur capital on the road to Central Asia.",
+    "confidence": "low"
+  },
+  {
+    "slug": "pyongyang",
+    "name": "Pyongyang",
+    "aliases": [
+      "Wanggeom-seong",
+      "Heijo",
+      "Ryugyong"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Pyongyang, North Korea",
+    "still_inhabited": true,
+    "peak": "5th-7th c. CE",
+    "summary": "Capital of Gojoseon, Han Lelang commandery and later Goguryeo; oldest continuous Korean city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gyeongju",
+    "name": "Gyeongju",
+    "aliases": [
+      "Seorabeol",
+      "Kumsong",
+      "Geumseong"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -57,
+    "end_year": null,
+    "date_precision": "traditional",
+    "modern_name": "Gyeongju, South Korea",
+    "still_inhabited": true,
+    "peak": "8th-9th c. CE",
+    "summary": "Capital of Silla for a millennium and of unified Korea; a city of royal tumuli and Buddhist art.",
+    "confidence": "high",
+    "contested": "Founding date 57 BCE is traditional"
+  },
+  {
+    "slug": "seoul",
+    "name": "Seoul",
+    "aliases": [
+      "Hanyang",
+      "Hanseong",
+      "Wiryeseong",
+      "Namgyeong"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -18,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Seoul, South Korea",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Baekje's first capital and Joseon's capital from 1394; enduring political centre of Korea.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kaesong",
+    "name": "Kaesong",
+    "aliases": [
+      "Songdo",
+      "Gaegyeong",
+      "Kaegyong"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 918,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kaesong, North Korea",
+    "still_inhabited": true,
+    "peak": "11th-13th c. CE",
+    "summary": "Capital of Goryeo, source of the name Korea, and centre of celadon and ginseng trade.",
+    "confidence": "high"
+  },
+  {
+    "slug": "buyeo-sabi",
+    "name": "Buyeo",
+    "aliases": [
+      "Sabi",
+      "Sabiseong",
+      "Puyo"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 538,
+    "end_year": 660,
+    "date_precision": "approx",
+    "modern_name": "Buyeo, South Korea",
+    "still_inhabited": false,
+    "peak": "6th-7th c. CE",
+    "summary": "Last Baekje capital, a planned Buddhist city that transmitted continental culture to Japan.",
+    "confidence": "high",
+    "contested": "Modern Buyeo town occupies the site"
+  },
+  {
+    "slug": "gongju",
+    "name": "Gongju",
+    "aliases": [
+      "Ungjin",
+      "Kongju"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 475,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Gongju, South Korea",
+    "still_inhabited": true,
+    "peak": "5th-6th c. CE",
+    "summary": "Baekje capital after the fall of Hanseong; site of King Muryeong's tomb.",
+    "confidence": "high"
+  },
+  {
+    "slug": "guknaeseong",
+    "name": "Guknaeseong",
+    "aliases": [
+      "Gungnae",
+      "Ji'an",
+      "Wandu"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 3,
+    "end_year": 427,
+    "date_precision": "approx",
+    "modern_name": "Ji'an, Jilin, China",
+    "still_inhabited": false,
+    "peak": "4th-5th c. CE",
+    "summary": "Goguryeo capital on the Yalu with the great stele of King Gwanggaeto and painted tombs.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gimhae",
+    "name": "Gimhae",
+    "aliases": [
+      "Geumgwan Gaya",
+      "Gaya"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 42,
+    "end_year": null,
+    "date_precision": "traditional",
+    "modern_name": "Gimhae, South Korea",
+    "still_inhabited": true,
+    "peak": "3rd-5th c. CE",
+    "summary": "Leading Gaya confederacy city-state, iron exporter to Japan and the Han commanderies.",
+    "confidence": "medium",
+    "contested": "Traditional founding of 42 CE"
+  },
+  {
+    "slug": "goryeong",
+    "name": "Goryeong",
+    "aliases": [
+      "Daegaya",
+      "Dae Gaya"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 400,
+    "end_year": 562,
+    "date_precision": "approx",
+    "modern_name": "Goryeong, South Korea",
+    "still_inhabited": false,
+    "peak": "5th-6th c. CE",
+    "summary": "Late Gaya paramount centre, absorbed by Silla in 562.",
+    "confidence": "low"
+  },
+  {
+    "slug": "ganghwa",
+    "name": "Ganghwa",
+    "aliases": [
+      "Ganghwado",
+      "Kanghwa"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 1232,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ganghwa Island, South Korea",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Island refuge capital of Goryeo during the Mongol wars, where the Tripitaka Koreana was carved.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "cheorwon",
+    "name": "Cheorwon",
+    "aliases": [
+      "Cheolwon",
+      "Taebong capital"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 905,
+    "end_year": 935,
+    "date_precision": "approx",
+    "modern_name": "Cheorwon, Korean DMZ",
+    "still_inhabited": false,
+    "peak": "early 10th c. CE",
+    "summary": "Capital of Gung Ye's short-lived Taebong kingdom, precursor to Goryeo.",
+    "confidence": "low"
+  },
+  {
+    "slug": "jeonju",
+    "name": "Jeonju",
+    "aliases": [
+      "Wansan",
+      "Hubaekje capital"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -57,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Jeonju, South Korea",
+    "still_inhabited": true,
+    "peak": "10th c. CE",
+    "summary": "Capital of Later Baekje and later a Joseon provincial and printing centre.",
+    "confidence": "low"
+  },
+  {
+    "slug": "naju",
+    "name": "Naju",
+    "aliases": [
+      "Geumseong"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 983,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Naju, South Korea",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Southwestern grain and cotton centre and Goryeo naval base.",
+    "confidence": "low"
+  },
+  {
+    "slug": "nara",
+    "name": "Nara",
+    "aliases": [
+      "Heijo-kyo",
+      "Heijokyo"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 710,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nara, Japan",
+    "still_inhabited": true,
+    "peak": "8th c. CE",
+    "summary": "Japan's first enduring grid capital, modelled on Chang'an, and cradle of state Buddhism.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kyoto",
+    "name": "Kyoto",
+    "aliases": [
+      "Heian-kyo",
+      "Miyako",
+      "Kyo"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 794,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kyoto, Japan",
+    "still_inhabited": true,
+    "peak": "10th-12th c. CE",
+    "summary": "Imperial capital for over a thousand years and the definitive centre of Japanese court culture.",
+    "confidence": "high"
+  },
+  {
+    "slug": "asuka",
+    "name": "Asuka",
+    "aliases": [
+      "Asukakyo",
+      "Toyura"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 550,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Asuka village, Nara, Japan",
+    "still_inhabited": true,
+    "peak": "late 6th-7th c. CE",
+    "summary": "Seat of the earliest Japanese palace capitals and of Buddhism's introduction to Japan.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "fujiwara-kyo",
+    "name": "Fujiwara-kyo",
+    "aliases": [
+      "Fujiwarakyo",
+      "Shin'yaku no miyako"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 694,
+    "end_year": 710,
+    "date_precision": "approx",
+    "modern_name": "Kashihara, Nara, Japan",
+    "still_inhabited": false,
+    "peak": "c. 700 CE",
+    "summary": "First Chinese-style grid capital of Japan, abandoned after only sixteen years.",
+    "confidence": "high"
+  },
+  {
+    "slug": "nagaoka-kyo",
+    "name": "Nagaoka-kyo",
+    "aliases": [
+      "Nagaokakyo"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 784,
+    "end_year": 794,
+    "date_precision": "approx",
+    "modern_name": "Nagaokakyo, Kyoto, Japan",
+    "still_inhabited": false,
+    "peak": "late 8th c. CE",
+    "summary": "Short-lived capital between Nara and Heian, abandoned amid omens and political murder.",
+    "confidence": "high",
+    "contested": "Modern city of the same name now occupies part of the site"
+  },
+  {
+    "slug": "kamakura",
+    "name": "Kamakura",
+    "aliases": [
+      "Kamakura-fu"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 1180,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kamakura, Japan",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Seat of Japan's first shogunate and of Zen Buddhism's institutional rise.",
+    "confidence": "high"
+  },
+  {
+    "slug": "naniwa",
+    "name": "Naniwa",
+    "aliases": [
+      "Naniwa-kyo",
+      "Osaka",
+      "Ozaka"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 645,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Osaka, Japan",
+    "still_inhabited": true,
+    "peak": "16th c. CE",
+    "summary": "Ancient imperial port capital and later the commercial kitchen of Japan.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "dazaifu",
+    "name": "Dazaifu",
+    "aliases": [
+      "Dazaifu-shi",
+      "Tsukushi"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 663,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Dazaifu, Fukuoka, Japan",
+    "still_inhabited": true,
+    "peak": "8th-11th c. CE",
+    "summary": "Government seat for Kyushu and Japan's gateway for diplomacy with China and Korea.",
+    "confidence": "high"
+  },
+  {
+    "slug": "hakata",
+    "name": "Hakata",
+    "aliases": [
+      "Fukuoka",
+      "Hakata-tsu"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Fukuoka, Japan",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Japan's principal medieval international port and target of the Mongol invasions.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sakai",
+    "name": "Sakai",
+    "aliases": [
+      "Sakai-shi"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 1300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sakai, Osaka, Japan",
+    "still_inhabited": true,
+    "peak": "15th-16th c. CE",
+    "summary": "Self-governing merchant port city, Japan's freest and richest trading town.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "hiraizumi",
+    "name": "Hiraizumi",
+    "aliases": [
+      "Hiraizumi-cho"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 1090,
+    "end_year": 1190,
+    "date_precision": "approx",
+    "modern_name": "Hiraizumi, Iwate, Japan",
+    "still_inhabited": false,
+    "peak": "12th c. CE",
+    "summary": "Northern Fujiwara capital, a golden Buddhist city built to rival Kyoto, destroyed in 1189.",
+    "confidence": "high",
+    "contested": "Small town remains on the site"
+  },
+  {
+    "slug": "otsu",
+    "name": "Otsu",
+    "aliases": [
+      "Otsu-kyo",
+      "Otsunomiya"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 667,
+    "end_year": 672,
+    "date_precision": "approx",
+    "modern_name": "Otsu, Shiga, Japan",
+    "still_inhabited": false,
+    "peak": "late 7th c. CE",
+    "summary": "Brief imperial capital of Emperor Tenji on Lake Biwa, lost in the Jinshin War.",
+    "confidence": "medium",
+    "contested": "Modern Otsu still inhabited"
+  },
+  {
+    "slug": "yoshinogari",
+    "name": "Yoshinogari",
+    "aliases": [
+      "Yoshinogari iseki"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -400,
+    "end_year": 300,
+    "date_precision": "approx",
+    "modern_name": "Kanzaki, Saga, Japan",
+    "still_inhabited": false,
+    "peak": "1st-3rd c. CE",
+    "summary": "Largest moated Yayoi settlement, a candidate for the Yamatai of Chinese records.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sannai-maruyama",
+    "name": "Sannai-Maruyama",
+    "aliases": [
+      "Sannai Maruyama iseki"
+    ],
+    "region_hint": "east-asia",
+    "start_year": -3900,
+    "end_year": -2200,
+    "date_precision": "approx",
+    "modern_name": "Aomori, Japan",
+    "still_inhabited": false,
+    "peak": "4th millennium BCE",
+    "summary": "Long-lived Jomon settlement with large timber structures, showing sedentary pre-agricultural life.",
+    "confidence": "high",
+    "contested": "Large village rather than city"
+  },
+  {
+    "slug": "tagajo",
+    "name": "Taga-jo",
+    "aliases": [
+      "Tagajo",
+      "Taga castle"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 724,
+    "end_year": 1100,
+    "date_precision": "approx",
+    "modern_name": "Tagajo, Miyagi, Japan",
+    "still_inhabited": false,
+    "peak": "8th-9th c. CE",
+    "summary": "Frontier fortress-capital of the Japanese northeast against the Emishi.",
+    "confidence": "low"
+  },
+  {
+    "slug": "shuri",
+    "name": "Shuri",
+    "aliases": [
+      "Shurijo",
+      "Naha"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 1400,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Naha, Okinawa, Japan",
+    "still_inhabited": true,
+    "peak": "15th-16th c. CE",
+    "summary": "Capital of the Ryukyu kingdom, an entrepot linking Japan, China and Southeast Asia.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "yamaguchi",
+    "name": "Yamaguchi",
+    "aliases": [
+      "Yamaguchi-shi",
+      "Ouchi capital"
+    ],
+    "region_hint": "east-asia",
+    "start_year": 1360,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Yamaguchi, Japan",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Ouchi clan seat that became a refuge of Kyoto culture and a China-trade capital.",
+    "confidence": "low"
+  },
+  {
+    "slug": "mehrgarh",
+    "name": "Mehrgarh",
+    "aliases": [
+      "Mehergarh"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -7000,
+    "end_year": -2600,
+    "date_precision": "approx",
+    "modern_name": "Kachhi, Balochistan, Pakistan",
+    "still_inhabited": false,
+    "peak": "6th millennium BCE",
+    "summary": "Earliest farming village in South Asia and ancestor of Indus urbanism; oldest known dentistry.",
+    "confidence": "high",
+    "contested": "Village-to-town rather than city"
+  },
+  {
+    "slug": "mohenjo-daro",
+    "name": "Mohenjo-daro",
+    "aliases": [
+      "Mohenjodaro",
+      "Mound of the Dead"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -2600,
+    "end_year": -1900,
+    "date_precision": "approx",
+    "modern_name": "Larkana, Sindh, Pakistan",
+    "still_inhabited": false,
+    "peak": "c. 2400 BCE",
+    "summary": "Greatest Indus city, with grid streets, the Great Bath and unmatched Bronze Age sanitation.",
+    "confidence": "high"
+  },
+  {
+    "slug": "harappa",
+    "name": "Harappa",
+    "aliases": [
+      "Harappa Sahiwal"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -3300,
+    "end_year": -1900,
+    "date_precision": "approx",
+    "modern_name": "Sahiwal, Punjab, Pakistan",
+    "still_inhabited": false,
+    "peak": "c. 2400 BCE",
+    "summary": "Type site of the Indus civilisation and its longest-occupied major city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "dholavira",
+    "name": "Dholavira",
+    "aliases": [
+      "Kotada timba"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -2900,
+    "end_year": -1500,
+    "date_precision": "approx",
+    "modern_name": "Kutch, Gujarat, India",
+    "still_inhabited": false,
+    "peak": "c. 2400 BCE",
+    "summary": "Indus city of stone with the most elaborate ancient water-harvesting reservoirs known.",
+    "confidence": "high"
+  },
+  {
+    "slug": "lothal",
+    "name": "Lothal",
+    "aliases": [
+      "Lothal Bhogavo"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -2400,
+    "end_year": -1900,
+    "date_precision": "approx",
+    "modern_name": "Ahmedabad district, Gujarat, India",
+    "still_inhabited": false,
+    "peak": "c. 2200 BCE",
+    "summary": "Indus port with what may be the world's earliest dock, hub of bead and shell manufacture.",
+    "confidence": "high"
+  },
+  {
+    "slug": "rakhigarhi",
+    "name": "Rakhigarhi",
+    "aliases": [
+      "Rakhi Garhi",
+      "Rakhi Shahpur"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -2800,
+    "end_year": -1900,
+    "date_precision": "approx",
+    "modern_name": "Hisar, Haryana, India",
+    "still_inhabited": false,
+    "peak": "c. 2400 BCE",
+    "summary": "Largest Indus city in India, key to Harappan genetics and Ghaggar-Hakra settlement.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kalibangan",
+    "name": "Kalibangan",
+    "aliases": [
+      "Kali Banga"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -3500,
+    "end_year": -1750,
+    "date_precision": "approx",
+    "modern_name": "Hanumangarh, Rajasthan, India",
+    "still_inhabited": false,
+    "peak": "c. 2400 BCE",
+    "summary": "Indus city with the earliest ploughed field ever found and fire altars in its citadel.",
+    "confidence": "high"
+  },
+  {
+    "slug": "ganweriwala",
+    "name": "Ganweriwala",
+    "aliases": [
+      "Ganeriwala"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -2600,
+    "end_year": -1900,
+    "date_precision": "approx",
+    "modern_name": "Cholistan, Punjab, Pakistan",
+    "still_inhabited": false,
+    "peak": "c. 2300 BCE",
+    "summary": "Large unexcavated Indus city in the Cholistan desert, a fifth of the civilisation's capitals.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "chanhudaro",
+    "name": "Chanhu-daro",
+    "aliases": [
+      "Chanhudaro"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -2600,
+    "end_year": -1700,
+    "date_precision": "approx",
+    "modern_name": "Sindh, Pakistan",
+    "still_inhabited": false,
+    "peak": "c. 2300 BCE",
+    "summary": "Indus bead- and seal-making industrial town on the lower Indus.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "banawali",
+    "name": "Banawali",
+    "aliases": [
+      "Vanavali"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -2500,
+    "end_year": -1700,
+    "date_precision": "approx",
+    "modern_name": "Fatehabad, Haryana, India",
+    "still_inhabited": false,
+    "peak": "c. 2300 BCE",
+    "summary": "Indus town with pre-Harappan roots and unusual radial rather than grid planning.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "bhirrana",
+    "name": "Bhirrana",
+    "aliases": [
+      "Bhirdana"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -7500,
+    "end_year": -1800,
+    "date_precision": "approx",
+    "modern_name": "Fatehabad, Haryana, India",
+    "still_inhabited": false,
+    "peak": "4th millennium BCE",
+    "summary": "Claimed oldest Harappan-tradition settlement, pushing Indus origins into the Neolithic.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kotdiji",
+    "name": "Kot Diji",
+    "aliases": [
+      "Kotdiji"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -3300,
+    "end_year": -1900,
+    "date_precision": "approx",
+    "modern_name": "Khairpur, Sindh, Pakistan",
+    "still_inhabited": false,
+    "peak": "c. 2800 BCE",
+    "summary": "Type site of the pre-Harappan phase, showing fortified towns before the mature Indus cities.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "amri",
+    "name": "Amri",
+    "aliases": [
+      "Amri Sindh"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -3600,
+    "end_year": -1900,
+    "date_precision": "approx",
+    "modern_name": "Dadu, Sindh, Pakistan",
+    "still_inhabited": false,
+    "peak": "c. 3000 BCE",
+    "summary": "Early Indus regional culture centre preceding and coexisting with mature Harappan cities.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "surkotada",
+    "name": "Surkotada",
+    "aliases": [
+      "Surkotda"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -2300,
+    "end_year": -1700,
+    "date_precision": "approx",
+    "modern_name": "Kutch, Gujarat, India",
+    "still_inhabited": false,
+    "peak": "c. 2100 BCE",
+    "summary": "Fortified Indus outpost with the earliest claimed domestic horse remains in South Asia.",
+    "confidence": "low"
+  },
+  {
+    "slug": "sutkagan-dor",
+    "name": "Sutkagan Dor",
+    "aliases": [
+      "Sutkagen-dor"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -2500,
+    "end_year": -1900,
+    "date_precision": "approx",
+    "modern_name": "Makran, Balochistan, Pakistan",
+    "still_inhabited": false,
+    "peak": "c. 2300 BCE",
+    "summary": "Westernmost Indus city, a fortified station on the sea route to Mesopotamia.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "nausharo",
+    "name": "Nausharo",
+    "aliases": [
+      "Naushahro"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -2800,
+    "end_year": -2000,
+    "date_precision": "approx",
+    "modern_name": "Kachhi, Balochistan, Pakistan",
+    "still_inhabited": false,
+    "peak": "c. 2500 BCE",
+    "summary": "Transitional site linking Mehrgarh's farming villages to mature Harappan urbanism.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "pataliputra",
+    "name": "Pataliputra",
+    "aliases": [
+      "Patna",
+      "Palibothra",
+      "Kusumapura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -490,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Patna, Bihar, India",
+    "still_inhabited": true,
+    "peak": "3rd c. BCE",
+    "summary": "Capital of Magadha, the Maurya and Gupta empires; the greatest city of ancient India.",
+    "confidence": "high"
+  },
+  {
+    "slug": "rajgir",
+    "name": "Rajgir",
+    "aliases": [
+      "Rajagriha",
+      "Rajagaha",
+      "Girivraja"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nalanda district, Bihar, India",
+    "still_inhabited": true,
+    "peak": "6th-5th c. BCE",
+    "summary": "First Magadhan capital, cyclopean-walled, where the first Buddhist council met.",
+    "confidence": "high"
+  },
+  {
+    "slug": "vaishali",
+    "name": "Vaishali",
+    "aliases": [
+      "Vesali",
+      "Basarh"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -600,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Vaishali district, Bihar, India",
+    "still_inhabited": false,
+    "peak": "6th-5th c. BCE",
+    "summary": "Capital of the Licchavi republic, often called the world's first republican city-state.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "varanasi",
+    "name": "Varanasi",
+    "aliases": [
+      "Kashi",
+      "Banaras",
+      "Benares"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Varanasi, Uttar Pradesh, India",
+    "still_inhabited": true,
+    "peak": "continuous",
+    "summary": "Perhaps the oldest continuously lived-in city in India and Hinduism's holiest.",
+    "confidence": "high"
+  },
+  {
+    "slug": "ujjain",
+    "name": "Ujjain",
+    "aliases": [
+      "Ujjayini",
+      "Avanti",
+      "Ozene"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ujjain, Madhya Pradesh, India",
+    "still_inhabited": true,
+    "peak": "1st-5th c. CE",
+    "summary": "Avanti's capital, Indian prime meridian, and Gupta-era literary and astronomical centre.",
+    "confidence": "high"
+  },
+  {
+    "slug": "taxila",
+    "name": "Taxila",
+    "aliases": [
+      "Takshashila",
+      "Sirkap",
+      "Sirsukh"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -800,
+    "end_year": 500,
+    "date_precision": "approx",
+    "modern_name": "Rawalpindi district, Punjab, Pakistan",
+    "still_inhabited": false,
+    "peak": "1st-4th c. CE",
+    "summary": "Gandharan crossroads city and great Buddhist university where Indic and Hellenistic worlds met.",
+    "confidence": "high"
+  },
+  {
+    "slug": "mathura",
+    "name": "Mathura",
+    "aliases": [
+      "Madhura",
+      "Muttra"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Mathura, Uttar Pradesh, India",
+    "still_inhabited": true,
+    "peak": "1st-3rd c. CE",
+    "summary": "Kushan southern capital, birthplace of Krishna and of the first Buddha images in stone.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kaushambi",
+    "name": "Kaushambi",
+    "aliases": [
+      "Kausambi",
+      "Kosam"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -1000,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Kaushambi district, Uttar Pradesh, India",
+    "still_inhabited": false,
+    "peak": "6th-3rd c. BCE",
+    "summary": "Capital of the Vatsa kingdom with massive mud ramparts; a major early Buddhist centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kanchipuram",
+    "name": "Kanchipuram",
+    "aliases": [
+      "Kanchi",
+      "Conjeeveram"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kanchipuram, Tamil Nadu, India",
+    "still_inhabited": true,
+    "peak": "7th-9th c. CE",
+    "summary": "Pallava capital, city of a thousand temples and of Tamil Sanskritic learning.",
+    "confidence": "high"
+  },
+  {
+    "slug": "madurai",
+    "name": "Madurai",
+    "aliases": [
+      "Mathurai",
+      "Toundis"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -400,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Madurai, Tamil Nadu, India",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Ancient Pandya capital and seat of the Tamil sangam academies; a temple-centred grid city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "anuradhapura",
+    "name": "Anuradhapura",
+    "aliases": [
+      "Anuradhapuraya"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -400,
+    "end_year": 1017,
+    "date_precision": "approx",
+    "modern_name": "Anuradhapura, Sri Lanka",
+    "still_inhabited": false,
+    "peak": "4th-9th c. CE",
+    "summary": "Sinhalese capital for over a millennium, giant stupas and vast irrigation tanks.",
+    "confidence": "high",
+    "contested": "Modern town adjoins the abandoned ancient city"
+  },
+  {
+    "slug": "polonnaruwa",
+    "name": "Polonnaruwa",
+    "aliases": [
+      "Pulatthinagara",
+      "Topawewa"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1017,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Polonnaruwa, Sri Lanka",
+    "still_inhabited": false,
+    "peak": "12th c. CE",
+    "summary": "Second Sinhalese capital, apogee of Parakramabahu I's irrigation and monumental building.",
+    "confidence": "high",
+    "contested": "Modern town adjoins the ruins"
+  },
+  {
+    "slug": "sigiriya",
+    "name": "Sigiriya",
+    "aliases": [
+      "Sinhagiri",
+      "Lion Rock"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 477,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Matale district, Sri Lanka",
+    "still_inhabited": false,
+    "peak": "late 5th c. CE",
+    "summary": "Rock-summit palace-city of Kassapa I with mirror wall frescoes and water gardens.",
+    "confidence": "high"
+  },
+  {
+    "slug": "nalanda",
+    "name": "Nalanda",
+    "aliases": [
+      "Nalendra",
+      "Nalanda Mahavihara"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 427,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Nalanda district, Bihar, India",
+    "still_inhabited": false,
+    "peak": "7th c. CE",
+    "summary": "The world's greatest Buddhist monastic university, destroyed c. 1200.",
+    "confidence": "high",
+    "contested": "Monastic university city rather than a secular city"
+  },
+  {
+    "slug": "delhi",
+    "name": "Delhi",
+    "aliases": [
+      "Dilli",
+      "Dhillika",
+      "Indraprastha",
+      "Lal Kot"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Delhi, India",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Sultanate capital and the successive site of at least seven distinct imperial cities.",
+    "confidence": "high"
+  },
+  {
+    "slug": "vijayanagara",
+    "name": "Vijayanagara",
+    "aliases": [
+      "Hampi",
+      "Bisnagar"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1336,
+    "end_year": 1565,
+    "date_precision": "approx",
+    "modern_name": "Hampi, Karnataka, India",
+    "still_inhabited": false,
+    "peak": "early 16th c. CE",
+    "summary": "Capital of the Vijayanagara empire, one of the largest cities in the world before its 1565 sack.",
+    "confidence": "high"
+  },
+  {
+    "slug": "thanjavur",
+    "name": "Thanjavur",
+    "aliases": [
+      "Tanjore",
+      "Tanjavur"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 850,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Thanjavur, Tamil Nadu, India",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Chola imperial capital and site of the Brihadisvara temple, apex of Tamil state power.",
+    "confidence": "high"
+  },
+  {
+    "slug": "amaravati",
+    "name": "Amaravati",
+    "aliases": [
+      "Dhanyakataka",
+      "Amaravathi"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Guntur district, Andhra Pradesh, India",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Satavahana capital and site of a great stupa whose sculpture shaped Buddhist art across Asia.",
+    "confidence": "medium",
+    "contested": "Small town remains on the site"
+  },
+  {
+    "slug": "dwarasamudra",
+    "name": "Dwarasamudra",
+    "aliases": [
+      "Halebidu",
+      "Dorasamudra"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1000,
+    "end_year": 1330,
+    "date_precision": "approx",
+    "modern_name": "Halebidu, Karnataka, India",
+    "still_inhabited": false,
+    "peak": "12th-13th c. CE",
+    "summary": "Hoysala capital, sacked twice by Delhi armies and abandoned; the Hoysalesvara temple survives.",
+    "confidence": "high",
+    "contested": "Village remains at the site"
+  },
+  {
+    "slug": "ahichhatra",
+    "name": "Ahichhatra",
+    "aliases": [
+      "Ahicchatra",
+      "Ramnagar"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -1000,
+    "end_year": 1100,
+    "date_precision": "approx",
+    "modern_name": "Bareilly district, Uttar Pradesh, India",
+    "still_inhabited": false,
+    "peak": "1st-4th c. CE",
+    "summary": "Capital of the Panchala kingdom and one of the largest early historic walled cities of the Ganges.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sravasti",
+    "name": "Sravasti",
+    "aliases": [
+      "Savatthi",
+      "Saheth-Maheth"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -600,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Gonda-Balrampur, Uttar Pradesh, India",
+    "still_inhabited": false,
+    "peak": "6th-5th c. BCE",
+    "summary": "Capital of Kosala where the Buddha spent most rainy seasons; a major Jain and Buddhist centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kapilavastu",
+    "name": "Kapilavastu",
+    "aliases": [
+      "Tilaurakot",
+      "Piprahwa"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -700,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Tilaurakot, Nepal",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Shakya capital and the Buddha's childhood city.",
+    "confidence": "medium",
+    "contested": "Location contested between Tilaurakot and Piprahwa"
+  },
+  {
+    "slug": "lumbini",
+    "name": "Lumbini",
+    "aliases": [
+      "Rummindei"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -600,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Rupandehi, Nepal",
+    "still_inhabited": false,
+    "peak": "3rd c. BCE",
+    "summary": "Birthplace of the Buddha, marked by Ashoka's pillar; pilgrimage settlement rather than city.",
+    "confidence": "medium",
+    "contested": "Pilgrimage complex rather than a city"
+  },
+  {
+    "slug": "kushinagar",
+    "name": "Kushinagar",
+    "aliases": [
+      "Kusinara",
+      "Kasia"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -600,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Kushinagar, Uttar Pradesh, India",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Malla town where the Buddha died and was cremated; enduring pilgrimage centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sarnath",
+    "name": "Sarnath",
+    "aliases": [
+      "Isipatana",
+      "Rishipattana"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -500,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Varanasi, Uttar Pradesh, India",
+    "still_inhabited": false,
+    "peak": "3rd c. BCE-6th c. CE",
+    "summary": "Site of the Buddha's first sermon and of Ashoka's lion capital, now India's state emblem.",
+    "confidence": "medium",
+    "contested": "Monastic and pilgrimage site rather than a city"
+  },
+  {
+    "slug": "sanchi",
+    "name": "Sanchi",
+    "aliases": [
+      "Kakanaya",
+      "Kakanadabota"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Raisen, Madhya Pradesh, India",
+    "still_inhabited": false,
+    "peak": "2nd-1st c. BCE",
+    "summary": "Great Stupa complex preserving the oldest standing Buddhist monuments in India.",
+    "confidence": "high",
+    "contested": "Monument complex, not a city"
+  },
+  {
+    "slug": "bodhgaya",
+    "name": "Bodh Gaya",
+    "aliases": [
+      "Uruvela",
+      "Mahabodhi"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Gaya district, Bihar, India",
+    "still_inhabited": true,
+    "peak": "5th-12th c. CE",
+    "summary": "Site of the Buddha's enlightenment; the pilgrimage centre of the Buddhist world.",
+    "confidence": "medium",
+    "contested": "Pilgrimage temple town"
+  },
+  {
+    "slug": "pushkalavati",
+    "name": "Pushkalavati",
+    "aliases": [
+      "Charsadda",
+      "Peukelaotis"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -1400,
+    "end_year": 200,
+    "date_precision": "approx",
+    "modern_name": "Charsadda, Khyber Pakhtunkhwa, Pakistan",
+    "still_inhabited": false,
+    "peak": "4th-2nd c. BCE",
+    "summary": "Original Gandharan capital, besieged by Alexander, later eclipsed by Peshawar.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "purushapura",
+    "name": "Purushapura",
+    "aliases": [
+      "Peshawar",
+      "Purusapura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Peshawar, Pakistan",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Kushan capital of Kanishka with a colossal stupa; gateway between India and Central Asia.",
+    "confidence": "high"
+  },
+  {
+    "slug": "multan",
+    "name": "Multan",
+    "aliases": [
+      "Mulasthana",
+      "Malli"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Multan, Pakistan",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Ancient sun-temple city and later the Islamic gateway to Sindh; a Sufi shrine capital.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lahore",
+    "name": "Lahore",
+    "aliases": [
+      "Lohawar",
+      "Lavapuri"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lahore, Pakistan",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Ghaznavid eastern capital and later Punjab's paramount city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mansura",
+    "name": "Mansura",
+    "aliases": [
+      "Al-Mansurah",
+      "Brahmanabad"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 730,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Sanghar district, Sindh, Pakistan",
+    "still_inhabited": false,
+    "peak": "9th-10th c. CE",
+    "summary": "Arab capital of Sindh, first great Islamic city of South Asia, abandoned after river shifts.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "debal",
+    "name": "Debal",
+    "aliases": [
+      "Daybul",
+      "Banbhore"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -100,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Thatta district, Sindh, Pakistan",
+    "still_inhabited": false,
+    "peak": "8th-11th c. CE",
+    "summary": "Indus-delta port taken by Muhammad bin Qasim in 711; site of South Asia's earliest mosque.",
+    "confidence": "medium",
+    "contested": "Identification with Banbhore is contested"
+  },
+  {
+    "slug": "thatta",
+    "name": "Thatta",
+    "aliases": [
+      "Tatta",
+      "Thatto"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Thatta, Sindh, Pakistan",
+    "still_inhabited": true,
+    "peak": "16th-17th c. CE",
+    "summary": "Lower Indus capital of the Samma dynasty and a great textile and shipbuilding port.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kannauj",
+    "name": "Kannauj",
+    "aliases": [
+      "Kanyakubja",
+      "Mahodaya"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kannauj, Uttar Pradesh, India",
+    "still_inhabited": true,
+    "peak": "7th and 9th-11th c. CE",
+    "summary": "Harsha's imperial capital and the prize contested in the tripartite struggle of three empires.",
+    "confidence": "high"
+  },
+  {
+    "slug": "ayodhya",
+    "name": "Ayodhya",
+    "aliases": [
+      "Saketa",
+      "Awadh"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ayodhya, Uttar Pradesh, India",
+    "still_inhabited": true,
+    "peak": "5th c. BCE-5th c. CE",
+    "summary": "Kosala city of the Ramayana and later a Gupta and Jain-Buddhist religious centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gaur",
+    "name": "Gaur",
+    "aliases": [
+      "Lakhnauti",
+      "Lakshmanavati",
+      "Gauda"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -400,
+    "end_year": 1575,
+    "date_precision": "approx",
+    "modern_name": "Malda district, West Bengal, India",
+    "still_inhabited": false,
+    "peak": "14th-15th c. CE",
+    "summary": "Bengal Sultanate capital and one of the largest cities of 15th-century Asia, abandoned to plague.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "pandua",
+    "name": "Pandua",
+    "aliases": [
+      "Hazrat Pandua",
+      "Firuzabad"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1340,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Malda district, West Bengal, India",
+    "still_inhabited": false,
+    "peak": "14th c. CE",
+    "summary": "Alternate Bengal Sultanate capital with the vast Adina mosque.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mahasthangarh",
+    "name": "Mahasthangarh",
+    "aliases": [
+      "Pundranagara",
+      "Pundravardhana"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Bogra, Bangladesh",
+    "still_inhabited": false,
+    "peak": "4th c. BCE-8th c. CE",
+    "summary": "Oldest known city in Bengal, capital of the Pundra region for over a millennium.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "wari-bateshwar",
+    "name": "Wari-Bateshwar",
+    "aliases": [
+      "Wari Bateshwar"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -450,
+    "end_year": -100,
+    "date_precision": "approx",
+    "modern_name": "Narsingdi, Bangladesh",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Fortified early historic city with punch-marked coins and Roman-era trade goods.",
+    "confidence": "low"
+  },
+  {
+    "slug": "somapura",
+    "name": "Somapura",
+    "aliases": [
+      "Paharpur",
+      "Somapura Mahavihara"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 780,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Naogaon, Bangladesh",
+    "still_inhabited": false,
+    "peak": "9th-11th c. CE",
+    "summary": "Largest Buddhist monastery south of the Himalaya; a Pala monastic city.",
+    "confidence": "high",
+    "contested": "Monastic complex rather than a city"
+  },
+  {
+    "slug": "vikrampura",
+    "name": "Vikrampura",
+    "aliases": [
+      "Bikrampur",
+      "Rampal"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1000,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Munshiganj, Bangladesh",
+    "still_inhabited": false,
+    "peak": "11th-12th c. CE",
+    "summary": "Pala and Sena capital of eastern Bengal and birthplace of Atisha.",
+    "confidence": "low"
+  },
+  {
+    "slug": "sonargaon",
+    "name": "Sonargaon",
+    "aliases": [
+      "Suvarnagrama"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Narayanganj, Bangladesh",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Capital of eastern Bengal and famed muslin-weaving centre visited by Ibn Battuta.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "daulatabad",
+    "name": "Daulatabad",
+    "aliases": [
+      "Devagiri",
+      "Deogiri"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1187,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Aurangabad district, Maharashtra, India",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Yadava hill-fortress capital, briefly made capital of the whole Delhi Sultanate by force.",
+    "confidence": "high"
+  },
+  {
+    "slug": "warangal",
+    "name": "Warangal",
+    "aliases": [
+      "Orugallu",
+      "Ekasila Nagaram"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1163,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Warangal, Telangana, India",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Kakatiya capital with concentric stone walls; centre of Telugu statecraft and tank irrigation.",
+    "confidence": "high"
+  },
+  {
+    "slug": "dwarka",
+    "name": "Dwarka",
+    "aliases": [
+      "Dvaraka",
+      "Dwarkapuri"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -1500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Devbhumi Dwarka, Gujarat, India",
+    "still_inhabited": true,
+    "peak": "12th-15th c. CE",
+    "summary": "Legendary Krishna capital and a real medieval pilgrimage and pearl-trade port.",
+    "confidence": "low",
+    "contested": "Early dates rest on tradition"
+  },
+  {
+    "slug": "somnath",
+    "name": "Somnath",
+    "aliases": [
+      "Prabhas Patan",
+      "Veraval"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Gir Somnath, Gujarat, India",
+    "still_inhabited": true,
+    "peak": "10th-11th c. CE",
+    "summary": "Temple-port repeatedly sacked and rebuilt; the symbolic wealth of medieval Gujarat.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "bharuch",
+    "name": "Bharuch",
+    "aliases": [
+      "Barygaza",
+      "Broach",
+      "Bhrigukachchha"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bharuch, Gujarat, India",
+    "still_inhabited": true,
+    "peak": "1st-2nd c. CE",
+    "summary": "Chief western Indian port of Roman-era trade named in the Periplus.",
+    "confidence": "high"
+  },
+  {
+    "slug": "sopara",
+    "name": "Sopara",
+    "aliases": [
+      "Surparaka",
+      "Shurparaka",
+      "Nala Sopara"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Vasai, Maharashtra, India",
+    "still_inhabited": false,
+    "peak": "1st-9th c. CE",
+    "summary": "Konkan port and Buddhist centre trading with Mesopotamia and Rome.",
+    "confidence": "low",
+    "contested": "Modern suburb occupies the site"
+  },
+  {
+    "slug": "kalyan",
+    "name": "Kalyan",
+    "aliases": [
+      "Kalliena",
+      "Kalyana"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Thane district, Maharashtra, India",
+    "still_inhabited": true,
+    "peak": "6th c. CE",
+    "summary": "Konkan trading port named by Cosmas Indicopleustes as a market for Persian shipping.",
+    "confidence": "low"
+  },
+  {
+    "slug": "paithan",
+    "name": "Paithan",
+    "aliases": [
+      "Pratishthana",
+      "Baithana"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Aurangabad district, Maharashtra, India",
+    "still_inhabited": true,
+    "peak": "1st-2nd c. CE",
+    "summary": "Satavahana capital and terminus of the Deccan trade road to Barygaza.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ter",
+    "name": "Ter",
+    "aliases": [
+      "Tagara",
+      "Tagar"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -200,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Osmanabad, Maharashtra, India",
+    "still_inhabited": false,
+    "peak": "1st-3rd c. CE",
+    "summary": "Deccan trade town named in the Periplus as Tagara, exporter of cottons and ivory.",
+    "confidence": "low",
+    "contested": "Small town remains"
+  },
+  {
+    "slug": "vidisha",
+    "name": "Vidisha",
+    "aliases": [
+      "Besnagar",
+      "Vidisa"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Vidisha, Madhya Pradesh, India",
+    "still_inhabited": true,
+    "peak": "2nd-1st c. BCE",
+    "summary": "Sunga-era trade city with the Heliodorus pillar, gateway to the Sanchi complex.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tamralipti",
+    "name": "Tamralipti",
+    "aliases": [
+      "Tamluk",
+      "Tamralipta"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Tamluk, West Bengal, India",
+    "still_inhabited": false,
+    "peak": "3rd c. BCE-7th c. CE",
+    "summary": "Ganges-delta port from which pilgrims and Ashoka's missions sailed to Sri Lanka and China.",
+    "confidence": "medium",
+    "contested": "Modern town of Tamluk remains"
+  },
+  {
+    "slug": "arikamedu",
+    "name": "Arikamedu",
+    "aliases": [
+      "Arikkamedu",
+      "Poduke",
+      "Virampatnam"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -200,
+    "end_year": 300,
+    "date_precision": "approx",
+    "modern_name": "Puducherry, India",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Indo-Roman trading station with amphorae and Arretine ware; the Poduke of the Periplus.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kaveripattinam",
+    "name": "Kaveripattinam",
+    "aliases": [
+      "Poompuhar",
+      "Puhar",
+      "Khaberis"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": 500,
+    "date_precision": "approx",
+    "modern_name": "Mayiladuthurai, Tamil Nadu, India",
+    "still_inhabited": false,
+    "peak": "1st-3rd c. CE",
+    "summary": "Great early Chola port of Tamil epic, lost partly to the sea.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "uraiyur",
+    "name": "Uraiyur",
+    "aliases": [
+      "Uraiyur Trichy",
+      "Uranthai"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tiruchirappalli, Tamil Nadu, India",
+    "still_inhabited": true,
+    "peak": "1st-3rd c. CE",
+    "summary": "Early Chola capital on the Kaveri, pearl and cotton centre of the sangam age.",
+    "confidence": "low"
+  },
+  {
+    "slug": "karur",
+    "name": "Karur",
+    "aliases": [
+      "Vanji",
+      "Karuvur"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Karur, Tamil Nadu, India",
+    "still_inhabited": true,
+    "peak": "1st-3rd c. CE",
+    "summary": "Chera capital of the sangam age with Roman coin finds and bead industry.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kodumanal",
+    "name": "Kodumanal",
+    "aliases": [
+      "Kodumanam"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -400,
+    "end_year": 100,
+    "date_precision": "approx",
+    "modern_name": "Erode district, Tamil Nadu, India",
+    "still_inhabited": false,
+    "peak": "3rd c. BCE",
+    "summary": "Industrial gem-cutting and iron-smelting town with the earliest Tamil-Brahmi graffiti.",
+    "confidence": "low"
+  },
+  {
+    "slug": "nagarjunakonda",
+    "name": "Nagarjunakonda",
+    "aliases": [
+      "Vijayapuri",
+      "Nagarjunikonda"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 200,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Nalgonda, Telangana, India",
+    "still_inhabited": false,
+    "peak": "3rd-4th c. CE",
+    "summary": "Ikshvaku capital and Buddhist university city, now largely submerged by a reservoir.",
+    "confidence": "medium",
+    "contested": "Site flooded by the Nagarjuna Sagar dam"
+  },
+  {
+    "slug": "badami",
+    "name": "Badami",
+    "aliases": [
+      "Vatapi",
+      "Badami Chalukya"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 540,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bagalkot, Karnataka, India",
+    "still_inhabited": true,
+    "peak": "6th-8th c. CE",
+    "summary": "Chalukya capital whose rock-cut temples begin the Deccan tradition of stone architecture.",
+    "confidence": "high"
+  },
+  {
+    "slug": "aihole",
+    "name": "Aihole",
+    "aliases": [
+      "Ayyavole",
+      "Aryapura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 450,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Bagalkot, Karnataka, India",
+    "still_inhabited": false,
+    "peak": "6th-8th c. CE",
+    "summary": "Chalukya temple laboratory and seat of the Ayyavole merchant guild.",
+    "confidence": "medium",
+    "contested": "Village remains"
+  },
+  {
+    "slug": "pattadakal",
+    "name": "Pattadakal",
+    "aliases": [
+      "Pattadakallu",
+      "Raktapura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 700,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Bagalkot, Karnataka, India",
+    "still_inhabited": false,
+    "peak": "8th c. CE",
+    "summary": "Chalukya coronation city and showcase of northern and southern temple styles side by side.",
+    "confidence": "medium",
+    "contested": "Temple complex with a village"
+  },
+  {
+    "slug": "ellora",
+    "name": "Ellora",
+    "aliases": [
+      "Verul",
+      "Elapura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 600,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Aurangabad district, Maharashtra, India",
+    "still_inhabited": false,
+    "peak": "8th c. CE",
+    "summary": "Rock-cut Hindu, Buddhist and Jain cave complex including the monolithic Kailasa temple.",
+    "confidence": "high",
+    "contested": "Monument complex, not a city"
+  },
+  {
+    "slug": "ajanta",
+    "name": "Ajanta",
+    "aliases": [
+      "Ajintha caves"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -200,
+    "end_year": 650,
+    "date_precision": "approx",
+    "modern_name": "Aurangabad district, Maharashtra, India",
+    "still_inhabited": false,
+    "peak": "5th c. CE",
+    "summary": "Buddhist cave monastery preserving the finest ancient Indian painting.",
+    "confidence": "high",
+    "contested": "Monument complex, not a city"
+  },
+  {
+    "slug": "mahabalipuram",
+    "name": "Mahabalipuram",
+    "aliases": [
+      "Mamallapuram",
+      "Seven Pagodas"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Chengalpattu, Tamil Nadu, India",
+    "still_inhabited": true,
+    "peak": "7th-8th c. CE",
+    "summary": "Pallava port and rock-cut sculptural workshop that exported Indian art to Southeast Asia.",
+    "confidence": "high"
+  },
+  {
+    "slug": "gangaikondacholapuram",
+    "name": "Gangaikondacholapuram",
+    "aliases": [
+      "Gangaikonda Cholapuram"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1025,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Ariyalur, Tamil Nadu, India",
+    "still_inhabited": false,
+    "peak": "11th-12th c. CE",
+    "summary": "Purpose-built Chola imperial capital celebrating the conquest of the Ganges plain.",
+    "confidence": "high",
+    "contested": "Village remains at the site"
+  },
+  {
+    "slug": "srirangam",
+    "name": "Srirangam",
+    "aliases": [
+      "Thiruvarangam"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tiruchirappalli, Tamil Nadu, India",
+    "still_inhabited": true,
+    "peak": "13th-16th c. CE",
+    "summary": "Island temple city of Ranganatha, the largest functioning temple complex in the world.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kumbakonam",
+    "name": "Kumbakonam",
+    "aliases": [
+      "Kudanthai"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Thanjavur district, Tamil Nadu, India",
+    "still_inhabited": true,
+    "peak": "9th-12th c. CE",
+    "summary": "Chola-era temple and later brass-working city of the Kaveri delta.",
+    "confidence": "low"
+  },
+  {
+    "slug": "sisupalgarh",
+    "name": "Sisupalgarh",
+    "aliases": [
+      "Sisupalagada",
+      "Tosali"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Bhubaneswar, Odisha, India",
+    "still_inhabited": false,
+    "peak": "2nd c. BCE-2nd c. CE",
+    "summary": "Precisely planned fortified city of Kalinga, likely the Tosali of Ashoka's edicts.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "bhubaneswar",
+    "name": "Bhubaneswar",
+    "aliases": [
+      "Ekamra Kshetra",
+      "Bhuvaneshwar"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bhubaneswar, Odisha, India",
+    "still_inhabited": true,
+    "peak": "10th-13th c. CE",
+    "summary": "Temple city of the Somavamshi and Ganga kings with hundreds of Kalinga-style shrines.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "puri",
+    "name": "Puri",
+    "aliases": [
+      "Purushottama Kshetra",
+      "Jagannatha Puri"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Puri, Odisha, India",
+    "still_inhabited": true,
+    "peak": "12th-15th c. CE",
+    "summary": "Jagannath pilgrimage capital and one of Hinduism's four cardinal holy cities.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "konark",
+    "name": "Konark",
+    "aliases": [
+      "Konarak",
+      "Black Pagoda"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1250,
+    "end_year": 1600,
+    "date_precision": "approx",
+    "modern_name": "Puri district, Odisha, India",
+    "still_inhabited": false,
+    "peak": "13th c. CE",
+    "summary": "Sun temple built as a colossal stone chariot; a monument and port shrine, not a city.",
+    "confidence": "medium",
+    "contested": "Monument, not a city"
+  },
+  {
+    "slug": "khajuraho",
+    "name": "Khajuraho",
+    "aliases": [
+      "Kharjuravahaka"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 900,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Chhatarpur, Madhya Pradesh, India",
+    "still_inhabited": false,
+    "peak": "10th-11th c. CE",
+    "summary": "Chandela capital whose temple complex is the summit of north Indian sculpture.",
+    "confidence": "high",
+    "contested": "Village remains at the site"
+  },
+  {
+    "slug": "chittorgarh",
+    "name": "Chittorgarh",
+    "aliases": [
+      "Chittor",
+      "Chitrakuta"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Chittorgarh, Rajasthan, India",
+    "still_inhabited": true,
+    "peak": "13th-16th c. CE",
+    "summary": "Greatest Rajput hill fortress-city, thrice besieged and thrice ritually self-destroyed.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "jaisalmer",
+    "name": "Jaisalmer",
+    "aliases": [
+      "Jaisalmer fort",
+      "Jaisalmer Golden City"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1156,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Jaisalmer, Rajasthan, India",
+    "still_inhabited": true,
+    "peak": "14th-16th c. CE",
+    "summary": "Thar desert caravan city on the route between Delhi and Sindh.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mandu",
+    "name": "Mandu",
+    "aliases": [
+      "Mandavgad",
+      "Shadiabad"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1300,
+    "end_year": 1600,
+    "date_precision": "approx",
+    "modern_name": "Dhar district, Madhya Pradesh, India",
+    "still_inhabited": false,
+    "peak": "15th c. CE",
+    "summary": "Malwa Sultanate hilltop capital with vast walls and Afghan-style stone architecture.",
+    "confidence": "medium",
+    "contested": "Village remains within the walls"
+  },
+  {
+    "slug": "ahmedabad",
+    "name": "Ahmedabad",
+    "aliases": [
+      "Ahmadabad",
+      "Karnavati",
+      "Ashaval"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1411,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ahmedabad, Gujarat, India",
+    "still_inhabited": true,
+    "peak": "15th-17th c. CE",
+    "summary": "Gujarat Sultanate capital and India's leading textile manufacturing city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kathmandu",
+    "name": "Kathmandu",
+    "aliases": [
+      "Kantipur",
+      "Yen"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 723,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kathmandu, Nepal",
+    "still_inhabited": true,
+    "peak": "15th-18th c. CE",
+    "summary": "Malla capital, Himalayan trade entrepot on the Tibet-India route.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "patan-lalitpur",
+    "name": "Lalitpur",
+    "aliases": [
+      "Patan",
+      "Yala",
+      "Manigal"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lalitpur, Nepal",
+    "still_inhabited": true,
+    "peak": "16th-17th c. CE",
+    "summary": "Malla royal city of Newar craftsmen and metal casters in the Kathmandu valley.",
+    "confidence": "low"
+  },
+  {
+    "slug": "bhaktapur",
+    "name": "Bhaktapur",
+    "aliases": [
+      "Khwopa",
+      "Bhadgaon"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bhaktapur, Nepal",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Malla capital and best-preserved Newar city, controlling the Tibet trade road.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lomanthang",
+    "name": "Lo Manthang",
+    "aliases": [
+      "Mustang",
+      "Monthang"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1380,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Upper Mustang, Nepal",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Walled Tibetan-Buddhist capital of the kingdom of Lo on the Kali Gandaki salt route.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tissamaharama",
+    "name": "Tissamaharama",
+    "aliases": [
+      "Mahagama",
+      "Magama"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": 1100,
+    "date_precision": "approx",
+    "modern_name": "Hambantota, Sri Lanka",
+    "still_inhabited": false,
+    "peak": "2nd c. BCE-4th c. CE",
+    "summary": "Capital of the southern Sinhalese kingdom of Ruhuna and early Buddhist centre.",
+    "confidence": "low",
+    "contested": "Modern town on the site"
+  },
+  {
+    "slug": "mantai",
+    "name": "Mantai",
+    "aliases": [
+      "Mahatittha",
+      "Mannar",
+      "Mantota"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -200,
+    "end_year": 1100,
+    "date_precision": "approx",
+    "modern_name": "Mannar, Sri Lanka",
+    "still_inhabited": false,
+    "peak": "6th-10th c. CE",
+    "summary": "Principal port of Anuradhapura, a Roman-to-Chinese trade emporium in the Palk Strait.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "yapahuwa",
+    "name": "Yapahuwa",
+    "aliases": [
+      "Yapawwa",
+      "Sundaragiri"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1273,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Kurunegala district, Sri Lanka",
+    "still_inhabited": false,
+    "peak": "late 13th c. CE",
+    "summary": "Rock-citadel capital built to shelter the Tooth Relic from South Indian invasion.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "dambadeniya",
+    "name": "Dambadeniya",
+    "aliases": [
+      "Dambadeni Nuwara"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1220,
+    "end_year": 1290,
+    "date_precision": "approx",
+    "modern_name": "Kurunegala district, Sri Lanka",
+    "still_inhabited": false,
+    "peak": "13th c. CE",
+    "summary": "Sinhalese capital after Polonnaruwa's fall, a period of Sinhala literary revival.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kotte",
+    "name": "Kotte",
+    "aliases": [
+      "Jayawardenapura",
+      "Sri Jayawardenapura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1370,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sri Jayawardenepura Kotte, Sri Lanka",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Fortified late-medieval Sinhalese capital that dealt first with Portuguese arrival.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gampola",
+    "name": "Gampola",
+    "aliases": [
+      "Gangasiripura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1341,
+    "end_year": 1410,
+    "date_precision": "approx",
+    "modern_name": "Kandy district, Sri Lanka",
+    "still_inhabited": false,
+    "peak": "14th c. CE",
+    "summary": "Hill-country Sinhalese capital of the Gampola period.",
+    "confidence": "low",
+    "contested": "Small town remains"
+  },
+  {
+    "slug": "kurunegala",
+    "name": "Kurunegala",
+    "aliases": [
+      "Hastisailapura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1293,
+    "end_year": 1341,
+    "date_precision": "approx",
+    "modern_name": "Kurunegala, Sri Lanka",
+    "still_inhabited": false,
+    "peak": "late 13th c. CE",
+    "summary": "Brief Sinhalese royal capital beneath the Elephant Rock.",
+    "confidence": "low"
+  },
+  {
+    "slug": "sirsukh-sialkot",
+    "name": "Sialkot",
+    "aliases": [
+      "Sakala",
+      "Sagala"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sialkot, Pakistan",
+    "still_inhabited": true,
+    "peak": "2nd c. BCE",
+    "summary": "Capital of the Indo-Greek king Menander and setting of the Milindapanha dialogues.",
+    "confidence": "low"
+  },
+  {
+    "slug": "vengi",
+    "name": "Vengi",
+    "aliases": [
+      "Vengipura",
+      "Pedavegi"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -200,
+    "end_year": 1100,
+    "date_precision": "approx",
+    "modern_name": "Eluru district, Andhra Pradesh, India",
+    "still_inhabited": false,
+    "peak": "7th-10th c. CE",
+    "summary": "Capital of the Eastern Chalukyas and earlier Salankayanas in coastal Andhra.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kolhapur",
+    "name": "Kolhapur",
+    "aliases": [
+      "Brahmapuri",
+      "Kollapura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kolhapur, Maharashtra, India",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Satavahana-era bronze-working town and later Shilahara capital and Shakta pilgrimage seat.",
+    "confidence": "low"
+  },
+  {
+    "slug": "angkor",
+    "name": "Angkor",
+    "aliases": [
+      "Yasodharapura",
+      "Angkor Thom"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 889,
+    "end_year": 1431,
+    "date_precision": "approx",
+    "modern_name": "Siem Reap, Cambodia",
+    "still_inhabited": false,
+    "peak": "11th-13th c. CE",
+    "summary": "Khmer imperial capital and the largest pre-industrial urban complex on earth.",
+    "confidence": "high",
+    "contested": "Temples remained in use and villages persist; the royal city was abandoned in 1431"
+  },
+  {
+    "slug": "hariharalaya",
+    "name": "Hariharalaya",
+    "aliases": [
+      "Roluos",
+      "Rolous"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 802,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Roluos, Siem Reap, Cambodia",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "First capital of the Angkorian state founded by Jayavarman II.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mahendraparvata",
+    "name": "Mahendraparvata",
+    "aliases": [
+      "Phnom Kulen"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 802,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Phnom Kulen, Cambodia",
+    "still_inhabited": false,
+    "peak": "early 9th c. CE",
+    "summary": "Mountain city where Jayavarman II declared Khmer independence; found by lidar in 2012.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kohker",
+    "name": "Koh Ker",
+    "aliases": [
+      "Chok Gargyar",
+      "Lingapura"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 928,
+    "end_year": 944,
+    "date_precision": "approx",
+    "modern_name": "Preah Vihear, Cambodia",
+    "still_inhabited": false,
+    "peak": "10th c. CE",
+    "summary": "Brief Khmer capital of Jayavarman IV with a seven-tier pyramid temple.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sambor-prei-kuk",
+    "name": "Sambor Prei Kuk",
+    "aliases": [
+      "Isanapura",
+      "Ishanapura"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 600,
+    "end_year": 800,
+    "date_precision": "approx",
+    "modern_name": "Kampong Thom, Cambodia",
+    "still_inhabited": false,
+    "peak": "7th c. CE",
+    "summary": "Capital of Chenla, the earliest large temple-city of the Khmer tradition.",
+    "confidence": "high"
+  },
+  {
+    "slug": "angkor-borei",
+    "name": "Angkor Borei",
+    "aliases": [
+      "Vyadhapura",
+      "Naravaranagara"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -400,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Takeo, Cambodia",
+    "still_inhabited": true,
+    "peak": "1st-6th c. CE",
+    "summary": "Probable inland capital of Funan, the first state of mainland Southeast Asia.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "oc-eo",
+    "name": "Oc Eo",
+    "aliases": [
+      "Oc-Eo",
+      "Kattigara"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -100,
+    "end_year": 700,
+    "date_precision": "approx",
+    "modern_name": "An Giang, Vietnam",
+    "still_inhabited": false,
+    "peak": "2nd-6th c. CE",
+    "summary": "Funan's canal port where Roman, Indian and Han goods met; possibly Ptolemy's Kattigara.",
+    "confidence": "high"
+  },
+  {
+    "slug": "phnom-penh",
+    "name": "Phnom Penh",
+    "aliases": [
+      "Chaktomuk",
+      "Krong Chaktomuk"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1372,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Phnom Penh, Cambodia",
+    "still_inhabited": true,
+    "peak": "15th c. and modern",
+    "summary": "Khmer capital after Angkor, at the confluence of the Mekong and Tonle Sap.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "banteay-chhmar",
+    "name": "Banteay Chhmar",
+    "aliases": [
+      "Banteay Chmar"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1180,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Banteay Meanchey, Cambodia",
+    "still_inhabited": false,
+    "peak": "late 12th c. CE",
+    "summary": "Great walled temple-city of Jayavarman VII on the northwest Khmer frontier.",
+    "confidence": "low"
+  },
+  {
+    "slug": "wat-phu-champasak",
+    "name": "Champasak",
+    "aliases": [
+      "Shrestapura",
+      "Wat Phu",
+      "Vat Phou"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Champasak, Laos",
+    "still_inhabited": true,
+    "peak": "5th-7th c. and 11th c. CE",
+    "summary": "Pre-Angkorian Chenla city and mountain-shrine complex on the Mekong.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "luang-prabang",
+    "name": "Luang Prabang",
+    "aliases": [
+      "Muang Sua",
+      "Xieng Thong"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 698,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Luang Prabang, Laos",
+    "still_inhabited": true,
+    "peak": "14th-16th c. CE",
+    "summary": "Capital of the Lan Xang kingdom and Lao Buddhist royal city on the upper Mekong.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "vientiane",
+    "name": "Vientiane",
+    "aliases": [
+      "Vieng Chan",
+      "Wiang Chan"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Vientiane, Laos",
+    "still_inhabited": true,
+    "peak": "16th c. CE",
+    "summary": "Mekong river city that became the Lan Xang capital in the 1560s.",
+    "confidence": "low"
+  },
+  {
+    "slug": "coloa",
+    "name": "Co Loa",
+    "aliases": [
+      "Kuu Lau",
+      "Kelou"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -300,
+    "end_year": -179,
+    "date_precision": "approx",
+    "modern_name": "Dong Anh, Hanoi, Vietnam",
+    "still_inhabited": false,
+    "peak": "3rd c. BCE",
+    "summary": "Spiral-walled capital of Au Lac, the earliest known city in Vietnam.",
+    "confidence": "medium",
+    "contested": "Village remains within the ramparts"
+  },
+  {
+    "slug": "hanoi",
+    "name": "Hanoi",
+    "aliases": [
+      "Thang Long",
+      "Dai La",
+      "Dong Kinh",
+      "Tonkin"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Hanoi, Vietnam",
+    "still_inhabited": true,
+    "peak": "11th-15th c. CE",
+    "summary": "Vietnamese imperial capital from 1010 and the enduring political centre of the Red River delta.",
+    "confidence": "high"
+  },
+  {
+    "slug": "hoalu",
+    "name": "Hoa Lu",
+    "aliases": [
+      "Hoa-lu"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 968,
+    "end_year": 1010,
+    "date_precision": "approx",
+    "modern_name": "Ninh Binh, Vietnam",
+    "still_inhabited": false,
+    "peak": "10th c. CE",
+    "summary": "First capital of independent Vietnam, in a limestone karst amphitheatre.",
+    "confidence": "high",
+    "contested": "Village remains at the site"
+  },
+  {
+    "slug": "luylau",
+    "name": "Luy Lau",
+    "aliases": [
+      "Lien Lau",
+      "Longbian"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -100,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Bac Ninh, Vietnam",
+    "still_inhabited": false,
+    "peak": "2nd-3rd c. CE",
+    "summary": "Han-era administrative capital of Jiaozhi and Vietnam's first Buddhist centre.",
+    "confidence": "low"
+  },
+  {
+    "slug": "tay-do",
+    "name": "Tay Do",
+    "aliases": [
+      "Ho citadel",
+      "Thanh Nha Ho"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1397,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Thanh Hoa, Vietnam",
+    "still_inhabited": false,
+    "peak": "c. 1400 CE",
+    "summary": "Purpose-built stone citadel capital of the short-lived Ho dynasty.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "hue",
+    "name": "Hue",
+    "aliases": [
+      "Phu Xuan",
+      "Thuan Hoa"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1306,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Hue, Vietnam",
+    "still_inhabited": true,
+    "peak": "19th c. CE",
+    "summary": "Cham then Vietnamese frontier city that became the Nguyen imperial capital.",
+    "confidence": "medium",
+    "contested": "Major growth is post-1500"
+  },
+  {
+    "slug": "myson",
+    "name": "My Son",
+    "aliases": [
+      "Mi Son",
+      "Srisanabhadresvara"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 400,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Duy Xuyen, Quang Nam, Vietnam",
+    "still_inhabited": false,
+    "peak": "7th-10th c. CE",
+    "summary": "Cham royal temple valley used for nine centuries; a sanctuary complex, not a city.",
+    "confidence": "high",
+    "contested": "Temple complex, not a city"
+  },
+  {
+    "slug": "indrapura",
+    "name": "Indrapura",
+    "aliases": [
+      "Dong Duong",
+      "Dong Duong Champa"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 875,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Thang Binh, Quang Nam, Vietnam",
+    "still_inhabited": false,
+    "peak": "9th-10th c. CE",
+    "summary": "Cham capital and site of the largest Buddhist monastery of Champa.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "simhapura",
+    "name": "Simhapura",
+    "aliases": [
+      "Tra Kieu",
+      "Trakieu"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 300,
+    "end_year": 750,
+    "date_precision": "approx",
+    "modern_name": "Duy Xuyen, Quang Nam, Vietnam",
+    "still_inhabited": false,
+    "peak": "4th-7th c. CE",
+    "summary": "Earliest Cham capital, walled citadel of the Amaravati region.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "vijaya-champa",
+    "name": "Vijaya",
+    "aliases": [
+      "Cha Ban",
+      "Do Ban",
+      "Binh Dinh"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1000,
+    "end_year": 1471,
+    "date_precision": "approx",
+    "modern_name": "An Nhon, Binh Dinh, Vietnam",
+    "still_inhabited": false,
+    "peak": "12th-14th c. CE",
+    "summary": "Cham capital for four centuries, destroyed by the Vietnamese in 1471.",
+    "confidence": "high"
+  },
+  {
+    "slug": "panduranga",
+    "name": "Panduranga",
+    "aliases": [
+      "Phan Rang",
+      "Virapura"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Phan Rang, Ninh Thuan, Vietnam",
+    "still_inhabited": true,
+    "peak": "15th-17th c. CE",
+    "summary": "Southernmost Cham principality and last surviving seat of Cham rule.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kauthara",
+    "name": "Kauthara",
+    "aliases": [
+      "Nha Trang",
+      "Po Nagar"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nha Trang, Vietnam",
+    "still_inhabited": true,
+    "peak": "8th-11th c. CE",
+    "summary": "Cham port region and site of the Po Nagar temple to the goddess of the realm.",
+    "confidence": "low"
+  },
+  {
+    "slug": "sukhothai",
+    "name": "Sukhothai",
+    "aliases": [
+      "Sukhodaya",
+      "Sukhothai Historical Park"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1238,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Sukhothai, Thailand",
+    "still_inhabited": false,
+    "peak": "13th-14th c. CE",
+    "summary": "First Thai kingdom's capital, birthplace of Thai script and of Sinhalese-style Buddhism.",
+    "confidence": "high",
+    "contested": "New town nearby; the old city was abandoned"
+  },
+  {
+    "slug": "sisatchanalai",
+    "name": "Si Satchanalai",
+    "aliases": [
+      "Sawankhalok",
+      "Chaliang"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1250,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Sukhothai province, Thailand",
+    "still_inhabited": false,
+    "peak": "14th c. CE",
+    "summary": "Twin city of Sukhothai and centre of the Sangkhalok ceramic export industry.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ayutthaya",
+    "name": "Ayutthaya",
+    "aliases": [
+      "Ayudhya",
+      "Phra Nakhon Si Ayutthaya"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1351,
+    "end_year": 1767,
+    "date_precision": "approx",
+    "modern_name": "Ayutthaya, Thailand",
+    "still_inhabited": false,
+    "peak": "17th c. CE",
+    "summary": "Siamese island capital and one of the great cosmopolitan trading cities of the world.",
+    "confidence": "high",
+    "contested": "Modern town adjoins the ruined old city"
+  },
+  {
+    "slug": "lopburi",
+    "name": "Lopburi",
+    "aliases": [
+      "Lavo",
+      "Lavapura"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lopburi, Thailand",
+    "still_inhabited": true,
+    "peak": "10th-13th c. CE",
+    "summary": "Dvaravati then Khmer regional capital and later a Siamese second capital.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "nakhon-pathom",
+    "name": "Nakhon Pathom",
+    "aliases": [
+      "Nakhon Chai Si",
+      "Nakorn Pathom"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nakhon Pathom, Thailand",
+    "still_inhabited": true,
+    "peak": "6th-9th c. CE",
+    "summary": "Chief city of the Mon Dvaravati culture and earliest Buddhist centre in Thailand.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "uthong",
+    "name": "U Thong",
+    "aliases": [
+      "U-thong",
+      "Suphan Buri ancient city"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 300,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Suphan Buri, Thailand",
+    "still_inhabited": false,
+    "peak": "5th-8th c. CE",
+    "summary": "Moated Dvaravati city, possibly the earliest capital of that Mon civilisation.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sithep",
+    "name": "Si Thep",
+    "aliases": [
+      "Sri Deva",
+      "Srithep"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 400,
+    "end_year": 1100,
+    "date_precision": "approx",
+    "modern_name": "Phetchabun, Thailand",
+    "still_inhabited": false,
+    "peak": "7th-10th c. CE",
+    "summary": "Large moated Dvaravati-Khmer city on the route between the Chao Phraya and the Mekong.",
+    "confidence": "low"
+  },
+  {
+    "slug": "chiangmai",
+    "name": "Chiang Mai",
+    "aliases": [
+      "Chiengmai",
+      "Nopburi Si Nakhon Ping"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1296,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Chiang Mai, Thailand",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Capital of the Lan Na kingdom and centre of northern Thai Buddhism and manuscript culture.",
+    "confidence": "high"
+  },
+  {
+    "slug": "chiangsaen",
+    "name": "Chiang Saen",
+    "aliases": [
+      "Chiangsaen",
+      "Yonok"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1328,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Chiang Rai province, Thailand",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Mekong city of the Lan Na and earlier Ngoenyang polity.",
+    "confidence": "low"
+  },
+  {
+    "slug": "lamphun",
+    "name": "Lamphun",
+    "aliases": [
+      "Haripunchai",
+      "Hariphunchai"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lamphun, Thailand",
+    "still_inhabited": true,
+    "peak": "11th-13th c. CE",
+    "summary": "Mon kingdom capital of Hariphunchai, absorbed by Lan Na in 1281.",
+    "confidence": "medium",
+    "contested": "Traditional founding is legendary"
+  },
+  {
+    "slug": "wiangkumkam",
+    "name": "Wiang Kum Kam",
+    "aliases": [
+      "Wiang Kumkam"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1286,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Chiang Mai, Thailand",
+    "still_inhabited": false,
+    "peak": "late 13th c. CE",
+    "summary": "Lan Na's first capital, abandoned to repeated Ping River flooding.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "phimai",
+    "name": "Phimai",
+    "aliases": [
+      "Vimayapura"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nakhon Ratchasima, Thailand",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Northern terminus of the Khmer royal road and a great Mahayana temple city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "nakhonsithammarat",
+    "name": "Nakhon Si Thammarat",
+    "aliases": [
+      "Tambralinga",
+      "Ligor"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nakhon Si Thammarat, Thailand",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Peninsular kingdom of Tambralinga, key node between Srivijaya and Sri Lanka.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "banchiang",
+    "name": "Ban Chiang",
+    "aliases": [
+      "Ban Chiang",
+      "Ban Chieng"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -2100,
+    "end_year": -200,
+    "date_precision": "approx",
+    "modern_name": "Udon Thani, Thailand",
+    "still_inhabited": false,
+    "peak": "2nd millennium BCE",
+    "summary": "Prehistoric bronze- and iron-working village complex of the Khorat plateau.",
+    "confidence": "medium",
+    "contested": "Village cluster, not a city"
+  },
+  {
+    "slug": "noennokhta",
+    "name": "Non Nok Tha",
+    "aliases": [
+      "Non Nokhtha"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -2000,
+    "end_year": -500,
+    "date_precision": "approx",
+    "modern_name": "Khon Kaen, Thailand",
+    "still_inhabited": false,
+    "peak": "2nd millennium BCE",
+    "summary": "Early Southeast Asian bronze-casting settlement that reset dates for regional metallurgy.",
+    "confidence": "low",
+    "contested": "Village, not a city"
+  },
+  {
+    "slug": "bagan",
+    "name": "Bagan",
+    "aliases": [
+      "Pagan",
+      "Arimaddanapura"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 849,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bagan, Mandalay Region, Myanmar",
+    "still_inhabited": true,
+    "peak": "11th-13th c. CE",
+    "summary": "Burmese imperial capital with over two thousand surviving temples on the Irrawaddy plain.",
+    "confidence": "high",
+    "contested": "Royal city sacked in 1287; villages and temples remain in use"
+  },
+  {
+    "slug": "thaton",
+    "name": "Thaton",
+    "aliases": [
+      "Sudhammapura",
+      "Suvannabhumi"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Thaton, Mon State, Myanmar",
+    "still_inhabited": true,
+    "peak": "9th-11th c. CE",
+    "summary": "Mon capital whose conquest in 1057 brought Theravada Buddhism and Pali letters to Bagan.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "beikthano",
+    "name": "Beikthano",
+    "aliases": [
+      "Vishnu city",
+      "Beikthanomyo"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -200,
+    "end_year": 500,
+    "date_precision": "approx",
+    "modern_name": "Magway Region, Myanmar",
+    "still_inhabited": false,
+    "peak": "1st-4th c. CE",
+    "summary": "Earliest excavated Pyu walled city in Myanmar, with Indian-style brick monasteries.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "halin",
+    "name": "Halin",
+    "aliases": [
+      "Halingyi",
+      "Hanlin"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -200,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Sagaing Region, Myanmar",
+    "still_inhabited": false,
+    "peak": "4th-8th c. CE",
+    "summary": "Northernmost Pyu city, a salt-producing centre destroyed by Nanzhao raids.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sriksetra",
+    "name": "Sri Ksetra",
+    "aliases": [
+      "Thayekhittaya",
+      "Hmawza"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -200,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Pyay, Bago Region, Myanmar",
+    "still_inhabited": false,
+    "peak": "5th-9th c. CE",
+    "summary": "Largest Pyu city and origin of Burmese Buddhist urbanism and the earliest Pali texts in Myanmar.",
+    "confidence": "high"
+  },
+  {
+    "slug": "inwa",
+    "name": "Inwa",
+    "aliases": [
+      "Ava",
+      "Ratanapura"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1365,
+    "end_year": 1841,
+    "date_precision": "approx",
+    "modern_name": "Mandalay Region, Myanmar",
+    "still_inhabited": false,
+    "peak": "15th-16th c. CE",
+    "summary": "Burmese capital for four centuries, giving Europeans the name Ava for Burma.",
+    "confidence": "medium",
+    "contested": "Villages remain on the site"
+  },
+  {
+    "slug": "pinya",
+    "name": "Pinya",
+    "aliases": [
+      "Pinle",
+      "Vijayapura"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1313,
+    "end_year": 1365,
+    "date_precision": "approx",
+    "modern_name": "Mandalay Region, Myanmar",
+    "still_inhabited": false,
+    "peak": "14th c. CE",
+    "summary": "Capital of the post-Bagan Pinya kingdom in central Myanmar.",
+    "confidence": "low"
+  },
+  {
+    "slug": "sagaing",
+    "name": "Sagaing",
+    "aliases": [
+      "Sagaing myo"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1315,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sagaing, Myanmar",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Shan-Burmese capital and enduring monastic hill city on the Irrawaddy.",
+    "confidence": "low"
+  },
+  {
+    "slug": "bago",
+    "name": "Bago",
+    "aliases": [
+      "Pegu",
+      "Hanthawaddy",
+      "Hamsavati"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 825,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bago, Myanmar",
+    "still_inhabited": true,
+    "peak": "15th-16th c. CE",
+    "summary": "Mon capital of Hanthawaddy and the greatest port of 15th-century Burma.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mottama",
+    "name": "Mottama",
+    "aliases": [
+      "Martaban",
+      "Muttama"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1050,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Mottama, Mon State, Myanmar",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Mon port capital that gave its name to Martaban storage jars traded across the Indian Ocean.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mraukU",
+    "name": "Mrauk U",
+    "aliases": [
+      "Mrohaung",
+      "Myohaung"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1430,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Rakhine State, Myanmar",
+    "still_inhabited": true,
+    "peak": "16th-17th c. CE",
+    "summary": "Arakanese capital and cosmopolitan Bay of Bengal port city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "wethali",
+    "name": "Wethali",
+    "aliases": [
+      "Vesali",
+      "Vaishali of Arakan"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 350,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Rakhine State, Myanmar",
+    "still_inhabited": false,
+    "peak": "6th-8th c. CE",
+    "summary": "Arakanese kingdom capital with Sanskrit inscriptions and its own coinage.",
+    "confidence": "low"
+  },
+  {
+    "slug": "dhanyawadi",
+    "name": "Dhanyawadi",
+    "aliases": [
+      "Dhanyavati"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -100,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Rakhine State, Myanmar",
+    "still_inhabited": false,
+    "peak": "4th c. CE",
+    "summary": "Earliest Arakanese walled city, home of the Mahamuni Buddha image.",
+    "confidence": "low"
+  },
+  {
+    "slug": "pyay",
+    "name": "Pyay",
+    "aliases": [
+      "Prome",
+      "Pye"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Pyay, Myanmar",
+    "still_inhabited": true,
+    "peak": "18th c. CE",
+    "summary": "Irrawaddy river port that succeeded nearby Sri Ksetra as the delta's northern gateway.",
+    "confidence": "low"
+  },
+  {
+    "slug": "tagaung",
+    "name": "Tagaung",
+    "aliases": [
+      "Tagaung myo"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -100,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Sagaing Region, Myanmar",
+    "still_inhabited": false,
+    "peak": "10th-12th c. CE",
+    "summary": "Upper Irrawaddy town claimed in chronicles as the first Burmese kingdom's capital.",
+    "confidence": "low",
+    "contested": "Village remains"
+  },
+  {
+    "slug": "toungoo",
+    "name": "Toungoo",
+    "aliases": [
+      "Taungoo",
+      "Ketumadi"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1279,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Taungoo, Bago Region, Myanmar",
+    "still_inhabited": true,
+    "peak": "16th c. CE",
+    "summary": "Base of the Toungoo dynasty that built the largest empire in Southeast Asian history.",
+    "confidence": "low"
+  },
+  {
+    "slug": "palembang",
+    "name": "Palembang",
+    "aliases": [
+      "Srivijaya",
+      "Sribuza",
+      "Sanfoqi"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Palembang, South Sumatra, Indonesia",
+    "still_inhabited": true,
+    "peak": "8th-11th c. CE",
+    "summary": "Capital of Srivijaya, the maritime empire that controlled the Malacca and Sunda straits.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "muarajambi",
+    "name": "Muara Jambi",
+    "aliases": [
+      "Muaro Jambi",
+      "Malayu"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 700,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Jambi, Indonesia",
+    "still_inhabited": false,
+    "peak": "11th-13th c. CE",
+    "summary": "Vast riverine temple and monastic city, probably the later Srivijayan-Malayu capital.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kedah-bujang",
+    "name": "Bujang Valley",
+    "aliases": [
+      "Kedah Tua",
+      "Sungai Batu",
+      "Kadaram"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": -100,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Kedah, Malaysia",
+    "still_inhabited": false,
+    "peak": "5th-11th c. CE",
+    "summary": "Oldest urban and iron-smelting complex in Malaysia and Kedah's Hindu-Buddhist port kingdom.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "malacca",
+    "name": "Malacca",
+    "aliases": [
+      "Melaka",
+      "Malaqa"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1400,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Malacca, Malaysia",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Sultanate emporium that controlled the straits and became the pivot of Asian maritime trade.",
+    "confidence": "high"
+  },
+  {
+    "slug": "temasek",
+    "name": "Temasek",
+    "aliases": [
+      "Singapura",
+      "Tumasik"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Singapore",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Fortified 14th-century port settlement on the Singapore River, precursor to modern Singapore.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "trowulan",
+    "name": "Trowulan",
+    "aliases": [
+      "Majapahit",
+      "Wilwatikta"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1293,
+    "end_year": 1527,
+    "date_precision": "approx",
+    "modern_name": "Mojokerto, East Java, Indonesia",
+    "still_inhabited": false,
+    "peak": "14th c. CE",
+    "summary": "Capital of Majapahit, the greatest Javanese empire; a vast brick and canal city.",
+    "confidence": "high",
+    "contested": "Villages remain on the site"
+  },
+  {
+    "slug": "borobudur",
+    "name": "Borobudur",
+    "aliases": [
+      "Barabudur"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 780,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Magelang, Central Java, Indonesia",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "Largest Buddhist monument on earth, a stone mandala of the Sailendra dynasty.",
+    "confidence": "high",
+    "contested": "Monument, not a city"
+  },
+  {
+    "slug": "prambanan",
+    "name": "Prambanan",
+    "aliases": [
+      "Lara Jonggrang",
+      "Shivagrha"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 850,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Sleman, Yogyakarta, Indonesia",
+    "still_inhabited": false,
+    "peak": "9th-10th c. CE",
+    "summary": "Greatest Hindu temple complex in Indonesia, built by the Sanjaya kings of Medang.",
+    "confidence": "high",
+    "contested": "Monument complex, not a city"
+  },
+  {
+    "slug": "ratu-boko",
+    "name": "Ratu Boko",
+    "aliases": [
+      "Ratu Baka",
+      "Abhayagiri Vihara"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 790,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Sleman, Yogyakarta, Indonesia",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "Fortified hilltop palace and monastery of the Medang court near Prambanan.",
+    "confidence": "low",
+    "contested": "Palace complex rather than a city"
+  },
+  {
+    "slug": "mataram-medang",
+    "name": "Medang",
+    "aliases": [
+      "Mataram Kuno",
+      "Mdang"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 732,
+    "end_year": 929,
+    "date_precision": "approx",
+    "modern_name": "Central Java, Indonesia",
+    "still_inhabited": false,
+    "peak": "8th-9th c. CE",
+    "summary": "Central Javanese kingdom whose shifting royal centre produced Borobudur and Prambanan.",
+    "confidence": "low",
+    "contested": "Capital location shifted and is not precisely fixed"
+  },
+  {
+    "slug": "kediri",
+    "name": "Kediri",
+    "aliases": [
+      "Daha",
+      "Panjalu"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1042,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kediri, East Java, Indonesia",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Capital of the Kediri kingdom and a golden age of Old Javanese literature.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "singhasari",
+    "name": "Singhasari",
+    "aliases": [
+      "Singosari",
+      "Kutaraja"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1222,
+    "end_year": 1292,
+    "date_precision": "approx",
+    "modern_name": "Malang, East Java, Indonesia",
+    "still_inhabited": false,
+    "peak": "13th c. CE",
+    "summary": "Capital of Singhasari, whose king defied Kublai Khan and whose fall produced Majapahit.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "dieng",
+    "name": "Dieng",
+    "aliases": [
+      "Dieng Plateau"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 700,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Wonosobo, Central Java, Indonesia",
+    "still_inhabited": false,
+    "peak": "8th c. CE",
+    "summary": "Highland Shaiva temple complex, the oldest Hindu architecture on Java.",
+    "confidence": "medium",
+    "contested": "Temple complex, not a city"
+  },
+  {
+    "slug": "tuban",
+    "name": "Tuban",
+    "aliases": [
+      "Toeban"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tuban, East Java, Indonesia",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Majapahit's principal north-coast port and gateway for Chinese and Muslim traders.",
+    "confidence": "low"
+  },
+  {
+    "slug": "gresik",
+    "name": "Gresik",
+    "aliases": [
+      "Grissee",
+      "Giri"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Gresik, East Java, Indonesia",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Port town where Islam entered Java, seat of the Sunan Giri religious authority.",
+    "confidence": "low"
+  },
+  {
+    "slug": "surabaya",
+    "name": "Surabaya",
+    "aliases": [
+      "Surabaja",
+      "Churabaya"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Surabaya, East Java, Indonesia",
+    "still_inhabited": true,
+    "peak": "18th-20th c. CE",
+    "summary": "Brantas delta port fought over by Majapahit successors; later Java's chief harbour.",
+    "confidence": "low"
+  },
+  {
+    "slug": "demak",
+    "name": "Demak",
+    "aliases": [
+      "Bintara"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1400,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Demak, Central Java, Indonesia",
+    "still_inhabited": true,
+    "peak": "early 16th c. CE",
+    "summary": "First Islamic sultanate on Java, whose armies ended Majapahit.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "pakuan-pajajaran",
+    "name": "Pakuan Pajajaran",
+    "aliases": [
+      "Pakwan",
+      "Sunda Kelapa hinterland"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1030,
+    "end_year": 1579,
+    "date_precision": "approx",
+    "modern_name": "Bogor, West Java, Indonesia",
+    "still_inhabited": false,
+    "peak": "15th c. CE",
+    "summary": "Capital of the Hindu Sunda kingdom, destroyed by Banten in 1579.",
+    "confidence": "low",
+    "contested": "Modern Bogor occupies part of the site"
+  },
+  {
+    "slug": "samudera-pasai",
+    "name": "Samudera Pasai",
+    "aliases": [
+      "Pasai",
+      "Samudra"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1267,
+    "end_year": 1521,
+    "date_precision": "approx",
+    "modern_name": "North Aceh, Indonesia",
+    "still_inhabited": false,
+    "peak": "14th c. CE",
+    "summary": "First Islamic sultanate in Southeast Asia and a major pepper port visited by Ibn Battuta.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "barus",
+    "name": "Barus",
+    "aliases": [
+      "Fansur",
+      "Panchur"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Central Tapanuli, North Sumatra, Indonesia",
+    "still_inhabited": true,
+    "peak": "9th-13th c. CE",
+    "summary": "Ancient camphor and benzoin port linking Sumatra with the Middle East and China.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kutai-martapura",
+    "name": "Martapura",
+    "aliases": [
+      "Muara Kaman",
+      "Kutai Martadipura"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 350,
+    "end_year": 1600,
+    "date_precision": "approx",
+    "modern_name": "Muara Kaman, East Kalimantan, Indonesia",
+    "still_inhabited": false,
+    "peak": "4th-5th c. CE",
+    "summary": "Seat of the oldest known Hindu kingdom in Indonesia, named on the Mulawarman inscriptions.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kotabatu-brunei",
+    "name": "Kota Batu",
+    "aliases": [
+      "Brunei",
+      "Po-ni"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bandar Seri Begawan, Brunei",
+    "still_inhabited": true,
+    "peak": "15th-16th c. CE",
+    "summary": "Capital of the Brunei sultanate and Borneo's principal entrepot.",
+    "confidence": "low"
+  },
+  {
+    "slug": "ternate",
+    "name": "Ternate",
+    "aliases": [
+      "Gamalama",
+      "Ternate town"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1257,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ternate, North Maluku, Indonesia",
+    "still_inhabited": true,
+    "peak": "15th-16th c. CE",
+    "summary": "Clove sultanate capital and one of the two poles of the world spice trade.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tidore",
+    "name": "Tidore",
+    "aliases": [
+      "Tidore town"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tidore, North Maluku, Indonesia",
+    "still_inhabited": true,
+    "peak": "15th-16th c. CE",
+    "summary": "Rival clove sultanate to Ternate and eastern terminus of Asian spice shipping.",
+    "confidence": "low"
+  },
+  {
+    "slug": "butuan",
+    "name": "Butuan",
+    "aliases": [
+      "Butwan",
+      "Ba-chu-yan"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Butuan, Agusan del Norte, Philippines",
+    "still_inhabited": true,
+    "peak": "10th-13th c. CE",
+    "summary": "Balangay boat-building trading polity that sent embassies to Song China.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "cebu",
+    "name": "Cebu",
+    "aliases": [
+      "Sugbu",
+      "Zubu"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Cebu City, Philippines",
+    "still_inhabited": true,
+    "peak": "15th-16th c. CE",
+    "summary": "Visayan port polity and the first Spanish settlement in the Philippines.",
+    "confidence": "low"
+  },
+  {
+    "slug": "manila",
+    "name": "Manila",
+    "aliases": [
+      "Maynila",
+      "Selurong"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 1250,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Manila, Philippines",
+    "still_inhabited": true,
+    "peak": "16th c. CE",
+    "summary": "Muslim-ruled Pasig river port that became the Spanish capital of the Philippines.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tondo",
+    "name": "Tondo",
+    "aliases": [
+      "Tundun",
+      "Tundo"
+    ],
+    "region_hint": "southeast-asia",
+    "start_year": 900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Manila, Philippines",
+    "still_inhabited": true,
+    "peak": "14th-16th c. CE",
+    "summary": "Trading polity named in the Laguna Copperplate, the oldest Philippine document.",
+    "confidence": "low"
+  },
+  {
+    "slug": "samarkand",
+    "name": "Samarkand",
+    "aliases": [
+      "Marakanda",
+      "Samarqand",
+      "Afrasiab"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Samarkand, Uzbekistan",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Sogdian then Timurid capital, the emblematic Silk Road metropolis.",
+    "confidence": "high"
+  },
+  {
+    "slug": "afrasiab",
+    "name": "Afrasiab",
+    "aliases": [
+      "Afrosiyob",
+      "Old Samarkand"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -700,
+    "end_year": 1220,
+    "date_precision": "approx",
+    "modern_name": "Samarkand, Uzbekistan",
+    "still_inhabited": false,
+    "peak": "7th-8th c. CE",
+    "summary": "Pre-Mongol walled Samarkand with famed Sogdian ambassadorial murals, razed in 1220.",
+    "confidence": "high"
+  },
+  {
+    "slug": "bukhara",
+    "name": "Bukhara",
+    "aliases": [
+      "Bukhoro",
+      "Numijkat",
+      "Bokhara"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bukhara, Uzbekistan",
+    "still_inhabited": true,
+    "peak": "9th-10th c. CE",
+    "summary": "Samanid capital and the intellectual capital of the eastern Islamic world.",
+    "confidence": "high"
+  },
+  {
+    "slug": "merv",
+    "name": "Merv",
+    "aliases": [
+      "Margiana",
+      "Marw",
+      "Sultan Kala",
+      "Gyaur Kala"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -500,
+    "end_year": 1789,
+    "date_precision": "approx",
+    "modern_name": "Mary, Turkmenistan",
+    "still_inhabited": false,
+    "peak": "11th-12th c. CE",
+    "summary": "Seljuk imperial capital and possibly the world's largest city c. 1150, annihilated in 1221.",
+    "confidence": "high",
+    "contested": "Smaller settlements continued nearby into the 18th century"
+  },
+  {
+    "slug": "balkh",
+    "name": "Balkh",
+    "aliases": [
+      "Bactra",
+      "Zariaspa",
+      "Umm al-Bilad"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -1500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Balkh, Afghanistan",
+    "still_inhabited": true,
+    "peak": "8th-12th c. CE",
+    "summary": "Ancient Bactrian capital, Zoroastrian holy city and mother of cities in Islamic tradition.",
+    "confidence": "high"
+  },
+  {
+    "slug": "termez",
+    "name": "Termez",
+    "aliases": [
+      "Tarmita",
+      "Termiz",
+      "Old Termez"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Termez, Uzbekistan",
+    "still_inhabited": true,
+    "peak": "1st-2nd c. CE",
+    "summary": "Oxus crossing city and great Kushan Buddhist centre at Kara Tepe and Fayaz Tepe.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "khiva",
+    "name": "Khiva",
+    "aliases": [
+      "Xiva",
+      "Khivaq"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Khiva, Uzbekistan",
+    "still_inhabited": true,
+    "peak": "17th-19th c. CE",
+    "summary": "Walled oasis city and slave-and-caravan market capital of the Khwarezm khanate.",
+    "confidence": "medium",
+    "contested": "Major growth post-1500"
+  },
+  {
+    "slug": "otrar",
+    "name": "Otrar",
+    "aliases": [
+      "Farab",
+      "Utrar"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 700,
+    "end_year": 1750,
+    "date_precision": "approx",
+    "modern_name": "Otrar, Kazakhstan",
+    "still_inhabited": false,
+    "peak": "11th-13th c. CE",
+    "summary": "Syr Darya caravan city whose governor's murder of Mongol envoys triggered the invasion of 1219.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "taraz",
+    "name": "Taraz",
+    "aliases": [
+      "Talas",
+      "Yangi",
+      "Aulie-Ata"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Taraz, Kazakhstan",
+    "still_inhabited": true,
+    "peak": "8th-12th c. CE",
+    "summary": "Karakhanid city near the 751 battle of Talas that fixed the Islamic-Chinese frontier.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "karakorum",
+    "name": "Karakorum",
+    "aliases": [
+      "Kharkhorin",
+      "Qara Qorum"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 1220,
+    "end_year": 1585,
+    "date_precision": "approx",
+    "modern_name": "Kharkhorin, Ovorkhangai, Mongolia",
+    "still_inhabited": false,
+    "peak": "13th c. CE",
+    "summary": "Genghisid imperial capital of the Mongol empire, abandoned after the Yuan collapse.",
+    "confidence": "high"
+  },
+  {
+    "slug": "lhasa",
+    "name": "Lhasa",
+    "aliases": [
+      "Rasa",
+      "Lhasa Grong"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 633,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lhasa, Tibet, China",
+    "still_inhabited": true,
+    "peak": "7th c. and 17th c. CE",
+    "summary": "Tibetan imperial capital of Songtsen Gampo and the religious centre of Tibetan Buddhism.",
+    "confidence": "high"
+  },
+  {
+    "slug": "gonurdepe",
+    "name": "Gonur Depe",
+    "aliases": [
+      "Gonur",
+      "Gonur Tepe"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -2400,
+    "end_year": -1600,
+    "date_precision": "approx",
+    "modern_name": "Mary Region, Turkmenistan",
+    "still_inhabited": false,
+    "peak": "c. 2200 BCE",
+    "summary": "Capital of the Oxus civilisation, a monumental walled city of Bronze Age Margiana.",
+    "confidence": "high"
+  },
+  {
+    "slug": "namazgadepe",
+    "name": "Namazga Depe",
+    "aliases": [
+      "Namazga-tepe",
+      "Namazgah"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -4500,
+    "end_year": -1600,
+    "date_precision": "approx",
+    "modern_name": "Ahal Region, Turkmenistan",
+    "still_inhabited": false,
+    "peak": "3rd millennium BCE",
+    "summary": "Largest Copper and Bronze Age town of southern Turkmenistan and precursor of the Oxus cities.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sarazm",
+    "name": "Sarazm",
+    "aliases": [
+      "Sarazm Panjakent"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -3500,
+    "end_year": -2000,
+    "date_precision": "approx",
+    "modern_name": "Panjakent district, Tajikistan",
+    "still_inhabited": false,
+    "peak": "4th millennium BCE",
+    "summary": "Oldest known proto-urban metallurgical settlement in Central Asia.",
+    "confidence": "high"
+  },
+  {
+    "slug": "panjikent",
+    "name": "Panjikent",
+    "aliases": [
+      "Penjikent",
+      "Panjakent",
+      "Pyanjikent"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 500,
+    "end_year": 780,
+    "date_precision": "approx",
+    "modern_name": "Panjakent, Tajikistan",
+    "still_inhabited": false,
+    "peak": "7th-8th c. CE",
+    "summary": "Sogdian merchant city whose painted houses are the best surviving record of Sogdian life.",
+    "confidence": "high",
+    "contested": "Modern Panjakent lies beside the abandoned ancient city"
+  },
+  {
+    "slug": "aikhanoum",
+    "name": "Ai-Khanoum",
+    "aliases": [
+      "Ai Khanum",
+      "Alexandria on the Oxus"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -300,
+    "end_year": -145,
+    "date_precision": "approx",
+    "modern_name": "Takhar, Afghanistan",
+    "still_inhabited": false,
+    "peak": "3rd c. BCE",
+    "summary": "Greek colonial city on the Oxus with gymnasium and theatre, destroyed by nomads.",
+    "confidence": "high"
+  },
+  {
+    "slug": "begram",
+    "name": "Begram",
+    "aliases": [
+      "Bagram",
+      "Kapisa",
+      "Alexandria of the Caucasus"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -300,
+    "end_year": 500,
+    "date_precision": "approx",
+    "modern_name": "Bagram, Parwan, Afghanistan",
+    "still_inhabited": false,
+    "peak": "1st-2nd c. CE",
+    "summary": "Kushan summer capital whose treasure hoard mixed Roman glass, Chinese lacquer and Indian ivory.",
+    "confidence": "high"
+  },
+  {
+    "slug": "bamiyan",
+    "name": "Bamiyan",
+    "aliases": [
+      "Bamian",
+      "Bamyan"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bamyan, Afghanistan",
+    "still_inhabited": true,
+    "peak": "5th-8th c. CE",
+    "summary": "Hindu Kush valley city of colossal rock-cut Buddhas and a Silk Road pilgrimage hub.",
+    "confidence": "high"
+  },
+  {
+    "slug": "altyndepe",
+    "name": "Altyn-Depe",
+    "aliases": [
+      "Altyn Tepe",
+      "Altyndepe"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -3000,
+    "end_year": -1600,
+    "date_precision": "approx",
+    "modern_name": "Ahal Region, Turkmenistan",
+    "still_inhabited": false,
+    "peak": "late 3rd millennium BCE",
+    "summary": "Bronze Age proto-urban centre with a stepped ziggurat-like platform in southern Turkmenistan.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "jarkutan",
+    "name": "Jarkutan",
+    "aliases": [
+      "Dzharkutan"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -2000,
+    "end_year": -1400,
+    "date_precision": "approx",
+    "modern_name": "Surxondaryo, Uzbekistan",
+    "still_inhabited": false,
+    "peak": "2nd millennium BCE",
+    "summary": "Largest Oxus civilisation city in Bactria, with a monumental fire temple.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sapallitepa",
+    "name": "Sapalli Tepa",
+    "aliases": [
+      "Sapallitepa",
+      "Sapalli"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -2200,
+    "end_year": -1700,
+    "date_precision": "approx",
+    "modern_name": "Surxondaryo, Uzbekistan",
+    "still_inhabited": false,
+    "peak": "c. 2000 BCE",
+    "summary": "Fortified Oxus civilisation settlement, earliest Bronze Age town of northern Bactria.",
+    "confidence": "low"
+  },
+  {
+    "slug": "dashly",
+    "name": "Dashly",
+    "aliases": [
+      "Dashly-3",
+      "Dashli oasis"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -2200,
+    "end_year": -1500,
+    "date_precision": "approx",
+    "modern_name": "Balkh province, Afghanistan",
+    "still_inhabited": false,
+    "peak": "c. 2000 BCE",
+    "summary": "Oxus civilisation palace-fortress complex in the Bactrian plain.",
+    "confidence": "low"
+  },
+  {
+    "slug": "shortugai",
+    "name": "Shortugai",
+    "aliases": [
+      "Shortughai"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -2200,
+    "end_year": -1800,
+    "date_precision": "approx",
+    "modern_name": "Takhar, Afghanistan",
+    "still_inhabited": false,
+    "peak": "c. 2000 BCE",
+    "summary": "Harappan trading colony on the Oxus, the northernmost Indus settlement known.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mundigak",
+    "name": "Mundigak",
+    "aliases": [
+      "Mundigak Kandahar"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -4000,
+    "end_year": -500,
+    "date_precision": "approx",
+    "modern_name": "Kandahar province, Afghanistan",
+    "still_inhabited": false,
+    "peak": "3rd millennium BCE",
+    "summary": "Long-lived Helmand-culture town with a colonnaded palace, linked to Indus and Iranian worlds.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "shahr-i-sokhta",
+    "name": "Shahr-i Sokhta",
+    "aliases": [
+      "Shahr-e Sukhteh",
+      "Burnt City"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -3200,
+    "end_year": -1800,
+    "date_precision": "approx",
+    "modern_name": "Sistan, Iran",
+    "still_inhabited": false,
+    "peak": "c. 2500 BCE",
+    "summary": "Great Helmand-civilisation city with the world's oldest artificial eye and animated goblet.",
+    "confidence": "high",
+    "contested": "On the Iranian side of the Central Asian Bronze Age world"
+  },
+  {
+    "slug": "nisa",
+    "name": "Nisa",
+    "aliases": [
+      "Old Nisa",
+      "Parthaunisa",
+      "Mihrdatkirt"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -250,
+    "end_year": 300,
+    "date_precision": "approx",
+    "modern_name": "Bagyr, Ahal Region, Turkmenistan",
+    "still_inhabited": false,
+    "peak": "2nd-1st c. BCE",
+    "summary": "Parthian dynastic fortress-city and royal treasury with Hellenistic rhyta.",
+    "confidence": "high"
+  },
+  {
+    "slug": "konye-urgench",
+    "name": "Konye-Urgench",
+    "aliases": [
+      "Gurganj",
+      "Urgench",
+      "Jurjaniya"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 400,
+    "end_year": 1600,
+    "date_precision": "approx",
+    "modern_name": "Konye-Urgench, Turkmenistan",
+    "still_inhabited": false,
+    "peak": "12th-14th c. CE",
+    "summary": "Khwarazmian capital and one of the great Islamic cities, twice destroyed and finally abandoned.",
+    "confidence": "high"
+  },
+  {
+    "slug": "toprakkala",
+    "name": "Toprak-Kala",
+    "aliases": [
+      "Toprakkala",
+      "Toprak Qala"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 100,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Khorezm Region, Uzbekistan",
+    "still_inhabited": false,
+    "peak": "2nd-3rd c. CE",
+    "summary": "Khwarazmian royal citadel with painted dynastic halls and an archive on wood and leather.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ayazkala",
+    "name": "Ayaz-Kala",
+    "aliases": [
+      "Ayazkala"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -400,
+    "end_year": 700,
+    "date_precision": "approx",
+    "modern_name": "Khorezm Region, Uzbekistan",
+    "still_inhabited": false,
+    "peak": "4th c. BCE-1st c. CE",
+    "summary": "Desert fortress complex of ancient Khwarezm guarding irrigated oases against the steppe.",
+    "confidence": "low",
+    "contested": "Fortress complex rather than a city"
+  },
+  {
+    "slug": "paykend",
+    "name": "Paykend",
+    "aliases": [
+      "Paykand",
+      "Baykand"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -300,
+    "end_year": 1100,
+    "date_precision": "approx",
+    "modern_name": "Bukhara Region, Uzbekistan",
+    "still_inhabited": false,
+    "peak": "8th-10th c. CE",
+    "summary": "Sogdian merchant city of Bukhara oasis, called the city of merchants, abandoned as canals failed.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "varakhsha",
+    "name": "Varakhsha",
+    "aliases": [
+      "Varaksha"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -100,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Bukhara Region, Uzbekistan",
+    "still_inhabited": false,
+    "peak": "7th-8th c. CE",
+    "summary": "Bukharan royal residence with Sogdian wall paintings of hunting and enthronement scenes.",
+    "confidence": "low"
+  },
+  {
+    "slug": "shahrisabz",
+    "name": "Shahrisabz",
+    "aliases": [
+      "Kesh",
+      "Kish",
+      "Shahr-i Sabz"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Shahrisabz, Uzbekistan",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Ancient Kesh, Timur's birthplace and site of his colossal Aq Saray palace.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "karshi",
+    "name": "Karshi",
+    "aliases": [
+      "Nakhshab",
+      "Nasaf",
+      "Qarshi"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Qarshi, Uzbekistan",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Sogdian Nakhshab and later a Chaghatayid seat on the road from Samarkand to Balkh.",
+    "confidence": "low"
+  },
+  {
+    "slug": "tashkent",
+    "name": "Tashkent",
+    "aliases": [
+      "Chach",
+      "Binkath",
+      "Shash"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tashkent, Uzbekistan",
+    "still_inhabited": true,
+    "peak": "9th-12th c. CE",
+    "summary": "Chach oasis capital on the Syr Darya frontier between the settled world and the steppe.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "khujand",
+    "name": "Khujand",
+    "aliases": [
+      "Khodjent",
+      "Alexandria Eschate",
+      "Leninabad"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -329,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Khujand, Tajikistan",
+    "still_inhabited": true,
+    "peak": "10th-12th c. CE",
+    "summary": "Alexander's furthest city, gateway to the Fergana valley.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "osh",
+    "name": "Osh",
+    "aliases": [
+      "Osh Sulayman"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Osh, Kyrgyzstan",
+    "still_inhabited": true,
+    "peak": "9th-12th c. CE",
+    "summary": "Fergana valley caravan city at the foot of the sacred Sulayman-Too.",
+    "confidence": "low"
+  },
+  {
+    "slug": "uzgen",
+    "name": "Uzgen",
+    "aliases": [
+      "Ozgon",
+      "Uzkand"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Uzgen, Kyrgyzstan",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Karakhanid dynastic capital and burial city in the eastern Fergana valley.",
+    "confidence": "low"
+  },
+  {
+    "slug": "suyab",
+    "name": "Suyab",
+    "aliases": [
+      "Ak-Beshim",
+      "Suiye"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 500,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Chuy Region, Kyrgyzstan",
+    "still_inhabited": false,
+    "peak": "7th-8th c. CE",
+    "summary": "Turkic khaganate capital and westernmost Tang garrison city, with Nestorian and Buddhist temples.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "balasagun",
+    "name": "Balasagun",
+    "aliases": [
+      "Burana",
+      "Balasaghun"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 900,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Chuy Region, Kyrgyzstan",
+    "still_inhabited": false,
+    "peak": "11th-12th c. CE",
+    "summary": "Karakhanid and Kara-Khitan capital whose Burana minaret still stands.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sygnak",
+    "name": "Sygnak",
+    "aliases": [
+      "Sighnaq",
+      "Sunak-Ata"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 1000,
+    "end_year": 1600,
+    "date_precision": "approx",
+    "modern_name": "Kyzylorda Region, Kazakhstan",
+    "still_inhabited": false,
+    "peak": "13th-15th c. CE",
+    "summary": "Syr Darya city and capital of the eastern Kipchak and early Kazakh khanate.",
+    "confidence": "low"
+  },
+  {
+    "slug": "sauran",
+    "name": "Sauran",
+    "aliases": [
+      "Savran",
+      "Sawran"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 900,
+    "end_year": 1700,
+    "date_precision": "approx",
+    "modern_name": "Turkistan Region, Kazakhstan",
+    "still_inhabited": false,
+    "peak": "13th-15th c. CE",
+    "summary": "Double-walled Syr Darya caravan city with an underground kariz irrigation system.",
+    "confidence": "low"
+  },
+  {
+    "slug": "yasi-turkistan",
+    "name": "Turkistan",
+    "aliases": [
+      "Yasi",
+      "Hazrat-e Turkestan"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Turkistan, Kazakhstan",
+    "still_inhabited": true,
+    "peak": "14th-16th c. CE",
+    "summary": "Shrine city of Ahmed Yasawi, spiritual capital of the Turkic steppe and Kazakh khans' burial place.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "dzhankent",
+    "name": "Dzhankent",
+    "aliases": [
+      "Jankent",
+      "Yangikent"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 700,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Kyzylorda Region, Kazakhstan",
+    "still_inhabited": false,
+    "peak": "9th-10th c. CE",
+    "summary": "Winter capital of the Oghuz Turks in the Aral delta, a steppe-and-town hybrid city.",
+    "confidence": "low"
+  },
+  {
+    "slug": "almalyk",
+    "name": "Almalyk",
+    "aliases": [
+      "Almaliq",
+      "Almalik"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 1000,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Ili valley, Xinjiang, China",
+    "still_inhabited": false,
+    "peak": "13th-14th c. CE",
+    "summary": "Chaghatai khanate capital in the Ili valley with a Latin Catholic bishopric.",
+    "confidence": "low"
+  },
+  {
+    "slug": "sarai",
+    "name": "Sarai",
+    "aliases": [
+      "Sarai Batu",
+      "Old Sarai",
+      "Saray-al-Jadid"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 1240,
+    "end_year": 1480,
+    "date_precision": "approx",
+    "modern_name": "Astrakhan Oblast, Russia",
+    "still_inhabited": false,
+    "peak": "14th c. CE",
+    "summary": "Capital of the Golden Horde, a huge planned steppe metropolis on the lower Volga.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "arkaim",
+    "name": "Arkaim",
+    "aliases": [
+      "Arkhaim"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -2000,
+    "end_year": -1600,
+    "date_precision": "approx",
+    "modern_name": "Chelyabinsk Oblast, Russia",
+    "still_inhabited": false,
+    "peak": "c. 1800 BCE",
+    "summary": "Concentric-walled Sintashta settlement associated with the earliest chariots and Indo-Iranians.",
+    "confidence": "medium",
+    "contested": "Fortified village rather than a city"
+  },
+  {
+    "slug": "sintashta",
+    "name": "Sintashta",
+    "aliases": [
+      "Sintashta site"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -2100,
+    "end_year": -1800,
+    "date_precision": "approx",
+    "modern_name": "Chelyabinsk Oblast, Russia",
+    "still_inhabited": false,
+    "peak": "c. 2000 BCE",
+    "summary": "Type site of the steppe culture that produced the world's oldest known spoke-wheeled chariots.",
+    "confidence": "medium",
+    "contested": "Fortified settlement rather than a city"
+  },
+  {
+    "slug": "botai",
+    "name": "Botai",
+    "aliases": [
+      "Botay"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -3700,
+    "end_year": -3100,
+    "date_precision": "approx",
+    "modern_name": "North Kazakhstan Region, Kazakhstan",
+    "still_inhabited": false,
+    "peak": "4th millennium BCE",
+    "summary": "Large pit-house settlement with the earliest evidence for horse husbandry and mare's milk.",
+    "confidence": "medium",
+    "contested": "Village rather than a city"
+  },
+  {
+    "slug": "ordu-baliq",
+    "name": "Ordu-Baliq",
+    "aliases": [
+      "Karabalgasun",
+      "Khar Balgas"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 744,
+    "end_year": 840,
+    "date_precision": "approx",
+    "modern_name": "Ovorkhangai, Mongolia",
+    "still_inhabited": false,
+    "peak": "8th-9th c. CE",
+    "summary": "Capital of the Uyghur Khaganate, the first true city built on the Mongolian steppe.",
+    "confidence": "high"
+  },
+  {
+    "slug": "tsaparang",
+    "name": "Tsaparang",
+    "aliases": [
+      "Zhabarang",
+      "Guge capital"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 1000,
+    "end_year": 1650,
+    "date_precision": "approx",
+    "modern_name": "Zanda, Ngari, Tibet, China",
+    "still_inhabited": false,
+    "peak": "15th-16th c. CE",
+    "summary": "Cliff-carved capital of the Guge kingdom of western Tibet and its Buddhist renaissance.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "khyunglung",
+    "name": "Khyunglung",
+    "aliases": [
+      "Kyunglung",
+      "Zhangzhung capital"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -500,
+    "end_year": 700,
+    "date_precision": "approx",
+    "modern_name": "Ngari, Tibet, China",
+    "still_inhabited": false,
+    "peak": "1st millennium BCE",
+    "summary": "Reputed capital of Zhangzhung, the pre-Buddhist Bon kingdom of western Tibet.",
+    "confidence": "low"
+  },
+  {
+    "slug": "shigatse",
+    "name": "Shigatse",
+    "aliases": [
+      "Xigaze",
+      "Zhikatse"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 1300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Shigatse, Tibet, China",
+    "still_inhabited": true,
+    "peak": "15th-17th c. CE",
+    "summary": "Tsang provincial capital and later seat of the Panchen Lama at Tashilhunpo.",
+    "confidence": "low"
+  },
+  {
+    "slug": "gyantse",
+    "name": "Gyantse",
+    "aliases": [
+      "Gyangze",
+      "Rgyal-rtse"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 1350,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Gyantse, Tibet, China",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Fortified Tibetan wool-trade town on the Bhutan-India route with the great Kumbum stupa.",
+    "confidence": "low"
+  },
+  {
+    "slug": "samye",
+    "name": "Samye",
+    "aliases": [
+      "Bsam-yas"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 775,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Dranang, Tibet, China",
+    "still_inhabited": false,
+    "peak": "8th-9th c. CE",
+    "summary": "First Buddhist monastery in Tibet, laid out as a cosmic mandala.",
+    "confidence": "medium",
+    "contested": "Monastery complex, not a city"
+  },
+  {
+    "slug": "yumbulagang",
+    "name": "Yumbulagang",
+    "aliases": [
+      "Yungbulakang",
+      "Yumbu Lakhang"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -100,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Yarlung valley, Tibet, China",
+    "still_inhabited": false,
+    "peak": "7th c. CE",
+    "summary": "Reputedly Tibet's oldest building, the ancestral Yarlung dynasty castle.",
+    "confidence": "low",
+    "contested": "Castle, not a city"
+  },
+  {
+    "slug": "herat",
+    "name": "Herat",
+    "aliases": [
+      "Alexandria Ariana",
+      "Harev",
+      "Hari"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Herat, Afghanistan",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Timurid cultural capital under Shah Rukh and Gawhar Shad, centre of Persian painting.",
+    "confidence": "high"
+  },
+  {
+    "slug": "ghazni",
+    "name": "Ghazni",
+    "aliases": [
+      "Ghaznin",
+      "Ghazna"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ghazni, Afghanistan",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Ghaznavid imperial capital from which Mahmud raided India and patronised Persian poetry.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kabul",
+    "name": "Kabul",
+    "aliases": [
+      "Kabura",
+      "Kabulistan"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -1500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kabul, Afghanistan",
+    "still_inhabited": true,
+    "peak": "16th c. CE",
+    "summary": "Hindu Kush pass city commanding the road between India and Central Asia.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "bost",
+    "name": "Bost",
+    "aliases": [
+      "Lashkari Bazar",
+      "Lashkargah",
+      "Qala-i Bost"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -300,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Lashkargah, Helmand, Afghanistan",
+    "still_inhabited": false,
+    "peak": "11th c. CE",
+    "summary": "Ghaznavid winter palace city on the Helmand with painted royal guard frescoes.",
+    "confidence": "medium",
+    "contested": "Modern Lashkargah lies beside the ruins"
+  },
+  {
+    "slug": "zaranj",
+    "name": "Zaranj",
+    "aliases": [
+      "Zarang",
+      "Zarin"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Zaranj, Nimruz, Afghanistan",
+    "still_inhabited": true,
+    "peak": "9th-10th c. CE",
+    "summary": "Saffarid capital of Sistan and hub of the Helmand irrigation civilisation.",
+    "confidence": "low"
+  },
+  {
+    "slug": "firuzkuh",
+    "name": "Firuzkuh",
+    "aliases": [
+      "Jam",
+      "Minaret of Jam"
+    ],
+    "region_hint": "central-asia",
+    "start_year": 1150,
+    "end_year": 1222,
+    "date_precision": "approx",
+    "modern_name": "Jam, Ghor province, Afghanistan",
+    "still_inhabited": false,
+    "peak": "late 12th c. CE",
+    "summary": "Lost summer capital of the Ghurid empire, marked only by the surviving Minaret of Jam.",
+    "confidence": "medium",
+    "contested": "Site identification is contested"
+  },
+  {
+    "slug": "kandahar",
+    "name": "Kandahar",
+    "aliases": [
+      "Alexandria Arachosia",
+      "Old Kandahar"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kandahar, Afghanistan",
+    "still_inhabited": true,
+    "peak": "18th c. CE",
+    "summary": "Arachosian and later Durrani capital with Ashokan Greek-Aramaic edicts.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kunduz",
+    "name": "Kunduz",
+    "aliases": [
+      "Drapsaka",
+      "Qunduz"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kunduz, Afghanistan",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Bactrian city on the Oxus approaches, taken by Alexander as Drapsaka.",
+    "confidence": "low"
+  },
+  {
+    "slug": "anau",
+    "name": "Anau",
+    "aliases": [
+      "Anau Depe"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -4500,
+    "end_year": -1500,
+    "date_precision": "approx",
+    "modern_name": "Ahal Region, Turkmenistan",
+    "still_inhabited": false,
+    "peak": "4th millennium BCE",
+    "summary": "Early farming town of the Kopet Dag piedmont that gave its name to the Anau culture.",
+    "confidence": "low"
+  },
+  {
+    "slug": "dahistan",
+    "name": "Dahistan",
+    "aliases": [
+      "Misrian",
+      "Mashhad-i Misriyan"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -500,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Balkan Region, Turkmenistan",
+    "still_inhabited": false,
+    "peak": "11th-13th c. CE",
+    "summary": "Caspian frontier city of the Dahae and later a Khwarazmian caravan centre, lost to desertification.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kanka",
+    "name": "Kanka",
+    "aliases": [
+      "Kanka Harashkat",
+      "Harashkat"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -300,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Tashkent Region, Uzbekistan",
+    "still_inhabited": false,
+    "peak": "4th-8th c. CE",
+    "summary": "Largest ancient city of the Chach oasis before Tashkent's rise.",
+    "confidence": "low"
+  },
+  {
+    "slug": "akhsikath",
+    "name": "Akhsikath",
+    "aliases": [
+      "Akhsikat",
+      "Akhsiket"
+    ],
+    "region_hint": "central-asia",
+    "start_year": -200,
+    "end_year": 1220,
+    "date_precision": "approx",
+    "modern_name": "Namangan Region, Uzbekistan",
+    "still_inhabited": false,
+    "peak": "9th-12th c. CE",
+    "summary": "Capital of the Fergana valley and famed producer of crucible steel, destroyed by the Mongols.",
+    "confidence": "low"
+  },
+  {
+    "slug": "muziris",
+    "name": "Muziris",
+    "aliases": [
+      "Muchiri",
+      "Pattanam",
+      "Muyirikkode"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -300,
+    "end_year": 500,
+    "date_precision": "approx",
+    "modern_name": "Kodungallur/Pattanam, Kerala, India",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Chief pepper port of Roman-era India named in the Periplus and Tamil sangam poems.",
+    "confidence": "high",
+    "contested": "Identification with Pattanam is debated"
+  },
+  {
+    "slug": "mahodayapuram",
+    "name": "Mahodayapuram",
+    "aliases": [
+      "Kodungallur",
+      "Cranganore",
+      "Makotai"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 800,
+    "end_year": 1341,
+    "date_precision": "approx",
+    "modern_name": "Kodungallur, Kerala, India",
+    "still_inhabited": false,
+    "peak": "9th-11th c. CE",
+    "summary": "Capital of the Chera Perumals of Kerala, with early Jewish, Christian and Muslim communities.",
+    "confidence": "medium",
+    "contested": "Modern Kodungallur town remains"
+  },
+  {
+    "slug": "kollam",
+    "name": "Kollam",
+    "aliases": [
+      "Quilon",
+      "Desinganadu",
+      "Kaulam"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 825,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kollam, Kerala, India",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Malabar pepper port with a Chinese and Arab trading presence and an early Latin bishopric.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kozhikode",
+    "name": "Kozhikode",
+    "aliases": [
+      "Calicut",
+      "Kolikkodu"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kozhikode, Kerala, India",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Zamorin's capital and the greatest Malabar spice port, where Vasco da Gama landed in 1498.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kochi",
+    "name": "Kochi",
+    "aliases": [
+      "Cochin",
+      "Perumpadappu",
+      "Kochchi"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1341,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kochi, Kerala, India",
+    "still_inhabited": true,
+    "peak": "16th-17th c. CE",
+    "summary": "Harbour created by the 1341 Periyar flood that displaced Kodungallur as Malabar's chief port.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kannur",
+    "name": "Kannur",
+    "aliases": [
+      "Cannanore",
+      "Kolathunadu"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kannur, Kerala, India",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Kolathiri capital and Arab-linked port of the Ali Rajas of the Laccadive trade.",
+    "confidence": "low"
+  },
+  {
+    "slug": "nagapattinam",
+    "name": "Nagapattinam",
+    "aliases": [
+      "Nagapattanam",
+      "Negapatam"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nagapattinam, Tamil Nadu, India",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Chola port to Southeast Asia, site of the Srivijayan-funded Chudamani Buddhist monastery.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "banavasi",
+    "name": "Banavasi",
+    "aliases": [
+      "Vaijayanti",
+      "Banavase"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Uttara Kannada, Karnataka, India",
+    "still_inhabited": true,
+    "peak": "4th-6th c. CE",
+    "summary": "Kadamba capital, the oldest known royal city of Karnataka.",
+    "confidence": "low"
+  },
+  {
+    "slug": "manyakheta",
+    "name": "Manyakheta",
+    "aliases": [
+      "Malkhed",
+      "Manyakheta Rashtrakuta"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 815,
+    "end_year": 1050,
+    "date_precision": "approx",
+    "modern_name": "Kalaburagi district, Karnataka, India",
+    "still_inhabited": false,
+    "peak": "9th-10th c. CE",
+    "summary": "Rashtrakuta imperial capital, described by Arab geographers as a rival of Baghdad.",
+    "confidence": "medium",
+    "contested": "Village of Malkhed remains"
+  },
+  {
+    "slug": "kalyani",
+    "name": "Kalyani",
+    "aliases": [
+      "Basavakalyan",
+      "Kalyana"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1050,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Bidar district, Karnataka, India",
+    "still_inhabited": false,
+    "peak": "11th-12th c. CE",
+    "summary": "Western Chalukya capital and birthplace of the Virashaiva Lingayat movement.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "belur",
+    "name": "Belur",
+    "aliases": [
+      "Velapuri",
+      "Beluru"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Hassan district, Karnataka, India",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Hoysala ceremonial city and site of the Chennakeshava temple.",
+    "confidence": "low"
+  },
+  {
+    "slug": "gulbarga",
+    "name": "Gulbarga",
+    "aliases": [
+      "Kalaburagi",
+      "Ahsanabad"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1347,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Kalaburagi, Karnataka, India",
+    "still_inhabited": false,
+    "peak": "14th c. CE",
+    "summary": "First capital of the Bahmani Sultanate, the first independent Deccan Muslim state.",
+    "confidence": "medium",
+    "contested": "Modern city continues on the site"
+  },
+  {
+    "slug": "bidar",
+    "name": "Bidar",
+    "aliases": [
+      "Bidar Muhammadabad"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1347,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bidar, Karnataka, India",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Second Bahmani capital, famed for its madrasa and bidriware metal inlay.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "jaunpur",
+    "name": "Jaunpur",
+    "aliases": [
+      "Jaunpur Shiraz-i Hind"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1359,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Jaunpur, Uttar Pradesh, India",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Sharqi Sultanate capital, called the Shiraz of India for its scholarship and architecture.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gwalior",
+    "name": "Gwalior",
+    "aliases": [
+      "Gopachala",
+      "Gwalior fort"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Gwalior, Madhya Pradesh, India",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Hill-fortress city of the Tomaras, centre of Hindustani music and Jain rock sculpture.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "dhar",
+    "name": "Dhar",
+    "aliases": [
+      "Dharanagari",
+      "Dhara"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Dhar, Madhya Pradesh, India",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Paramara capital of Malwa under the scholar-king Bhoja, a centre of Sanskrit learning.",
+    "confidence": "low"
+  },
+  {
+    "slug": "tripuri",
+    "name": "Tripuri",
+    "aliases": [
+      "Tewar",
+      "Tripura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": -200,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Jabalpur, Madhya Pradesh, India",
+    "still_inhabited": false,
+    "peak": "10th-12th c. CE",
+    "summary": "Kalachuri capital of the Chedi kingdom in the Narmada valley.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kalinjar",
+    "name": "Kalinjar",
+    "aliases": [
+      "Kalanjara",
+      "Kalinjar fort"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 500,
+    "end_year": 1600,
+    "date_precision": "approx",
+    "modern_name": "Banda district, Uttar Pradesh, India",
+    "still_inhabited": false,
+    "peak": "10th-12th c. CE",
+    "summary": "Chandela hill fortress-city that repelled Mahmud of Ghazni and the Delhi sultans.",
+    "confidence": "low"
+  },
+  {
+    "slug": "ranthambore",
+    "name": "Ranthambore",
+    "aliases": [
+      "Ranthambhor",
+      "Ranastambhapura"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 944,
+    "end_year": 1600,
+    "date_precision": "approx",
+    "modern_name": "Sawai Madhopur, Rajasthan, India",
+    "still_inhabited": false,
+    "peak": "13th c. CE",
+    "summary": "Chauhan fortress city, the first great Rajput stronghold to fall to Delhi in 1301.",
+    "confidence": "low"
+  },
+  {
+    "slug": "bhuj",
+    "name": "Bhuj",
+    "aliases": [
+      "Bhujanagara"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 1510,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bhuj, Kutch, Gujarat, India",
+    "still_inhabited": true,
+    "peak": "17th-18th c. CE",
+    "summary": "Kutch capital and hinterland of the Mandvi dhow-building ports of the Arabian Sea trade.",
+    "confidence": "low",
+    "contested": "Founded at the very edge of the 1500 CE horizon"
+  },
+  {
+    "slug": "khambhat",
+    "name": "Cambay",
+    "aliases": [
+      "Khambhat",
+      "Stambhatirtha"
+    ],
+    "region_hint": "south-asia",
+    "start_year": 900,
+    "end_year": 1600,
+    "date_precision": "approx",
+    "modern_name": "Khambhat, Gujarat, India",
+    "still_inhabited": false,
+    "peak": "13th-15th c. CE",
+    "summary": "Premier port of Gujarat and of Indian Ocean textile export before silting closed its gulf.",
+    "confidence": "medium",
+    "contested": "Small town remains"
+  }
+]

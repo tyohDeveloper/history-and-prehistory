@@ -1,0 +1,7205 @@
+[
+  {
+    "slug": "knossos",
+    "name": "Knossos",
+    "aliases": [
+      "Cnossus",
+      "Knossus"
+    ],
+    "region_hint": "europe",
+    "start_year": -7000,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Heraklion, Crete, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1700-1450 BCE",
+    "summary": "Largest Minoan palace centre and seat of Europe's first literate palace bureaucracy.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "phaistos",
+    "name": "Phaistos",
+    "aliases": [
+      "Faistos"
+    ],
+    "region_hint": "europe",
+    "start_year": -4000,
+    "end_year": -1200,
+    "date_precision": "approx",
+    "modern_name": "Crete, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1700-1450 BCE",
+    "summary": "Second Minoan palace of Crete, source of the undeciphered Phaistos Disc.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "malia",
+    "name": "Malia",
+    "aliases": [
+      "Mallia"
+    ],
+    "region_hint": "europe",
+    "start_year": -2200,
+    "end_year": -1250,
+    "date_precision": "approx",
+    "modern_name": "Crete, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1900-1450 BCE",
+    "summary": "Minoan palace town on Crete's north coast with dense urban quarters.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "zakros",
+    "name": "Zakros",
+    "aliases": [
+      "Kato Zakros"
+    ],
+    "region_hint": "europe",
+    "start_year": -1900,
+    "end_year": -1450,
+    "date_precision": "approx",
+    "modern_name": "Crete, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1600-1450 BCE",
+    "summary": "Minoan palace and gateway port for trade with Egypt and the Levant.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gournia",
+    "name": "Gournia",
+    "aliases": [
+      "Gournià"
+    ],
+    "region_hint": "europe",
+    "start_year": -1700,
+    "end_year": -1200,
+    "date_precision": "approx",
+    "modern_name": "Crete, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1600-1450 BCE",
+    "summary": "Best-preserved Minoan town plan, showing ordinary streets and houses rather than a palace.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kydonia",
+    "name": "Kydonia",
+    "aliases": [
+      "Chania",
+      "Khania"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Chania, Crete, Greece",
+    "still_inhabited": true,
+    "peak": "c. 1400 BCE and Venetian era",
+    "summary": "Minoan then Venetian port city of western Crete, continuously occupied.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gortyn",
+    "name": "Gortyn",
+    "aliases": [
+      "Gortyna",
+      "Gortys"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": 800,
+    "date_precision": "approx",
+    "modern_name": "Crete, Greece",
+    "still_inhabited": false,
+    "peak": "1st-4th c. CE",
+    "summary": "Roman capital of Crete, home of the earliest surviving Greek law code inscription.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "akrotiri-thera",
+    "name": "Akrotiri (Thera)",
+    "aliases": [
+      "Santorini",
+      "Thera"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": -1600,
+    "date_precision": "approx",
+    "modern_name": "Santorini, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1700 BCE",
+    "summary": "Bronze Age town buried and preserved by the Theran eruption, with multi-storey frescoed houses.",
+    "confidence": "high"
+  },
+  {
+    "slug": "poliochni",
+    "name": "Poliochni",
+    "aliases": [
+      "Poliochne",
+      "Palamari"
+    ],
+    "region_hint": "europe",
+    "start_year": -3200,
+    "end_year": -2100,
+    "date_precision": "approx",
+    "modern_name": "Lemnos, Greece",
+    "still_inhabited": false,
+    "peak": "c. 2700 BCE",
+    "summary": "Among the oldest fortified towns in Europe, a metalworking centre of the north Aegean.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "phylakopi",
+    "name": "Phylakopi",
+    "aliases": [
+      "Phylakopi, Melos"
+    ],
+    "region_hint": "europe",
+    "start_year": -2300,
+    "end_year": -1100,
+    "date_precision": "approx",
+    "modern_name": "Melos, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1600-1200 BCE",
+    "summary": "Cycladic town controlling the Aegean obsidian trade from Melos.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mycenae",
+    "name": "Mycenae",
+    "aliases": [
+      "Mykenai"
+    ],
+    "region_hint": "europe",
+    "start_year": -1900,
+    "end_year": -1100,
+    "date_precision": "approx",
+    "modern_name": "Argolis, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1350-1200 BCE",
+    "summary": "Citadel that gave its name to Bronze Age Greek civilisation, with shaft graves and Lion Gate.",
+    "confidence": "high"
+  },
+  {
+    "slug": "tiryns",
+    "name": "Tiryns",
+    "aliases": [
+      "Tirynthos"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": -1100,
+    "date_precision": "approx",
+    "modern_name": "Argolis, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1300-1200 BCE",
+    "summary": "Cyclopean-walled Mycenaean palace fortress guarding the Argive plain.",
+    "confidence": "high"
+  },
+  {
+    "slug": "pylos",
+    "name": "Pylos",
+    "aliases": [
+      "Ano Englianos",
+      "Palace of Nestor"
+    ],
+    "region_hint": "europe",
+    "start_year": -1600,
+    "end_year": -1180,
+    "date_precision": "approx",
+    "modern_name": "Messenia, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1300-1200 BCE",
+    "summary": "Mycenaean palace whose burnt Linear B archive documents an entire Bronze Age economy.",
+    "confidence": "high"
+  },
+  {
+    "slug": "midea",
+    "name": "Midea",
+    "aliases": [
+      "Dendra"
+    ],
+    "region_hint": "europe",
+    "start_year": -1400,
+    "end_year": -1150,
+    "date_precision": "approx",
+    "modern_name": "Argolis, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1300 BCE",
+    "summary": "Third great Mycenaean citadel of the Argolid, with rich chamber-tomb armour finds.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gla",
+    "name": "Gla",
+    "aliases": [
+      "Glas"
+    ],
+    "region_hint": "europe",
+    "start_year": -1350,
+    "end_year": -1200,
+    "date_precision": "approx",
+    "modern_name": "Boeotia, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1300 BCE",
+    "summary": "Vast Mycenaean fortress tied to the drainage of Lake Kopais.",
+    "confidence": "low"
+  },
+  {
+    "slug": "orchomenos",
+    "name": "Orchomenos",
+    "aliases": [
+      "Orchomenus"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": -100,
+    "date_precision": "approx",
+    "modern_name": "Boeotia, Greece",
+    "still_inhabited": false,
+    "peak": "c. 1300 BCE",
+    "summary": "Mycenaean and later Boeotian rival of Thebes, with a great tholos tomb.",
+    "confidence": "low"
+  },
+  {
+    "slug": "thebes-greece",
+    "name": "Thebes",
+    "aliases": [
+      "Thebai",
+      "Thiva"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Thiva, Boeotia, Greece",
+    "still_inhabited": true,
+    "peak": "4th c. BCE",
+    "summary": "Mycenaean palace and later hegemon of Greece after Leuctra.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "athens",
+    "name": "Athens",
+    "aliases": [
+      "Athenai",
+      "Athina"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Athens, Greece",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Birthplace of democracy, drama and classical philosophy.",
+    "confidence": "high"
+  },
+  {
+    "slug": "piraeus",
+    "name": "Piraeus",
+    "aliases": [
+      "Peiraieus"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Piraeus, Greece",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Fortified war harbour that made Athens a naval empire.",
+    "confidence": "high"
+  },
+  {
+    "slug": "eleusis",
+    "name": "Eleusis",
+    "aliases": [
+      "Elefsina"
+    ],
+    "region_hint": "europe",
+    "start_year": -1600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Elefsina, Greece",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Sanctuary town of the Eleusinian Mysteries, the most famous cult of the Greek world.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "megara",
+    "name": "Megara",
+    "aliases": [
+      "Megara Nisaia"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Megara, Greece",
+    "still_inhabited": true,
+    "peak": "7th-6th c. BCE",
+    "summary": "Colonising city that founded Byzantium and Megara Hyblaea.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sparta",
+    "name": "Sparta",
+    "aliases": [
+      "Lacedaemon",
+      "Sparti"
+    ],
+    "region_hint": "europe",
+    "start_year": -1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sparti, Greece",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Militarised hegemon of the Peloponnese and victor of the Peloponnesian War.",
+    "confidence": "high"
+  },
+  {
+    "slug": "corinth",
+    "name": "Corinth",
+    "aliases": [
+      "Korinthos"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Corinth, Greece",
+    "still_inhabited": true,
+    "peak": "6th c. BCE and Roman era",
+    "summary": "Wealthy isthmus city controlling two seas; refounded as Roman capital of Achaea.",
+    "confidence": "high"
+  },
+  {
+    "slug": "argos",
+    "name": "Argos",
+    "aliases": [
+      "Argos, Argolis"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Argos, Greece",
+    "still_inhabited": true,
+    "peak": "7th c. BCE",
+    "summary": "One of the oldest continuously inhabited Greek cities and early Peloponnesian power.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sicyon",
+    "name": "Sicyon",
+    "aliases": [
+      "Sikyon"
+    ],
+    "region_hint": "europe",
+    "start_year": -1000,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Corinthia, Greece",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Early tyranny and centre of Greek bronze sculpture and painting.",
+    "confidence": "low"
+  },
+  {
+    "slug": "nemea",
+    "name": "Nemea",
+    "aliases": [
+      "Nemea sanctuary"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Corinthia, Greece",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Panhellenic sanctuary and games site rather than a true city.",
+    "confidence": "low"
+  },
+  {
+    "slug": "isthmia",
+    "name": "Isthmia",
+    "aliases": [
+      "Isthmian sanctuary"
+    ],
+    "region_hint": "europe",
+    "start_year": -1000,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Corinthia, Greece",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Sanctuary of Poseidon hosting the Isthmian Games; a cult centre, not a city.",
+    "confidence": "low"
+  },
+  {
+    "slug": "epidaurus",
+    "name": "Epidaurus",
+    "aliases": [
+      "Epidauros"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Argolis, Greece",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Healing sanctuary of Asklepios with the finest surviving Greek theatre; sanctuary town.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mantinea",
+    "name": "Mantinea",
+    "aliases": [
+      "Mantineia"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": 300,
+    "date_precision": "approx",
+    "modern_name": "Arcadia, Greece",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Arcadian city famed for the battles fought on its plain.",
+    "confidence": "low"
+  },
+  {
+    "slug": "tegea",
+    "name": "Tegea",
+    "aliases": [
+      "Tegeae"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Arcadia, Greece",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Leading Arcadian city and site of the great temple of Athena Alea.",
+    "confidence": "low"
+  },
+  {
+    "slug": "messene",
+    "name": "Messene",
+    "aliases": [
+      "Ithome",
+      "Ancient Messene"
+    ],
+    "region_hint": "europe",
+    "start_year": -369,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Messenia, Greece",
+    "still_inhabited": false,
+    "peak": "3rd c. BCE",
+    "summary": "City founded to free Messenia from Sparta, with exceptionally complete civic remains.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "olympia",
+    "name": "Olympia",
+    "aliases": [
+      "Olympia sanctuary"
+    ],
+    "region_hint": "europe",
+    "start_year": -1000,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Elis, Greece",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Panhellenic sanctuary of Zeus and home of the Olympic Games; sanctuary, not a city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "elis",
+    "name": "Elis",
+    "aliases": [
+      "Ilida"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": 500,
+    "date_precision": "approx",
+    "modern_name": "Elis, Greece",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "City that administered Olympia and trained its athletes.",
+    "confidence": "low"
+  },
+  {
+    "slug": "delphi",
+    "name": "Delphi",
+    "aliases": [
+      "Delphoi"
+    ],
+    "region_hint": "europe",
+    "start_year": -1400,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Phocis, Greece",
+    "still_inhabited": false,
+    "peak": "6th-5th c. BCE",
+    "summary": "Panhellenic oracle of Apollo and symbolic navel of the Greek world; sanctuary, not a city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "chaeronea",
+    "name": "Chaeronea",
+    "aliases": [
+      "Chaironeia"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Boeotia, Greece",
+    "still_inhabited": false,
+    "peak": "338 BCE",
+    "summary": "Boeotian town where Philip II ended Greek independence.",
+    "confidence": "low"
+  },
+  {
+    "slug": "plataea",
+    "name": "Plataea",
+    "aliases": [
+      "Plataiai"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Boeotia, Greece",
+    "still_inhabited": false,
+    "peak": "479 BCE",
+    "summary": "Site of the decisive victory over Persia; small Boeotian city destroyed repeatedly.",
+    "confidence": "low"
+  },
+  {
+    "slug": "chalcis",
+    "name": "Chalcis",
+    "aliases": [
+      "Chalkis",
+      "Khalkis"
+    ],
+    "region_hint": "europe",
+    "start_year": -1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Chalkida, Euboea, Greece",
+    "still_inhabited": true,
+    "peak": "8th c. BCE",
+    "summary": "Euboean metal-trading city that led the earliest Greek colonisation west.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "eretria",
+    "name": "Eretria",
+    "aliases": [
+      "Eretrea"
+    ],
+    "region_hint": "europe",
+    "start_year": -1000,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Euboea, Greece",
+    "still_inhabited": false,
+    "peak": "8th-6th c. BCE",
+    "summary": "Euboean rival of Chalcis, co-founder of Pithekoussai and early Greek trade with Italy.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lefkandi",
+    "name": "Lefkandi",
+    "aliases": [
+      "Xeropolis",
+      "Lefkandi Toumba"
+    ],
+    "region_hint": "europe",
+    "start_year": -2100,
+    "end_year": -700,
+    "date_precision": "approx",
+    "modern_name": "Euboea, Greece",
+    "still_inhabited": false,
+    "peak": "c. 950 BCE",
+    "summary": "Dark Age settlement whose heroon burial rewrote the story of post-Mycenaean Greece.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "delos",
+    "name": "Delos",
+    "aliases": [
+      "Dilos"
+    ],
+    "region_hint": "europe",
+    "start_year": -2500,
+    "end_year": 700,
+    "date_precision": "approx",
+    "modern_name": "Cyclades, Greece",
+    "still_inhabited": false,
+    "peak": "2nd c. BCE",
+    "summary": "Sacred island of Apollo turned into the Aegean's greatest free-port slave market.",
+    "confidence": "high"
+  },
+  {
+    "slug": "naxos-island",
+    "name": "Naxos (Cyclades)",
+    "aliases": [
+      "Naxos town"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Naxos, Greece",
+    "still_inhabited": true,
+    "peak": "6th c. BCE",
+    "summary": "Wealthiest early Cycladic island city, sponsor of monumental marble sculpture.",
+    "confidence": "low"
+  },
+  {
+    "slug": "paros",
+    "name": "Paros",
+    "aliases": [
+      "Parikia"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Paros, Greece",
+    "still_inhabited": true,
+    "peak": "6th c. BCE",
+    "summary": "Marble-exporting island city, mother city of Thasos.",
+    "confidence": "low"
+  },
+  {
+    "slug": "thera-ancient",
+    "name": "Ancient Thera",
+    "aliases": [
+      "Mesa Vouno"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": 700,
+    "date_precision": "approx",
+    "modern_name": "Santorini, Greece",
+    "still_inhabited": false,
+    "peak": "Hellenistic era",
+    "summary": "Dorian hilltop city of Santorini and metropolis of Cyrene.",
+    "confidence": "low"
+  },
+  {
+    "slug": "aegina",
+    "name": "Aegina",
+    "aliases": [
+      "Aigina"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Aegina, Greece",
+    "still_inhabited": true,
+    "peak": "6th c. BCE",
+    "summary": "Early minter of coinage and naval power that fought at Salamis.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "samos-city",
+    "name": "Samos (Pythagoreion)",
+    "aliases": [
+      "Pythagoreion",
+      "Heraion"
+    ],
+    "region_hint": "europe",
+    "start_year": -1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Samos, Greece",
+    "still_inhabited": true,
+    "peak": "6th c. BCE",
+    "summary": "Tyranny of Polykrates, with the vast Heraion and the Eupalinos tunnel.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "rhodes-city",
+    "name": "Rhodes",
+    "aliases": [
+      "Rodos"
+    ],
+    "region_hint": "europe",
+    "start_year": -408,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Rhodes, Greece",
+    "still_inhabited": true,
+    "peak": "3rd c. BCE",
+    "summary": "Hellenistic maritime republic, site of the Colossus and later Knights' capital.",
+    "confidence": "high"
+  },
+  {
+    "slug": "lindos",
+    "name": "Lindos",
+    "aliases": [
+      "Lindus"
+    ],
+    "region_hint": "europe",
+    "start_year": -1500,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Rhodes, Greece",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Acropolis city of Rhodes, one of the three founders of the Rhodian state.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kamiros",
+    "name": "Kamiros",
+    "aliases": [
+      "Camirus"
+    ],
+    "region_hint": "europe",
+    "start_year": -1400,
+    "end_year": -100,
+    "date_precision": "approx",
+    "modern_name": "Rhodes, Greece",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Rhodian city abandoned after the founding of Rhodes town, leaving a full grid plan.",
+    "confidence": "low"
+  },
+  {
+    "slug": "ialysos",
+    "name": "Ialysos",
+    "aliases": [
+      "Ialyssos"
+    ],
+    "region_hint": "europe",
+    "start_year": -1500,
+    "end_year": -200,
+    "date_precision": "approx",
+    "modern_name": "Rhodes, Greece",
+    "still_inhabited": false,
+    "peak": "7th c. BCE",
+    "summary": "Third old Rhodian city with important Mycenaean cemeteries.",
+    "confidence": "low"
+  },
+  {
+    "slug": "kos",
+    "name": "Kos",
+    "aliases": [
+      "Cos"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kos, Greece",
+    "still_inhabited": true,
+    "peak": "4th c. BCE",
+    "summary": "Island city of the Asklepieion and of Hippocratic medicine.",
+    "confidence": "low"
+  },
+  {
+    "slug": "thasos",
+    "name": "Thasos",
+    "aliases": [
+      "Limenas"
+    ],
+    "region_hint": "europe",
+    "start_year": -680,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Thasos, Greece",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Parian colony rich from gold mines and marble on the Thracian coast.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "abdera",
+    "name": "Abdera",
+    "aliases": [
+      "Avdira"
+    ],
+    "region_hint": "europe",
+    "start_year": -650,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Xanthi, Greece",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Thracian-coast Greek city, home of Democritus and Protagoras.",
+    "confidence": "low"
+  },
+  {
+    "slug": "amphipolis",
+    "name": "Amphipolis",
+    "aliases": [
+      "Amfipoli"
+    ],
+    "region_hint": "europe",
+    "start_year": -437,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Serres, Greece",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Strategic Strymon city controlling Macedonian timber, gold and the road east.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "philippi",
+    "name": "Philippi",
+    "aliases": [
+      "Philippoi"
+    ],
+    "region_hint": "europe",
+    "start_year": -360,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Kavala, Greece",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Macedonian gold town, battle site of 42 BCE and first Christian church in Europe.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "pella",
+    "name": "Pella",
+    "aliases": [
+      "Pela"
+    ],
+    "region_hint": "europe",
+    "start_year": -400,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Pella, Greece",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Capital of Macedon and birthplace of Alexander the Great.",
+    "confidence": "high"
+  },
+  {
+    "slug": "aigai",
+    "name": "Aigai (Vergina)",
+    "aliases": [
+      "Vergina",
+      "Aegae"
+    ],
+    "region_hint": "europe",
+    "start_year": -1000,
+    "end_year": -100,
+    "date_precision": "approx",
+    "modern_name": "Vergina, Greece",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Old royal capital and burial ground of the Macedonian kings, including Philip II.",
+    "confidence": "high"
+  },
+  {
+    "slug": "dion",
+    "name": "Dion",
+    "aliases": [
+      "Dium"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": 500,
+    "date_precision": "approx",
+    "modern_name": "Pieria, Greece",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Sacred city of the Macedonians at the foot of Olympus.",
+    "confidence": "low"
+  },
+  {
+    "slug": "thessalonica",
+    "name": "Thessalonica",
+    "aliases": [
+      "Thessaloniki",
+      "Salonica"
+    ],
+    "region_hint": "europe",
+    "start_year": -315,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Thessaloniki, Greece",
+    "still_inhabited": true,
+    "peak": "4th-6th c. CE and 14th c.",
+    "summary": "Second city of Byzantium and great port of the via Egnatia.",
+    "confidence": "high"
+  },
+  {
+    "slug": "byzantium",
+    "name": "Byzantium / Constantinople",
+    "aliases": [
+      "Constantinople",
+      "Istanbul",
+      "Nova Roma"
+    ],
+    "region_hint": "europe",
+    "start_year": -660,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Istanbul, Turkey",
+    "still_inhabited": true,
+    "peak": "6th c. and 12th c. CE",
+    "summary": "Greek colony refounded as capital of the Roman and Ottoman empires for 1600 years.",
+    "confidence": "high"
+  },
+  {
+    "slug": "adrianople",
+    "name": "Adrianople",
+    "aliases": [
+      "Edirne",
+      "Hadrianopolis"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Edirne, Turkey",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Thracian road city, Roman foundation and first European capital of the Ottomans.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "larissa",
+    "name": "Larissa",
+    "aliases": [
+      "Larisa"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Larissa, Greece",
+    "still_inhabited": true,
+    "peak": "4th c. BCE",
+    "summary": "Chief city of Thessaly and seat of the Aleuadai.",
+    "confidence": "low"
+  },
+  {
+    "slug": "dimini",
+    "name": "Dimini",
+    "aliases": [
+      "Dhimini"
+    ],
+    "region_hint": "europe",
+    "start_year": -4800,
+    "end_year": -1100,
+    "date_precision": "approx",
+    "modern_name": "Magnesia, Greece",
+    "still_inhabited": false,
+    "peak": "5th millennium BCE",
+    "summary": "Neolithic walled village, a key model of early European proto-urbanism.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sesklo",
+    "name": "Sesklo",
+    "aliases": [
+      "Sesklon"
+    ],
+    "region_hint": "europe",
+    "start_year": -6800,
+    "end_year": -4400,
+    "date_precision": "approx",
+    "modern_name": "Magnesia, Greece",
+    "still_inhabited": false,
+    "peak": "6th millennium BCE",
+    "summary": "One of Europe's oldest villages, type site of the Greek Neolithic.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "nea-nikomedeia",
+    "name": "Nea Nikomedeia",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -6500,
+    "end_year": -5500,
+    "date_precision": "approx",
+    "modern_name": "Imathia, Greece",
+    "still_inhabited": false,
+    "peak": "7th millennium BCE",
+    "summary": "Among the earliest farming settlements in Europe.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lerna",
+    "name": "Lerna",
+    "aliases": [
+      "House of the Tiles"
+    ],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": -1600,
+    "date_precision": "approx",
+    "modern_name": "Argolis, Greece",
+    "still_inhabited": false,
+    "peak": "c. 2500 BCE",
+    "summary": "Early Helladic centre whose House of the Tiles suggests pre-Mycenaean elite administration.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "dodona",
+    "name": "Dodona",
+    "aliases": [
+      "Dodoni"
+    ],
+    "region_hint": "europe",
+    "start_year": -1200,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Ioannina, Greece",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Oldest Greek oracle, of Zeus and the speaking oak; sanctuary rather than city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ambracia",
+    "name": "Ambracia",
+    "aliases": [
+      "Arta",
+      "Amprakia"
+    ],
+    "region_hint": "europe",
+    "start_year": -625,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Arta, Greece",
+    "still_inhabited": true,
+    "peak": "3rd c. BCE",
+    "summary": "Corinthian colony and capital of Pyrrhus of Epirus.",
+    "confidence": "low"
+  },
+  {
+    "slug": "nicopolis",
+    "name": "Nicopolis (Epirus)",
+    "aliases": [
+      "Nikopolis"
+    ],
+    "region_hint": "europe",
+    "start_year": -29,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Preveza, Greece",
+    "still_inhabited": false,
+    "peak": "1st-6th c. CE",
+    "summary": "Victory city founded by Augustus after Actium, later a Byzantine metropolis.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "butrint",
+    "name": "Butrint",
+    "aliases": [
+      "Buthrotum",
+      "Butrinti"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Vlorë County, Albania",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Epirote and Roman port city with continuous Greek, Roman and Venetian layers.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "apollonia-illyria",
+    "name": "Apollonia (Illyria)",
+    "aliases": [
+      "Apollonia Illyrica"
+    ],
+    "region_hint": "europe",
+    "start_year": -588,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Fier, Albania",
+    "still_inhabited": false,
+    "peak": "4th-2nd c. BCE",
+    "summary": "Wealthy Corinthian colony and western terminus region of the via Egnatia.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "dyrrhachium",
+    "name": "Dyrrhachium",
+    "aliases": [
+      "Epidamnos",
+      "Durrës"
+    ],
+    "region_hint": "europe",
+    "start_year": -627,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Durrës, Albania",
+    "still_inhabited": true,
+    "peak": "1st c. BCE",
+    "summary": "Adriatic port and starting point of the via Egnatia to Constantinople.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mystras",
+    "name": "Mystras",
+    "aliases": [
+      "Mistra"
+    ],
+    "region_hint": "europe",
+    "start_year": 1249,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Laconia, Greece",
+    "still_inhabited": false,
+    "peak": "14th-15th c. CE",
+    "summary": "Byzantine Despotate capital and last great centre of Byzantine art and learning.",
+    "confidence": "high"
+  },
+  {
+    "slug": "monemvasia",
+    "name": "Monemvasia",
+    "aliases": [
+      "Malvasia"
+    ],
+    "region_hint": "europe",
+    "start_year": 583,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Laconia, Greece",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Byzantine rock fortress town and Malmsey wine port.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ohrid",
+    "name": "Ohrid",
+    "aliases": [
+      "Lychnidos"
+    ],
+    "region_hint": "europe",
+    "start_year": -400,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ohrid, North Macedonia",
+    "still_inhabited": true,
+    "peak": "10th-11th c. CE",
+    "summary": "Lake city that became the ecclesiastical capital of the Bulgarian church.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "scupi",
+    "name": "Scupi / Skopje",
+    "aliases": [
+      "Skopje",
+      "Skoplje"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Skopje, North Macedonia",
+    "still_inhabited": true,
+    "peak": "4th-6th c. CE",
+    "summary": "Roman colony destroyed by earthquake, refounded as a Balkan crossroads city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "stobi",
+    "name": "Stobi",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "North Macedonia",
+    "still_inhabited": false,
+    "peak": "4th-6th c. CE",
+    "summary": "Roman and early Christian city on the Axios trade route, abandoned after earthquakes.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "heraclea-lyncestis",
+    "name": "Heraclea Lyncestis",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -350,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Bitola, North Macedonia",
+    "still_inhabited": false,
+    "peak": "4th-5th c. CE",
+    "summary": "Macedonian foundation on the via Egnatia with fine early Christian mosaics.",
+    "confidence": "low"
+  },
+  {
+    "slug": "serdica",
+    "name": "Serdica / Sofia",
+    "aliases": [
+      "Sofia",
+      "Sardica",
+      "Triaditsa"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sofia, Bulgaria",
+    "still_inhabited": true,
+    "peak": "4th c. CE",
+    "summary": "Thracian and Roman city Constantine called \"my Rome\", later Bulgarian capital.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "philippopolis",
+    "name": "Philippopolis",
+    "aliases": [
+      "Plovdiv",
+      "Trimontium",
+      "Pulpudeva"
+    ],
+    "region_hint": "europe",
+    "start_year": -4000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Plovdiv, Bulgaria",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "One of Europe's oldest continuously inhabited cities and capital of Roman Thrace.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "pliska",
+    "name": "Pliska",
+    "aliases": [
+      "Pliskov"
+    ],
+    "region_hint": "europe",
+    "start_year": 681,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Shumen, Bulgaria",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "First capital of the Bulgarian Empire, a vast walled steppe-style camp city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "preslav",
+    "name": "Preslav",
+    "aliases": [
+      "Great Preslav",
+      "Veliki Preslav"
+    ],
+    "region_hint": "europe",
+    "start_year": 821,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Shumen, Bulgaria",
+    "still_inhabited": false,
+    "peak": "10th c. CE",
+    "summary": "Second Bulgarian capital and cradle of the Cyrillic literary tradition.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "veliko-tarnovo",
+    "name": "Veliko Tarnovo",
+    "aliases": [
+      "Tarnovo",
+      "Turnovo"
+    ],
+    "region_hint": "europe",
+    "start_year": 1100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Veliko Tarnovo, Bulgaria",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Capital of the Second Bulgarian Empire, the \"city of the tsars\".",
+    "confidence": "medium"
+  },
+  {
+    "slug": "odessos",
+    "name": "Odessos",
+    "aliases": [
+      "Varna",
+      "Odessus"
+    ],
+    "region_hint": "europe",
+    "start_year": -570,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Varna, Bulgaria",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Milesian Black Sea colony beside Europe's oldest gold hoard at Varna.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "varna-necropolis",
+    "name": "Varna necropolis",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -4600,
+    "end_year": -4200,
+    "date_precision": "approx",
+    "modern_name": "Varna, Bulgaria",
+    "still_inhabited": false,
+    "peak": "5th millennium BCE",
+    "summary": "Chalcolithic cemetery with the world's oldest worked gold; ranked society, not a city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "provadia-solnitsata",
+    "name": "Solnitsata (Provadia)",
+    "aliases": [
+      "Provadia-Solnitsata"
+    ],
+    "region_hint": "europe",
+    "start_year": -5500,
+    "end_year": -4200,
+    "date_precision": "approx",
+    "modern_name": "Provadia, Bulgaria",
+    "still_inhabited": false,
+    "peak": "5th millennium BCE",
+    "summary": "Fortified Chalcolithic salt-production town, arguably Europe's oldest town.",
+    "confidence": "low"
+  },
+  {
+    "slug": "karanovo",
+    "name": "Karanovo",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -6200,
+    "end_year": -1500,
+    "date_precision": "approx",
+    "modern_name": "Sliven, Bulgaria",
+    "still_inhabited": false,
+    "peak": "5th millennium BCE",
+    "summary": "Deep Balkan tell whose layers define southeast European Neolithic chronology.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "durankulak",
+    "name": "Durankulak",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -5500,
+    "end_year": -4000,
+    "date_precision": "approx",
+    "modern_name": "Dobrich, Bulgaria",
+    "still_inhabited": false,
+    "peak": "5th millennium BCE",
+    "summary": "Chalcolithic lake settlement with the earliest stone architecture in Europe.",
+    "confidence": "low"
+  },
+  {
+    "slug": "nessebar",
+    "name": "Mesembria",
+    "aliases": [
+      "Nessebar",
+      "Mesambria"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nessebar, Bulgaria",
+    "still_inhabited": true,
+    "peak": "6th c. BCE and 14th c. CE",
+    "summary": "Dorian Black Sea port with dense Byzantine church architecture on a rocky isthmus.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sozopol",
+    "name": "Apollonia Pontica",
+    "aliases": [
+      "Sozopol",
+      "Apollonia"
+    ],
+    "region_hint": "europe",
+    "start_year": -610,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sozopol, Bulgaria",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Milesian colony and Black Sea copper and grain port.",
+    "confidence": "low"
+  },
+  {
+    "slug": "nicopolis-ad-istrum",
+    "name": "Nicopolis ad Istrum",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 106,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Veliko Tarnovo, Bulgaria",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Trajanic city on the Danube frontier where Gothic Christianity took shape.",
+    "confidence": "low"
+  },
+  {
+    "slug": "ratiaria",
+    "name": "Ratiaria",
+    "aliases": [
+      "Colonia Ulpia Ratiaria"
+    ],
+    "region_hint": "europe",
+    "start_year": -75,
+    "end_year": 586,
+    "date_precision": "approx",
+    "modern_name": "Vidin Province, Bulgaria",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Danube legionary base and capital of Dacia Ripensis, destroyed by the Huns and Avars.",
+    "confidence": "low"
+  },
+  {
+    "slug": "naissus",
+    "name": "Naissus",
+    "aliases": [
+      "Niš",
+      "Nissa"
+    ],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Niš, Serbia",
+    "still_inhabited": true,
+    "peak": "4th c. CE",
+    "summary": "Birthplace of Constantine and key fortress on the Balkan military highway.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sirmium",
+    "name": "Sirmium",
+    "aliases": [
+      "Sremska Mitrovica"
+    ],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": 582,
+    "date_precision": "approx",
+    "modern_name": "Sremska Mitrovica, Serbia",
+    "still_inhabited": false,
+    "peak": "4th c. CE",
+    "summary": "One of four capitals of the late Roman Empire, destroyed by the Avars.",
+    "confidence": "high"
+  },
+  {
+    "slug": "singidunum",
+    "name": "Singidunum",
+    "aliases": [
+      "Belgrade",
+      "Beograd"
+    ],
+    "region_hint": "europe",
+    "start_year": -279,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Belgrade, Serbia",
+    "still_inhabited": true,
+    "peak": "4th c. CE and 15th c.",
+    "summary": "Celtic and Roman fortress at the Sava-Danube junction, later Serbian capital.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "viminacium",
+    "name": "Viminacium",
+    "aliases": [
+      "Viminatium"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": 582,
+    "date_precision": "approx",
+    "modern_name": "Kostolac, Serbia",
+    "still_inhabited": false,
+    "peak": "2nd-3rd c. CE",
+    "summary": "Legionary city and provincial capital of Moesia Superior, abandoned after Avar raids.",
+    "confidence": "low"
+  },
+  {
+    "slug": "vinca",
+    "name": "Vinča",
+    "aliases": [
+      "Vinča-Belo Brdo"
+    ],
+    "region_hint": "europe",
+    "start_year": -5700,
+    "end_year": -4500,
+    "date_precision": "approx",
+    "modern_name": "near Belgrade, Serbia",
+    "still_inhabited": false,
+    "peak": "5th millennium BCE",
+    "summary": "Type site of the Vinča culture; large proto-urban tell, not a city proper.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lepenski-vir",
+    "name": "Lepenski Vir",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -9500,
+    "end_year": -5500,
+    "date_precision": "approx",
+    "modern_name": "Danube Gorges, Serbia",
+    "still_inhabited": false,
+    "peak": "7th millennium BCE",
+    "summary": "Mesolithic-Neolithic riverside village with trapezoidal houses and stone sculpture.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "starcevo",
+    "name": "Starčevo",
+    "aliases": [
+      "Starčevo-Grad"
+    ],
+    "region_hint": "europe",
+    "start_year": -6200,
+    "end_year": -5200,
+    "date_precision": "approx",
+    "modern_name": "Vojvodina, Serbia",
+    "still_inhabited": false,
+    "peak": "6th millennium BCE",
+    "summary": "Type site of the earliest Balkan farming culture; village-scale.",
+    "confidence": "low"
+  },
+  {
+    "slug": "salona",
+    "name": "Salona",
+    "aliases": [
+      "Solin",
+      "Salonae"
+    ],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": 639,
+    "date_precision": "approx",
+    "modern_name": "Solin, Croatia",
+    "still_inhabited": false,
+    "peak": "3rd c. CE",
+    "summary": "Capital of Roman Dalmatia and birthplace region of Diocletian, sacked by the Avars.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "split",
+    "name": "Split",
+    "aliases": [
+      "Spalatum",
+      "Aspalathos"
+    ],
+    "region_hint": "europe",
+    "start_year": 295,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Split, Croatia",
+    "still_inhabited": true,
+    "peak": "4th c. CE and 15th c.",
+    "summary": "City grown inside Diocletian's fortified palace after Salona fell.",
+    "confidence": "high"
+  },
+  {
+    "slug": "zadar",
+    "name": "Zadar",
+    "aliases": [
+      "Iadera",
+      "Jadera"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Zadar, Croatia",
+    "still_inhabited": true,
+    "peak": "10th-14th c. CE",
+    "summary": "Liburnian and Roman port, chief city of Byzantine then Venetian Dalmatia.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "dubrovnik",
+    "name": "Dubrovnik",
+    "aliases": [
+      "Ragusa"
+    ],
+    "region_hint": "europe",
+    "start_year": 614,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Dubrovnik, Croatia",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Merchant republic that rivalled Venice in Adriatic and Balkan trade.",
+    "confidence": "high"
+  },
+  {
+    "slug": "pula",
+    "name": "Pula",
+    "aliases": [
+      "Pola",
+      "Polensium"
+    ],
+    "region_hint": "europe",
+    "start_year": -1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Pula, Croatia",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Istrian port with one of the best preserved Roman amphitheatres.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kotor",
+    "name": "Kotor",
+    "aliases": [
+      "Cattaro",
+      "Acruvium"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kotor, Montenegro",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Fortified bay port and Serbian-Venetian trade gateway to the Adriatic.",
+    "confidence": "low"
+  },
+  {
+    "slug": "histria",
+    "name": "Histria",
+    "aliases": [
+      "Istros"
+    ],
+    "region_hint": "europe",
+    "start_year": -657,
+    "end_year": 700,
+    "date_precision": "approx",
+    "modern_name": "Constanța County, Romania",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Oldest Greek city on Romanian soil, silted up and abandoned.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tomis",
+    "name": "Tomis",
+    "aliases": [
+      "Constanța",
+      "Constantia"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Constanța, Romania",
+    "still_inhabited": true,
+    "peak": "4th c. CE",
+    "summary": "Black Sea port, place of Ovid's exile and late Roman metropolis of Scythia Minor.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sarmizegetusa",
+    "name": "Sarmizegetusa Regia",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": 106,
+    "date_precision": "approx",
+    "modern_name": "Hunedoara, Romania",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Fortified capital of the Dacian kingdom, destroyed by Trajan.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ulpia-traiana",
+    "name": "Ulpia Traiana Sarmizegetusa",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 106,
+    "end_year": 300,
+    "date_precision": "approx",
+    "modern_name": "Hunedoara, Romania",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Roman capital of Dacia, abandoned after imperial withdrawal.",
+    "confidence": "low"
+  },
+  {
+    "slug": "cucuteni",
+    "name": "Cucuteni",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -4800,
+    "end_year": -3000,
+    "date_precision": "approx",
+    "modern_name": "Iași County, Romania",
+    "still_inhabited": false,
+    "peak": "5th millennium BCE",
+    "summary": "Type site of the Cucuteni-Trypillia culture of painted pottery and huge villages.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "talianki",
+    "name": "Talianki",
+    "aliases": [
+      "Talljanky"
+    ],
+    "region_hint": "europe",
+    "start_year": -4000,
+    "end_year": -3600,
+    "date_precision": "approx",
+    "modern_name": "Cherkasy Oblast, Ukraine",
+    "still_inhabited": false,
+    "peak": "c. 3800 BCE",
+    "summary": "Trypillia \"mega-site\" of perhaps 10000 people, among the largest settlements of its age.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "maidanetske",
+    "name": "Maidanetske",
+    "aliases": [
+      "Majdanetske"
+    ],
+    "region_hint": "europe",
+    "start_year": -4000,
+    "end_year": -3600,
+    "date_precision": "approx",
+    "modern_name": "Cherkasy Oblast, Ukraine",
+    "still_inhabited": false,
+    "peak": "c. 3800 BCE",
+    "summary": "Concentric-plan Trypillia mega-site, an experiment in pre-state urbanism.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "nebelivka",
+    "name": "Nebelivka",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -4200,
+    "end_year": -3800,
+    "date_precision": "approx",
+    "modern_name": "Kirovohrad Oblast, Ukraine",
+    "still_inhabited": false,
+    "peak": "c. 4000 BCE",
+    "summary": "Trypillia mega-site with planned assembly houses and no evident central palace.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "olbia-pontica",
+    "name": "Olbia Pontica",
+    "aliases": [
+      "Olbia",
+      "Borysthenes"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Mykolaiv Oblast, Ukraine",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Greek grain emporium linking the Aegean to the Scythian steppe.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "chersonesus",
+    "name": "Chersonesus Taurica",
+    "aliases": [
+      "Kherson",
+      "Korsun",
+      "Sevastopol"
+    ],
+    "region_hint": "europe",
+    "start_year": -422,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Sevastopol, Crimea",
+    "still_inhabited": false,
+    "peak": "4th c. BCE and 10th c. CE",
+    "summary": "Dorian colony that became Byzantium's Crimean capital and baptism site of Vladimir.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "panticapaeum",
+    "name": "Panticapaeum",
+    "aliases": [
+      "Kerch",
+      "Bosporos"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kerch, Crimea",
+    "still_inhabited": true,
+    "peak": "4th c. BCE",
+    "summary": "Capital of the Bosporan Kingdom and hub of the Black Sea grain trade.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tanais",
+    "name": "Tanais",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": 500,
+    "date_precision": "approx",
+    "modern_name": "Rostov Oblast, Russia",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Northernmost Greek emporium, meeting point of Greek and Sarmatian worlds.",
+    "confidence": "low"
+  },
+  {
+    "slug": "tyras",
+    "name": "Tyras",
+    "aliases": [
+      "Bilhorod-Dnistrovskyi",
+      "Akkerman"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Odesa Oblast, Ukraine",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Greek Dniester port, later Genoese and Moldavian fortress town.",
+    "confidence": "low"
+  },
+  {
+    "slug": "tmutarakan",
+    "name": "Tmutarakan",
+    "aliases": [
+      "Hermonassa",
+      "Taman"
+    ],
+    "region_hint": "europe",
+    "start_year": -550,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Krasnodar Krai, Russia",
+    "still_inhabited": false,
+    "peak": "10th-11th c. CE",
+    "summary": "Greek, Khazar then Rus principality controlling the Kerch strait.",
+    "confidence": "low"
+  },
+  {
+    "slug": "rome",
+    "name": "Rome",
+    "aliases": [
+      "Roma",
+      "Urbs"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": null,
+    "date_precision": "traditional",
+    "modern_name": "Rome, Italy",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Capital of the Roman Empire and of Latin Christendom; the archetypal ancient city.",
+    "confidence": "high",
+    "contested": "Date is a legendary or traditional founding date, not an archaeological one."
+  },
+  {
+    "slug": "ostia",
+    "name": "Ostia",
+    "aliases": [
+      "Ostia Antica"
+    ],
+    "region_hint": "europe",
+    "start_year": -620,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Rome's harbour city and best-preserved Roman commercial town.",
+    "confidence": "high"
+  },
+  {
+    "slug": "portus",
+    "name": "Portus",
+    "aliases": [
+      "Portus Romae"
+    ],
+    "region_hint": "europe",
+    "start_year": 42,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Fiumicino, Italy",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Purpose-built imperial harbour that fed Rome by sea.",
+    "confidence": "low"
+  },
+  {
+    "slug": "veii",
+    "name": "Veii",
+    "aliases": [
+      "Veio"
+    ],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": -100,
+    "date_precision": "approx",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Nearest Etruscan rival of Rome, destroyed in 396 BCE after a decade-long siege.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tarquinia",
+    "name": "Tarquinia",
+    "aliases": [
+      "Tarquinii",
+      "Corneto"
+    ],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": true,
+    "peak": "6th c. BCE",
+    "summary": "Etruscan religious and political capital, famed for painted tombs.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "cerveteri",
+    "name": "Cerveteri",
+    "aliases": [
+      "Caere",
+      "Caisra"
+    ],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": true,
+    "peak": "6th c. BCE",
+    "summary": "Etruscan port city with the vast Banditaccia tumulus necropolis.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "vulci",
+    "name": "Vulci",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": 800,
+    "date_precision": "approx",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Etruscan bronze-working city and huge exporter-importer of Greek vases.",
+    "confidence": "low"
+  },
+  {
+    "slug": "volterra",
+    "name": "Volterra",
+    "aliases": [
+      "Volaterrae",
+      "Velathri"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tuscany, Italy",
+    "still_inhabited": true,
+    "peak": "4th c. BCE",
+    "summary": "Etruscan hill city with alabaster urns and vast surviving walls.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "populonia",
+    "name": "Populonia",
+    "aliases": [
+      "Populonium",
+      "Pupluna"
+    ],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": 1400,
+    "date_precision": "approx",
+    "modern_name": "Tuscany, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Only coastal Etruscan city, smelting iron from Elba on an industrial scale.",
+    "confidence": "low"
+  },
+  {
+    "slug": "chiusi",
+    "name": "Clusium",
+    "aliases": [
+      "Chiusi",
+      "Clevsin"
+    ],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tuscany, Italy",
+    "still_inhabited": true,
+    "peak": "6th c. BCE",
+    "summary": "Etruscan city of Porsenna, controlling the upper Tiber route.",
+    "confidence": "low"
+  },
+  {
+    "slug": "arezzo",
+    "name": "Arretium",
+    "aliases": [
+      "Arezzo"
+    ],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tuscany, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. BCE",
+    "summary": "Etruscan then Roman city famous for red-gloss Arretine pottery exported empire-wide.",
+    "confidence": "low"
+  },
+  {
+    "slug": "perugia",
+    "name": "Perusia",
+    "aliases": [
+      "Perugia"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Umbria, Italy",
+    "still_inhabited": true,
+    "peak": "3rd c. BCE",
+    "summary": "Etruscan hill city with monumental gates, later a papal state capital.",
+    "confidence": "low"
+  },
+  {
+    "slug": "cortona",
+    "name": "Cortona",
+    "aliases": [
+      "Curtun"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tuscany, Italy",
+    "still_inhabited": true,
+    "peak": "4th c. BCE",
+    "summary": "Etruscan league city with cyclopean walls above the Chiana valley.",
+    "confidence": "low"
+  },
+  {
+    "slug": "orvieto",
+    "name": "Volsinii",
+    "aliases": [
+      "Orvieto",
+      "Velzna"
+    ],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Umbria, Italy",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Probable site of the Etruscan federal sanctuary Fanum Voltumnae.",
+    "confidence": "low"
+  },
+  {
+    "slug": "marzabotto",
+    "name": "Marzabotto",
+    "aliases": [
+      "Kainua",
+      "Misa"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": -350,
+    "date_precision": "approx",
+    "modern_name": "Emilia-Romagna, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Etruscan planned city on a grid, abandoned after Gallic invasion.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "spina",
+    "name": "Spina",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -530,
+    "end_year": -250,
+    "date_precision": "approx",
+    "modern_name": "Emilia-Romagna, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Etruscan-Greek lagoon port on the Po delta, silted up and abandoned.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "adria",
+    "name": "Adria",
+    "aliases": [
+      "Atria",
+      "Hatria"
+    ],
+    "region_hint": "europe",
+    "start_year": -550,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Veneto, Italy",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Po delta emporium that gave its name to the Adriatic Sea.",
+    "confidence": "low"
+  },
+  {
+    "slug": "falerii",
+    "name": "Falerii Veteres",
+    "aliases": [
+      "Civita Castellana",
+      "Falerii Novi"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Faliscan city forcibly relocated by Rome to the grid town of Falerii Novi.",
+    "confidence": "low"
+  },
+  {
+    "slug": "lavinium",
+    "name": "Lavinium",
+    "aliases": [
+      "Pratica di Mare"
+    ],
+    "region_hint": "europe",
+    "start_year": -1100,
+    "end_year": 400,
+    "date_precision": "traditional",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Legendary landing city of Aeneas and cult centre of the Latin League.",
+    "confidence": "low",
+    "contested": "Date is a legendary or traditional founding date, not an archaeological one."
+  },
+  {
+    "slug": "alba-longa",
+    "name": "Alba Longa",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -1150,
+    "end_year": -600,
+    "date_precision": "traditional",
+    "modern_name": "Castel Gandolfo area, Italy",
+    "still_inhabited": false,
+    "peak": "9th c. BCE",
+    "summary": "Legendary mother city of Rome in the Alban Hills.",
+    "confidence": "low",
+    "contested": "Date is a legendary or traditional founding date, not an archaeological one."
+  },
+  {
+    "slug": "gabii",
+    "name": "Gabii",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": 300,
+    "date_precision": "approx",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Latin city absorbed by Rome, excavated to show early Latin urban planning.",
+    "confidence": "low"
+  },
+  {
+    "slug": "praeneste",
+    "name": "Praeneste",
+    "aliases": [
+      "Palestrina"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": true,
+    "peak": "2nd c. BCE",
+    "summary": "Latin hill city with the colossal oracular sanctuary of Fortuna Primigenia.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tibur",
+    "name": "Tibur",
+    "aliases": [
+      "Tivoli"
+    ],
+    "region_hint": "europe",
+    "start_year": -1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tivoli, Italy",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Latin city and villa resort of the Roman elite, including Hadrian's Villa.",
+    "confidence": "low"
+  },
+  {
+    "slug": "tusculum",
+    "name": "Tusculum",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -1000,
+    "end_year": 1191,
+    "date_precision": "approx",
+    "modern_name": "Frascati area, Italy",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Latin city of the Alban Hills, razed by Rome's medieval commune.",
+    "confidence": "low"
+  },
+  {
+    "slug": "antium",
+    "name": "Antium",
+    "aliases": [
+      "Anzio"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Anzio, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Latin and Volscian pirate port, later imperial seaside residence.",
+    "confidence": "low"
+  },
+  {
+    "slug": "ardea",
+    "name": "Ardea",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Rutulian capital and early Latin League member.",
+    "confidence": "low"
+  },
+  {
+    "slug": "terracina",
+    "name": "Terracina",
+    "aliases": [
+      "Anxur",
+      "Tarracina"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lazio, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Coastal Appian Way city with a cliff-top sanctuary of Jupiter Anxur.",
+    "confidence": "low"
+  },
+  {
+    "slug": "capua",
+    "name": "Capua",
+    "aliases": [
+      "Santa Maria Capua Vetere",
+      "Volturnum"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": 841,
+    "date_precision": "approx",
+    "modern_name": "Campania, Italy",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Second city of Roman Italy, gladiator capital and site of Spartacus's revolt.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "cumae",
+    "name": "Cumae",
+    "aliases": [
+      "Cuma",
+      "Kyme"
+    ],
+    "region_hint": "europe",
+    "start_year": -740,
+    "end_year": 1207,
+    "date_precision": "approx",
+    "modern_name": "Campania, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Oldest mainland Greek colony in Italy, home of the Sibyl, destroyed in 1207.",
+    "confidence": "high"
+  },
+  {
+    "slug": "pithekoussai",
+    "name": "Pithekoussai",
+    "aliases": [
+      "Ischia",
+      "Pithecusae"
+    ],
+    "region_hint": "europe",
+    "start_year": -770,
+    "end_year": -500,
+    "date_precision": "approx",
+    "modern_name": "Ischia, Italy",
+    "still_inhabited": false,
+    "peak": "8th c. BCE",
+    "summary": "Earliest Greek trading settlement in the west, gateway of the alphabet to Italy.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "naples",
+    "name": "Naples",
+    "aliases": [
+      "Neapolis",
+      "Napoli",
+      "Parthenope"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Naples, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. CE and 15th c.",
+    "summary": "Greek foundation that became the largest city of early modern Europe.",
+    "confidence": "high"
+  },
+  {
+    "slug": "pompeii",
+    "name": "Pompeii",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": 79,
+    "date_precision": "approx",
+    "modern_name": "Campania, Italy",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Roman town frozen by Vesuvius, the fullest surviving picture of ancient daily life.",
+    "confidence": "high"
+  },
+  {
+    "slug": "herculaneum",
+    "name": "Herculaneum",
+    "aliases": [
+      "Ercolano",
+      "Herculanum"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": 79,
+    "date_precision": "approx",
+    "modern_name": "Campania, Italy",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Wealthy seaside town buried by Vesuvius, preserving wood, food and a papyrus library.",
+    "confidence": "high"
+  },
+  {
+    "slug": "stabiae",
+    "name": "Stabiae",
+    "aliases": [
+      "Castellammare di Stabia"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": 79,
+    "date_precision": "approx",
+    "modern_name": "Campania, Italy",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Villa resort destroyed with Pompeii; where Pliny the Elder died.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "paestum",
+    "name": "Paestum",
+    "aliases": [
+      "Poseidonia"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Campania, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Greek colony with three of the best-preserved Doric temples anywhere, later malarial and abandoned.",
+    "confidence": "high"
+  },
+  {
+    "slug": "velia",
+    "name": "Velia",
+    "aliases": [
+      "Elea",
+      "Hyele"
+    ],
+    "region_hint": "europe",
+    "start_year": -538,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Campania, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Phocaean colony and home of the Eleatic philosophers Parmenides and Zeno.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "salerno",
+    "name": "Salerno",
+    "aliases": [
+      "Salernum"
+    ],
+    "region_hint": "europe",
+    "start_year": -197,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Salerno, Italy",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Lombard-Norman capital and seat of Europe's first medical school.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "amalfi",
+    "name": "Amalfi",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Amalfi, Italy",
+    "still_inhabited": true,
+    "peak": "10th-11th c. CE",
+    "summary": "Earliest of the Italian maritime republics, trading with Fatimid Egypt and Byzantium.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "benevento",
+    "name": "Beneventum",
+    "aliases": [
+      "Benevento",
+      "Maleventum"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Benevento, Italy",
+    "still_inhabited": true,
+    "peak": "8th c. CE",
+    "summary": "Samnite city, Appian Way hub and capital of a long-lived Lombard duchy.",
+    "confidence": "low"
+  },
+  {
+    "slug": "brundisium",
+    "name": "Brundisium",
+    "aliases": [
+      "Brindisi"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Brindisi, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. BCE",
+    "summary": "End of the Appian Way and Rome's chief embarkation port for Greece and the East.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tarentum",
+    "name": "Tarentum",
+    "aliases": [
+      "Taras",
+      "Taranto"
+    ],
+    "region_hint": "europe",
+    "start_year": -706,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Taranto, Italy",
+    "still_inhabited": true,
+    "peak": "4th c. BCE",
+    "summary": "Richest Greek city of Italy, patron of Pyrrhus and master of the purple-dye trade.",
+    "confidence": "high"
+  },
+  {
+    "slug": "metapontum",
+    "name": "Metapontum",
+    "aliases": [
+      "Metaponto"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": -200,
+    "date_precision": "approx",
+    "modern_name": "Basilicata, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Achaean colony where Pythagoras died, with a fully mapped Greek farm landscape.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sybaris",
+    "name": "Sybaris",
+    "aliases": [
+      "Thurii",
+      "Copia"
+    ],
+    "region_hint": "europe",
+    "start_year": -720,
+    "end_year": -510,
+    "date_precision": "approx",
+    "modern_name": "Calabria, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Byword for luxury, destroyed by Croton and buried under later Thurii.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "thurii",
+    "name": "Thurii",
+    "aliases": [
+      "Thourioi",
+      "Copia"
+    ],
+    "region_hint": "europe",
+    "start_year": -444,
+    "end_year": 500,
+    "date_precision": "approx",
+    "modern_name": "Calabria, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Panhellenic refoundation of Sybaris planned with Hippodamian streets.",
+    "confidence": "low"
+  },
+  {
+    "slug": "croton",
+    "name": "Croton",
+    "aliases": [
+      "Kroton",
+      "Crotone"
+    ],
+    "region_hint": "europe",
+    "start_year": -710,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Crotone, Italy",
+    "still_inhabited": true,
+    "peak": "6th c. BCE",
+    "summary": "Athletic powerhouse and home of the Pythagorean brotherhood.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "locri",
+    "name": "Locri Epizephyrii",
+    "aliases": [
+      "Locri",
+      "Lokroi"
+    ],
+    "region_hint": "europe",
+    "start_year": -680,
+    "end_year": -100,
+    "date_precision": "approx",
+    "modern_name": "Calabria, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Greek colony with the earliest written law code in the west, by Zaleucus.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "rhegium",
+    "name": "Rhegium",
+    "aliases": [
+      "Reggio Calabria",
+      "Rhegion"
+    ],
+    "region_hint": "europe",
+    "start_year": -730,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Reggio Calabria, Italy",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Greek city commanding the Straits of Messina.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "heraclea-lucania",
+    "name": "Heraclea (Lucania)",
+    "aliases": [
+      "Herakleia",
+      "Policoro"
+    ],
+    "region_hint": "europe",
+    "start_year": -433,
+    "end_year": -100,
+    "date_precision": "approx",
+    "modern_name": "Basilicata, Italy",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Site of Pyrrhus's first victory and of the Tabulae Heracleenses.",
+    "confidence": "low"
+  },
+  {
+    "slug": "sipontum",
+    "name": "Sipontum",
+    "aliases": [
+      "Siponto"
+    ],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": 1256,
+    "date_precision": "approx",
+    "modern_name": "Manfredonia, Italy",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Adriatic port abandoned to malaria and replaced by Manfredonia.",
+    "confidence": "low"
+  },
+  {
+    "slug": "syracuse",
+    "name": "Syracuse",
+    "aliases": [
+      "Siracusa",
+      "Syrakousai"
+    ],
+    "region_hint": "europe",
+    "start_year": -733,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": true,
+    "peak": "5th-3rd c. BCE",
+    "summary": "Greatest Greek city of the west, home of Archimedes and rival of Athens and Carthage.",
+    "confidence": "high"
+  },
+  {
+    "slug": "akragas",
+    "name": "Akragas",
+    "aliases": [
+      "Agrigento",
+      "Agrigentum"
+    ],
+    "region_hint": "europe",
+    "start_year": -580,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Agrigento, Sicily, Italy",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Rich Sicilian city with a whole ridge of Doric temples.",
+    "confidence": "high"
+  },
+  {
+    "slug": "selinunte",
+    "name": "Selinunte",
+    "aliases": [
+      "Selinus",
+      "Selinous"
+    ],
+    "region_hint": "europe",
+    "start_year": -628,
+    "end_year": -250,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Greek frontier city with colossal temples, destroyed by Carthage and abandoned.",
+    "confidence": "high"
+  },
+  {
+    "slug": "gela",
+    "name": "Gela",
+    "aliases": [
+      "Gelas"
+    ],
+    "region_hint": "europe",
+    "start_year": -689,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Rhodian-Cretan colony and mother city of Akragas, where Aeschylus died.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "himera",
+    "name": "Himera",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -648,
+    "end_year": -409,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Site of the 480 BCE victory over Carthage; erased by Carthaginian revenge.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "segesta",
+    "name": "Segesta",
+    "aliases": [
+      "Egesta"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Elymian city whose appeal to Athens triggered the Sicilian Expedition.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "motya",
+    "name": "Motya",
+    "aliases": [
+      "Mozia",
+      "Motye"
+    ],
+    "region_hint": "europe",
+    "start_year": -750,
+    "end_year": -397,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Phoenician island city of western Sicily, destroyed by Dionysius I.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "palermo",
+    "name": "Palermo",
+    "aliases": [
+      "Panormus",
+      "Zis",
+      "Balarm"
+    ],
+    "region_hint": "europe",
+    "start_year": -734,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Palermo, Sicily, Italy",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Phoenician port that became the multicultural capital of Norman Sicily.",
+    "confidence": "high"
+  },
+  {
+    "slug": "zancle",
+    "name": "Zancle",
+    "aliases": [
+      "Messina",
+      "Messana"
+    ],
+    "region_hint": "europe",
+    "start_year": -730,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Messina, Sicily, Italy",
+    "still_inhabited": true,
+    "peak": "5th c. BCE",
+    "summary": "Strait city and bridgehead for Greek and later Roman expansion.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "catania",
+    "name": "Catania",
+    "aliases": [
+      "Katane"
+    ],
+    "region_hint": "europe",
+    "start_year": -729,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Catania, Sicily, Italy",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Greek colony repeatedly rebuilt after Etna's eruptions.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "naxos-sicily",
+    "name": "Naxos (Sicily)",
+    "aliases": [
+      "Giardini Naxos"
+    ],
+    "region_hint": "europe",
+    "start_year": -734,
+    "end_year": -403,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "First Greek colony in Sicily, destroyed by Syracuse.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "camarina",
+    "name": "Camarina",
+    "aliases": [
+      "Kamarina"
+    ],
+    "region_hint": "europe",
+    "start_year": -598,
+    "end_year": -258,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Syracusan colony repeatedly destroyed and refounded, finally abandoned.",
+    "confidence": "low"
+  },
+  {
+    "slug": "morgantina",
+    "name": "Morgantina",
+    "aliases": [
+      "Morgantia"
+    ],
+    "region_hint": "europe",
+    "start_year": -1000,
+    "end_year": -50,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": false,
+    "peak": "3rd c. BCE",
+    "summary": "Sikel then Hellenistic town with an outstanding agora, abandoned under Rome.",
+    "confidence": "low"
+  },
+  {
+    "slug": "thapsos",
+    "name": "Thapsos",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -1500,
+    "end_year": -1200,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": false,
+    "peak": "14th c. BCE",
+    "summary": "Bronze Age Sicilian trading town in contact with Mycenaeans and Cyprus.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "pantalica",
+    "name": "Pantalica",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -1250,
+    "end_year": -700,
+    "date_precision": "approx",
+    "modern_name": "Sicily, Italy",
+    "still_inhabited": false,
+    "peak": "12th c. BCE",
+    "summary": "Vast rock-cut necropolis and hilltop centre of late Bronze Age Sicily.",
+    "confidence": "low"
+  },
+  {
+    "slug": "lipari",
+    "name": "Lipari",
+    "aliases": [
+      "Meligunis"
+    ],
+    "region_hint": "europe",
+    "start_year": -4000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Aeolian Islands, Italy",
+    "still_inhabited": true,
+    "peak": "Bronze Age and Greek era",
+    "summary": "Obsidian-trading island town with a 5000-year stratified acropolis.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "drepanum",
+    "name": "Drepanum",
+    "aliases": [
+      "Trapani"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Trapani, Sicily, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. BCE",
+    "summary": "Carthaginian and Roman harbour and salt town of western Sicily.",
+    "confidence": "low"
+  },
+  {
+    "slug": "cosa",
+    "name": "Cosa",
+    "aliases": [
+      "Ansedonia"
+    ],
+    "region_hint": "europe",
+    "start_year": -273,
+    "end_year": 1300,
+    "date_precision": "approx",
+    "modern_name": "Tuscany, Italy",
+    "still_inhabited": false,
+    "peak": "2nd c. BCE",
+    "summary": "Roman colony whose small forum and port illuminate Republican town planning.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "luni",
+    "name": "Luna",
+    "aliases": [
+      "Luni",
+      "Lunae"
+    ],
+    "region_hint": "europe",
+    "start_year": -177,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Liguria, Italy",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Roman marble-export port for Carrara, abandoned to silt and malaria.",
+    "confidence": "low"
+  },
+  {
+    "slug": "ravenna",
+    "name": "Ravenna",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ravenna, Italy",
+    "still_inhabited": true,
+    "peak": "5th-6th c. CE",
+    "summary": "Last capital of the western empire and of Ostrogothic and Byzantine Italy, with its mosaics.",
+    "confidence": "high"
+  },
+  {
+    "slug": "classe",
+    "name": "Classe",
+    "aliases": [
+      "Portus Classis"
+    ],
+    "region_hint": "europe",
+    "start_year": -25,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Ravenna, Italy",
+    "still_inhabited": false,
+    "peak": "5th c. CE",
+    "summary": "Ravenna's imperial naval port, silted up and abandoned.",
+    "confidence": "low"
+  },
+  {
+    "slug": "milan",
+    "name": "Milan",
+    "aliases": [
+      "Mediolanum",
+      "Milano"
+    ],
+    "region_hint": "europe",
+    "start_year": -400,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Milan, Italy",
+    "still_inhabited": true,
+    "peak": "4th c. CE and 15th c.",
+    "summary": "Insubrian and Roman capital of the west, later Visconti-Sforza ducal metropolis.",
+    "confidence": "high"
+  },
+  {
+    "slug": "aquileia",
+    "name": "Aquileia",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -181,
+    "end_year": 452,
+    "date_precision": "approx",
+    "modern_name": "Friuli, Italy",
+    "still_inhabited": false,
+    "peak": "4th c. CE",
+    "summary": "Great Adriatic frontier city and patriarchate, destroyed by Attila.",
+    "confidence": "high"
+  },
+  {
+    "slug": "grado",
+    "name": "Grado",
+    "aliases": [
+      "Gradus"
+    ],
+    "region_hint": "europe",
+    "start_year": 450,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Friuli, Italy",
+    "still_inhabited": true,
+    "peak": "6th c. CE",
+    "summary": "Lagoon refuge of Aquileia and rival patriarchate to Venice.",
+    "confidence": "low"
+  },
+  {
+    "slug": "venice",
+    "name": "Venice",
+    "aliases": [
+      "Venezia",
+      "Venetiae"
+    ],
+    "region_hint": "europe",
+    "start_year": 421,
+    "end_year": null,
+    "date_precision": "traditional",
+    "modern_name": "Venice, Italy",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Lagoon republic that dominated Mediterranean trade for five centuries.",
+    "confidence": "high",
+    "contested": "Date is a legendary or traditional founding date, not an archaeological one."
+  },
+  {
+    "slug": "torcello",
+    "name": "Torcello",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 452,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Venetian Lagoon, Italy",
+    "still_inhabited": false,
+    "peak": "7th-10th c. CE",
+    "summary": "First great settlement of the Venetian lagoon, later abandoned to malaria.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "verona",
+    "name": "Verona",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Verona, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. CE and 14th c.",
+    "summary": "Roman Adige city with a great arena, later Scaliger capital.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "padua",
+    "name": "Patavium",
+    "aliases": [
+      "Padova",
+      "Padua"
+    ],
+    "region_hint": "europe",
+    "start_year": -1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Padua, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. CE and 14th c.",
+    "summary": "Venetic city, wealthy Roman municipium and home of a major medieval university.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "bologna",
+    "name": "Bononia",
+    "aliases": [
+      "Bologna",
+      "Felsina"
+    ],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bologna, Italy",
+    "still_inhabited": true,
+    "peak": "12th-13th c. CE",
+    "summary": "Etruscan Felsina, Roman colony and seat of Europe's oldest university.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ariminum",
+    "name": "Ariminum",
+    "aliases": [
+      "Rimini"
+    ],
+    "region_hint": "europe",
+    "start_year": -268,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Rimini, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Roman colony at the junction of the via Flaminia and via Emilia.",
+    "confidence": "low"
+  },
+  {
+    "slug": "florence",
+    "name": "Florence",
+    "aliases": [
+      "Florentia",
+      "Firenze"
+    ],
+    "region_hint": "europe",
+    "start_year": -59,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Florence, Italy",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Banking and textile city that financed and made the Renaissance.",
+    "confidence": "high"
+  },
+  {
+    "slug": "fiesole",
+    "name": "Fiesole",
+    "aliases": [
+      "Faesulae",
+      "Vipsul"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tuscany, Italy",
+    "still_inhabited": true,
+    "peak": "3rd c. BCE",
+    "summary": "Etruscan hill city above Florence, which it originally dominated.",
+    "confidence": "low"
+  },
+  {
+    "slug": "siena",
+    "name": "Siena",
+    "aliases": [
+      "Saena Julia"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Siena, Italy",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Ghibelline banking rival of Florence, halted by the Black Death.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lucca",
+    "name": "Lucca",
+    "aliases": [
+      "Luca"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lucca, Italy",
+    "still_inhabited": true,
+    "peak": "8th c. and 14th c. CE",
+    "summary": "Lombard Tuscan capital and later silk-trading republic.",
+    "confidence": "low"
+  },
+  {
+    "slug": "pisa",
+    "name": "Pisa",
+    "aliases": [
+      "Pisae"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Pisa, Italy",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Maritime republic that took Sardinia and the Balearics and built the leaning tower.",
+    "confidence": "high"
+  },
+  {
+    "slug": "genoa",
+    "name": "Genoa",
+    "aliases": [
+      "Genua",
+      "Genova"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Genoa, Italy",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Maritime republic whose banks and Black Sea colonies rivalled Venice.",
+    "confidence": "high"
+  },
+  {
+    "slug": "turin",
+    "name": "Turin",
+    "aliases": [
+      "Augusta Taurinorum",
+      "Torino"
+    ],
+    "region_hint": "europe",
+    "start_year": -28,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Turin, Italy",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Roman grid colony that became the Savoyard capital.",
+    "confidence": "low"
+  },
+  {
+    "slug": "pavia",
+    "name": "Pavia",
+    "aliases": [
+      "Ticinum"
+    ],
+    "region_hint": "europe",
+    "start_year": -89,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Pavia, Italy",
+    "still_inhabited": true,
+    "peak": "7th-8th c. CE",
+    "summary": "Capital of the Lombard kingdom and coronation city of Italy.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "cremona",
+    "name": "Cremona",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -218,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Cremona, Italy",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Roman colony and prosperous Lombard commune on the Po.",
+    "confidence": "low"
+  },
+  {
+    "slug": "piacenza",
+    "name": "Placentia",
+    "aliases": [
+      "Piacenza"
+    ],
+    "region_hint": "europe",
+    "start_year": -218,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Piacenza, Italy",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Roman colony guarding the Po crossing of the via Emilia.",
+    "confidence": "low"
+  },
+  {
+    "slug": "brescia",
+    "name": "Brixia",
+    "aliases": [
+      "Brescia"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Brescia, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Cenomani and Roman city with an intact Capitolium and Lombard monasteries.",
+    "confidence": "low"
+  },
+  {
+    "slug": "trieste",
+    "name": "Tergeste",
+    "aliases": [
+      "Trieste"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Trieste, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Adriatic Roman port at the head of the gulf.",
+    "confidence": "low"
+  },
+  {
+    "slug": "ancona",
+    "name": "Ancona",
+    "aliases": [
+      "Ankon"
+    ],
+    "region_hint": "europe",
+    "start_year": -387,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ancona, Italy",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Syracusan Greek foundation and Trajan's chief Adriatic harbour.",
+    "confidence": "low"
+  },
+  {
+    "slug": "bari",
+    "name": "Bari",
+    "aliases": [
+      "Barium"
+    ],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bari, Italy",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Byzantine then Norman Adriatic capital and shrine of St Nicholas.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "otranto",
+    "name": "Otranto",
+    "aliases": [
+      "Hydruntum"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Otranto, Italy",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Closest Italian port to Greece and gateway of Byzantine culture to Italy.",
+    "confidence": "low"
+  },
+  {
+    "slug": "naples-cuma",
+    "name": "Puteoli",
+    "aliases": [
+      "Pozzuoli",
+      "Dicaearchia"
+    ],
+    "region_hint": "europe",
+    "start_year": -531,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Pozzuoli, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Rome's main import harbour before Ostia, using volcanic concrete moles.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "alba-fucens",
+    "name": "Alba Fucens",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -303,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Abruzzo, Italy",
+    "still_inhabited": false,
+    "peak": "2nd c. BCE",
+    "summary": "Latin colony in the Apennines, abandoned after earthquakes.",
+    "confidence": "low"
+  },
+  {
+    "slug": "caralis",
+    "name": "Caralis",
+    "aliases": [
+      "Cagliari",
+      "Krly"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Cagliari, Sardinia, Italy",
+    "still_inhabited": true,
+    "peak": "1st c. CE and 14th c.",
+    "summary": "Phoenician and Roman capital of Sardinia, later Pisan-Aragonese.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tharros",
+    "name": "Tharros",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": 1070,
+    "date_precision": "approx",
+    "modern_name": "Sardinia, Italy",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Phoenician-Punic port of Sardinia, abandoned for Oristano after Arab raids.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "nora-sardinia",
+    "name": "Nora",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": 700,
+    "date_precision": "approx",
+    "modern_name": "Sardinia, Italy",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Oldest Phoenician city of Sardinia, later submerged and deserted.",
+    "confidence": "low"
+  },
+  {
+    "slug": "olbia-sardinia",
+    "name": "Olbia (Sardinia)",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Olbia, Sardinia, Italy",
+    "still_inhabited": true,
+    "peak": "3rd c. BCE",
+    "summary": "Punic-Roman port linking Sardinia to Ostia.",
+    "confidence": "low"
+  },
+  {
+    "slug": "su-nuraxi",
+    "name": "Su Nuraxi di Barumini",
+    "aliases": [
+      "Barumini"
+    ],
+    "region_hint": "europe",
+    "start_year": -1600,
+    "end_year": -300,
+    "date_precision": "approx",
+    "modern_name": "Sardinia, Italy",
+    "still_inhabited": false,
+    "peak": "13th c. BCE",
+    "summary": "Nuragic tower-village complex, the densest example of Sardinian proto-urbanism.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "mdina",
+    "name": "Mdina",
+    "aliases": [
+      "Melite",
+      "Medina"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Mdina, Malta",
+    "still_inhabited": true,
+    "peak": "Punic-Roman and medieval eras",
+    "summary": "Fortified hilltop capital of Malta through Punic, Roman and Arab rule.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tarxien",
+    "name": "Tarxien and Ġgantija temples",
+    "aliases": [
+      "Ggantija",
+      "Hagar Qim"
+    ],
+    "region_hint": "europe",
+    "start_year": -3600,
+    "end_year": -2350,
+    "date_precision": "approx",
+    "modern_name": "Malta and Gozo",
+    "still_inhabited": false,
+    "peak": "4th millennium BCE",
+    "summary": "World's oldest free-standing stone temples; ceremonial complexes, not cities.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "massalia",
+    "name": "Massalia",
+    "aliases": [
+      "Marseille",
+      "Massilia"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Marseille, France",
+    "still_inhabited": true,
+    "peak": "4th c. BCE",
+    "summary": "Phocaean colony that carried Greek trade and wine into Gaul; oldest city in France.",
+    "confidence": "high"
+  },
+  {
+    "slug": "nikaia",
+    "name": "Nikaia",
+    "aliases": [
+      "Nice",
+      "Nicaea"
+    ],
+    "region_hint": "europe",
+    "start_year": -350,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nice, France",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Massaliot foundation and Roman Cemenelum's port on the Ligurian coast.",
+    "confidence": "low"
+  },
+  {
+    "slug": "antipolis",
+    "name": "Antipolis",
+    "aliases": [
+      "Antibes"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Antibes, France",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Greek then Roman port on the Provençal coast.",
+    "confidence": "low"
+  },
+  {
+    "slug": "arles",
+    "name": "Arles",
+    "aliases": [
+      "Arelate"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Arles, France",
+    "still_inhabited": true,
+    "peak": "4th-5th c. CE",
+    "summary": "Rhône port and late imperial capital of the Gallic prefecture.",
+    "confidence": "high"
+  },
+  {
+    "slug": "nimes",
+    "name": "Nemausus",
+    "aliases": [
+      "Nîmes"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nîmes, France",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Volcae capital and showcase Roman colony with the Maison Carrée and arena.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "narbo",
+    "name": "Narbo Martius",
+    "aliases": [
+      "Narbonne"
+    ],
+    "region_hint": "europe",
+    "start_year": -118,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Narbonne, France",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "First Roman colony in Gaul and capital of Narbonensis; harbour later silted.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "vienne-france",
+    "name": "Vienna Allobrogum",
+    "aliases": [
+      "Vienne"
+    ],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Vienne, France",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Wealthy Rhône colony rivalling Lugdunum, with a full monumental centre.",
+    "confidence": "low"
+  },
+  {
+    "slug": "lugdunum",
+    "name": "Lugdunum",
+    "aliases": [
+      "Lyon",
+      "Lyons"
+    ],
+    "region_hint": "europe",
+    "start_year": -43,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lyon, France",
+    "still_inhabited": true,
+    "peak": "2nd c. CE and 15th c.",
+    "summary": "Capital of the Three Gauls and imperial mint; later a great banking and silk city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "tolosa",
+    "name": "Tolosa",
+    "aliases": [
+      "Toulouse"
+    ],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Toulouse, France",
+    "still_inhabited": true,
+    "peak": "5th c. CE",
+    "summary": "Volcae city and capital of the Visigothic kingdom in Gaul.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "burdigala",
+    "name": "Burdigala",
+    "aliases": [
+      "Bordeaux"
+    ],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bordeaux, France",
+    "still_inhabited": true,
+    "peak": "4th c. CE",
+    "summary": "Atlantic wine port and late Roman literary centre of Ausonius.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lutetia",
+    "name": "Lutetia",
+    "aliases": [
+      "Paris",
+      "Parisii"
+    ],
+    "region_hint": "europe",
+    "start_year": -250,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Paris, France",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Parisii river town that became the capital of France and of scholastic learning.",
+    "confidence": "high"
+  },
+  {
+    "slug": "durocortorum",
+    "name": "Durocortorum",
+    "aliases": [
+      "Reims",
+      "Rheims"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Reims, France",
+    "still_inhabited": true,
+    "peak": "4th c. CE",
+    "summary": "Capital of Belgica and coronation city of the kings of France.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "divodurum",
+    "name": "Divodurum",
+    "aliases": [
+      "Metz",
+      "Mettis"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Metz, France",
+    "still_inhabited": true,
+    "peak": "9th c. CE",
+    "summary": "Mediomatrici capital and Carolingian Austrasian royal city.",
+    "confidence": "low"
+  },
+  {
+    "slug": "argentoratum",
+    "name": "Argentoratum",
+    "aliases": [
+      "Strasbourg",
+      "Strateburgum"
+    ],
+    "region_hint": "europe",
+    "start_year": -12,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Strasbourg, France",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Rhine legionary fort turned free imperial city and early printing centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "augustodunum",
+    "name": "Augustodunum",
+    "aliases": [
+      "Autun"
+    ],
+    "region_hint": "europe",
+    "start_year": -15,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Autun, France",
+    "still_inhabited": true,
+    "peak": "3rd c. CE",
+    "summary": "Roman replacement for Bibracte and seat of famous Gallic rhetorical schools.",
+    "confidence": "low"
+  },
+  {
+    "slug": "vesontio",
+    "name": "Vesontio",
+    "aliases": [
+      "Besançon"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Besançon, France",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Sequani capital in a Doubs loop, key to Caesar's campaigns.",
+    "confidence": "low"
+  },
+  {
+    "slug": "cenabum",
+    "name": "Cenabum",
+    "aliases": [
+      "Orléans",
+      "Aurelianum"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Orléans, France",
+    "still_inhabited": true,
+    "peak": "9th c. CE",
+    "summary": "Carnutes town whose massacre began the great revolt of 52 BCE; later Loire royal city.",
+    "confidence": "low"
+  },
+  {
+    "slug": "caesarodunum",
+    "name": "Caesarodunum",
+    "aliases": [
+      "Tours",
+      "Turones"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tours, France",
+    "still_inhabited": true,
+    "peak": "5th-6th c. CE",
+    "summary": "Loire city whose shrine of St Martin was Gaul's greatest pilgrimage centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "limonum",
+    "name": "Limonum",
+    "aliases": [
+      "Poitiers",
+      "Pictavis"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Poitiers, France",
+    "still_inhabited": true,
+    "peak": "8th c. and 12th c. CE",
+    "summary": "Pictones capital, site of the 732 battle and Aquitanian ducal city.",
+    "confidence": "low"
+  },
+  {
+    "slug": "rotomagus",
+    "name": "Rotomagus",
+    "aliases": [
+      "Rouen"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Rouen, France",
+    "still_inhabited": true,
+    "peak": "11th-13th c. CE",
+    "summary": "Seine port and capital of Normandy.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "samarobriva",
+    "name": "Samarobriva",
+    "aliases": [
+      "Amiens"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Amiens, France",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Roman Ambiani capital, later a woad and cloth city with a vast cathedral.",
+    "confidence": "low"
+  },
+  {
+    "slug": "gesoriacum",
+    "name": "Gesoriacum",
+    "aliases": [
+      "Boulogne",
+      "Bononia"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Boulogne-sur-Mer, France",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Roman fleet base and main port for crossings to Britain.",
+    "confidence": "low"
+  },
+  {
+    "slug": "bibracte",
+    "name": "Bibracte",
+    "aliases": [
+      "Mont Beuvray"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": -25,
+    "date_precision": "approx",
+    "modern_name": "Burgundy, France",
+    "still_inhabited": false,
+    "peak": "1st c. BCE",
+    "summary": "Aedui oppidum where Vercingetorix was proclaimed leader; abandoned for Autun.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "alesia",
+    "name": "Alesia",
+    "aliases": [
+      "Alise-Sainte-Reine"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Burgundy, France",
+    "still_inhabited": false,
+    "peak": "1st c. BCE",
+    "summary": "Mandubii oppidum where Caesar's siege ended Gallic independence.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gergovia",
+    "name": "Gergovia",
+    "aliases": [
+      "Gergovie"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": -20,
+    "date_precision": "approx",
+    "modern_name": "Auvergne, France",
+    "still_inhabited": false,
+    "peak": "1st c. BCE",
+    "summary": "Arverni oppidum where Vercingetorix defeated Caesar; replaced by Augustonemetum.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "entremont",
+    "name": "Entremont",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -190,
+    "end_year": -90,
+    "date_precision": "approx",
+    "modern_name": "Aix-en-Provence, France",
+    "still_inhabited": false,
+    "peak": "2nd c. BCE",
+    "summary": "Salluvii oppidum with severed-head sculpture, destroyed by Rome for Aquae Sextiae.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "vix-mont-lassois",
+    "name": "Vix / Mont Lassois",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": -450,
+    "date_precision": "approx",
+    "modern_name": "Burgundy, France",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Hallstatt princely seat whose tomb held the huge Greek Vix krater.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "glanum",
+    "name": "Glanum",
+    "aliases": [
+      "Saint-Rémy"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": 270,
+    "date_precision": "approx",
+    "modern_name": "Provence, France",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Gallo-Greek then Roman town abandoned after Germanic raids.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lattara",
+    "name": "Lattara",
+    "aliases": [
+      "Lattes"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": 200,
+    "date_precision": "approx",
+    "modern_name": "Hérault, France",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Etruscan-Greek-Gallic trading port of the Languedoc lagoons.",
+    "confidence": "low"
+  },
+  {
+    "slug": "enserune",
+    "name": "Ensérune",
+    "aliases": [
+      "Oppidum d'Ensérune"
+    ],
+    "region_hint": "europe",
+    "start_year": -550,
+    "end_year": 100,
+    "date_precision": "approx",
+    "modern_name": "Hérault, France",
+    "still_inhabited": false,
+    "peak": "3rd c. BCE",
+    "summary": "Iberian-Celtic hill town with dense silo storage, abandoned under Rome.",
+    "confidence": "low"
+  },
+  {
+    "slug": "avignon",
+    "name": "Avignon",
+    "aliases": [
+      "Avennio"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Avignon, France",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Rhône city that housed the papacy for most of the fourteenth century.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "aventicum",
+    "name": "Aventicum",
+    "aliases": [
+      "Avenches"
+    ],
+    "region_hint": "europe",
+    "start_year": -15,
+    "end_year": 600,
+    "date_precision": "approx",
+    "modern_name": "Vaud, Switzerland",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Capital of Roman Helvetia, reduced to a village after Alemannic raids.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "augusta-raurica",
+    "name": "Augusta Raurica",
+    "aliases": [
+      "Augst"
+    ],
+    "region_hint": "europe",
+    "start_year": -6,
+    "end_year": 300,
+    "date_precision": "approx",
+    "modern_name": "Basel area, Switzerland",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Largest Roman town on the upper Rhine, abandoned for a fortified Basel.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "geneva",
+    "name": "Geneva",
+    "aliases": [
+      "Genava",
+      "Genève"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Geneva, Switzerland",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Allobroges crossing point and later fair and banking city on the Rhône.",
+    "confidence": "low"
+  },
+  {
+    "slug": "basel",
+    "name": "Basel",
+    "aliases": [
+      "Basilea",
+      "Basle"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Basel, Switzerland",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Rhine bridge city, host of a great church council and early printing hub.",
+    "confidence": "low"
+  },
+  {
+    "slug": "zurich",
+    "name": "Zurich",
+    "aliases": [
+      "Turicum",
+      "Zürich"
+    ],
+    "region_hint": "europe",
+    "start_year": -15,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Zurich, Switzerland",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Roman customs post grown into a Swiss free imperial city.",
+    "confidence": "low"
+  },
+  {
+    "slug": "trier",
+    "name": "Trier",
+    "aliases": [
+      "Augusta Treverorum",
+      "Treves"
+    ],
+    "region_hint": "europe",
+    "start_year": -16,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Trier, Germany",
+    "still_inhabited": true,
+    "peak": "4th c. CE",
+    "summary": "Northern imperial capital of Constantine, the \"second Rome\" of the west.",
+    "confidence": "high"
+  },
+  {
+    "slug": "cologne",
+    "name": "Cologne",
+    "aliases": [
+      "Köln",
+      "Colonia Claudia Ara Agrippinensium"
+    ],
+    "region_hint": "europe",
+    "start_year": -38,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Cologne, Germany",
+    "still_inhabited": true,
+    "peak": "2nd c. and 13th c. CE",
+    "summary": "Roman colony and archbishopric that became the largest city in medieval Germany.",
+    "confidence": "high"
+  },
+  {
+    "slug": "mainz",
+    "name": "Mainz",
+    "aliases": [
+      "Mogontiacum",
+      "Mayence"
+    ],
+    "region_hint": "europe",
+    "start_year": -13,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Mainz, Germany",
+    "still_inhabited": true,
+    "peak": "2nd c. CE and 15th c.",
+    "summary": "Rhine legionary capital, later Gutenberg's printing city and primatial see.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "xanten",
+    "name": "Colonia Ulpia Traiana",
+    "aliases": [
+      "Xanten",
+      "Vetera"
+    ],
+    "region_hint": "europe",
+    "start_year": -12,
+    "end_year": 450,
+    "date_precision": "approx",
+    "modern_name": "Xanten, Germany",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Rhine colony beside the Vetera legionary bases, abandoned in the Frankish period.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "bonn",
+    "name": "Bonna",
+    "aliases": [
+      "Bonn"
+    ],
+    "region_hint": "europe",
+    "start_year": -12,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bonn, Germany",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Rhine legionary fortress that grew into an electoral residence city.",
+    "confidence": "low"
+  },
+  {
+    "slug": "regensburg",
+    "name": "Castra Regina",
+    "aliases": [
+      "Regensburg",
+      "Ratisbon"
+    ],
+    "region_hint": "europe",
+    "start_year": 179,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Regensburg, Germany",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Legionary fortress turned Bavarian ducal capital and Danube trade city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "augsburg",
+    "name": "Augusta Vindelicorum",
+    "aliases": [
+      "Augsburg"
+    ],
+    "region_hint": "europe",
+    "start_year": -15,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Augsburg, Germany",
+    "still_inhabited": true,
+    "peak": "2nd c. CE and 15th c.",
+    "summary": "Roman capital of Raetia and later banking city of the Fugger family.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "aachen",
+    "name": "Aachen",
+    "aliases": [
+      "Aix-la-Chapelle",
+      "Aquae Granni"
+    ],
+    "region_hint": "europe",
+    "start_year": -1,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Aachen, Germany",
+    "still_inhabited": true,
+    "peak": "9th c. CE",
+    "summary": "Charlemagne's palace capital and coronation church of German kings.",
+    "confidence": "high"
+  },
+  {
+    "slug": "frankfurt",
+    "name": "Frankfurt",
+    "aliases": [
+      "Franconofurd",
+      "Frankfurt am Main"
+    ],
+    "region_hint": "europe",
+    "start_year": -80,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Frankfurt, Germany",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Imperial election city and site of Europe's most important trade fairs.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "worms",
+    "name": "Worms",
+    "aliases": [
+      "Borbetomagus"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Worms, Germany",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Imperial diet city, Rhineland Jewish centre and Nibelungen setting.",
+    "confidence": "low"
+  },
+  {
+    "slug": "speyer",
+    "name": "Speyer",
+    "aliases": [
+      "Noviomagus",
+      "Spira"
+    ],
+    "region_hint": "europe",
+    "start_year": -10,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Speyer, Germany",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Salian imperial burial city with the largest Romanesque cathedral.",
+    "confidence": "low"
+  },
+  {
+    "slug": "hamburg",
+    "name": "Hamburg",
+    "aliases": [
+      "Hammaburg"
+    ],
+    "region_hint": "europe",
+    "start_year": 808,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Hamburg, Germany",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Elbe missionary fort turned Hanseatic seaport and brewing city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lubeck",
+    "name": "Lübeck",
+    "aliases": [
+      "Lubeca"
+    ],
+    "region_hint": "europe",
+    "start_year": 1143,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lübeck, Germany",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "\"Queen of the Hanse\" and the model for scores of Baltic city foundations.",
+    "confidence": "high"
+  },
+  {
+    "slug": "bremen",
+    "name": "Bremen",
+    "aliases": [
+      "Brema"
+    ],
+    "region_hint": "europe",
+    "start_year": 787,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bremen, Germany",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Archiepiscopal mission base to Scandinavia and Hanseatic Weser port.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "magdeburg",
+    "name": "Magdeburg",
+    "aliases": [
+      "Magadoburg"
+    ],
+    "region_hint": "europe",
+    "start_year": 805,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Magdeburg, Germany",
+    "still_inhabited": true,
+    "peak": "10th c. CE",
+    "summary": "Otto I's imperial city and source of the Magdeburg town law used across the east.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "erfurt",
+    "name": "Erfurt",
+    "aliases": [
+      "Erphesfurt"
+    ],
+    "region_hint": "europe",
+    "start_year": 742,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Erfurt, Germany",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Woad-trading crossroads of central Germany with an early university.",
+    "confidence": "low"
+  },
+  {
+    "slug": "nuremberg",
+    "name": "Nuremberg",
+    "aliases": [
+      "Nürnberg",
+      "Norimberga"
+    ],
+    "region_hint": "europe",
+    "start_year": 1050,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nuremberg, Germany",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Imperial free city of metal crafts, printing and the Nuremberg diet.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "cologne-dorestad",
+    "name": "Dorestad",
+    "aliases": [
+      "Duurstede",
+      "Wijk bij Duurstede"
+    ],
+    "region_hint": "europe",
+    "start_year": 650,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Wijk bij Duurstede, Netherlands",
+    "still_inhabited": false,
+    "peak": "8th c. CE",
+    "summary": "Largest Frisian emporium of the North Sea, destroyed by Viking raids and river shift.",
+    "confidence": "high"
+  },
+  {
+    "slug": "utrecht",
+    "name": "Utrecht",
+    "aliases": [
+      "Traiectum",
+      "Trecht"
+    ],
+    "region_hint": "europe",
+    "start_year": 50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Utrecht, Netherlands",
+    "still_inhabited": true,
+    "peak": "8th c. and 14th c. CE",
+    "summary": "Roman fort and Willibrord's see, the ecclesiastical capital of the Low Countries.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "maastricht",
+    "name": "Maastricht",
+    "aliases": [
+      "Traiectum ad Mosam"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Maastricht, Netherlands",
+    "still_inhabited": true,
+    "peak": "6th-8th c. CE",
+    "summary": "Meuse crossing and early Frankish bishopric.",
+    "confidence": "low"
+  },
+  {
+    "slug": "tongeren",
+    "name": "Atuatuca Tungrorum",
+    "aliases": [
+      "Tongeren",
+      "Tongres"
+    ],
+    "region_hint": "europe",
+    "start_year": -15,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tongeren, Belgium",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Oldest town in Belgium, Roman capital of the Tungri.",
+    "confidence": "low"
+  },
+  {
+    "slug": "bruges",
+    "name": "Bruges",
+    "aliases": [
+      "Brugge"
+    ],
+    "region_hint": "europe",
+    "start_year": 850,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bruges, Belgium",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Financial capital of northern Europe, home of the first bourse and Flemish painting.",
+    "confidence": "high"
+  },
+  {
+    "slug": "ghent",
+    "name": "Ghent",
+    "aliases": [
+      "Gent",
+      "Gand"
+    ],
+    "region_hint": "europe",
+    "start_year": 650,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ghent, Belgium",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Great cloth city of Flanders, second largest north of the Alps after Paris.",
+    "confidence": "high"
+  },
+  {
+    "slug": "antwerp",
+    "name": "Antwerp",
+    "aliases": [
+      "Antwerpen",
+      "Anvers"
+    ],
+    "region_hint": "europe",
+    "start_year": 650,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Antwerp, Belgium",
+    "still_inhabited": true,
+    "peak": "15th-16th c. CE",
+    "summary": "Scheldt port that inherited Bruges's trade as the western emporium.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ypres",
+    "name": "Ypres",
+    "aliases": [
+      "Ieper"
+    ],
+    "region_hint": "europe",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ypres, Belgium",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Flemish cloth-hall city whose linen and wool trade rivalled Ghent.",
+    "confidence": "low"
+  },
+  {
+    "slug": "quentovic",
+    "name": "Quentovic",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 600,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Étaples area, France",
+    "still_inhabited": false,
+    "peak": "8th c. CE",
+    "summary": "Chief Frankish North Sea emporium for cross-Channel trade, lost to Viking raids.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "londinium",
+    "name": "Londinium",
+    "aliases": [
+      "London",
+      "Lundenwic",
+      "Lundenburh"
+    ],
+    "region_hint": "europe",
+    "start_year": 47,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "London, United Kingdom",
+    "still_inhabited": true,
+    "peak": "2nd c. CE and 15th c.",
+    "summary": "Roman provincial capital that became the greatest city of northern Europe.",
+    "confidence": "high"
+  },
+  {
+    "slug": "eboracum",
+    "name": "Eboracum",
+    "aliases": [
+      "York",
+      "Jorvik",
+      "Eoforwic"
+    ],
+    "region_hint": "europe",
+    "start_year": 71,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "York, United Kingdom",
+    "still_inhabited": true,
+    "peak": "3rd c. and 10th c. CE",
+    "summary": "Legionary capital of northern Britain, later Viking Jorvik and English archbishopric.",
+    "confidence": "high"
+  },
+  {
+    "slug": "camulodunum",
+    "name": "Camulodunum",
+    "aliases": [
+      "Colchester"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Colchester, United Kingdom",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Trinovantian capital and first Roman colony in Britain, burnt by Boudica.",
+    "confidence": "high"
+  },
+  {
+    "slug": "verulamium",
+    "name": "Verulamium",
+    "aliases": [
+      "St Albans"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": 450,
+    "date_precision": "approx",
+    "modern_name": "St Albans, United Kingdom",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Catuvellauni municipium and site of Britain's first martyrdom; abandoned for St Albans.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "aquae-sulis",
+    "name": "Aquae Sulis",
+    "aliases": [
+      "Bath"
+    ],
+    "region_hint": "europe",
+    "start_year": 60,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bath, United Kingdom",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Roman spa and healing sanctuary around Britain's only hot springs.",
+    "confidence": "high"
+  },
+  {
+    "slug": "calleva",
+    "name": "Calleva Atrebatum",
+    "aliases": [
+      "Silchester"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": 500,
+    "date_precision": "approx",
+    "modern_name": "Hampshire, United Kingdom",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Roman town completely abandoned, leaving its plan intact under fields.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "corinium",
+    "name": "Corinium Dobunnorum",
+    "aliases": [
+      "Cirencester"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Cirencester, United Kingdom",
+    "still_inhabited": true,
+    "peak": "4th c. CE",
+    "summary": "Second largest Roman town in Britain and a mosaic-making centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lindum",
+    "name": "Lindum",
+    "aliases": [
+      "Lincoln",
+      "Lindum Colonia"
+    ],
+    "region_hint": "europe",
+    "start_year": -60,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lincoln, United Kingdom",
+    "still_inhabited": true,
+    "peak": "4th c. and 13th c. CE",
+    "summary": "Legionary colony and later wool and cathedral city of the Danelaw.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "deva",
+    "name": "Deva Victrix",
+    "aliases": [
+      "Chester"
+    ],
+    "region_hint": "europe",
+    "start_year": 74,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Chester, United Kingdom",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Legionary fortress and port guarding the route to Wales and Ireland.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "isca-caerleon",
+    "name": "Isca Augusta",
+    "aliases": [
+      "Caerleon"
+    ],
+    "region_hint": "europe",
+    "start_year": 75,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Caerleon, United Kingdom",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Legionary fortress of Wales with an amphitheatre and barracks.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "viroconium",
+    "name": "Viroconium Cornoviorum",
+    "aliases": [
+      "Wroxeter"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": 700,
+    "date_precision": "approx",
+    "modern_name": "Shropshire, United Kingdom",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Fourth largest Roman town in Britain, abandoned after a timber post-Roman phase.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "venta-belgarum",
+    "name": "Venta Belgarum",
+    "aliases": [
+      "Winchester",
+      "Wintanceaster"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Winchester, United Kingdom",
+    "still_inhabited": true,
+    "peak": "9th-10th c. CE",
+    "summary": "Roman town that became King Alfred's capital of Wessex.",
+    "confidence": "high"
+  },
+  {
+    "slug": "durovernum",
+    "name": "Durovernum Cantiacorum",
+    "aliases": [
+      "Canterbury",
+      "Cantwaraburh"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Canterbury, United Kingdom",
+    "still_inhabited": true,
+    "peak": "7th c. and 14th c. CE",
+    "summary": "Roman-British town where Augustine founded English Christianity; chief pilgrimage city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "isca-dumnoniorum",
+    "name": "Isca Dumnoniorum",
+    "aliases": [
+      "Exeter"
+    ],
+    "region_hint": "europe",
+    "start_year": 55,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Exeter, United Kingdom",
+    "still_inhabited": true,
+    "peak": "4th c. and 14th c. CE",
+    "summary": "Roman fortress and westernmost walled city of Britain, later a cloth port.",
+    "confidence": "low"
+  },
+  {
+    "slug": "durnovaria",
+    "name": "Durnovaria",
+    "aliases": [
+      "Dorchester"
+    ],
+    "region_hint": "europe",
+    "start_year": 70,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Dorchester, United Kingdom",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Roman town of Dorset beside the great hillfort of Maiden Castle.",
+    "confidence": "low"
+  },
+  {
+    "slug": "maiden-castle",
+    "name": "Maiden Castle",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": -43,
+    "date_precision": "approx",
+    "modern_name": "Dorset, United Kingdom",
+    "still_inhabited": false,
+    "peak": "1st c. BCE",
+    "summary": "Largest Iron Age hillfort in Britain; proto-urban tribal centre, not a city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "danebury",
+    "name": "Danebury",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -550,
+    "end_year": -100,
+    "date_precision": "approx",
+    "modern_name": "Hampshire, United Kingdom",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Intensively excavated hillfort revealing Iron Age storage economy.",
+    "confidence": "low"
+  },
+  {
+    "slug": "hamwic",
+    "name": "Hamwic",
+    "aliases": [
+      "Southampton",
+      "Hamtun"
+    ],
+    "region_hint": "europe",
+    "start_year": 700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Southampton, United Kingdom",
+    "still_inhabited": true,
+    "peak": "8th c. CE",
+    "summary": "Middle Saxon trading emporium and later royal port for Normandy.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gipeswic",
+    "name": "Gipeswic",
+    "aliases": [
+      "Ipswich"
+    ],
+    "region_hint": "europe",
+    "start_year": 610,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ipswich, United Kingdom",
+    "still_inhabited": true,
+    "peak": "8th-9th c. CE",
+    "summary": "Earliest English town of the Anglo-Saxon period, making Ipswich ware pottery.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lundenwic",
+    "name": "Lundenwic",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 600,
+    "end_year": 886,
+    "date_precision": "approx",
+    "modern_name": "Aldwych, London, United Kingdom",
+    "still_inhabited": false,
+    "peak": "8th c. CE",
+    "summary": "Middle Saxon trading town west of Roman London, abandoned for the walled city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "skara-brae",
+    "name": "Skara Brae",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -3180,
+    "end_year": -2500,
+    "date_precision": "approx",
+    "modern_name": "Orkney, United Kingdom",
+    "still_inhabited": false,
+    "peak": "3rd millennium BCE",
+    "summary": "Stone-built Neolithic village, the best-preserved in northern Europe.",
+    "confidence": "high"
+  },
+  {
+    "slug": "ness-of-brodgar",
+    "name": "Ness of Brodgar",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -3300,
+    "end_year": -2300,
+    "date_precision": "approx",
+    "modern_name": "Orkney, United Kingdom",
+    "still_inhabited": false,
+    "peak": "3rd millennium BCE",
+    "summary": "Monumental Neolithic ceremonial complex; ritual centre rather than a town.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "durrington-walls",
+    "name": "Durrington Walls",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -2600,
+    "end_year": -2100,
+    "date_precision": "approx",
+    "modern_name": "Wiltshire, United Kingdom",
+    "still_inhabited": false,
+    "peak": "c. 2500 BCE",
+    "summary": "Huge Neolithic settlement and enclosure housing Stonehenge's builders.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "stonehenge",
+    "name": "Stonehenge",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -3000,
+    "end_year": -1600,
+    "date_precision": "approx",
+    "modern_name": "Wiltshire, United Kingdom",
+    "still_inhabited": false,
+    "peak": "c. 2500 BCE",
+    "summary": "Iconic ceremonial monument and gathering place; not a settlement.",
+    "confidence": "high"
+  },
+  {
+    "slug": "avebury",
+    "name": "Avebury",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -2900,
+    "end_year": -2000,
+    "date_precision": "approx",
+    "modern_name": "Wiltshire, United Kingdom",
+    "still_inhabited": false,
+    "peak": "3rd millennium BCE",
+    "summary": "Largest stone circle in Europe with a surrounding ceremonial landscape.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tara",
+    "name": "Tara",
+    "aliases": [
+      "Temair",
+      "Hill of Tara"
+    ],
+    "region_hint": "europe",
+    "start_year": -2500,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "County Meath, Ireland",
+    "still_inhabited": false,
+    "peak": "Iron Age and early medieval",
+    "summary": "Ceremonial inauguration site of the high kings of Ireland; not an urban centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "newgrange",
+    "name": "Newgrange",
+    "aliases": [
+      "Brú na Bóinne"
+    ],
+    "region_hint": "europe",
+    "start_year": -3200,
+    "end_year": -2000,
+    "date_precision": "approx",
+    "modern_name": "County Meath, Ireland",
+    "still_inhabited": false,
+    "peak": "c. 3200 BCE",
+    "summary": "Passage tomb older than the pyramids, centre of a Neolithic ritual landscape.",
+    "confidence": "high"
+  },
+  {
+    "slug": "emain-macha",
+    "name": "Emain Macha",
+    "aliases": [
+      "Navan Fort"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "County Armagh, Ireland",
+    "still_inhabited": false,
+    "peak": "Iron Age",
+    "summary": "Royal ceremonial site of Ulster from the Ulster Cycle tales.",
+    "confidence": "low"
+  },
+  {
+    "slug": "armagh",
+    "name": "Armagh",
+    "aliases": [
+      "Ard Macha"
+    ],
+    "region_hint": "europe",
+    "start_year": 445,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Armagh, Northern Ireland",
+    "still_inhabited": true,
+    "peak": "8th-9th c. CE",
+    "summary": "St Patrick's see and ecclesiastical capital of Ireland; monastic town.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "clonmacnoise",
+    "name": "Clonmacnoise",
+    "aliases": [
+      "Cluain Mhic Nóis"
+    ],
+    "region_hint": "europe",
+    "start_year": 544,
+    "end_year": 1552,
+    "date_precision": "approx",
+    "modern_name": "County Offaly, Ireland",
+    "still_inhabited": false,
+    "peak": "9th-11th c. CE",
+    "summary": "Monastic town and scriptorium at Ireland's crossroads, repeatedly raided.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "dublin",
+    "name": "Dublin",
+    "aliases": [
+      "Dyflin",
+      "Baile Átha Cliath"
+    ],
+    "region_hint": "europe",
+    "start_year": 841,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Dublin, Ireland",
+    "still_inhabited": true,
+    "peak": "10th c. and 15th c. CE",
+    "summary": "Viking longphort turned slave-trading port and capital of English Ireland.",
+    "confidence": "high"
+  },
+  {
+    "slug": "waterford",
+    "name": "Waterford",
+    "aliases": [
+      "Vadrafjord",
+      "Port Láirge"
+    ],
+    "region_hint": "europe",
+    "start_year": 914,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Waterford, Ireland",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Oldest continuously chartered Viking city of Ireland.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "limerick-ireland",
+    "name": "Limerick",
+    "aliases": [
+      "Luimneach"
+    ],
+    "region_hint": "europe",
+    "start_year": 812,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Limerick, Ireland",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Viking Shannon port and Norman walled city of the west.",
+    "confidence": "low"
+  },
+  {
+    "slug": "cork",
+    "name": "Cork",
+    "aliases": [
+      "Corcaigh"
+    ],
+    "region_hint": "europe",
+    "start_year": 606,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Cork, Ireland",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Monastic foundation turned Viking-Norman marsh port.",
+    "confidence": "low"
+  },
+  {
+    "slug": "dunadd",
+    "name": "Dunadd",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 500,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "Argyll, Scotland",
+    "still_inhabited": false,
+    "peak": "7th c. CE",
+    "summary": "Royal inauguration fortress of the Gaelic kingdom of Dál Riata.",
+    "confidence": "low"
+  },
+  {
+    "slug": "iona",
+    "name": "Iona",
+    "aliases": [
+      "Í Chaluim Chille"
+    ],
+    "region_hint": "europe",
+    "start_year": 563,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Argyll, Scotland",
+    "still_inhabited": true,
+    "peak": "7th-8th c. CE",
+    "summary": "Columban monastery that Christianised Scotland and produced illuminated gospels.",
+    "confidence": "high"
+  },
+  {
+    "slug": "lindisfarne",
+    "name": "Lindisfarne",
+    "aliases": [
+      "Holy Island"
+    ],
+    "region_hint": "europe",
+    "start_year": 635,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Northumberland, United Kingdom",
+    "still_inhabited": true,
+    "peak": "7th-8th c. CE",
+    "summary": "Monastic centre of Northumbrian art, sacked in 793 to open the Viking Age.",
+    "confidence": "high"
+  },
+  {
+    "slug": "jarrow",
+    "name": "Monkwearmouth-Jarrow",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 674,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Tyne and Wear, United Kingdom",
+    "still_inhabited": false,
+    "peak": "8th c. CE",
+    "summary": "Bede's monastery, the leading library and school of early medieval England.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "edinburgh",
+    "name": "Edinburgh",
+    "aliases": [
+      "Din Eidyn",
+      "Dunedin"
+    ],
+    "region_hint": "europe",
+    "start_year": -800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Edinburgh, Scotland",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Rock fortress of the Gododdin that became Scotland's royal capital.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "st-andrews",
+    "name": "St Andrews",
+    "aliases": [
+      "Cennrígmonaid"
+    ],
+    "region_hint": "europe",
+    "start_year": 900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Fife, Scotland",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Scotland's ecclesiastical capital, pilgrimage shrine and first university town.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "perth-scotland",
+    "name": "Perth",
+    "aliases": [
+      "St Johnstoun"
+    ],
+    "region_hint": "europe",
+    "start_year": 1100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Perth, Scotland",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Tay burgh and medieval Scottish royal centre beside Scone.",
+    "confidence": "low"
+  },
+  {
+    "slug": "ribe",
+    "name": "Ribe",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 704,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ribe, Denmark",
+    "still_inhabited": true,
+    "peak": "8th-9th c. CE",
+    "summary": "Oldest town in Scandinavia and Denmark's North Sea trading emporium.",
+    "confidence": "high"
+  },
+  {
+    "slug": "hedeby",
+    "name": "Hedeby",
+    "aliases": [
+      "Haithabu",
+      "Sliesthorp"
+    ],
+    "region_hint": "europe",
+    "start_year": 770,
+    "end_year": 1066,
+    "date_precision": "approx",
+    "modern_name": "Schleswig, Germany",
+    "still_inhabited": false,
+    "peak": "9th-10th c. CE",
+    "summary": "Greatest Viking Age emporium, linking Baltic and North Sea across the Jutland neck.",
+    "confidence": "high"
+  },
+  {
+    "slug": "schleswig",
+    "name": "Schleswig",
+    "aliases": [
+      "Sliaswich"
+    ],
+    "region_hint": "europe",
+    "start_year": 1050,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Schleswig, Germany",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Successor town to Hedeby on the Schlei fjord.",
+    "confidence": "low"
+  },
+  {
+    "slug": "aarhus",
+    "name": "Aarhus",
+    "aliases": [
+      "Aros",
+      "Århus"
+    ],
+    "region_hint": "europe",
+    "start_year": 770,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Aarhus, Denmark",
+    "still_inhabited": true,
+    "peak": "10th c. CE",
+    "summary": "Fortified Viking Age trading town of eastern Jutland.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "jelling",
+    "name": "Jelling",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 900,
+    "end_year": 1100,
+    "date_precision": "approx",
+    "modern_name": "Jutland, Denmark",
+    "still_inhabited": false,
+    "peak": "10th c. CE",
+    "summary": "Royal monument complex of Harald Bluetooth marking Denmark's conversion; not a city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "roskilde",
+    "name": "Roskilde",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 980,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Roskilde, Denmark",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Viking royal seat, Danish cathedral city and shipbuilding harbour.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lund",
+    "name": "Lund",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 990,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lund, Sweden",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Danish-founded archbishopric for all Scandinavia.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "copenhagen",
+    "name": "Copenhagen",
+    "aliases": [
+      "København",
+      "Havn"
+    ],
+    "region_hint": "europe",
+    "start_year": 1043,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Copenhagen, Denmark",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Herring-trade harbour that became the Danish capital in the fifteenth century.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "trelleborg",
+    "name": "Trelleborg (Slagelse)",
+    "aliases": [
+      "Trelleborg ring fort"
+    ],
+    "region_hint": "europe",
+    "start_year": 980,
+    "end_year": 1050,
+    "date_precision": "approx",
+    "modern_name": "Zealand, Denmark",
+    "still_inhabited": false,
+    "peak": "c. 980 CE",
+    "summary": "Geometric royal ring fortress of Harald Bluetooth; garrison, not a town.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "birka",
+    "name": "Birka",
+    "aliases": [
+      "Björkö"
+    ],
+    "region_hint": "europe",
+    "start_year": 750,
+    "end_year": 975,
+    "date_precision": "approx",
+    "modern_name": "Björkö, Lake Mälaren, Sweden",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "Sweden's first town and Baltic trade hub, abandoned as water levels fell.",
+    "confidence": "high"
+  },
+  {
+    "slug": "sigtuna",
+    "name": "Sigtuna",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 980,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sigtuna, Sweden",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Successor to Birka, Sweden's first Christian royal town and mint.",
+    "confidence": "high"
+  },
+  {
+    "slug": "gamla-uppsala",
+    "name": "Gamla Uppsala",
+    "aliases": [
+      "Old Uppsala",
+      "Uppsala"
+    ],
+    "region_hint": "europe",
+    "start_year": 400,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Uppsala, Sweden",
+    "still_inhabited": true,
+    "peak": "6th-11th c. CE",
+    "summary": "Great mound burial and pagan temple centre of the Svear, later an archbishopric.",
+    "confidence": "high"
+  },
+  {
+    "slug": "visby",
+    "name": "Visby",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Gotland, Sweden",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Walled Hanseatic city of Gotland, entrepôt between Novgorod and the west.",
+    "confidence": "high"
+  },
+  {
+    "slug": "paviken",
+    "name": "Paviken",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 600,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Gotland, Sweden",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "Viking Age harbour and shipyard on Gotland, predecessor of Visby.",
+    "confidence": "low"
+  },
+  {
+    "slug": "helgo",
+    "name": "Helgö",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 200,
+    "end_year": 800,
+    "date_precision": "approx",
+    "modern_name": "Lake Mälaren, Sweden",
+    "still_inhabited": false,
+    "peak": "5th-7th c. CE",
+    "summary": "Trading and craft island that yielded a Buddha statuette from India.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "kaupang",
+    "name": "Kaupang",
+    "aliases": [
+      "Skiringssal"
+    ],
+    "region_hint": "europe",
+    "start_year": 780,
+    "end_year": 960,
+    "date_precision": "approx",
+    "modern_name": "Vestfold, Norway",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "Norway's earliest market town, described in the Old English Orosius.",
+    "confidence": "high"
+  },
+  {
+    "slug": "nidaros",
+    "name": "Nidaros",
+    "aliases": [
+      "Trondheim",
+      "Trondhjem"
+    ],
+    "region_hint": "europe",
+    "start_year": 997,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Trondheim, Norway",
+    "still_inhabited": true,
+    "peak": "12th-13th c. CE",
+    "summary": "Norwegian royal capital and shrine of St Olaf; northernmost medieval metropolis.",
+    "confidence": "high"
+  },
+  {
+    "slug": "bergen",
+    "name": "Bergen",
+    "aliases": [
+      "Bjørgvin"
+    ],
+    "region_hint": "europe",
+    "start_year": 1070,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bergen, Norway",
+    "still_inhabited": true,
+    "peak": "13th-14th c. CE",
+    "summary": "Hanseatic stockfish port and Norway's largest medieval city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "oslo",
+    "name": "Oslo",
+    "aliases": [
+      "Ánslo",
+      "Christiania"
+    ],
+    "region_hint": "europe",
+    "start_year": 1040,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Oslo, Norway",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Fjord-head royal town that later became Norway's capital.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "tonsberg",
+    "name": "Tønsberg",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 871,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Vestfold, Norway",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Claimed oldest Norwegian town and royal castle seat.",
+    "confidence": "low"
+  },
+  {
+    "slug": "reykjavik",
+    "name": "Reykjavík",
+    "aliases": [
+      "Reykjavik"
+    ],
+    "region_hint": "europe",
+    "start_year": 874,
+    "end_year": null,
+    "date_precision": "traditional",
+    "modern_name": "Reykjavík, Iceland",
+    "still_inhabited": true,
+    "peak": "Post-medieval",
+    "summary": "Landnám farmstead of Iceland's first settler; urban only much later.",
+    "confidence": "low",
+    "contested": "Date is a legendary or traditional founding date, not an archaeological one."
+  },
+  {
+    "slug": "thingvellir",
+    "name": "Þingvellir",
+    "aliases": [
+      "Thingvellir"
+    ],
+    "region_hint": "europe",
+    "start_year": 930,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Iceland",
+    "still_inhabited": false,
+    "peak": "10th-13th c. CE",
+    "summary": "Assembly plain of the Althing, the world's oldest parliament site; not a town.",
+    "confidence": "high"
+  },
+  {
+    "slug": "skalholt",
+    "name": "Skálholt",
+    "aliases": [
+      "Skalholt"
+    ],
+    "region_hint": "europe",
+    "start_year": 1056,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Iceland",
+    "still_inhabited": false,
+    "peak": "12th-14th c. CE",
+    "summary": "Episcopal see and largest settlement of medieval Iceland.",
+    "confidence": "low"
+  },
+  {
+    "slug": "brattahlid",
+    "name": "Brattahlíð",
+    "aliases": [
+      "Qassiarsuk",
+      "Eiriksfjord"
+    ],
+    "region_hint": "europe",
+    "start_year": 985,
+    "end_year": 1450,
+    "date_precision": "approx",
+    "modern_name": "Greenland",
+    "still_inhabited": false,
+    "peak": "12th c. CE",
+    "summary": "Erik the Red's estate and centre of the Norse Eastern Settlement, later abandoned.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gardar-greenland",
+    "name": "Garðar",
+    "aliases": [
+      "Igaliku",
+      "Gardar"
+    ],
+    "region_hint": "europe",
+    "start_year": 1000,
+    "end_year": 1450,
+    "date_precision": "approx",
+    "modern_name": "Greenland",
+    "still_inhabited": false,
+    "peak": "13th c. CE",
+    "summary": "Episcopal seat of Norse Greenland with cathedral and tithe barn, abandoned.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "staraya-ladoga",
+    "name": "Staraya Ladoga",
+    "aliases": [
+      "Aldeigjuborg",
+      "Ladoga"
+    ],
+    "region_hint": "europe",
+    "start_year": 753,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Leningrad Oblast, Russia",
+    "still_inhabited": true,
+    "peak": "9th c. CE",
+    "summary": "Earliest Rus trading town, Rurik's first seat on the route to the Caspian.",
+    "confidence": "high"
+  },
+  {
+    "slug": "novgorod",
+    "name": "Novgorod",
+    "aliases": [
+      "Veliky Novgorod",
+      "Holmgard"
+    ],
+    "region_hint": "europe",
+    "start_year": 859,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Veliky Novgorod, Russia",
+    "still_inhabited": true,
+    "peak": "12th-14th c. CE",
+    "summary": "Merchant republic of the Rus, Hanseatic partner and source of birchbark letters.",
+    "confidence": "high"
+  },
+  {
+    "slug": "kyiv",
+    "name": "Kyiv",
+    "aliases": [
+      "Kiev",
+      "Kænugarðr"
+    ],
+    "region_hint": "europe",
+    "start_year": 482,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kyiv, Ukraine",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Capital of Kievan Rus and cradle of East Slavic Christianity.",
+    "confidence": "high"
+  },
+  {
+    "slug": "chernihiv",
+    "name": "Chernihiv",
+    "aliases": [
+      "Chernigov"
+    ],
+    "region_hint": "europe",
+    "start_year": 907,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Chernihiv, Ukraine",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Second city of Kievan Rus with great princely stone churches.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "smolensk",
+    "name": "Smolensk",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 863,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Smolensk, Russia",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Dnieper portage city on the route from the Varangians to the Greeks.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "polotsk",
+    "name": "Polotsk",
+    "aliases": [
+      "Polatsk"
+    ],
+    "region_hint": "europe",
+    "start_year": 862,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Polotsk, Belarus",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Oldest Belarusian city and seat of an independent Rus principality.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "pskov",
+    "name": "Pskov",
+    "aliases": [
+      "Pleskau"
+    ],
+    "region_hint": "europe",
+    "start_year": 903,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Pskov, Russia",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Fortress republic on the western frontier of the Rus, ally then rival of Novgorod.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "vladimir",
+    "name": "Vladimir",
+    "aliases": [
+      "Vladimir-on-Klyazma"
+    ],
+    "region_hint": "europe",
+    "start_year": 1108,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Vladimir, Russia",
+    "still_inhabited": true,
+    "peak": "12th-13th c. CE",
+    "summary": "Capital of Vladimir-Suzdal and heart of Rus power after Kyiv's decline.",
+    "confidence": "high"
+  },
+  {
+    "slug": "suzdal",
+    "name": "Suzdal",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 1024,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Vladimir Oblast, Russia",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Princely and monastic city of northeastern Rus with white-stone churches.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "rostov-veliky",
+    "name": "Rostov Veliky",
+    "aliases": [
+      "Rostov the Great"
+    ],
+    "region_hint": "europe",
+    "start_year": 862,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Yaroslavl Oblast, Russia",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "One of the oldest Rus towns and an early episcopal centre.",
+    "confidence": "low"
+  },
+  {
+    "slug": "yaroslavl",
+    "name": "Yaroslavl",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 1010,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Yaroslavl, Russia",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Volga city founded by Yaroslav the Wise, later a trade centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "moscow",
+    "name": "Moscow",
+    "aliases": [
+      "Moskva"
+    ],
+    "region_hint": "europe",
+    "start_year": 1147,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Moscow, Russia",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Small Rus outpost that became the capital of Muscovy and of Russia.",
+    "confidence": "high"
+  },
+  {
+    "slug": "tver",
+    "name": "Tver",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 1135,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tver, Russia",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Volga principality that contested leadership of the Rus with Moscow.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ryazan",
+    "name": "Ryazan",
+    "aliases": [
+      "Old Ryazan",
+      "Staraya Ryazan"
+    ],
+    "region_hint": "europe",
+    "start_year": 1095,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ryazan Oblast, Russia",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Frontier Rus capital destroyed by the Mongols in 1237 and relocated.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gnezdovo",
+    "name": "Gnezdovo",
+    "aliases": [
+      "Gnyozdovo"
+    ],
+    "region_hint": "europe",
+    "start_year": 900,
+    "end_year": 1100,
+    "date_precision": "approx",
+    "modern_name": "Smolensk Oblast, Russia",
+    "still_inhabited": false,
+    "peak": "10th c. CE",
+    "summary": "Vast Rus-Scandinavian trade and burial complex near Smolensk.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "bolgar",
+    "name": "Bolgar",
+    "aliases": [
+      "Great Bolghar",
+      "Bolghar"
+    ],
+    "region_hint": "europe",
+    "start_year": 900,
+    "end_year": 1430,
+    "date_precision": "approx",
+    "modern_name": "Tatarstan, Russia",
+    "still_inhabited": false,
+    "peak": "13th-14th c. CE",
+    "summary": "Capital of Volga Bulgaria and early Golden Horde city on the fur and silver routes.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "bilyar",
+    "name": "Bilyar",
+    "aliases": [
+      "Biliar"
+    ],
+    "region_hint": "europe",
+    "start_year": 1000,
+    "end_year": 1236,
+    "date_precision": "approx",
+    "modern_name": "Tatarstan, Russia",
+    "still_inhabited": false,
+    "peak": "12th c. CE",
+    "summary": "Largest city of Volga Bulgaria, destroyed by the Mongols.",
+    "confidence": "low"
+  },
+  {
+    "slug": "sarai",
+    "name": "Sarai",
+    "aliases": [
+      "Sarai Batu",
+      "Sarai al-Jadid"
+    ],
+    "region_hint": "europe",
+    "start_year": 1240,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Astrakhan/Volgograd Oblast, Russia",
+    "still_inhabited": false,
+    "peak": "14th c. CE",
+    "summary": "Golden Horde capital on the lower Volga, one of the largest cities of its century.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "itil",
+    "name": "Atil",
+    "aliases": [
+      "Itil",
+      "Khazar capital"
+    ],
+    "region_hint": "europe",
+    "start_year": 750,
+    "end_year": 969,
+    "date_precision": "approx",
+    "modern_name": "Volga delta, Russia",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "Capital of the Khazar khaganate, destroyed by Sviatoslav of Kyiv.",
+    "confidence": "low"
+  },
+  {
+    "slug": "wolin",
+    "name": "Wolin",
+    "aliases": [
+      "Jomsborg",
+      "Vineta"
+    ],
+    "region_hint": "europe",
+    "start_year": 800,
+    "end_year": 1200,
+    "date_precision": "approx",
+    "modern_name": "Wolin, Poland",
+    "still_inhabited": false,
+    "peak": "10th c. CE",
+    "summary": "Great Slavic Baltic emporium at the Oder mouth, identified with legendary Jomsborg.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "truso",
+    "name": "Truso",
+    "aliases": [
+      "Janów Pomorski"
+    ],
+    "region_hint": "europe",
+    "start_year": 700,
+    "end_year": 900,
+    "date_precision": "approx",
+    "modern_name": "near Elbląg, Poland",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "Baltic Prussian trading site on the amber route, mentioned by Wulfstan.",
+    "confidence": "low"
+  },
+  {
+    "slug": "gdansk",
+    "name": "Gdańsk",
+    "aliases": [
+      "Danzig"
+    ],
+    "region_hint": "europe",
+    "start_year": 980,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Gdańsk, Poland",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Vistula-mouth port and chief Teutonic and Hanseatic grain city.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "szczecin",
+    "name": "Szczecin",
+    "aliases": [
+      "Stettin"
+    ],
+    "region_hint": "europe",
+    "start_year": 750,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Szczecin, Poland",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Pomeranian ducal seat and Oder trading city.",
+    "confidence": "low"
+  },
+  {
+    "slug": "biskupin",
+    "name": "Biskupin",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -750,
+    "end_year": -400,
+    "date_precision": "approx",
+    "modern_name": "Kuyavia, Poland",
+    "still_inhabited": false,
+    "peak": "7th c. BCE",
+    "summary": "Fortified Lusatian lake village, an iconic European Iron Age proto-town.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "gniezno",
+    "name": "Gniezno",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Gniezno, Poland",
+    "still_inhabited": true,
+    "peak": "10th-11th c. CE",
+    "summary": "First capital of Poland and seat of its first archbishopric.",
+    "confidence": "high"
+  },
+  {
+    "slug": "poznan",
+    "name": "Poznań",
+    "aliases": [
+      "Posen"
+    ],
+    "region_hint": "europe",
+    "start_year": 900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Poznań, Poland",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Piast stronghold and site of Poland's earliest cathedral.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "krakow",
+    "name": "Kraków",
+    "aliases": [
+      "Cracow",
+      "Cracovia"
+    ],
+    "region_hint": "europe",
+    "start_year": 700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Kraków, Poland",
+    "still_inhabited": true,
+    "peak": "14th-15th c. CE",
+    "summary": "Royal capital of Poland, Hanseatic-linked market city and university seat.",
+    "confidence": "high"
+  },
+  {
+    "slug": "wroclaw",
+    "name": "Wrocław",
+    "aliases": [
+      "Breslau"
+    ],
+    "region_hint": "europe",
+    "start_year": 900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Wrocław, Poland",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Silesian Oder city passing between Polish, Bohemian and Hungarian crowns.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "warsaw",
+    "name": "Warsaw",
+    "aliases": [
+      "Warszawa"
+    ],
+    "region_hint": "europe",
+    "start_year": 1300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Warsaw, Poland",
+    "still_inhabited": true,
+    "peak": "Post-1500",
+    "summary": "Mazovian ducal town that grew into Poland's capital after our period.",
+    "confidence": "low"
+  },
+  {
+    "slug": "plock",
+    "name": "Płock",
+    "aliases": [
+      "Plock"
+    ],
+    "region_hint": "europe",
+    "start_year": 900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Płock, Poland",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "Early Piast royal seat and Masovian cathedral city on the Vistula.",
+    "confidence": "low"
+  },
+  {
+    "slug": "prague",
+    "name": "Prague",
+    "aliases": [
+      "Praha",
+      "Praga"
+    ],
+    "region_hint": "europe",
+    "start_year": 870,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Prague, Czechia",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Bohemian capital and, under Charles IV, imperial capital with the first German university.",
+    "confidence": "high"
+  },
+  {
+    "slug": "mikulcice",
+    "name": "Mikulčice",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 800,
+    "end_year": 950,
+    "date_precision": "approx",
+    "modern_name": "South Moravia, Czechia",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "Great Moravian fortified centre with numerous stone churches, abandoned.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "stare-mesto-uherske",
+    "name": "Staré Město (Veligrad)",
+    "aliases": [
+      "Veligrad",
+      "Uherské Hradiště"
+    ],
+    "region_hint": "europe",
+    "start_year": 800,
+    "end_year": 1000,
+    "date_precision": "approx",
+    "modern_name": "Moravia, Czechia",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "Probable capital of Great Moravia and Cyrillo-Methodian mission base.",
+    "confidence": "low"
+  },
+  {
+    "slug": "olomouc",
+    "name": "Olomouc",
+    "aliases": [
+      "Olmütz"
+    ],
+    "region_hint": "europe",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Olomouc, Czechia",
+    "still_inhabited": true,
+    "peak": "13th c. CE",
+    "summary": "Moravian episcopal and ducal city on the amber route.",
+    "confidence": "low"
+  },
+  {
+    "slug": "brno",
+    "name": "Brno",
+    "aliases": [
+      "Brünn"
+    ],
+    "region_hint": "europe",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Brno, Czechia",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Moravian margravial city and market centre.",
+    "confidence": "low"
+  },
+  {
+    "slug": "nitra",
+    "name": "Nitra",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 800,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Nitra, Slovakia",
+    "still_inhabited": true,
+    "peak": "9th c. CE",
+    "summary": "Seat of the first Slavic principality and church north of the Danube.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "bratislava",
+    "name": "Bratislava",
+    "aliases": [
+      "Pressburg",
+      "Pozsony",
+      "Devín"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Bratislava, Slovakia",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Celtic mint site and Danube fortress city of the Hungarian kingdom.",
+    "confidence": "low"
+  },
+  {
+    "slug": "devin",
+    "name": "Devín",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": 1500,
+    "date_precision": "approx",
+    "modern_name": "Bratislava, Slovakia",
+    "still_inhabited": false,
+    "peak": "9th c. CE",
+    "summary": "Great Moravian rock fortress at the Morava-Danube confluence.",
+    "confidence": "low"
+  },
+  {
+    "slug": "carnuntum",
+    "name": "Carnuntum",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -40,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Lower Austria, Austria",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Capital of Pannonia Superior and legionary city where Marcus Aurelius wrote; abandoned.",
+    "confidence": "high"
+  },
+  {
+    "slug": "vindobona",
+    "name": "Vindobona",
+    "aliases": [
+      "Vienna",
+      "Wien"
+    ],
+    "region_hint": "europe",
+    "start_year": -15,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Vienna, Austria",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Roman Danube fort that became the Habsburg imperial residence city.",
+    "confidence": "high"
+  },
+  {
+    "slug": "iuvavum",
+    "name": "Iuvavum",
+    "aliases": [
+      "Salzburg"
+    ],
+    "region_hint": "europe",
+    "start_year": -15,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Salzburg, Austria",
+    "still_inhabited": true,
+    "peak": "8th c. CE",
+    "summary": "Roman town refounded as an archbishopric enriched by salt mining.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "hallstatt",
+    "name": "Hallstatt",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Upper Austria, Austria",
+    "still_inhabited": true,
+    "peak": "8th-6th c. BCE",
+    "summary": "Prehistoric salt-mining village and type site of the Hallstatt culture.",
+    "confidence": "high"
+  },
+  {
+    "slug": "durrnberg",
+    "name": "Dürrnberg",
+    "aliases": [
+      "Hallein"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": -15,
+    "date_precision": "approx",
+    "modern_name": "Hallein, Austria",
+    "still_inhabited": false,
+    "peak": "5th c. BCE",
+    "summary": "Celtic salt-mining settlement and cemetery complex of the eastern Alps.",
+    "confidence": "low"
+  },
+  {
+    "slug": "heuneburg",
+    "name": "Heuneburg",
+    "aliases": [
+      "Pyrene"
+    ],
+    "region_hint": "europe",
+    "start_year": -700,
+    "end_year": -450,
+    "date_precision": "approx",
+    "modern_name": "Baden-Württemberg, Germany",
+    "still_inhabited": false,
+    "peak": "6th c. BCE",
+    "summary": "Fortified Celtic princely seat with mudbrick walls, possibly Herodotus's Pyrene.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "manching",
+    "name": "Manching",
+    "aliases": [
+      "Oppidum of Manching"
+    ],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": -50,
+    "date_precision": "approx",
+    "modern_name": "Bavaria, Germany",
+    "still_inhabited": false,
+    "peak": "2nd c. BCE",
+    "summary": "Largest Celtic oppidum in Bavaria, a coin-minting industrial town.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "aquincum",
+    "name": "Aquincum",
+    "aliases": [
+      "Buda",
+      "Budapest"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Budapest, Hungary",
+    "still_inhabited": true,
+    "peak": "2nd c. CE and 15th c.",
+    "summary": "Pannonian legionary capital; medieval Buda became the Hungarian royal capital.",
+    "confidence": "high"
+  },
+  {
+    "slug": "esztergom",
+    "name": "Esztergom",
+    "aliases": [
+      "Gran",
+      "Strigonium"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Esztergom, Hungary",
+    "still_inhabited": true,
+    "peak": "11th-12th c. CE",
+    "summary": "First royal capital of Hungary and seat of its primate.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "szekesfehervar",
+    "name": "Székesfehérvár",
+    "aliases": [
+      "Alba Regia",
+      "Stuhlweissenburg"
+    ],
+    "region_hint": "europe",
+    "start_year": 1000,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Székesfehérvár, Hungary",
+    "still_inhabited": true,
+    "peak": "12th-14th c. CE",
+    "summary": "Coronation and burial city of the Hungarian kings.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "sopianae",
+    "name": "Sopianae",
+    "aliases": [
+      "Pécs",
+      "Fünfkirchen"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Pécs, Hungary",
+    "still_inhabited": true,
+    "peak": "4th c. CE and 14th c.",
+    "summary": "Late Roman city with painted Christian tombs, later Hungary's first university.",
+    "confidence": "low"
+  },
+  {
+    "slug": "gorsium",
+    "name": "Gorsium",
+    "aliases": [
+      "Tác"
+    ],
+    "region_hint": "europe",
+    "start_year": -50,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Fejér County, Hungary",
+    "still_inhabited": false,
+    "peak": "3rd c. CE",
+    "summary": "Religious centre of Roman Pannonia, abandoned in late antiquity.",
+    "confidence": "low"
+  },
+  {
+    "slug": "gadir",
+    "name": "Gadir",
+    "aliases": [
+      "Cádiz",
+      "Gades",
+      "Gadeira"
+    ],
+    "region_hint": "europe",
+    "start_year": -1100,
+    "end_year": null,
+    "date_precision": "traditional",
+    "modern_name": "Cádiz, Spain",
+    "still_inhabited": true,
+    "peak": "6th c. BCE",
+    "summary": "Phoenician Atlantic colony, often called the oldest city in western Europe.",
+    "confidence": "high",
+    "contested": "Date is a legendary or traditional founding date, not an archaeological one."
+  },
+  {
+    "slug": "tartessos",
+    "name": "Tartessos",
+    "aliases": [
+      "Tarshish"
+    ],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": -500,
+    "date_precision": "approx",
+    "modern_name": "lower Guadalquivir, Spain",
+    "still_inhabited": false,
+    "peak": "7th c. BCE",
+    "summary": "Legendary silver-rich kingdom and trading polity of the Atlantic southwest.",
+    "confidence": "low"
+  },
+  {
+    "slug": "huelva",
+    "name": "Onuba",
+    "aliases": [
+      "Huelva",
+      "Onoba"
+    ],
+    "region_hint": "europe",
+    "start_year": -900,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Huelva, Spain",
+    "still_inhabited": true,
+    "peak": "8th c. BCE",
+    "summary": "Phoenician-Tartessian metal port shipping Rio Tinto silver and copper.",
+    "confidence": "low"
+  },
+  {
+    "slug": "carteia",
+    "name": "Carteia",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -940,
+    "end_year": 700,
+    "date_precision": "approx",
+    "modern_name": "San Roque, Spain",
+    "still_inhabited": false,
+    "peak": "2nd c. BCE",
+    "summary": "Phoenician then Roman colony at the Strait of Gibraltar.",
+    "confidence": "low"
+  },
+  {
+    "slug": "malaca",
+    "name": "Malaca",
+    "aliases": [
+      "Málaga",
+      "Malaka"
+    ],
+    "region_hint": "europe",
+    "start_year": -770,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Málaga, Spain",
+    "still_inhabited": true,
+    "peak": "10th c. CE",
+    "summary": "Phoenician port and later Nasrid Mediterranean outlet.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "carthago-nova",
+    "name": "Carthago Nova",
+    "aliases": [
+      "Cartagena",
+      "Qart Hadasht"
+    ],
+    "region_hint": "europe",
+    "start_year": -227,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Cartagena, Spain",
+    "still_inhabited": true,
+    "peak": "1st c. CE",
+    "summary": "Barcid Punic capital in Iberia and Roman silver-mining and fleet port.",
+    "confidence": "high"
+  },
+  {
+    "slug": "saguntum",
+    "name": "Saguntum",
+    "aliases": [
+      "Sagunto",
+      "Arse"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Sagunto, Spain",
+    "still_inhabited": true,
+    "peak": "3rd c. BCE",
+    "summary": "Iberian city whose siege by Hannibal triggered the Second Punic War.",
+    "confidence": "high"
+  },
+  {
+    "slug": "emporion",
+    "name": "Emporion",
+    "aliases": [
+      "Empúries",
+      "Ampurias"
+    ],
+    "region_hint": "europe",
+    "start_year": -575,
+    "end_year": 300,
+    "date_precision": "approx",
+    "modern_name": "Girona, Spain",
+    "still_inhabited": false,
+    "peak": "4th c. BCE",
+    "summary": "Greek trading colony, the entry point of Rome into Iberia.",
+    "confidence": "high"
+  },
+  {
+    "slug": "tarraco",
+    "name": "Tarraco",
+    "aliases": [
+      "Tarragona"
+    ],
+    "region_hint": "europe",
+    "start_year": -218,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Tarragona, Spain",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Capital of Hispania Citerior with an imperial cult complex and circus.",
+    "confidence": "high"
+  },
+  {
+    "slug": "barcino",
+    "name": "Barcino",
+    "aliases": [
+      "Barcelona",
+      "Barkeno"
+    ],
+    "region_hint": "europe",
+    "start_year": -15,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Barcelona, Spain",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Roman colony that became the maritime capital of the Crown of Aragon.",
+    "confidence": "high"
+  },
+  {
+    "slug": "valentia",
+    "name": "Valentia",
+    "aliases": [
+      "Valencia"
+    ],
+    "region_hint": "europe",
+    "start_year": -138,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Valencia, Spain",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Roman colony and later silk and Mediterranean trade capital of Aragon.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ebusus",
+    "name": "Ebusus",
+    "aliases": [
+      "Ibiza",
+      "Eivissa"
+    ],
+    "region_hint": "europe",
+    "start_year": -654,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Ibiza, Spain",
+    "still_inhabited": true,
+    "peak": "4th c. BCE",
+    "summary": "Punic island city and salt exporter of the western Mediterranean.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "palma-mallorca",
+    "name": "Palma",
+    "aliases": [
+      "Palma de Mallorca",
+      "Palmaria"
+    ],
+    "region_hint": "europe",
+    "start_year": -123,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Palma, Spain",
+    "still_inhabited": true,
+    "peak": "14th c. CE",
+    "summary": "Roman foundation and later capital of the Kingdom of Mallorca.",
+    "confidence": "low"
+  },
+  {
+    "slug": "numantia",
+    "name": "Numantia",
+    "aliases": [
+      "Numancia"
+    ],
+    "region_hint": "europe",
+    "start_year": -600,
+    "end_year": -133,
+    "date_precision": "approx",
+    "modern_name": "Soria, Spain",
+    "still_inhabited": false,
+    "peak": "2nd c. BCE",
+    "summary": "Celtiberian hill city whose suicidal resistance to Rome became a national legend.",
+    "confidence": "high"
+  },
+  {
+    "slug": "clunia",
+    "name": "Clunia",
+    "aliases": [
+      "Clunia Sulpicia"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Burgos, Spain",
+    "still_inhabited": false,
+    "peak": "1st c. CE",
+    "summary": "Roman provincial city of the Meseta where Galba was proclaimed emperor.",
+    "confidence": "low"
+  },
+  {
+    "slug": "segovia",
+    "name": "Segovia",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Segovia, Spain",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Roman aqueduct city and Castilian royal seat and wool centre.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "toledo",
+    "name": "Toledo",
+    "aliases": [
+      "Toletum",
+      "Tulaytulah"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Toledo, Spain",
+    "still_inhabited": true,
+    "peak": "6th-7th c. and 12th-13th c. CE",
+    "summary": "Visigothic capital and later the great translation centre of three faiths.",
+    "confidence": "high"
+  },
+  {
+    "slug": "emerita-augusta",
+    "name": "Emerita Augusta",
+    "aliases": [
+      "Mérida"
+    ],
+    "region_hint": "europe",
+    "start_year": -25,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Mérida, Spain",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Capital of Lusitania with theatre, aqueducts and the longest Roman bridge in Spain.",
+    "confidence": "high"
+  },
+  {
+    "slug": "italica",
+    "name": "Italica",
+    "aliases": [
+      "Santiponce"
+    ],
+    "region_hint": "europe",
+    "start_year": -206,
+    "end_year": 700,
+    "date_precision": "approx",
+    "modern_name": "Seville province, Spain",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "First Roman town in Iberia and home city of Trajan and Hadrian; abandoned.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "hispalis",
+    "name": "Hispalis",
+    "aliases": [
+      "Seville",
+      "Sevilla",
+      "Ishbiliya"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Seville, Spain",
+    "still_inhabited": true,
+    "peak": "12th c. and 15th c. CE",
+    "summary": "Guadalquivir river port, Almohad capital and later gateway to the Atlantic.",
+    "confidence": "high"
+  },
+  {
+    "slug": "corduba",
+    "name": "Corduba",
+    "aliases": [
+      "Córdoba",
+      "Qurtuba"
+    ],
+    "region_hint": "europe",
+    "start_year": -206,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Córdoba, Spain",
+    "still_inhabited": true,
+    "peak": "10th c. CE",
+    "summary": "Umayyad caliphal capital, the largest and most learned city in tenth-century Europe.",
+    "confidence": "high"
+  },
+  {
+    "slug": "madinat-al-zahra",
+    "name": "Madinat al-Zahra",
+    "aliases": [
+      "Medina Azahara"
+    ],
+    "region_hint": "europe",
+    "start_year": 936,
+    "end_year": 1010,
+    "date_precision": "approx",
+    "modern_name": "Córdoba province, Spain",
+    "still_inhabited": false,
+    "peak": "10th c. CE",
+    "summary": "Palace city of Abd al-Rahman III, sacked and abandoned within a century.",
+    "confidence": "high"
+  },
+  {
+    "slug": "granada",
+    "name": "Granada",
+    "aliases": [
+      "Iliberis",
+      "Gharnata"
+    ],
+    "region_hint": "europe",
+    "start_year": -500,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Granada, Spain",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Nasrid capital and last Muslim state in Iberia, with the Alhambra.",
+    "confidence": "high"
+  },
+  {
+    "slug": "almeria",
+    "name": "Almería",
+    "aliases": [
+      "al-Mariyya"
+    ],
+    "region_hint": "europe",
+    "start_year": 955,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Almería, Spain",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Andalusi silk port and naval arsenal of the caliphate.",
+    "confidence": "low"
+  },
+  {
+    "slug": "murcia",
+    "name": "Murcia",
+    "aliases": [
+      "Mursiya"
+    ],
+    "region_hint": "europe",
+    "start_year": 825,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Murcia, Spain",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Andalusi foundation on the Segura, a taifa capital and silk centre.",
+    "confidence": "low"
+  },
+  {
+    "slug": "zaragoza",
+    "name": "Caesaraugusta",
+    "aliases": [
+      "Zaragoza",
+      "Saraqusta",
+      "Salduie"
+    ],
+    "region_hint": "europe",
+    "start_year": -25,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Zaragoza, Spain",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Ebro Roman colony and later brilliant taifa court of the Banu Hud.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "lisbon",
+    "name": "Olisipo",
+    "aliases": [
+      "Lisbon",
+      "Lisboa",
+      "al-Ushbuna"
+    ],
+    "region_hint": "europe",
+    "start_year": -1200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lisbon, Portugal",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Tagus estuary port, Roman municipium and launch point of Atlantic exploration.",
+    "confidence": "high"
+  },
+  {
+    "slug": "braga",
+    "name": "Bracara Augusta",
+    "aliases": [
+      "Braga"
+    ],
+    "region_hint": "europe",
+    "start_year": -16,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Braga, Portugal",
+    "still_inhabited": true,
+    "peak": "4th c. CE",
+    "summary": "Roman capital of Gallaecia and oldest Portuguese archbishopric.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "conimbriga",
+    "name": "Conimbriga",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": 468,
+    "date_precision": "approx",
+    "modern_name": "Coimbra district, Portugal",
+    "still_inhabited": false,
+    "peak": "2nd c. CE",
+    "summary": "Best-preserved Roman city in Portugal, abandoned after Suevi attacks.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "coimbra",
+    "name": "Coimbra",
+    "aliases": [
+      "Aeminium"
+    ],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Coimbra, Portugal",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Successor to Conimbriga and first capital of the kingdom of Portugal.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "porto",
+    "name": "Porto",
+    "aliases": [
+      "Cale",
+      "Portus Cale"
+    ],
+    "region_hint": "europe",
+    "start_year": -300,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Porto, Portugal",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Douro-mouth port whose name became Portugal.",
+    "confidence": "low"
+  },
+  {
+    "slug": "evora",
+    "name": "Évora",
+    "aliases": [
+      "Ebora Liberalitas Julia"
+    ],
+    "region_hint": "europe",
+    "start_year": -200,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Évora, Portugal",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Roman and Moorish walled city, later a royal Portuguese residence.",
+    "confidence": "low"
+  },
+  {
+    "slug": "silves",
+    "name": "Silves",
+    "aliases": [
+      "Xelb"
+    ],
+    "region_hint": "europe",
+    "start_year": 700,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Silves, Portugal",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Capital of the Algarve taifa, a wealthy Andalusi river port.",
+    "confidence": "low"
+  },
+  {
+    "slug": "astorga",
+    "name": "Asturica Augusta",
+    "aliases": [
+      "Astorga"
+    ],
+    "region_hint": "europe",
+    "start_year": -14,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Astorga, Spain",
+    "still_inhabited": true,
+    "peak": "2nd c. CE",
+    "summary": "Roman gold-administration city of northwest Iberia and Camino waypoint.",
+    "confidence": "low"
+  },
+  {
+    "slug": "lugo",
+    "name": "Lucus Augusti",
+    "aliases": [
+      "Lugo"
+    ],
+    "region_hint": "europe",
+    "start_year": -13,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Lugo, Spain",
+    "still_inhabited": true,
+    "peak": "4th c. CE",
+    "summary": "Roman Galician city with fully intact circuit walls.",
+    "confidence": "low"
+  },
+  {
+    "slug": "leon-spain",
+    "name": "Legio",
+    "aliases": [
+      "León"
+    ],
+    "region_hint": "europe",
+    "start_year": -29,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "León, Spain",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Legionary base that became the capital of the kingdom of León.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "oviedo",
+    "name": "Oviedo",
+    "aliases": [
+      "Ovetum"
+    ],
+    "region_hint": "europe",
+    "start_year": 761,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Oviedo, Spain",
+    "still_inhabited": true,
+    "peak": "9th c. CE",
+    "summary": "Capital of the Asturian kingdom and cradle of pre-Romanesque architecture.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "santiago-compostela",
+    "name": "Santiago de Compostela",
+    "aliases": [
+      "Compostela"
+    ],
+    "region_hint": "europe",
+    "start_year": 830,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Galicia, Spain",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Shrine of St James and the greatest pilgrimage destination of medieval Europe.",
+    "confidence": "high"
+  },
+  {
+    "slug": "burgos",
+    "name": "Burgos",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 884,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Burgos, Spain",
+    "still_inhabited": true,
+    "peak": "13th-15th c. CE",
+    "summary": "Castilian royal city and wool-trade capital on the Camino.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "valladolid",
+    "name": "Valladolid",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": 1072,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Valladolid, Spain",
+    "still_inhabited": true,
+    "peak": "15th c. CE",
+    "summary": "Castilian court city and administrative centre.",
+    "confidence": "low"
+  },
+  {
+    "slug": "zamora",
+    "name": "Zamora",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -100,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Zamora, Spain",
+    "still_inhabited": true,
+    "peak": "12th c. CE",
+    "summary": "Duero frontier fortress city with dense Romanesque churches.",
+    "confidence": "low"
+  },
+  {
+    "slug": "badajoz",
+    "name": "Badajoz",
+    "aliases": [
+      "Batalyaws"
+    ],
+    "region_hint": "europe",
+    "start_year": 875,
+    "end_year": null,
+    "date_precision": "approx",
+    "modern_name": "Badajoz, Spain",
+    "still_inhabited": true,
+    "peak": "11th c. CE",
+    "summary": "Capital of a large Andalusi taifa on the Guadiana.",
+    "confidence": "low"
+  },
+  {
+    "slug": "los-millares",
+    "name": "Los Millares",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -3200,
+    "end_year": -2300,
+    "date_precision": "approx",
+    "modern_name": "Almería, Spain",
+    "still_inhabited": false,
+    "peak": "3rd millennium BCE",
+    "summary": "Fortified Copper Age town with bastioned walls and tholos cemetery.",
+    "confidence": "high"
+  },
+  {
+    "slug": "valencina",
+    "name": "Valencina de la Concepción",
+    "aliases": [
+      "Valencina"
+    ],
+    "region_hint": "europe",
+    "start_year": -3200,
+    "end_year": -2300,
+    "date_precision": "approx",
+    "modern_name": "Seville province, Spain",
+    "still_inhabited": false,
+    "peak": "3rd millennium BCE",
+    "summary": "Enormous Copper Age ditched mega-settlement of the Guadalquivir.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "el-argar",
+    "name": "El Argar",
+    "aliases": [
+      "Argar"
+    ],
+    "region_hint": "europe",
+    "start_year": -2200,
+    "end_year": -1500,
+    "date_precision": "approx",
+    "modern_name": "Almería, Spain",
+    "still_inhabited": false,
+    "peak": "2nd millennium BCE",
+    "summary": "Type site of the Bronze Age Argaric culture with hilltop fortified towns.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "la-bastida",
+    "name": "La Bastida de Totana",
+    "aliases": [
+      "La Bastida"
+    ],
+    "region_hint": "europe",
+    "start_year": -2200,
+    "end_year": -1550,
+    "date_precision": "approx",
+    "modern_name": "Murcia, Spain",
+    "still_inhabited": false,
+    "peak": "c. 2000 BCE",
+    "summary": "Argaric fortified town with the most advanced Bronze Age defences in Europe.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "zambujal",
+    "name": "Zambujal",
+    "aliases": [
+      "Torres Vedras"
+    ],
+    "region_hint": "europe",
+    "start_year": -2600,
+    "end_year": -1800,
+    "date_precision": "approx",
+    "modern_name": "Torres Vedras, Portugal",
+    "still_inhabited": false,
+    "peak": "3rd millennium BCE",
+    "summary": "Heavily bastioned Copper Age fortified settlement of the Tagus estuary.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "citania-briteiros",
+    "name": "Citânia de Briteiros",
+    "aliases": [],
+    "region_hint": "europe",
+    "start_year": -400,
+    "end_year": 400,
+    "date_precision": "approx",
+    "modern_name": "Guimarães, Portugal",
+    "still_inhabited": false,
+    "peak": "1st c. BCE",
+    "summary": "Large Castro-culture hill town of northwest Iberia with paved streets.",
+    "confidence": "medium"
+  },
+  {
+    "slug": "ulaca",
+    "name": "Ulaca",
+    "aliases": [
+      "Castro de Ulaca"
+    ],
+    "region_hint": "europe",
+    "start_year": -400,
+    "end_year": -50,
+    "date_precision": "approx",
+    "modern_name": "Ávila, Spain",
+    "still_inhabited": false,
+    "peak": "3rd c. BCE",
+    "summary": "Vettonian oppidum with a rock-cut sanctuary and sauna.",
+    "confidence": "low"
+  }
+]

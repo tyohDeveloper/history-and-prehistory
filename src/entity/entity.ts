@@ -8,6 +8,15 @@
  * sit near, and Homo sapiens is extant. A threshold is the earliest known
  * instance of a behaviour - a one-sided bound that new evidence can only move
  * older, with the behaviour continuing after it.
+ *
+ * `city` is a schema 3.6.0 addition, and it exists because the alternative was
+ * lying. Cities had been filed as whatever period-like kind was nearest to
+ * hand: Byblos and Tyre as `era`, Tenochtitlan as `period`. A city is not a
+ * span of time, and the mislabelling had consequences beyond tidiness. A period
+ * ends; Damascus does not. Filing a living city as a period invites an end year
+ * where none belongs, and reading 1453 as the end of Constantinople rather than
+ * the moment it became Istanbul is exactly the error the kind is meant to
+ * prevent. A `city` with a null end year is inhabited today.
  */
 export type EntityKind =
   | "region"
@@ -15,6 +24,7 @@ export type EntityKind =
   | "period"
   | "reign"
   | "event"
+  | "city"
   | "taxon"
   | "threshold";
 export type Tier = "foundational" | "intermediate" | "specialist";

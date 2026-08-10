@@ -30,6 +30,7 @@ const GLYPH: Record<EntityKind, string> = {
   period: "\u25C6",
   reign: "\u25CF",
   event: "\u25C7",
+  city: "\u2302",
   taxon: "\u25D0",
   threshold: "\u25B3",
 };
@@ -90,6 +91,7 @@ const KIND_LABEL: Record<EntityKind, string> = {
   period: "Period",
   reign: "Reign",
   event: "Event",
+  city: "City",
   taxon: "Species",
   threshold: "Earliest known",
 };

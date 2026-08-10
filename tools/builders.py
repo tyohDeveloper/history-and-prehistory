@@ -53,6 +53,28 @@ def _check(kw, where):
         )
 
 
+def _make_emit(E, id_prefix=None):
+    """The shared field-assembling emitter behind every builder.
+
+    Lifted out of ``make_builders`` when the ``city`` kind arrived and needed the
+    same behaviour from a separate factory.
+    """
+
+    def _emit(kind, slug, name, parent, s, e, tier, summary, aliases, native, kw):
+        root = parent if id_prefix is None else id_prefix
+        _check(kw, f"{kind} {root}.{slug}")
+        fields = dict(kw)
+        if summary:
+            fields["summary"] = summary
+        if aliases:
+            fields["aliases"] = aliases
+        if native:
+            fields["native_name"] = native
+        return E(f"{root}.{slug}", kind, name, parent, start=s, end=e, tier=tier, **fields)
+
+    return _emit
+
+
 def make_builders(E, id_prefix=None):
     """Return (R, P, ERA, EVENT, TAXON, FIRST) bound to an ``E`` entity-emitter.
 
@@ -69,17 +91,7 @@ def make_builders(E, id_prefix=None):
     purpose.
     """
 
-    def _emit(kind, slug, name, parent, s, e, tier, summary, aliases, native, kw):
-        root = parent if id_prefix is None else id_prefix
-        _check(kw, f"{kind} {root}.{slug}")
-        fields = dict(kw)
-        if summary:
-            fields["summary"] = summary
-        if aliases:
-            fields["aliases"] = aliases
-        if native:
-            fields["native_name"] = native
-        return E(f"{root}.{slug}", kind, name, parent, start=s, end=e, tier=tier, **fields)
+    _emit = _make_emit(E, id_prefix)
 
     def R(slug, name, parent, s, e, tier="specialist", summary=None, aliases=None,
           native=None, **kw):
@@ -119,3 +131,32 @@ def make_builders(E, id_prefix=None):
         return _emit("threshold", slug, name, parent, s, None, tier, summary, aliases, native, kw)
 
     return R, P, ERA, EVENT, TAXON, FIRST
+
+def make_city_builder(E, id_prefix=None):
+    """Return a ``CITY`` builder bound to an ``E`` entity-emitter.
+
+    Deliberately separate from ``make_builders`` rather than a seventh element of
+    its return tuple. Forty-two call sites unpack that tuple into exactly six
+    names, and widening it to add one kind used by one module would have meant
+    editing all forty-two to gain nothing. The cost of the refactor exceeds the
+    cost of a second, smaller factory.
+    """
+    _emit = _make_emit(E, id_prefix)
+
+    def CITY(slug, name, parent, s, e=None, tier="specialist", summary=None,
+             aliases=None, native=None, **kw):
+        """A city. Not a period, which is why it has its own kind.
+
+        ``e`` defaults to None and that default carries meaning: **a city with no
+        end year is inhabited today.** Damascus, Varanasi, Athens and Beijing all
+        take the default. Only pass ``e`` for a place that was genuinely abandoned
+        and never reoccupied -- Nineveh, Persepolis, Nan Madol, Cahokia.
+
+        Conquest is not an ending and neither is renaming. Constantinople does not
+        end in 1453; it becomes Istanbul, which belongs in the summary or an alias,
+        not in ``e``. Getting this wrong is the single easiest way for this dataset
+        to tell a reader that a living city is dead.
+        """
+        return _emit("city", slug, name, parent, s, e, tier, summary, aliases, native, kw)
+
+    return CITY

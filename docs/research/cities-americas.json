@@ -1,0 +1,3565 @@
+[
+ {
+  "slug": "san-lorenzo-tenochtitlan",
+  "name": "San Lorenzo Tenochtitlán",
+  "aliases": [
+   "San Lorenzo"
+  ],
+  "region_hint": "americas",
+  "start_year": -1800,
+  "end_year": -900,
+  "date_precision": "approx",
+  "modern_name": "Veracruz, Mexico",
+  "still_inhabited": false,
+  "peak": "1200-900 BCE",
+  "summary": "First great Olmec capital and earliest monumental centre in Mesoamerica, source of the colossal stone heads.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "la-venta",
+  "name": "La Venta",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -1000,
+  "end_year": -400,
+  "date_precision": "approx",
+  "modern_name": "Tabasco, Mexico",
+  "still_inhabited": false,
+  "peak": "900-500 BCE",
+  "summary": "Olmec ceremonial city with the earliest large clay pyramid in Mesoamerica and buried serpentine offerings.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "tres-zapotes",
+  "name": "Tres Zapotes",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -1000,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Veracruz, Mexico",
+  "still_inhabited": false,
+  "peak": "400 BCE - 300 CE",
+  "summary": "Late Olmec and Epi-Olmec centre; Stela C carries one of the earliest Long Count dates known.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "laguna-de-los-cerros",
+  "name": "Laguna de los Cerros",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -1200,
+  "end_year": -400,
+  "date_precision": "approx",
+  "modern_name": "Veracruz, Mexico",
+  "still_inhabited": false,
+  "peak": "1000-600 BCE",
+  "summary": "Olmec centre controlling basalt quarries of the Tuxtlas that supplied monumental sculpture elsewhere.",
+  "confidence": "low"
+ },
+ {
+  "slug": "chalcatzingo",
+  "name": "Chalcatzingo",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -1500,
+  "end_year": -500,
+  "date_precision": "approx",
+  "modern_name": "Morelos, Mexico",
+  "still_inhabited": false,
+  "peak": "700-500 BCE",
+  "summary": "Highland trade town whose Olmec-style cliff reliefs show interregional elite culture far from the Gulf coast.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "cuicuilco",
+  "name": "Cuicuilco",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -800,
+  "end_year": -100,
+  "date_precision": "approx",
+  "modern_name": "Mexico City, Mexico",
+  "still_inhabited": false,
+  "peak": "400-200 BCE",
+  "summary": "First city of the Basin of Mexico, with a great circular pyramid, buried by the Xitle lava flow.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "tlatilco",
+  "name": "Tlatilco",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -1200,
+  "end_year": -400,
+  "date_precision": "approx",
+  "modern_name": "Mexico City, Mexico",
+  "still_inhabited": false,
+  "peak": "1000-700 BCE",
+  "summary": "Large Preclassic village-town in the Basin of Mexico known for its figurines and rich burials.",
+  "confidence": "low"
+ },
+ {
+  "slug": "teotihuacan",
+  "name": "Teotihuacan",
+  "aliases": [
+   "Teotihuacán"
+  ],
+  "region_hint": "americas",
+  "start_year": -100,
+  "end_year": 650,
+  "date_precision": "approx",
+  "modern_name": "State of Mexico, Mexico",
+  "still_inhabited": false,
+  "peak": "200-500 CE",
+  "summary": "Largest city in the pre-Columbian Americas, grid-planned around the Avenue of the Dead, with vast apartment compounds.",
+  "confidence": "high"
+ },
+ {
+  "slug": "cholula",
+  "name": "Cholula",
+  "aliases": [
+   "Cholollan",
+   "San Pedro Cholula"
+  ],
+  "region_hint": "americas",
+  "start_year": -500,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Puebla, Mexico",
+  "still_inhabited": true,
+  "peak": "200-700 CE and again 1200-1519",
+  "summary": "Continuously occupied pilgrimage city holding the largest pyramid by volume on Earth, the Tlachihualtepetl.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "monte-alban",
+  "name": "Monte Albán",
+  "aliases": [
+   "Monte Alban"
+  ],
+  "region_hint": "americas",
+  "start_year": -500,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Oaxaca, Mexico",
+  "still_inhabited": false,
+  "peak": "300-700 CE",
+  "summary": "Zapotec capital built on a levelled mountaintop, with early writing and conquest-slab records.",
+  "confidence": "high"
+ },
+ {
+  "slug": "mitla",
+  "name": "Mitla",
+  "aliases": [
+   "Lyobaa"
+  ],
+  "region_hint": "americas",
+  "start_year": 100,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Oaxaca, Mexico",
+  "still_inhabited": true,
+  "peak": "1000-1520",
+  "summary": "Zapotec religious capital and burial place of high priests, famed for geometric stone mosaic facades.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "yagul",
+  "name": "Yagul",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 700,
+  "end_year": 1521,
+  "date_precision": "approx",
+  "modern_name": "Oaxaca, Mexico",
+  "still_inhabited": false,
+  "peak": "1200-1500",
+  "summary": "Fortified Postclassic Zapotec town with palace complex and one of Mesoamerica's largest ballcourts.",
+  "confidence": "low"
+ },
+ {
+  "slug": "dainzu",
+  "name": "Dainzú",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -700,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Oaxaca, Mexico",
+  "still_inhabited": false,
+  "peak": "200 BCE - 350 CE",
+  "summary": "Zapotec valley town whose carved slabs depict helmeted ballplayers in an early distinctive style.",
+  "confidence": "low"
+ },
+ {
+  "slug": "el-tajin",
+  "name": "El Tajín",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 100,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Veracruz, Mexico",
+  "still_inhabited": false,
+  "peak": "800-1000 CE",
+  "summary": "Classic Veracruz capital with the niched Pyramid and seventeen ballcourts, centre of a ballgame cult.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "xochicalco",
+  "name": "Xochicalco",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 650,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Morelos, Mexico",
+  "still_inhabited": false,
+  "peak": "700-900 CE",
+  "summary": "Fortified Epiclassic hilltop city that rose after Teotihuacan, with an observatory cave and calendar reform stelae.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "cacaxtla",
+  "name": "Cacaxtla",
+  "aliases": [
+   "Cacaxtla-Xochitecatl"
+  ],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "Tlaxcala, Mexico",
+  "still_inhabited": false,
+  "peak": "650-900 CE",
+  "summary": "Epiclassic hilltop citadel whose battle murals fuse highland and Maya painting traditions.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "teotenango",
+  "name": "Teotenango",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 650,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "State of Mexico, Mexico",
+  "still_inhabited": false,
+  "peak": "900-1200",
+  "summary": "Walled Matlatzinca hill city of the Toluca valley, abandoned soon after the Spanish conquest.",
+  "confidence": "low"
+ },
+ {
+  "slug": "tula",
+  "name": "Tula",
+  "aliases": [
+   "Tollan",
+   "Tula de Allende",
+   "Tula Grande"
+  ],
+  "region_hint": "americas",
+  "start_year": 750,
+  "end_year": 1150,
+  "date_precision": "approx",
+  "modern_name": "Hidalgo, Mexico",
+  "still_inhabited": false,
+  "peak": "900-1100",
+  "summary": "Toltec capital whose Atlantean warrior columns and legend of Tollan shaped later Aztec political claims.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "tenayuca",
+  "name": "Tenayuca",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1200,
+  "end_year": 1521,
+  "date_precision": "approx",
+  "modern_name": "Mexico City, Mexico",
+  "still_inhabited": false,
+  "peak": "1250-1350",
+  "summary": "First Chichimec capital in the Basin of Mexico, with a serpent-ringed twin-stair pyramid prototype.",
+  "confidence": "low"
+ },
+ {
+  "slug": "azcapotzalco",
+  "name": "Azcapotzalco",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1200,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Mexico City, Mexico",
+  "still_inhabited": true,
+  "peak": "1350-1428",
+  "summary": "Tepanec imperial capital that dominated the Basin of Mexico until the Aztec Triple Alliance destroyed it in 1428.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "tenochtitlan",
+  "name": "Tenochtitlan",
+  "aliases": [
+   "México-Tenochtitlan",
+   "Mexico City"
+  ],
+  "region_hint": "americas",
+  "start_year": 1325,
+  "end_year": null,
+  "date_precision": "traditional",
+  "contested": "Founding of 1325 CE is a traditional Mexica date recorded in later codices.",
+  "modern_name": "Mexico City, Mexico",
+  "still_inhabited": true,
+  "peak": "1470-1519",
+  "summary": "Aztec island capital of causeways and chinampas, one of the world's largest cities in 1519.",
+  "confidence": "high"
+ },
+ {
+  "slug": "tlatelolco",
+  "name": "Tlatelolco",
+  "aliases": [
+   "Mexico-Tlatelolco"
+  ],
+  "region_hint": "americas",
+  "start_year": 1337,
+  "end_year": null,
+  "date_precision": "traditional",
+  "contested": "Traditional founding date from Mexica annals.",
+  "modern_name": "Mexico City, Mexico",
+  "still_inhabited": true,
+  "peak": "1400-1473",
+  "summary": "Twin city of Tenochtitlan and site of the greatest market in the Americas, absorbed by conquest in 1473.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "texcoco",
+  "name": "Texcoco",
+  "aliases": [
+   "Tetzcoco"
+  ],
+  "region_hint": "americas",
+  "start_year": 1200,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "State of Mexico, Mexico",
+  "still_inhabited": true,
+  "peak": "1430-1519",
+  "summary": "Acolhua capital and intellectual centre of the Triple Alliance under the poet-king Nezahualcoyotl.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "tlacopan",
+  "name": "Tlacopan",
+  "aliases": [
+   "Tacuba"
+  ],
+  "region_hint": "americas",
+  "start_year": 1300,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Mexico City, Mexico",
+  "still_inhabited": true,
+  "peak": "1430-1519",
+  "summary": "Third and junior partner of the Aztec Triple Alliance, successor to Tepanec power west of the lake.",
+  "confidence": "low"
+ },
+ {
+  "slug": "malinalco",
+  "name": "Malinalco",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1200,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "State of Mexico, Mexico",
+  "still_inhabited": true,
+  "peak": "1476-1519",
+  "summary": "Aztec ritual town with temples cut directly into living rock for eagle and jaguar warrior orders.",
+  "confidence": "low"
+ },
+ {
+  "slug": "tzintzuntzan",
+  "name": "Tzintzuntzan",
+  "aliases": [
+   "Tzintzuntzani"
+  ],
+  "region_hint": "americas",
+  "start_year": 1300,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Michoacán, Mexico",
+  "still_inhabited": true,
+  "peak": "1450-1520",
+  "summary": "Capital of the Purépecha (Tarascan) empire, with five round yácata platforms above Lake Pátzcuaro.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "ihuatzio",
+  "name": "Ihuatzio",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1200,
+  "end_year": 1530,
+  "date_precision": "approx",
+  "modern_name": "Michoacán, Mexico",
+  "still_inhabited": false,
+  "peak": "1300-1450",
+  "summary": "Earlier Purépecha capital of the Pátzcuaro basin, with walled causeways and yácata pyramids.",
+  "confidence": "low"
+ },
+ {
+  "slug": "patzcuaro",
+  "name": "Pátzcuaro",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1300,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Michoacán, Mexico",
+  "still_inhabited": true,
+  "peak": "1325-1400",
+  "summary": "Founding seat of Purépecha kingship and later the first colonial capital of Michoacán.",
+  "confidence": "low"
+ },
+ {
+  "slug": "cempoala",
+  "name": "Cempoala",
+  "aliases": [
+   "Zempoala",
+   "Cempohuallan"
+  ],
+  "region_hint": "americas",
+  "start_year": 1200,
+  "end_year": 1600,
+  "date_precision": "approx",
+  "modern_name": "Veracruz, Mexico",
+  "still_inhabited": false,
+  "peak": "1450-1519",
+  "summary": "Totonac capital and the first large city Cortés entered, whose ruler allied against the Aztecs.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "quiahuiztlan",
+  "name": "Quiahuiztlán",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 800,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "Veracruz, Mexico",
+  "still_inhabited": false,
+  "peak": "1200-1519",
+  "summary": "Totonac cliff town above the Gulf with a hillside cemetery of miniature temple tombs.",
+  "confidence": "low"
+ },
+ {
+  "slug": "nakbe",
+  "name": "Nakbé",
+  "aliases": [
+   "Nakbe"
+  ],
+  "region_hint": "americas",
+  "start_year": -1000,
+  "end_year": -100,
+  "date_precision": "approx",
+  "modern_name": "Petén, Guatemala",
+  "still_inhabited": false,
+  "peak": "600-400 BCE",
+  "summary": "Earliest large Maya centre, with monumental triadic architecture centuries before the Classic period.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "el-mirador",
+  "name": "El Mirador",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -600,
+  "end_year": 250,
+  "date_precision": "approx",
+  "modern_name": "Petén, Guatemala",
+  "still_inhabited": false,
+  "peak": "300 BCE - 100 CE",
+  "summary": "Preclassic Maya megacity whose La Danta complex is among the largest structures ever built, linked by causeways.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "uaxactun",
+  "name": "Uaxactún",
+  "aliases": [
+   "Uaxactun"
+  ],
+  "region_hint": "americas",
+  "start_year": -600,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Petén, Guatemala",
+  "still_inhabited": false,
+  "peak": "200-378 CE",
+  "summary": "Maya city with the earliest known astronomical E-Group, conquered by Teotihuacan-backed Tikal in 378.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "tikal",
+  "name": "Tikal",
+  "aliases": [
+   "Mutal",
+   "Yax Mutal"
+  ],
+  "region_hint": "americas",
+  "start_year": -600,
+  "end_year": 950,
+  "date_precision": "approx",
+  "modern_name": "Petén, Guatemala",
+  "still_inhabited": false,
+  "peak": "682-810 CE",
+  "summary": "Dominant Classic Maya kingdom of temple-pyramids and reservoirs, rival of Calakmul for lowland supremacy.",
+  "confidence": "high"
+ },
+ {
+  "slug": "calakmul",
+  "name": "Calakmul",
+  "aliases": [
+   "Kaan",
+   "Kaanul"
+  ],
+  "region_hint": "americas",
+  "start_year": -400,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "Campeche, Mexico",
+  "still_inhabited": false,
+  "peak": "600-750 CE",
+  "summary": "Seat of the Snake Kingdom that built the largest Maya hegemony through vassal alliances against Tikal.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "dos-pilas",
+  "name": "Dos Pilas",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 629,
+  "end_year": 800,
+  "date_precision": "approx",
+  "modern_name": "Petén, Guatemala",
+  "still_inhabited": false,
+  "peak": "700-760 CE",
+  "summary": "Petexbatún war capital founded by a Tikal splinter dynasty, abandoned amid Late Classic warfare.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "aguateca",
+  "name": "Aguateca",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 830,
+  "date_precision": "approx",
+  "modern_name": "Petén, Guatemala",
+  "still_inhabited": false,
+  "peak": "770-800 CE",
+  "summary": "Fortified Maya centre burned and abandoned so abruptly that whole household assemblages survive in place.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "piedras-negras",
+  "name": "Piedras Negras",
+  "aliases": [
+   "Yokib"
+  ],
+  "region_hint": "americas",
+  "start_year": -400,
+  "end_year": 830,
+  "date_precision": "approx",
+  "modern_name": "Petén, Guatemala",
+  "still_inhabited": false,
+  "peak": "600-800 CE",
+  "summary": "Usumacinta kingdom whose stela series let Proskouriakoff prove Maya glyphs record real dynastic history.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "yaxchilan",
+  "name": "Yaxchilán",
+  "aliases": [
+   "Pa'chan"
+  ],
+  "region_hint": "americas",
+  "start_year": 250,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Chiapas, Mexico",
+  "still_inhabited": false,
+  "peak": "680-800 CE",
+  "summary": "Riverbend Maya capital famed for carved lintels showing royal bloodletting and captive-taking.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "bonampak",
+  "name": "Bonampak",
+  "aliases": [
+   "Bonampak'"
+  ],
+  "region_hint": "americas",
+  "start_year": 400,
+  "end_year": 850,
+  "date_precision": "approx",
+  "modern_name": "Chiapas, Mexico",
+  "still_inhabited": false,
+  "peak": "750-800 CE",
+  "summary": "Small Maya court whose unfinished murals give the most vivid surviving images of Maya war and ritual.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "palenque",
+  "name": "Palenque",
+  "aliases": [
+   "Lakamha"
+  ],
+  "region_hint": "americas",
+  "start_year": 100,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Chiapas, Mexico",
+  "still_inhabited": false,
+  "peak": "615-750 CE",
+  "summary": "Western Maya capital of K'inich Janaab' Pakal, with the tomb-bearing Temple of the Inscriptions.",
+  "confidence": "high"
+ },
+ {
+  "slug": "tonina",
+  "name": "Toniná",
+  "aliases": [
+   "Popo"
+  ],
+  "region_hint": "americas",
+  "start_year": 200,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "Chiapas, Mexico",
+  "still_inhabited": false,
+  "peak": "600-800 CE",
+  "summary": "Terraced acropolis city that captured Palenque's king and carries one of the latest Long Count dates.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "comalcalco",
+  "name": "Comalcalco",
+  "aliases": [
+   "Joy Chan"
+  ],
+  "region_hint": "americas",
+  "start_year": 250,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "Tabasco, Mexico",
+  "still_inhabited": false,
+  "peak": "700-900 CE",
+  "summary": "Westernmost Maya city, built of fired brick because the delta had no stone.",
+  "confidence": "low"
+ },
+ {
+  "slug": "copan",
+  "name": "Copán",
+  "aliases": [
+   "Oxwitza'",
+   "Copan"
+  ],
+  "region_hint": "americas",
+  "start_year": -400,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Copán, Honduras",
+  "still_inhabited": false,
+  "peak": "628-800 CE",
+  "summary": "Southeastern Maya capital whose Hieroglyphic Stairway and sculpture record a 16-king dynasty.",
+  "confidence": "high"
+ },
+ {
+  "slug": "quirigua",
+  "name": "Quiriguá",
+  "aliases": [
+   "Quirigua"
+  ],
+  "region_hint": "americas",
+  "start_year": 200,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Izabal, Guatemala",
+  "still_inhabited": false,
+  "peak": "738-810 CE",
+  "summary": "Motagua valley city that beheaded Copán's king and raised the tallest stelae in the Maya world.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "caracol",
+  "name": "Caracol",
+  "aliases": [
+   "Oxwitza"
+  ],
+  "region_hint": "americas",
+  "start_year": -300,
+  "end_year": 950,
+  "date_precision": "approx",
+  "modern_name": "Cayo District, Belize",
+  "still_inhabited": false,
+  "peak": "600-800 CE",
+  "summary": "Sprawling low-density Maya city of agricultural terraces and causeways that defeated Tikal in 562.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "xunantunich",
+  "name": "Xunantunich",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "Cayo District, Belize",
+  "still_inhabited": false,
+  "peak": "800-900 CE",
+  "summary": "Belize River valley centre that grew as neighbouring Maya capitals collapsed, crowned by El Castillo.",
+  "confidence": "low"
+ },
+ {
+  "slug": "lamanai",
+  "name": "Lamanai",
+  "aliases": [
+   "Lamanay"
+  ],
+  "region_hint": "americas",
+  "start_year": -1500,
+  "end_year": 1700,
+  "date_precision": "approx",
+  "modern_name": "Orange Walk, Belize",
+  "still_inhabited": false,
+  "peak": "600-900 CE",
+  "summary": "One of the longest continuously occupied Maya towns, lasting from the Preclassic into the Spanish mission era.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "altun-ha",
+  "name": "Altun Ha",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -200,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "Belize District, Belize",
+  "still_inhabited": false,
+  "peak": "400-800 CE",
+  "summary": "Coastal Maya trading town whose tomb yielded the great jade head of the sun god K'inich Ahau.",
+  "confidence": "low"
+ },
+ {
+  "slug": "cerros",
+  "name": "Cerros",
+  "aliases": [
+   "Cerro Maya"
+  ],
+  "region_hint": "americas",
+  "start_year": -400,
+  "end_year": 100,
+  "date_precision": "approx",
+  "modern_name": "Corozal, Belize",
+  "still_inhabited": false,
+  "peak": "300-100 BCE",
+  "summary": "Late Preclassic Maya coastal trading centre that built early painted temple facades then was abandoned.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "cuello",
+  "name": "Cuello",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -1200,
+  "end_year": 400,
+  "date_precision": "approx",
+  "modern_name": "Orange Walk, Belize",
+  "still_inhabited": false,
+  "peak": "1000-400 BCE",
+  "summary": "Among the earliest known Maya villages, key evidence for the Preclassic origins of Maya society.",
+  "confidence": "low"
+ },
+ {
+  "slug": "coba",
+  "name": "Cobá",
+  "aliases": [
+   "Coba"
+  ],
+  "region_hint": "americas",
+  "start_year": 100,
+  "end_year": 1500,
+  "date_precision": "approx",
+  "modern_name": "Quintana Roo, Mexico",
+  "still_inhabited": false,
+  "peak": "600-900 CE",
+  "summary": "Northern Maya city of lakes and the longest sacbe causeway network, reaching 100 km to Yaxuná.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "dzibilchaltun",
+  "name": "Dzibilchaltún",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -500,
+  "end_year": 1500,
+  "date_precision": "approx",
+  "modern_name": "Yucatán, Mexico",
+  "still_inhabited": false,
+  "peak": "600-900 CE",
+  "summary": "Very long-lived Yucatec city with the equinox-aligned Temple of the Seven Dolls and a sacred cenote.",
+  "confidence": "low"
+ },
+ {
+  "slug": "uxmal",
+  "name": "Uxmal",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Yucatán, Mexico",
+  "still_inhabited": false,
+  "peak": "850-950 CE",
+  "summary": "Greatest Puuc-style Maya city, with the oval Pyramid of the Magician and elaborate lattice mosaic facades.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "kabah",
+  "name": "Kabah",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Yucatán, Mexico",
+  "still_inhabited": false,
+  "peak": "850-950 CE",
+  "summary": "Puuc city linked to Uxmal by causeway, its Codz Poop facade covered in hundreds of rain-god masks.",
+  "confidence": "low"
+ },
+ {
+  "slug": "sayil",
+  "name": "Sayil",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 700,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "Yucatán, Mexico",
+  "still_inhabited": false,
+  "peak": "800-950 CE",
+  "summary": "Dispersed Puuc garden-city whose household survey reshaped views of Maya urban density.",
+  "confidence": "low"
+ },
+ {
+  "slug": "labna",
+  "name": "Labná",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 700,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "Yucatán, Mexico",
+  "still_inhabited": false,
+  "peak": "850-950 CE",
+  "summary": "Puuc town dependent on chultun cisterns, known for its ornate corbelled arch gateway.",
+  "confidence": "low"
+ },
+ {
+  "slug": "edzna",
+  "name": "Edzná",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -400,
+  "end_year": 1450,
+  "date_precision": "approx",
+  "modern_name": "Campeche, Mexico",
+  "still_inhabited": false,
+  "peak": "600-900 CE",
+  "summary": "Maya city with a vast hydraulic canal and reservoir system and a five-storey palace-pyramid.",
+  "confidence": "low"
+ },
+ {
+  "slug": "chichen-itza",
+  "name": "Chichén Itzá",
+  "aliases": [
+   "Chichen Itza"
+  ],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 1300,
+  "date_precision": "approx",
+  "modern_name": "Yucatán, Mexico",
+  "still_inhabited": false,
+  "peak": "900-1100 CE",
+  "summary": "Cosmopolitan Terminal Classic capital fusing Maya and central Mexican styles around the Sacred Cenote.",
+  "confidence": "high"
+ },
+ {
+  "slug": "mayapan",
+  "name": "Mayapán",
+  "aliases": [
+   "Mayapan"
+  ],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": 1450,
+  "date_precision": "approx",
+  "modern_name": "Yucatán, Mexico",
+  "still_inhabited": false,
+  "peak": "1250-1440",
+  "summary": "Last great walled Maya capital, ruling northern Yucatán by confederacy until factional revolt destroyed it.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "tulum",
+  "name": "Tulum",
+  "aliases": [
+   "Zama"
+  ],
+  "region_hint": "americas",
+  "start_year": 1200,
+  "end_year": 1600,
+  "date_precision": "approx",
+  "modern_name": "Quintana Roo, Mexico",
+  "still_inhabited": false,
+  "peak": "1350-1520",
+  "summary": "Walled Maya seaport on Caribbean cliffs, a hub of the late canoe trade in salt, obsidian and cotton.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "kaminaljuyu",
+  "name": "Kaminaljuyú",
+  "aliases": [
+   "Kaminaljuyu"
+  ],
+  "region_hint": "americas",
+  "start_year": -1200,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Guatemala City, Guatemala",
+  "still_inhabited": false,
+  "peak": "400 BCE - 200 CE",
+  "summary": "Highland Maya capital controlling El Chayal obsidian, with early monumental sculpture and canal irrigation.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "izapa",
+  "name": "Izapa",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -800,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Chiapas, Mexico",
+  "still_inhabited": false,
+  "peak": "300 BCE - 100 CE",
+  "summary": "Pacific piedmont cacao centre whose narrative stelae bridge Olmec and Maya art and calendrics.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "takalik-abaj",
+  "name": "Takalik Abaj",
+  "aliases": [
+   "Abaj Takalik"
+  ],
+  "region_hint": "americas",
+  "start_year": -800,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Retalhuleu, Guatemala",
+  "still_inhabited": false,
+  "peak": "200 BCE - 200 CE",
+  "summary": "Pacific slope city with both Olmec-style boulders and early Maya stelae, a cultural transition point.",
+  "confidence": "low"
+ },
+ {
+  "slug": "iximche",
+  "name": "Iximché",
+  "aliases": [
+   "Iximche"
+  ],
+  "region_hint": "americas",
+  "start_year": 1470,
+  "end_year": 1524,
+  "date_precision": "approx",
+  "modern_name": "Chimaltenango, Guatemala",
+  "still_inhabited": false,
+  "peak": "1470-1524",
+  "summary": "Kaqchikel Maya capital on a defensive plateau, briefly the first Spanish capital of Guatemala.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "qumarkaj",
+  "name": "Q'umarkaj",
+  "aliases": [
+   "Utatlán",
+   "Gumarcaj"
+  ],
+  "region_hint": "americas",
+  "start_year": 1400,
+  "end_year": 1524,
+  "date_precision": "approx",
+  "modern_name": "Quiché, Guatemala",
+  "still_inhabited": false,
+  "peak": "1450-1524",
+  "summary": "K'iche' Maya capital of the Popol Vuh lineages, burned by Pedro de Alvarado in 1524.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "zaculeu",
+  "name": "Zaculeu",
+  "aliases": [
+   "Saqulew"
+  ],
+  "region_hint": "americas",
+  "start_year": 250,
+  "end_year": 1525,
+  "date_precision": "approx",
+  "modern_name": "Huehuetenango, Guatemala",
+  "still_inhabited": false,
+  "peak": "1400-1525",
+  "summary": "Mam Maya highland capital, surrendered after a Spanish siege by starvation in 1525.",
+  "confidence": "low"
+ },
+ {
+  "slug": "joya-de-ceren",
+  "name": "Joya de Cerén",
+  "aliases": [
+   "Ceren"
+  ],
+  "region_hint": "americas",
+  "start_year": 400,
+  "end_year": 660,
+  "date_precision": "approx",
+  "modern_name": "La Libertad, El Salvador",
+  "still_inhabited": false,
+  "peak": "6th-7th century CE",
+  "summary": "Maya farming village buried by volcanic ash, preserving ordinary houses and gardens like a New World Pompeii.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "chalchuapa",
+  "name": "Chalchuapa",
+  "aliases": [
+   "Tazumal"
+  ],
+  "region_hint": "americas",
+  "start_year": -1200,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Santa Ana, El Salvador",
+  "still_inhabited": true,
+  "peak": "400 BCE - 900 CE",
+  "summary": "Long-lived southeastern centre on the cacao and obsidian routes, disrupted by the Ilopango eruption.",
+  "confidence": "low"
+ },
+ {
+  "slug": "quelepa",
+  "name": "Quelepa",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -400,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "San Miguel, El Salvador",
+  "still_inhabited": false,
+  "peak": "625-1000 CE",
+  "summary": "Lenca-area centre east of the Lempa marking the non-Maya southeastern frontier of Mesoamerica.",
+  "confidence": "low"
+ },
+ {
+  "slug": "guayabo",
+  "name": "Guayabo de Turrialba",
+  "aliases": [
+   "Guayabo"
+  ],
+  "region_hint": "americas",
+  "start_year": -1000,
+  "end_year": 1400,
+  "date_precision": "approx",
+  "modern_name": "Cartago, Costa Rica",
+  "still_inhabited": false,
+  "peak": "800-1400 CE",
+  "summary": "Largest known chiefly centre of Costa Rica, with cobbled causeways, aqueducts and stone mounds.",
+  "confidence": "low"
+ },
+ {
+  "slug": "sitio-conte",
+  "name": "Sitio Conte",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 450,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Coclé, Panama",
+  "still_inhabited": false,
+  "peak": "700-900 CE",
+  "summary": "Panamanian chiefly burial centre whose gold-rich graves define Coclé elite culture on the isthmus.",
+  "confidence": "low"
+ },
+ {
+  "slug": "en-bas-saline",
+  "name": "En Bas Saline",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1200,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "Nord, Haiti",
+  "still_inhabited": false,
+  "peak": "1400-1500",
+  "summary": "Large Taíno chiefly village on Hispaniola, likely the seat of Guacanagarí who met Columbus in 1492.",
+  "confidence": "low"
+ },
+ {
+  "slug": "caguana",
+  "name": "Caguana",
+  "aliases": [
+   "Capá"
+  ],
+  "region_hint": "americas",
+  "start_year": 1200,
+  "end_year": 1520,
+  "date_precision": "approx",
+  "modern_name": "Utuado, Puerto Rico",
+  "still_inhabited": false,
+  "peak": "1270-1500",
+  "summary": "Principal Taíno ceremonial plaza complex with petroglyph-lined bateyes for the ball game.",
+  "confidence": "low"
+ },
+ {
+  "slug": "huaca-prieta",
+  "name": "Huaca Prieta",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -8000,
+  "end_year": -2500,
+  "date_precision": "approx",
+  "modern_name": "La Libertad, Peru",
+  "still_inhabited": false,
+  "peak": "5th-4th millennium BCE",
+  "summary": "Preceramic Peruvian coastal mound village, among the oldest continuously occupied sites in the Americas.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "aspero",
+  "name": "Áspero",
+  "aliases": [
+   "Aspero"
+  ],
+  "region_hint": "americas",
+  "start_year": -3700,
+  "end_year": -1800,
+  "date_precision": "approx",
+  "modern_name": "Lima Region, Peru",
+  "still_inhabited": false,
+  "peak": "3000-2500 BCE",
+  "summary": "Fishing port of the Caral complex with the earliest monumental platform mounds on the Peruvian coast.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "caral",
+  "name": "Caral",
+  "aliases": [
+   "Caral-Supe",
+   "Chupacigarro"
+  ],
+  "region_hint": "americas",
+  "start_year": -3000,
+  "end_year": -1800,
+  "date_precision": "approx",
+  "modern_name": "Supe Valley, Peru",
+  "still_inhabited": false,
+  "peak": "2600-2000 BCE",
+  "summary": "Oldest known city in the Americas, with sunken circular plazas and pyramids and no evidence of warfare.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "bandurria",
+  "name": "Bandurria",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -3200,
+  "end_year": -1800,
+  "date_precision": "approx",
+  "modern_name": "Huaura, Peru",
+  "still_inhabited": false,
+  "peak": "3000-2500 BCE",
+  "summary": "Late Archaic coastal centre contemporary with Caral, evidence that early urbanism was regional not singular.",
+  "confidence": "low"
+ },
+ {
+  "slug": "sechin-bajo",
+  "name": "Sechín Bajo",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -3500,
+  "end_year": -1000,
+  "date_precision": "approx",
+  "modern_name": "Casma Valley, Peru",
+  "still_inhabited": false,
+  "peak": "3000-1800 BCE",
+  "summary": "Holds one of the oldest monumental plazas in the Americas, a sunken circular court dated near 3500 BCE.",
+  "confidence": "low"
+ },
+ {
+  "slug": "cerro-sechin",
+  "name": "Cerro Sechín",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -1600,
+  "end_year": -800,
+  "date_precision": "approx",
+  "modern_name": "Casma Valley, Peru",
+  "still_inhabited": false,
+  "peak": "1500-1200 BCE",
+  "summary": "Casma valley temple faced with carved warrior and dismemberment reliefs, early monumental violence imagery.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "el-paraiso",
+  "name": "El Paraíso",
+  "aliases": [
+   "Chuquitanta"
+  ],
+  "region_hint": "americas",
+  "start_year": -2200,
+  "end_year": -1600,
+  "date_precision": "approx",
+  "modern_name": "Lima, Peru",
+  "still_inhabited": false,
+  "peak": "2000-1800 BCE",
+  "summary": "Enormous Late Preceramic stone complex in the Chillón valley, an early experiment in monumental civic space.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "kotosh",
+  "name": "Kotosh",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -2500,
+  "end_year": -200,
+  "date_precision": "approx",
+  "modern_name": "Huánuco, Peru",
+  "still_inhabited": false,
+  "peak": "2000-1200 BCE",
+  "summary": "Highland ritual site whose Temple of the Crossed Hands marks early Andean religious architecture.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "la-galgada",
+  "name": "La Galgada",
+  "aliases": [
+   "Galgada"
+  ],
+  "region_hint": "americas",
+  "start_year": -2600,
+  "end_year": -1200,
+  "date_precision": "approx",
+  "modern_name": "Ancash, Peru",
+  "still_inhabited": false,
+  "peak": "2200-1500 BCE",
+  "summary": "Preceramic highland temple complex of superimposed ritual chambers in the Kotosh tradition.",
+  "confidence": "low"
+ },
+ {
+  "slug": "chankillo",
+  "name": "Chankillo",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -400,
+  "end_year": -100,
+  "date_precision": "approx",
+  "modern_name": "Casma Valley, Peru",
+  "still_inhabited": false,
+  "peak": "250-200 BCE",
+  "summary": "Fortified ceremonial centre with the oldest known solar observatory in the Americas, the Thirteen Towers.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "chavin-de-huantar",
+  "name": "Chavín de Huántar",
+  "aliases": [
+   "Chavin de Huantar"
+  ],
+  "region_hint": "americas",
+  "start_year": -1200,
+  "end_year": -200,
+  "date_precision": "approx",
+  "modern_name": "Ancash, Peru",
+  "still_inhabited": false,
+  "peak": "900-500 BCE",
+  "summary": "Pilgrimage centre whose underground galleries and Lanzón spread the first pan-Andean religious style.",
+  "confidence": "high"
+ },
+ {
+  "slug": "pukara",
+  "name": "Pukara",
+  "aliases": [
+   "Pucara"
+  ],
+  "region_hint": "americas",
+  "start_year": -500,
+  "end_year": 400,
+  "date_precision": "approx",
+  "modern_name": "Puno, Peru",
+  "still_inhabited": false,
+  "peak": "200 BCE - 200 CE",
+  "summary": "First urban centre of the northern Titicaca basin, ancestor of Tiwanaku sculpture and sunken-court design.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "chiripa",
+  "name": "Chiripa",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -1500,
+  "end_year": 100,
+  "date_precision": "approx",
+  "modern_name": "La Paz, Bolivia",
+  "still_inhabited": false,
+  "peak": "800-100 BCE",
+  "summary": "Early Titicaca village-temple complex with sunken courts that prefigure Tiwanaku's civic form.",
+  "confidence": "low"
+ },
+ {
+  "slug": "huacas-de-moche",
+  "name": "Huacas de Moche",
+  "aliases": [
+   "Moche",
+   "Huaca del Sol",
+   "Cerro Blanco"
+  ],
+  "region_hint": "americas",
+  "start_year": 100,
+  "end_year": 800,
+  "date_precision": "approx",
+  "modern_name": "Trujillo, Peru",
+  "still_inhabited": false,
+  "peak": "300-600 CE",
+  "summary": "Capital of the Moche state, dominated by the adobe Huaca del Sol and the mural-covered Huaca de la Luna.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "sipan",
+  "name": "Sipán",
+  "aliases": [
+   "Huaca Rajada"
+  ],
+  "region_hint": "americas",
+  "start_year": 50,
+  "end_year": 700,
+  "date_precision": "approx",
+  "modern_name": "Lambayeque, Peru",
+  "still_inhabited": false,
+  "peak": "200-400 CE",
+  "summary": "Moche royal centre whose intact Lord of Sipán tomb transformed understanding of Andean kingship.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "pampa-grande",
+  "name": "Pampa Grande",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 550,
+  "end_year": 750,
+  "date_precision": "approx",
+  "modern_name": "Lambayeque, Peru",
+  "still_inhabited": false,
+  "peak": "600-700 CE",
+  "summary": "Late Moche capital of nucleated urban compounds, burned and abandoned within two centuries.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "galindo",
+  "name": "Galindo",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 800,
+  "date_precision": "approx",
+  "modern_name": "Moche Valley, Peru",
+  "still_inhabited": false,
+  "peak": "650-750 CE",
+  "summary": "Late Moche walled city marking the shift to defensive, class-segregated urbanism after the coastal collapse.",
+  "confidence": "low"
+ },
+ {
+  "slug": "dos-cabezas",
+  "name": "Dos Cabezas",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 150,
+  "end_year": 600,
+  "date_precision": "approx",
+  "modern_name": "Jequetepeque, Peru",
+  "still_inhabited": false,
+  "peak": "300-500 CE",
+  "summary": "Moche pyramid town known for elite burials of unusually tall men with elaborate copper-gold regalia.",
+  "confidence": "low"
+ },
+ {
+  "slug": "cahuachi",
+  "name": "Cahuachi",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -100,
+  "end_year": 500,
+  "date_precision": "approx",
+  "modern_name": "Nasca, Peru",
+  "still_inhabited": false,
+  "peak": "1-400 CE",
+  "summary": "Nasca pilgrimage capital of adobe mounds, a ceremonial city largely empty between festivals.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "ventilla",
+  "name": "Ventilla",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -100,
+  "end_year": 600,
+  "date_precision": "approx",
+  "modern_name": "Ingenio Valley, Peru",
+  "still_inhabited": false,
+  "peak": "100-500 CE",
+  "summary": "Largest Nasca habitation settlement, the residential counterpart to ceremonial Cahuachi.",
+  "confidence": "low"
+ },
+ {
+  "slug": "tiwanaku",
+  "name": "Tiwanaku",
+  "aliases": [
+   "Tiahuanaco"
+  ],
+  "region_hint": "americas",
+  "start_year": -200,
+  "end_year": 1100,
+  "date_precision": "approx",
+  "modern_name": "La Paz, Bolivia",
+  "still_inhabited": false,
+  "peak": "600-900 CE",
+  "summary": "High-altitude Andean capital of the Gateway of the Sun, ruling by colony and cult across the altiplano.",
+  "confidence": "high"
+ },
+ {
+  "slug": "lukurmata",
+  "name": "Lukurmata",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -200,
+  "end_year": 1100,
+  "date_precision": "approx",
+  "modern_name": "La Paz, Bolivia",
+  "still_inhabited": false,
+  "peak": "600-1000 CE",
+  "summary": "Second city of the Tiwanaku state on Titicaca's shore, centre of raised-field farming.",
+  "confidence": "low"
+ },
+ {
+  "slug": "khonkho-wankane",
+  "name": "Khonkho Wankane",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -200,
+  "end_year": 400,
+  "date_precision": "approx",
+  "modern_name": "La Paz, Bolivia",
+  "still_inhabited": false,
+  "peak": "100-400 CE",
+  "summary": "Pre-Tiwanaku altiplano civic-ceremonial centre with monoliths and sunken courts.",
+  "confidence": "low"
+ },
+ {
+  "slug": "wari",
+  "name": "Wari",
+  "aliases": [
+   "Huari"
+  ],
+  "region_hint": "americas",
+  "start_year": 500,
+  "end_year": 1100,
+  "date_precision": "approx",
+  "modern_name": "Ayacucho, Peru",
+  "still_inhabited": false,
+  "peak": "650-900 CE",
+  "summary": "Capital of the first Andean empire, a dense walled city of orthogonal compounds and administrative colonies.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "conchopata",
+  "name": "Conchopata",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 400,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "Ayacucho, Peru",
+  "still_inhabited": false,
+  "peak": "600-800 CE",
+  "summary": "Wari secondary city and ceramic workshop centre known for oversized ritual urns and offering smashes.",
+  "confidence": "low"
+ },
+ {
+  "slug": "pikillacta",
+  "name": "Pikillacta",
+  "aliases": [
+   "Pikillaqta"
+  ],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Cusco, Peru",
+  "still_inhabited": false,
+  "peak": "650-850 CE",
+  "summary": "Vast rigidly planned Wari provincial city near Cusco, apparently abandoned before completion.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "viracochapampa",
+  "name": "Viracochapampa",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 800,
+  "date_precision": "approx",
+  "modern_name": "La Libertad, Peru",
+  "still_inhabited": false,
+  "peak": "7th century CE",
+  "summary": "Unfinished Wari administrative city in the northern highlands, a template of imperial planning.",
+  "confidence": "low"
+ },
+ {
+  "slug": "marcahuamachuco",
+  "name": "Marcahuamachuco",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 300,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "La Libertad, Peru",
+  "still_inhabited": false,
+  "peak": "600-800 CE",
+  "summary": "Fortified highland ridge city of great galleries and round halls, independent neighbour of Wari.",
+  "confidence": "low"
+ },
+ {
+  "slug": "batan-grande",
+  "name": "Batán Grande",
+  "aliases": [
+   "Sicán",
+   "Poma"
+  ],
+  "region_hint": "americas",
+  "start_year": 750,
+  "end_year": 1100,
+  "date_precision": "approx",
+  "modern_name": "Lambayeque, Peru",
+  "still_inhabited": false,
+  "peak": "900-1050 CE",
+  "summary": "Sicán religious and metalworking capital whose tombs and arsenical bronze industry dominated the north coast.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "tucume",
+  "name": "Túcume",
+  "aliases": [
+   "Purgatorio"
+  ],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "Lambayeque, Peru",
+  "still_inhabited": false,
+  "peak": "1100-1450",
+  "summary": "Late Sicán capital of 26 adobe pyramids around a sacred hill, later absorbed by Chimú and Inca.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "chan-chan",
+  "name": "Chan Chan",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 850,
+  "end_year": 1500,
+  "date_precision": "approx",
+  "modern_name": "Trujillo, Peru",
+  "still_inhabited": false,
+  "peak": "1200-1470",
+  "summary": "Largest adobe city in the world, Chimú capital of ten walled royal ciudadelas and deep sunken wells.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "farfan",
+  "name": "Farfán",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": 1532,
+  "date_precision": "approx",
+  "modern_name": "Jequetepeque, Peru",
+  "still_inhabited": false,
+  "peak": "1300-1470",
+  "summary": "Chimú provincial administrative centre later reused by the Inca to govern the north coast.",
+  "confidence": "low"
+ },
+ {
+  "slug": "pachacamac",
+  "name": "Pachacamac",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 200,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "Lima, Peru",
+  "still_inhabited": false,
+  "peak": "900-1500",
+  "summary": "Great oracle city of the central coast, a pilgrimage centre respected by Wari, Ychsma and Inca alike.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "cajamarquilla",
+  "name": "Cajamarquilla",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 200,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Lima, Peru",
+  "still_inhabited": false,
+  "peak": "600-900 CE",
+  "summary": "Large adobe city of the Rímac valley, a major inland urban node beside Pachacamac.",
+  "confidence": "low"
+ },
+ {
+  "slug": "la-centinela",
+  "name": "La Centinela",
+  "aliases": [
+   "Chincha"
+  ],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "Chincha, Peru",
+  "still_inhabited": false,
+  "peak": "1200-1470",
+  "summary": "Capital of the Chincha kingdom, whose maritime merchants traded by balsa raft along the Pacific coast.",
+  "confidence": "low"
+ },
+ {
+  "slug": "kuelap",
+  "name": "Kuélap",
+  "aliases": [
+   "Kuelap"
+  ],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 1570,
+  "date_precision": "approx",
+  "modern_name": "Amazonas, Peru",
+  "still_inhabited": false,
+  "peak": "900-1400",
+  "summary": "Chachapoya cloud-forest citadel of hundreds of round houses behind twenty-metre walls.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "gran-pajaten",
+  "name": "Gran Pajatén",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 200,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "San Martín, Peru",
+  "still_inhabited": false,
+  "peak": "1200-1500",
+  "summary": "Chachapoya montane centre of round buildings with mosaic stone figures on the eastern Andean slope.",
+  "confidence": "low"
+ },
+ {
+  "slug": "cusco",
+  "name": "Cusco",
+  "aliases": [
+   "Qosqo",
+   "Cuzco"
+  ],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Cusco, Peru",
+  "still_inhabited": true,
+  "peak": "1438-1533",
+  "summary": "Inca imperial capital and ritual navel of Tawantinsuyu, laid out with ceque lines and Sacsayhuamán above.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "sacsayhuaman",
+  "name": "Sacsayhuamán",
+  "aliases": [
+   "Saqsaywaman"
+  ],
+  "region_hint": "americas",
+  "start_year": 1440,
+  "end_year": 1560,
+  "date_precision": "approx",
+  "modern_name": "Cusco, Peru",
+  "still_inhabited": false,
+  "peak": "1470-1533",
+  "summary": "Monumental Inca ceremonial fortress above Cusco, built of megalithic interlocking stonework.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "machu-picchu",
+  "name": "Machu Picchu",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1450,
+  "end_year": 1572,
+  "date_precision": "approx",
+  "modern_name": "Cusco, Peru",
+  "still_inhabited": false,
+  "peak": "1450-1530",
+  "summary": "Inca royal estate and ritual retreat on a granite ridge, abandoned soon after the Spanish conquest.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "ollantaytambo",
+  "name": "Ollantaytambo",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1440,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Cusco, Peru",
+  "still_inhabited": true,
+  "peak": "1460-1540",
+  "summary": "Inca planned town still lived in on its original grid, with terraced temple works and a 1537 battle site.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "pisac",
+  "name": "Pisac",
+  "aliases": [
+   "Písac",
+   "P'isaq"
+  ],
+  "region_hint": "americas",
+  "start_year": 1440,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Cusco, Peru",
+  "still_inhabited": true,
+  "peak": "1470-1533",
+  "summary": "Inca royal estate guarding the Sacred Valley entrance, with terraces, sun temple and cliff tombs.",
+  "confidence": "low"
+ },
+ {
+  "slug": "choquequirao",
+  "name": "Choquequirao",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1450,
+  "end_year": 1572,
+  "date_precision": "approx",
+  "modern_name": "Cusco, Peru",
+  "still_inhabited": false,
+  "peak": "1470-1540",
+  "summary": "Remote Inca ceremonial complex with llama mosaics in its terraces, a refuge in the Vilcabamba resistance.",
+  "confidence": "low"
+ },
+ {
+  "slug": "vitcos",
+  "name": "Vitcos",
+  "aliases": [
+   "Rosaspata"
+  ],
+  "region_hint": "americas",
+  "start_year": 1450,
+  "end_year": 1572,
+  "date_precision": "approx",
+  "modern_name": "Cusco, Peru",
+  "still_inhabited": false,
+  "peak": "1537-1572",
+  "summary": "Capital of the neo-Inca state of Vilcabamba, with the oracle rock of Ñusta Hispana nearby.",
+  "confidence": "low"
+ },
+ {
+  "slug": "huanuco-pampa",
+  "name": "Huánuco Pampa",
+  "aliases": [
+   "Huanuco Pampa"
+  ],
+  "region_hint": "americas",
+  "start_year": 1450,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "Huánuco, Peru",
+  "still_inhabited": false,
+  "peak": "1470-1532",
+  "summary": "Purpose-built Inca provincial capital with 500 storehouses and a vast plaza for state hospitality.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "vilcashuaman",
+  "name": "Vilcashuamán",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1450,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Ayacucho, Peru",
+  "still_inhabited": true,
+  "peak": "1470-1532",
+  "summary": "Inca administrative city with a stepped ushnu platform where the emperor sat to review the province.",
+  "confidence": "low"
+ },
+ {
+  "slug": "tambo-colorado",
+  "name": "Tambo Colorado",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1450,
+  "end_year": 1570,
+  "date_precision": "approx",
+  "modern_name": "Pisco, Peru",
+  "still_inhabited": false,
+  "peak": "1470-1532",
+  "summary": "Well-preserved Inca coastal administrative centre built in painted adobe rather than stone.",
+  "confidence": "low"
+ },
+ {
+  "slug": "raqchi",
+  "name": "Raqchi",
+  "aliases": [
+   "Racchi"
+  ],
+  "region_hint": "americas",
+  "start_year": 1450,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Cusco, Peru",
+  "still_inhabited": true,
+  "peak": "1470-1532",
+  "summary": "Inca way-station city on the Collasuyu road, dominated by the great Temple of Wiracocha.",
+  "confidence": "low"
+ },
+ {
+  "slug": "tomebamba",
+  "name": "Tomebamba",
+  "aliases": [
+   "Tumipampa",
+   "Cuenca"
+  ],
+  "region_hint": "americas",
+  "start_year": 1470,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Cuenca, Ecuador",
+  "still_inhabited": true,
+  "peak": "1490-1532",
+  "summary": "Northern Inca capital and Huayna Capac's birth city, wrecked in the civil war before the Spanish arrived.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "ingapirca",
+  "name": "Ingapirca",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 900,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "Cañar, Ecuador",
+  "still_inhabited": false,
+  "peak": "1480-1532",
+  "summary": "Cañari centre rebuilt as Ecuador's principal Inca complex around an elliptical sun temple.",
+  "confidence": "low"
+ },
+ {
+  "slug": "quito",
+  "name": "Quito",
+  "aliases": [
+   "Kitu"
+  ],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Quito, Ecuador",
+  "still_inhabited": true,
+  "peak": "1500-1533",
+  "summary": "Northern highland centre that became an Inca administrative seat and Atahualpa's base in the civil war.",
+  "confidence": "low"
+ },
+ {
+  "slug": "tumbes",
+  "name": "Tumbes",
+  "aliases": [
+   "Tumpis"
+  ],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Tumbes, Peru",
+  "still_inhabited": true,
+  "peak": "1450-1532",
+  "summary": "Inca frontier port and temple town, the first Andean city Pizarro saw and the gateway to the conquest.",
+  "confidence": "low"
+ },
+ {
+  "slug": "cajamarca",
+  "name": "Cajamarca",
+  "aliases": [
+   "Kashamarka"
+  ],
+  "region_hint": "americas",
+  "start_year": 500,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Cajamarca, Peru",
+  "still_inhabited": true,
+  "peak": "1470-1532",
+  "summary": "Inca provincial city with baths and plaza where Atahualpa was seized in November 1532.",
+  "confidence": "low"
+ },
+ {
+  "slug": "samaipata",
+  "name": "El Fuerte de Samaipata",
+  "aliases": [
+   "Samaipata"
+  ],
+  "region_hint": "americas",
+  "start_year": 300,
+  "end_year": 1600,
+  "date_precision": "approx",
+  "modern_name": "Santa Cruz, Bolivia",
+  "still_inhabited": false,
+  "peak": "1470-1550",
+  "summary": "Carved sandstone ritual rock and settlement on the Inca eastern frontier facing the Chiriguano lowlands.",
+  "confidence": "low"
+ },
+ {
+  "slug": "incallajta",
+  "name": "Incallajta",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1460,
+  "end_year": 1560,
+  "date_precision": "approx",
+  "modern_name": "Cochabamba, Bolivia",
+  "still_inhabited": false,
+  "peak": "1470-1532",
+  "summary": "Largest Inca site east of the Andes, a frontier garrison city with a vast kallanka great hall.",
+  "confidence": "low"
+ },
+ {
+  "slug": "tulor",
+  "name": "Aldea de Tulor",
+  "aliases": [
+   "Tulor"
+  ],
+  "region_hint": "americas",
+  "start_year": -800,
+  "end_year": 500,
+  "date_precision": "approx",
+  "modern_name": "San Pedro de Atacama, Chile",
+  "still_inhabited": false,
+  "peak": "500 BCE - 100 CE",
+  "summary": "Oldest known village of the Atacama oases, clustered circular adobe rooms buried by desert sand.",
+  "confidence": "low"
+ },
+ {
+  "slug": "quilmes",
+  "name": "Quilmes",
+  "aliases": [
+   "Kilmes"
+  ],
+  "region_hint": "americas",
+  "start_year": 800,
+  "end_year": 1667,
+  "date_precision": "approx",
+  "modern_name": "Tucumán, Argentina",
+  "still_inhabited": false,
+  "peak": "1200-1600",
+  "summary": "Largest pre-Columbian settlement in Argentina, a Calchaquí stone hill city that resisted Spain for decades.",
+  "confidence": "low"
+ },
+ {
+  "slug": "shincal",
+  "name": "El Shincal de Quimivil",
+  "aliases": [
+   "Shincal"
+  ],
+  "region_hint": "americas",
+  "start_year": 1470,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "Catamarca, Argentina",
+  "still_inhabited": false,
+  "peak": "1470-1536",
+  "summary": "Southern Inca provincial capital of Kollasuyu, with paired ceremonial hills flanking a great plaza.",
+  "confidence": "low"
+ },
+ {
+  "slug": "teyuna",
+  "name": "Ciudad Perdida",
+  "aliases": [
+   "Teyuna",
+   "Buritaca 200"
+  ],
+  "region_hint": "americas",
+  "start_year": 800,
+  "end_year": 1650,
+  "date_precision": "approx",
+  "modern_name": "Sierra Nevada de Santa Marta, Colombia",
+  "still_inhabited": false,
+  "peak": "1200-1550",
+  "summary": "Tairona stone-terraced city in the Sierra Nevada, hub of a network of some 200 linked settlements.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "pueblito-chairama",
+  "name": "Pueblito",
+  "aliases": [
+   "Chairama"
+  ],
+  "region_hint": "americas",
+  "start_year": 900,
+  "end_year": 1650,
+  "date_precision": "approx",
+  "modern_name": "Magdalena, Colombia",
+  "still_inhabited": false,
+  "peak": "1300-1600",
+  "summary": "Tairona coastal town of stone terraces and staircases, abandoned under Spanish pressure.",
+  "confidence": "low"
+ },
+ {
+  "slug": "hunza-tunja",
+  "name": "Hunza",
+  "aliases": [
+   "Tunja"
+  ],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Tunja, Colombia",
+  "still_inhabited": true,
+  "peak": "1400-1537",
+  "summary": "Seat of the Zaque, northern ruler of the Muisca confederation of the Colombian highlands.",
+  "confidence": "low"
+ },
+ {
+  "slug": "bacata",
+  "name": "Bacatá",
+  "aliases": [
+   "Muequetá",
+   "Funza"
+  ],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Bogotá savanna, Colombia",
+  "still_inhabited": true,
+  "peak": "1450-1538",
+  "summary": "Capital of the Zipa and largest Muisca centre, a town of cane-and-clay enclosures rather than stone.",
+  "confidence": "low"
+ },
+ {
+  "slug": "sugamuxi",
+  "name": "Sugamuxi",
+  "aliases": [
+   "Sogamoso"
+  ],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Sogamoso, Colombia",
+  "still_inhabited": true,
+  "peak": "1400-1537",
+  "summary": "Muisca sacred city whose great Sun Temple was the confederation's chief pilgrimage shrine.",
+  "confidence": "low"
+ },
+ {
+  "slug": "san-agustin",
+  "name": "San Agustín",
+  "aliases": [
+   "Alto de los Ídolos"
+  ],
+  "region_hint": "americas",
+  "start_year": -100,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Huila, Colombia",
+  "still_inhabited": false,
+  "peak": "100-800 CE",
+  "summary": "Dispersed funerary and ceremonial landscape with the largest group of megalithic statues in South America.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "tierradentro",
+  "name": "Tierradentro",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 100,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Cauca, Colombia",
+  "still_inhabited": false,
+  "peak": "600-900 CE",
+  "summary": "Andean ceremonial zone of painted underground shaft tombs cut into hilltops.",
+  "confidence": "low"
+ },
+ {
+  "slug": "upano-sangay",
+  "name": "Upano Valley complexes",
+  "aliases": [
+   "Sangay",
+   "Kunguints",
+   "Faldas de Sangay"
+  ],
+  "region_hint": "americas",
+  "start_year": -500,
+  "end_year": 600,
+  "date_precision": "approx",
+  "modern_name": "Morona Santiago, Ecuador",
+  "still_inhabited": false,
+  "peak": "1-400 CE",
+  "summary": "Amazonian garden-city network of platform mounds and sunken roads, revealed by lidar in the Upano valley.",
+  "confidence": "low"
+ },
+ {
+  "slug": "marajo",
+  "name": "Marajó mound complexes",
+  "aliases": [
+   "Teso dos Bichos",
+   "Marajoara"
+  ],
+  "region_hint": "americas",
+  "start_year": 400,
+  "end_year": 1350,
+  "date_precision": "approx",
+  "modern_name": "Marajó Island, Brazil",
+  "still_inhabited": false,
+  "peak": "600-1000 CE",
+  "summary": "Amazonian chiefdom of artificial habitation mounds and elaborate funerary urns at the mouth of the Amazon.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "santarem-tapajos",
+  "name": "Santarém",
+  "aliases": [
+   "Tapajós",
+   "Aldeia dos Tapajós"
+  ],
+  "region_hint": "americas",
+  "start_year": 900,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Santarém, Brazil",
+  "still_inhabited": true,
+  "peak": "1200-1500",
+  "summary": "Large Tapajó town on terra preta soils at the Tapajós-Amazon junction, described as densely populated in 1542.",
+  "confidence": "low"
+ },
+ {
+  "slug": "kuhikugu",
+  "name": "Kuhikugu",
+  "aliases": [
+   "Upper Xingu earthworks"
+  ],
+  "region_hint": "americas",
+  "start_year": 800,
+  "end_year": 1600,
+  "date_precision": "approx",
+  "modern_name": "Upper Xingu, Brazil",
+  "still_inhabited": false,
+  "peak": "1200-1500",
+  "summary": "Cluster of plaza towns joined by roads and moats, evidence of garden urbanism in the southern Amazon.",
+  "confidence": "low"
+ },
+ {
+  "slug": "llanos-de-mojos",
+  "name": "Llanos de Mojos earthworks",
+  "aliases": [
+   "Loma Salvatierra",
+   "Casarabe culture"
+  ],
+  "region_hint": "americas",
+  "start_year": 400,
+  "end_year": 1400,
+  "date_precision": "approx",
+  "modern_name": "Beni, Bolivia",
+  "still_inhabited": false,
+  "peak": "800-1400 CE",
+  "summary": "Casarabe low-density urban network of causeways, canals and stepped mound centres on seasonal floodplain.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "acre-geoglyphs",
+  "name": "Acre geoglyphs",
+  "aliases": [
+   "Jaco Sá",
+   "Fazenda Colorada"
+  ],
+  "region_hint": "americas",
+  "start_year": -200,
+  "end_year": 1300,
+  "date_precision": "approx",
+  "modern_name": "Acre, Brazil",
+  "still_inhabited": false,
+  "peak": "200-900 CE",
+  "summary": "Hundreds of geometric ditched enclosures in western Amazonia, ceremonial not defensive, cut into managed forest.",
+  "confidence": "low"
+ },
+ {
+  "slug": "watson-brake",
+  "name": "Watson Brake",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -3500,
+  "end_year": -2800,
+  "date_precision": "approx",
+  "modern_name": "Louisiana, USA",
+  "still_inhabited": false,
+  "peak": "3400-3000 BCE",
+  "summary": "Oldest known mound complex in North America, eleven mounds raised by hunter-gatherers with no agriculture.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "poverty-point",
+  "name": "Poverty Point",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -1700,
+  "end_year": -1100,
+  "date_precision": "approx",
+  "modern_name": "Louisiana, USA",
+  "still_inhabited": false,
+  "peak": "1500-1200 BCE",
+  "summary": "Vast concentric-ridge earthwork centre and long-distance exchange hub built by non-farming societies.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "hopewell-earthworks",
+  "name": "Hopewell Ceremonial Earthworks",
+  "aliases": [
+   "Mound City",
+   "Hopewell Mound Group"
+  ],
+  "region_hint": "americas",
+  "start_year": -100,
+  "end_year": 500,
+  "date_precision": "approx",
+  "modern_name": "Ohio, USA",
+  "still_inhabited": false,
+  "peak": "1-400 CE",
+  "summary": "Geometric earthwork complexes of the Scioto valley, ritual gathering places for a continental exchange network.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "newark-earthworks",
+  "name": "Newark Earthworks",
+  "aliases": [
+   "Octagon Earthworks",
+   "Great Circle"
+  ],
+  "region_hint": "americas",
+  "start_year": 100,
+  "end_year": 400,
+  "date_precision": "approx",
+  "modern_name": "Ohio, USA",
+  "still_inhabited": false,
+  "peak": "150-350 CE",
+  "summary": "Largest geometric earthwork complex on Earth, aligned to the 18.6-year lunar standstill cycle.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "fort-ancient",
+  "name": "Fort Ancient",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -100,
+  "end_year": 400,
+  "date_precision": "approx",
+  "modern_name": "Ohio, USA",
+  "still_inhabited": false,
+  "peak": "1-300 CE",
+  "summary": "Hopewell hilltop enclosure of 5.7 km of embankment walls with solar and lunar gateway alignments.",
+  "confidence": "low"
+ },
+ {
+  "slug": "cahokia",
+  "name": "Cahokia",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 700,
+  "end_year": 1400,
+  "date_precision": "approx",
+  "modern_name": "Illinois, USA",
+  "still_inhabited": false,
+  "peak": "1050-1200",
+  "summary": "Largest city north of Mexico, Mississippian capital of 120 mounds around Monks Mound and a grand plaza.",
+  "confidence": "high"
+ },
+ {
+  "slug": "east-st-louis-mound-group",
+  "name": "East St. Louis Mound Center",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 900,
+  "end_year": 1300,
+  "date_precision": "approx",
+  "modern_name": "Illinois, USA",
+  "still_inhabited": false,
+  "peak": "1050-1200",
+  "summary": "Second largest mound precinct of greater Cahokia, a burned and abandoned satellite city.",
+  "confidence": "low"
+ },
+ {
+  "slug": "moundville",
+  "name": "Moundville",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": 1500,
+  "date_precision": "approx",
+  "modern_name": "Alabama, USA",
+  "still_inhabited": false,
+  "peak": "1200-1350",
+  "summary": "Mississippian political and religious capital of 29 mounds on the Black Warrior River, later a necropolis.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "etowah",
+  "name": "Etowah",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": 1550,
+  "date_precision": "approx",
+  "modern_name": "Georgia, USA",
+  "still_inhabited": false,
+  "peak": "1250-1375",
+  "summary": "Fortified Mississippian town whose marble effigy statues and copper plates define the Southeastern Ceremonial Complex.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "spiro",
+  "name": "Spiro Mounds",
+  "aliases": [
+   "Spiro"
+  ],
+  "region_hint": "americas",
+  "start_year": 800,
+  "end_year": 1450,
+  "date_precision": "approx",
+  "modern_name": "Oklahoma, USA",
+  "still_inhabited": false,
+  "peak": "1100-1350",
+  "summary": "Western Mississippian gateway centre whose Craig Mound held an unmatched trove of shell, copper and textiles.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "ocmulgee",
+  "name": "Ocmulgee",
+  "aliases": [
+   "Macon Plateau"
+  ],
+  "region_hint": "americas",
+  "start_year": 900,
+  "end_year": 1600,
+  "date_precision": "approx",
+  "modern_name": "Georgia, USA",
+  "still_inhabited": false,
+  "peak": "950-1150",
+  "summary": "Early Mississippian town with a reconstructed earth lodge council chamber, ancestral to Muscogee history.",
+  "confidence": "low"
+ },
+ {
+  "slug": "aztalan",
+  "name": "Aztalan",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": 1300,
+  "date_precision": "approx",
+  "modern_name": "Wisconsin, USA",
+  "still_inhabited": false,
+  "peak": "1100-1200",
+  "summary": "Palisaded northern outpost of Mississippian culture, far up the Rock River from Cahokia.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "angel-mounds",
+  "name": "Angel Mounds",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": 1450,
+  "date_precision": "approx",
+  "modern_name": "Indiana, USA",
+  "still_inhabited": false,
+  "peak": "1100-1400",
+  "summary": "Palisaded Mississippian town on the Ohio River, a regional capital of the middle Ohio valley.",
+  "confidence": "low"
+ },
+ {
+  "slug": "kincaid",
+  "name": "Kincaid Mounds",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1050,
+  "end_year": 1400,
+  "date_precision": "approx",
+  "modern_name": "Illinois, USA",
+  "still_inhabited": false,
+  "peak": "1150-1350",
+  "summary": "Major Mississippian centre of the lower Ohio, key to the concept of a Cahokia-linked political sphere.",
+  "confidence": "low"
+ },
+ {
+  "slug": "toltec-mounds",
+  "name": "Toltec Mounds",
+  "aliases": [
+   "Plum Bayou"
+  ],
+  "region_hint": "americas",
+  "start_year": 650,
+  "end_year": 1050,
+  "date_precision": "approx",
+  "modern_name": "Arkansas, USA",
+  "still_inhabited": false,
+  "peak": "700-1000 CE",
+  "summary": "Plum Bayou culture mound and embankment centre laid out on solar alignments, pre-dating Mississippian towns.",
+  "confidence": "low"
+ },
+ {
+  "slug": "winterville",
+  "name": "Winterville",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": 1450,
+  "date_precision": "approx",
+  "modern_name": "Mississippi, USA",
+  "still_inhabited": false,
+  "peak": "1200-1400",
+  "summary": "Mississippian mound capital of the Yazoo basin, a ceremonial centre with few permanent residents.",
+  "confidence": "low"
+ },
+ {
+  "slug": "emerald-mound",
+  "name": "Emerald Mound",
+  "aliases": [
+   "Selsertown"
+  ],
+  "region_hint": "americas",
+  "start_year": 1250,
+  "end_year": 1730,
+  "date_precision": "approx",
+  "modern_name": "Mississippi, USA",
+  "still_inhabited": false,
+  "peak": "1300-1600",
+  "summary": "Second largest earthwork platform in the United States, ceremonial centre of the ancestral Natchez.",
+  "confidence": "low"
+ },
+ {
+  "slug": "town-creek",
+  "name": "Town Creek",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": 1400,
+  "date_precision": "approx",
+  "modern_name": "North Carolina, USA",
+  "still_inhabited": false,
+  "peak": "1150-1350",
+  "summary": "Pee Dee culture palisaded ceremonial town on the Mississippian northeastern edge.",
+  "confidence": "low"
+ },
+ {
+  "slug": "crystal-river",
+  "name": "Crystal River",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -500,
+  "end_year": 1000,
+  "date_precision": "approx",
+  "modern_name": "Florida, USA",
+  "still_inhabited": false,
+  "peak": "1-600 CE",
+  "summary": "Long-lived Gulf coast mound and stelae complex, a burial and trade centre of Woodland Florida.",
+  "confidence": "low"
+ },
+ {
+  "slug": "mount-royal-florida",
+  "name": "Mount Royal",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1050,
+  "end_year": 1500,
+  "date_precision": "approx",
+  "modern_name": "Florida, USA",
+  "still_inhabited": false,
+  "peak": "1200-1400",
+  "summary": "St. Johns River mound town with a long causeway to a pond, linked by trade to distant Mississippian centres.",
+  "confidence": "low"
+ },
+ {
+  "slug": "chaco-canyon",
+  "name": "Chaco Canyon",
+  "aliases": [
+   "Pueblo Bonito",
+   "Chaco"
+  ],
+  "region_hint": "americas",
+  "start_year": 800,
+  "end_year": 1250,
+  "date_precision": "approx",
+  "modern_name": "New Mexico, USA",
+  "still_inhabited": false,
+  "peak": "1020-1130",
+  "summary": "Ancestral Pueblo ceremonial and political core of great houses, great kivas and straight roads across the desert.",
+  "confidence": "high"
+ },
+ {
+  "slug": "aztec-ruins",
+  "name": "Aztec Ruins",
+  "aliases": [
+   "Aztec West"
+  ],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": 1300,
+  "date_precision": "approx",
+  "modern_name": "New Mexico, USA",
+  "still_inhabited": false,
+  "peak": "1110-1275",
+  "summary": "Planned great house on the Animas River, a successor centre after Chaco's decline.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "salmon-ruins",
+  "name": "Salmon Ruins",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1090,
+  "end_year": 1280,
+  "date_precision": "approx",
+  "modern_name": "New Mexico, USA",
+  "still_inhabited": false,
+  "peak": "1100-1150",
+  "summary": "Chacoan outlier great house on the San Juan, later reoccupied by Mesa Verde communities.",
+  "confidence": "low"
+ },
+ {
+  "slug": "mesa-verde",
+  "name": "Mesa Verde",
+  "aliases": [
+   "Cliff Palace"
+  ],
+  "region_hint": "americas",
+  "start_year": 600,
+  "end_year": 1300,
+  "date_precision": "approx",
+  "modern_name": "Colorado, USA",
+  "still_inhabited": false,
+  "peak": "1150-1280",
+  "summary": "Ancestral Pueblo cliff-dwelling towns of the Mesa Verde plateau, depopulated within a generation after 1280.",
+  "confidence": "high"
+ },
+ {
+  "slug": "yellow-jacket-pueblo",
+  "name": "Yellow Jacket Pueblo",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": 1280,
+  "date_precision": "approx",
+  "modern_name": "Colorado, USA",
+  "still_inhabited": false,
+  "peak": "1150-1250",
+  "summary": "Largest known Ancestral Pueblo village in the Mesa Verde region, with over a hundred kivas.",
+  "confidence": "low"
+ },
+ {
+  "slug": "canyon-de-chelly",
+  "name": "Canyon de Chelly",
+  "aliases": [
+   "White House Ruin"
+  ],
+  "region_hint": "americas",
+  "start_year": 300,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Arizona, USA",
+  "still_inhabited": true,
+  "peak": "1050-1300",
+  "summary": "Continuously inhabited canyon of Ancestral Pueblo cliff villages, later a Navajo heartland.",
+  "confidence": "low"
+ },
+ {
+  "slug": "wupatki",
+  "name": "Wupatki",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": 1250,
+  "date_precision": "approx",
+  "modern_name": "Arizona, USA",
+  "still_inhabited": false,
+  "peak": "1120-1220",
+  "summary": "Multi-storey pueblo built after the Sunset Crater eruption, where Pueblo, Sinagua and Hohokam traits met.",
+  "confidence": "low"
+ },
+ {
+  "slug": "betatakin-keet-seel",
+  "name": "Betatakin and Keet Seel",
+  "aliases": [
+   "Navajo National Monument"
+  ],
+  "region_hint": "americas",
+  "start_year": 1250,
+  "end_year": 1300,
+  "date_precision": "approx",
+  "modern_name": "Arizona, USA",
+  "still_inhabited": false,
+  "peak": "1250-1290",
+  "summary": "Short-lived Kayenta cliff villages abandoned wholesale during the late 13th-century migrations.",
+  "confidence": "low"
+ },
+ {
+  "slug": "snaketown",
+  "name": "Snaketown",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -300,
+  "end_year": 1150,
+  "date_precision": "approx",
+  "modern_name": "Arizona, USA",
+  "still_inhabited": false,
+  "peak": "700-1100 CE",
+  "summary": "Principal Hohokam town, with ballcourts and the canal irrigation that made the Sonoran desert farmable.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "pueblo-grande",
+  "name": "Pueblo Grande",
+  "aliases": [
+   "S'edav Va'aki"
+  ],
+  "region_hint": "americas",
+  "start_year": 450,
+  "end_year": 1450,
+  "date_precision": "approx",
+  "modern_name": "Phoenix, Arizona, USA",
+  "still_inhabited": false,
+  "peak": "1150-1400",
+  "summary": "Hohokam platform-mound town controlling the largest canal system in the prehistoric Americas.",
+  "confidence": "low"
+ },
+ {
+  "slug": "casa-grande",
+  "name": "Casa Grande",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1150,
+  "end_year": 1450,
+  "date_precision": "approx",
+  "modern_name": "Arizona, USA",
+  "still_inhabited": false,
+  "peak": "1300-1450",
+  "summary": "Classic Hohokam great house of caliche walls with astronomical apertures, abandoned by about 1450.",
+  "confidence": "low"
+ },
+ {
+  "slug": "paquime",
+  "name": "Paquimé",
+  "aliases": [
+   "Casas Grandes"
+  ],
+  "region_hint": "americas",
+  "start_year": 1130,
+  "end_year": 1450,
+  "date_precision": "approx",
+  "modern_name": "Chihuahua, Mexico",
+  "still_inhabited": false,
+  "peak": "1250-1400",
+  "summary": "Adobe city linking the Southwest and Mesoamerica, with macaw pens, ballcourts and piped water.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "la-quemada",
+  "name": "La Quemada",
+  "aliases": [
+   "Chicomoztoc"
+  ],
+  "region_hint": "americas",
+  "start_year": 300,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Zacatecas, Mexico",
+  "still_inhabited": false,
+  "peak": "600-850 CE",
+  "summary": "Fortified hilltop city on Mesoamerica's northern frontier, with causeways and a hall of columns.",
+  "confidence": "low"
+ },
+ {
+  "slug": "guachimonton",
+  "name": "Guachimontones",
+  "aliases": [
+   "Teuchitlán"
+  ],
+  "region_hint": "americas",
+  "start_year": -300,
+  "end_year": 900,
+  "date_precision": "approx",
+  "modern_name": "Jalisco, Mexico",
+  "still_inhabited": false,
+  "peak": "200-500 CE",
+  "summary": "Teuchitlán capital of unique concentric circular pyramid complexes in western Mexico.",
+  "confidence": "low"
+ },
+ {
+  "slug": "acoma",
+  "name": "Acoma Pueblo",
+  "aliases": [
+   "Sky City",
+   "Haak'u"
+  ],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "New Mexico, USA",
+  "still_inhabited": true,
+  "peak": "1300-1600",
+  "summary": "Mesa-top pueblo among the oldest continuously inhabited settlements in North America.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "taos-pueblo",
+  "name": "Taos Pueblo",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1000,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "New Mexico, USA",
+  "still_inhabited": true,
+  "peak": "1400-1680",
+  "summary": "Multi-storey adobe pueblo lived in for a millennium, a northern Rio Grande trade hub with the Plains.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "oraibi",
+  "name": "Oraibi",
+  "aliases": [
+   "Old Oraibi",
+   "Orayvi"
+  ],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Arizona, USA",
+  "still_inhabited": true,
+  "peak": "1400-1900",
+  "summary": "Hopi mesa village, one of the oldest continuously occupied settlements in the United States.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "hawikuh",
+  "name": "Hawikuh",
+  "aliases": [
+   "Hawikku"
+  ],
+  "region_hint": "americas",
+  "start_year": 1250,
+  "end_year": 1680,
+  "date_precision": "approx",
+  "modern_name": "New Mexico, USA",
+  "still_inhabited": false,
+  "peak": "1400-1540",
+  "summary": "Largest Zuni town, mistaken for a city of gold by Coronado's expedition in 1540.",
+  "confidence": "low"
+ },
+ {
+  "slug": "pecos-pueblo",
+  "name": "Pecos Pueblo",
+  "aliases": [
+   "Cicuye"
+  ],
+  "region_hint": "americas",
+  "start_year": 1100,
+  "end_year": 1838,
+  "date_precision": "approx",
+  "modern_name": "New Mexico, USA",
+  "still_inhabited": false,
+  "peak": "1450-1600",
+  "summary": "Fortified frontier pueblo controlling trade between the Rio Grande farmers and Plains bison hunters.",
+  "confidence": "low"
+ },
+ {
+  "slug": "paa-ko",
+  "name": "Paako",
+  "aliases": [
+   "Paa-ko"
+  ],
+  "region_hint": "americas",
+  "start_year": 1300,
+  "end_year": 1670,
+  "date_precision": "approx",
+  "modern_name": "New Mexico, USA",
+  "still_inhabited": false,
+  "peak": "1400-1550",
+  "summary": "Tiwa pueblo of the Sandia foothills, abandoned during the colonial disruptions of the 17th century.",
+  "confidence": "low"
+ },
+ {
+  "slug": "huff-village",
+  "name": "Huff Village",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1300,
+  "end_year": 1450,
+  "date_precision": "approx",
+  "modern_name": "North Dakota, USA",
+  "still_inhabited": false,
+  "peak": "1350-1450",
+  "summary": "Fortified Mandan earthlodge town on the Missouri, an early plains village-urban form.",
+  "confidence": "low"
+ },
+ {
+  "slug": "double-ditch",
+  "name": "Double Ditch Village",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1450,
+  "end_year": 1785,
+  "date_precision": "approx",
+  "modern_name": "North Dakota, USA",
+  "still_inhabited": false,
+  "peak": "1500-1600",
+  "summary": "Large Mandan earthlodge town with successive defensive ditches, depopulated by smallpox.",
+  "confidence": "low"
+ },
+ {
+  "slug": "ozette",
+  "name": "Ozette",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": -1000,
+  "end_year": 1920,
+  "date_precision": "approx",
+  "modern_name": "Washington, USA",
+  "still_inhabited": false,
+  "peak": "1400-1700",
+  "summary": "Makah whaling town whose mudslide-buried plank houses preserved an entire Northwest Coast village.",
+  "confidence": "low"
+ },
+ {
+  "slug": "sgang-gwaay",
+  "name": "SGang Gwaay",
+  "aliases": [
+   "Ninstints",
+   "Nan Sdins"
+  ],
+  "region_hint": "americas",
+  "start_year": 1200,
+  "end_year": 1880,
+  "date_precision": "approx",
+  "modern_name": "Haida Gwaii, Canada",
+  "still_inhabited": false,
+  "peak": "1700-1860",
+  "summary": "Haida plank-house town with standing mortuary poles, emblem of Northwest Coast village urbanism.",
+  "confidence": "low"
+ },
+ {
+  "slug": "cathlapotle",
+  "name": "Cathlapotle",
+  "aliases": [],
+  "region_hint": "americas",
+  "start_year": 1400,
+  "end_year": 1830,
+  "date_precision": "approx",
+  "modern_name": "Washington, USA",
+  "still_inhabited": false,
+  "peak": "1500-1800",
+  "summary": "Chinookan plankhouse town on the lower Columbia, a hub of the Northwest riverine trade.",
+  "confidence": "low"
+ },
+ {
+  "slug": "lapita-talepakemalai",
+  "name": "Talepakemalai",
+  "aliases": [
+   "Mussau Lapita site"
+  ],
+  "region_hint": "oceania",
+  "start_year": -1350,
+  "end_year": -750,
+  "date_precision": "approx",
+  "modern_name": "Mussau Islands, Papua New Guinea",
+  "still_inhabited": false,
+  "peak": "1300-1000 BCE",
+  "summary": "Earliest well-documented Lapita stilt-house village, starting point of the Pacific settlement expansion.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "teouma",
+  "name": "Teouma",
+  "aliases": [],
+  "region_hint": "oceania",
+  "start_year": -1000,
+  "end_year": -800,
+  "date_precision": "approx",
+  "modern_name": "Efate, Vanuatu",
+  "still_inhabited": false,
+  "peak": "1000-900 BCE",
+  "summary": "Oldest Lapita cemetery in the Pacific, the founding population evidence for Remote Oceania.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "bourewa",
+  "name": "Bourewa",
+  "aliases": [],
+  "region_hint": "oceania",
+  "start_year": -1100,
+  "end_year": -500,
+  "date_precision": "approx",
+  "modern_name": "Viti Levu, Fiji",
+  "still_inhabited": false,
+  "peak": "1050-750 BCE",
+  "summary": "Earliest known settlement in Fiji, the Lapita beachhead for colonising the central Pacific.",
+  "confidence": "low"
+ },
+ {
+  "slug": "nukuleka",
+  "name": "Nukuleka",
+  "aliases": [],
+  "region_hint": "oceania",
+  "start_year": -900,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Tongatapu, Tonga",
+  "still_inhabited": true,
+  "peak": "880-750 BCE",
+  "summary": "Founding Lapita village of Tonga, the first human settlement in Polynesia proper.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "mulifanua",
+  "name": "Mulifanua",
+  "aliases": [],
+  "region_hint": "oceania",
+  "start_year": -800,
+  "end_year": -500,
+  "date_precision": "approx",
+  "modern_name": "Upolu, Samoa",
+  "still_inhabited": false,
+  "peak": "800-700 BCE",
+  "summary": "Only known Lapita site in Samoa, now submerged, marking the eastern limit of the first Polynesian push.",
+  "confidence": "low"
+ },
+ {
+  "slug": "mangaasi",
+  "name": "Mangaasi",
+  "aliases": [],
+  "region_hint": "oceania",
+  "start_year": -700,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Efate, Vanuatu",
+  "still_inhabited": false,
+  "peak": "500 BCE - 500 CE",
+  "summary": "Long-occupied post-Lapita village that gave its name to a distinct central Vanuatu ceramic tradition.",
+  "confidence": "low"
+ },
+ {
+  "slug": "roi-mata-domain",
+  "name": "Chief Roi Mata's Domain",
+  "aliases": [
+   "Artok",
+   "Retoka"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1200,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Efate and Lelepa, Vanuatu",
+  "still_inhabited": true,
+  "peak": "1400-1600",
+  "summary": "Residence, cave and mass burial island of a paramount chief whose peace-making order survives in oral tradition.",
+  "confidence": "low"
+ },
+ {
+  "slug": "lapaha",
+  "name": "Mu'a",
+  "aliases": [
+   "Lapaha",
+   "Heketa"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1200,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Tongatapu, Tonga",
+  "still_inhabited": true,
+  "peak": "1300-1500",
+  "summary": "Capital of the Tu'i Tonga maritime chiefdom, with terraced langi tombs of dressed coral slabs.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "haamonga-a-maui",
+  "name": "Heketā and Haʻamonga ʻa Maui",
+  "aliases": [
+   "Niutoua"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1100,
+  "end_year": 1300,
+  "date_precision": "approx",
+  "modern_name": "Tongatapu, Tonga",
+  "still_inhabited": false,
+  "peak": "1200 CE",
+  "summary": "Earlier Tu'i Tonga seat with a coral trilithon gateway, abandoned when the court moved to Mu'a.",
+  "confidence": "low"
+ },
+ {
+  "slug": "pulemelei",
+  "name": "Pulemelei",
+  "aliases": [
+   "Tia Seu Ancient Mound"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1100,
+  "end_year": 1500,
+  "date_precision": "approx",
+  "modern_name": "Savai'i, Samoa",
+  "still_inhabited": false,
+  "peak": "1200-1400",
+  "summary": "Largest ancient structure in Polynesia's west, a stepped stone platform at the heart of a settlement complex.",
+  "confidence": "low"
+ },
+ {
+  "slug": "nan-madol",
+  "name": "Nan Madol",
+  "aliases": [],
+  "region_hint": "oceania",
+  "start_year": 1000,
+  "end_year": 1800,
+  "date_precision": "approx",
+  "modern_name": "Pohnpei, Micronesia",
+  "still_inhabited": false,
+  "peak": "1200-1600",
+  "summary": "Saudeleur capital of nearly 100 artificial islets built of basalt logs, a ceremonial city on a reef lagoon.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "leluh",
+  "name": "Leluh",
+  "aliases": [
+   "Lelu",
+   "Insaru"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1300,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Kosrae, Micronesia",
+  "still_inhabited": true,
+  "peak": "1400-1700",
+  "summary": "Walled basalt city of chiefly compounds and canal streets, Kosrae's counterpart to Nan Madol.",
+  "confidence": "low"
+ },
+ {
+  "slug": "house-of-taga",
+  "name": "House of Taga",
+  "aliases": [
+   "Latte Period Tinian"
+  ],
+  "region_hint": "oceania",
+  "start_year": 900,
+  "end_year": 1700,
+  "date_precision": "approx",
+  "modern_name": "Tinian, Northern Mariana Islands",
+  "still_inhabited": false,
+  "peak": "1200-1600",
+  "summary": "Chamorro latte-stone village whose megalithic pillar houses defined Mariana settlement architecture.",
+  "confidence": "low"
+ },
+ {
+  "slug": "gachpar",
+  "name": "Gachpar",
+  "aliases": [
+   "Gachapar"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1200,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Yap, Micronesia",
+  "still_inhabited": true,
+  "peak": "1500-1800",
+  "summary": "High-ranking Yapese village of stone platforms, paths and rai stone money, head of a tributary network.",
+  "confidence": "low"
+ },
+ {
+  "slug": "badrulchau",
+  "name": "Badrulchau",
+  "aliases": [
+   "Ngarchelong terraces"
+  ],
+  "region_hint": "oceania",
+  "start_year": -100,
+  "end_year": 1200,
+  "date_precision": "approx",
+  "modern_name": "Babeldaob, Palau",
+  "still_inhabited": false,
+  "peak": "400-1000 CE",
+  "summary": "Monolith and terrace complex of Palau's earthwork era, evidence of large organised pre-contact settlement.",
+  "confidence": "low"
+ },
+ {
+  "slug": "taputapuatea",
+  "name": "Taputapuātea",
+  "aliases": [
+   "Taputapuatea"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1000,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Raiatea, French Polynesia",
+  "still_inhabited": true,
+  "peak": "1400-1700",
+  "summary": "Central marae of the Polynesian world and node of the Oro cult, from which voyages and lineages radiated.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "rapa-nui",
+  "name": "Rapa Nui",
+  "aliases": [
+   "Easter Island",
+   "Rano Raraku",
+   "Ahu Tongariki"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1100,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Easter Island, Chile",
+  "still_inhabited": true,
+  "peak": "1300-1600",
+  "summary": "Island society of dispersed hamlets and ahu platforms that carved and moved nearly a thousand moai.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "orongo",
+  "name": "Orongo",
+  "aliases": [],
+  "region_hint": "oceania",
+  "start_year": 1400,
+  "end_year": 1867,
+  "date_precision": "approx",
+  "modern_name": "Easter Island, Chile",
+  "still_inhabited": false,
+  "peak": "1600-1860",
+  "summary": "Ceremonial village of stone-slab houses on a crater rim, used seasonally for the birdman competition.",
+  "confidence": "low"
+ },
+ {
+  "slug": "wailua",
+  "name": "Wailua",
+  "aliases": [
+   "Wailua Complex of Heiau"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1100,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Kaua'i, Hawaii, USA",
+  "still_inhabited": true,
+  "peak": "1400-1780",
+  "summary": "Royal seat of Kaua'i, a sacred river district chaining heiau, birthstones and a place of refuge.",
+  "confidence": "low"
+ },
+ {
+  "slug": "honaunau",
+  "name": "Hōnaunau",
+  "aliases": [
+   "Pu'uhonua o Honaunau",
+   "City of Refuge"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1200,
+  "end_year": 1819,
+  "date_precision": "approx",
+  "modern_name": "Hawai'i Island, USA",
+  "still_inhabited": false,
+  "peak": "1500-1800",
+  "summary": "Chiefly compound and walled place of refuge where kapu-breakers were granted sanctuary.",
+  "confidence": "low"
+ },
+ {
+  "slug": "kahikinui",
+  "name": "Kahikinui",
+  "aliases": [],
+  "region_hint": "oceania",
+  "start_year": 1400,
+  "end_year": 1850,
+  "date_precision": "approx",
+  "modern_name": "Maui, Hawaii, USA",
+  "still_inhabited": false,
+  "peak": "1550-1800",
+  "summary": "Dryland Hawaiian settlement district of hundreds of house sites and shrines, a study in intensive rain-fed farming.",
+  "confidence": "low"
+ },
+ {
+  "slug": "waimea-kohala",
+  "name": "Kohala field system settlements",
+  "aliases": [
+   "Lapakahi"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1300,
+  "end_year": 1850,
+  "date_precision": "approx",
+  "modern_name": "Hawai'i Island, USA",
+  "still_inhabited": false,
+  "peak": "1500-1780",
+  "summary": "Dense coastal-to-upland Hawaiian villages tied to a vast walled dryland field system supporting chiefdoms.",
+  "confidence": "low"
+ },
+ {
+  "slug": "taipivai",
+  "name": "Taipivai",
+  "aliases": [
+   "Paeke"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1100,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Nuku Hiva, Marquesas",
+  "still_inhabited": true,
+  "peak": "1500-1800",
+  "summary": "Marquesan valley polity of stone paepae platforms and tohua plazas with monumental tiki.",
+  "confidence": "low"
+ },
+ {
+  "slug": "me-ae-iipona",
+  "name": "Meʻae Iipona",
+  "aliases": [
+   "Puamau"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1200,
+  "end_year": 1850,
+  "date_precision": "approx",
+  "modern_name": "Hiva Oa, Marquesas",
+  "still_inhabited": false,
+  "peak": "1500-1800",
+  "summary": "Marquesan ceremonial site with the largest stone tiki in Polynesia outside Rapa Nui.",
+  "confidence": "low"
+ },
+ {
+  "slug": "ara-metua",
+  "name": "Ara Metua settlements",
+  "aliases": [
+   "Rarotonga marae"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1000,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Rarotonga, Cook Islands",
+  "still_inhabited": true,
+  "peak": "1300-1700",
+  "summary": "Ring-road and marae network organising Rarotonga's districts, a rare paved road system in Polynesia.",
+  "confidence": "low"
+ },
+ {
+  "slug": "maungakiekie",
+  "name": "Maungakiekie",
+  "aliases": [
+   "One Tree Hill pā"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1300,
+  "end_year": 1750,
+  "date_precision": "approx",
+  "modern_name": "Auckland, New Zealand",
+  "still_inhabited": false,
+  "peak": "1500-1700",
+  "summary": "Largest Māori pā, a terraced volcanic cone fortress-town holding several thousand people.",
+  "confidence": "low"
+ },
+ {
+  "slug": "wairau-bar",
+  "name": "Wairau Bar",
+  "aliases": [
+   "Te Pokohiwi"
+  ],
+  "region_hint": "oceania",
+  "start_year": 1280,
+  "end_year": 1450,
+  "date_precision": "approx",
+  "modern_name": "Marlborough, New Zealand",
+  "still_inhabited": false,
+  "peak": "1300-1400",
+  "summary": "Earliest substantial settlement in New Zealand, a founding East Polynesian village and burial ground.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "kohika",
+  "name": "Kohika",
+  "aliases": [],
+  "region_hint": "oceania",
+  "start_year": 1600,
+  "end_year": 1750,
+  "date_precision": "approx",
+  "modern_name": "Bay of Plenty, New Zealand",
+  "still_inhabited": false,
+  "peak": "1650-1700",
+  "summary": "Waterlogged Māori lake village whose preserved wooden houses and canoes document pre-contact life.",
+  "confidence": "low"
+ },
+ {
+  "slug": "budj-bim",
+  "name": "Budj Bim",
+  "aliases": [
+   "Lake Condah"
+  ],
+  "region_hint": "oceania",
+  "start_year": -4500,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Victoria, Australia",
+  "still_inhabited": true,
+  "peak": "1000-1800 CE",
+  "summary": "Gunditjmara aquaculture landscape of eel channels, weirs and stone house clusters, a sedentary Aboriginal settlement.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "brewarrina-fish-traps",
+  "name": "Brewarrina fish traps",
+  "aliases": [
+   "Baiame's Ngunnhu"
+  ],
+  "region_hint": "oceania",
+  "start_year": -4000,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "New South Wales, Australia",
+  "still_inhabited": true,
+  "peak": "pre-1800 CE",
+  "summary": "Vast stone fish-trap complex on the Barwon that hosted large intertribal gatherings and shared harvests.",
+  "confidence": "low"
+ },
+ {
+  "slug": "lake-mungo",
+  "name": "Lake Mungo",
+  "aliases": [
+   "Willandra Lakes"
+  ],
+  "region_hint": "oceania",
+  "start_year": -48000,
+  "end_year": -15000,
+  "date_precision": "approx",
+  "contested": "Included as a long-term occupation and ritual landscape, not a city.",
+  "modern_name": "New South Wales, Australia",
+  "still_inhabited": false,
+  "peak": "40000-20000 BCE",
+  "summary": "Ancient lakeside occupation and burial landscape with the earliest known cremation, a deep-time Aboriginal settlement.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "kuk-swamp",
+  "name": "Kuk Swamp",
+  "aliases": [
+   "Kuk"
+  ],
+  "region_hint": "oceania",
+  "start_year": -7000,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Western Highlands, Papua New Guinea",
+  "still_inhabited": true,
+  "peak": "5000-2000 BCE",
+  "summary": "Independent centre of agricultural origins, with drained garden mounds supporting dense highland populations.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "palembang-srivijaya",
+  "name": "Palembang",
+  "aliases": [
+   "Srivijaya capital",
+   "Bukit Seguntang"
+  ],
+  "region_hint": "southeast-asia",
+  "start_year": 600,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "South Sumatra, Indonesia",
+  "still_inhabited": true,
+  "peak": "700-1000 CE",
+  "summary": "Riverine capital of Srivijaya, the thalassocracy that controlled the Malacca and Sunda straits.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "muara-jambi",
+  "name": "Muara Jambi",
+  "aliases": [
+   "Melayu"
+  ],
+  "region_hint": "southeast-asia",
+  "start_year": 700,
+  "end_year": 1400,
+  "date_precision": "approx",
+  "modern_name": "Jambi, Indonesia",
+  "still_inhabited": false,
+  "peak": "1000-1200",
+  "summary": "Largest Buddhist temple-city complex in Sumatra, a monastic and trading centre of the Malayu polity.",
+  "confidence": "low"
+ },
+ {
+  "slug": "trowulan",
+  "name": "Trowulan",
+  "aliases": [
+   "Majapahit capital",
+   "Wilwatikta"
+  ],
+  "region_hint": "southeast-asia",
+  "start_year": 1290,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "East Java, Indonesia",
+  "still_inhabited": true,
+  "peak": "1350-1450",
+  "summary": "Brick city of canals and reservoirs that served as capital of the Majapahit maritime empire.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "prambanan-mataram",
+  "name": "Prambanan",
+  "aliases": [
+   "Mataram capital",
+   "Medang"
+  ],
+  "region_hint": "southeast-asia",
+  "start_year": 730,
+  "end_year": 950,
+  "date_precision": "approx",
+  "modern_name": "Central Java, Indonesia",
+  "still_inhabited": false,
+  "peak": "850-930 CE",
+  "summary": "Royal temple-city of Hindu Mataram on the Kewu plain, abandoned when the court moved east.",
+  "confidence": "medium"
+ },
+ {
+  "slug": "temasek",
+  "name": "Temasek",
+  "aliases": [
+   "Singapura",
+   "Singapore"
+  ],
+  "region_hint": "southeast-asia",
+  "start_year": 1300,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Singapore",
+  "still_inhabited": true,
+  "peak": "1350-1400",
+  "summary": "Fortified 14th-century port settlement on Fort Canning hill, precursor to modern Singapore.",
+  "confidence": "low"
+ },
+ {
+  "slug": "kota-batu-brunei",
+  "name": "Kota Batu",
+  "aliases": [
+   "Po-ni",
+   "Brunei"
+  ],
+  "region_hint": "southeast-asia",
+  "start_year": 1000,
+  "end_year": 1600,
+  "date_precision": "approx",
+  "modern_name": "Brunei Darussalam",
+  "still_inhabited": false,
+  "peak": "1400-1550",
+  "summary": "Early Bruneian capital and China-trade port on Borneo's north coast, forerunner of the sultanate.",
+  "confidence": "low"
+ },
+ {
+  "slug": "butuan",
+  "name": "Butuan",
+  "aliases": [],
+  "region_hint": "southeast-asia",
+  "start_year": 900,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Mindanao, Philippines",
+  "still_inhabited": true,
+  "peak": "1000-1300",
+  "summary": "Balangay-building trading polity of northern Mindanao with early gold work and Song-era China links.",
+  "confidence": "low"
+ },
+ {
+  "slug": "tondo",
+  "name": "Tondo",
+  "aliases": [
+   "Maynila",
+   "Manila"
+  ],
+  "region_hint": "southeast-asia",
+  "start_year": 900,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Manila, Philippines",
+  "still_inhabited": true,
+  "peak": "1400-1570",
+  "summary": "Pasig delta trading polity named in the 900 CE Laguna Copperplate, later the core of Manila.",
+  "confidence": "low"
+ },
+ {
+  "slug": "cebu-sugbu",
+  "name": "Sugbu",
+  "aliases": [
+   "Cebu"
+  ],
+  "region_hint": "southeast-asia",
+  "start_year": 1200,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Cebu, Philippines",
+  "still_inhabited": true,
+  "peak": "1400-1521",
+  "summary": "Visayan port polity and regional entrepôt where Magellan's expedition landed in 1521.",
+  "confidence": "low"
+ },
+ {
+  "slug": "pejeng",
+  "name": "Pejeng",
+  "aliases": [
+   "Bedulu"
+  ],
+  "region_hint": "southeast-asia",
+  "start_year": 800,
+  "end_year": null,
+  "date_precision": "approx",
+  "modern_name": "Bali, Indonesia",
+  "still_inhabited": true,
+  "peak": "1000-1300",
+  "summary": "Capital district of early Balinese kingdoms, with rock-cut sanctuaries and the great Moon of Pejeng drum.",
+  "confidence": "low"
+ }
+]

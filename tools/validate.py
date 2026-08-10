@@ -168,6 +168,24 @@ for e in entities:
             f"{e.get('start_dating_method')}"
         )
 
+# Rule 6a: a url becomes a live href in the readout, so its scheme is a security
+# boundary, not a formatting preference. `javascript:` in this field would
+# execute on click. The schema's `"format": "uri"` annotation does not catch this
+# -- jsonschema ignores format unless a format_checker is passed, which it is
+# not, and `javascript:...` is a syntactically valid URI regardless. A url is
+# optional (two print-only sources legitimately have none); if present it must be
+# http or https.
+_SAFE_URL = re.compile(r"^https?://")
+for _s in _sources:
+    _u = _s.get("url")
+    if _u is not None and not _SAFE_URL.match(_u):
+        errors.append(f"source {_s['id']}: url must be http(s), got {_u!r}")
+for _e in entities:
+    for _l in _e.get("links", []):
+        _u = _l.get("url")
+        if _u is not None and not _SAFE_URL.match(_u):
+            errors.append(f"entity {_e['id']}: link url must be http(s), got {_u!r}")
+
 # Rule 6: an uncited registry entry is dead weight.
 for sid in sorted(source_ids - cited):
     warnings.append(f"source {sid}: in the registry but cited by nothing")

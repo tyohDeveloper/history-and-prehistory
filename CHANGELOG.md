@@ -16,6 +16,16 @@ this release.
 
 ## [3.22.0.0-app] — 2026-08-09
 
+### Security
+
+- `validate.py` now rejects any source or link `url` that is not `http(s)`. A
+  url becomes a live `href` in the readout, so its scheme is a security
+  boundary: `javascript:` there would execute on click. The schema's
+  `"format": "uri"` annotation never caught this — jsonschema ignores `format`
+  unless a `format_checker` is passed, which it was not, and `javascript:...`
+  is a valid URI anyway. Found by the pre-publish security review, which is
+  recorded in `docs/security-review-2026-08-09.md`.
+
 ### Changed
 
 - Ships dataset 0.24.0.0. Size baseline 243,161 bytes gzip.

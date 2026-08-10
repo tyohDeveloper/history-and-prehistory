@@ -546,7 +546,7 @@ Real records, verbatim. Each strains the schema differently.
 > Not found in the dataset, which is itself a finding: Chernobyl
 
 
-## The 24 open issues, distilled
+## The open issues, distilled
 
 Grouped by what they're really about, since many are symptoms of the same few causes.
 
@@ -585,6 +585,42 @@ unresolved (#26).
 date (#2), and the standing editorial policy is that a real thing is included with no source
 rather than omitted, with citation deferred (#28). Treat missing citations as intended
 state, not as an error.
+
+**Naming and identity are unreliable, and this is the group with the most evidence behind
+it.** Every item here is a mistake actually made while authoring, or a defect found by chasing
+a user's bug report; the full write-up is in `consult-addendum-naming.md`.
+
+Ids are not derivable from names and the convention varies within a single dynasty —
+`Thutmose III` is `thutmose3` while Thutmose I, II and IV are `thutmose-i`, `thutmose-ii`,
+`thutmose-iv`. **128 entities have an id path that contradicts their own `parent_id`**: ids
+look like paths and authors read them as paths, but `global.paleolithic` is parented to
+`global.prehistory`, and Roman emperors keep flat ids under `...rome.empire` while being
+filed under dynasties. Some divergence is deliberate; at 128 instances nobody can tell the
+deliberate cases from the accidental ones — and one was accidental, the Roman Empire being
+parented to `europe.mediterranean` so that no emperor's ancestor chain passed through a node
+named "Rome", which is why a user reported that searching "Rome" returned no Roman rulers.
+
+**Display names are not unique: 15 collisions today** — Shōwa, Jōwa, Jōgen, Eishō, Kōwa,
+Tenshō, Kōji, Jōō, Kōan and Enkyō each appear twice as distinct Japanese eras separable only
+by `native_name`; Emperor Taizong, Gaozong and Shun each name two different men; and
+`Mesoamerica` and `Andes` are each reused at two points in the region tree. Any handle keyed
+on the display name collides on day one.
+
+Regnal numbering defeats name-based duplicate detection — `thutmose` matches four people,
+`ptolemy` four, `ramesses` four — and name-only matching also produces false positives across
+unrelated people (Romulus against Romulus Augustulus, Tiberius Gracchus against the emperor
+Tiberius). Two duplicate people were authored before a validator rule existed (#37 area).
+
+`name_forms` has eight kinds in use (`common` 60, `scholarly` 46, `endonym` 36, `historical`
+34, `exonym` 31, `formal` 24, `translation` 10, `rejected` 4) but cannot express the plainest
+case of all: **"Rome" and "Roman" are the same referent in different grammatical forms.** Nor
+can it hold orthographic variants (#4) or a second romanisation system alongside Wade-Giles
+(#3). Multilingual architecture remains unresolved (#10).
+
+Filing depth is unpredictable from the authoring side, not just the reader's: twice this
+session an author concluded a container was empty and began authoring into it when the
+entities sat one level deeper — Julius Caesar is under `...rome.republic.late`, not
+`...rome.republic` (#17).
 
 **Presentation and structure debt.** Entities are filed at inconsistent depths between
 branches (#17); `researchNote` is exported and tested but wired to no control (#6);

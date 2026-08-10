@@ -1,5 +1,89 @@
 # Changelog
 
+## 0.31.0.0 — Phoenicia and the Vedic period (2026-08-10)
+
+The two widest childless blocks `coverage.py` was reporting. Both were hiding a
+wrong date.
+
+### Phoenicia ended in the wrong century
+
+The entity ran 1500-539 BCE. **539 BCE is the Persian conquest — a change of
+imperial overlord, not an end.** Under Achaemenid rule Tyre, Sidon and Byblos kept
+their own kings and fleets; Sidon revolted in the 350s; Tyre held out against
+Alexander for seven months. Homeland Phoenician independence ends in **332 BCE**
+with the fall of Tyre. Corrected, with 539 kept as a sourced `minority`
+alternative.
+
+Now carries five periods (Late Bronze Age Canaanite, Independence, Assyrian,
+Babylonian, Persian) and four cities (Byblos, Sidon, Tyre, Arwad), with Carthage
+cross-linked.
+
+### The name problem goes deeper here than Byzantine did
+
+With Byzantium an exonym displaced a self-designation that is known. Here **there
+may be no self-designation to recover.** The evidence — tombstones, coinage, the
+near-total loss of Phoenician literature — shows people identifying as Tyrian,
+Sidonian or Byblian, by city and family. Josephine Quinn argues "the Phoenicians"
+as a self-conscious people is substantially a modern scholarly construction; the
+Met treats Canaanite as the plausible collective self-term. Both recorded, neither
+adopted.
+
+Also recorded: Phoenicia was **never a state, empire or confederation** —
+Britannica, the Met, Lipiński and Quinn agree — and **Punic versus Phoenician is a
+modern split**, not one the ancient sources draw consistently.
+
+### The Vedic period's end date describes a language, not a polity
+
+Split into Early Vedic (Rigvedic) and Later Vedic, plus the corpus. **500 BCE is a
+convention tied to Panini and the closing of the Vedic texts.** The political and
+economic transition — the mahajanapadas, the second urbanisation, the Buddha and
+Mahavira — is more consistently dated around 600 BCE, which is where this
+dataset's Mahajanapadas entity already begins. Both recorded, and the overlap is
+now deliberate rather than an accidental gap.
+
+**Painted Grey Ware belongs to the Later Vedic phase only**, roughly 1200-600 BCE
+— a distinction the single undivided block silently erased.
+
+### Three claims kept apart
+
+The Indo-Aryan migration question is represented, not settled. Public argument
+merges three separable claims and the caveats keep them apart: a **linguistic**
+claim about language origin, an **archaeological** claim about material
+continuity, and a **genetic** claim about steppe ancestry. Named proponents on
+both sides — Witzel, Parpola and Anthony for migration; Talageri, Elst and Danino
+against — with Bryant's survey cited for both.
+
+The genetic evidence already existed in this dataset, sourced, at
+`south-asia.steppe-ancestry`. The Vedic node **links** to it with relation type
+`other` rather than something stronger, because calling it "predecessor of" or
+"part of" would assert the very connection under dispute.
+
+### The dating method was wrong, and the screenshot said so
+
+First attempt marked these `typological`, which puts a date on the scientific side
+of the frame rule — so the readout rendered the Vedic period as **"3,449 - 2,449
+BP"**. Nobody dates the Rigveda in years before present. Same failure as Chaco
+Canyon rendering as "1,100 - 700 BP".
+
+`received` is both the fix and the more accurate description: the schema defines it
+as a date "arrived at by transmission rather than by measurement or attestation"
+and cites typology-derived brackets as an example. A date inferred from the
+internal stratigraphy of a language and handed down through scholarship is exactly
+that.
+
+### One gap closed, a smaller one opened
+
+Phoenicia and the Vedic period both leave the childless-era report. **Byblos
+immediately joins it**, as a single 2,668-year block. The tool is right — same
+shape of problem, one level down — but the research covers the city's phases only
+lightly and inventing subdivisions to satisfy a report would be worse than a
+visible gap.
+
+### Counts
+
+1,705 → 1,717 entities. 670 → 689 sources. Entities carrying a source 479 → 495.
+Unsourced foundational dates 271 → 269.
+
 ## 0.30.0.0 — A cross-region placement now needs a source (2026-08-09)
 
 Twice in three releases a pass added `cross_parent_ids` asserting that a polity

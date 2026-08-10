@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.30.0.0",
-  "generated_at": "2026-08-10T04:45:58Z",
+  "dataset_version": "0.31.0.0",
+  "generated_at": "2026-08-10T05:04:48Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2102,6 +2102,139 @@
       "citation": "'Indo-Greek kingdom', Encyclopaedia Britannica",
       "url": "https://www.britannica.com/topic/Indo-Greek-kingdom",
       "note": "Descended from Greco-Bactrian rule; 'Hellenistic influence on the culture of Central Asia and northwestern India has been considerable.'"
+    },
+    {
+      "id": "britannica-phoenicia",
+      "kind": "reference",
+      "citation": "'Phoenicia', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Phoenicia",
+      "note": "Phoenicia was never a unified state: a set of independent city-states with shifting primacy, and the name is Greek."
+    },
+    {
+      "id": "britannica-lebanon-assyrian-babylonian",
+      "kind": "reference",
+      "citation": "'Lebanon: Assyrian and Babylonian domination of Phoenicia', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Lebanon/Assyrian-and-Babylonian-domination-of-Phoenicia",
+      "note": "The successive imperial overlordships -- Assyrian, Babylonian, then Persian -- under which the cities retained their kings."
+    },
+    {
+      "id": "britannica-byblos",
+      "kind": "reference",
+      "citation": "'Byblos', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Byblos",
+      "note": "The oldest continuously occupied of the cities and dominant in the earliest period, trading with Egypt from the third millennium."
+    },
+    {
+      "id": "britannica-tyre",
+      "kind": "reference",
+      "citation": "'Tyre', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Tyre",
+      "note": "Dominant from roughly the tenth century; founded the western colonies; fell to Alexander in 332 BCE after a seven-month siege."
+    },
+    {
+      "id": "britannica-sidon",
+      "kind": "reference",
+      "citation": "'Sidon', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Sidon",
+      "note": "Held primacy between the Byblian and Tyrian phases, and revolted against Persia in the fourth century."
+    },
+    {
+      "id": "britannica-jazirat-arwad",
+      "kind": "reference",
+      "citation": "'Jazirat Arwad', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Jazirat-Arwad",
+      "note": "The northernmost city, on an island off the Syrian coast."
+    },
+    {
+      "id": "met-phoenicia",
+      "kind": "reference",
+      "citation": "'The Phoenicians', The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/toah/hd/phoe/hd_phoe.htm",
+      "note": "Treats Canaanite as the plausible self-designation, and frames the Phoenician period as roughly 1500-300 BCE."
+    },
+    {
+      "id": "quinn-in-search-of-the-phoenicians",
+      "kind": "scholarly",
+      "citation": "Quinn, In Search of the Phoenicians (Princeton, 2018)",
+      "url": "https://press.princeton.edu/books/hardcover/9780691175270/in-search-of-the-phoenicians",
+      "note": "Argues that a collective Phoenician identity is substantially a modern construction, and that the ancient evidence shows self-identification by city and family rather than by people."
+    },
+    {
+      "id": "bmcr-review-quinn-phoenicians",
+      "kind": "scholarly",
+      "citation": "Bryn Mawr Classical Review, review of Quinn",
+      "url": "https://bmcr.brynmawr.edu/2015/2015.09.53/",
+      "note": "Academic engagement with the argument, indicating it is contested rather than settled in either direction."
+    },
+    {
+      "id": "britannica-carthage",
+      "kind": "reference",
+      "citation": "'Carthage', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Carthage-ancient-city-Tunisia",
+      "note": "Traditionally founded from Tyre in 814 BCE; archaeology converges on the late ninth century."
+    },
+    {
+      "id": "britannica-siege-of-tyre",
+      "kind": "reference",
+      "citation": "'Siege of Tyre', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Siege-of-Tyre-332-BCE",
+      "note": "332 BCE, the end of Tyrian and effectively of homeland Phoenician independence."
+    },
+    {
+      "id": "britannica-india-history",
+      "kind": "reference",
+      "citation": "'India: History', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/India/History",
+      "note": "The conventional Early and Later Vedic division and the transition to the mahajanapadas."
+    },
+    {
+      "id": "britannica-vedic-religion",
+      "kind": "reference",
+      "citation": "'Vedic religion', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Vedic-religion",
+      "note": "The corpus and its ordering: Rigveda, the other Vedas, Brahmanas, Upanishads."
+    },
+    {
+      "id": "witzel-early-indian-history-linguistic",
+      "kind": "scholarly",
+      "citation": "Witzel, 'Early Indian history: linguistic and textual parameters', Electronic Journal of Vedic Studies",
+      "url": "https://web.archive.org/web/20180527150828/http:/www.people.fas.harvard.edu/~witzel/EJVS-7-3.htm",
+      "note": "The linguistic-stratigraphic case for dating the Vedic texts, and a three-stage subdivision of the Rigvedic period."
+    },
+    {
+      "id": "narasimhan-2019-genomic-formation",
+      "kind": "scholarly",
+      "citation": "Narasimhan et al., 'The formation of human populations in South and Central Asia', Science (2019)",
+      "url": "https://reich.hms.harvard.edu/sites/reich.hms.harvard.edu/files/inline-files/eaat7487.full_.pdf",
+      "note": "Ancient DNA evidence for steppe ancestry entering South Asia in the second millennium BCE. A genetic claim, which does not by itself date a text or identify a language."
+    },
+    {
+      "id": "thapar-early-india",
+      "kind": "scholarly",
+      "citation": "Thapar, Early India: From the Origins to AD 1300",
+      "url": "https://www.ucpress.edu/books/early-india/paper",
+      "note": "The mainstream account of Vedic society and a qualified discontinuity reading of the Indus-to-Vedic transition."
+    },
+    {
+      "id": "bryant-quest-origins-vedic-culture",
+      "kind": "scholarly",
+      "citation": "Bryant, The Quest for the Origins of Vedic Culture (Oxford, 2001)",
+      "url": "https://academic.oup.com/book/9484/chapter/156449269",
+      "note": "A survey that sets out the Indigenous Aryan arguments and the mainstream replies without adopting either, and is cited by both sides."
+    },
+    {
+      "id": "pgw-archaeology",
+      "kind": "scholarly",
+      "citation": "Studies of the Painted Grey Ware horizon",
+      "url": "https://hal.science/hal-03097955v1/document",
+      "note": "Associates Painted Grey Ware with the Later Vedic phase specifically, roughly 1200-600 BCE, rather than with the whole Vedic period."
+    },
+    {
+      "id": "britannica-mahajanapada",
+      "kind": "reference",
+      "citation": "'Mahajanapada', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/mahajanapada",
+      "note": "The sixteen great realms and the second urbanisation of the Ganges plain."
     },
     {
       "id": "carson-hung-2022-luzon",

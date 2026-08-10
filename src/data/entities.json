@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.30.0.0",
-  "generated_at": "2026-08-10T04:45:58Z",
+  "dataset_version": "0.31.0.0",
+  "generated_at": "2026-08-10T05:04:48Z",
   "entities": [
     {
       "id": "global",
@@ -6662,10 +6662,83 @@
       "name": "Phoenician City-States",
       "parent_id": "west-asia.mesopotamia",
       "start_year": -1500,
-      "end_year": -539,
-      "tier": "intermediate",
-      "summary": "Tyre, Sidon, Byblos. Founded Carthage and colonized the Mediterranean.",
-      "date_precision": "approx"
+      "end_year": -332,
+      "tier": "foundational",
+      "summary": "Independent Canaanite-speaking city-states on the Levantine coast, never politically unified.",
+      "date_precision": "approx",
+      "date_note": "Previously ended at 539 BCE, the Persian conquest. That marks a change of imperial overlord rather than an end: under Achaemenid rule Tyre, Sidon and Byblos kept their own kings and fleets, Sidon revolted, and Tyre withstood Alexander for seven months. Homeland independence ends in 332 BCE with the fall of Tyre. The start is approximate and marks the Late Bronze Age Canaanite phase from which these cities emerge, not a founding.",
+      "source_ids": [
+        "britannica-phoenicia",
+        "met-phoenicia",
+        "britannica-lebanon-assyrian-babylonian",
+        "britannica-siege-of-tyre"
+      ],
+      "alternatives": [
+        {
+          "label": "539 BCE, the Persian conquest",
+          "standing": "minority",
+          "end_year": -539,
+          "note": "A change of overlord; the cities kept their kings for two more centuries.",
+          "source_ids": [
+            "britannica-lebanon-assyrian-babylonian"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Phoenicia is Greek. No native collective equivalent is known: people identified as Tyrian, Sidonian or Byblian.",
+          "source_ids": [
+            "britannica-phoenicia",
+            "met-phoenicia"
+          ]
+        },
+        {
+          "kind": "contested-existence",
+          "text": "Quinn argues a collective Phoenician identity is largely a modern construction; others treat Canaanite as the self-designation. The question is open.",
+          "source_ids": [
+            "quinn-in-search-of-the-phoenicians",
+            "bmcr-review-quinn-phoenicians",
+            "met-phoenicia"
+          ]
+        },
+        {
+          "kind": "contested-existence",
+          "text": "Never a state, an empire or a confederation -- independent competing cities under shifting informal primacy.",
+          "source_ids": [
+            "britannica-phoenicia",
+            "met-phoenicia"
+          ]
+        }
+      ],
+      "name_forms": [
+        {
+          "name": "Phoenicia",
+          "kind": "exonym",
+          "lang": "grc",
+          "note": "From Greek phoinix. The name a reader arrives with, and an outsider's.",
+          "source_ids": [
+            "britannica-phoenicia"
+          ]
+        },
+        {
+          "name": "Canaanite",
+          "kind": "endonym",
+          "note": "The plausible self-term per the Met; Quinn rejects even this as a collective identity.",
+          "source_ids": [
+            "met-phoenicia",
+            "quinn-in-search-of-the-phoenicians"
+          ]
+        }
+      ],
+      "regions": [
+        "africa",
+        "west-asia"
+      ],
+      "aliases": [
+        "Phoenicia",
+        "Canaanite"
+      ]
     },
     {
       "id": "west-asia.iran.elam",
@@ -9094,7 +9167,59 @@
       "end_year": -500,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "Age of the Vedas; formation of Hindu religious tradition and Sanskrit literature."
+      "summary": "The period of the Vedic corpus in northern South Asia, dated from the texts rather than from excavation.",
+      "date_note": "Both ends are conventions and neither is measured. The 1500 BCE start rests on linguistic dating of the Rigveda, not on a datable event or layer. The 500 BCE end is tied to Panini and the closing of the corpus -- a fact about language; the political and economic transition to the mahajanapadas and the second urbanisation is more consistently dated around 600 BCE, and this dataset's Mahajanapadas entity begins there, so the two deliberately overlap.",
+      "start_dating_method": "received",
+      "source_ids": [
+        "britannica-india-history",
+        "witzel-early-indian-history-linguistic",
+        "thapar-early-india"
+      ],
+      "alternatives": [
+        {
+          "label": "Ends c. 600 BCE, on the political transition",
+          "standing": "majority",
+          "end_year": -600,
+          "dating_method": "received",
+          "note": "The mahajanapadas, the second urbanisation, the Buddha and Mahavira.",
+          "source_ids": [
+            "britannica-india-history",
+            "britannica-mahajanapada"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "misconception",
+          "text": "Dated by comparative linguistics and internal textual evidence, not by excavation. These texts are not archaeological layers.",
+          "source_ids": [
+            "witzel-early-indian-history-linguistic"
+          ]
+        },
+        {
+          "kind": "contested-existence",
+          "text": "How Indo-Aryan speech arrived is disputed: Witzel, Parpola and Anthony argue steppe migration; Talageri, Elst and Danino argue against it. Bryant surveys both.",
+          "source_ids": [
+            "witzel-early-indian-history-linguistic",
+            "bryant-quest-origins-vedic-culture"
+          ]
+        },
+        {
+          "kind": "contested-existence",
+          "text": "Three claims get merged here: language origin, material continuity, and steppe ancestry in genomes. Evidence for one is not evidence for another.",
+          "source_ids": [
+            "narasimhan-2019-genomic-formation",
+            "bryant-quest-origins-vedic-culture"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "entity_id": "south-asia.steppe-ancestry",
+          "type": "other",
+          "note": "The genetic evidence, which is a separate claim from the linguistic and archaeological ones."
+        }
+      ]
     },
     {
       "id": "south-asia.mahajanapadas",
@@ -9104,7 +9229,12 @@
       "start_year": -600,
       "end_year": -345,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "britannica-india-history",
+        "britannica-mahajanapada"
+      ],
+      "date_note": "Overlaps the Later Vedic period on purpose: the second urbanisation is under way while the Vedic corpus is still closing, and the conventional Vedic end date of 500 BCE describes the language rather than the politics."
     },
     {
       "id": "south-asia.maurya",
@@ -9795,7 +9925,39 @@
       "end_year": -146,
       "tier": "foundational",
       "summary": "Phoenician-founded maritime empire of the western Mediterranean.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "britannica-carthage",
+        "britannica-tyre"
+      ],
+      "cross_parent_ids": [
+        "west-asia.mesopotamia.phoenicia"
+      ],
+      "date_note": "Founded from Tyre; the traditional date is 814 BCE and archaeology converges on the late ninth century. Punic is a modern term for the western Phoenicians rather than an ancient distinction the sources themselves draw.",
+      "alternatives": [
+        {
+          "label": "814 BCE, the traditional founding",
+          "standing": "traditional",
+          "start_year": -814,
+          "source_ids": [
+            "britannica-carthage"
+          ]
+        }
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "Punic and Phoenician are a modern scholarly split, not one the ancient sources make consistently.",
+          "source_ids": [
+            "quinn-in-search-of-the-phoenicians",
+            "britannica-carthage"
+          ]
+        }
+      ],
+      "regions": [
+        "africa",
+        "west-asia"
+      ]
     },
     {
       "id": "africa.north.carthage.hannibal",
@@ -9806,6 +9968,10 @@
       "end_year": -183,
       "tier": "foundational",
       "date_precision": "approx",
+      "regions": [
+        "africa",
+        "west-asia"
+      ],
       "summary": "Carthaginian general; crossed the Alps with elephants and terrorized Roman Italy for 15 years."
     },
     {
@@ -28668,6 +28834,191 @@
       ],
       "summary": "Ruled Iran except Khorasan from Shiraz, remembered for an unusually peaceful reign.",
       "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.mesopotamia.phoenicia.canaanite-phase",
+      "kind": "period",
+      "name": "Late Bronze Age Canaanite Phase",
+      "parent_id": "west-asia.mesopotamia.phoenicia",
+      "start_year": -1500,
+      "end_year": -1200,
+      "tier": "intermediate",
+      "source_ids": [
+        "met-phoenicia"
+      ],
+      "date_precision": "approx",
+      "summary": "The cities under Egyptian and Hittite overlordship, before the collapse that freed them."
+    },
+    {
+      "id": "west-asia.mesopotamia.phoenicia.independence",
+      "kind": "period",
+      "name": "Phoenician Independence",
+      "parent_id": "west-asia.mesopotamia.phoenicia",
+      "start_year": -1200,
+      "end_year": -883,
+      "tier": "foundational",
+      "date_note": "Begins with the collapse rather than with any Phoenician event. Ends as Assyrian pressure resumes under Ashurnasirpal II.",
+      "source_ids": [
+        "britannica-phoenicia",
+        "britannica-lebanon-assyrian-babylonian"
+      ],
+      "date_precision": "approx",
+      "summary": "Three centuries of genuine autonomy after the Bronze Age Collapse removed the empires above them — the period of the alphabet and the western voyages."
+    },
+    {
+      "id": "west-asia.mesopotamia.phoenicia.assyrian-period",
+      "kind": "period",
+      "name": "Under Assyria",
+      "parent_id": "west-asia.mesopotamia.phoenicia",
+      "start_year": -883,
+      "end_year": -612,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-lebanon-assyrian-babylonian"
+      ],
+      "summary": "Tributary to Assyria, with the cities retaining their kings.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.mesopotamia.phoenicia.babylonian-period",
+      "kind": "period",
+      "name": "Under Babylon",
+      "parent_id": "west-asia.mesopotamia.phoenicia",
+      "start_year": -612,
+      "end_year": -539,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-lebanon-assyrian-babylonian"
+      ],
+      "summary": "Nebuchadnezzar II besieged Tyre for thirteen years.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.mesopotamia.phoenicia.persian-period",
+      "kind": "period",
+      "name": "Under Persia",
+      "parent_id": "west-asia.mesopotamia.phoenicia",
+      "start_year": -539,
+      "end_year": -332,
+      "tier": "foundational",
+      "source_ids": [
+        "britannica-lebanon-assyrian-babylonian",
+        "britannica-siege-of-tyre"
+      ],
+      "summary": "Achaemenid subjects supplying the imperial navy, still ruled by their own kings — which is why 539 is the wrong place to end Phoenicia.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.mesopotamia.phoenicia.byblos",
+      "kind": "era",
+      "name": "Byblos",
+      "parent_id": "west-asia.mesopotamia.phoenicia",
+      "start_year": -3000,
+      "end_year": -332,
+      "tier": "foundational",
+      "date_note": "Occupied far earlier than the Phoenician period proper; the start marks its Egyptian trade rather than a founding.",
+      "source_ids": [
+        "britannica-byblos"
+      ],
+      "date_precision": "approx",
+      "allow_outside_parent_dates": true,
+      "summary": "The oldest of the cities and the earliest to dominate, trading cedar with Egypt from the third millennium.",
+      "native_name": "𐤂𐤁𐤋"
+    },
+    {
+      "id": "west-asia.mesopotamia.phoenicia.sidon",
+      "kind": "era",
+      "name": "Sidon",
+      "parent_id": "west-asia.mesopotamia.phoenicia",
+      "start_year": -1200,
+      "end_year": -332,
+      "tier": "foundational",
+      "source_ids": [
+        "britannica-sidon"
+      ],
+      "date_precision": "approx",
+      "summary": "Held primacy between the Byblian and Tyrian phases, and revolted against Persia in the 350s."
+    },
+    {
+      "id": "west-asia.mesopotamia.phoenicia.tyre",
+      "kind": "era",
+      "name": "Tyre",
+      "parent_id": "west-asia.mesopotamia.phoenicia",
+      "start_year": -1200,
+      "end_year": -332,
+      "tier": "foundational",
+      "source_ids": [
+        "britannica-tyre",
+        "britannica-siege-of-tyre"
+      ],
+      "date_precision": "approx",
+      "summary": "Dominant from the tenth century, founded Carthage and the western colonies, and fell to Alexander after a seven-month siege."
+    },
+    {
+      "id": "west-asia.mesopotamia.phoenicia.arwad",
+      "kind": "era",
+      "name": "Arwad",
+      "parent_id": "west-asia.mesopotamia.phoenicia",
+      "start_year": -1200,
+      "end_year": -332,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-jazirat-arwad"
+      ],
+      "date_precision": "approx",
+      "summary": "The northernmost city, on an island off the Syrian coast."
+    },
+    {
+      "id": "south-asia.vedic.rigvedic",
+      "kind": "period",
+      "name": "Early Vedic (Rigvedic)",
+      "parent_id": "south-asia.vedic",
+      "start_year": -1500,
+      "end_year": -1000,
+      "tier": "foundational",
+      "date_note": "Dated linguistically. Witzel subdivides the Rigvedic period into three stages on the internal stratigraphy of the language. No excavated horizon dates these texts.",
+      "source_ids": [
+        "witzel-early-indian-history-linguistic",
+        "britannica-vedic-religion"
+      ],
+      "start_dating_method": "received",
+      "date_precision": "approx",
+      "summary": "The period of the Rigveda: pastoral, mobile, and in the northwest."
+    },
+    {
+      "id": "south-asia.vedic.later-vedic",
+      "kind": "period",
+      "name": "Later Vedic",
+      "parent_id": "south-asia.vedic",
+      "start_year": -1000,
+      "end_year": -500,
+      "tier": "foundational",
+      "date_note": "The Painted Grey Ware horizon is associated with this phase in particular, roughly 1200-600 BCE — not with the Vedic period as a whole, which is what a single undivided block implied.",
+      "source_ids": [
+        "britannica-india-history",
+        "pgw-archaeology",
+        "thapar-early-india"
+      ],
+      "start_dating_method": "received",
+      "date_precision": "approx",
+      "summary": "Eastward settlement into the Ganges plain, iron, larger polities, and the Brahmanas and early Upanishads."
+    },
+    {
+      "id": "south-asia.vedic.corpus",
+      "kind": "era",
+      "name": "The Vedic Corpus",
+      "parent_id": "south-asia.vedic",
+      "start_year": -1500,
+      "end_year": -500,
+      "tier": "intermediate",
+      "date_note": "Relative order is firm; absolute dates are not. The Rigveda is the best anchored, partly through the Mitanni synchronism; the Upanishads are the least, with proposals spanning 700 BCE to 100 CE.",
+      "source_ids": [
+        "britannica-vedic-religion",
+        "witzel-early-indian-history-linguistic"
+      ],
+      "start_dating_method": "received",
+      "date_precision": "approx",
+      "summary": "Rigveda, then the other three Vedas, the Brahmanas, and the Upanishads."
     },
     {
       "id": "east-asia.china.liao",

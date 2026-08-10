@@ -1,5 +1,75 @@
 # Changelog
 
+## 0.29.0.0 — Central Asia and Islamic Iran, found by tooling (2026-08-09)
+
+The first release where the *target* was chosen by a tool rather than by
+judgement. `tools/report_gaps.py` was written to look for entities the data
+implies but does not contain, and on its first run it named the two largest
+remaining holes: a Central Asian branch with nothing between 1400 BCE and 1206
+CE, and an Iran branch jumping from the Sasanians in 651 to the Safavids in 1501.
+
+### Iran's 850-year hole was mostly a filing problem
+
+The Seljuks, Ilkhanate, Timurids, Khwarazmians and Samanids were all already in
+the dataset — filed under Central Asia. An Iranian reader could not see them,
+though the Seljuk capitals were Nishapur, Ray, Isfahan and Hamadan and every
+Ilkhanid capital was in Iran. Nine dynasties are now cross-linked to Iran, which
+is what the multi-regional machinery was built for.
+
+**The cross-links are graded, because the research was.** Seljuk, Ilkhanate,
+Khwarazmian and Samanid are straightforward. The **Ghaznavids** held Khorasan
+until Dandanaqan in 1040 and were an Afghan and north Indian power afterwards, so
+the time limit is stated. **Timurid** control was loose and effectively confined
+to Shah Rokh's reign, per Britannica's own hedged framing, and the hedge is
+recorded rather than dropped.
+
+Two errors were possible and only one was visible: claiming a Central Asian
+dynasty ruled Iran would be a false statement, while hiding dynasties that
+plainly governed Iran is a silent omission. The dataset was doing the second.
+
+Newly authored: the Arab conquest, the **Iranian Intermezzo** (Britannica's own
+section title, not a coinage here) with the Tahirids, Saffarids and Buyids, the
+Qara Qoyunlu and Aq Qoyunlu, and the **Afsharids and Zand** — who fill the 53
+years between Safavid and Qajar and *overlap each other*, the Afsharids holding
+Khorasan while the Zand held everything else.
+
+### The report caught its own follow-on
+
+Closing the large hole exposed a smaller one: 651-821 still read as empty,
+because the Rashidun, Umayyad and Abbasid caliphates governed Iran but were
+reachable only from Arabia, Mesopotamia and Central Asia. Now linked. The
+argument for re-running the report after every change rather than once.
+
+### Central Asia: a correction first
+
+The dataset carried a single **"First Turkic Khaganate, 552-744"**. That span
+runs three distinct polities together — the first khaganate to its division
+around 581-603, the eastern and western khaganates, and the *second* khaganate of
+682-744 after a period of Tang control. Corrected to 552-603, with the second
+authored separately.
+
+Added: Hephthalites, Uyghur Khaganate, Ghaznavid, Kara-Khanid, Khwarazmian, the
+Bukhara, Khiva and Kokand khanates, the Russian conquest, and **Qara Khitai** —
+which closes a gap deliberately left open two releases ago because it needed the
+two-date treatment. Chinese, Persian and Arab sources end the dynasty at the 1211
+Naiman usurpation; modern scholarship dates the state's fall to 1218. Both kept.
+
+### Two entities that are deliberately not states
+
+**Saka** is a Persian exonym for eastern Iranian steppe peoples, as Scythian is a
+Greek one; the two overlap without being identical, and neither is a
+self-designation. Entered as a people with a naming caveat, not an empire.
+
+**Sogdia was never unified.** Sources say so directly: a set of city-states around
+Samarkand and Bukhara whose merchants ran the Silk Road, under a succession of
+outside overlords. Authoring it as a kingdom would invent a polity to fill a
+space — the exact failure this pass exists to correct.
+
+### Counts
+
+1,683 → 1,705 entities. 623 → 654 sources. Entities carrying a source 440 → 463.
+Central Asia 43 → 56.
+
 ## 0.28.0.0 — Southeast Asia (2026-08-09)
 
 Southeast Asia was the thinnest region in the dataset by a wide margin: **35

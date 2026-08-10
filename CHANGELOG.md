@@ -14,6 +14,20 @@ because it is materially incomplete.
 Open work is tracked as `Q-n` items in [`docs/DESIGN.md`](docs/DESIGN.md) — 14 open at the time of
 this release.
 
+## [3.28.0.0-app] — 2026-08-09
+
+### Added
+
+- `tools/report_gaps.py` — finds places where the dataset implies an entity it
+  does not contain. A report, not a validator. Complements `tools/coverage.py`,
+  which measures thinness rather than implied absence.
+- `tools/check_module_names.py` — refuses to let a new extension module
+  overwrite an existing one, or reuse a name `build_data.py` already imports.
+
+### Changed
+
+- Ships dataset 0.29.0.0. Size baseline 264,190 bytes gzip.
+
 ## [3.27.0.0-app] — 2026-08-09
 
 ### Fixed

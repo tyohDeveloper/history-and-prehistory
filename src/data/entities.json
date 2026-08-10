@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.28.0.0",
-  "generated_at": "2026-08-10T03:27:44Z",
+  "dataset_version": "0.29.0.0",
+  "generated_at": "2026-08-10T04:09:15Z",
   "entities": [
     {
       "id": "global",
@@ -244,7 +244,9 @@
         "sup-discovery-of-iran"
       ],
       "regions": [
+        "africa",
         "central-asia",
+        "europe",
         "west-asia"
       ],
       "aliases": [
@@ -6938,7 +6940,8 @@
       "date_precision": "approx",
       "cross_parent_ids": [
         "africa.nile",
-        "west-asia.arabia"
+        "west-asia.arabia",
+        "west-asia.iran"
       ],
       "regions": [
         "africa",
@@ -6961,6 +6964,7 @@
       "cross_parent_ids": [
         "africa.north",
         "europe.western",
+        "west-asia.iran",
         "west-asia.mesopotamia"
       ],
       "regions": [
@@ -6984,6 +6988,7 @@
       "date_precision": "approx",
       "cross_parent_ids": [
         "central-asia",
+        "west-asia.iran",
         "west-asia.mesopotamia"
       ],
       "regions": [
@@ -8692,9 +8697,13 @@
       "name": "First Turkic Khaganate",
       "parent_id": "central-asia.steppe",
       "start_year": 552,
-      "end_year": 744,
+      "end_year": 603,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "date_note": "Previously recorded as 552-744, which ran three distinct states together. The first khaganate divided into eastern and western halves around 581-603; the Tang then absorbed the east; and a second khaganate was established in 682. Only the first is dated here.",
+      "source_ids": [
+        "britannica-turkic-peoples"
+      ]
     },
     {
       "id": "central-asia.samanid",
@@ -8704,7 +8713,14 @@
       "start_year": 819,
       "end_year": 999,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "west-asia.iran"
+      ],
+      "regions": [
+        "central-asia",
+        "west-asia"
+      ]
     },
     {
       "id": "central-asia.seljuk",
@@ -8714,7 +8730,14 @@
       "start_year": 1037,
       "end_year": 1194,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "west-asia.iran"
+      ],
+      "regions": [
+        "central-asia",
+        "west-asia"
+      ]
     },
     {
       "id": "central-asia.mongol-empire",
@@ -8910,7 +8933,13 @@
       "tier": "intermediate",
       "date_precision": "approx",
       "cross_parent_ids": [
-        "global.multi-regional"
+        "global.multi-regional",
+        "west-asia.iran"
+      ],
+      "date_note": "Control over Iran was loose and effectively limited to the reign of Shah Rokh; Britannica's own framing is hedged.",
+      "regions": [
+        "central-asia",
+        "west-asia"
       ]
     },
     {
@@ -8922,6 +8951,10 @@
       "end_year": 1405,
       "tier": "foundational",
       "date_precision": "approx",
+      "regions": [
+        "central-asia",
+        "west-asia"
+      ],
       "summary": "Tamerlane; last of the great steppe conquerors, sacked Delhi and Damascus."
     },
     {
@@ -28132,6 +28165,455 @@
       ],
       "date_precision": "approx",
       "summary": "Polity on Manila Bay, attested from 900 CE by the earliest surviving Philippine document."
+    },
+    {
+      "id": "central-asia.second-turkic-khaganate",
+      "kind": "era",
+      "name": "Second Turkic Khaganate",
+      "parent_id": "central-asia.steppe",
+      "start_year": 682,
+      "end_year": 744,
+      "tier": "intermediate",
+      "date_note": "Ended when the Uyghurs and their allies overthrew the last khagan.",
+      "source_ids": [
+        "wikipedia-second-turkic-khaganate",
+        "britannica-turkic-peoples"
+      ],
+      "summary": "Re-established Turkic power on the steppe after fifty years of Tang control, and left the Orkhon inscriptions.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.saka",
+      "kind": "era",
+      "name": "Saka",
+      "parent_id": "central-asia.steppe",
+      "start_year": -600,
+      "end_year": -100,
+      "tier": "intermediate",
+      "date_note": "Saka is what the Persians called them and Scythian is what the Greeks called a partly overlapping set of peoples. The two terms are not interchangeable and neither is a self-designation; what these groups called themselves is not settled. Entered as a people rather than a state, because no unified Saka polity is attested.",
+      "source_ids": [
+        "iranica-saka",
+        "britannica-saka"
+      ],
+      "caveats": [
+        {
+          "kind": "naming-confusion",
+          "text": "A Persian exonym overlapping the Greek exonym Scythian. Neither is what the people called themselves.",
+          "source_ids": [
+            "iranica-saka"
+          ]
+        }
+      ],
+      "name_forms": [
+        {
+          "name": "Saka",
+          "kind": "exonym",
+          "lang": "peo",
+          "note": "The Old Persian term.",
+          "source_ids": [
+            "iranica-saka"
+          ]
+        }
+      ],
+      "date_precision": "approx",
+      "summary": "Eastern Iranian steppe peoples, known by the Persian name for them."
+    },
+    {
+      "id": "central-asia.sogdia",
+      "kind": "era",
+      "name": "Sogdia",
+      "parent_id": "central-asia.core",
+      "start_year": -500,
+      "end_year": 750,
+      "tier": "foundational",
+      "date_note": "No unified Sogdian kingdom is attested at any point: the cities acted independently under a succession of outside overlords, Achaemenid to Arab. The span marks the period of Sogdian cultural and commercial prominence, not the reign of a state.",
+      "source_ids": [
+        "britannica-sogdiana",
+        "iranica-sogdiana"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "A region and a culture rather than a polity. There was no Sogdian kingdom to have borders or a reign-list.",
+          "source_ids": [
+            "iranica-sogdiana",
+            "britannica-sogdiana"
+          ]
+        }
+      ],
+      "date_precision": "approx",
+      "summary": "City-states around Samarkand and Bukhara whose merchants ran the Silk Road network. Never politically unified."
+    },
+    {
+      "id": "central-asia.hephthalites",
+      "kind": "era",
+      "name": "Hephthalites",
+      "parent_id": "central-asia.core",
+      "start_year": 440,
+      "end_year": 560,
+      "tier": "intermediate",
+      "date_note": "Their origin, and whether the name covers a single people or a confederation, are both disputed. Broken around 560 by a Turkic and Sasanian alliance.",
+      "source_ids": [
+        "iranica-hephthalites",
+        "britannica-hephthalite"
+      ],
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Whether the Hephthalites were one people or a confederation under one name is unresolved.",
+          "source_ids": [
+            "iranica-hephthalites"
+          ]
+        }
+      ],
+      "name_forms": [
+        {
+          "name": "White Huns",
+          "kind": "exonym",
+          "note": "A Greek and Latin usage. Their relation to the Huns of Europe is itself disputed.",
+          "source_ids": [
+            "britannica-hephthalite"
+          ]
+        }
+      ],
+      "date_precision": "approx",
+      "summary": "Steppe power that dominated Bactria and pressed both Sasanian Iran and the Gupta empire.",
+      "aliases": [
+        "White Huns"
+      ]
+    },
+    {
+      "id": "central-asia.uyghur-khaganate",
+      "kind": "era",
+      "name": "Uyghur Khaganate",
+      "parent_id": "central-asia.steppe",
+      "start_year": 744,
+      "end_year": 840,
+      "tier": "foundational",
+      "date_note": "Ended when the Yenisei Kyrgyz sacked Ordu-Baliq in 840, scattering the Uyghurs south and west.",
+      "source_ids": [
+        "britannica-uyghur"
+      ],
+      "summary": "Steppe empire centred on Ordu-Baliq, and for a century the Tang dynasty's indispensable ally.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.ghaznavid",
+      "kind": "era",
+      "name": "Ghaznavid Empire",
+      "parent_id": "central-asia.core",
+      "start_year": 977,
+      "end_year": 1186,
+      "tier": "foundational",
+      "date_note": "Lost Khorasan to the Seljuks at Dandanaqan in 1040 and was thereafter an Afghan and north Indian power rather than an Iranian one. Held Khorasan, and briefly Ray and Hamadan, until Dandanaqan in 1040. After that it was an Afghan and north Indian power rather than an Iranian one.",
+      "source_ids": [
+        "britannica-ghaznavid-dynasty"
+      ],
+      "summary": "Turkic dynasty ruling from Ghazna, whose raids into northern India opened the way for later Muslim rule there.",
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "west-asia.iran"
+      ],
+      "regions": [
+        "central-asia",
+        "west-asia"
+      ]
+    },
+    {
+      "id": "central-asia.kara-khanid",
+      "kind": "era",
+      "name": "Kara-Khanid Khanate",
+      "parent_id": "central-asia.core",
+      "start_year": 840,
+      "end_year": 1212,
+      "tier": "intermediate",
+      "date_note": "The founding date is uncertain and usually given as around 840. Split into eastern and western branches, both eventually absorbed by the Qara Khitai and then the Khwarazmians.",
+      "source_ids": [
+        "britannica-qarakhanid-dynasty"
+      ],
+      "date_precision": "approx",
+      "summary": "The first Turkic dynasty to adopt Islam, ruling Transoxiana and Kashgaria."
+    },
+    {
+      "id": "central-asia.khwarazmian",
+      "kind": "era",
+      "name": "Khwarazmian Empire",
+      "parent_id": "central-asia.core",
+      "start_year": 1077,
+      "end_year": 1231,
+      "tier": "foundational",
+      "date_note": "Ends with the death of Jalal al-Din in 1231, some years after the Mongols had broken the state itself.",
+      "source_ids": [
+        "britannica-khwarezm-shah-dynasty"
+      ],
+      "summary": "Briefly the dominant power from Transoxiana to western Iran, destroyed by the Mongol invasion.",
+      "date_precision": "approx",
+      "cross_parent_ids": [
+        "west-asia.iran"
+      ],
+      "regions": [
+        "central-asia",
+        "west-asia"
+      ]
+    },
+    {
+      "id": "central-asia.qara-khitai",
+      "kind": "era",
+      "name": "Qara Khitai",
+      "parent_id": "central-asia.core",
+      "start_year": 1124,
+      "end_year": 1218,
+      "tier": "intermediate",
+      "date_note": "Chinese, Persian and Arab sources treat the Naiman usurpation of 1211 as the end of the dynasty; modern scholarship generally dates the state's fall to the Mongol conquest of 1218. Both are recorded.",
+      "source_ids": [
+        "biran-qara-khitai",
+        "wikipedia-qara-khitai"
+      ],
+      "alternatives": [
+        {
+          "label": "1211, the Naiman usurpation",
+          "standing": "traditional",
+          "end_year": 1211,
+          "note": "The dynastic end in the traditional sources.",
+          "source_ids": [
+            "wikipedia-qara-khitai"
+          ]
+        }
+      ],
+      "name_forms": [
+        {
+          "name": "Western Liao",
+          "kind": "common",
+          "note": "Names its descent from the Liao dynasty of northern China.",
+          "source_ids": [
+            "biran-qara-khitai"
+          ]
+        }
+      ],
+      "summary": "Khitan successor state in Central Asia, founded by refugees from the fall of the Liao.",
+      "date_precision": "approx",
+      "aliases": [
+        "Western Liao"
+      ]
+    },
+    {
+      "id": "central-asia.bukhara",
+      "kind": "era",
+      "name": "Khanate of Bukhara",
+      "parent_id": "central-asia.core",
+      "start_year": 1501,
+      "end_year": 1920,
+      "tier": "foundational",
+      "source_ids": [
+        "britannica-khanate-of-bukhara"
+      ],
+      "summary": "Uzbek state in Transoxiana; an emirate from 1785 and a Russian protectorate from 1868.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.khiva",
+      "kind": "era",
+      "name": "Khanate of Khiva",
+      "parent_id": "central-asia.core",
+      "start_year": 1511,
+      "end_year": 1920,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-khanate-of-khiva"
+      ],
+      "summary": "Uzbek khanate on the lower Amu Darya, a Russian protectorate from 1873.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.kokand",
+      "kind": "era",
+      "name": "Khanate of Kokand",
+      "parent_id": "central-asia.core",
+      "start_year": 1709,
+      "end_year": 1876,
+      "tier": "intermediate",
+      "date_note": "Dated from 1709 or from 1798, depending on whether the earlier principality is counted as the khanate.",
+      "source_ids": [
+        "britannica-kokand"
+      ],
+      "alternatives": [
+        {
+          "label": "1798",
+          "standing": "minority",
+          "start_year": 1798,
+          "source_ids": [
+            "britannica-kokand"
+          ]
+        }
+      ],
+      "summary": "Ferghana valley khanate, annexed outright by Russia rather than left as a protectorate.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "central-asia.russian-turkestan",
+      "kind": "era",
+      "name": "Russian Conquest of Central Asia",
+      "parent_id": "central-asia.core",
+      "start_year": 1865,
+      "end_year": 1895,
+      "tier": "foundational",
+      "date_note": "Tashkent fell in 1865, Bukhara became a protectorate in 1868, Khiva in 1873, and Kokand was annexed in 1876; the border settlements ran to the 1890s.",
+      "source_ids": [
+        "britannica-russian-conquest-central-asia"
+      ],
+      "summary": "Russian annexation of the three khanates, closing the last independent steppe polities.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.iran.arab-conquest",
+      "kind": "event",
+      "name": "Arab Conquest of Iran",
+      "parent_id": "west-asia.iran",
+      "start_year": 633,
+      "end_year": 651,
+      "tier": "foundational",
+      "date_note": "Nahavand in 642 was the decisive engagement; the conventional end is the death of the last Sasanian king, Yazdegerd III, in 651.",
+      "source_ids": [
+        "britannica-iran-islamic-conquest",
+        "britannica-yazdegerd-iii"
+      ],
+      "summary": "Eighteen years that ended the Sasanian empire and began the Islamic period in Iran.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.iran.intermezzo",
+      "kind": "era",
+      "name": "The Iranian Intermezzo",
+      "parent_id": "west-asia.iran",
+      "start_year": 821,
+      "end_year": 1055,
+      "tier": "foundational",
+      "date_note": "Not a coinage of this dataset: Britannica uses 'the Iranian intermezzo' as a section heading for this period. It is a framing rather than a polity, and the dynasties inside it overlapped and fought each other.",
+      "source_ids": [
+        "britannica-iranian-intermezzo"
+      ],
+      "summary": "Native Iranian dynasties ruling between Arab and Turkic domination.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.iran.tahirid",
+      "kind": "era",
+      "name": "Tahirid Dynasty",
+      "parent_id": "west-asia.iran.intermezzo",
+      "start_year": 821,
+      "end_year": 873,
+      "tier": "intermediate",
+      "source_ids": [
+        "iranica-tahirids",
+        "britannica-tahirid-dynasty"
+      ],
+      "summary": "Governed Khorasan from Nishapur, nominally for the Abbasids and in practice for themselves.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.iran.saffarid",
+      "kind": "era",
+      "name": "Saffarid Dynasty",
+      "parent_id": "west-asia.iran.intermezzo",
+      "start_year": 861,
+      "end_year": 1003,
+      "tier": "intermediate",
+      "date_note": "The end is given as 1002 or 1003, with the Ghaznavid conquest.",
+      "source_ids": [
+        "britannica-saffarid-dynasty"
+      ],
+      "allow_outside_parent_dates": true,
+      "summary": "Rose from Sistan under a coppersmith turned warlord and briefly threatened Baghdad itself.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.iran.buyid",
+      "kind": "era",
+      "name": "Buyid Dynasty",
+      "parent_id": "west-asia.iran.intermezzo",
+      "start_year": 934,
+      "end_year": 1062,
+      "tier": "foundational",
+      "date_note": "Entered Baghdad in 945. The arrangement left the caliphate intact as an institution while removing its power, which is why the Abbasid line continues past this point in the dataset.",
+      "source_ids": [
+        "britannica-buyid-dynasty"
+      ],
+      "allow_outside_parent_dates": true,
+      "summary": "Shia dynasty from the Caspian highlands that took Baghdad and ruled through the Abbasid caliphs it kept as figureheads.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.iran.qara-qoyunlu",
+      "kind": "era",
+      "name": "Qara Qoyunlu",
+      "parent_id": "west-asia.iran",
+      "start_year": 1374,
+      "end_year": 1468,
+      "tier": "intermediate",
+      "source_ids": [
+        "iranica-qara-qoyunlu"
+      ],
+      "summary": "Turkoman confederation holding Azerbaijan and western Iran.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.iran.aq-qoyunlu",
+      "kind": "era",
+      "name": "Aq Qoyunlu",
+      "parent_id": "west-asia.iran",
+      "start_year": 1378,
+      "end_year": 1501,
+      "tier": "intermediate",
+      "date_note": "Ended when Ismail I took Tabriz in 1501, which is also the Safavid founding: one event, two entries.",
+      "source_ids": [
+        "iranica-aq-qoyunlu"
+      ],
+      "summary": "Turkoman confederation that displaced the Qara Qoyunlu and was in turn displaced by the Safavids.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.iran.afsharid",
+      "kind": "era",
+      "name": "Afsharid Dynasty",
+      "parent_id": "west-asia.iran",
+      "start_year": 1736,
+      "end_year": 1796,
+      "tier": "foundational",
+      "date_note": "Founded in 1736 when Nader deposed the last Safavid. After his assassination in 1747 the dynasty held only Khorasan, under his grandson Shahrokh, until the Qajar victory in 1796.",
+      "source_ids": [
+        "wikipedia-afsharid-dynasty",
+        "wikipedia-list-monarchs-iran"
+      ],
+      "summary": "Nader Shah's conquest state, which outlasted him only in Khorasan.",
+      "date_precision": "approx"
+    },
+    {
+      "id": "west-asia.iran.zand",
+      "kind": "era",
+      "name": "Zand Dynasty",
+      "parent_id": "west-asia.iran",
+      "start_year": 1751,
+      "end_year": 1794,
+      "tier": "foundational",
+      "date_note": "Encyclopaedia Iranica gives 1751-94; Britannica gives 1750-79, which counts only Karim Khan's own rule. He never took the title shahanshah, governing as vakil for a Safavid figurehead. Overlaps the Afsharids, who held Khorasan throughout.",
+      "source_ids": [
+        "iranica-zand-dynasty",
+        "britannica-zand-dynasty",
+        "wikipedia-list-monarchs-iran"
+      ],
+      "alternatives": [
+        {
+          "label": "1750-79, counting only Karim Khan's rule",
+          "standing": "minority",
+          "start_year": 1750,
+          "end_year": 1779,
+          "source_ids": [
+            "britannica-zand-dynasty"
+          ]
+        }
+      ],
+      "summary": "Ruled Iran except Khorasan from Shiraz, remembered for an unusually peaceful reign.",
+      "date_precision": "approx"
     },
     {
       "id": "east-asia.china.liao",

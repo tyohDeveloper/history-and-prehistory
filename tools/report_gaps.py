@@ -12,6 +12,22 @@ positives: plenty of polities really do appear without a local predecessor, and
 plenty of branches really are discontinuous. The output is a list to read, in the
 same spirit as the childless-entity report, and the build does not fail on it.
 
+**A known limitation, found by running it.** The sibling heuristics compare
+entities that share a parent, so they are confounded wherever a branch files
+things at inconsistent depths. The Mongol Empire sits directly under
+`central-asia` while the Sogdians and Hephthalites sit under `central-asia.core`,
+so the Mongols appear to arrive after 2,600 empty years even though their
+predecessors exist one level down. The Renaissance shows the same artefact under
+`europe`. Both are reported and neither is a missing entity.
+
+This is not worth "fixing" by widening the comparison, which would suppress real
+findings; it is worth knowing that a large number next to a top-level entity
+usually means inconsistent filing rather than absence.
+
+Complements `tools/coverage.py`, which measures where the dataset is *thin* by
+time band and finds childless containers. This one looks for entities the data
+*implies* but does not contain -- a different question.
+
 Run: ``python3 tools/report_gaps.py [--top N]``
 """
 

@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.4.0"
-DATASET_VERSION = "0.28.0.0"
+DATASET_VERSION = "0.29.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1693,6 +1693,8 @@ from romanisation_chinese import extend as _romanisation_chinese
 from extensions_song_era_states import extend as _song_era_states, fix_tiers as _fix_china_tiers
 from extensions_sea_mainland import extend as _sea_mainland
 from extensions_sea_maritime import extend as _sea_maritime
+from extensions_central_asia_medieval import extend as _central_asia_medieval
+from extensions_iran_islamic import extend as _iran_islamic
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1713,6 +1715,8 @@ _cross_regional_definition(E, entities)
 _extend_gaps(E, entities)
 _sea_mainland(E, entities)
 _sea_maritime(E, entities)
+_central_asia_medieval(E, entities)
+_iran_islamic(E, entities)
 _song_era_states(E, entities)
 _fix_china_tiers(E, entities)
 _romanisation_chinese(E, entities)
@@ -3158,7 +3162,11 @@ sources.extend(EUROPE_SOURCES)
 from extensions_americas import AMERICAS_SOURCES  # noqa: E402
 sources.extend(AMERICAS_SOURCES)
 from extensions_central_asia import CENTRAL_ASIA_SOURCES  # noqa: E402
+from extensions_central_asia_medieval import CENTRAL_ASIA_MEDIEVAL_SOURCES  # noqa: E402
+from extensions_iran_islamic import IRAN_ISLAMIC_SOURCES  # noqa: E402
 sources.extend(CENTRAL_ASIA_SOURCES)
+sources.extend(CENTRAL_ASIA_MEDIEVAL_SOURCES)
+sources.extend(IRAN_ISLAMIC_SOURCES)
 from extensions_seasia_oceania import SEASIA_OCEANIA_SOURCES  # noqa: E402
 from extensions_indus import INDUS_SOURCES  # noqa: E402
 from extensions_east_asia import EAST_ASIA_SOURCES  # noqa: E402

@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.28.0.0",
-  "generated_at": "2026-08-10T03:27:44Z",
+  "dataset_version": "0.29.0.0",
+  "generated_at": "2026-08-10T04:09:15Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -1773,6 +1773,223 @@
       "citation": "Zhang, Ning, Cui et al. (2021), 'The genomic origins of the Bronze Age Tarim Basin mummies', Nature 599",
       "url": "https://www.nature.com/articles/s41586-021-04052-7",
       "note": "'Our results do not support previous hypotheses for the origin of the Tarim mummies.'"
+    },
+    {
+      "id": "iranica-saka",
+      "kind": "reference",
+      "citation": "'Saka', Encyclopaedia Iranica",
+      "url": "https://iranicaonline.org/articles/saka-people",
+      "note": "Saka is the Persian term for eastern Iranian steppe nomads; its relation to the Greek 'Scythian' is one of overlapping exonyms rather than identity."
+    },
+    {
+      "id": "britannica-saka",
+      "kind": "reference",
+      "citation": "'Saka', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Saka",
+      "note": "Treats the Saka as a branch of the wider Scythian world."
+    },
+    {
+      "id": "britannica-sogdiana",
+      "kind": "reference",
+      "citation": "'Sogdiana', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Sogdiana",
+      "note": "A region of city-states, not a unified kingdom."
+    },
+    {
+      "id": "iranica-sogdiana",
+      "kind": "reference",
+      "citation": "'Sogdiana', Encyclopaedia Iranica",
+      "url": "https://iranicaonline.org/articles/sogdiana-i-geography",
+      "note": "No unified Sogdian state is attested; the cities acted independently."
+    },
+    {
+      "id": "iranica-hephthalites",
+      "kind": "reference",
+      "citation": "'Hephthalites', Encyclopaedia Iranica",
+      "url": "https://iranicaonline.org/articles/hephthalites-a-people-of-central-asia",
+      "note": "Their origin and whether the name covers one people or a confederation are both disputed."
+    },
+    {
+      "id": "britannica-hephthalite",
+      "kind": "reference",
+      "citation": "'Hephthalite', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Hephthalite",
+      "note": "The White Huns, defeated by a Turkic-Sasanian alliance around 560."
+    },
+    {
+      "id": "britannica-turkic-peoples",
+      "kind": "reference",
+      "citation": "'Turkic peoples', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Turkic-peoples",
+      "note": "The first khaganate and its division into eastern and western halves."
+    },
+    {
+      "id": "wikipedia-second-turkic-khaganate",
+      "kind": "reference",
+      "citation": "'Second Turkic Khaganate', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Second_Turkic_Khaganate",
+      "note": "682-744, re-established after a period of Tang control and ended by the Uyghurs."
+    },
+    {
+      "id": "britannica-uyghur",
+      "kind": "reference",
+      "citation": "'Uyghur', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Uyghur",
+      "note": "The khaganate of 744-840, ended by the Yenisei Kyrgyz sack of Ordu-Baliq."
+    },
+    {
+      "id": "britannica-ghaznavid-dynasty",
+      "kind": "reference",
+      "citation": "'Ghaznavid dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Ghaznavid-dynasty",
+      "note": "977-1186, centred on Ghazna, and its loss of Khorasan at Dandanaqan in 1040."
+    },
+    {
+      "id": "britannica-qarakhanid-dynasty",
+      "kind": "reference",
+      "citation": "'Qarakhanid dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Qarakhanid-Dynasty",
+      "note": "The first Turkic dynasty to adopt Islam; later split into eastern and western branches."
+    },
+    {
+      "id": "britannica-khwarezm-shah-dynasty",
+      "kind": "reference",
+      "citation": "'Khwarezm-Shah dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Khwarezm-Shah-dynasty",
+      "note": "Destroyed by the Mongols; Jalal al-Din's death in 1231 is the usual end."
+    },
+    {
+      "id": "britannica-khanate-of-bukhara",
+      "kind": "reference",
+      "citation": "'Khanate of Bukhara', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Bukhara-khanate",
+      "note": "Became an emirate in 1785 and a Russian protectorate in 1868."
+    },
+    {
+      "id": "britannica-khanate-of-khiva",
+      "kind": "reference",
+      "citation": "'Khiva', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Khiva-khanate",
+      "note": "Russian protectorate from 1873; abolished 1920."
+    },
+    {
+      "id": "britannica-kokand",
+      "kind": "reference",
+      "citation": "'Kokand', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Kokand",
+      "note": "Annexed by Russia in 1876. Its founding is dated 1709 or 1798 depending on whether the earlier principality counts."
+    },
+    {
+      "id": "biran-qara-khitai",
+      "kind": "scholarly",
+      "citation": "Biran, 'The Qara Khitai', Oxford Research Encyclopedia of Asian History",
+      "url": "http://mongol.huji.ac.il/sites/default/files/Biran%202020%20Qara%20Khitai%20Oxford%20Research%20Encyclopedia%20of%20Asian%20History.pdf",
+      "note": "Modern scholarship dates the state's fall to 1218, against the traditional 1211."
+    },
+    {
+      "id": "wikipedia-qara-khitai",
+      "kind": "reference",
+      "citation": "'Qara Khitai', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Qara_Khitai",
+      "note": "Chinese, Persian and Arab sources treat the Naiman usurpation of 1211 as the dynastic end."
+    },
+    {
+      "id": "britannica-russian-conquest-central-asia",
+      "kind": "reference",
+      "citation": "'Central Asia: Russian rule', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Central-Asia/Russian-rule",
+      "note": "The conquest of the three khanates between 1865 and 1876."
+    },
+    {
+      "id": "britannica-yazdegerd-iii",
+      "kind": "reference",
+      "citation": "'Yazdegerd III', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Yazdegerd-III",
+      "note": "His death in 651 is the conventional end of the Sasanian empire."
+    },
+    {
+      "id": "britannica-iran-islamic-conquest",
+      "kind": "reference",
+      "citation": "'Iran: The advent of Islam', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Iran/The-advent-of-Islam",
+      "note": "The Arab conquest, with Nahavand in 642 as the decisive engagement."
+    },
+    {
+      "id": "britannica-iranian-intermezzo",
+      "kind": "reference",
+      "citation": "'Iran: The Iranian intermezzo', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Iran/The-Iranian-intermezzo",
+      "note": "Britannica's own section title for the native Iranian dynasties of roughly 821-1055, between Arab and Turkic rule."
+    },
+    {
+      "id": "iranica-tahirids",
+      "kind": "reference",
+      "citation": "'Tahirids', Encyclopaedia Iranica",
+      "url": "https://iranicaonline.org/articles/tahirids",
+      "note": "821-873, governing Khorasan from Nishapur under nominal Abbasid authority."
+    },
+    {
+      "id": "britannica-tahirid-dynasty",
+      "kind": "reference",
+      "citation": "'Tahirid dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Tahirid-dynasty",
+      "note": "Displaced by the Saffarids."
+    },
+    {
+      "id": "britannica-saffarid-dynasty",
+      "kind": "reference",
+      "citation": "'Saffarid dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Saffarid-dynasty",
+      "note": "Rose from Sistan in 861; its end is dated 1002 or 1003 with the Ghaznavid conquest."
+    },
+    {
+      "id": "britannica-buyid-dynasty",
+      "kind": "reference",
+      "citation": "'Buyid dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Buyid-dynasty",
+      "note": "Shia dynasty that took Baghdad in 945 and held the Abbasid caliphs as figureheads."
+    },
+    {
+      "id": "iranica-qara-qoyunlu",
+      "kind": "reference",
+      "citation": "'Qara Qoyunlu', Encyclopaedia Iranica",
+      "url": "https://iranicaonline.org/articles/qara-qoyunlu",
+      "note": "Turkoman confederation, defeated by the Aq Qoyunlu in 1468."
+    },
+    {
+      "id": "britannica-zand-dynasty",
+      "kind": "reference",
+      "citation": "'Zand dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Zand-dynasty",
+      "note": "Dates the dynasty 1750-79, against Encyclopaedia Iranica's 1751-94. Notes Karim Khan never claimed the title shahanshah, ruling as vakil for a Safavid figurehead."
+    },
+    {
+      "id": "iranica-zand-dynasty",
+      "kind": "reference",
+      "citation": "'Zand dynasty', Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/zand-dynasty/",
+      "note": "1751-94, ruling Persia excluding Khorasan from Shiraz, until the Qajar founding."
+    },
+    {
+      "id": "wikipedia-afsharid-dynasty",
+      "kind": "reference",
+      "citation": "'Afsharid dynasty', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Afsharid_dynasty",
+      "note": "Founded 1736 by Nader Shah on deposing Abbas III; the line continued in Khorasan after his assassination in 1747."
+    },
+    {
+      "id": "wikipedia-list-monarchs-iran",
+      "kind": "reference",
+      "citation": "'List of monarchs of Iran', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/List_of_monarchs_of_Iran",
+      "note": "Gives the Afsharids 1736-1796 and the Zand 1751-1794, and states plainly that the two competed for supremacy rather than succeeding one another."
+    },
+    {
+      "id": "iranica-aq-qoyunlu",
+      "kind": "reference",
+      "citation": "'Aq Qoyunlu', Encyclopaedia Iranica",
+      "url": "https://iranicaonline.org/articles/aq-qoyunlu-confederation",
+      "note": "Held western Iran until Ismail I took Tabriz in 1501, founding the Safavid state."
     },
     {
       "id": "carson-hung-2022-luzon",

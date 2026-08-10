@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.29.1.0",
-  "generated_at": "2026-08-10T04:32:46Z",
+  "dataset_version": "0.30.0.0",
+  "generated_at": "2026-08-10T04:45:58Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2032,6 +2032,76 @@
       "citation": "'Aq Qoyunlu', Encyclopaedia Iranica",
       "url": "https://iranicaonline.org/articles/aq-qoyunlu-confederation",
       "note": "Held western Iran until Ismail I took Tabriz in 1501, founding the Safavid state."
+    },
+    {
+      "id": "britannica-cushite-dynasty",
+      "kind": "reference",
+      "citation": "'Cushite dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Cushite-dynasty",
+      "note": "The 25th Egyptian dynasty was Kushite, which is the warrant for reaching it from Kush as well as from Egypt."
+    },
+    {
+      "id": "britannica-nubia",
+      "kind": "reference",
+      "citation": "'Nubia', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Nubia",
+      "note": "Shabaka conquered all of Egypt about 715 BCE, moved his capital to Memphis, and founded the 25th dynasty, 'called Kushite in the king lists'."
+    },
+    {
+      "id": "britannica-achaemenid-dynasty-egypt",
+      "kind": "reference",
+      "citation": "'Achaemenid dynasty (Egypt)', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Achaemenid-dynasty",
+      "note": "'In ancient Egypt, the 27th dynasty (525-404 BCE), established after Egypt was conquered by the Persian Achaemenian Empire.'"
+    },
+    {
+      "id": "ucl-digital-egypt-dynasty27",
+      "kind": "reference",
+      "citation": "'27th Dynasty', Digital Egypt, University College London",
+      "url": "https://www.ucl.ac.uk/museums-static/digitalegypt/chronology/dynasty27.html",
+      "note": "'In the Hellenistic kinglists this is the term for the first period of Achaemenid Persian rule over Egypt, 525-404 BC.'"
+    },
+    {
+      "id": "britannica-ptolemaic-dynasty",
+      "kind": "reference",
+      "citation": "'Ptolemaic dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Ptolemaic-dynasty",
+      "note": "'Ptolemaic Egypt was the wealthiest of the kingdoms that emerged in the aftermath of Alexander the Great's death... and the last to fall under direct Roman dominion.'"
+    },
+    {
+      "id": "britannica-hellenistic-age",
+      "kind": "reference",
+      "citation": "'Hellenistic age', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/event/Hellenistic-Age",
+      "note": "Defines the age as running from Alexander's death in 323 BCE to Rome's conquest of Egypt in 30 BCE, and names the Antigonid, Seleucid and Ptolemaic kingdoms as its three powers."
+    },
+    {
+      "id": "britannica-mongol-empire-yuan",
+      "kind": "reference",
+      "citation": "'Mongol empire: The Yuan dynasty in China', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Mongol-empire/The-Yuan-dynasty-in-China-1279-1368",
+      "note": "Treats the Yuan as the Chinese component of the Mongol empire."
+    },
+    {
+      "id": "britannica-kushan-dynasty",
+      "kind": "reference",
+      "citation": "'Kushan dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Kushan-dynasty",
+      "note": "'Ruled over most of the northern Indian subcontinent, Afghanistan, and parts of Central Asia during the first three centuries of the Common Era.'"
+    },
+    {
+      "id": "oup-kushan-empire",
+      "kind": "scholarly",
+      "citation": "'The Kushan Empire', Oxford University Press",
+      "url": "https://academic.oup.com/book/39071/chapter/338392096?searchresult=1",
+      "note": "Gives the extent as covering Afghanistan and Pakistan entirely and 'much of northern and central India'."
+    },
+    {
+      "id": "britannica-indo-greek-kingdom",
+      "kind": "reference",
+      "citation": "'Indo-Greek kingdom', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Indo-Greek-kingdom",
+      "note": "Descended from Greco-Bactrian rule; 'Hellenistic influence on the culture of Central Asia and northwestern India has been considerable.'"
     },
     {
       "id": "carson-hung-2022-luzon",

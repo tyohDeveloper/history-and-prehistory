@@ -186,6 +186,38 @@ for _e in entities:
         if _u is not None and not _SAFE_URL.match(_u):
             errors.append(f"entity {_e['id']}: link url must be http(s), got {_u!r}")
 
+# Rule 7: a cross-region placement is a factual claim, so it needs a source.
+# Twice now a pass has added cross_parent_ids asserting that a polity held
+# territory in another world region, with no citation, while an open issue said
+# unsourced region claims were the least honest field in the dataset. Nothing
+# checked, so nothing stopped it.
+#
+# Scoped deliberately to links crossing a TOP-LEVEL GEOGRAPHY. A link into
+# `global` -- Multi-Regional Empires, the era frames -- is this dataset's own
+# taxonomy rather than a claim about the past, and requiring an external citation
+# for a classification decision would be a category error. A rule demanding
+# footnotes for taxonomy would be worked around rather than obeyed.
+def _top_level(_eid, _by):
+    _cur = _by.get(_eid)
+    while _cur is not None and _cur.get("parent_id") is not None:
+        _cur = _by.get(_cur["parent_id"])
+    return _cur["id"] if _cur is not None else None
+
+
+_by_id_tl = {_e["id"]: _e for _e in entities}
+for _e in entities:
+    _here = _top_level(_e["id"], _by_id_tl)
+    for _cp in _e.get("cross_parent_ids", []) or []:
+        _there = _top_level(_cp, _by_id_tl)
+        if _there is None or _there == _here or "global" in (_here, _there):
+            continue
+        if not _e.get("source_ids"):
+            errors.append(
+                f"entity {_e['id']}: cross-links into {_there} (a different region) "
+                f"but cites nothing. Placing a polity in another region is a claim "
+                f"about territory and needs a source."
+            )
+
 # Rule 6: an uncited registry entry is dead weight.
 for sid in sorted(source_ids - cited):
     warnings.append(f"source {sid}: in the registry but cited by nothing")

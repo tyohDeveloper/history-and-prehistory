@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.29.1.0",
-  "generated_at": "2026-08-10T04:32:46Z",
+  "dataset_version": "0.30.0.0",
+  "generated_at": "2026-08-10T04:45:58Z",
   "entities": [
     {
       "id": "global",
@@ -1551,7 +1551,11 @@
         "africa.nile.kush"
       ],
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "britannica-cushite-dynasty",
+        "britannica-nubia"
+      ]
     },
     {
       "id": "africa.nile.egypt.tip.dyn25.piye",
@@ -1605,6 +1609,10 @@
       ],
       "tier": "intermediate",
       "date_precision": "approx",
+      "source_ids": [
+        "britannica-achaemenid-dynasty-egypt",
+        "ucl-digital-egypt-dynasty27"
+      ],
       "regions": [
         "africa",
         "west-asia"
@@ -1624,6 +1632,10 @@
         "europe.mediterranean.hellenistic"
       ],
       "date_precision": "approx",
+      "source_ids": [
+        "britannica-hellenistic-age",
+        "britannica-ptolemaic-dynasty"
+      ],
       "regions": [
         "africa",
         "europe"
@@ -1670,6 +1682,9 @@
         "europe.mediterranean.rome.empire"
       ],
       "date_precision": "approx",
+      "source_ids": [
+        "britannica-hellenistic-age"
+      ],
       "regions": [
         "africa",
         "europe"
@@ -5985,6 +6000,9 @@
         }
       ],
       "date_precision": "approx",
+      "source_ids": [
+        "britannica-mongol-empire-yuan"
+      ],
       "name_forms": [
         {
           "name": "Yüan",
@@ -6757,6 +6775,9 @@
         "europe.mediterranean.hellenistic"
       ],
       "date_precision": "approx",
+      "source_ids": [
+        "britannica-hellenistic-age"
+      ],
       "regions": [
         "europe",
         "west-asia"
@@ -7378,6 +7399,9 @@
           "lang": "fa",
           "note": "The Persian and later Islamic form, through which he entered a very different body of legend."
         }
+      ],
+      "source_ids": [
+        "britannica-hellenistic-age"
       ],
       "regions": [
         "europe",
@@ -8681,6 +8705,10 @@
         "south-asia"
       ],
       "date_precision": "approx",
+      "source_ids": [
+        "britannica-kushan-dynasty",
+        "oup-kushan-empire"
+      ],
       "regions": [
         "central-asia",
         "south-asia"
@@ -9148,6 +9176,9 @@
         "europe.mediterranean.hellenistic"
       ],
       "date_precision": "approx",
+      "source_ids": [
+        "britannica-indo-greek-kingdom"
+      ],
       "regions": [
         "europe",
         "south-asia"

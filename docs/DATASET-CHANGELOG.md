@@ -1,5 +1,57 @@
 # Changelog
 
+## 0.30.0.0 — A cross-region placement now needs a source (2026-08-09)
+
+Twice in three releases a pass added `cross_parent_ids` asserting that a polity
+held territory in another world region, with no citation, while an open issue said
+unsourced region claims were the least honest field in the dataset. Nothing
+checked, so nothing stopped it. **Rule 7** now does.
+
+### What the rule covers, and what it deliberately does not
+
+It fires when a cross-link crosses a **top-level geography** — "the Kushans held
+South Asia" is a claim about the past and needs a source.
+
+It is silent for links into `global`. Placing the Mongol Empire under
+Multi-Regional Empires is *this dataset's taxonomy*, not a statement about the
+world, and demanding an external citation for a classification decision would be
+a category error. A rule that required footnotes for taxonomy would be
+worked around rather than obeyed, and would end up grandfathered into
+uselessness.
+
+### No grandfather list
+
+The nine geographic links that had no source are now sourced rather than
+exempted, so the rule ships with **no exception list at all**. Every remaining
+unsourced cross-link is taxonomy-only, which the rule correctly ignores.
+
+Newly cited: the Kushite 25th dynasty to Britannica's Cushite-dynasty and Nubia
+entries; the 27th dynasty to Britannica and UCL's Digital Egypt; Ptolemaic and
+Roman Egypt, the Seleucids and Alexander to Britannica's Hellenistic-age and
+Ptolemaic-dynasty entries; the Yuan to Britannica's Mongol-empire treatment; the
+Kushans to Britannica and an Oxford University Press chapter; the Indo-Greeks to
+Britannica.
+
+Several of these look near-tautological — Ptolemaic Egypt *is* a Hellenistic
+kingdom — and that is precisely why they were never sourced. But "obvious" is how
+the unsourced Sarasvati assertion and the wrong Greece and Macedon dates got in.
+
+### Verified by planting violations
+
+The rule was tested three ways rather than assumed: an unsourced cross-region
+link errors, a sourced one passes, and an unsourced link into `global` passes.
+
+Worth recording that the **first attempt silently did nothing.** The insertion
+anchor did not match, `str.replace` returned the file unchanged, and the tests
+"passed" against a rule that was never in the file. The edit now asserts its
+anchor exists before writing, and the rule's presence was confirmed by grep
+before any behaviour was tested.
+
+### Counts
+
+Sources 660 → 670. Entities carrying a source 470 → 479. Cross-linked entities
+sourced 29 → 38 of 46. Unsourced foundational dates 279 → 271.
+
 ## 0.29.1.0 — Source the region claims added in 0.29.0.0 (2026-08-09)
 
 A self-inflicted regression, fixed one release later.

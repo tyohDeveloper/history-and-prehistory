@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
   "dataset_version": "0.34.1.0",
-  "generated_at": "2026-08-10T18:41:17Z",
+  "generated_at": "2026-08-10T20:11:27Z",
   "entities": [
     {
       "id": "global",
@@ -1210,7 +1210,7 @@
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn1",
-      "kind": "period",
+      "kind": "polity",
       "name": "1st Dynasty",
       "parent_id": "africa.nile.egypt.early-dynastic",
       "start_year": -3100,
@@ -1254,7 +1254,7 @@
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn2",
-      "kind": "period",
+      "kind": "polity",
       "name": "2nd Dynasty",
       "parent_id": "africa.nile.egypt.early-dynastic",
       "start_year": -2890,
@@ -1316,7 +1316,7 @@
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn3",
-      "kind": "period",
+      "kind": "polity",
       "name": "3rd Dynasty",
       "parent_id": "africa.nile.egypt.old-kingdom",
       "start_year": -2686,
@@ -1369,7 +1369,7 @@
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn4",
-      "kind": "period",
+      "kind": "polity",
       "name": "4th Dynasty",
       "parent_id": "africa.nile.egypt.old-kingdom",
       "start_year": -2613,
@@ -1542,7 +1542,7 @@
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn5",
-      "kind": "period",
+      "kind": "polity",
       "name": "5th Dynasty",
       "parent_id": "africa.nile.egypt.old-kingdom",
       "start_year": -2494,
@@ -1570,7 +1570,7 @@
     },
     {
       "id": "africa.nile.egypt.old-kingdom.dyn6",
-      "kind": "period",
+      "kind": "polity",
       "name": "6th Dynasty",
       "parent_id": "africa.nile.egypt.old-kingdom",
       "start_year": -2345,
@@ -1683,7 +1683,7 @@
     },
     {
       "id": "africa.nile.egypt.middle-kingdom.dyn11",
-      "kind": "period",
+      "kind": "polity",
       "name": "11th Dynasty (reunified)",
       "parent_id": "africa.nile.egypt.middle-kingdom",
       "start_year": -2125,
@@ -1736,7 +1736,7 @@
     },
     {
       "id": "africa.nile.egypt.middle-kingdom.dyn12",
-      "kind": "period",
+      "kind": "polity",
       "name": "12th Dynasty",
       "parent_id": "africa.nile.egypt.middle-kingdom",
       "start_year": -1985,
@@ -1764,7 +1764,7 @@
     },
     {
       "id": "africa.nile.egypt.middle-kingdom.dyn13",
-      "kind": "period",
+      "kind": "polity",
       "name": "13th Dynasty",
       "parent_id": "africa.nile.egypt.middle-kingdom",
       "start_year": -1773,
@@ -1839,7 +1839,7 @@
     },
     {
       "id": "africa.nile.egypt.sip.dyn15-hyksos",
-      "kind": "period",
+      "kind": "polity",
       "name": "15th Dynasty — Hyksos",
       "parent_id": "africa.nile.egypt.sip",
       "start_year": -1650,
@@ -1885,7 +1885,7 @@
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn18",
-      "kind": "period",
+      "kind": "polity",
       "name": "18th Dynasty",
       "parent_id": "africa.nile.egypt.new-kingdom",
       "start_year": -1550,
@@ -2167,7 +2167,7 @@
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn19",
-      "kind": "period",
+      "kind": "polity",
       "name": "19th Dynasty (Ramesside)",
       "parent_id": "africa.nile.egypt.new-kingdom",
       "start_year": -1295,
@@ -2273,7 +2273,7 @@
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn20",
-      "kind": "period",
+      "kind": "polity",
       "name": "20th Dynasty",
       "parent_id": "africa.nile.egypt.new-kingdom",
       "start_year": -1186,
@@ -2357,7 +2357,7 @@
     },
     {
       "id": "africa.nile.egypt.tip.dyn25-kushite",
-      "kind": "period",
+      "kind": "polity",
       "name": "25th Dynasty — Kushite (Nubian)",
       "parent_id": "africa.nile.egypt.tip",
       "start_year": -744,
@@ -2466,7 +2466,7 @@
     },
     {
       "id": "africa.nile.egypt.late-period.dyn26-saite",
-      "kind": "period",
+      "kind": "polity",
       "name": "26th Dynasty — Saite Renaissance",
       "parent_id": "africa.nile.egypt.late-period",
       "start_year": -664,
@@ -2489,7 +2489,7 @@
     },
     {
       "id": "africa.nile.egypt.late-period.dyn27-persian1",
-      "kind": "period",
+      "kind": "polity",
       "name": "27th Dynasty — First Persian",
       "parent_id": "africa.nile.egypt.late-period",
       "start_year": -525,
@@ -2528,7 +2528,7 @@
     },
     {
       "id": "africa.nile.egypt.ptolemaic",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ptolemaic Egypt",
       "parent_id": "africa.nile.egypt",
       "start_year": -332,
@@ -2665,7 +2665,7 @@
     },
     {
       "id": "africa.nile.kush",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kingdom of Kush",
       "parent_id": "africa.nile",
       "start_year": -2500,
@@ -2767,7 +2767,7 @@
     },
     {
       "id": "africa.nile.aksum",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kingdom of Aksum",
       "parent_id": "africa.nile",
       "start_year": 100,
@@ -2816,7 +2816,7 @@
     },
     {
       "id": "africa.nile.ethiopia",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ethiopian Empire",
       "parent_id": "africa.nile",
       "start_year": 1270,
@@ -11485,7 +11485,7 @@
     },
     {
       "id": "east-asia.china.shang",
-      "kind": "era",
+      "kind": "polity",
       "name": "Shang Dynasty",
       "parent_id": "east-asia.china",
       "start_year": -1600,
@@ -11515,7 +11515,7 @@
     },
     {
       "id": "east-asia.china.zhou",
-      "kind": "era",
+      "kind": "polity",
       "name": "Zhou Dynasty",
       "parent_id": "east-asia.china",
       "start_year": -1046,
@@ -11649,7 +11649,7 @@
     },
     {
       "id": "east-asia.china.qin",
-      "kind": "era",
+      "kind": "polity",
       "name": "Qin Dynasty",
       "parent_id": "east-asia.china",
       "start_year": -221,
@@ -11712,7 +11712,7 @@
     },
     {
       "id": "east-asia.china.han",
-      "kind": "era",
+      "kind": "polity",
       "name": "Han Dynasty",
       "parent_id": "east-asia.china",
       "start_year": -206,
@@ -11751,7 +11751,7 @@
     },
     {
       "id": "east-asia.china.han.western",
-      "kind": "period",
+      "kind": "polity",
       "name": "Western Han",
       "parent_id": "east-asia.china.han",
       "start_year": -206,
@@ -11854,7 +11854,7 @@
     },
     {
       "id": "east-asia.china.han.eastern",
-      "kind": "period",
+      "kind": "polity",
       "name": "Eastern Han",
       "parent_id": "east-asia.china.han",
       "start_year": 25,
@@ -11908,7 +11908,7 @@
     },
     {
       "id": "east-asia.china.jin",
-      "kind": "era",
+      "kind": "polity",
       "name": "Jin Dynasty",
       "parent_id": "east-asia.china",
       "start_year": 266,
@@ -12004,7 +12004,7 @@
     },
     {
       "id": "east-asia.china.sui",
-      "kind": "era",
+      "kind": "polity",
       "name": "Sui Dynasty",
       "parent_id": "east-asia.china",
       "start_year": 581,
@@ -12034,7 +12034,7 @@
     },
     {
       "id": "east-asia.china.tang",
-      "kind": "era",
+      "kind": "polity",
       "name": "Tang Dynasty",
       "parent_id": "east-asia.china",
       "start_year": 618,
@@ -12203,7 +12203,7 @@
     },
     {
       "id": "east-asia.china.song",
-      "kind": "era",
+      "kind": "polity",
       "name": "Song Dynasty",
       "parent_id": "east-asia.china",
       "start_year": 960,
@@ -12240,7 +12240,7 @@
     },
     {
       "id": "east-asia.china.song.northern",
-      "kind": "period",
+      "kind": "polity",
       "name": "Northern Song",
       "parent_id": "east-asia.china.song",
       "start_year": 960,
@@ -12267,7 +12267,7 @@
     },
     {
       "id": "east-asia.china.song.southern",
-      "kind": "period",
+      "kind": "polity",
       "name": "Southern Song",
       "parent_id": "east-asia.china.song",
       "start_year": 1127,
@@ -12290,7 +12290,7 @@
     },
     {
       "id": "east-asia.china.yuan",
-      "kind": "era",
+      "kind": "polity",
       "name": "Yuan Dynasty",
       "parent_id": "east-asia.china",
       "start_year": 1271,
@@ -12381,7 +12381,7 @@
     },
     {
       "id": "east-asia.china.ming",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ming Dynasty",
       "parent_id": "east-asia.china",
       "start_year": 1368,
@@ -12477,7 +12477,7 @@
     },
     {
       "id": "east-asia.china.qing",
-      "kind": "era",
+      "kind": "polity",
       "name": "Qing Dynasty",
       "parent_id": "east-asia.china",
       "start_year": 1644,
@@ -12625,7 +12625,7 @@
     },
     {
       "id": "east-asia.china.roc",
-      "kind": "era",
+      "kind": "polity",
       "name": "Republic of China",
       "parent_id": "east-asia.china",
       "start_year": 1912,
@@ -12733,7 +12733,7 @@
     },
     {
       "id": "east-asia.china.prc",
-      "kind": "era",
+      "kind": "polity",
       "name": "People's Republic of China",
       "parent_id": "east-asia.china",
       "start_year": 1949,
@@ -12789,7 +12789,7 @@
     },
     {
       "id": "east-asia.korea.gojoseon",
-      "kind": "era",
+      "kind": "polity",
       "name": "Gojoseon",
       "parent_id": "east-asia.korea",
       "start_year": -2333,
@@ -12843,7 +12843,7 @@
     },
     {
       "id": "east-asia.korea.unified-silla",
-      "kind": "era",
+      "kind": "polity",
       "name": "Unified Silla",
       "parent_id": "east-asia.korea",
       "start_year": 668,
@@ -12870,7 +12870,7 @@
     },
     {
       "id": "east-asia.korea.goryeo",
-      "kind": "era",
+      "kind": "polity",
       "name": "Goryeo Dynasty",
       "parent_id": "east-asia.korea",
       "start_year": 918,
@@ -12894,7 +12894,7 @@
     },
     {
       "id": "east-asia.korea.joseon",
-      "kind": "era",
+      "kind": "polity",
       "name": "Joseon Dynasty",
       "parent_id": "east-asia.korea",
       "start_year": 1392,
@@ -12959,7 +12959,7 @@
     },
     {
       "id": "east-asia.korea.korean-empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "Korean Empire",
       "parent_id": "east-asia.korea",
       "start_year": 1897,
@@ -13099,7 +13099,7 @@
     },
     {
       "id": "west-asia.mesopotamia.sumerian",
-      "kind": "era",
+      "kind": "polity",
       "name": "Sumerian Early Dynastic",
       "parent_id": "west-asia.mesopotamia",
       "start_year": -2900,
@@ -13158,7 +13158,7 @@
     },
     {
       "id": "west-asia.mesopotamia.akkadian",
-      "kind": "era",
+      "kind": "polity",
       "name": "Akkadian Empire",
       "parent_id": "west-asia.mesopotamia",
       "start_year": -2334,
@@ -13199,7 +13199,7 @@
     },
     {
       "id": "west-asia.mesopotamia.ur-iii",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ur III (Neo-Sumerian)",
       "parent_id": "west-asia.mesopotamia",
       "start_year": -2112,
@@ -13219,7 +13219,7 @@
     },
     {
       "id": "west-asia.mesopotamia.old-babylonian",
-      "kind": "era",
+      "kind": "polity",
       "name": "Old Babylonian Empire",
       "parent_id": "west-asia.mesopotamia",
       "start_year": -2000,
@@ -13287,7 +13287,7 @@
     },
     {
       "id": "west-asia.mesopotamia.kassite",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kassite Babylon",
       "parent_id": "west-asia.mesopotamia",
       "start_year": -1595,
@@ -13314,7 +13314,7 @@
     },
     {
       "id": "west-asia.mesopotamia.assyrian",
-      "kind": "era",
+      "kind": "polity",
       "name": "Assyrian Empires",
       "parent_id": "west-asia.mesopotamia",
       "start_year": -2025,
@@ -13331,7 +13331,7 @@
     },
     {
       "id": "west-asia.mesopotamia.assyrian.middle",
-      "kind": "period",
+      "kind": "polity",
       "name": "Middle Assyrian Empire",
       "parent_id": "west-asia.mesopotamia.assyrian",
       "start_year": -1365,
@@ -13347,7 +13347,7 @@
     },
     {
       "id": "west-asia.mesopotamia.assyrian.neo",
-      "kind": "period",
+      "kind": "polity",
       "name": "Neo-Assyrian Empire",
       "parent_id": "west-asia.mesopotamia.assyrian",
       "start_year": -911,
@@ -13380,7 +13380,7 @@
     },
     {
       "id": "west-asia.mesopotamia.neo-babylonian",
-      "kind": "era",
+      "kind": "polity",
       "name": "Neo-Babylonian Empire",
       "parent_id": "west-asia.mesopotamia",
       "start_year": -626,
@@ -13414,7 +13414,7 @@
     },
     {
       "id": "west-asia.mesopotamia.israel-judah",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kingdoms of Israel and Judah",
       "parent_id": "west-asia.mesopotamia",
       "start_year": -1050,
@@ -13564,7 +13564,7 @@
     },
     {
       "id": "west-asia.iran.elam",
-      "kind": "era",
+      "kind": "polity",
       "name": "Elam",
       "parent_id": "west-asia.iran",
       "start_year": -3200,
@@ -13580,7 +13580,7 @@
     },
     {
       "id": "west-asia.iran.median",
-      "kind": "era",
+      "kind": "polity",
       "name": "Median Empire",
       "parent_id": "west-asia.iran",
       "start_year": -678,
@@ -13603,7 +13603,7 @@
     },
     {
       "id": "west-asia.iran.achaemenid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Achaemenid Empire",
       "parent_id": "west-asia.iran",
       "start_year": -550,
@@ -13778,7 +13778,7 @@
     },
     {
       "id": "west-asia.iran.seleucid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Seleucid Empire",
       "parent_id": "west-asia.iran",
       "start_year": -312,
@@ -13812,7 +13812,7 @@
     },
     {
       "id": "west-asia.iran.parthian",
-      "kind": "era",
+      "kind": "polity",
       "name": "Parthian (Arsacid) Empire",
       "parent_id": "west-asia.iran",
       "start_year": -247,
@@ -13861,7 +13861,7 @@
     },
     {
       "id": "west-asia.iran.sasanian",
-      "kind": "era",
+      "kind": "polity",
       "name": "Sasanian Empire",
       "parent_id": "west-asia.iran",
       "start_year": 224,
@@ -13993,7 +13993,7 @@
     },
     {
       "id": "west-asia.iran.safavid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Safavid Empire",
       "parent_id": "west-asia.iran",
       "start_year": 1501,
@@ -14038,7 +14038,7 @@
     },
     {
       "id": "west-asia.iran.qajar",
-      "kind": "era",
+      "kind": "polity",
       "name": "Qajar Dynasty",
       "parent_id": "west-asia.iran",
       "start_year": 1794,
@@ -14091,7 +14091,7 @@
     },
     {
       "id": "west-asia.iran.pahlavi",
-      "kind": "era",
+      "kind": "polity",
       "name": "Pahlavi Dynasty",
       "parent_id": "west-asia.iran",
       "start_year": 1925,
@@ -14120,7 +14120,7 @@
     },
     {
       "id": "west-asia.iran.islamic-republic",
-      "kind": "era",
+      "kind": "polity",
       "name": "Islamic Republic of Iran",
       "parent_id": "west-asia.iran",
       "start_year": 1979,
@@ -14164,7 +14164,7 @@
     },
     {
       "id": "west-asia.arabia.rise-islam",
-      "kind": "era",
+      "kind": "polity",
       "name": "Rise of Islam",
       "parent_id": "west-asia.arabia",
       "start_year": 610,
@@ -14208,7 +14208,7 @@
     },
     {
       "id": "global.multi-regional.rashidun",
-      "kind": "era",
+      "kind": "polity",
       "name": "Rashidun Caliphate",
       "parent_id": "global.multi-regional",
       "start_year": 632,
@@ -14247,7 +14247,7 @@
     },
     {
       "id": "global.multi-regional.umayyad",
-      "kind": "era",
+      "kind": "polity",
       "name": "Umayyad Caliphate",
       "parent_id": "global.multi-regional",
       "start_year": 661,
@@ -14293,7 +14293,7 @@
     },
     {
       "id": "global.multi-regional.abbasid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Abbasid Caliphate",
       "parent_id": "global.multi-regional",
       "start_year": 750,
@@ -14370,7 +14370,7 @@
     },
     {
       "id": "global.multi-regional.fatimid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Fatimid Caliphate",
       "parent_id": "global.multi-regional",
       "start_year": 909,
@@ -14409,7 +14409,7 @@
     },
     {
       "id": "global.multi-regional.ottoman",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ottoman Empire",
       "parent_id": "global.multi-regional",
       "start_year": 1299,
@@ -14525,7 +14525,7 @@
     },
     {
       "id": "europe.mediterranean.greece",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ancient Greece",
       "parent_id": "europe.mediterranean",
       "start_year": -3200,
@@ -14723,7 +14723,7 @@
     },
     {
       "id": "europe.mediterranean.greece.classical",
-      "kind": "period",
+      "kind": "polity",
       "name": "Classical Greece",
       "parent_id": "europe.mediterranean.greece",
       "start_year": -480,
@@ -14765,7 +14765,7 @@
     },
     {
       "id": "europe.mediterranean.macedon",
-      "kind": "period",
+      "kind": "polity",
       "name": "Kingdom of Macedon",
       "parent_id": "europe.mediterranean",
       "start_year": -700,
@@ -14971,7 +14971,7 @@
     },
     {
       "id": "europe.mediterranean.rome.kingdom",
-      "kind": "period",
+      "kind": "polity",
       "name": "Roman Kingdom",
       "parent_id": "europe.mediterranean.rome",
       "start_year": -753,
@@ -15000,7 +15000,7 @@
     },
     {
       "id": "europe.mediterranean.rome.republic",
-      "kind": "period",
+      "kind": "polity",
       "name": "Roman Republic",
       "parent_id": "europe.mediterranean.rome",
       "start_year": -509,
@@ -15048,7 +15048,7 @@
     },
     {
       "id": "europe.mediterranean.rome.republic.early",
-      "kind": "period",
+      "kind": "polity",
       "name": "Early Republic",
       "parent_id": "europe.mediterranean.rome.republic",
       "start_year": -509,
@@ -15071,7 +15071,7 @@
     },
     {
       "id": "europe.mediterranean.rome.republic.middle",
-      "kind": "period",
+      "kind": "polity",
       "name": "Middle Republic (Punic Wars)",
       "parent_id": "europe.mediterranean.rome.republic",
       "start_year": -287,
@@ -15094,7 +15094,7 @@
     },
     {
       "id": "europe.mediterranean.rome.republic.late",
-      "kind": "period",
+      "kind": "polity",
       "name": "Late Republic",
       "parent_id": "europe.mediterranean.rome.republic",
       "start_year": -133,
@@ -15142,7 +15142,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "Roman Empire",
       "parent_id": "europe.mediterranean.rome",
       "start_year": -27,
@@ -15190,6 +15190,10 @@
           "source_ids": [
             "ucl-thesis-fall-of-western-empire"
           ]
+        },
+        {
+          "kind": "naming-confusion",
+          "text": "\"Roman Empire\" means both the state from 27 BCE and the whole Roman epoch, as in The Rise and Fall of the Roman Empire. This is the state; the epoch is Ancient Rome, above."
         }
       ],
       "cross_parent_ids": [
@@ -15225,7 +15229,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire.julio-claudian",
-      "kind": "period",
+      "kind": "polity",
       "name": "Julio-Claudian Dynasty",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": -27,
@@ -15343,7 +15347,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire.flavian",
-      "kind": "period",
+      "kind": "polity",
       "name": "Flavian Dynasty",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 69,
@@ -15371,7 +15375,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire.nerva-antonine",
-      "kind": "period",
+      "kind": "polity",
       "name": "Nerva–Antonine Dynasty",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 96,
@@ -15513,7 +15517,7 @@
     },
     {
       "id": "europe.mediterranean.byzantine",
-      "kind": "era",
+      "kind": "polity",
       "name": "Byzantine Empire",
       "parent_id": "europe.mediterranean",
       "start_year": 330,
@@ -15677,7 +15681,7 @@
     },
     {
       "id": "europe.western.carolingian",
-      "kind": "era",
+      "kind": "polity",
       "name": "Carolingian Empire",
       "parent_id": "europe.western",
       "start_year": 751,
@@ -15711,7 +15715,7 @@
     },
     {
       "id": "europe.western.france",
-      "kind": "era",
+      "kind": "polity",
       "name": "France (Medieval to Modern)",
       "parent_id": "europe.western",
       "start_year": 987,
@@ -15771,7 +15775,7 @@
     },
     {
       "id": "europe.western.france.bourbon",
-      "kind": "period",
+      "kind": "polity",
       "name": "Bourbon France",
       "parent_id": "europe.western.france",
       "start_year": 1589,
@@ -15897,7 +15901,7 @@
     },
     {
       "id": "europe.western.england",
-      "kind": "era",
+      "kind": "polity",
       "name": "England (Medieval to Modern)",
       "parent_id": "europe.western",
       "start_year": 927,
@@ -15911,7 +15915,7 @@
     },
     {
       "id": "europe.western.england.norman",
-      "kind": "period",
+      "kind": "polity",
       "name": "Norman England",
       "parent_id": "europe.western.england",
       "start_year": 1066,
@@ -15984,7 +15988,7 @@
     },
     {
       "id": "europe.western.england.tudor",
-      "kind": "period",
+      "kind": "polity",
       "name": "Tudor England",
       "parent_id": "europe.western.england",
       "start_year": 1485,
@@ -16088,7 +16092,7 @@
     },
     {
       "id": "europe.western.britain.victorian",
-      "kind": "period",
+      "kind": "polity",
       "name": "Victorian Britain",
       "parent_id": "europe.western.england",
       "start_year": 1837,
@@ -16142,7 +16146,7 @@
     },
     {
       "id": "europe.western.iberia.spanish-empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "Spanish Empire",
       "parent_id": "europe.western",
       "start_year": 1492,
@@ -16177,7 +16181,7 @@
     },
     {
       "id": "europe.western.iberia.portuguese-empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "Portuguese Empire",
       "parent_id": "europe.western",
       "start_year": 1415,
@@ -16199,7 +16203,7 @@
     },
     {
       "id": "europe.central.hre",
-      "kind": "era",
+      "kind": "polity",
       "name": "Holy Roman Empire",
       "parent_id": "europe.central",
       "start_year": 800,
@@ -16278,7 +16282,7 @@
     },
     {
       "id": "europe.central.hre.ottonian",
-      "kind": "period",
+      "kind": "polity",
       "name": "Ottonian Dynasty",
       "parent_id": "europe.central.hre",
       "start_year": 919,
@@ -16294,7 +16298,7 @@
     },
     {
       "id": "europe.central.hre.hohenstaufen",
-      "kind": "period",
+      "kind": "polity",
       "name": "Hohenstaufen Dynasty",
       "parent_id": "europe.central.hre",
       "start_year": 1138,
@@ -16344,7 +16348,7 @@
     },
     {
       "id": "europe.central.habsburg-monarchy",
-      "kind": "era",
+      "kind": "polity",
       "name": "The Habsburg Monarchy",
       "parent_id": "europe.central",
       "start_year": 1526,
@@ -16390,7 +16394,7 @@
     },
     {
       "id": "europe.central.prussia",
-      "kind": "era",
+      "kind": "polity",
       "name": "Rise of Prussia",
       "parent_id": "europe.central",
       "start_year": 1701,
@@ -16417,7 +16421,7 @@
     },
     {
       "id": "europe.central.german-empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "German Empire",
       "parent_id": "europe.central",
       "start_year": 1871,
@@ -16446,7 +16450,7 @@
     },
     {
       "id": "europe.central.weimar",
-      "kind": "era",
+      "kind": "polity",
       "name": "Weimar Republic",
       "parent_id": "europe.central",
       "start_year": 1918,
@@ -16474,7 +16478,7 @@
     },
     {
       "id": "europe.central.nazi-germany",
-      "kind": "era",
+      "kind": "polity",
       "name": "Nazi Germany",
       "parent_id": "europe.central",
       "start_year": 1933,
@@ -16503,7 +16507,7 @@
     },
     {
       "id": "europe.central.germany-modern",
-      "kind": "era",
+      "kind": "polity",
       "name": "Post-War Germany",
       "parent_id": "europe.central",
       "start_year": 1945,
@@ -16622,7 +16626,7 @@
     },
     {
       "id": "europe.northern.swedish-empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "Swedish Empire",
       "parent_id": "europe.northern",
       "start_year": 1611,
@@ -16638,7 +16642,7 @@
     },
     {
       "id": "europe.eastern.kievan-rus",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kievan Rus'",
       "parent_id": "europe.eastern",
       "start_year": 862,
@@ -16678,7 +16682,7 @@
     },
     {
       "id": "europe.eastern.moscow",
-      "kind": "era",
+      "kind": "polity",
       "name": "Grand Duchy of Moscow",
       "parent_id": "europe.eastern",
       "start_year": 1263,
@@ -16722,7 +16726,7 @@
     },
     {
       "id": "europe.eastern.tsardom",
-      "kind": "era",
+      "kind": "polity",
       "name": "Tsardom of Russia",
       "parent_id": "europe.eastern",
       "start_year": 1547,
@@ -16763,7 +16767,7 @@
     },
     {
       "id": "europe.eastern.russian-empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "Russian Empire",
       "parent_id": "europe.eastern",
       "start_year": 1721,
@@ -16846,7 +16850,7 @@
     },
     {
       "id": "europe.eastern.soviet",
-      "kind": "era",
+      "kind": "polity",
       "name": "Soviet Union",
       "parent_id": "europe.eastern",
       "start_year": 1922,
@@ -16924,7 +16928,7 @@
     },
     {
       "id": "europe.eastern.russia-modern",
-      "kind": "era",
+      "kind": "polity",
       "name": "Russian Federation",
       "parent_id": "europe.eastern",
       "start_year": 1991,
@@ -16945,7 +16949,7 @@
     },
     {
       "id": "europe.eastern.plc",
-      "kind": "era",
+      "kind": "polity",
       "name": "Polish-Lithuanian Commonwealth",
       "parent_id": "europe.eastern",
       "start_year": 1569,
@@ -16977,7 +16981,7 @@
     },
     {
       "id": "central-asia.xiongnu",
-      "kind": "era",
+      "kind": "polity",
       "name": "Xiongnu Empire",
       "parent_id": "central-asia.steppe",
       "start_year": -209,
@@ -17010,7 +17014,7 @@
     },
     {
       "id": "central-asia.kushan",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kushan Empire",
       "parent_id": "central-asia.core",
       "start_year": 30,
@@ -17058,7 +17062,7 @@
     },
     {
       "id": "central-asia.turkic-khaganate",
-      "kind": "era",
+      "kind": "polity",
       "name": "First Turkic Khaganate",
       "parent_id": "central-asia.steppe",
       "start_year": 552,
@@ -17077,7 +17081,7 @@
     },
     {
       "id": "central-asia.samanid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Samanid Empire",
       "parent_id": "central-asia.core",
       "start_year": 819,
@@ -17104,7 +17108,7 @@
     },
     {
       "id": "central-asia.seljuk",
-      "kind": "era",
+      "kind": "polity",
       "name": "Seljuk Empire",
       "parent_id": "central-asia.core",
       "start_year": 1037,
@@ -17130,7 +17134,7 @@
     },
     {
       "id": "central-asia.mongol-empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "Mongol Empire",
       "parent_id": "central-asia",
       "start_year": 1206,
@@ -17264,7 +17268,7 @@
     },
     {
       "id": "central-asia.mongol-empire.chagatai",
-      "kind": "period",
+      "kind": "polity",
       "name": "Chagatai Khanate",
       "parent_id": "central-asia.mongol-empire",
       "start_year": 1226,
@@ -17288,7 +17292,7 @@
     },
     {
       "id": "central-asia.mongol-empire.golden-horde",
-      "kind": "period",
+      "kind": "polity",
       "name": "Golden Horde",
       "parent_id": "central-asia.mongol-empire",
       "start_year": 1242,
@@ -17400,7 +17404,7 @@
     },
     {
       "id": "central-asia.timurid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Timurid Empire",
       "parent_id": "central-asia.core",
       "start_year": 1370,
@@ -17456,7 +17460,7 @@
     },
     {
       "id": "central-asia.tibet.empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "Tibetan Empire",
       "parent_id": "central-asia.tibet",
       "start_year": 618,
@@ -17488,7 +17492,7 @@
     },
     {
       "id": "central-asia.tibet.dalai-lama",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ganden Phodrang (Dalai Lama Rule)",
       "parent_id": "central-asia.tibet",
       "start_year": 1642,
@@ -17504,7 +17508,7 @@
     },
     {
       "id": "south-asia.indus",
-      "kind": "era",
+      "kind": "culture",
       "name": "Indus Valley Civilization",
       "parent_id": "south-asia",
       "start_year": -3300,
@@ -17555,7 +17559,7 @@
       "end_dating_method": "unknown",
       "end_year_min": -1400,
       "end_year_max": -1200,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it."
     },
     {
       "id": "south-asia.vedic",
@@ -17650,7 +17654,7 @@
     },
     {
       "id": "south-asia.maurya",
-      "kind": "era",
+      "kind": "polity",
       "name": "Maurya Empire",
       "parent_id": "south-asia",
       "start_year": -322,
@@ -17720,7 +17724,7 @@
     },
     {
       "id": "south-asia.shunga",
-      "kind": "era",
+      "kind": "polity",
       "name": "Shunga Empire",
       "parent_id": "south-asia",
       "start_year": -185,
@@ -17736,7 +17740,7 @@
     },
     {
       "id": "south-asia.satavahana",
-      "kind": "era",
+      "kind": "polity",
       "name": "Satavahana Empire",
       "parent_id": "south-asia",
       "start_year": -230,
@@ -17756,7 +17760,7 @@
     },
     {
       "id": "south-asia.indo-greek",
-      "kind": "era",
+      "kind": "polity",
       "name": "Indo-Greek Kingdoms",
       "parent_id": "south-asia",
       "start_year": -200,
@@ -17783,7 +17787,7 @@
     },
     {
       "id": "south-asia.gupta",
-      "kind": "era",
+      "kind": "polity",
       "name": "Gupta Empire",
       "parent_id": "south-asia",
       "start_year": 319,
@@ -17831,7 +17835,7 @@
     },
     {
       "id": "south-asia.chola",
-      "kind": "era",
+      "kind": "polity",
       "name": "Chola Empire",
       "parent_id": "south-asia",
       "start_year": 848,
@@ -17899,7 +17903,7 @@
     },
     {
       "id": "south-asia.delhi-sultanate",
-      "kind": "era",
+      "kind": "polity",
       "name": "Delhi Sultanate",
       "parent_id": "south-asia",
       "start_year": 1206,
@@ -17916,7 +17920,7 @@
     },
     {
       "id": "south-asia.vijayanagara",
-      "kind": "era",
+      "kind": "polity",
       "name": "Vijayanagara Empire",
       "parent_id": "south-asia",
       "start_year": 1336,
@@ -17932,7 +17936,7 @@
     },
     {
       "id": "south-asia.mughal",
-      "kind": "era",
+      "kind": "polity",
       "name": "Mughal Empire",
       "parent_id": "south-asia",
       "start_year": 1526,
@@ -18060,7 +18064,7 @@
     },
     {
       "id": "south-asia.maratha",
-      "kind": "era",
+      "kind": "polity",
       "name": "Maratha Confederacy",
       "parent_id": "south-asia",
       "start_year": 1674,
@@ -18077,7 +18081,7 @@
     },
     {
       "id": "south-asia.sikh-empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "Sikh Empire",
       "parent_id": "south-asia",
       "start_year": 1799,
@@ -18101,7 +18105,7 @@
     },
     {
       "id": "south-asia.british-raj",
-      "kind": "era",
+      "kind": "polity",
       "name": "British Raj",
       "parent_id": "south-asia",
       "start_year": 1858,
@@ -18125,7 +18129,7 @@
     },
     {
       "id": "south-asia.independence",
-      "kind": "era",
+      "kind": "polity",
       "name": "Post-Independence South Asia",
       "parent_id": "south-asia",
       "start_year": 1947,
@@ -18146,7 +18150,7 @@
     },
     {
       "id": "southeast-asia.mainland.funan",
-      "kind": "era",
+      "kind": "polity",
       "name": "Funan",
       "parent_id": "southeast-asia.mainland",
       "start_year": 68,
@@ -18182,7 +18186,7 @@
     },
     {
       "id": "southeast-asia.mainland.champa",
-      "kind": "era",
+      "kind": "polity",
       "name": "Champa",
       "parent_id": "southeast-asia.mainland",
       "start_year": 192,
@@ -18249,7 +18253,7 @@
     },
     {
       "id": "southeast-asia.mainland.khmer",
-      "kind": "era",
+      "kind": "polity",
       "name": "Khmer Empire (Angkor)",
       "parent_id": "southeast-asia.mainland",
       "start_year": 802,
@@ -18303,7 +18307,7 @@
     },
     {
       "id": "southeast-asia.mainland.vietnam",
-      "kind": "era",
+      "kind": "polity",
       "name": "Vietnam (dynastic)",
       "parent_id": "southeast-asia.mainland",
       "start_year": 939,
@@ -18373,7 +18377,7 @@
     },
     {
       "id": "southeast-asia.mainland.pagan",
-      "kind": "era",
+      "kind": "polity",
       "name": "Pagan Kingdom",
       "parent_id": "southeast-asia.mainland",
       "start_year": 849,
@@ -18389,7 +18393,7 @@
     },
     {
       "id": "southeast-asia.mainland.ayutthaya",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ayutthaya Kingdom",
       "parent_id": "southeast-asia.mainland",
       "start_year": 1351,
@@ -18418,7 +18422,7 @@
     },
     {
       "id": "southeast-asia.mainland.rattanakosin",
-      "kind": "era",
+      "kind": "polity",
       "name": "Rattanakosin (Chakri Dynasty)",
       "parent_id": "southeast-asia.mainland",
       "start_year": 1782,
@@ -18438,7 +18442,7 @@
     },
     {
       "id": "southeast-asia.maritime.srivijaya",
-      "kind": "era",
+      "kind": "polity",
       "name": "Srivijaya",
       "parent_id": "southeast-asia.maritime",
       "start_year": 650,
@@ -18467,7 +18471,7 @@
     },
     {
       "id": "southeast-asia.maritime.majapahit",
-      "kind": "era",
+      "kind": "polity",
       "name": "Majapahit Empire",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1293,
@@ -18521,7 +18525,7 @@
     },
     {
       "id": "southeast-asia.maritime.malacca",
-      "kind": "era",
+      "kind": "polity",
       "name": "Sultanate of Malacca",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1400,
@@ -18553,7 +18557,7 @@
     },
     {
       "id": "southeast-asia.maritime.dutch-eic",
-      "kind": "era",
+      "kind": "polity",
       "name": "Dutch East Indies",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1800,
@@ -18626,7 +18630,7 @@
     },
     {
       "id": "southeast-asia.maritime.spanish-philippines",
-      "kind": "era",
+      "kind": "polity",
       "name": "Spanish Philippines",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1565,
@@ -18645,7 +18649,7 @@
     },
     {
       "id": "southeast-asia.maritime.indonesia",
-      "kind": "era",
+      "kind": "polity",
       "name": "Republic of Indonesia",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1945,
@@ -18680,7 +18684,7 @@
     },
     {
       "id": "africa.north.carthage",
-      "kind": "era",
+      "kind": "polity",
       "name": "Carthaginian Empire",
       "parent_id": "africa.north",
       "start_year": -814,
@@ -18749,7 +18753,7 @@
     },
     {
       "id": "africa.north.almoravid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Almoravid Empire",
       "parent_id": "africa.north",
       "start_year": 1040,
@@ -18765,7 +18769,7 @@
     },
     {
       "id": "africa.north.almohad",
-      "kind": "era",
+      "kind": "polity",
       "name": "Almohad Caliphate",
       "parent_id": "africa.north",
       "start_year": 1121,
@@ -18781,7 +18785,7 @@
     },
     {
       "id": "africa.north.morocco-alaouite",
-      "kind": "era",
+      "kind": "polity",
       "name": "Alaouite Morocco",
       "parent_id": "africa.north",
       "start_year": 1631,
@@ -18794,7 +18798,7 @@
     },
     {
       "id": "africa.west.ghana",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ghana Empire",
       "parent_id": "africa.west",
       "start_year": 300,
@@ -18837,7 +18841,7 @@
     },
     {
       "id": "africa.west.mali",
-      "kind": "era",
+      "kind": "polity",
       "name": "Mali Empire",
       "parent_id": "africa.west",
       "start_year": 1235,
@@ -18888,7 +18892,7 @@
     },
     {
       "id": "africa.west.songhai",
-      "kind": "era",
+      "kind": "polity",
       "name": "Songhai Empire",
       "parent_id": "africa.west",
       "start_year": 1464,
@@ -18958,7 +18962,7 @@
     },
     {
       "id": "africa.west.kanem-bornu",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kanem–Bornu Empire",
       "parent_id": "africa.west",
       "start_year": 700,
@@ -18974,7 +18978,7 @@
     },
     {
       "id": "africa.west.benin",
-      "kind": "era",
+      "kind": "polity",
       "name": "Benin Empire",
       "parent_id": "africa.west",
       "start_year": 1180,
@@ -19002,7 +19006,7 @@
     },
     {
       "id": "africa.west.oyo",
-      "kind": "era",
+      "kind": "polity",
       "name": "Oyo Empire",
       "parent_id": "africa.west",
       "start_year": 1400,
@@ -19018,7 +19022,7 @@
     },
     {
       "id": "africa.west.ashanti",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ashanti Empire",
       "parent_id": "africa.west",
       "start_year": 1670,
@@ -19034,7 +19038,7 @@
     },
     {
       "id": "africa.west.dahomey",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kingdom of Dahomey",
       "parent_id": "africa.west",
       "start_year": 1600,
@@ -19057,7 +19061,7 @@
     },
     {
       "id": "africa.west.sokoto",
-      "kind": "era",
+      "kind": "polity",
       "name": "Sokoto Caliphate",
       "parent_id": "africa.west",
       "start_year": 1804,
@@ -19090,7 +19094,7 @@
     },
     {
       "id": "africa.east.zanzibar-sultanate",
-      "kind": "era",
+      "kind": "polity",
       "name": "Sultanate of Zanzibar",
       "parent_id": "africa.east",
       "start_year": 1856,
@@ -19106,7 +19110,7 @@
     },
     {
       "id": "africa.southern.great-zimbabwe",
-      "kind": "era",
+      "kind": "polity",
       "name": "Great Zimbabwe",
       "parent_id": "africa.southern",
       "start_year": 1100,
@@ -19123,7 +19127,7 @@
     },
     {
       "id": "africa.southern.mutapa",
-      "kind": "era",
+      "kind": "polity",
       "name": "Mutapa Empire",
       "parent_id": "africa.southern",
       "start_year": 1430,
@@ -19164,7 +19168,7 @@
     },
     {
       "id": "africa.southern.zulu",
-      "kind": "era",
+      "kind": "polity",
       "name": "Zulu Kingdom",
       "parent_id": "africa.southern",
       "start_year": 1816,
@@ -19198,7 +19202,7 @@
     },
     {
       "id": "africa.central.kongo",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kingdom of Kongo",
       "parent_id": "africa.central",
       "start_year": 1390,
@@ -19214,7 +19218,7 @@
     },
     {
       "id": "africa.central.luba",
-      "kind": "era",
+      "kind": "polity",
       "name": "Luba Empire",
       "parent_id": "africa.central",
       "start_year": 1585,
@@ -19230,7 +19234,7 @@
     },
     {
       "id": "africa.central.lunda",
-      "kind": "era",
+      "kind": "polity",
       "name": "Lunda Empire",
       "parent_id": "africa.central",
       "start_year": 1665,
@@ -19246,7 +19250,7 @@
     },
     {
       "id": "americas.north.mississippian",
-      "kind": "era",
+      "kind": "culture",
       "name": "Mississippian Culture",
       "parent_id": "americas.north",
       "start_year": 800,
@@ -19262,11 +19266,12 @@
       "start_year_max": 850,
       "end_year_min": 1550,
       "end_year_max": 1650,
-      "date_standing": "majority"
+      "date_standing": "majority",
+      "date_note": "Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it."
     },
     {
       "id": "americas.north.ancestral-puebloan",
-      "kind": "era",
+      "kind": "culture",
       "name": "Ancestral Puebloan",
       "parent_id": "americas.north",
       "start_year": 100,
@@ -19320,6 +19325,7 @@
       "end_year_min": 1550,
       "end_year_max": 1650,
       "date_standing": "majority",
+      "date_note": "Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it.",
       "aliases": [
         "Anasazi",
         "Hisatsinom",
@@ -19328,7 +19334,7 @@
     },
     {
       "id": "americas.north.haudenosaunee",
-      "kind": "era",
+      "kind": "polity",
       "name": "Haudenosaunee Confederacy",
       "parent_id": "americas.north",
       "start_year": 1450,
@@ -19394,7 +19400,7 @@
     },
     {
       "id": "americas.north.comanche",
-      "kind": "era",
+      "kind": "polity",
       "name": "Comanche Empire",
       "parent_id": "americas.north",
       "start_year": 1750,
@@ -19427,7 +19433,7 @@
     },
     {
       "id": "americas.north.usa",
-      "kind": "era",
+      "kind": "polity",
       "name": "United States",
       "parent_id": "americas.north",
       "start_year": 1776,
@@ -19478,7 +19484,7 @@
     },
     {
       "id": "americas.mesoamerica.olmec",
-      "kind": "era",
+      "kind": "culture",
       "name": "Olmec Civilization",
       "parent_id": "americas.mesoamerica",
       "start_year": -1200,
@@ -19506,7 +19512,7 @@
       ],
       "start_dating_method": "radiocarbon-calibrated",
       "end_dating_method": "radiocarbon-calibrated",
-      "date_note": "San Lorenzo, the earliest major centre, dates to about 1150 BCE.",
+      "date_note": "San Lorenzo, the earliest major centre, dates to about 1150 BCE. Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it.",
       "source_ids": [
         "britannica-olmec",
         "britannica-san-lorenzo"
@@ -19532,7 +19538,7 @@
     },
     {
       "id": "americas.mesoamerica.zapotec",
-      "kind": "era",
+      "kind": "polity",
       "name": "Zapotec (Monte Albán)",
       "parent_id": "americas.mesoamerica",
       "start_year": -500,
@@ -19551,7 +19557,7 @@
     },
     {
       "id": "americas.mesoamerica.teotihuacan",
-      "kind": "era",
+      "kind": "polity",
       "name": "Teotihuacan",
       "parent_id": "americas.mesoamerica",
       "start_year": -100,
@@ -19583,7 +19589,7 @@
     },
     {
       "id": "americas.mesoamerica.maya",
-      "kind": "era",
+      "kind": "culture",
       "name": "Maya Civilization",
       "parent_id": "americas.mesoamerica",
       "start_year": -2000,
@@ -19625,7 +19631,7 @@
       "end_year_min": 1597,
       "end_year_max": 1797,
       "date_standing": "majority",
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it.",
       "aliases": [
         "Mayan",
         "Maya"
@@ -19702,7 +19708,7 @@
     },
     {
       "id": "americas.mesoamerica.toltec",
-      "kind": "era",
+      "kind": "polity",
       "name": "Toltec Empire",
       "parent_id": "americas.mesoamerica",
       "start_year": 900,
@@ -19733,7 +19739,7 @@
     },
     {
       "id": "americas.mesoamerica.purepecha",
-      "kind": "era",
+      "kind": "polity",
       "name": "Purépecha Empire",
       "parent_id": "americas.mesoamerica",
       "start_year": 1300,
@@ -19765,7 +19771,7 @@
     },
     {
       "id": "americas.mesoamerica.aztec",
-      "kind": "era",
+      "kind": "polity",
       "name": "Aztec Empire",
       "parent_id": "americas.mesoamerica",
       "start_year": 1428,
@@ -19951,7 +19957,7 @@
     },
     {
       "id": "americas.mesoamerica.new-spain",
-      "kind": "era",
+      "kind": "polity",
       "name": "Viceroyalty of New Spain",
       "parent_id": "americas.mesoamerica",
       "start_year": 1521,
@@ -19980,7 +19986,7 @@
     },
     {
       "id": "americas.mesoamerica.mexico",
-      "kind": "era",
+      "kind": "polity",
       "name": "Mexico (independent)",
       "parent_id": "americas.mesoamerica",
       "start_year": 1821,
@@ -20001,7 +20007,7 @@
     },
     {
       "id": "americas.andes.norte-chico",
-      "kind": "era",
+      "kind": "culture",
       "name": "Norte Chico / Caral",
       "parent_id": "americas.andes",
       "start_year": -3000,
@@ -20027,7 +20033,7 @@
           "kind": "scholarly"
         }
       ],
-      "date_note": "Monumental construction in the third millennium BCE, established by a radiocarbon programme published in Nature.",
+      "date_note": "Monumental construction in the third millennium BCE, established by a radiocarbon programme published in Nature. Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it.",
       "start_year_min": -3050,
       "start_year_max": -2950,
       "end_year_min": -1850,
@@ -20040,7 +20046,7 @@
     },
     {
       "id": "americas.andes.chavin",
-      "kind": "era",
+      "kind": "culture",
       "name": "Chavín",
       "parent_id": "americas.andes",
       "start_year": -900,
@@ -20055,11 +20061,12 @@
       "start_year_max": -850,
       "end_year_min": -250,
       "end_year_max": -150,
-      "date_standing": "majority"
+      "date_standing": "majority",
+      "date_note": "Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it."
     },
     {
       "id": "americas.andes.moche",
-      "kind": "era",
+      "kind": "culture",
       "name": "Moche",
       "parent_id": "americas.andes",
       "start_year": 100,
@@ -20070,7 +20077,7 @@
       "source_ids": [
         "britannica-moche"
       ],
-      "date_note": "Britannica gives the 1st to 8th century CE; the dataset previously ended this a century early.",
+      "date_note": "Britannica gives the 1st to 8th century CE; the dataset previously ended this a century early. Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it.",
       "start_year_min": 50,
       "start_year_max": 150,
       "end_year_min": 750,
@@ -20079,7 +20086,7 @@
     },
     {
       "id": "americas.andes.nazca",
-      "kind": "era",
+      "kind": "culture",
       "name": "Nazca",
       "parent_id": "americas.andes",
       "start_year": -100,
@@ -20091,11 +20098,11 @@
       "end_dating_method": "unknown",
       "end_year_min": 750,
       "end_year_max": 850,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it."
     },
     {
       "id": "americas.andes.tiwanaku",
-      "kind": "era",
+      "kind": "polity",
       "name": "Tiwanaku",
       "parent_id": "americas.andes",
       "start_year": 500,
@@ -20111,7 +20118,7 @@
     },
     {
       "id": "americas.andes.wari",
-      "kind": "era",
+      "kind": "polity",
       "name": "Wari Empire",
       "parent_id": "americas.andes",
       "start_year": 600,
@@ -20130,7 +20137,7 @@
     },
     {
       "id": "americas.andes.chimu",
-      "kind": "era",
+      "kind": "polity",
       "name": "Chimú (Chimor)",
       "parent_id": "americas.andes",
       "start_year": 900,
@@ -20149,7 +20156,7 @@
     },
     {
       "id": "americas.andes.inca",
-      "kind": "era",
+      "kind": "polity",
       "name": "Inca Empire",
       "parent_id": "americas.andes",
       "start_year": 1438,
@@ -20311,7 +20318,7 @@
     },
     {
       "id": "americas.andes.vilcabamba",
-      "kind": "era",
+      "kind": "polity",
       "name": "Neo-Inca State at Vilcabamba",
       "parent_id": "americas.andes",
       "start_year": 1537,
@@ -20334,7 +20341,7 @@
     },
     {
       "id": "americas.andes.viceroyalty-peru",
-      "kind": "era",
+      "kind": "polity",
       "name": "Viceroyalty of Peru",
       "parent_id": "americas.andes",
       "start_year": 1542,
@@ -20366,7 +20373,7 @@
     },
     {
       "id": "americas.amazon-southern.marajoara",
-      "kind": "era",
+      "kind": "culture",
       "name": "Marajoara Culture",
       "parent_id": "americas.amazon-southern",
       "start_year": 400,
@@ -20378,11 +20385,11 @@
       "end_dating_method": "unknown",
       "end_year_min": 1300,
       "end_year_max": 1500,
-      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
+      "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it."
     },
     {
       "id": "americas.amazon-southern.mapuche",
-      "kind": "era",
+      "kind": "polity",
       "name": "Mapuche / Araucanía",
       "parent_id": "americas.amazon-southern",
       "start_year": 1000,
@@ -20441,7 +20448,7 @@
     },
     {
       "id": "oceania.australia.commonwealth",
-      "kind": "era",
+      "kind": "polity",
       "name": "Commonwealth of Australia",
       "parent_id": "oceania.australia",
       "start_year": 1901,
@@ -20462,7 +20469,7 @@
     },
     {
       "id": "oceania.melanesia.lapita",
-      "kind": "era",
+      "kind": "culture",
       "name": "Lapita Culture",
       "parent_id": "oceania.melanesia",
       "start_year": -1501,
@@ -20470,7 +20477,7 @@
       "tier": "intermediate",
       "summary": "An ancestral Austronesian seafaring culture that spread from the Bismarck Archipelago into Remote Oceania.",
       "start_dating_method": "radiocarbon-calibrated",
-      "date_note": "The Bismarck start is 3450-3350 cal BP and the Tonga/Samoa end is 2703-2683 cal BP. Marine-shell reservoir corrections are central to this chronology. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
+      "date_note": "The Bismarck start is 3450-3350 cal BP and the Tonga/Samoa end is 2703-2683 cal BP. Marine-shell reservoir corrections are central to this chronology. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Filed as a culture rather than a polity or an era: an archaeological horizon defined by material remains, whose political organisation is often the open question about it.",
       "alternatives": [
         {
           "label": "Earlier shell-inclusive start",
@@ -20538,7 +20545,7 @@
     },
     {
       "id": "oceania.micronesia.saudeleur",
-      "kind": "era",
+      "kind": "polity",
       "name": "Saudeleur Dynasty (Nan Madol)",
       "parent_id": "oceania.micronesia",
       "start_year": 1100,
@@ -20555,7 +20562,7 @@
     },
     {
       "id": "oceania.micronesia.yap",
-      "kind": "era",
+      "kind": "polity",
       "name": "Yapese Empire (Sawei)",
       "parent_id": "oceania.micronesia",
       "start_year": 1400,
@@ -20605,7 +20612,7 @@
     },
     {
       "id": "oceania.polynesia.tui-tonga",
-      "kind": "era",
+      "kind": "polity",
       "name": "Tuʻi Tonga Empire",
       "parent_id": "oceania.polynesia",
       "start_year": 950,
@@ -20621,7 +20628,7 @@
     },
     {
       "id": "oceania.polynesia.hawaii",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kingdom of Hawaii",
       "parent_id": "oceania.polynesia",
       "start_year": 1795,
@@ -20671,7 +20678,7 @@
     },
     {
       "id": "oceania.polynesia.tonga",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kingdom of Tonga",
       "parent_id": "oceania.polynesia",
       "start_year": 1845,
@@ -20684,7 +20691,7 @@
     },
     {
       "id": "oceania.polynesia.aotearoa",
-      "kind": "era",
+      "kind": "polity",
       "name": "Māori Aotearoa",
       "parent_id": "oceania.polynesia",
       "start_year": 1250,
@@ -20952,7 +20959,7 @@
     },
     {
       "id": "europe.reformation",
-      "kind": "era",
+      "kind": "polity",
       "name": "The Reformation",
       "parent_id": "europe",
       "start_year": 1517,
@@ -21735,7 +21742,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire.year-of-four",
-      "kind": "period",
+      "kind": "polity",
       "name": "Year of the Four Emperors",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 69,
@@ -22027,7 +22034,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire.year-of-five",
-      "kind": "period",
+      "kind": "polity",
       "name": "Year of the Five Emperors",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 193,
@@ -22159,7 +22166,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire.severan",
-      "kind": "period",
+      "kind": "polity",
       "name": "Severan Dynasty",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 193,
@@ -22971,7 +22978,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire.dominate-tetrarchy",
-      "kind": "period",
+      "kind": "polity",
       "name": "Dominate / Tetrarchy",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 284,
@@ -23171,7 +23178,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire.constantinian",
-      "kind": "period",
+      "kind": "polity",
       "name": "Constantinian Dynasty",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 306,
@@ -23328,7 +23335,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire.valentinianic-theodosian",
-      "kind": "period",
+      "kind": "polity",
       "name": "Valentinianic & Theodosian Dynasties",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 364,
@@ -23607,7 +23614,7 @@
     },
     {
       "id": "europe.mediterranean.rome.empire.western-collapse",
-      "kind": "period",
+      "kind": "polity",
       "name": "Western Collapse",
       "parent_id": "europe.mediterranean.rome.empire",
       "start_year": 455,
@@ -29533,7 +29540,7 @@
     },
     {
       "id": "africa.nile.egypt.tip.dyn21",
-      "kind": "period",
+      "kind": "polity",
       "name": "21st Dynasty (Tanis)",
       "parent_id": "africa.nile.egypt.tip",
       "start_year": -1069,
@@ -29718,7 +29725,7 @@
     },
     {
       "id": "africa.nile.egypt.tip.dyn22",
-      "kind": "period",
+      "kind": "polity",
       "name": "22nd Dynasty (Libyan/Bubastite)",
       "parent_id": "africa.nile.egypt.tip",
       "start_year": -945,
@@ -30207,7 +30214,7 @@
     },
     {
       "id": "africa.nile.egypt.late-period.dyn28",
-      "kind": "period",
+      "kind": "polity",
       "name": "28th Dynasty",
       "parent_id": "africa.nile.egypt.late-period",
       "start_year": -404,
@@ -30253,7 +30260,7 @@
     },
     {
       "id": "africa.nile.egypt.late-period.dyn29",
-      "kind": "period",
+      "kind": "polity",
       "name": "29th Dynasty",
       "parent_id": "africa.nile.egypt.late-period",
       "start_year": -398,
@@ -30356,7 +30363,7 @@
     },
     {
       "id": "africa.nile.egypt.late-period.dyn30",
-      "kind": "period",
+      "kind": "polity",
       "name": "30th Dynasty",
       "parent_id": "africa.nile.egypt.late-period",
       "start_year": -380,
@@ -30460,7 +30467,7 @@
     },
     {
       "id": "africa.nile.egypt.late-period.dyn31",
-      "kind": "period",
+      "kind": "polity",
       "name": "31st Dynasty (Second Persian)",
       "parent_id": "africa.nile.egypt.late-period",
       "start_year": -343,
@@ -32862,7 +32869,7 @@
     },
     {
       "id": "south-asia.harsha",
-      "kind": "era",
+      "kind": "polity",
       "name": "Harsha's Empire",
       "parent_id": "south-asia",
       "start_year": 606,
@@ -33155,7 +33162,7 @@
     },
     {
       "id": "south-asia.pallava",
-      "kind": "era",
+      "kind": "polity",
       "name": "Pallava Dynasty",
       "parent_id": "south-asia",
       "start_year": 275,
@@ -33239,7 +33246,7 @@
     },
     {
       "id": "south-asia.pala",
-      "kind": "era",
+      "kind": "polity",
       "name": "Pala Empire",
       "parent_id": "south-asia",
       "start_year": 750,
@@ -33336,7 +33343,7 @@
     },
     {
       "id": "south-asia.rashtrakuta",
-      "kind": "era",
+      "kind": "polity",
       "name": "Rashtrakuta Dynasty",
       "parent_id": "south-asia",
       "start_year": 753,
@@ -33483,7 +33490,7 @@
     },
     {
       "id": "south-asia.chalukya-badami",
-      "kind": "era",
+      "kind": "polity",
       "name": "Chalukyas of Badami",
       "parent_id": "south-asia",
       "start_year": 543,
@@ -33530,7 +33537,7 @@
     },
     {
       "id": "south-asia.chalukya-western",
-      "kind": "era",
+      "kind": "polity",
       "name": "Western Chalukya Empire",
       "parent_id": "south-asia",
       "start_year": 973,
@@ -33547,7 +33554,7 @@
     },
     {
       "id": "south-asia.delhi-sultanate.mamluk",
-      "kind": "period",
+      "kind": "polity",
       "name": "Mamluk (Slave) Dynasty",
       "parent_id": "south-asia.delhi-sultanate",
       "start_year": 1206,
@@ -33666,7 +33673,7 @@
     },
     {
       "id": "south-asia.delhi-sultanate.khalji",
-      "kind": "period",
+      "kind": "polity",
       "name": "Khalji Dynasty",
       "parent_id": "south-asia.delhi-sultanate",
       "start_year": 1290,
@@ -33742,7 +33749,7 @@
     },
     {
       "id": "south-asia.delhi-sultanate.tughlaq",
-      "kind": "period",
+      "kind": "polity",
       "name": "Tughlaq Dynasty",
       "parent_id": "south-asia.delhi-sultanate",
       "start_year": 1320,
@@ -33846,7 +33853,7 @@
     },
     {
       "id": "south-asia.delhi-sultanate.sayyid",
-      "kind": "period",
+      "kind": "polity",
       "name": "Sayyid Dynasty",
       "parent_id": "south-asia.delhi-sultanate",
       "start_year": 1414,
@@ -33890,7 +33897,7 @@
     },
     {
       "id": "south-asia.delhi-sultanate.lodi",
-      "kind": "period",
+      "kind": "polity",
       "name": "Lodi Dynasty",
       "parent_id": "south-asia.delhi-sultanate",
       "start_year": 1451,
@@ -33989,7 +33996,7 @@
     },
     {
       "id": "south-asia.vijayanagara.sangama",
-      "kind": "period",
+      "kind": "polity",
       "name": "Sangama Dynasty",
       "parent_id": "south-asia.vijayanagara",
       "start_year": 1336,
@@ -34145,7 +34152,7 @@
     },
     {
       "id": "south-asia.vijayanagara.saluva",
-      "kind": "period",
+      "kind": "polity",
       "name": "Saluva Dynasty",
       "parent_id": "south-asia.vijayanagara",
       "start_year": 1485,
@@ -34173,7 +34180,7 @@
     },
     {
       "id": "south-asia.vijayanagara.tuluva",
-      "kind": "period",
+      "kind": "polity",
       "name": "Tuluva Dynasty",
       "parent_id": "south-asia.vijayanagara",
       "start_year": 1491,
@@ -34271,7 +34278,7 @@
     },
     {
       "id": "south-asia.vijayanagara.aravidu",
-      "kind": "period",
+      "kind": "polity",
       "name": "Aravidu Dynasty",
       "parent_id": "south-asia.vijayanagara",
       "start_year": 1542,
@@ -34305,7 +34312,7 @@
     },
     {
       "id": "south-asia.bahmani",
-      "kind": "era",
+      "kind": "polity",
       "name": "Bahmani Sultanate",
       "parent_id": "south-asia",
       "start_year": 1347,
@@ -34405,7 +34412,7 @@
     },
     {
       "id": "south-asia.bengal-sultanate",
-      "kind": "era",
+      "kind": "polity",
       "name": "Bengal Sultanate",
       "parent_id": "south-asia",
       "start_year": 1352,
@@ -34422,7 +34429,7 @@
     },
     {
       "id": "south-asia.hoysala",
-      "kind": "era",
+      "kind": "polity",
       "name": "Hoysala Empire",
       "parent_id": "south-asia",
       "start_year": 1026,
@@ -34439,7 +34446,7 @@
     },
     {
       "id": "south-asia.kakatiya",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kakatiya Dynasty",
       "parent_id": "south-asia",
       "start_year": 1163,
@@ -34843,7 +34850,7 @@
     },
     {
       "id": "south-asia.mughal.suri",
-      "kind": "period",
+      "kind": "polity",
       "name": "Sur Empire (interregnum)",
       "parent_id": "south-asia.mughal",
       "start_year": 1540,
@@ -35339,7 +35346,7 @@
     },
     {
       "id": "south-asia.mysore",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kingdom of Mysore",
       "parent_id": "south-asia",
       "start_year": 1399,
@@ -36106,7 +36113,7 @@
     },
     {
       "id": "south-asia.independence.india-prime-ministers",
-      "kind": "period",
+      "kind": "polity",
       "name": "Prime Ministers of India",
       "parent_id": "south-asia.independence",
       "start_year": 1947,
@@ -36375,7 +36382,7 @@
     },
     {
       "id": "south-asia.independence.pakistan-leaders",
-      "kind": "period",
+      "kind": "polity",
       "name": "Leaders of Pakistan",
       "parent_id": "south-asia.independence",
       "start_year": 1947,
@@ -45493,7 +45500,7 @@
     },
     {
       "id": "west-asia.anatolia.hittites.hittite-old-kingdom",
-      "kind": "period",
+      "kind": "polity",
       "name": "Hittite Old Kingdom",
       "parent_id": "west-asia.anatolia.hittites",
       "start_year": -1650,
@@ -45604,7 +45611,7 @@
     },
     {
       "id": "west-asia.anatolia.hittites.hittite-collapse",
-      "kind": "period",
+      "kind": "polity",
       "name": "Collapse of the Hittite Empire",
       "parent_id": "west-asia.anatolia.hittites",
       "start_year": -1200,
@@ -46334,7 +46341,7 @@
     },
     {
       "id": "africa.nile.egypt.predynastic.dynasty-0",
-      "kind": "period",
+      "kind": "polity",
       "name": "Dynasty 0",
       "parent_id": "africa.nile.egypt.predynastic",
       "start_year": -3200,
@@ -46588,7 +46595,7 @@
     },
     {
       "id": "europe.western.britain.empire",
-      "kind": "era",
+      "kind": "polity",
       "name": "The British Empire",
       "parent_id": "europe.western",
       "start_year": 1583,
@@ -47216,7 +47223,7 @@
     },
     {
       "id": "southeast-asia.mainland.toungoo",
-      "kind": "era",
+      "kind": "polity",
       "name": "Toungoo Dynasty",
       "parent_id": "southeast-asia.mainland",
       "start_year": 1510,
@@ -47254,7 +47261,7 @@
     },
     {
       "id": "southeast-asia.mainland.konbaung",
-      "kind": "era",
+      "kind": "polity",
       "name": "Konbaung Dynasty",
       "parent_id": "southeast-asia.mainland",
       "start_year": 1752,
@@ -47315,7 +47322,7 @@
     },
     {
       "id": "southeast-asia.mainland.sukhothai",
-      "kind": "era",
+      "kind": "polity",
       "name": "Sukhothai Kingdom",
       "parent_id": "southeast-asia.mainland",
       "start_year": 1238,
@@ -47356,7 +47363,7 @@
     },
     {
       "id": "southeast-asia.mainland.thonburi",
-      "kind": "era",
+      "kind": "polity",
       "name": "Thonburi Kingdom",
       "parent_id": "southeast-asia.mainland",
       "start_year": 1767,
@@ -47412,7 +47419,7 @@
     },
     {
       "id": "southeast-asia.mainland.ngo",
-      "kind": "period",
+      "kind": "polity",
       "name": "Ngô Dynasty",
       "parent_id": "southeast-asia.mainland.vietnam",
       "start_year": 939,
@@ -47449,7 +47456,7 @@
     },
     {
       "id": "southeast-asia.mainland.dinh",
-      "kind": "period",
+      "kind": "polity",
       "name": "Đinh Dynasty",
       "parent_id": "southeast-asia.mainland.vietnam",
       "start_year": 968,
@@ -47482,7 +47489,7 @@
     },
     {
       "id": "southeast-asia.mainland.early-le",
-      "kind": "period",
+      "kind": "polity",
       "name": "Early Lê Dynasty",
       "parent_id": "southeast-asia.mainland.vietnam",
       "start_year": 980,
@@ -47514,7 +47521,7 @@
     },
     {
       "id": "southeast-asia.mainland.ly",
-      "kind": "period",
+      "kind": "polity",
       "name": "Lý Dynasty",
       "parent_id": "southeast-asia.mainland.vietnam",
       "start_year": 1009,
@@ -47547,7 +47554,7 @@
     },
     {
       "id": "southeast-asia.mainland.tran",
-      "kind": "period",
+      "kind": "polity",
       "name": "Trần Dynasty",
       "parent_id": "southeast-asia.mainland.vietnam",
       "start_year": 1225,
@@ -47579,7 +47586,7 @@
     },
     {
       "id": "southeast-asia.mainland.ho",
-      "kind": "period",
+      "kind": "polity",
       "name": "Hồ Dynasty",
       "parent_id": "southeast-asia.mainland.vietnam",
       "start_year": 1400,
@@ -47658,7 +47665,7 @@
     },
     {
       "id": "southeast-asia.mainland.later-le",
-      "kind": "period",
+      "kind": "polity",
       "name": "Later Lê Dynasty",
       "parent_id": "southeast-asia.mainland.vietnam",
       "start_year": 1428,
@@ -47691,7 +47698,7 @@
     },
     {
       "id": "southeast-asia.mainland.mac",
-      "kind": "period",
+      "kind": "polity",
       "name": "Mạc Dynasty",
       "parent_id": "southeast-asia.mainland.vietnam",
       "start_year": 1527,
@@ -47720,7 +47727,7 @@
     },
     {
       "id": "southeast-asia.mainland.tay-son",
-      "kind": "period",
+      "kind": "polity",
       "name": "Tây Sơn Dynasty",
       "parent_id": "southeast-asia.mainland.vietnam",
       "start_year": 1778,
@@ -47748,7 +47755,7 @@
     },
     {
       "id": "southeast-asia.mainland.nguyen",
-      "kind": "period",
+      "kind": "polity",
       "name": "Nguyễn Dynasty",
       "parent_id": "southeast-asia.mainland.vietnam",
       "start_year": 1802,
@@ -47810,7 +47817,7 @@
     },
     {
       "id": "southeast-asia.maritime.medang",
-      "kind": "era",
+      "kind": "polity",
       "name": "Medang Kingdom",
       "parent_id": "southeast-asia.maritime",
       "start_year": 732,
@@ -47880,7 +47887,7 @@
     },
     {
       "id": "southeast-asia.maritime.kediri",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kediri Kingdom",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1042,
@@ -47912,7 +47919,7 @@
     },
     {
       "id": "southeast-asia.maritime.singhasari",
-      "kind": "era",
+      "kind": "polity",
       "name": "Singhasari Kingdom",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1222,
@@ -47944,7 +47951,7 @@
     },
     {
       "id": "southeast-asia.maritime.demak",
-      "kind": "era",
+      "kind": "polity",
       "name": "Demak Sultanate",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1475,
@@ -47974,7 +47981,7 @@
     },
     {
       "id": "southeast-asia.maritime.mataram-sultanate",
-      "kind": "era",
+      "kind": "polity",
       "name": "Mataram Sultanate",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1587,
@@ -47994,7 +48001,7 @@
     },
     {
       "id": "southeast-asia.maritime.aceh",
-      "kind": "era",
+      "kind": "polity",
       "name": "Aceh Sultanate",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1496,
@@ -48032,7 +48039,7 @@
     },
     {
       "id": "southeast-asia.maritime.brunei",
-      "kind": "era",
+      "kind": "polity",
       "name": "Bruneian Empire",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1368,
@@ -48052,7 +48059,7 @@
     },
     {
       "id": "southeast-asia.maritime.sulu",
-      "kind": "era",
+      "kind": "polity",
       "name": "Sultanate of Sulu",
       "parent_id": "southeast-asia.maritime",
       "start_year": 1405,
@@ -48104,7 +48111,7 @@
     },
     {
       "id": "central-asia.second-turkic-khaganate",
-      "kind": "era",
+      "kind": "polity",
       "name": "Second Turkic Khaganate",
       "parent_id": "central-asia.steppe",
       "start_year": 682,
@@ -48249,7 +48256,7 @@
     },
     {
       "id": "central-asia.uyghur-khaganate",
-      "kind": "era",
+      "kind": "polity",
       "name": "Uyghur Khaganate",
       "parent_id": "central-asia.steppe",
       "start_year": 744,
@@ -48276,7 +48283,7 @@
     },
     {
       "id": "central-asia.ghaznavid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Ghaznavid Empire",
       "parent_id": "central-asia.core",
       "start_year": 977,
@@ -48304,7 +48311,7 @@
     },
     {
       "id": "central-asia.kara-khanid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Kara-Khanid Khanate",
       "parent_id": "central-asia.core",
       "start_year": 840,
@@ -48324,7 +48331,7 @@
     },
     {
       "id": "central-asia.khwarazmian",
-      "kind": "era",
+      "kind": "polity",
       "name": "Khwarazmian Empire",
       "parent_id": "central-asia.core",
       "start_year": 1077,
@@ -48397,7 +48404,7 @@
     },
     {
       "id": "central-asia.bukhara",
-      "kind": "era",
+      "kind": "polity",
       "name": "Khanate of Bukhara",
       "parent_id": "central-asia.core",
       "start_year": 1501,
@@ -48424,7 +48431,7 @@
     },
     {
       "id": "central-asia.khiva",
-      "kind": "era",
+      "kind": "polity",
       "name": "Khanate of Khiva",
       "parent_id": "central-asia.core",
       "start_year": 1511,
@@ -48444,7 +48451,7 @@
     },
     {
       "id": "central-asia.kokand",
-      "kind": "era",
+      "kind": "polity",
       "name": "Khanate of Kokand",
       "parent_id": "central-asia.core",
       "start_year": 1709,
@@ -48549,7 +48556,7 @@
     },
     {
       "id": "west-asia.iran.tahirid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Tahirid Dynasty",
       "parent_id": "west-asia.iran.intermezzo",
       "start_year": 821,
@@ -48577,7 +48584,7 @@
     },
     {
       "id": "west-asia.iran.saffarid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Saffarid Dynasty",
       "parent_id": "west-asia.iran.intermezzo",
       "start_year": 861,
@@ -48605,7 +48612,7 @@
     },
     {
       "id": "west-asia.iran.buyid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Buyid Dynasty",
       "parent_id": "west-asia.iran.intermezzo",
       "start_year": 934,
@@ -48673,7 +48680,7 @@
     },
     {
       "id": "west-asia.iran.afsharid",
-      "kind": "era",
+      "kind": "polity",
       "name": "Afsharid Dynasty",
       "parent_id": "west-asia.iran",
       "start_year": 1736,
@@ -48707,7 +48714,7 @@
     },
     {
       "id": "west-asia.iran.zand",
-      "kind": "era",
+      "kind": "polity",
       "name": "Zand Dynasty",
       "parent_id": "west-asia.iran",
       "start_year": 1751,
@@ -49094,7 +49101,7 @@
     },
     {
       "id": "east-asia.china.liao",
-      "kind": "era",
+      "kind": "polity",
       "name": "Liao Dynasty",
       "parent_id": "east-asia.china",
       "start_year": 907,
@@ -49159,7 +49166,7 @@
     },
     {
       "id": "east-asia.china.jin-jurchen",
-      "kind": "era",
+      "kind": "polity",
       "name": "Jin Dynasty (Jurchen)",
       "parent_id": "east-asia.china",
       "start_year": 1115,
@@ -49286,7 +49293,7 @@
     },
     {
       "id": "east-asia.china.xia",
-      "kind": "era",
+      "kind": "polity",
       "name": "Xia Dynasty",
       "parent_id": "east-asia.china",
       "start_year": -2070,
@@ -50761,7 +50768,7 @@
     },
     {
       "id": "global.multi-regional",
-      "kind": "era",
+      "kind": "polity",
       "name": "Multi-Regional Empires",
       "parent_id": "global",
       "start_year": -550,
@@ -51931,6 +51938,24 @@
       "end_year_max": 1450
     },
     {
+      "id": "west-asia.culture-sea-peoples",
+      "kind": "culture",
+      "name": "Sea Peoples",
+      "parent_id": "west-asia",
+      "start_year": -1200,
+      "end_year": -1150,
+      "tier": "foundational",
+      "allow_outside_parent_dates": true,
+      "historicity": "contested",
+      "summary": "A name Egyptian scribes gave to raiders from several origins, tied to the collapse of the Bronze Age eastern Mediterranean.",
+      "start_dating_method": "first-attestation",
+      "start_year_min": -1250,
+      "start_year_max": -1150,
+      "end_dating_method": "first-attestation",
+      "end_year_min": -1200,
+      "end_year_max": -1100
+    },
+    {
       "id": "central-asia.peoples-sarmatians",
       "kind": "people",
       "name": "Sarmatians",
@@ -51995,23 +52020,6 @@
       "start_dating_method": "first-attestation",
       "start_year_min": 450,
       "start_year_max": 650
-    },
-    {
-      "id": "west-asia.peoples-sea-peoples",
-      "kind": "people",
-      "name": "Sea Peoples",
-      "parent_id": "west-asia",
-      "start_year": -1200,
-      "end_year": -1150,
-      "tier": "foundational",
-      "allow_outside_parent_dates": true,
-      "summary": "Raiders named in Egyptian inscriptions, associated with the collapse of the Bronze Age eastern Mediterranean.",
-      "start_dating_method": "first-attestation",
-      "start_year_min": -1250,
-      "start_year_max": -1150,
-      "end_dating_method": "first-attestation",
-      "end_year_min": -1200,
-      "end_year_max": -1100
     },
     {
       "id": "europe.peoples-celts",

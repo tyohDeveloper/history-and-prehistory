@@ -1425,3 +1425,71 @@ describe("search phrases", () => {
     expect(searchQuery(dangun, idx)).toBe(dangun.search_phrase);
   });
 });
+
+describe("polity, era and culture", () => {
+  const find = (id: string) => entities.find((e) => e.id === id)!;
+
+  it("separates a state from a label for a span of time", () => {
+    // The Roman Republic had consuls, armies and taxes; the Stone Age had none of those because
+    // it is not that sort of thing.
+    for (const id of [
+      "europe.mediterranean.rome.kingdom",
+      "europe.mediterranean.rome.republic",
+      "europe.mediterranean.rome.empire",
+      "europe.central.hre",
+      "east-asia.china.tang",
+    ]) {
+      expect(find(id).kind, id).toBe("polity");
+    }
+    for (const id of ["global.bronze-age", "global.iron-age", "global.paleolithic"]) {
+      expect(find(id).kind, id).toBe("era");
+    }
+  });
+
+  it("keeps the two senses of Roman Empire apart", () => {
+    // "Roman Empire" means both a state and the whole Roman epoch, as in Gibbon's title. Both
+    // senses are real, so both get an entity rather than one being declared correct.
+    expect(find("europe.mediterranean.rome").kind).toBe("era");
+    expect(find("europe.mediterranean.rome.empire").kind).toBe("polity");
+    const caveat = find("europe.mediterranean.rome.empire").caveats?.find(
+      (c) => c.kind === "naming-confusion",
+    );
+    expect(caveat?.text).toMatch(/epoch/i);
+  });
+
+  it("does not promote a periodisation that happens to have rulers", () => {
+    // Japan's Kamakura and Muromachi Periods have shoguns beneath them and were promoted by a
+    // reigns test. They are labels for a span named after where a regime sat; the regime is the
+    // shogunate. Egypt's Old, Middle and New Kingdoms are the same case.
+    for (const id of [
+      "east-asia.japan.kamakura",
+      "africa.nile.egypt.old-kingdom",
+      "africa.nile.egypt.new-kingdom",
+      "east-asia.china.three-kingdoms",
+    ]) {
+      expect(find(id).kind, id).toBe("era");
+    }
+  });
+
+  it("claims no government for an archaeological culture", () => {
+    // Calling the Olmec a polity asserts a state nobody has demonstrated; calling them an era says
+    // they were a span of time.
+    for (const id of [
+      "americas.mesoamerica.olmec",
+      "americas.andes.chavin",
+      "oceania.melanesia.lapita",
+      "south-asia.indus",
+    ]) {
+      expect(find(id).kind, id).toBe("culture");
+    }
+  });
+
+  it("treats the Sea Peoples as a contested culture, not a people", () => {
+    // `people` asserts one coherent ethnolinguistic group. The Sea Peoples are a name Egyptian
+    // scribes gave to raiders of several origins, and whether they were one phenomenon at all is
+    // the disputed question.
+    const sp = find("west-asia.culture-sea-peoples");
+    expect(sp.kind).toBe("culture");
+    expect(sp.historicity).toBe("contested");
+  });
+});

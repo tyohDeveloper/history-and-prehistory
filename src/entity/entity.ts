@@ -21,6 +21,14 @@
 export type EntityKind =
   | "region"
   | "era"
+  /** A state: something with a government, which an era is not. The Roman Republic had consuls,
+   *  armies and taxes; the Stone Age had none of those because it is not that sort of thing. */
+  | "polity"
+  /** An archaeological culture: a horizon defined by material remains -- pottery, burial
+   *  practice, metalwork -- whose political organisation is frequently the open question about
+   *  it. Distinct from `polity`, which would assert a state nobody has demonstrated, and from
+   *  `era`, which would say the Olmec were a span of time. */
+  | "culture"
   | "period"
   | "reign"
   | "event"

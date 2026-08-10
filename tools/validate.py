@@ -827,6 +827,65 @@ def _check_placeholders(entities):
 
 _check_placeholders(entities)
 
+# ---------------------------------------------------------------------------
+# Rule 14: authoring norms.
+#
+# Emptiness is measured on DESCENDANTS, not on direct children. Twice in this
+# project an author checked children, found none, concluded a container was empty
+# and began authoring into it -- Julius Caesar sits under `rome.republic.late`
+# rather than under `rome.republic`, and King Sejong was similarly missed. Both
+# near-misses would have produced duplicate people, and one earlier pair of
+# duplicates was in fact created that way.
+#
+# `regions` is for entities that genuinely span several. Listing the one region an
+# entity already sits in restates the tree and gives a reader nothing.
+# ---------------------------------------------------------------------------
+
+# Only kinds that inherently promise something inside them. A leaf `period` is a legitimate
+# terminal entity -- a Japanese nengo names five years and contains nothing further -- and
+# counting those produced 724 "empty containers", which buried the ones that matter. A `polity`
+# with nothing beneath it is different: a state with no rulers, no phases and no events recorded
+# is a name with an empty room behind it.
+CONTAINER_KINDS = {"region", "polity", "culture"}
+
+
+def _check_authoring_norms(entities):
+    kids = defaultdict(list)
+    for e in entities:
+        kids[e.get("parent_id")].append(e)
+
+    def descendants(eid):
+        out, stack = [], list(kids[eid])
+        while stack:
+            node = stack.pop()
+            out.append(node)
+            stack.extend(kids[node["id"]])
+        return out
+
+    empty, redundant_regions = [], []
+    for e in entities:
+        if e["kind"] in CONTAINER_KINDS and not descendants(e["id"]):
+            empty.append(f"{e['id']} ({e['kind']})")
+        regions = e.get("regions") or []
+        if len(regions) == 1:
+            root = e["id"].split(".")[0]
+            if regions[0] == root:
+                redundant_regions.append(f"{e['id']} regions={regions}")
+
+    if redundant_regions:
+        errors.append(f"authoring -- `regions` restates the entity's own branch, "
+                      f"{len(redundant_regions)} case(s): " + "; ".join(redundant_regions[:4]))
+
+    # A warning, not an error: the audit counted 190+ of these and closing them needs content,
+    # not a rule. Reported so the number cannot drift upward unnoticed.
+    if empty:
+        warnings.append(
+            f"{len(empty)} container(s) hold nothing at any depth, so drilling into them dead-ends. "
+            f"Checked on descendants rather than children. e.g. {empty[:3]}")
+
+
+_check_authoring_norms(entities)
+
 # Retired authoring shorthands. Accepted by the builders during the migration window so that
 # ~30 modules did not have to change at once; reported here so the window does not quietly
 # become permanent.
@@ -845,5 +904,13 @@ if errors:
     if len(errors) > 60:
         print(f"  ... and {len(errors) - 60} more errors")
     sys.exit(1)
+
+# Warnings were counted and never printed, so the validator reported "2 warning(s)" and kept
+# both to itself. That is the same defect this project keeps finding in its own UI -- surface
+# that reaches no reader -- and it hid the fact that 320 foundational entities carry no link.
+if warnings:
+    print(f"\n! WARNINGS ({len(warnings)}):")
+    for w in warnings:
+        print(f"  {w}")
 
 print(f"\n✓ OK — no errors. {len(warnings)} warning(s).")

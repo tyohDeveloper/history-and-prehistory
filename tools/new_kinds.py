@@ -134,8 +134,7 @@ PEOPLES = [
      "Arrived on the Danube within a generation and broke the Roman order in the west without ever holding a city."),
     ("turkic-peoples", "Turkic Peoples", "central-asia", 550, None, 100, "foundational",
      "Spread from Mongolia to Anatolia over a millennium, founding states from the Gokturks to the Ottomans."),
-    ("sea-peoples", "Sea Peoples", "west-asia", -1200, -1150, 50, "foundational",
-     "Raiders named in Egyptian inscriptions, associated with the collapse of the Bronze Age eastern Mediterranean."),
+
     ("celts", "Celtic Peoples", "europe", -800, 100, 150, "foundational",
      "A shared language, art and metalwork across Iron Age Europe, never a single state."),
     ("germanic-peoples", "Germanic Peoples", "europe", -500, 800, 150, "foundational",
@@ -348,6 +347,17 @@ def extend(E, entities):
         bounded(f"{TRAD_ROOT}.{slug}", "tradition", name, parent, start, end, half, tier,
                 summary, "first-attestation", allow_outside_parent_dates=True, **extras)
     counts["traditions"] = len(TRADITIONS)
+
+    # ---- the Sea Peoples, as a culture rather than a people -----------------
+    # `people` asserts one coherent ethnolinguistic group. The Sea Peoples are a label Egyptian
+    # scribes applied to a heterogeneous set of raiders -- Peleset, Shekelesh, Denyen, Weshesh and
+    # others -- whose origins, relationship to one another, and even whether they were a single
+    # phenomenon are all argued. `culture` claims less, and `historicity: contested` says the
+    # coherence of the category is itself the disputed thing.
+    bounded("west-asia.culture-sea-peoples", "culture", "Sea Peoples", "west-asia",
+            -1200, -1150, 50, "foundational",
+            "A name Egyptian scribes gave to raiders from several origins, tied to the collapse of the Bronze Age eastern Mediterranean.",
+            "first-attestation", allow_outside_parent_dates=True, historicity="contested")
 
     # ---- peoples -----------------------------------------------------------
     for slug, name, region, start, end, half, tier, summary in PEOPLES:

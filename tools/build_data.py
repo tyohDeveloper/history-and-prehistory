@@ -1716,6 +1716,7 @@ from name_repair import extend as _name_repair
 from derive_links import extend as _derive_links
 from historicity import extend as _historicity
 from search_phrases import extend as _search_phrases
+from polity_split import extend as _polity_split
 from new_kinds import extend as _new_kinds
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
@@ -2002,12 +2003,19 @@ print(
 # forms become searchable aliases like every other name form. Running it afterwards left
 # "Roman" indexed nowhere, which is the bug this was meant to fix.
 _new_kinds(E, entities)
+
+# Immediately after the last module that authors entities, and before every module that
+# REFERENCES one by id. Running it last meant polity_split was matching against pre-normalisation
+# ids -- it looked for `ur-iii` while the entity was still `ur3` -- so a correct id list failed.
+# Canonicalise once, then let everything downstream use the canonical form.
+_ID_REDIRECTS = _normalize_ids(E, entities) or {}
 # After new_kinds, so names introduced there are checked for collisions too.
 _name_repair(E, entities)
 _migrate_dating(E, entities)
 _derive_links(E, entities)
 _historicity(E, entities)
 _search_phrases(E, entities)
+_polity_split(E, entities)
 
 # Aliases are derived from name_forms LAST, because several later modules add name forms and
 # this has now been got wrong in both directions: running it before name_repair left the
@@ -2037,7 +2045,6 @@ print(f"Name forms: {_nf_entities} entities carry structured names")
 # must see the final state. Two earlier placements were both wrong: one ran before later
 # modules had authored their entities, and one ran after this file had already been written,
 # which meant its work was silently discarded.
-_ID_REDIRECTS = _normalize_ids(E, entities) or {}
 # After the dating migration, not before. Succession is derived from how closely one entity's
 # end abuts the next one's start, and the migration rounds deep-time dates -- so deriving first
 # measured gaps that the rounding then changed, leaving links whose own tolerance rule they no

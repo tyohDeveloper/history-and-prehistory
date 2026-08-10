@@ -25,6 +25,8 @@
       "enum": [
         "region",
         "era",
+        "polity",
+        "culture",
         "period",
         "reign",
         "event",

@@ -13,8 +13,11 @@
 
 # Open issues
 
-Status as of app v3.25.0.0 / data 0.26.0.0 — 1,648 entities, 561 sources, 223
-unit tests, 39 e2e tests.
+Status as of app v3.26.0.0 / data 0.27.0.0 — 1,653 entities, 578 sources, 402
+cited, 223 unit tests, 39 e2e tests.
+
+Mirrored as GitHub issues #2-#14. Numbers here are re-measured each release;
+trust the snippets over the prose.
 
 ## Honesty gaps — data collection reduces these
 
@@ -55,15 +58,26 @@ nothing to say beyond its dates. The 15 foundational ones are the real bug.
 
 ## Structural — data collection will NOT fix these
 
-### 3. Wade-Giles is entirely absent
+### 3. Postal romanisation is absent — Wade-Giles is done
 
-**In progress.** A reader holding any pre-1980s book on China searches Ch'ing,
-Chou, Ch'in, Sung, T'ang, Hsia — and finds **nothing**. Verified: none of those
-forms appear in any alias. Only 2 of 158 Chinese entities have `name_forms` at
-all (ROC and PRC).
+**Wade-Giles resolved in v3.26.0.0** (#3). Nine dynasties carry their Wade-Giles
+form; Ch'ing, Chou, Sung, T'ang, Yüan, Hsia and Chin all resolve in search.
 
-Postal romanisation (Peking, Nanking, Canton, Amoy, Chungking) is a second,
-separate system with the same problem.
+**Postal romanisation is still absent and is blocked, not pending.** Peking,
+Nanking, Canton, Amoy and Chungking are *place* names, and the dataset contains
+no Chinese cities to attach them to. Needs place entities first.
+
+### 3b. Chinese dynastic tiers are inconsistent (#13)
+
+With Five Dynasties at `specialist`, a default-tier reader sees Tang (618-907)
+and Song (960-1279) as adjacent and the 53-year interregnum vanishes. The same
+holds for the Jin of 266-420 and the Northern and Southern Dynasties: **periods
+of division are systematically less visible than periods of unity**, which either
+is a defensible editorial line or makes Chinese history look more continuous than
+it was. Needs a stated principle for what the default tier is for.
+
+The Sui was fixed in v3.26.0.0 because it was unambiguous — it reunified China
+and was hidden while conquest dynasties were about to be visible.
 
 ### 4. `name_forms` has no kind for two real classes of variant
 
@@ -161,6 +175,10 @@ the test suite:
 4. The Indus summary asserted "Sarasvati" as fact directly above the caveat
    calling that name contested.
 5. Search showed two identical `Shōwa` rows.
+
+A sixth was found by reading a rendered column rather than the app's logic: the
+Sui was missing from the default view of Chinese dynasties, which no test asserted
+because no test knew it should be there.
 
 The pattern: **prose and rendering are unvalidated.** Tests check structure, and
 every one of these lived in something no schema constrains. Screenshot the app

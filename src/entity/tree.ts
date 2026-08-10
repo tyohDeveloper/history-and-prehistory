@@ -15,6 +15,9 @@ export interface TreeIndex {
   /** Children keyed by parent id, including cross_parent_ids placements. */
   children: Map<string, Entity[]>;
   roots: Entity[];
+  /** Old id to current id, so a stale link resolves instead of failing. Optional so existing
+   * callers that build an index by hand, including tests, do not have to supply one. */
+  redirects?: ReadonlyMap<string, string>;
 }
 
 /** Sort: chronological by start_year, undated last, then name. */
@@ -28,7 +31,10 @@ export function compareEntities(a: Entity, b: Entity): number {
   return a.name.localeCompare(b.name);
 }
 
-export function buildIndex(list: readonly Entity[]): TreeIndex {
+export function buildIndex(
+  list: readonly Entity[],
+  redirects?: ReadonlyMap<string, string>,
+): TreeIndex {
   const byId = new Map<string, Entity>();
   for (const e of list) byId.set(e.id, e);
 
@@ -46,7 +52,7 @@ export function buildIndex(list: readonly Entity[]): TreeIndex {
   for (const bucket of children.values()) bucket.sort(compareEntities);
 
   const roots = list.filter((e) => e.parent_id === null).slice().sort(compareEntities);
-  return { byId, children, roots };
+  return { byId, children, roots, redirects };
 }
 
 export function childrenOf(index: TreeIndex, id: string): Entity[] {
@@ -54,10 +60,24 @@ export function childrenOf(index: TreeIndex, id: string): Entity[] {
 }
 
 /** Root-to-node path. Follows parent_id only (not cross-parents). */
+/**
+ * Look up an entity, resolving a stale id through the redirect map.
+ *
+ * Ids are frozen, but 46 were normalised once so regnal numbers use Roman numerals. A
+ * bookmarked link or a hand-typed id from before that change should still land on the entity
+ * rather than on nothing.
+ */
+export function lookup(index: TreeIndex, id: string): Entity | undefined {
+  const direct = index.byId.get(id);
+  if (direct !== undefined) return direct;
+  const redirected = index.redirects?.get(id);
+  return redirected === undefined ? undefined : index.byId.get(redirected);
+}
+
 export function pathTo(index: TreeIndex, id: string): Entity[] {
   const out: Entity[] = [];
   const seen = new Set<string>();
-  let cur = index.byId.get(id);
+  let cur = lookup(index, id);
   while (cur && !seen.has(cur.id)) {
     seen.add(cur.id);
     out.unshift(cur);
@@ -147,7 +167,16 @@ export function searchEntities(
   for (const e of list) {
     ownWords.set(
       e.id,
-      [e.name, e.native_name ?? "", ...(e.aliases ?? [])].flatMap(foldToWords),
+      [
+        e.name,
+        e.native_name ?? "",
+        ...(e.aliases ?? []),
+        // name_forms was indexed by nothing, which meant the endonyms, exonyms, scholarly
+        // and historical variants already authored on 99 entities were unreachable by
+        // search. It now also carries `adjectival` forms, so "Roman" finds the Roman Empire
+        // directly rather than only through its ancestors.
+        ...(e.name_forms ?? []).map((f) => f.name),
+      ].flatMap(foldToWords),
     );
   }
 

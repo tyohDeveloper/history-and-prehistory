@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
   "dataset_version": "0.34.1.0",
-  "generated_at": "2026-08-10T17:38:19Z",
+  "generated_at": "2026-08-10T17:46:13Z",
   "themes": [
     {
       "id": "empires-classical",
@@ -106,7 +106,7 @@
       "entity_ids": [
         "africa.nile.egypt.early-dynastic.dyn1.narmer",
         "west-asia.mesopotamia.akkadian.sargon",
-        "west-asia.iran.achaemenid.cyrus2",
+        "west-asia.iran.achaemenid.cyrus-ii",
         "europe.mediterranean.macedon.alexander",
         "south-asia.maurya.chandragupta",
         "east-asia.china.qin.shi-huang",
@@ -116,7 +116,7 @@
         "americas.andes.inca.pachacuti",
         "americas.mesoamerica.aztec.itzcoatl",
         "south-asia.mughal.babur",
-        "oceania.polynesia.hawaii.kamehameha1"
+        "oceania.polynesia.hawaii.kamehameha-i"
       ],
       "sort": "chronological"
     },
@@ -126,11 +126,11 @@
       "description": "Empresses, queens, and female heads of state.",
       "entity_ids": [
         "africa.nile.egypt.new-kingdom.dyn18.hatshepsut",
-        "africa.nile.egypt.ptolemaic.cleopatra7",
+        "africa.nile.egypt.ptolemaic.cleopatra-vii",
         "east-asia.china.tang.wu-zetian",
-        "europe.western.england.tudor.elizabeth1",
+        "europe.western.england.tudor.elizabeth-i",
         "europe.western.britain.victorian.victoria",
-        "europe.eastern.russian-empire.catherine2",
+        "europe.eastern.russian-empire.catherine-ii",
         "east-asia.china.qing.cixi",
         "oceania.polynesia.hawaii.liliuokalani"
       ],

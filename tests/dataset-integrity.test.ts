@@ -1,7 +1,8 @@
+import entitiesFile from "../src/data/entities.json";
 import { describe, expect, it } from "vitest";
 import { calendars, datasetVersion, entities, referenceFrames, schemaVersion, sources, themes } from "../src/dataset/dataset";
 import type { Entity } from "../src/entity/entity";
-import { buildIndex , searchEntities } from "../src/entity/tree";
+import { buildIndex , searchEntities , lookup } from "../src/entity/tree";
 import { datingOf } from "../src/chrono/fromEntity";
 import { isScientificDating } from "../src/chrono/year";
 
@@ -1071,5 +1072,82 @@ describe("search", () => {
     expect(hits.length).toBeGreaterThanOrEqual(2);
     const natives = new Set(hits.map((e) => e.native_name));
     expect(natives.size).toBeGreaterThanOrEqual(2);
+  });
+});
+
+describe("identity", () => {
+  // Issue #40: ids were being guessed because they were not predictable. Within one dynasty
+  // Thutmose III sat at `thutmose3` while Thutmose I, II and IV sat at `thutmose-i`,
+  // `thutmose-ii` and `thutmose-iv`.
+  it("uses Roman regnal numerals in every slug", () => {
+    const offenders = entities
+      .filter((e) => {
+        const slug = e.id.split(".").pop()!;
+        const m = /^([a-z][a-z-]*?)-?(\d{1,2})$/.exec(slug);
+        if (m === null || Number(m[2]) === 0) return false;
+        const first = (e.name.split(" ")[0] ?? "")
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(/[^a-z0-9]/g, "");
+        return first === m[1]!.replace(/-/g, "");
+      })
+      .map((e) => e.id);
+    expect(offenders).toEqual([]);
+  });
+
+  it("publishes a redirect for every id it renamed", () => {
+    const redirects = (entitiesFile as { redirects?: Record<string, string> }).redirects ?? {};
+    expect(Object.keys(redirects).length).toBeGreaterThanOrEqual(40);
+    const ids = new Set(entities.map((e) => e.id));
+    // Every redirect must point at something that exists, or a stale link resolves to nothing
+    // twice over.
+    for (const [from, to] of Object.entries(redirects)) {
+      expect(ids.has(to), `${from} -> ${to} resolves`).toBe(true);
+      expect(ids.has(from), `${from} is genuinely gone`).toBe(false);
+    }
+  });
+
+  it("resolves a stale id through the redirect map", () => {
+    const idx = buildIndex(entities, new Map(Object.entries(
+      (entitiesFile as { redirects?: Record<string, string> }).redirects ?? {},
+    )));
+    // The id this project actually guessed wrong.
+    const viaOld = lookup(idx, "africa.nile.egypt.new-kingdom.dyn18.thutmose3");
+    expect(viaOld?.name).toBe("Thutmose III");
+  });
+
+  it("gives no two siblings the same name or slug", () => {
+    const byParent = new Map<string, Entity[]>();
+    for (const e of entities) {
+      const key = e.parent_id ?? "(root)";
+      byParent.set(key, [...(byParent.get(key) ?? []), e]);
+    }
+    for (const [parent, kids] of byParent) {
+      const names = kids.map((k) => k.name);
+      const slugs = kids.map((k) => k.id.split(".").pop()!);
+      expect(new Set(names).size, `${parent} sibling names`).toBe(names.length);
+      expect(new Set(slugs).size, `${parent} sibling slugs`).toBe(slugs.length);
+    }
+  });
+
+  it("qualifies display names that collide elsewhere in the tree", () => {
+    // Not siblings, so no id collides and the tree reads correctly in place -- but a search
+    // result shown out of context would be ambiguous. Two different places called Andes.
+    const counts = new Map<string, number>();
+    for (const e of entities) counts.set(e.name, (counts.get(e.name) ?? 0) + 1);
+    for (const e of entities) {
+      if ((counts.get(e.name) ?? 0) > 1) {
+        expect(e.qualified_name, `${e.id} is qualified`).toBeDefined();
+        expect(e.qualified_name).not.toBe(e.name);
+      }
+    }
+  });
+
+  it("can find the Roman Empire by its adjectival form", () => {
+    // "Rome" and "Roman" are the same referent in different grammatical forms, and having
+    // nowhere to say so was half the cause of the reported search failure.
+    const hits = searchEntities(entities, "Roman").map((e) => e.id);
+    expect(hits).toContain("europe.mediterranean.rome.empire");
   });
 });

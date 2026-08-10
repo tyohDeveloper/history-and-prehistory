@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
   "dataset_version": "0.34.1.0",
-  "generated_at": "2026-08-10T17:38:19Z",
+  "generated_at": "2026-08-10T17:46:13Z",
   "entities": [
     {
       "id": "global",
@@ -632,6 +632,7 @@
       "end_year": null,
       "tier": "foundational",
       "summary": "From central Mexico to Honduras: Olmec, Zapotec, Maya, Teotihuacan, Toltec, Purépecha and Aztec, sharing a calendar, a ballgame and a writing tradition.",
+      "qualified_name": "Mesoamerica (Americas)",
       "extant": true
     },
     {
@@ -654,6 +655,7 @@
       "end_year": null,
       "tier": "foundational",
       "summary": "The Pacific coast and highlands from Norte Chico through Moche, Nazca and Wari to the Inca — states built without the wheel, the arch or a writing system as usually defined.",
+      "qualified_name": "Andes (Americas)",
       "extant": true
     },
     {
@@ -1060,7 +1062,8 @@
         "Pharaonic Egypt",
         "Nile Valley civilization",
         "Kemet",
-        "Aigyptos"
+        "Aigyptos",
+        "Egyptian"
       ],
       "calendar_ids": [
         "egyptian-regnal"
@@ -1087,6 +1090,10 @@
           "kind": "exonym",
           "lang": "grc",
           "note": "The Greek from which every European name for the country descends."
+        },
+        {
+          "name": "Egyptian",
+          "kind": "adjectival"
         }
       ],
       "start_dating_method": "unknown",
@@ -1380,7 +1387,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "africa.nile.egypt.old-kingdom.dyn6.pepi2",
+      "id": "africa.nile.egypt.old-kingdom.dyn6.pepi-ii",
       "kind": "reign",
       "name": "Pepi II",
       "parent_id": "africa.nile.egypt.old-kingdom.dyn6",
@@ -1451,7 +1458,7 @@
       "end_year_max": -1885
     },
     {
-      "id": "africa.nile.egypt.middle-kingdom.dyn11.mentuhotep2",
+      "id": "africa.nile.egypt.middle-kingdom.dyn11.mentuhotep-ii",
       "kind": "reign",
       "name": "Mentuhotep II",
       "parent_id": "africa.nile.egypt.middle-kingdom.dyn11",
@@ -1590,7 +1597,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "africa.nile.egypt.new-kingdom.dyn18.ahmose1",
+      "id": "africa.nile.egypt.new-kingdom.dyn18.ahmose-i",
       "kind": "reign",
       "name": "Ahmose I",
       "parent_id": "africa.nile.egypt.new-kingdom.dyn18",
@@ -1618,12 +1625,12 @@
       "links": [
         {
           "type": "co_ruler_with",
-          "entity_id": "africa.nile.egypt.new-kingdom.dyn18.thutmose3",
+          "entity_id": "africa.nile.egypt.new-kingdom.dyn18.thutmose-iii",
           "note": "Corulers after she had herself crowned, with Hatshepsut the dominant of the two."
         },
         {
           "type": "regent_for",
-          "entity_id": "africa.nile.egypt.new-kingdom.dyn18.thutmose3",
+          "entity_id": "africa.nile.egypt.new-kingdom.dyn18.thutmose-iii",
           "note": "Regent for her stepson from his accession, before taking the kingship outright."
         }
       ],
@@ -1640,7 +1647,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "africa.nile.egypt.new-kingdom.dyn18.thutmose3",
+      "id": "africa.nile.egypt.new-kingdom.dyn18.thutmose-iii",
       "kind": "reign",
       "name": "Thutmose III",
       "parent_id": "africa.nile.egypt.new-kingdom.dyn18",
@@ -1668,7 +1675,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "africa.nile.egypt.new-kingdom.dyn18.amenhotep3",
+      "id": "africa.nile.egypt.new-kingdom.dyn18.amenhotep-iii",
       "kind": "reign",
       "name": "Amenhotep III",
       "parent_id": "africa.nile.egypt.new-kingdom.dyn18",
@@ -1811,7 +1818,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "africa.nile.egypt.new-kingdom.dyn19.seti1",
+      "id": "africa.nile.egypt.new-kingdom.dyn19.seti-i",
       "kind": "reign",
       "name": "Seti I",
       "parent_id": "africa.nile.egypt.new-kingdom.dyn19",
@@ -1827,7 +1834,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "africa.nile.egypt.new-kingdom.dyn19.ramesses2",
+      "id": "africa.nile.egypt.new-kingdom.dyn19.ramesses-ii",
       "kind": "reign",
       "name": "Ramesses II",
       "parent_id": "africa.nile.egypt.new-kingdom.dyn19",
@@ -1881,7 +1888,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "africa.nile.egypt.new-kingdom.dyn20.ramesses3",
+      "id": "africa.nile.egypt.new-kingdom.dyn20.ramesses-iii",
       "kind": "reign",
       "name": "Ramesses III",
       "parent_id": "africa.nile.egypt.new-kingdom.dyn20",
@@ -2056,6 +2063,15 @@
         "africa",
         "europe"
       ],
+      "name_forms": [
+        {
+          "name": "Ptolemaic",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Ptolemaic"
+      ],
       "start_dating_method": "unknown",
       "start_year_min": -357,
       "start_year_max": -307,
@@ -2065,7 +2081,7 @@
       "date_note": "Capital: Alexandria (pending a city entity to link to). Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "africa.nile.egypt.ptolemaic.ptolemy1",
+      "id": "africa.nile.egypt.ptolemaic.ptolemy-i",
       "kind": "reign",
       "name": "Ptolemy I Soter",
       "parent_id": "africa.nile.egypt.ptolemaic",
@@ -2085,7 +2101,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "africa.nile.egypt.ptolemaic.cleopatra7",
+      "id": "africa.nile.egypt.ptolemaic.cleopatra-vii",
       "kind": "reign",
       "name": "Cleopatra VII",
       "parent_id": "africa.nile.egypt.ptolemaic",
@@ -2301,7 +2317,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "africa.nile.ethiopia.menelik2",
+      "id": "africa.nile.ethiopia.menelik-ii",
       "kind": "reign",
       "name": "Menelik II",
       "parent_id": "africa.nile.ethiopia",
@@ -2706,6 +2722,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Shōwa (Modern Japan)",
       "start_dating_method": "unknown",
       "start_year_min": 1826,
       "start_year_max": 2026,
@@ -3187,6 +3204,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Jōwa (Heian Period)",
       "start_dating_method": "unknown",
       "start_year_min": 784,
       "start_year_max": 884,
@@ -3607,6 +3625,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Jōgen (Heian Period)",
       "start_dating_method": "unknown",
       "start_year_min": 926,
       "start_year_max": 1026,
@@ -3967,6 +3986,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Eishō (Heian Period)",
       "start_dating_method": "unknown",
       "start_year_min": 946,
       "start_year_max": 1146,
@@ -4227,6 +4247,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Kōwa (Heian Period)",
       "start_dating_method": "unknown",
       "start_year_min": 999,
       "start_year_max": 1199,
@@ -4427,6 +4448,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Tenshō (Heian Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1031,
       "start_year_max": 1231,
@@ -4507,6 +4529,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Kōji (Heian Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1042,
       "start_year_max": 1242,
@@ -5007,6 +5030,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Jōgen (Kamakura Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1107,
       "start_year_max": 1307,
@@ -5087,6 +5111,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Jōō (Kamakura Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1122,
       "start_year_max": 1322,
@@ -5527,6 +5552,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Kōan (Kamakura Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1178,
       "start_year_max": 1378,
@@ -5667,6 +5693,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Enkyō (Kamakura Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1208,
       "start_year_max": 1408,
@@ -5707,6 +5734,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Shōwa (Kamakura Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1212,
       "start_year_max": 1412,
@@ -6015,6 +6043,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Kōwa (Muromachi / Nanboku-chō Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1281,
       "start_year_max": 1481,
@@ -6121,6 +6150,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Jōwa (Muromachi / Nanboku-chō Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1245,
       "start_year_max": 1445,
@@ -6205,6 +6235,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Kōan (Muromachi / Nanboku-chō Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1261,
       "start_year_max": 1461,
@@ -6754,6 +6785,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Eishō (Muromachi / Nanboku-chō Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1404,
       "start_year_max": 1604,
@@ -6834,6 +6866,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Kōji (Muromachi / Nanboku-chō Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1455,
       "start_year_max": 1655,
@@ -6894,6 +6927,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Tenshō (Azuchi–Momoyama Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1473,
       "start_year_max": 1673,
@@ -7035,6 +7069,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Jōō (Edo Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1552,
       "start_year_max": 1752,
@@ -7295,6 +7330,7 @@
       "calendar_ids": [
         "japanese-nengo"
       ],
+      "qualified_name": "Enkyō (Edo Period)",
       "start_dating_method": "unknown",
       "start_year_min": 1644,
       "start_year_max": 1844,
@@ -7855,6 +7891,15 @@
       "tier": "foundational",
       "native_name": "漢朝",
       "summary": "Classical Chinese empire; namesake of the Han Chinese ethnicity.",
+      "name_forms": [
+        {
+          "name": "Han",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Han"
+      ],
       "start_dating_method": "unknown",
       "start_year_min": -231,
       "start_year_max": -181,
@@ -8072,10 +8117,15 @@
           "source_ids": [
             "loc-chinese-romanization-table"
           ]
+        },
+        {
+          "name": "Tang",
+          "kind": "adjectival"
         }
       ],
       "aliases": [
-        "T'ang"
+        "T'ang",
+        "Tang"
       ],
       "start_dating_method": "unknown",
       "start_year_min": 568,
@@ -8093,6 +8143,7 @@
       "start_year": 626,
       "end_year": 649,
       "tier": "intermediate",
+      "qualified_name": "Emperor Taizong (Tang Dynasty)",
       "start_dating_method": "unknown",
       "start_year_min": 576,
       "start_year_max": 676,
@@ -8185,10 +8236,15 @@
           "source_ids": [
             "loc-chinese-romanization-table"
           ]
+        },
+        {
+          "name": "Song",
+          "kind": "adjectival"
         }
       ],
       "aliases": [
-        "Sung"
+        "Sung",
+        "Song"
       ],
       "start_dating_method": "unknown",
       "start_year_min": 910,
@@ -8323,6 +8379,15 @@
       "tier": "foundational",
       "native_name": "明朝",
       "summary": "Restored Han Chinese rule; Zheng He's voyages; Forbidden City built.",
+      "name_forms": [
+        {
+          "name": "Ming",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Ming"
+      ],
       "start_dating_method": "unknown",
       "start_year_min": 1268,
       "start_year_max": 1468,
@@ -8383,10 +8448,20 @@
           "source_ids": [
             "loc-chinese-romanization-table"
           ]
+        },
+        {
+          "name": "Qing",
+          "kind": "adjectival"
+        },
+        {
+          "name": "Manchu",
+          "kind": "adjectival"
         }
       ],
       "aliases": [
-        "Ch'ing"
+        "Ch'ing",
+        "Qing",
+        "Manchu"
       ],
       "start_dating_method": "unknown",
       "start_year_min": 1544,
@@ -8848,6 +8923,15 @@
       "end_year": -2334,
       "tier": "foundational",
       "summary": "World's first cities: Uruk, Ur, Lagash, Kish.",
+      "name_forms": [
+        {
+          "name": "Sumerian",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Sumerian"
+      ],
       "start_dating_method": "unknown",
       "start_year_min": -3000,
       "start_year_max": -2800,
@@ -8916,7 +9000,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.mesopotamia.ur3",
+      "id": "west-asia.mesopotamia.ur-iii",
       "kind": "era",
       "name": "Ur III (Neo-Sumerian)",
       "parent_id": "west-asia.mesopotamia",
@@ -9099,7 +9183,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.mesopotamia.neo-babylonian.nebuchadnezzar2",
+      "id": "west-asia.mesopotamia.neo-babylonian.nebuchadnezzar-ii",
       "kind": "reign",
       "name": "Nebuchadnezzar II",
       "parent_id": "west-asia.mesopotamia.neo-babylonian",
@@ -9296,6 +9380,20 @@
         "europe",
         "west-asia"
       ],
+      "name_forms": [
+        {
+          "name": "Achaemenid",
+          "kind": "adjectival"
+        },
+        {
+          "name": "Persian",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Achaemenid",
+        "Persian"
+      ],
       "start_dating_method": "unknown",
       "start_year_min": -600,
       "start_year_max": -500,
@@ -9305,7 +9403,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.iran.achaemenid.cyrus2",
+      "id": "west-asia.iran.achaemenid.cyrus-ii",
       "kind": "reign",
       "name": "Cyrus II the Great",
       "parent_id": "west-asia.iran.achaemenid",
@@ -9323,7 +9421,7 @@
       "end_year_max": -480
     },
     {
-      "id": "west-asia.iran.achaemenid.cambyses2",
+      "id": "west-asia.iran.achaemenid.cambyses-ii",
       "kind": "reign",
       "name": "Cambyses II",
       "parent_id": "west-asia.iran.achaemenid",
@@ -9340,7 +9438,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.iran.achaemenid.darius1",
+      "id": "west-asia.iran.achaemenid.darius-i",
       "kind": "reign",
       "name": "Darius I the Great",
       "parent_id": "west-asia.iran.achaemenid",
@@ -9357,7 +9455,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.iran.achaemenid.xerxes1",
+      "id": "west-asia.iran.achaemenid.xerxes-i",
       "kind": "reign",
       "name": "Xerxes I",
       "parent_id": "west-asia.iran.achaemenid",
@@ -9374,7 +9472,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.iran.achaemenid.darius3",
+      "id": "west-asia.iran.achaemenid.darius-iii",
       "kind": "reign",
       "name": "Darius III",
       "parent_id": "west-asia.iran.achaemenid",
@@ -9426,6 +9524,15 @@
       "end_year": 224,
       "tier": "foundational",
       "summary": "Iranian empire that ruled Persia and Mesopotamia for four centuries; Rome's chief eastern rival.",
+      "name_forms": [
+        {
+          "name": "Parthian",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Parthian"
+      ],
       "start_dating_method": "unknown",
       "start_year_min": -272,
       "start_year_max": -222,
@@ -9435,7 +9542,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.iran.parthian.mithridates1",
+      "id": "west-asia.iran.parthian.mithridates-i",
       "kind": "reign",
       "name": "Mithridates I",
       "parent_id": "west-asia.iran.parthian",
@@ -9459,6 +9566,20 @@
       "end_year": 651,
       "tier": "foundational",
       "summary": "Last pre-Islamic Persian empire; peer superpower of Rome/Byzantium.",
+      "name_forms": [
+        {
+          "name": "Sasanian",
+          "kind": "adjectival"
+        },
+        {
+          "name": "Sassanid",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Sasanian",
+        "Sassanid"
+      ],
       "start_dating_method": "unknown",
       "start_year_min": 199,
       "start_year_max": 249,
@@ -9468,7 +9589,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.iran.sasanian.ardashir1",
+      "id": "west-asia.iran.sasanian.ardashir-i",
       "kind": "reign",
       "name": "Ardashir I",
       "parent_id": "west-asia.iran.sasanian",
@@ -9484,7 +9605,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.iran.sasanian.shapur1",
+      "id": "west-asia.iran.sasanian.shapur-i",
       "kind": "reign",
       "name": "Shapur I",
       "parent_id": "west-asia.iran.sasanian",
@@ -9501,7 +9622,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.iran.sasanian.khosrow1",
+      "id": "west-asia.iran.sasanian.khosrow-i",
       "kind": "reign",
       "name": "Khosrow I Anushirvan",
       "parent_id": "west-asia.iran.sasanian",
@@ -9518,7 +9639,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.iran.sasanian.khosrow2",
+      "id": "west-asia.iran.sasanian.khosrow-ii",
       "kind": "reign",
       "name": "Khosrow II Parviz",
       "parent_id": "west-asia.iran.sasanian",
@@ -9551,7 +9672,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "west-asia.iran.safavid.abbas1",
+      "id": "west-asia.iran.safavid.abbas-i",
       "kind": "reign",
       "name": "Abbas I the Great",
       "parent_id": "west-asia.iran.safavid",
@@ -9941,7 +10062,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "global.multi-regional.ottoman.mehmed2",
+      "id": "global.multi-regional.ottoman.mehmed-ii",
       "kind": "reign",
       "name": "Mehmed II the Conqueror",
       "parent_id": "global.multi-regional.ottoman",
@@ -10011,6 +10132,20 @@
         }
       ],
       "summary": "Cradle of Western philosophy, drama, historiography, and democracy.",
+      "name_forms": [
+        {
+          "name": "Greek",
+          "kind": "adjectival"
+        },
+        {
+          "name": "Hellenic",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Greek",
+        "Hellenic"
+      ],
       "start_year_min": -3250,
       "start_year_max": -3150,
       "date_standing": "majority"
@@ -10215,7 +10350,7 @@
       "date_standing": "majority"
     },
     {
-      "id": "europe.mediterranean.macedon.philip2",
+      "id": "europe.mediterranean.macedon.philip-ii",
       "kind": "reign",
       "name": "Philip II of Macedon",
       "parent_id": "europe.mediterranean.macedon",
@@ -10353,6 +10488,15 @@
         }
       ],
       "summary": "From the legendary founding to the fall of the Western Empire; the political and cultural core of the ancient Mediterranean.",
+      "name_forms": [
+        {
+          "name": "Roman",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Roman"
+      ],
       "date_standing": "traditional"
     },
     {
@@ -10366,6 +10510,15 @@
       "summary": "Seven legendary kings from Romulus to Tarquin the Proud.",
       "start_dating_method": "received",
       "end_dating_method": "received",
+      "name_forms": [
+        {
+          "name": "Roman",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Roman"
+      ],
       "date_standing": "traditional"
     },
     {
@@ -10393,6 +10546,15 @@
         }
       ],
       "summary": "Non-monarchical Rome governed by the Senate and elected magistrates.",
+      "name_forms": [
+        {
+          "name": "Roman Republican",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Roman Republican"
+      ],
       "date_standing": "majority"
     },
     {
@@ -10528,6 +10690,20 @@
         "europe"
       ],
       "summary": "Monarchical Roman state from Augustus's Principate to the deposition of Romulus Augustulus.",
+      "name_forms": [
+        {
+          "name": "Roman",
+          "kind": "adjectival"
+        },
+        {
+          "name": "Imperial Roman",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Roman",
+        "Imperial Roman"
+      ],
       "date_standing": "majority"
     },
     {
@@ -10752,7 +10928,8 @@
         "Byzantium",
         "Eastern Roman Empire",
         "Rhomania",
-        "Βασιλεία τῶν Ῥωμαίων"
+        "Βασιλεία τῶν Ῥωμαίων",
+        "Byzantine"
       ],
       "summary": "Roman Empire's Greek-speaking continuation, based in Constantinople.",
       "start_dating_method": "calendar",
@@ -10825,6 +11002,10 @@
         {
           "name": "Byzantium",
           "kind": "exonym"
+        },
+        {
+          "name": "Byzantine",
+          "kind": "adjectival"
         }
       ],
       "date_standing": "majority"
@@ -10847,7 +11028,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "europe.mediterranean.byzantine.constantine11",
+      "id": "europe.mediterranean.byzantine.constantine-xi",
       "kind": "reign",
       "name": "Constantine XI Palaiologos",
       "parent_id": "europe.mediterranean.byzantine",
@@ -10977,7 +11158,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "europe.western.france.bourbon.louis14",
+      "id": "europe.western.france.bourbon.louis-xiv",
       "kind": "reign",
       "name": "Louis XIV (Sun King)",
       "parent_id": "europe.western.france.bourbon",
@@ -11031,7 +11212,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "europe.western.france.napoleon.napoleon1",
+      "id": "europe.western.france.napoleon.napoleon-i",
       "kind": "reign",
       "name": "Napoleon I",
       "parent_id": "europe.western.france.napoleon",
@@ -11079,7 +11260,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "europe.western.england.norman.william1",
+      "id": "europe.western.england.norman.william-i",
       "kind": "reign",
       "name": "William the Conqueror",
       "parent_id": "europe.western.england.norman",
@@ -11133,7 +11314,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "europe.western.england.tudor.henry8",
+      "id": "europe.western.england.tudor.henry-viii",
       "kind": "reign",
       "name": "Henry VIII",
       "parent_id": "europe.western.england.tudor",
@@ -11150,7 +11331,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "europe.western.england.tudor.elizabeth1",
+      "id": "europe.western.england.tudor.elizabeth-i",
       "kind": "reign",
       "name": "Elizabeth I",
       "parent_id": "europe.western.england.tudor",
@@ -11426,7 +11607,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "europe.central.hre.charles5",
+      "id": "europe.central.hre.charles-v",
       "kind": "reign",
       "name": "Charles V",
       "parent_id": "europe.central.hre.habsburg",
@@ -11769,7 +11950,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "europe.eastern.tsardom.ivan4",
+      "id": "europe.eastern.tsardom.ivan-iv",
       "kind": "reign",
       "name": "Ivan IV the Terrible",
       "parent_id": "europe.eastern.tsardom",
@@ -11827,7 +12008,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "europe.eastern.russian-empire.peter1",
+      "id": "europe.eastern.russian-empire.peter-i",
       "kind": "reign",
       "name": "Peter the Great",
       "parent_id": "europe.eastern.russian-empire",
@@ -11845,7 +12026,7 @@
       "end_year_max": 1825
     },
     {
-      "id": "europe.eastern.russian-empire.catherine2",
+      "id": "europe.eastern.russian-empire.catherine-ii",
       "kind": "reign",
       "name": "Catherine the Great",
       "parent_id": "europe.eastern.russian-empire",
@@ -12706,7 +12887,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "south-asia.gupta.chandragupta2",
+      "id": "south-asia.gupta.chandragupta-ii",
       "kind": "reign",
       "name": "Chandragupta II (Vikramaditya)",
       "parent_id": "south-asia.gupta",
@@ -12739,7 +12920,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "south-asia.chola.rajaraja1",
+      "id": "south-asia.chola.rajaraja-i",
       "kind": "reign",
       "name": "Rajaraja I",
       "parent_id": "south-asia.chola",
@@ -12755,7 +12936,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "south-asia.chola.rajendra1",
+      "id": "south-asia.chola.rajendra-i",
       "kind": "reign",
       "name": "Rajendra I",
       "parent_id": "south-asia.chola",
@@ -13076,7 +13257,7 @@
       "end_year_max": 1531
     },
     {
-      "id": "southeast-asia.mainland.khmer.suryavarman2",
+      "id": "southeast-asia.mainland.khmer.suryavarman-ii",
       "kind": "reign",
       "name": "Suryavarman II",
       "parent_id": "southeast-asia.mainland.khmer",
@@ -13093,7 +13274,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "southeast-asia.mainland.khmer.jayavarman7",
+      "id": "southeast-asia.mainland.khmer.jayavarman-vii",
       "kind": "reign",
       "name": "Jayavarman VII",
       "parent_id": "southeast-asia.mainland.khmer",
@@ -14362,6 +14543,20 @@
         }
       ],
       "summary": "Long-lived Mesoamerican civilization known for writing, mathematics, and monumental architecture.",
+      "name_forms": [
+        {
+          "name": "Mayan",
+          "kind": "adjectival"
+        },
+        {
+          "name": "Maya",
+          "kind": "adjectival"
+        }
+      ],
+      "aliases": [
+        "Mayan",
+        "Maya"
+      ],
       "start_year_min": -2100,
       "start_year_max": -1900,
       "end_year_min": 1597,
@@ -14577,7 +14772,7 @@
       "end_year_max": 1540
     },
     {
-      "id": "americas.mesoamerica.aztec.moctezuma1",
+      "id": "americas.mesoamerica.aztec.moctezuma-i",
       "kind": "reign",
       "name": "Moctezuma I",
       "parent_id": "americas.mesoamerica.aztec",
@@ -14609,7 +14804,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "americas.mesoamerica.aztec.moctezuma2",
+      "id": "americas.mesoamerica.aztec.moctezuma-ii",
       "kind": "reign",
       "name": "Moctezuma II",
       "parent_id": "americas.mesoamerica.aztec",
@@ -14836,6 +15031,10 @@
           "source_ids": [
             "britannica-inca"
           ]
+        },
+        {
+          "name": "Incan",
+          "kind": "adjectival"
         }
       ],
       "start_dating_method": "calendar",
@@ -14856,7 +15055,8 @@
       "aliases": [
         "Tawantinsuyu",
         "Tahuantinsuyu",
-        "Inca"
+        "Inca",
+        "Incan"
       ],
       "date_standing": "majority"
     },
@@ -15233,7 +15433,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "oceania.polynesia.hawaii.kamehameha1",
+      "id": "oceania.polynesia.hawaii.kamehameha-i",
       "kind": "reign",
       "name": "Kamehameha I",
       "parent_id": "oceania.polynesia.hawaii",
@@ -15979,7 +16179,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "global.contemporary.september-11",
+      "id": "global.contemporary.september-xi",
       "kind": "event",
       "name": "September 11 Attacks",
       "parent_id": "global.contemporary",
@@ -18460,6 +18660,7 @@
       "start_year": 125,
       "end_year": 144,
       "tier": "specialist",
+      "qualified_name": "Emperor Shun (Eastern Han)",
       "start_dating_method": "unknown",
       "start_year_min": 100,
       "start_year_max": 150,
@@ -18640,6 +18841,7 @@
       "start_year": 649,
       "end_year": 683,
       "tier": "specialist",
+      "qualified_name": "Emperor Gaozong (Tang Dynasty)",
       "start_dating_method": "unknown",
       "start_year_min": 599,
       "start_year_max": 699,
@@ -18932,6 +19134,7 @@
       "start_year": 976,
       "end_year": 997,
       "tier": "specialist",
+      "qualified_name": "Emperor Taizong (Northern Song)",
       "start_dating_method": "unknown",
       "start_year_min": 926,
       "start_year_max": 1026,
@@ -19064,6 +19267,7 @@
       "end_year": 1162,
       "tier": "intermediate",
       "summary": "Founded the Southern Song at Lin'an (Hangzhou).",
+      "qualified_name": "Emperor Gaozong (Southern Song)",
       "start_dating_method": "unknown",
       "start_year_min": 1027,
       "start_year_max": 1227,
@@ -25713,7 +25917,7 @@
       "date_note": "Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty."
     },
     {
-      "id": "south-asia.independence.pakistan-leaders.benazir-2",
+      "id": "south-asia.independence.pakistan-leaders.benazir-ii",
       "kind": "reign",
       "name": "Benazir Bhutto (2nd term)",
       "parent_id": "south-asia.independence.pakistan-leaders",
@@ -30508,6 +30712,7 @@
         "guila-naquitz-ams-maize"
       ],
       "summary": "Squash first, then maize and beans — the squash predates maize by over four thousand years.",
+      "qualified_name": "Mesoamerica (Neolithic Transition)",
       "start_year_min": -8251,
       "start_year_max": -7851,
       "end_year_min": -4501,
@@ -30530,6 +30735,7 @@
         "pnas-2016-jiskairumoko-potato"
       ],
       "summary": "Potato, llama, alpaca and guinea pig, domesticated in the high basin around Lake Titicaca.",
+      "qualified_name": "Andes (Neolithic Transition)",
       "start_year_min": -5251,
       "start_year_max": -4851,
       "end_year_min": -2300,
@@ -38215,6 +38421,7 @@
       ],
       "summary": "Chosen by Yao over his own son and held up ever after as proof that virtue should outrank birth; traditionally passed the throne to Yu, founder of the Xia.",
       "native_name": "舜",
+      "qualified_name": "Emperor Shun (Legendary Age (Three Sovereigns & Five Emperors))",
       "date_standing": "traditional"
     },
     {
@@ -39527,5 +39734,53 @@
       "end_year_min": -784,
       "end_year_max": -684
     }
-  ]
+  ],
+  "redirects": {
+    "africa.nile.egypt.old-kingdom.dyn6.pepi2": "africa.nile.egypt.old-kingdom.dyn6.pepi-ii",
+    "africa.nile.egypt.middle-kingdom.dyn11.mentuhotep2": "africa.nile.egypt.middle-kingdom.dyn11.mentuhotep-ii",
+    "africa.nile.egypt.new-kingdom.dyn18.ahmose1": "africa.nile.egypt.new-kingdom.dyn18.ahmose-i",
+    "africa.nile.egypt.new-kingdom.dyn18.thutmose3": "africa.nile.egypt.new-kingdom.dyn18.thutmose-iii",
+    "africa.nile.egypt.new-kingdom.dyn18.amenhotep3": "africa.nile.egypt.new-kingdom.dyn18.amenhotep-iii",
+    "africa.nile.egypt.new-kingdom.dyn19.seti1": "africa.nile.egypt.new-kingdom.dyn19.seti-i",
+    "africa.nile.egypt.new-kingdom.dyn19.ramesses2": "africa.nile.egypt.new-kingdom.dyn19.ramesses-ii",
+    "africa.nile.egypt.new-kingdom.dyn20.ramesses3": "africa.nile.egypt.new-kingdom.dyn20.ramesses-iii",
+    "africa.nile.egypt.ptolemaic.ptolemy1": "africa.nile.egypt.ptolemaic.ptolemy-i",
+    "africa.nile.egypt.ptolemaic.cleopatra7": "africa.nile.egypt.ptolemaic.cleopatra-vii",
+    "africa.nile.ethiopia.menelik2": "africa.nile.ethiopia.menelik-ii",
+    "west-asia.mesopotamia.ur3": "west-asia.mesopotamia.ur-iii",
+    "west-asia.mesopotamia.neo-babylonian.nebuchadnezzar2": "west-asia.mesopotamia.neo-babylonian.nebuchadnezzar-ii",
+    "west-asia.iran.achaemenid.cyrus2": "west-asia.iran.achaemenid.cyrus-ii",
+    "west-asia.iran.achaemenid.cambyses2": "west-asia.iran.achaemenid.cambyses-ii",
+    "west-asia.iran.achaemenid.darius1": "west-asia.iran.achaemenid.darius-i",
+    "west-asia.iran.achaemenid.xerxes1": "west-asia.iran.achaemenid.xerxes-i",
+    "west-asia.iran.achaemenid.darius3": "west-asia.iran.achaemenid.darius-iii",
+    "west-asia.iran.parthian.mithridates1": "west-asia.iran.parthian.mithridates-i",
+    "west-asia.iran.sasanian.ardashir1": "west-asia.iran.sasanian.ardashir-i",
+    "west-asia.iran.sasanian.shapur1": "west-asia.iran.sasanian.shapur-i",
+    "west-asia.iran.sasanian.khosrow1": "west-asia.iran.sasanian.khosrow-i",
+    "west-asia.iran.sasanian.khosrow2": "west-asia.iran.sasanian.khosrow-ii",
+    "west-asia.iran.safavid.abbas1": "west-asia.iran.safavid.abbas-i",
+    "global.multi-regional.ottoman.mehmed2": "global.multi-regional.ottoman.mehmed-ii",
+    "europe.mediterranean.macedon.philip2": "europe.mediterranean.macedon.philip-ii",
+    "europe.mediterranean.byzantine.constantine11": "europe.mediterranean.byzantine.constantine-xi",
+    "europe.western.france.bourbon.louis14": "europe.western.france.bourbon.louis-xiv",
+    "europe.western.france.napoleon.napoleon1": "europe.western.france.napoleon.napoleon-i",
+    "europe.western.england.norman.william1": "europe.western.england.norman.william-i",
+    "europe.western.england.tudor.henry8": "europe.western.england.tudor.henry-viii",
+    "europe.western.england.tudor.elizabeth1": "europe.western.england.tudor.elizabeth-i",
+    "europe.central.hre.charles5": "europe.central.hre.charles-v",
+    "europe.eastern.tsardom.ivan4": "europe.eastern.tsardom.ivan-iv",
+    "europe.eastern.russian-empire.peter1": "europe.eastern.russian-empire.peter-i",
+    "europe.eastern.russian-empire.catherine2": "europe.eastern.russian-empire.catherine-ii",
+    "south-asia.gupta.chandragupta2": "south-asia.gupta.chandragupta-ii",
+    "south-asia.chola.rajaraja1": "south-asia.chola.rajaraja-i",
+    "south-asia.chola.rajendra1": "south-asia.chola.rajendra-i",
+    "southeast-asia.mainland.khmer.suryavarman2": "southeast-asia.mainland.khmer.suryavarman-ii",
+    "southeast-asia.mainland.khmer.jayavarman7": "southeast-asia.mainland.khmer.jayavarman-vii",
+    "americas.mesoamerica.aztec.moctezuma1": "americas.mesoamerica.aztec.moctezuma-i",
+    "americas.mesoamerica.aztec.moctezuma2": "americas.mesoamerica.aztec.moctezuma-ii",
+    "oceania.polynesia.hawaii.kamehameha1": "oceania.polynesia.hawaii.kamehameha-i",
+    "global.contemporary.september-11": "global.contemporary.september-xi",
+    "south-asia.independence.pakistan-leaders.benazir-2": "south-asia.independence.pakistan-leaders.benazir-ii"
+  }
 }

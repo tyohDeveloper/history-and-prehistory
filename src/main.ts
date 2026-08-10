@@ -1,5 +1,5 @@
 import "./style.css";
-import { datasetVersion, entities, sourceById, themes } from "./dataset/dataset";
+import { datasetVersion, entities, sourceById, themes , idRedirects } from "./dataset/dataset";
 import { displayRange } from "./chrono/displayRange";
 import { contextNeighbours } from "./focus/contextNeighbours";
 import { datingOf } from "./chrono/fromEntity";
@@ -96,7 +96,7 @@ const KIND_LABEL: Record<EntityKind, string> = {
   threshold: "Earliest known",
 };
 
-const index = buildIndex(entities);
+const index = buildIndex(entities, idRedirects);
 
 // Measured once over all 1,305 entities, not per render: ambiguity is a
 // property of the dataset, and the dataset does not change at runtime.

@@ -21,6 +21,7 @@ Warnings:
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 from collections import defaultdict, Counter
 from jsonschema import Draft202012Validator, RefResolver
@@ -647,6 +648,90 @@ def _check_dating_spine(entities):
 
 
 _check_dating_spine(entities)
+
+# ---------------------------------------------------------------------------
+# Rule 11: identity -- the slug convention, sibling uniqueness, and duplicate
+# detection that does not depend on matching names.
+#
+# Rule 9 catches duplicate people by token-subset name match plus overlapping
+# dates plus shared region. Regnal numbering defeats that: "thutmose" is a token
+# subset of four different pharaohs, "ptolemy" of four, "ramesses" of four. It
+# also false-positives across unrelated people -- Romulus against Romulus
+# Augustulus, Tiberius Gracchus against the emperor Tiberius.
+#
+# A slug is the better key precisely because the convention forces the regnal
+# numeral into it. thutmose-i and thutmose-iii differ as slugs, while their names
+# differ only by a numeral that token matching throws away.
+# ---------------------------------------------------------------------------
+
+_DIGIT_SLUG = re.compile(r"([a-z][a-z\-]*?)-?(\d{1,2})")
+
+
+def _fold_first_word(name):
+    first = name.split()[0] if name.split() else ""
+    stripped = "".join(c for c in unicodedata.normalize("NFD", first)
+                       if unicodedata.category(c) != "Mn").lower()
+    return re.sub(r"[^a-z0-9]", "", stripped)
+
+
+def _check_identity(entities):
+    by_parent = defaultdict(list)
+    for e in entities:
+        by_parent[e.get("parent_id")].append(e)
+
+    # Siblings may not share a name or a slug. Names collide elsewhere in the tree by design --
+    # ten Japanese era names do -- and the derived qualified name handles display. Among
+    # siblings the collision is genuinely ambiguous, so it is an error.
+    name_clashes, slug_clashes = [], []
+    for pid, kids in by_parent.items():
+        for getter, sink in ((lambda k: k["name"], name_clashes),
+                             (lambda k: k["id"].rsplit(".", 1)[-1], slug_clashes)):
+            counts = Counter(getter(k) for k in kids)
+            for value, n in counts.items():
+                if n > 1:
+                    sink.append(f"{pid or '(root)'} has {n} children as {value!r}")
+
+    # Arabic digits where the convention requires a Roman regnal numeral. Guarded the same way
+    # the normaliser is: the slug stem must actually be the name, so "ww1" for "World War I"
+    # is not treated as a regnal number.
+    digit_slugs = []
+    for e in entities:
+        slug = e["id"].rsplit(".", 1)[-1]
+        m = _DIGIT_SLUG.fullmatch(slug)
+        # Zero is exempt because there is no Roman numeral for it. "Dynasty 0" is a scholarly
+        # designation for the proto-dynastic rulers before Egypt's First Dynasty, not a regnal
+        # number, and `dynasty-0` is the correct slug for it.
+        if m and int(m.group(2)) == 0:
+            continue
+        if m and _fold_first_word(e["name"]) == m.group(1).replace("-", ""):
+            digit_slugs.append(f"{e['id']} ({e['name']})")
+
+    # Duplicate people, keyed on slug rather than on name tokens.
+    people = defaultdict(list)
+    for e in entities:
+        if e["kind"] in ("reign", "person"):
+            people[e["id"].rsplit(".", 1)[-1]].append(e)
+    dup_people = []
+    for slug, group in people.items():
+        for i, a in enumerate(group):
+            for b in group[i + 1:]:
+                sa, ea = a.get("start_year"), a.get("end_year")
+                sb, eb = b.get("start_year"), b.get("end_year")
+                if sa is None or sb is None:
+                    continue
+                if (ea is None or sb <= ea) and (eb is None or sa <= eb):
+                    dup_people.append(f"{a['id']} and {b['id']} share slug {slug!r} and overlap")
+
+    for label, rows in (("siblings share a display name", name_clashes),
+                        ("siblings share a slug", slug_clashes),
+                        ("Arabic digits where a Roman regnal numeral belongs", digit_slugs),
+                        ("possible duplicate people, same slug and overlapping dates", dup_people)):
+        if rows:
+            errors.append(f"identity -- {label}, {len(rows)} case(s): "
+                          + "; ".join(rows[:4]) + (" ..." if len(rows) > 4 else ""))
+
+
+_check_identity(entities)
 
 # Retired authoring shorthands. Accepted by the builders during the migration window so that
 # ~30 modules did not have to change at once; reported here so the window does not quietly

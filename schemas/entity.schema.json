@@ -466,6 +466,10 @@
         "minority",
         "traditional"
       ]
+    },
+    "qualified_name": {
+      "type": "string",
+      "description": "Display name plus the shortest distinguishing context, for use out of context (search results, link chips). Derived by the build, never authored: fifteen display names collide, including two different places called Andes."
     }
   }
 }

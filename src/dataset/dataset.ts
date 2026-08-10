@@ -25,6 +25,26 @@ export const sourceById: ReadonlyMap<string, Source> = new Map(
   sources.map((s) => [s.id, s]),
 );
 
+/**
+ * Old entity id to current id.
+ *
+ * Ids are frozen, but 46 were normalised once to bring regnal numbers into Roman numerals --
+ * `thutmose3` had been sitting among `thutmose-i`, `thutmose-ii` and `thutmose-iv`, so an
+ * author reasoning from one sibling to another was right three times in four. Anything holding
+ * an old id, including a bookmarked deep link, resolves through this map rather than failing.
+ *
+ * The map is never pruned. An entry costs a line; a missing entry costs a link that silently
+ * resolves to nothing.
+ */
+export const idRedirects: ReadonlyMap<string, string> = new Map(
+  Object.entries((entitiesFile as { redirects?: Record<string, string> }).redirects ?? {}),
+);
+
+/** Resolve an id that may be stale. Returns the input when it is already current. */
+export function currentId(id: string): string {
+  return idRedirects.get(id) ?? id;
+}
+
 export const datasetVersion: string = entitiesFile.dataset_version;
 export const schemaVersion: string = entitiesFile.schema_version;
 

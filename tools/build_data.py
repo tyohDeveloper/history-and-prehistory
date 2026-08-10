@@ -28,13 +28,17 @@ DATASET_VERSION = "0.34.1.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def _envelope(key, items):
-    return {
+def _envelope(key, items, **extra):
+    env = {
         "schema_version": SCHEMA_VERSION,
         "dataset_version": DATASET_VERSION,
         "generated_at": _GENERATED_AT,
         key: items,
     }
+    # `redirects` rides along with the entities so a stale id resolves rather than 404s. Ids
+    # are frozen; when a rename is unavoidable it is recorded here and honoured forever.
+    env.update(extra)
+    return env
 
 
 entities = []
@@ -1707,6 +1711,8 @@ from upgrade_sources import extend as _upgrade_sources
 from co_rulers import extend as _co_rulers
 from fix_rome_parent import extend as _fix_rome_parent
 from migrate_dating import extend as _migrate_dating
+from normalize_ids import extend as _normalize_ids, rewrite_refs as _rewrite_refs
+from name_repair import extend as _name_repair
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1988,6 +1994,11 @@ print(
     f"(end rests on different science from the start)"
 )
 
+# Adjectival and qualified names are added before aliases are derived, so the adjectival
+# forms become searchable aliases like every other name form. Running it afterwards left
+# "Roman" indexed nowhere, which is the bug this was meant to fix.
+_name_repair(E, entities)
+
 # Search must match on every name a reader might arrive with, including ones
 # the UI files under headings like "Rejected name". Deriving `aliases` from
 # `name_forms` rather than asking authors to maintain both is the only way the
@@ -2011,10 +2022,11 @@ print(f"Name forms: {_nf_entities} entities carry structured names")
 # must see the final state. Two earlier placements were both wrong: one ran before later
 # modules had authored their entities, and one ran after this file had already been written,
 # which meant its work was silently discarded.
+_ID_REDIRECTS = _normalize_ids(E, entities) or {}
 _migrate_dating(E, entities)
 
 with open(DATA / "entities.json", "w") as f:
-    json.dump(_envelope("entities", entities), f, indent=2, ensure_ascii=False)
+    json.dump(_envelope("entities", entities, redirects=_ID_REDIRECTS), f, indent=2, ensure_ascii=False)
 print(f"Wrote entities.json — {len(entities)} entities")
 
 
@@ -2279,6 +2291,9 @@ calendars = [
 ]
 
 with open(DATA / "calendars.json", "w") as f:
+    _n = _rewrite_refs(calendars, _ID_REDIRECTS)
+    if _n:
+        print(f"normalize_ids: rewrote {_n} id reference(s) in calendars")
     json.dump(_envelope("calendars", calendars), f, indent=2, ensure_ascii=False)
 print(f"Wrote calendars.json — {len(calendars)} calendars")
 
@@ -3271,6 +3286,9 @@ with open(DATA / "sources.json", "w") as f:
 print(f"Wrote sources.json — {len(sources)} sources")
 
 with open(DATA / "themes.json", "w") as f:
+    _n = _rewrite_refs(themes, _ID_REDIRECTS)
+    if _n:
+        print(f"normalize_ids: rewrote {_n} id reference(s) in themes")
     json.dump(_envelope("themes", themes), f, indent=2, ensure_ascii=False)
 print(f"Wrote themes.json — {len(themes)} themes")
 
@@ -3441,6 +3459,9 @@ frames = [
 ]
 
 with open(DATA / "reference-frames.json", "w") as f:
+    _n = _rewrite_refs(frames, _ID_REDIRECTS)
+    if _n:
+        print(f"normalize_ids: rewrote {_n} id reference(s) in frames")
     json.dump(_envelope("frames", frames), f, indent=2, ensure_ascii=False)
 print(f"Wrote reference-frames.json — {len(frames)} anchors")
 

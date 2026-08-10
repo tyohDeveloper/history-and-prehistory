@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
   "dataset_version": "0.34.1.0",
-  "generated_at": "2026-08-10T17:38:19Z",
+  "generated_at": "2026-08-10T17:46:13Z",
   "frames": [
     {
       "id": "lucy",
@@ -97,7 +97,7 @@
       "year": 1453,
       "anchor_set": "western",
       "summary": "Ottoman conquest ends the Byzantine Empire; conventional end of the Middle Ages.",
-      "entity_id": "global.multi-regional.ottoman.mehmed2"
+      "entity_id": "global.multi-regional.ottoman.mehmed-ii"
     },
     {
       "id": "columbus",
@@ -243,7 +243,7 @@
       "year": 1896,
       "anchor_set": "african",
       "summary": "Ethiopian victory over Italy; kept Ethiopia the only major African state to remain uncolonized in the age of European empires.",
-      "entity_id": "africa.nile.ethiopia.menelik2"
+      "entity_id": "africa.nile.ethiopia.menelik-ii"
     },
     {
       "id": "cahokia-peak",
@@ -259,7 +259,7 @@
       "year": 1521,
       "anchor_set": "americas",
       "summary": "Spanish conquistadors under Cortés, allied with Tlaxcala and other indigenous nations, took the Aztec capital.",
-      "entity_id": "americas.mesoamerica.aztec.moctezuma2"
+      "entity_id": "americas.mesoamerica.aztec.moctezuma-ii"
     },
     {
       "id": "inca-fall",
@@ -366,7 +366,7 @@
       "year": 2001,
       "anchor_set": "global",
       "summary": "al-Qaeda attacks on the United States; catalyst for the War on Terror.",
-      "entity_id": "global.contemporary.september-11"
+      "entity_id": "global.contemporary.september-xi"
     }
   ]
 }

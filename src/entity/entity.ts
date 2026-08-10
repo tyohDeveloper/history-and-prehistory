@@ -122,6 +122,16 @@ export interface Entity {
    * human-readable phrase resolves ambiguously. Links key on `id`.
    */
   search_phrase?: string;
+
+  /**
+   * Display name plus the shortest distinguishing context, for showing out of context.
+   *
+   * Derived by the build, never authored. Fifteen display names collide -- ten Japanese era
+   * names in pairs, three Chinese regnal names across dynasties, and Mesoamerica and Andes
+   * each at two points in the region tree. None are siblings, so the tree reads correctly in
+   * place; a search result or a link chip does not.
+   */
+  qualified_name?: string;
   date_note?: string;
   allow_outside_parent_dates?: boolean;
   summary?: string;

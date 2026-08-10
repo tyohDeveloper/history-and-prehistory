@@ -163,6 +163,37 @@ indistinguishable in search. Expect more of this shape.
 Left as a flat alias deliberately. Needs scholarship on who coined the framing
 and what it obscures before it can be typed as `historical` or `rejected`.
 
+## Audit, 2026-08-10 (before adding more data)
+
+Measured every open issue against data 0.32.0.0. Five new issues came out of it, and
+the headline is a pattern rather than any single item.
+
+**Built surface that reaches no reader.** `links` was the fourth instance, not the
+first, and fixing it in v3.31.0.0 did not fix the class:
+
+| Surface | State |
+| --- | --- |
+| `links` | **fixed** in v3.31.0.0 |
+| `researchNote` | function in `src/research/handoff.ts`, tested, no UI control (#6) |
+| `themes` | 16 defined, 0 entity references, 0 rendering, pinned by a test (#22) |
+| `misconceptions` | 3 real facts, renders nowhere; `caveats` does the same job (#23) |
+| 9 schema fields | defined, never used; `capital`/`capitals` both exist (#25) |
+
+**Tier assignment hides more history than missing research does.** #13 was filed as a
+China problem; `tools/report_tier_gaps.py` finds the same shape 63 times. Korea shows
+a 1,218-year hole at foundational tier, England 331 years with Plantagenet England
+filed at intermediate. See #21. This is the reason to pause data collection: adding
+entities at lower tiers while foundational carries holes that large makes the default
+view worse.
+
+**Sourcing discipline is holding; the backlog is not moving.** Foundational grew
+480 → 501 over five releases while unsourced stayed flat at ~286, so every new entity
+carried a source. But only 10 old ones were fixed in that time. See #2.
+
+**Two numbers previously reported here were wrong** and are corrected in the issues:
+unsourced foundational is 286 of 501, not 269 of 480; and the Yuan's 1271–1370 span is
+documented Northern Yuan continuation, not the error it looked like.
+
 ## Contested sovereignty
 
 See `overlap-and-rival-claims.md`. Short version: the "988 overlapping pairs" figure

@@ -198,6 +198,64 @@ for _e in entities:
                 f"entity {_e['id']}: sources[].url must be http(s), got {_u!r}"
             )
 
+# Rule 9: the same person must not be filed twice in the same region.
+#
+# An audit reported that the Roman Republic had "not one person" and that Korea had
+# "zero rulers". Both were false -- Julius Caesar was filed under `rome.republic.late`,
+# one level below where the check looked, and King Sejong the Great was already under
+# Joseon. Authoring from that audit produced a second Caesar and a second Sejong before
+# anyone noticed, because nothing in the pipeline compared new people to old ones.
+#
+# The match is narrow on purpose. Name similarity alone is far too loose: Romulus
+# collides with Romulus Augustulus, Tiberius Gracchus with the emperor Tiberius, and
+# Marcus Licinius Crassus with Marcus Aurelius. Requiring overlapping dates as well as a
+# token-subset match separates all of those while still catching a real double entry.
+_REIGN_TITLES = {
+    "king", "queen", "emperor", "empress", "prince", "princess", "shah", "sultan",
+    "caliph", "tsar", "czar", "duke", "khan", "pharaoh", "lord", "lady", "saint",
+    "the", "of", "and",
+}
+
+
+def _person_tokens(name):
+    import unicodedata as _ud
+    _flat = _ud.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    return {_w for _w in re.findall(r"[a-z]+", _flat) if _w not in _REIGN_TITLES}
+
+
+def _check_duplicate_people(entities, errors):
+    by = {e["id"]: e for e in entities}
+
+    def top(eid):
+        cur = by.get(eid)
+        while cur is not None and cur.get("parent_id") is not None:
+            cur = by.get(cur["parent_id"])
+        return cur["id"] if cur is not None else None
+
+    reigns = [e for e in entities
+              if e["kind"] == "reign"
+              and e.get("start_year") is not None
+              and e.get("end_year") is not None]
+    buckets = {}
+    for e in reigns:
+        buckets.setdefault(top(e["id"]), []).append(e)
+
+    for region, group in buckets.items():
+        for i, a in enumerate(group):
+            ta = _person_tokens(a["name"])
+            if not ta:
+                continue
+            for b in group[i + 1:]:
+                tb = _person_tokens(b["name"])
+                if not tb or not (ta <= tb or tb <= ta):
+                    continue
+                if a["start_year"] < b["end_year"] and b["start_year"] < a["end_year"]:
+                    errors.append(
+                        f"entity {a['id']}: looks like the same person as {b['id']} "
+                        f"({a['name']} / {b['name']}, overlapping dates in {region}). "
+                        f"Enrich one rather than filing both.")
+
+
 # Rule 8: a typed relation must point at something, and a rival claim has two sides.
 #
 # Dangling link targets were already covered elsewhere -- planting one produced two
@@ -520,6 +578,7 @@ for e in entities:
 
 
 _check_links(entities, errors)
+_check_duplicate_people(entities, errors)
 
 
 if warnings:

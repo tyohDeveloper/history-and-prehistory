@@ -1,5 +1,5 @@
 {
-  "gzipBytes": 287689,
+  "gzipBytes": 300692,
   "recordedAt": "2026-08-10",
-  "note": "v3.32.1.0 Five Dynasties promoted (data 0.33.1.0). Measured with zlib.gzipSync."
+  "note": "v3.33.0.0 rulers for Rome and Korea, co-rulers and regents, source upgrades (data 0.34.0.0). Measured with zlib.gzipSync."
 }

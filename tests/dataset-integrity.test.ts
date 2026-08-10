@@ -19,14 +19,14 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.33.1.0");
+    expect(datasetVersion).toBe("0.34.0.0");
     expect(schemaVersion).toBe("3.5.0");
   });
 
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1724);
+    expect(entities.length).toBe(1763);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -106,11 +106,11 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(537);
+    expect(cited.length).toBe(583);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(406);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(414);
     expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(26);
   });
 
@@ -122,7 +122,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(334);
+    expect(withEnd.length).toBe(342);
 
     const differing = entities
       .filter(

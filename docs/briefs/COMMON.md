@@ -38,6 +38,22 @@ Write a JSON array to the file named in your specific brief. One object per rule
   religious institutions" beats "an important early king".
 - Keep the list to the scope named in your brief. Do not pad it.
 
+## Do not settle for the first result
+
+A page that surfaces in a search is worth opening. The first pass of this work sourced all
+seven kings of Rome to a **single Wikipedia article**, and several Korean kings to **Simple
+English Wikipedia** — while Britannica biographies of the individual kings and a World
+History Encyclopedia article on Gwanggaeto were sitting in the same result sets, unopened.
+
+Opening them changed the content, not just the citation: Britannica calls Tullus Hostilius
+"a legendary figure, the legend probably influenced by that of Romulus", says Ancus
+Marcius's reign "must be regarded as largely legendary", and notes the pontifical books
+attributed to Numa were "clearly forgeries". None of that came through the summary table.
+
+So: scan what the search returned, open the plausible non-Wikipedia results, and only fall
+back to Wikipedia when you have actually checked and found nothing better. Say in `kind`
+when you have done that.
+
 ## Verify before you write
 
 Open the URLs you cite and confirm the dates appear there. A citation that disagrees

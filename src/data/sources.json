@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
-  "dataset_version": "0.33.1.0",
-  "generated_at": "2026-08-10T08:55:25Z",
+  "dataset_version": "0.34.0.0",
+  "generated_at": "2026-08-10T09:13:21Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -2557,6 +2557,328 @@
       "citation": "'Erlitou culture', Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Erlitou_culture",
       "note": "States both positions: Chinese archaeologists generally identify Erlitou as Xia, while others note no contemporary writing exists to confirm it. Wikipedia-tier; used for the shape of the dispute, not for dates."
+    },
+    {
+      "id": "rome-rulers-01",
+      "kind": "reference",
+      "citation": "'Roman Kingdom', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Roman_Kingdom",
+      "note": "matches: source gives 753-716 BC; explicitly calls Romulus 'the legendary Romulus' and states the whole traditional chronology (243 years total, ~35-year average reigns) 'has been generally discounted by modern scholarship' since Niebuhr..."
+    },
+    {
+      "id": "rome-rulers-02",
+      "kind": "reference",
+      "citation": "'Scipio Africanus', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Scipio-Africanus",
+      "note": "differs: dates given span his Spanish command through his Africanus cognomen (210 to 201 BCE); Britannica states he received his Spanish command in 210 BCE as a private citizen ('privatus'), was elected consul for 205 BCE, defeated Hanni..."
+    },
+    {
+      "id": "rome-rulers-03",
+      "kind": "reference",
+      "citation": "'Tiberius Sempronius Gracchus', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Tiberius-Sempronius-Gracchus",
+      "note": "matches: used his single year as tribune of the plebs (133 BCE) rather than his lifespan (c. 169-164?-133 BCE, per Britannica), since the brief calls for office/command years."
+    },
+    {
+      "id": "rome-rulers-04",
+      "kind": "reference",
+      "citation": "'Gaius Gracchus', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Gaius-Sempronius-Gracchus",
+      "note": "differs: used his two-year tribunate (123-122 BCE) as the office span, but extended the end year to 121 BCE (his death, per Britannica) to mark when the political crisis he provoked was resolved by force; his lifespan is separately given..."
+    },
+    {
+      "id": "rome-rulers-05",
+      "kind": "reference",
+      "citation": "'Gaius Marius', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Gaius-Marius",
+      "note": "matches: Britannica states he was 'consul seven times (107, 104-100, 86 bce)'; span covers his first to last consulship rather than his lifespan (c. 157-86 BCE)."
+    },
+    {
+      "id": "rome-rulers-06",
+      "kind": "reference",
+      "citation": "'Sulla', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Sulla",
+      "note": "matches: span covers his first consulship and command against Mithradates (88 BCE) through his resignation as dictator (79 BCE); Britannica separately gives his dictatorship alone as 82-79 BCE and his lifespan as 138-78 BCE."
+    },
+    {
+      "id": "rome-rulers-07",
+      "kind": "reference",
+      "citation": "'Pompey the Great', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Pompey-the-Great",
+      "note": "matches: span runs from his first consulship (70 BCE) to his sole consulship (52 BCE), per Britannica's Quick Facts office list (consul 70, 55, 52 BCE); his extraordinary anti-pirate command (67 BCE) and Mithradatic command (66 BCE) fall..."
+    },
+    {
+      "id": "rome-rulers-08",
+      "kind": "reference",
+      "citation": "'Marcus Licinius Crassus', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Marcus-Licinius-Crassus",
+      "note": "matches: span runs from his suppression of the Spartacus revolt (72-71 BCE, ending 71) to his death on the disastrous Parthian invasion he launched as governor of Syria (54-53 BCE, ending 53); Britannica also lists consulships in 70 and ..."
+    },
+    {
+      "id": "rome-rulers-09",
+      "kind": "reference",
+      "citation": "'Cicero', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Cicero",
+      "note": "matches: used his consulship (63 BCE), the year Britannica says he 'discover[ed] and ma[de] public the seditious intentions of Catiline'; his lifespan (106-43 BCE) and later governorship of Cilicia (51-50 BCE) are not used as the primary..."
+    },
+    {
+      "id": "rome-rulers-10",
+      "kind": "reference",
+      "citation": "'Julius Caesar', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Julius-Caesar-Roman-ruler",
+      "note": "matches: span runs from his first consulship (59 BCE) to his assassination while dictator (44 BCE); Britannica separately breaks this into conquest of Gaul (58-50 BCE), civil war victory (49-45 BCE), and dictatorship (46-44 BCE). Lifespa..."
+    },
+    {
+      "id": "rome-rulers-11",
+      "kind": "reference",
+      "citation": "'Cato the Younger', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cato_the_Younger",
+      "note": "differs: used his tenure of major office, from plebeian tribune (62 BCE) to his death commanding the last Republican resistance at Utica (46 BCE), rather than the page's own 'Years active' field, which is given as 67-46 BCE (starting fro..."
+    },
+    {
+      "id": "rome-rulers-12",
+      "kind": "reference",
+      "citation": "'Mark Antony', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Mark-Antony-Roman-triumvir",
+      "note": "matches: Britannica identifies him as 'triumvir (43-30 bce)'; start year adjusted to 44 BCE to include his consulship the year Caesar was assassinated, which the source treats as the start of his rise to power. Lifespan (c. 83-30 BCE) is..."
+    },
+    {
+      "id": "rome-rulers-13",
+      "kind": "reference",
+      "citation": "'Augustus', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Augustus-Roman-emperor",
+      "note": "matches: span covers his consulship and formation of the Second Triumvirate (43 BCE, per Britannica's Quick Facts 'triumvirate (43BC-32BC)') through 27 BCE, when Britannica states he 'restored the republic of Rome' and was granted the na..."
+    },
+    {
+      "id": "korea-rulers-01",
+      "kind": "reference",
+      "citation": "'Tangun', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Tangun",
+      "note": "traditional: not an archaeological date; Britannica gives only the accession year (2333 BC) and no end date, so the -2240 end year here follows Wikipedia's traditional regnal-length convention, not an independently attested figure"
+    },
+    {
+      "id": "korea-rulers-02",
+      "kind": "reference",
+      "citation": "'Gwanggaeto the Great', Simple English Wikipedia",
+      "url": "https://simple.wikipedia.org/wiki/Gwanggaeto_the_Great",
+      "note": "differs: Simple Wikipedia gives 393-413, while Britannica's Goguryeo/Sosurim articles and the Met Museum's rulers list give 391-413; the Samguk Sagi-derived 391 accession is the more commonly cited figure and is used here"
+    },
+    {
+      "id": "korea-rulers-03",
+      "kind": "reference",
+      "citation": "'Jangsu of Goguryeo', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jangsu_of_Goguryeo",
+      "note": "differs: the Wikipedia infobox states 412-491 while the article's own prose and the Met Museum's rulers list both say 413-491; 413 (the year his father Gwanggaeto died) is used here as the majority figure"
+    },
+    {
+      "id": "korea-rulers-04",
+      "kind": "reference",
+      "citation": "'Seong of Baekje', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Seong_of_Baekje",
+      "note": "matches"
+    },
+    {
+      "id": "korea-rulers-05",
+      "kind": "reference",
+      "citation": "'Jinheung of Silla', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jinheung_of_Silla",
+      "note": "matches"
+    },
+    {
+      "id": "korea-rulers-06",
+      "kind": "reference",
+      "citation": "'Muyeol of Silla', Simple English Wikipedia",
+      "url": "https://simple.wikipedia.org/wiki/Muyeol_of_Silla",
+      "note": "matches"
+    },
+    {
+      "id": "korea-rulers-07",
+      "kind": "reference",
+      "citation": "'Munmu of Silla', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Munmu_of_Silla",
+      "note": "matches: full reign is 661-681 (see Unified Silla entry below); this entry's end_year of 668 marks the fall of Goguryeo and close of the Three Kingdoms period per the brief's grouping, not the end of his reign"
+    },
+    {
+      "id": "korea-rulers-08",
+      "kind": "reference",
+      "citation": "'Sinmun of Silla', New World Encyclopedia",
+      "url": "https://www.newworldencyclopedia.org/entry/Sinmun_of_Silla",
+      "note": "differs: sources split between an end year of 691 and 692 (e.g. Wikipedia's infobox says 681-691 while its succession list and the Met Museum's rulers list say 681-692); 692 is used here as the majority figure"
+    },
+    {
+      "id": "korea-rulers-09",
+      "kind": "reference",
+      "citation": "'Gyeongdeok of Silla', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gyeongdeok_of_Silla",
+      "note": "matches"
+    },
+    {
+      "id": "korea-rulers-10",
+      "kind": "reference",
+      "citation": "'Taejo of Goryeo', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Taejo_of_Goryeo",
+      "note": "matches"
+    },
+    {
+      "id": "korea-rulers-11",
+      "kind": "reference",
+      "citation": "'Gwangjong of Goryeo', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gwangjong_of_Goryeo",
+      "note": "matches"
+    },
+    {
+      "id": "korea-rulers-12",
+      "kind": "reference",
+      "citation": "'Chungnyeol of Goryeo', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chungnyeol_of_Goryeo",
+      "note": "matches: page shows two separate reigns (1274-1298 and 1298-1308) with a brief 1298 abdication in between; overall span 1274-1308 given here matches secondary sources such as Encyclopedia.com's succession list"
+    },
+    {
+      "id": "korea-rulers-13",
+      "kind": "reference",
+      "citation": "'Goryeo dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Goryeo-dynasty",
+      "note": "matches: Britannica gives 1352-74 for the start of major reforms under his reign; the reign span 1351-1374 itself follows the Goryeo succession table on Wikipedia's Taejo of Goryeo page"
+    },
+    {
+      "id": "korea-rulers-14",
+      "kind": "reference",
+      "citation": "'Taejo of Joseon', Simple English Wikipedia",
+      "url": "https://simple.wikipedia.org/wiki/Taejo_of_Joseon",
+      "note": "matches"
+    },
+    {
+      "id": "korea-rulers-15",
+      "kind": "reference",
+      "citation": "'Sejong', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Sejong-Korean-ruler",
+      "note": "differs: Britannica gives 1419-50 (using the lunar new-year convention for his accession), while Wikipedia and the Sejong Pyeongchang center give the Gregorian accession date of 18 September 1418; 1418 is used here as the enthronement year"
+    },
+    {
+      "id": "korea-rulers-16",
+      "kind": "reference",
+      "citation": "'Seongjong of Joseon', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Seongjong_of_Joseon",
+      "note": "differs: Wikipedia's precise Gregorian reign dates (9 January 1470 - 29 January 1495) place his accession/death a few weeks into the following calendar year versus the conventional lunar-calendar years 1469-1494 used by most secondary so..."
+    },
+    {
+      "id": "korea-rulers-17",
+      "kind": "reference",
+      "citation": "'Yeonsangun of Joseon', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yeonsangun_of_Joseon",
+      "note": "differs: Wikipedia's precise reign dates (29 January 1495 - 28 September 1506) again reflect the Gregorian-vs-lunar year offset; the conventional lunar-year figures 1494-1506 are used here to match Seongjong's end year and most secondary..."
+    },
+    {
+      "id": "korea-rulers-18",
+      "kind": "reference",
+      "citation": "'Seonjo of Joseon', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Seonjo_of_Joseon",
+      "note": "matches"
+    },
+    {
+      "id": "korea-rulers-19",
+      "kind": "reference",
+      "citation": "'Yeongjo', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Yeongjo",
+      "note": "matches"
+    },
+    {
+      "id": "korea-rulers-20",
+      "kind": "reference",
+      "citation": "'Jeongjo of Joseon', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jeongjo_of_Joseon",
+      "note": "matches"
+    },
+    {
+      "id": "korea-rulers-21",
+      "kind": "reference",
+      "citation": "'Gojong of Korea', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gojong_of_Korea",
+      "note": "differs: sources split between 1863 and 1864 for his accession (Wikipedia's Joseon overview article says 'In 1863, King Gojong took the throne', while his own biography page gives the precise Gregorian date 16 January 1864, corresponding..."
+    },
+    {
+      "id": "britannica-romulus-remus",
+      "kind": "reference",
+      "citation": "'Romulus and Remus', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Romulus-and-Remus",
+      "note": "Treats them as the legendary founders; the legend probably originated in the 4th century BCE and was set down at the end of the 3rd."
+    },
+    {
+      "id": "britannica-numa-pompilius",
+      "kind": "reference",
+      "citation": "'Numa Pompilius', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Numa-Pompilius",
+      "note": "Reigned 715-673 BCE by tradition. The religious institutions credited to him were centuries of accretion, and the law books attributed to him were forgeries."
+    },
+    {
+      "id": "britannica-tullus-hostilius",
+      "kind": "reference",
+      "citation": "'Tullus Hostilius', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Tullus-Hostilius",
+      "note": "Reigning 672-641 BCE traditionally. 'A legendary figure, the legend probably influenced by that of Romulus.'"
+    },
+    {
+      "id": "britannica-ancus-marcius",
+      "kind": "reference",
+      "citation": "'Ancus Marcius', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Ancus-Marcius",
+      "note": "Traditionally fourth king, 642-617 BCE. The details of his reign 'must be regarded as largely legendary'."
+    },
+    {
+      "id": "britannica-servius-tullius",
+      "kind": "reference",
+      "citation": "'Servius Tullius', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Servius-Tullius",
+      "note": "Flourished 578-535 BCE. The Servian reforms may be later changes read back into an uncertain past; Claudius called him an Etruscan named Mastarna."
+    },
+    {
+      "id": "worldhistory-gwanggaeto",
+      "kind": "reference",
+      "citation": "Mark Cartwright, 'Gwanggaeto the Great', World History Encyclopedia",
+      "url": "https://www.worldhistory.org/Gwanggaeto_the_Great/",
+      "note": "Reigned 391-413 CE, died 413; his son Jangsu reigned to 491 and raised the stele in 414 that is the earliest known Korean inscription."
+    },
+    {
+      "id": "britannica-goguryeo",
+      "kind": "reference",
+      "citation": "'Goguryeo', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Goguryeo",
+      "note": "Gives Gwanggaeto 391-412 and Jangsu 413-491. Notes Goguryeo's traditional 37 BCE founding is later than historians accept, favouring the 2nd century BCE."
+    },
+    {
+      "id": "britannica-marcus-aurelius",
+      "kind": "reference",
+      "citation": "'Marcus Aurelius', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Marcus-Aurelius-Roman-emperor",
+      "note": "Marcus insisted his adoptive brother be made coemperor: for the first time the empire had two joint emperors of formally equal constitutional status."
+    },
+    {
+      "id": "oup-lucius-verus",
+      "kind": "scholarly",
+      "citation": "'Verus, Lucius, Roman emperor, 161-169 CE', Oxford Classical Dictionary (Oxford Academic)",
+      "url": "https://academic.oup.com/edited-volume/61673/chapter-abstract/548207304",
+      "note": "The first joint Augustus, 'equal in all respects except for the position of pontifex maximus'."
+    },
+    {
+      "id": "britannica-hatshepsut",
+      "kind": "reference",
+      "citation": "'Hatshepsut', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Hatshepsut",
+      "note": "Coregent c.1479-73 BCE and king in her own right c.1473-58; she and Thutmose III were corulers with Hatshepsut 'very much the dominant king'."
+    },
+    {
+      "id": "britannica-thutmose-iii",
+      "kind": "reference",
+      "citation": "'Thutmose III', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Thutmose-III",
+      "note": "Hatshepsut acted as regent, then assumed the attributes and insignia of a king and 'to all intents and purposes reigned in his stead'."
+    },
+    {
+      "id": "britannica-cixi",
+      "kind": "reference",
+      "citation": "'Cixi', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Cixi",
+      "note": "Mother of the Tongzhi emperor and adoptive mother of the Guangxu emperor; regent before each came of age and influential long after."
     },
     {
       "id": "carson-hung-2022-luzon",

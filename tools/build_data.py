@@ -24,7 +24,7 @@ DATA.mkdir(exist_ok=True)
 # Bump SCHEMA_VERSION whenever fields change or become required.
 # Bump DATASET_VERSION whenever the data content changes.
 SCHEMA_VERSION = "3.5.0"
-DATASET_VERSION = "0.33.1.0"
+DATASET_VERSION = "0.34.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -1701,6 +1701,10 @@ from misconception_migration import extend as _misconception_migration
 from container_summaries import extend as _container_summaries
 from promoted_sourcing import extend as _promoted_sourcing
 from china_legendary import extend as _china_legendary
+import reigns_from_research
+from reigns_from_research import extend as _reigns_from_research
+from upgrade_sources import extend as _upgrade_sources
+from co_rulers import extend as _co_rulers
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -1736,6 +1740,9 @@ _fix_china_tiers(E, entities)
 # After _song_era_states (which authors the Xia) and _fix_china_tiers, so the Xia
 # exists to reparent Erlitou onto and the rebuilt tier is not overwritten.
 _china_legendary(E, entities)
+_reigns_from_research(E, entities)
+_upgrade_sources(E, entities)
+_co_rulers(E, entities)
 _romanisation_chinese(E, entities)
 _regions_multiregional(E, entities)
 
@@ -3189,6 +3196,8 @@ from misconception_migration import MISCONCEPTION_SOURCES  # noqa: E402
 from misconception_migration import LEGENDARY_SOURCES  # noqa: E402
 from promoted_sourcing import PROMOTED_SOURCES  # noqa: E402
 from china_legendary import CHINA_LEGENDARY_SOURCES  # noqa: E402
+from upgrade_sources import UPGRADE_SOURCES  # noqa: E402
+from co_rulers import CO_RULER_SOURCES  # noqa: E402
 sources.extend(CENTRAL_ASIA_SOURCES)
 sources.extend(CENTRAL_ASIA_MEDIEVAL_SOURCES)
 sources.extend(IRAN_ISLAMIC_SOURCES)
@@ -3200,6 +3209,10 @@ sources.extend(MISCONCEPTION_SOURCES)
 sources.extend(LEGENDARY_SOURCES)
 sources.extend(PROMOTED_SOURCES)
 sources.extend(CHINA_LEGENDARY_SOURCES)
+# Built at runtime from docs/research/*.json, so read after the module has run.
+sources.extend(reigns_from_research.RESEARCH_REIGN_SOURCES)
+sources.extend(UPGRADE_SOURCES)
+sources.extend(CO_RULER_SOURCES)
 from extensions_seasia_oceania import SEASIA_OCEANIA_SOURCES  # noqa: E402
 from extensions_indus import INDUS_SOURCES  # noqa: E402
 from extensions_east_asia import EAST_ASIA_SOURCES  # noqa: E402

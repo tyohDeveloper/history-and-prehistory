@@ -1,7 +1,7 @@
 {
   "schema_version": "3.5.0",
-  "dataset_version": "0.33.1.0",
-  "generated_at": "2026-08-10T08:55:25Z",
+  "dataset_version": "0.34.0.0",
+  "generated_at": "2026-08-10T09:13:21Z",
   "entities": [
     {
       "id": "global",
@@ -1397,7 +1397,23 @@
       "end_year": -1458,
       "tier": "foundational",
       "summary": "Female pharaoh who ruled as king in her own right; built the Deir el-Bahri temple.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "links": [
+        {
+          "type": "co_ruler_with",
+          "entity_id": "africa.nile.egypt.new-kingdom.dyn18.thutmose3",
+          "note": "Corulers after she had herself crowned, with Hatshepsut the dominant of the two."
+        },
+        {
+          "type": "regent_for",
+          "entity_id": "africa.nile.egypt.new-kingdom.dyn18.thutmose3",
+          "note": "Regent for her stepson from his accession, before taking the kingship outright."
+        }
+      ],
+      "source_ids": [
+        "britannica-hatshepsut",
+        "britannica-thutmose-iii"
+      ]
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn18.thutmose3",
@@ -1408,7 +1424,18 @@
       "end_year": -1425,
       "tier": "intermediate",
       "summary": "Great warrior-pharaoh; extended the empire to its widest historical extent.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "links": [
+        {
+          "type": "co_ruler_with",
+          "entity_id": "africa.nile.egypt.new-kingdom.dyn18.hatshepsut",
+          "note": "Nominally king from 1479 BCE, but Hatshepsut reigned in his stead for roughly two decades."
+        }
+      ],
+      "source_ids": [
+        "britannica-hatshepsut",
+        "britannica-thutmose-iii"
+      ]
     },
     {
       "id": "africa.nile.egypt.new-kingdom.dyn18.amenhotep3",
@@ -6254,7 +6281,22 @@
       "start_year": 1861,
       "end_year": 1908,
       "tier": "intermediate",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "links": [
+        {
+          "type": "regent_for",
+          "entity_id": "east-asia.china.qing.tongzhi",
+          "note": "Regent for her six-year-old son from 1861, initially sharing the office with Ci'an."
+        },
+        {
+          "type": "regent_for",
+          "entity_id": "east-asia.china.qing.guangxu",
+          "note": "Regent again for her adopted three-year-old nephew, sole holder of the office after Ci'an's death in 1881."
+        }
+      ],
+      "source_ids": [
+        "britannica-cixi"
+      ]
     },
     {
       "id": "east-asia.china.roc",
@@ -6479,7 +6521,14 @@
       "end_year": 1450,
       "tier": "foundational",
       "date_precision": "approx",
-      "summary": "Fourth Joseon king; commissioned the Hangul script."
+      "source_ids": [
+        "korea-rulers-15"
+      ],
+      "summary": "Fourth king of Joseon; created Hangul and oversaw Korea's greatest era of scientific and cultural achievement.",
+      "aliases": [
+        "Sejong",
+        "Yi To"
+      ]
     },
     {
       "id": "east-asia.korea.korean-empire",
@@ -7889,7 +7938,13 @@
       "end_year": -44,
       "tier": "foundational",
       "summary": "Dictator perpetuo; assassinated on the Ides of March, 44 BCE.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "source_ids": [
+        "rome-rulers-10"
+      ],
+      "aliases": [
+        "Gaius Julius Caesar"
+      ]
     },
     {
       "id": "europe.mediterranean.rome.empire",
@@ -8092,6 +8147,17 @@
       "end_year": 180,
       "tier": "foundational",
       "date_precision": "approx",
+      "links": [
+        {
+          "type": "co_ruler_with",
+          "entity_id": "europe.mediterranean.rome.empire.lucius-verus",
+          "note": "Insisted his adoptive brother be made coemperor, creating the first joint rule in Roman history."
+        }
+      ],
+      "source_ids": [
+        "britannica-marcus-aurelius",
+        "oup-lucius-verus"
+      ],
       "summary": "Philosopher-emperor and author of the Meditations."
     },
     {
@@ -12485,7 +12551,18 @@
       "end_year": 169,
       "tier": "specialist",
       "summary": "Co-emperor with Marcus Aurelius.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "links": [
+        {
+          "type": "co_ruler_with",
+          "entity_id": "europe.mediterranean.rome.empire.marcus-aurelius",
+          "note": "Equal in constitutional status but not in authority: equal in all respects except pontifex maximus, which Marcus kept."
+        }
+      ],
+      "source_ids": [
+        "britannica-marcus-aurelius",
+        "oup-lucius-verus"
+      ]
     },
     {
       "id": "europe.mediterranean.rome.empire.commodus",
@@ -14699,7 +14776,8 @@
       "end_year": -2980,
       "tier": "intermediate",
       "summary": "Possibly the earliest attested female Egyptian ruler.",
-      "date_precision": "approx"
+      "date_precision": "approx",
+      "date_note": "Recorded here as a regency in the name itself. Whom she was regent for is not modelled, because the First Dynasty succession is too uncertain to assert it."
     },
     {
       "id": "africa.nile.egypt.early-dynastic.dyn1.den",
@@ -29890,6 +29968,916 @@
       ],
       "summary": "Chosen by Yao over his own son and held up ever after as proof that virtue should outrank birth; traditionally passed the throne to Yu, founder of the Xia.",
       "native_name": "舜"
+    },
+    {
+      "id": "europe.mediterranean.rome.kingdom.romulus",
+      "kind": "reign",
+      "name": "Romulus",
+      "parent_id": "europe.mediterranean.rome.kingdom",
+      "start_year": -753,
+      "end_year": -716,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-romulus-remus",
+        "rome-rulers-01"
+      ],
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Wholly legendary founding figure; Livy and Dionysius wrote centuries after the events, and modern scholarship treats his existence and reign as myth, not history.",
+          "source_ids": [
+            "rome-rulers-01"
+          ]
+        }
+      ],
+      "summary": "Legendary founder and first king of Rome; traditionally credited with founding the Senate and army."
+    },
+    {
+      "id": "europe.mediterranean.rome.kingdom.numa-pompilius",
+      "kind": "reign",
+      "name": "Numa Pompilius",
+      "parent_id": "europe.mediterranean.rome.kingdom",
+      "start_year": -715,
+      "end_year": -672,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-numa-pompilius",
+        "rome-rulers-01"
+      ],
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Legendary Sabine successor to Romulus; no contemporary evidence, and his 43-year reign is part of a traditional chronology modern historians discount as schematic.",
+          "source_ids": [
+            "rome-rulers-01"
+          ]
+        }
+      ],
+      "summary": "Second king of Rome; credited with founding Roman religious institutions and the calendar.",
+      "date_note": "Britannica gives 715-673; the Varro-based table used here ends the reign in 672. The traditional chronology has no single correct form."
+    },
+    {
+      "id": "europe.mediterranean.rome.kingdom.tullus-hostilius",
+      "kind": "reign",
+      "name": "Tullus Hostilius",
+      "parent_id": "europe.mediterranean.rome.kingdom",
+      "start_year": -672,
+      "end_year": -640,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-tullus-hostilius",
+        "rome-rulers-01"
+      ],
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Legendary warrior-king whose 32-year reign belongs to the same schematic Livian chronology that modern scholarship regards as unreliable and largely unverifiable.",
+          "source_ids": [
+            "rome-rulers-01"
+          ]
+        }
+      ],
+      "summary": "Third king of Rome; credited with destroying Alba Longa and absorbing its nobility into Rome.",
+      "date_note": "Britannica gives 672-641 against the 672-640 used here, and calls him a legendary figure whose legend was probably shaped by Romulus's."
+    },
+    {
+      "id": "europe.mediterranean.rome.kingdom.ancus-marcius",
+      "kind": "reign",
+      "name": "Ancus Marcius",
+      "parent_id": "europe.mediterranean.rome.kingdom",
+      "start_year": -640,
+      "end_year": -616,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-ancus-marcius",
+        "rome-rulers-01"
+      ],
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Legendary figure whose death marks 'the end of Rome's Latin-Sabine kings' per the source, a schematic division scholars treat as narrative structure, not history.",
+          "source_ids": [
+            "rome-rulers-01"
+          ]
+        }
+      ],
+      "date_note": "differs: some tellings (e.g. the Wikipedia 'King of Rome' summary table and other tertiary sites) give 640-616 BC as a 24-year reign, while the Roman Kingdom article's own body text describes a 25-year reign ending at his natural death; both fall within the same traditional Livian chronology and neither is an archaeological date. Britannica gives 642-617, two years earlier at both ends than the figures used here, and holds that the details of the reign are largely legendary.",
+      "summary": "Fourth king of Rome; founded the port of Ostia and is traditionally the last of the Latin-Sabine kings."
+    },
+    {
+      "id": "europe.mediterranean.rome.kingdom.tarquinius-priscus",
+      "kind": "reign",
+      "name": "Lucius Tarquinius Priscus",
+      "parent_id": "europe.mediterranean.rome.kingdom",
+      "start_year": -616,
+      "end_year": -578,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-01"
+      ],
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "First king the source explicitly marks as Etruscan rather than Latin-Sabine; scholars regard him as more plausible than the earliest kings but still part of an unattested, retrojected chronology.",
+          "source_ids": [
+            "rome-rulers-01"
+          ]
+        }
+      ],
+      "summary": "Fifth king of Rome and first of Etruscan birth; expanded the Senate and built the Circus Maximus and Cloaca Maxima.",
+      "aliases": [
+        "Tarquin the Elder"
+      ],
+      "date_note": "No Britannica biography found at the expected URL, so this keeps its encyclopaedic-summary citation."
+    },
+    {
+      "id": "europe.mediterranean.rome.kingdom.servius-tullius",
+      "kind": "reign",
+      "name": "Servius Tullius",
+      "parent_id": "europe.mediterranean.rome.kingdom",
+      "start_year": -578,
+      "end_year": -534,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-servius-tullius",
+        "rome-rulers-01"
+      ],
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Second Etruscan-birth king per the source; an alternate tradition recorded by Claudius identifies him with a warlord, Mastarna, which historian Momigliano treats as too different to simply merge.",
+          "source_ids": [
+            "rome-rulers-01"
+          ]
+        }
+      ],
+      "summary": "Sixth king of Rome; Etruscan-born reformer credited with the census-based Servian constitution and city walls.",
+      "date_note": "Britannica records him as flourishing 578-535 rather than reigning to 534, and notes Claudius identified him as an Etruscan named Mastarna."
+    },
+    {
+      "id": "europe.mediterranean.rome.kingdom.tarquinius-superbus",
+      "kind": "reign",
+      "name": "Lucius Tarquinius Superbus",
+      "parent_id": "europe.mediterranean.rome.kingdom",
+      "start_year": -534,
+      "end_year": -509,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-01"
+      ],
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Last traditional king; Tacitus, Pliny, and scholars like Tim Cornell suggest Etruscan king Porsena actually took Rome and ended the monarchy directly, complicating the 'overthrow by Romans' story.",
+          "source_ids": [
+            "rome-rulers-01"
+          ]
+        }
+      ],
+      "summary": "Seventh and last king of Rome; his overthrow traditionally marks the founding of the Republic in 509 BCE.",
+      "aliases": [
+        "Tarquin the Proud"
+      ],
+      "date_note": "No Britannica biography found at the expected URL, so this keeps its encyclopaedic-summary citation."
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.scipio-africanus",
+      "kind": "reign",
+      "name": "Scipio Africanus",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -210,
+      "end_year": -201,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-02"
+      ],
+      "date_precision": "approx",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-02"
+          ]
+        }
+      ],
+      "date_note": "Held office as general; dates are of office or command, not of birth and death. differs: dates given span his Spanish command through his Africanus cognomen (210 to 201 BCE); Britannica states he received his Spanish command in 210 BCE as a private citizen ('privatus'), was elected consul for 205 BCE, defeated Hannibal at Zama in 202 BCE, and won the surname Africanus in 201 BCE, so no single office year covers his full significance.",
+      "summary": "Won Roman command in Spain as a private citizen, then as consul defeated Hannibal at Zama, ending the Second Punic War.",
+      "aliases": [
+        "Publius Cornelius Scipio Africanus"
+      ]
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.tiberius-gracchus",
+      "kind": "reign",
+      "name": "Tiberius Gracchus",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -133,
+      "end_year": -133,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-03"
+      ],
+      "date_precision": "exact",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-03"
+          ]
+        }
+      ],
+      "date_note": "Held office as tribune; dates are of office or command, not of birth and death.",
+      "summary": "As tribune, forced through land reform to restore small farmers, triggering the political violence that opened the Republic's crisis.",
+      "aliases": [
+        "Tiberius Sempronius Gracchus"
+      ]
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.gaius-gracchus",
+      "kind": "reign",
+      "name": "Gaius Gracchus",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -123,
+      "end_year": -121,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-04"
+      ],
+      "date_precision": "exact",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-04"
+          ]
+        }
+      ],
+      "date_note": "Held office as tribune; dates are of office or command, not of birth and death. differs: used his two-year tribunate (123-122 BCE) as the office span, but extended the end year to 121 BCE (his death, per Britannica) to mark when the political crisis he provoked was resolved by force; his lifespan is separately given as c. 160-153?-121 BCE.",
+      "summary": "As tribune, extended his brother's land reform and created a subsidized grain supply, deepening the populares-optimates split.",
+      "aliases": [
+        "Gaius Sempronius Gracchus"
+      ]
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.gaius-marius",
+      "kind": "reign",
+      "name": "Gaius Marius",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -107,
+      "end_year": -86,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-05"
+      ],
+      "date_precision": "exact",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-05"
+          ]
+        }
+      ],
+      "date_note": "Held office as consul; dates are of office or command, not of birth and death.",
+      "summary": "Held the consulship seven times and opened the legions to the landless, making armies loyal to commanders rather than the state."
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.sulla",
+      "kind": "reign",
+      "name": "Sulla",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -88,
+      "end_year": -79,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-06"
+      ],
+      "date_precision": "exact",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-06"
+          ]
+        }
+      ],
+      "date_note": "Held office as dictator; dates are of office or command, not of birth and death.",
+      "summary": "Marched on Rome, won the first Roman civil war, and ruled as dictator, reshaping the constitution to entrench senatorial power.",
+      "aliases": [
+        "Lucius Cornelius Sulla"
+      ]
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.pompey",
+      "kind": "reign",
+      "name": "Pompey",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -70,
+      "end_year": -52,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-07"
+      ],
+      "date_precision": "exact",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-07"
+          ]
+        }
+      ],
+      "date_note": "Held office as general; dates are of office or command, not of birth and death.",
+      "summary": "Cleared the Mediterranean of pirates, defeated Mithradates under extraordinary commands, then became Rome's sole consul.",
+      "aliases": [
+        "Pompey the Great",
+        "Gnaeus Pompeius Magnus"
+      ]
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.marcus-licinius-crassus",
+      "kind": "reign",
+      "name": "Marcus Licinius Crassus",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -71,
+      "end_year": -53,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-08"
+      ],
+      "date_precision": "exact",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-08"
+          ]
+        }
+      ],
+      "date_note": "Held office as consul; dates are of office or command, not of birth and death.",
+      "summary": "Financed rising politicians and crushed the Spartacus revolt, then bankrolled the First Triumvirate that sidelined the Senate.",
+      "aliases": [
+        "Crassus"
+      ]
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.cicero",
+      "kind": "reign",
+      "name": "Cicero",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -63,
+      "end_year": -63,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-09"
+      ],
+      "date_precision": "exact",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-09"
+          ]
+        }
+      ],
+      "date_note": "Held office as orator; dates are of office or command, not of birth and death.",
+      "summary": "As consul, exposed and crushed the Catiline conspiracy, then became the Republic's foremost voice defending constitutional government.",
+      "aliases": [
+        "Marcus Tullius Cicero"
+      ]
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.cato-the-younger",
+      "kind": "reign",
+      "name": "Cato the Younger",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -62,
+      "end_year": -46,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-11"
+      ],
+      "date_precision": "exact",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-11"
+          ]
+        }
+      ],
+      "date_note": "Held office as tribune; dates are of office or command, not of birth and death. differs: used his tenure of major office, from plebeian tribune (62 BCE) to his death commanding the last Republican resistance at Utica (46 BCE), rather than the page's own 'Years active' field, which is given as 67-46 BCE (starting from his military tribunate); his praetorship (54 BCE) also falls within the chosen span. Lifespan is 95-46 BCE.",
+      "summary": "As tribune and senator, led principled Senate resistance to Caesar and Pompey, and chose suicide at Utica over living under Caesar's rule.",
+      "aliases": [
+        "Marcus Porcius Cato Uticensis"
+      ]
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.mark-antony",
+      "kind": "reign",
+      "name": "Mark Antony",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -44,
+      "end_year": -30,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-12"
+      ],
+      "date_precision": "exact",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-12"
+          ]
+        }
+      ],
+      "date_note": "Held office as triumvir; dates are of office or command, not of birth and death.",
+      "summary": "Seized Caesar's legacy, ruled the eastern Mediterranean as triumvir with Cleopatra, and lost Rome's last civil war to Octavian.",
+      "aliases": [
+        "Marcus Antonius"
+      ]
+    },
+    {
+      "id": "europe.mediterranean.rome.republic.octavian",
+      "kind": "reign",
+      "name": "Octavian",
+      "parent_id": "europe.mediterranean.rome.republic",
+      "start_year": -43,
+      "end_year": -27,
+      "tier": "intermediate",
+      "source_ids": [
+        "rome-rulers-13"
+      ],
+      "date_precision": "exact",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "omit",
+          "source_ids": [
+            "rome-rulers-13"
+          ]
+        }
+      ],
+      "date_note": "Held office as triumvir; dates are of office or command, not of birth and death.",
+      "summary": "Won the Second Triumvirate's power struggle and Actium, then formally 'restored' the Republic while keeping real power as princeps.",
+      "aliases": [
+        "Gaius Octavius",
+        "Octavianus"
+      ]
+    },
+    {
+      "id": "east-asia.korea.gojoseon.dangun",
+      "kind": "reign",
+      "name": "Dangun",
+      "parent_id": "east-asia.korea.gojoseon",
+      "start_year": -2333,
+      "end_year": -2240,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-01"
+      ],
+      "date_precision": "traditional",
+      "start_dating_method": "received",
+      "end_dating_method": "received",
+      "standing": "traditional",
+      "caveats": [
+        {
+          "kind": "contested-existence",
+          "text": "Mythological founding figure; no archaeological or contemporaneous evidence he existed, and the 2333 BCE date derives from a 15th-century CE reinterpretation of the 13th-century Samguk Yusa legend.",
+          "source_ids": [
+            "korea-rulers-01"
+          ]
+        }
+      ],
+      "date_note": "traditional: not an archaeological date; Britannica gives only the accession year (2333 BC) and no end date, so the -2240 end year here follows Wikipedia's traditional regnal-length convention, not an independently attested figure",
+      "summary": "Legendary grandson of the god of heaven; traditional founder of Gojoseon, Korea's first kingdom, at Asadal.",
+      "aliases": [
+        "Tangun",
+        "Dangun Wanggeom",
+        "Tan'gun Wanggŏm"
+      ],
+      "native_name": "단군"
+    },
+    {
+      "id": "east-asia.korea.three-kingdoms.gwanggaeto-the-great",
+      "kind": "reign",
+      "name": "Gwanggaeto the Great",
+      "parent_id": "east-asia.korea.three-kingdoms",
+      "start_year": 391,
+      "end_year": 413,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-goguryeo",
+        "korea-rulers-02",
+        "worldhistory-gwanggaeto"
+      ],
+      "date_precision": "approx",
+      "date_note": "differs: Simple Wikipedia gives 393-413, while Britannica's Goguryeo/Sosurim articles and the Met Museum's rulers list give 391-413; the Samguk Sagi-derived 391 accession is the more commonly cited figure and is used here World History Encyclopedia gives 391-413; Britannica gives 391-412. The one-year difference turns on whether his death year is counted.",
+      "summary": "19th king of Goguryeo; expanded the kingdom to its greatest territorial extent through rapid military conquest.",
+      "aliases": [
+        "Damdeok",
+        "King Gwanggaeto"
+      ],
+      "native_name": "광개토대왕"
+    },
+    {
+      "id": "east-asia.korea.three-kingdoms.jangsu",
+      "kind": "reign",
+      "name": "Jangsu",
+      "parent_id": "east-asia.korea.three-kingdoms",
+      "start_year": 413,
+      "end_year": 491,
+      "tier": "intermediate",
+      "source_ids": [
+        "britannica-goguryeo",
+        "korea-rulers-03",
+        "worldhistory-gwanggaeto"
+      ],
+      "date_precision": "approx",
+      "date_note": "differs: the Wikipedia infobox states 412-491 while the article's own prose and the Met Museum's rulers list both say 413-491; 413 (the year his father Gwanggaeto died) is used here as the majority figure Britannica gives 413-491, matching the figures used here.",
+      "summary": "20th king of Goguryeo; moved the capital to Pyongyang and presided over a 79-year reign, the longest in East Asian history.",
+      "aliases": [
+        "King Jangsu of Goguryeo"
+      ],
+      "native_name": "장수왕"
+    },
+    {
+      "id": "east-asia.korea.three-kingdoms.seong-of-baekje",
+      "kind": "reign",
+      "name": "Seong of Baekje",
+      "parent_id": "east-asia.korea.three-kingdoms",
+      "start_year": 523,
+      "end_year": 554,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-04"
+      ],
+      "date_precision": "exact",
+      "summary": "26th king of Baekje; moved the capital to Sabi and revitalized the kingdom before dying in battle against Silla.",
+      "aliases": [
+        "King Seong",
+        "Holy King"
+      ]
+    },
+    {
+      "id": "east-asia.korea.three-kingdoms.jinheung-of-silla",
+      "kind": "reign",
+      "name": "Jinheung of Silla",
+      "parent_id": "east-asia.korea.three-kingdoms",
+      "start_year": 540,
+      "end_year": 576,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-05"
+      ],
+      "date_precision": "exact",
+      "summary": "24th king of Silla; expanded Silla's territory greatly and organized the Hwarang warrior-scholar corps.",
+      "aliases": [
+        "King Jinheung the Great",
+        "Kim Sammaekjong"
+      ],
+      "native_name": "진흥왕"
+    },
+    {
+      "id": "east-asia.korea.three-kingdoms.muyeol-of-silla",
+      "kind": "reign",
+      "name": "Muyeol of Silla",
+      "parent_id": "east-asia.korea.three-kingdoms",
+      "start_year": 654,
+      "end_year": 661,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-06"
+      ],
+      "date_precision": "exact",
+      "summary": "29th king of Silla, born Kim Chunchu; allied with Tang China and laid the groundwork for unifying the Three Kingdoms.",
+      "aliases": [
+        "Kim Chunchu",
+        "Taejong Muyeol"
+      ],
+      "native_name": "태종무열왕"
+    },
+    {
+      "id": "east-asia.korea.three-kingdoms.munmu-of-silla",
+      "kind": "reign",
+      "name": "Munmu of Silla",
+      "parent_id": "east-asia.korea.three-kingdoms",
+      "start_year": 661,
+      "end_year": 681,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-07"
+      ],
+      "date_precision": "exact",
+      "cross_parent_ids": [
+        "east-asia.korea.unified-silla"
+      ],
+      "allow_outside_parent_dates": true,
+      "date_note": "One reign spanning 2 periods in this dataset (three-kingdoms 661-668, unified-silla 668-681), authored once and reachable from both.",
+      "summary": "30th king of Silla; completed the conquest of Goguryeo and Baekje, ending the Three Kingdoms period, before ruling on into Unified Silla.",
+      "aliases": [
+        "Kim Beopmin",
+        "Kim Pommin"
+      ],
+      "native_name": "문무왕"
+    },
+    {
+      "id": "east-asia.korea.unified-silla.sinmun-of-silla",
+      "kind": "reign",
+      "name": "Sinmun of Silla",
+      "parent_id": "east-asia.korea.unified-silla",
+      "start_year": 681,
+      "end_year": 692,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-08"
+      ],
+      "date_precision": "approx",
+      "date_note": "differs: sources split between an end year of 691 and 692 (e.g. Wikipedia's infobox says 681-691 while its succession list and the Met Museum's rulers list say 681-692); 692 is used here as the majority figure",
+      "summary": "31st king of Silla; centralized royal power and completed the administrative framework of the newly unified state.",
+      "aliases": [
+        "Kim Jeongmyeong"
+      ],
+      "native_name": "신문왕"
+    },
+    {
+      "id": "east-asia.korea.unified-silla.gyeongdeok-of-silla",
+      "kind": "reign",
+      "name": "Gyeongdeok of Silla",
+      "parent_id": "east-asia.korea.unified-silla",
+      "start_year": 742,
+      "end_year": 765,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-09"
+      ],
+      "date_precision": "exact",
+      "summary": "35th king of Silla; presided over a cultural peak marked by Buddhist temple-building including Bulguksa.",
+      "aliases": [
+        "Kim Heonyeong"
+      ],
+      "native_name": "경덕왕"
+    },
+    {
+      "id": "east-asia.korea.goryeo.taejo-wang-geon",
+      "kind": "reign",
+      "name": "Taejo Wang Geon",
+      "parent_id": "east-asia.korea.goryeo",
+      "start_year": 918,
+      "end_year": 943,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-10"
+      ],
+      "date_precision": "exact",
+      "summary": "Founder and first king of Goryeo; unified the Later Three Kingdoms in 936, ending the post-Silla division of Korea.",
+      "aliases": [
+        "Wang Geon",
+        "Wang Kon",
+        "Wang Kŏn"
+      ],
+      "native_name": "태조 왕건"
+    },
+    {
+      "id": "east-asia.korea.goryeo.gwangjong-of-goryeo",
+      "kind": "reign",
+      "name": "Gwangjong of Goryeo",
+      "parent_id": "east-asia.korea.goryeo",
+      "start_year": 949,
+      "end_year": 975,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-11"
+      ],
+      "date_precision": "exact",
+      "summary": "Fourth king of Goryeo; freed enslaved war prisoners, created the civil service examination system, and curbed noble power.",
+      "aliases": [
+        "Wang So"
+      ]
+    },
+    {
+      "id": "east-asia.korea.goryeo.seongjong-of-goryeo",
+      "kind": "reign",
+      "name": "Seongjong of Goryeo",
+      "parent_id": "east-asia.korea.goryeo",
+      "start_year": 981,
+      "end_year": 997,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-10"
+      ],
+      "date_precision": "exact",
+      "summary": "Sixth king of Goryeo; institutionalized Confucian governance and a centralized bureaucratic administrative system.",
+      "aliases": [
+        "Wang Chi"
+      ]
+    },
+    {
+      "id": "east-asia.korea.goryeo.chungnyeol-of-goryeo",
+      "kind": "reign",
+      "name": "Chungnyeol of Goryeo",
+      "parent_id": "east-asia.korea.goryeo",
+      "start_year": 1274,
+      "end_year": 1308,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-12"
+      ],
+      "date_precision": "exact",
+      "summary": "25th king of Goryeo; first Goryeo king married to a Mongol Yuan princess, ruling as a Mongol-period vassal monarch.",
+      "aliases": [
+        "Wang Geo"
+      ],
+      "native_name": "충렬왕"
+    },
+    {
+      "id": "east-asia.korea.goryeo.gongmin-of-goryeo",
+      "kind": "reign",
+      "name": "Gongmin of Goryeo",
+      "parent_id": "east-asia.korea.goryeo",
+      "start_year": 1351,
+      "end_year": 1374,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-13"
+      ],
+      "date_precision": "exact",
+      "summary": "31st king of Goryeo; broke free of Mongol Yuan overlordship and reasserted Korean sovereignty late in the dynasty.",
+      "aliases": [
+        "Wang Gi"
+      ]
+    },
+    {
+      "id": "east-asia.korea.joseon.taejo-yi-seong-gye",
+      "kind": "reign",
+      "name": "Taejo of Joseon",
+      "parent_id": "east-asia.korea.joseon",
+      "start_year": 1392,
+      "end_year": 1398,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-14"
+      ],
+      "date_precision": "exact",
+      "summary": "Founder and first king of Joseon; overthrew Goryeo and established the dynasty that would rule Korea until 1910.",
+      "aliases": [
+        "Yi Seong-gye",
+        "Yi Dan"
+      ],
+      "native_name": "태조"
+    },
+    {
+      "id": "east-asia.korea.joseon.seongjong-of-joseon",
+      "kind": "reign",
+      "name": "Seongjong of Joseon",
+      "parent_id": "east-asia.korea.joseon",
+      "start_year": 1469,
+      "end_year": 1494,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-16"
+      ],
+      "date_precision": "exact",
+      "date_note": "differs: Wikipedia's precise Gregorian reign dates (9 January 1470 - 29 January 1495) place his accession/death a few weeks into the following calendar year versus the conventional lunar-calendar years 1469-1494 used by most secondary sources (e.g. New World Encyclopedia, kiddle); 1469-1494 is used here as the conventional figure",
+      "summary": "Ninth king of Joseon; compiled the Gyeongguk daejeon legal code, completing Joseon's institutional foundations.",
+      "aliases": [
+        "Yi Hyeol"
+      ],
+      "native_name": "성종"
+    },
+    {
+      "id": "east-asia.korea.joseon.yeonsangun",
+      "kind": "reign",
+      "name": "Yeonsangun",
+      "parent_id": "east-asia.korea.joseon",
+      "start_year": 1494,
+      "end_year": 1506,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-17"
+      ],
+      "date_precision": "exact",
+      "date_note": "differs: Wikipedia's precise reign dates (29 January 1495 - 28 September 1506) again reflect the Gregorian-vs-lunar year offset; the conventional lunar-year figures 1494-1506 are used here to match Seongjong's end year and most secondary sources",
+      "summary": "Tenth ruler of Joseon; deposed in a coup after a tyrannical reign marked by purges of scholar-officials.",
+      "aliases": [
+        "Yi Yung",
+        "Prince Yeonsan"
+      ],
+      "native_name": "연산군"
+    },
+    {
+      "id": "east-asia.korea.joseon.seonjo-of-joseon",
+      "kind": "reign",
+      "name": "Seonjo of Joseon",
+      "parent_id": "east-asia.korea.joseon",
+      "start_year": 1567,
+      "end_year": 1608,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-18"
+      ],
+      "date_precision": "exact",
+      "summary": "14th king of Joseon; his reign was defined by the Imjin War, Japan's devastating 1592-98 invasions of Korea.",
+      "aliases": [
+        "Yi Gyun",
+        "Yi Yeon"
+      ],
+      "native_name": "선조"
+    },
+    {
+      "id": "east-asia.korea.joseon.yeongjo-of-joseon",
+      "kind": "reign",
+      "name": "Yeongjo of Joseon",
+      "parent_id": "east-asia.korea.joseon",
+      "start_year": 1724,
+      "end_year": 1776,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-19"
+      ],
+      "date_precision": "exact",
+      "summary": "21st king of Joseon; his 52-year reign, the dynasty's longest, brought reform and recovery after earlier wars.",
+      "aliases": [
+        "Yi Geum"
+      ],
+      "native_name": "영조"
+    },
+    {
+      "id": "east-asia.korea.joseon.jeongjo-of-joseon",
+      "kind": "reign",
+      "name": "Jeongjo of Joseon",
+      "parent_id": "east-asia.korea.joseon",
+      "start_year": 1776,
+      "end_year": 1800,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-20"
+      ],
+      "date_precision": "exact",
+      "summary": "22nd king of Joseon; patronized scholarship and reform, building the Hwaseong Fortress as a symbol of royal renewal.",
+      "aliases": [
+        "Yi San"
+      ],
+      "native_name": "정조"
+    },
+    {
+      "id": "east-asia.korea.joseon.gojong-of-korea",
+      "kind": "reign",
+      "name": "Gojong",
+      "parent_id": "east-asia.korea.joseon",
+      "start_year": 1864,
+      "end_year": 1897,
+      "tier": "intermediate",
+      "source_ids": [
+        "korea-rulers-21"
+      ],
+      "date_precision": "exact",
+      "date_note": "differs: sources split between 1863 and 1864 for his accession (Wikipedia's Joseon overview article says 'In 1863, King Gojong took the throne', while his own biography page gives the precise Gregorian date 16 January 1864, corresponding to a lunar-calendar 1863 date); Britannica's biography gives no explicit reign dates at all. 1864 (the Gregorian coronation year) and 1897 (when he proclaimed the Korean Empire, ending the Joseon-kingdom phase of his rule per this dataset's polity scope) are used here.",
+      "summary": "26th and last king of Joseon; later proclaimed Korea's first emperor before Japanese pressure forced his abdication.",
+      "aliases": [
+        "Yi Hui",
+        "Yi Jae-hwang"
+      ],
+      "native_name": "고종"
     },
     {
       "id": "global.multi-regional",

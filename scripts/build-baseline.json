@@ -1,6 +1,6 @@
 {
-  "gzipBytes": 348925,
+  "gzipBytes": 465728,
   "recordedAt": "2026-08-10",
   "note": "v3.33.1.0 Three Sovereigns, inclusion-over-citation policy (data 0.34.1.0). Measured with zlib.gzipSync.",
-  "reason": "Raised deliberately for the before-and-after graph. `links` was populated on 15 of 1,765 entities while the application's stated purpose includes important before and after links; it now reaches 1,107. That is 1,788 link records, and they cost about 46 kB gzipped. A first attempt also wrote a 200-character provenance note onto every derived link, which this guard caught -- that part was waste and became a `derived` flag with the explanation shown once in the UI."
+  "reason": "Raised for 1,433 cities. Kyoto and Athens were reported missing from use, and the dataset held five cities against 1,504 enumerated -- Byblos and Tyre had been filed as eras and Tenochtitlan as a period, so cities barely existed as a category. The entity count goes from 1,868 to 3,301 and costs about 100 kB gzipped, which for an offline single-file reference is the right trade."
 }

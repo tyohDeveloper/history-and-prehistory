@@ -33,19 +33,30 @@ ADJECTIVAL = {
     "west-asia.iran.parthian": ["Parthian"],
     "europe.mediterranean.byzantine": ["Byzantine"],
     "europe.mediterranean.greece": ["Greek", "Hellenic"],
-    "africa.maghreb.carthage": ["Carthaginian", "Punic"],
-    "west-asia.mesopotamia.assyria": ["Assyrian"],
-    "west-asia.mesopotamia.babylonia": ["Babylonian"],
+    "west-asia.mesopotamia.assyrian": ["Assyrian"],
+    "west-asia.mesopotamia.old-babylonian": ["Babylonian"],
     "west-asia.mesopotamia.sumerian": ["Sumerian"],
     "east-asia.china.han": ["Han"],
     "east-asia.china.tang": ["Tang"],
     "east-asia.china.song": ["Song"],
     "east-asia.china.ming": ["Ming"],
     "east-asia.china.qing": ["Qing", "Manchu"],
-    "south-asia.north.maurya": ["Mauryan"],
-    "south-asia.north.gupta": ["Gupta"],
+    "south-asia.maurya": ["Mauryan"],
+    "south-asia.gupta": ["Gupta"],
     "americas.mesoamerica.maya": ["Mayan", "Maya"],
     "americas.andes.inca": ["Incan", "Inca"],
+}
+
+
+# Names an entity is genuinely known by, where the dataset carried only one of them. Reported
+# from use: the Berlin Conference is also the Congo Conference and the West Africa Conference,
+# and a reader arriving with either of those found nothing.
+MISSING_ALIASES = {
+    "global.multi-regional.berlin-conference": [
+        ("Congo Conference", "common"),
+        ("West Africa Conference", "common"),
+        ("Kongokonferenz", "endonym"),
+    ],
 }
 
 
@@ -79,6 +90,20 @@ def extend(E, entities):
                 added += 1
     print(f"name_repair: {added} adjectival form(s) added"
           + (f"; {len(missing)} target(s) absent: {missing[:3]}" if missing else ""))
+
+    # ---- alternate names an entity is genuinely known by ------------------
+    alias_added = 0
+    for eid, forms in MISSING_ALIASES.items():
+        e = by_id.get(eid)
+        if e is None:
+            raise KeyError(f"name_repair: MISSING_ALIASES names a missing id: {eid}")
+        existing = {f.get("name") for f in (e.get("name_forms") or [])}
+        for value, kind in forms:
+            if value not in existing:
+                e.setdefault("name_forms", []).append({"name": value, "kind": kind})
+                alias_added += 1
+    if alias_added:
+        print(f"name_repair: {alias_added} alternate name(s) added")
 
     # ---- qualified names for colliding display names ----------------------
     counts = collections.Counter(e["name"] for e in entities)

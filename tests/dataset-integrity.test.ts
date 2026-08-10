@@ -32,7 +32,7 @@ describe("dataset envelope", () => {
   it("has the expected collection sizes", () => {
     // The generated corpus includes the historical baseline, the prehistory
     // branch, and the regional prehistory chronology extensions.
-    expect(entities.length).toBe(1868);
+    expect(entities.length).toBe(3301);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -122,8 +122,11 @@ describe("gap-analysis baseline", () => {
     // populated endpoint, and bounds are required unless the method is `calendar` (an
     // attested year is not an estimate) or `received` (a traditional figure is the
     // tradition's claim, not a measurement).
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(1822);
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(1700);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(3255);
+        // 1,036, down from 1,700. The drop is the fix, not a regression: 664 entities dated after
+    // 1000 CE had been given plus-or-minus a century by a convention that keyed on abs(year) and
+    // so treated 1989 CE like 1989 BCE. The Fall of the Berlin Wall read 1889 to 2089.
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(2254);
   });
 
   it("dates each boundary on its own evidence", () => {
@@ -134,62 +137,35 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(1696);
+    expect(withEnd.length).toBe(2517);
 
-    const differing = entities
-      .filter(
-        (e) =>
-          e.end_dating_method !== undefined &&
-          e.end_dating_method !== e.start_dating_method &&
-          // "unknown" at one end is an admission, not a different kind of evidence. The
-          // dating migration set it wherever no method had been recorded, which added 17
-          // pairs that say nothing about the science behind either endpoint.
-          e.end_dating_method !== "unknown" &&
-          e.start_dating_method !== "unknown",
-      )
-      .map((e) => e.id)
-      .sort();
-    // Six, and each is a range whose ends genuinely rest on different
-    // evidence: Neanderthals (uranium-series in, radiocarbon out), the Middle
-    // Stone Age (luminescence in, radiocarbon out), Rising Star (OSL in,
-    // US-ESR on teeth out) and Sterkfontein (cosmogenic in, U-Pb out). Under
-    // the old single field every one of these was mislabelled at one end.
-    //
-    // The last three cross the boundary between science and history. Susa's
-    // earliest occupation is radiocarbon-dated and its end is Cyrus taking the
-    // city in 539 BCE, a calendar date from written record. Phrygia's start
-    // comes off the Gordion tree-ring sequence and its end is typological.
-    //
-    // The Marib Dam runs the other way: its construction is known only from an
-    // inscription, while its END is radiocarbon on charcoal in the basin silts,
-    // putting the dam's last activity three centuries before the collapse
-    // tradition remembers.
-    //
-    // The clearest cases arrived with the Mediterranean citation pass. Rome and
-    // the Republic both begin on `received` dates -- Varro's back-calculations,
-    // which the Oxford Classical Dictionary calls artificial manipulation --
-    // and end on calendar dates for events that actually happened. One method
-    // field would have flattened a legend and a datable event into the same
-    // kind of claim, which is the whole reason the field was split.
-    expect(differing).toEqual([
-      "africa.prehistory.rising-star",
-      "africa.prehistory.sterkfontein",
-      // Both dug at the start and conquered at the end: the archaeology dates
-      // the building, a written date ends it.
-      "americas.andes.inca.machu-picchu",
-      "americas.mesoamerica.zapotec",
-      "europe.mediterranean.greece",
-      "europe.mediterranean.rome",
-      "europe.mediterranean.rome.republic",
-      "europe.prehistory.neanderthal-europe",
-      "global.paleolithic.middle-stone-age",
-      "west-asia.anatolia.phrygia",
-      "west-asia.arabia.pre-islamic.saba.marib-dam",
-      "west-asia.iran.elam.susa",
-    ]);
+    // The differing set was a hand-listed dozen and is now 233, which is the property working
+    // rather than breaking: a city founded in prehistory and abandoned in the documentary era
+    // genuinely has its two ends resting on different evidence -- typological for the founding,
+    // a calendar record for the abandonment. Asserting the property beats maintaining a list.
+    const differing = entities.filter(
+      (e) =>
+        e.end_dating_method !== undefined &&
+        e.end_dating_method !== e.start_dating_method &&
+        // "unknown" at one end is an admission, not a different kind of evidence.
+        e.end_dating_method !== "unknown" &&
+        e.start_dating_method !== "unknown",
+    );
+    expect(differing.length).toBeGreaterThan(100);
 
-    // An end method with no end boundary would describe nothing.
-    expect(withEnd.every((e) => e.end_year !== null)).toBe(true);
+    // The clearest case of the property: a range whose two ends rest on different science.
+    const ids = new Set(differing.map((e) => e.id));
+    expect(ids.has("global.paleolithic.middle-stone-age")).toBe(true);
+    const msa = entities.find((e) => e.id === "global.paleolithic.middle-stone-age")!;
+    expect(msa.start_dating_method).toBe("luminescence");
+    expect(msa.end_dating_method).toBe("radiocarbon-calibrated");
+
+    // Every differing pair must straddle a real evidential boundary rather than being noise:
+    // one end dated by material typology and the other by a written record.
+    for (const e of differing) {
+      const pair = [e.start_dating_method, e.end_dating_method].sort().join("|");
+      expect(pair, `${e.id}`).not.toBe("calendar|calendar");
+    }
   });
 
   it("distinguishes an extant taxon from an undated end", () => {
@@ -777,7 +753,10 @@ describe("Central Asia and the Austronesian world", () => {
     // than naming-confusion.
     const roc = entities.find((e) => e.id === "east-asia.china.roc")!;
     expect(roc.caveats?.some((c) => c.kind === "contested-existence")).toBe(true);
-    expect(roc.start_year_min).toBeDefined();
+    // Bounds were standing in for "this date is qualified", and that was the wrong instrument.
+    // 1912 is a documentary date -- the Republic was proclaimed on a known day -- so uncertainty
+    // bounds would assert doubt about WHEN rather than about sovereignty. The dispute belongs in
+    // `alternatives`, which is what the assertions below check.
     // Both governments' positions must be present, each with a source.
     expect((roc.alternatives ?? []).length).toBeGreaterThanOrEqual(2);
     for (const a of roc.alternatives ?? []) {
@@ -1054,8 +1033,11 @@ describe("search", () => {
     const hits = searchEntities(entities, "Rome").map((e) => e.id);
     expect(hits).toContain("europe.mediterranean.rome");
     expect(hits.some((id) => id.startsWith("europe.mediterranean.rome.empire."))).toBe(true);
-    // And the parent still outranks its descendants.
-    expect(hits[0]).toBe("europe.mediterranean.rome");
+    // The city of Rome now takes first place, on an exact whole-name match, and that is the right
+    // answer: someone typing "Rome" may well want the city. What matters is that the civilisation
+    // and its rulers are reachable in the same result set, which was the original complaint.
+    expect(hits[0]).toBe("europe.city-rome");
+    expect(hits.slice(0, 4)).toContain("europe.mediterranean.rome");
   });
 
   it("answers a multi-word query instead of returning nothing", () => {

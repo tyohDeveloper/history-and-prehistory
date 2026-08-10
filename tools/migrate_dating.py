@@ -46,6 +46,21 @@ ENUM_HALF_WIDTH = {
 # degrades: radiometric dates in deep time carry proportional error, historical dates carry
 # roughly absolute error.
 def approx_half_width(year: int) -> int:
+    """Half-width for an unquantified date, scaled by how well that date is likely known.
+
+    The first version keyed on ``abs(year)`` and so treated 1989 CE exactly like 1989 BCE. That
+    put plus-or-minus a century on the Fall of the Berlin Wall -- an event dated to 9 November
+    1989 -- and on 674 other entities after 1000 CE. A reader saw "1889 to 2089" for something
+    that happened on a Thursday evening.
+
+    Sign carries most of the information here. A recorded CE year comes from a document; a
+    recorded BCE year in the third millennium comes from a reconstruction.
+    """
+    if year >= 1000:
+        # Documentary. Handled before this function is reached, but guarded here too.
+        return 0
+    if year > 0:
+        return 25
     m = abs(year)
     if m >= 1_000_000:
         return int(max(10_000, round(m * 0.02, -3)))   # ~2%, radiometric
@@ -230,6 +245,13 @@ def extend(E, entities):
                     method = "calendar"
                 elif prec == "traditional":
                     method = "received"
+                elif year >= 1000:
+                    # A recorded year in the second millennium CE is a documentary date. Calling
+                    # it `unknown` was not humility, because `unknown` then earned it convention
+                    # bounds: the Berlin Conference of 1884 came out as 1784-1984, and the Fall
+                    # of the Berlin Wall as 1889-2089. Saying `calendar` is both truer and
+                    # quieter, and it stops the readout inventing a century of doubt.
+                    method = "calendar"
                 else:
                     # Honest: we do not know how this date was established.
                     method = "unknown"

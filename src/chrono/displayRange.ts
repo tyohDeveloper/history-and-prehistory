@@ -89,8 +89,12 @@ export function displayRange(e: Entity, preference: FramePreference = "auto"): D
   // "6,749 BP", which reads as measured and gains a digit it never had. When
   // the user has asked for a frame they get it; on `auto` a traditional date
   // stays in the calendar reckoning it was actually handed down in.
+  // An extant entity also stays in calendar reckoning. Athens rendered as "4,949 BP - present",
+  // which puts two incompatible frames in one range: Before Present counts backward from 1950,
+  // and "present" is now. Anything still here is by definition within the span a reader thinks
+  // about in BCE and CE, so a living city, language or tradition reads that way.
   const frame =
-    preference === "auto" && e.date_standing === "traditional"
+    preference === "auto" && (e.date_standing === "traditional" || e.extant === true)
       ? "calendar"
       : resolveFrame(startValue, preference);
 

@@ -1718,6 +1718,7 @@ from historicity import extend as _historicity
 from search_phrases import extend as _search_phrases
 from polity_split import extend as _polity_split
 from new_kinds import extend as _new_kinds
+from author_cities import extend as _author_cities
 _extend_seasia_oceania(E, entities)
 _extend_indus(E, entities)
 _extend_east_asia(E, entities)
@@ -2003,6 +2004,7 @@ print(
 # forms become searchable aliases like every other name form. Running it afterwards left
 # "Roman" indexed nowhere, which is the bug this was meant to fix.
 _new_kinds(E, entities)
+_author_cities(E, entities)
 
 # Immediately after the last module that authors entities, and before every module that
 # REFERENCES one by id. Running it last meant polity_split was matching against pre-normalisation

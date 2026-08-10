@@ -234,7 +234,16 @@ export function formatBpRange(v: YearValue): string {
 export type DisplayFrame = Datum | "calendar";
 export type FramePreference = "auto" | DisplayFrame;
 
-export const HOLOCENE_BACKSTOP_BP = 11_700;
+export /**
+ * Below this age, always use calendar reckoning.
+ *
+ * 3,000 years before present reaches back past the Bronze Age collapse, which is comfortably
+ * inside the range where cultures were keeping their own dated records. A reader looking at
+ * anything this recent expects BCE or CE.
+ */
+const DOCUMENTARY_FLOOR_BP = 3000;
+
+const HOLOCENE_BACKSTOP_BP = 11_700;
 export const UNKNOWN_METHOD_FUZZ_RATIO = 0.05;
 
 /** The default frame for a value, absent any user preference. */
@@ -244,6 +253,14 @@ export function suggestFrame(v: YearValue): DisplayFrame {
   if (v.nativeFrame !== undefined) return v.nativeFrame;
   const bp = bpFromYear(v.consensus.year);
   if (bp >= HOLOCENE_BACKSTOP_BP) return "bp";
+
+  // A floor, because every rule below this reasons from method or fuzziness and none of them
+  // asks how recent the date is. The Berlin Conference of 1884 rendered as "66 - 65 BP": its
+  // dating method was `unknown`, its convention bounds were plus-or-minus a century, and the
+  // fuzz ratio duly concluded that a date one and a half centuries old was best expressed in
+  // years before present. Before Present is a frame for radiocarbon and geology. Nothing inside
+  // the documentary era belongs in it, however uncertain the date is.
+  if (bp < DOCUMENTARY_FLOOR_BP) return "calendar";
 
   if (!isCalendarConvertible(v)) return "bp";
   if (v.method !== undefined && v.method !== "unknown") {

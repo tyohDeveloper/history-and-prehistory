@@ -40,11 +40,13 @@ For each topic it wants to record, and this is the user's own formulation:
 - a **searchable key phrase** so a reader can go research further
 - the **hierarchy of contexts** it sits in
 - important **before-and-after links**, expressed via those key phrases
-- ideally, one or a few **scholarly citations**
+
+Scholarly citations are deliberately **out of scope**. Sourcing will be done later as a
+single pass across the whole dataset, once its shape and coverage are settled.
 
 ---
 
-## Part one: the schema
+## The questions
 
 Most of that list already has a field. The pack shows you which. What we want from you is
 judgement about the model as it actually stands, not a redesign of what works.
@@ -103,50 +105,20 @@ problems is worth more than a long list of refinements.
 
 ---
 
-## Part two: a worked exemplar set
-
-Then author **30 to 40 entities in the shape you propose**, as a JSON array.
-
-Choose them to prove the design under stress, not to be representative. Include:
-
-- Lomekwian stone knapping at 3.3 Ma, and one hominin species
-- at least three languages: one proto-family (Proto-Indo-European or Proto-Austronesian),
-  one reconstructed intermediate, one attested ancient language
-- a domestication with a range spanning millennia
-- a lithic or metallurgical transition
-- a religion, and a religious schism
-- a trade network
-- a legal or governance concept
-- an epidemic and a climate event
-- a legendary founder whose existence is contested
-- a polity, a dynasty, a ruler, and a co-rulership
-- a city inhabited continuously to the present, and one abandoned
-- a region
-- a modern event dated to the day
-
-For each, populate every field your proposal defines, including the uncertainty and
-dating-method fields — those are the point of the exercise. Where the existing schema
-already serves, use the existing field names so the output is diffable against what we have.
-
-**On citations, read this carefully.** Give author, year, and title only. **Do not produce
-DOIs, URLs, volume numbers, or page numbers** — generated from memory these are
-confabulated, and a plausible-looking false citation is worse for this project than none.
-Mark every citation as unverified. Do not omit an entity because you cannot cite it: the
-standing editorial policy is that a real thing is included and cited later.
-
-Approximate dates are expected and welcome. Do not manufacture precision; use the
-uncertainty fields you are proposing to say exactly how much you do not know.
-
----
-
 ## Output
 
-Write two files:
+Write `/home/user/workspace/hp/docs/consult-response-schema.md`: a clear recommendation on
+each of the eight numbered questions, then a summary of the changes you would make ordered
+by value, and finally the **field-by-field specification** of your proposal — enough that
+someone can author entities against it without asking you a follow-up question. Name the
+new fields, give their types and controlled vocabularies, and say which existing fields you
+are retiring, renaming, or leaving alone.
 
-- `/home/user/workspace/hp/docs/consult-response-schema.md` — part one, as markdown, with a
-  clear recommendation on each numbered question and a short summary of the changes you
-  would make, ordered by value.
-- `/home/user/workspace/hp/docs/consult-response-entities.json` — part two, as a JSON array.
+A second agent will author a worked exemplar set against your specification, so it needs to
+be unambiguous. Call out anywhere you deliberately left a judgement to the author.
 
-If your recommendations in part one conflict with anything in the distilled issues, say so
-explicitly rather than quietly working around it.
+If your recommendations conflict with anything in the distilled issues, say so explicitly
+rather than quietly working around it.
+
+Do not propose citation or sourcing fields beyond the `source_ids` that already exist.
+Sourcing is a later, separate pass.

@@ -67,8 +67,19 @@ def _strip_note(text):
 
 def extend(E, entities):
     dropped, notes, kept = 0, 0, 0
+    degenerate = [0]
 
     for e in entities:
+        # This must run BEFORE the authored check, not after it. A bound equal to its own estimate
+        # makes the pair asymmetric, so every one of these rows passes _is_authored and would skip
+        # straight past a cleanup placed below -- which is exactly what happened on the first
+        # attempt: 14 dropped, 25 left standing.
+        for ep in ("start", "end"):
+            for side in ("min", "max"):
+                if e.get(f"{ep}_year_{side}") == e.get(f"{ep}_year") is not None:
+                    e.pop(f"{ep}_year_{side}", None)
+                    degenerate[0] += 1
+
         if _is_authored(e):
             # Twenty-five intervals survive, and symmetry is what identifies them. The generator
             # could only ever produce a centred plus-or-minus, so an interval that sits off-centre
@@ -94,4 +105,5 @@ def extend(E, entities):
             notes += 1
 
     print(f"drop_derived_bounds: cleared bounds on {dropped} entities, "
-          f"kept {kept} hand-authored interval(s), cleaned {notes} date note(s)")
+          f"kept {kept} hand-authored interval(s), cleaned {notes} date note(s), "
+          f"dropped {degenerate[0]} zero-width bound(s)")

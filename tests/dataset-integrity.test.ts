@@ -132,7 +132,11 @@ describe("gap-analysis baseline", () => {
     // 2,193 of 2,218 intervals exactly symmetric. A reader seeing plus-or-minus a century
     // believes somebody measured it, so an invented interval is worse than none. The sourcing
     // pass will write real ones back with a method that says where they came from.
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(71);
+    // 53, not 71: rule 15 then removed 39 degenerate bounds that had been set equal to their own
+    // estimate, which asserts the date is known exactly and is the opposite of what recording an
+    // interval is for. Those had survived the symmetry test precisely because being equal on one
+    // side makes a pair asymmetric.
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(53);
   });
 
   it("dates each boundary on its own evidence", () => {

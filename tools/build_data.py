@@ -1718,7 +1718,7 @@ from historicity import extend as _historicity
 from search_phrases import extend as _search_phrases
 from polity_split import extend as _polity_split
 from contemporary_placement import extend as _contemporary_placement
-from review_triage import extend as _review_triage
+from review_triage import extend as _review_triage, extend_dating as _review_dating
 from drop_derived_bounds import extend as _drop_derived_bounds
 from new_kinds import extend as _new_kinds
 from author_cities import extend as _author_cities
@@ -2023,6 +2023,7 @@ _search_phrases(E, entities)
 _polity_split(E, entities)
 _contemporary_placement(E, entities)
 _review_triage(E, entities)
+_review_dating(E, entities)
 _drop_derived_bounds(E, entities)
 
 # Aliases are derived from name_forms LAST, because several later modules add name forms and

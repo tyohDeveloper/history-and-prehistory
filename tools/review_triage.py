@@ -95,3 +95,35 @@ def extend(E, entities):
     print(f"review_triage: {len(to_site)} non-cities re-kinded to site, "
           f"{len(unbounded)} nengo stripped of invented uncertainty, "
           f"{len(rekinded)} kind correction(s)")
+
+
+# Rule 15 found these on its first run, which is the argument for the rule.
+DATING_FIXES = {
+    # A first attestation is a written one, and writing does not reach 65,000 years back. The
+    # Madjedbebe date that anchors this is optically stimulated luminescence on buried sediment.
+    "oceania.peoples-aboriginal-australians": {"start_dating_method": "luminescence"},
+}
+
+# `consensus` claims the field agrees. It cannot rest on a method that says we do not know how
+# the date was reached, and hominin taxonomy is the last place to claim settled agreement.
+DROP_CONSENSUS = (
+    "global.prehistory.hominins.homo-heidelbergensis",
+    "global.prehistory.hominins.homo-neanderthalensis",
+    "global.prehistory.hominins.denisovans",
+    "global.paleolithic.mousterian",
+)
+
+
+def extend_dating(E, entities):
+    by_id = {e["id"]: e for e in entities}
+    for eid, patch in DATING_FIXES.items():
+        if eid in by_id:
+            by_id[eid].update(patch)
+    dropped = 0
+    for eid in DROP_CONSENSUS:
+        e = by_id.get(eid)
+        if e is not None and e.get("date_standing") == "consensus":
+            e["date_standing"] = "majority"
+            dropped += 1
+    print(f"review_triage: {len(DATING_FIXES)} dating method fix(es), "
+          f"{dropped} overstated consensus downgraded")

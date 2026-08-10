@@ -1,7 +1,7 @@
 {
   "schema_version": "3.6.0",
   "dataset_version": "0.36.0.0",
-  "generated_at": "2026-08-10T22:23:56Z",
+  "generated_at": "2026-08-10T22:28:27Z",
   "entities": [
     {
       "id": "global",
@@ -868,7 +868,6 @@
       "start_dating_method": "calendar",
       "start_year_min": -3500,
       "start_year_max": -3000,
-      "end_year_min": -1200,
       "end_year_max": -1150,
       "date_note": "Regional Bronze Ages began at different dates; the collapse cluster is c. 1200-1150 BCE. Thomsen devised the Stone/Bronze/Iron scheme in 1837 to order northern European material. Connah's verdict on exporting it: applying it to African archaeology 'produced little more than confusion, whereas in the Americas or Australasia it has been irrelevant'.",
       "caveats": [
@@ -17739,7 +17738,6 @@
       "tier": "intermediate",
       "start_year_min": -1220,
       "start_year_max": -1180,
-      "end_year_min": -1150,
       "end_year_max": -1100,
       "aliases": [
         "Bronze Age Collapse"
@@ -30903,7 +30901,6 @@
       "start_year": -2800000,
       "end_year": null,
       "tier": "foundational",
-      "start_year_min": -2800000,
       "start_year_max": -2740000,
       "start_dating_method": "argon-argon",
       "summary": "Humans, proto-humans and near-humans: a dozen or so named species, most of which overlapped with others rather than succeeding them in a line.",
@@ -31084,7 +31081,7 @@
       "end_dating_method": "unknown",
       "end_year_min": -208050,
       "end_year_max": -188050,
-      "date_standing": "consensus"
+      "date_standing": "majority"
     },
     {
       "id": "global.prehistory.hominins.homo-naledi",
@@ -31170,7 +31167,7 @@
         }
       ],
       "end_dating_method": "unknown",
-      "date_standing": "consensus"
+      "date_standing": "majority"
     },
     {
       "id": "global.prehistory.hominins.denisovans",
@@ -31181,7 +31178,6 @@
       "end_year": -50000,
       "tier": "intermediate",
       "end_year_min": -80000,
-      "end_year_max": -50000,
       "start_dating_method": "unknown",
       "date_note": "Genetically unambiguous but with no formally accepted species name and no type specimen in the conventional sense. The chronology is a Bayesian model combining radiocarbon, uranium-series and luminescence ages, so no single method describes it; radiocarbon alone cannot reach 195 ka. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "source_ids": [
@@ -31194,7 +31190,7 @@
       "start_year_min": -203050,
       "start_year_max": -183050,
       "end_dating_method": "unknown",
-      "date_standing": "consensus"
+      "date_standing": "majority"
     },
     {
       "id": "global.prehistory.hominins.homo-floresiensis",
@@ -31397,7 +31393,7 @@
       ],
       "summary": "The flake-tool tradition associated mainly with Neanderthals across Europe and western Asia.",
       "end_dating_method": "unknown",
-      "date_standing": "consensus"
+      "date_standing": "majority"
     },
     {
       "id": "global.paleolithic.aterian",
@@ -31531,7 +31527,6 @@
       "start_year_min": -42000,
       "start_year_max": -38000,
       "end_year_min": -33000,
-      "end_year_max": -31000,
       "start_dating_method": "radiocarbon-calibrated",
       "date_note": "Arrival dates differ sharply between regional models, from about 43 cal ka BP in southern Iberia to later elsewhere.",
       "alternatives": [
@@ -31566,7 +31561,6 @@
       "start_year_min": -34000,
       "start_year_max": -31000,
       "end_year_min": -25000,
-      "end_year_max": -22000,
       "start_dating_method": "radiocarbon-calibrated",
       "date_note": "Bayesian boundaries from the Adriatic basin; regional models differ.",
       "source_ids": [
@@ -31775,7 +31769,6 @@
         "dominguez-rodrigo-2010-dikika"
       ],
       "summary": "Cutting meat from bone with stone tools, which opened a food source that had been out of reach.",
-      "start_year_min": -2600000,
       "date_standing": "majority"
     },
     {
@@ -32052,7 +32045,6 @@
         "oktaviana-2024-sulawesi"
       ],
       "summary": "Pictures of recognisable things — animals and people — rather than patterns.",
-      "start_year_min": -49300,
       "date_standing": "consensus"
     },
     {
@@ -32064,7 +32056,6 @@
       "end_year": -2598050,
       "tier": "specialist",
       "start_year_min": -3440000,
-      "start_year_max": -3300000,
       "start_dating_method": "argon-argon",
       "date_note": "Named from Lomekwi 3. Kept separate from the Oldowan because the knapping technique differs, which is also why the Oldowan's 2.6 Ma start is a definitional boundary rather than the start of toolmaking. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "source_ids": [
@@ -32490,7 +32481,6 @@
       "end_year": -5865,
       "tier": "foundational",
       "end_year_min": -5975,
-      "end_year_max": -5865,
       "start_dating_method": "radiocarbon-calibrated",
       "date_note": "East Mound from about 7100 cal BC; occupation ceases 5975-5865 cal BC at 95% probability, from 33 AMS determinations on short-life samples. Mellaart's original 1960s estimate of c. 7100 BC held up against Bayesian modelling. Date bounds set by magnitude convention rather than from a source, pending the sourcing pass; treat the width as a floor on uncertainty.",
       "source_ids": [
@@ -34093,7 +34083,6 @@
         "dominguez-rodrigo-2010-dikika"
       ],
       "summary": "Bones from Dikika, Ethiopia bearing marks read as stone-tool butchery, roughly 800,000 years before the oldest known stone tools.",
-      "start_year_min": -3390000,
       "date_standing": "minority"
     },
     {
@@ -34922,7 +34911,6 @@
         "edinburgh-african-cattle-genome"
       ],
       "summary": "The oldest uncontroversial domestic cattle in Africa, in Egypt's Western Desert -- introduced from the Near East rather than domesticated locally.",
-      "start_year_min": -5750,
       "date_standing": "minority"
     },
     {
@@ -34950,7 +34938,6 @@
         "winchell-sorghum"
       ],
       "summary": "Pearl millet in the West African Sahel and sorghum in eastern Sudan: two independent African domestications of indigenous cereals.",
-      "start_year_min": -4000,
       "date_standing": "consensus"
     },
     {
@@ -35219,7 +35206,6 @@
         "kvavadze-2009-dzudzuana-flax"
       ],
       "summary": "Wild flax from Dzudzuana Cave, Georgia, twisted into cordage and dyed turquoise, pink and black.",
-      "start_year_min": -30100,
       "date_standing": "consensus"
     },
     {
@@ -35245,7 +35231,6 @@
         "wu-2012-xianrendong-pottery"
       ],
       "summary": "Ceramic vessels from Xianrendong Cave, Jiangxi — made by hunter-gatherers ten thousand years before anyone in the region farmed.",
-      "start_year_min": -18100,
       "date_standing": "consensus"
     },
     {
@@ -35271,7 +35256,6 @@
         "nature-2026-palaeolithic-dogs"
       ],
       "summary": "The first domesticated animal, and the only one domesticated by hunter-gatherers rather than farmers.",
-      "start_year_min": -13900,
       "date_standing": "majority"
     },
     {
@@ -35288,7 +35272,6 @@
         "liu-2018-raqefet-fermentation"
       ],
       "summary": "Residues of fermented wheat and barley in stone mortars at Raqefet Cave, made by Natufian foragers from wild cereals.",
-      "start_year_min": -11800,
       "date_standing": "majority"
     },
     {
@@ -35306,7 +35289,6 @@
         "fuller-2020-protracted-domestication"
       ],
       "summary": "Einkorn and emmer wheat at Cayonu and Cafer Hoyuk: the beginning of the crop package that spread across three continents.",
-      "start_year_min": -8651,
       "date_standing": "majority"
     },
     {
@@ -35323,7 +35305,6 @@
         "catalhoyuk-2021-earliest-textiles"
       ],
       "summary": "Preserved woven textile from Catalhoyuk — spinning and weaving, as distinct from the far older twisting of fibre into cord.",
-      "start_year_min": -6700,
       "date_standing": "consensus"
     },
     {
@@ -35340,7 +35321,6 @@
         "isac-choga-mami-irrigation"
       ],
       "summary": "Canals and ditches at Choga Mami in Mesopotamia, the first farming that reshaped the land to suit itself.",
-      "start_year_min": -6200,
       "date_standing": "majority"
     },
     {
@@ -35371,7 +35351,6 @@
         "antiquity-earliest-wheeled-vehicles"
       ],
       "summary": "Wheeled wagons appear in Mesopotamia and central Europe at nearly the same moment, and which came first is unresolved.",
-      "start_year_min": -3500,
       "date_standing": "majority"
     },
     {
@@ -35410,7 +35389,6 @@
         "oup-origins-of-writing"
       ],
       "summary": "Proto-cuneiform at Uruk and hieroglyphic tags at Abydos — two independent inventions whose dates overlap.",
-      "start_year_min": -3400,
       "date_standing": "majority"
     },
     {
@@ -35450,7 +35428,6 @@
         "science-2018-botai-horses"
       ],
       "summary": "The ancestry of every modern domestic horse traces to the lower Volga-Don steppe, not to the older Botai husbandry once assumed to be its origin.",
-      "start_year_min": -2200,
       "date_standing": "consensus"
     },
     {
@@ -35477,7 +35454,6 @@
         "chicken-2022-southeast-asia"
       ],
       "summary": "The world's most numerous bird was domesticated in mainland Southeast Asia, far later and further east than long assumed.",
-      "start_year_min": -1650,
       "date_standing": "majority"
     },
     {
@@ -36289,7 +36265,6 @@
         "unesco-chinchorro"
       ],
       "summary": "Deliberate preparation of the dead, practised on the Atacama coast two thousand years before anyone in Egypt attempted it.",
-      "start_year_min": -6051,
       "date_standing": "majority"
     },
     {
@@ -44706,7 +44681,7 @@
       "allow_outside_parent_dates": true,
       "extant": true,
       "summary": "The longest continuous cultural tradition known, with oral accounts that appear to record post-glacial sea-level rise.",
-      "start_dating_method": "first-attestation"
+      "start_dating_method": "luminescence"
     },
     {
       "id": "global.networks.silk-road",

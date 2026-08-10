@@ -903,6 +903,89 @@ if _left:
     errors.append(f"retired fields still present in output: {_left}")
 
 
+
+# ---------------------------------------------------------------------------
+# Rule 15: claims a row makes about itself must agree with its own fields.
+#
+# Every rule up to this point checks structure. None could see a factual error,
+# which is how an event dated to the evening of 9 November 1989 shipped carrying
+# plus-or-minus a century, and how forty-seven sanctuaries and mound centres
+# shipped as cities while saying in their own summaries that they were not.
+#
+# These come from a six-way correctness review that was asked, after finding the
+# errors, to turn each repeated class into a rule. They are the subset marked
+# `safe`: a row cannot legitimately contradict itself, so there is no exception
+# to carve out. The advisory ones from that review are deliberately absent --
+# they have real exceptions, and a build that cries wolf gets ignored.
+# ---------------------------------------------------------------------------
+
+_DENIES_OWN_KIND = re.compile(
+    r"not (?:a|an) (?:city|urban|town|settlement)|rather than a (?:true )?city"
+    r"|was not urban|not itself a city",
+    re.I,
+)
+_ABANDONED = re.compile(
+    r"\babandon(?:ed|ment)\b|\bdeserted\b|\bsubmerged\b|\brazed\b|lost to the (?:sand|sea|jungle)",
+    re.I,
+)
+# The earliest writing this dataset records. A first attestation is by definition a written one.
+_WRITING_FLOOR = -3400
+
+
+def _check_self_consistency(entities):
+    denies, extant_end, no_status, abandoned, attest, consensus, zero_width = [], [], [], [], [], [], []
+
+    for e in entities:
+        summary = e.get("summary") or ""
+        kind, end, extant = e["kind"], e.get("end_year"), e.get("extant")
+
+        if kind == "city" and _DENIES_OWN_KIND.search(summary):
+            denies.append(e["id"])
+
+        # Definitionally linked: a place that still exists has no end, and a place with an end
+        # does not still exist. Forty-odd rows held both, most of them living cities given the
+        # year of a conquest -- all four Phoenician cities ended at Alexander in 332 BCE.
+        if extant is True and end is not None:
+            extant_end.append(f"{e['id']} (extant, ends {end})")
+        if extant is False and end is None and e.get("start_year") is not None:
+            no_status.append(e["id"])
+
+        if _ABANDONED.search(summary) and end is None and kind in {"city", "site"}:
+            abandoned.append(e["id"])
+
+        for ep in ("start", "end"):
+            if e.get(f"{ep}_dating_method") == "first-attestation":
+                year = e.get(f"{ep}_year")
+                if year is not None and year < _WRITING_FLOOR:
+                    attest.append(f"{e['id']} {ep} ({year})")
+            # A bound equal to its own estimate claims the date is known exactly, which is the
+            # opposite of what recording an interval is for.
+            for side in ("min", "max"):
+                b = e.get(f"{ep}_year_{side}")
+                if b is not None and b == e.get(f"{ep}_year"):
+                    zero_width.append(f"{e['id']} {ep}_{side}")
+
+        # Consensus is a claim about the field's agreement. It cannot rest on a method that says
+        # we do not know how the date was reached.
+        if e.get("date_standing") == "consensus" and e.get("start_dating_method") == "unknown":
+            consensus.append(e["id"])
+
+    for label, rows in (
+        ("summary denies the row's own kind", denies),
+        ("extant but carries an end year", extant_end),
+        ("not extant and has no end year", no_status),
+        ("summary says abandoned but no end year", abandoned),
+        ("first-attestation before writing exists", attest),
+        ("consensus standing on an unknown method", consensus),
+        ("bound equal to its own estimate", zero_width),
+    ):
+        if rows:
+            errors.append(f"self-consistency — {label}, {len(rows)} row(s): "
+                          + "; ".join(rows[:5]) + (" …" if len(rows) > 5 else ""))
+
+
+_check_self_consistency(entities)
+
 if errors:
     print(f"\n✗ ERRORS ({len(errors)}):")
     for e in errors[:60]:

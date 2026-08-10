@@ -163,6 +163,25 @@ indistinguishable in search. Expect more of this shape.
 Left as a flat alias deliberately. Needs scholarship on who coined the framing
 and what it obscures before it can be typed as `historical` or `rejected`.
 
+## Updating the pinned baselines
+
+`python3 tools/baselines.py` prints committed versus current for the fifteen pinned
+test baselines; `--update` rewrites the drifted ones. Review the printed table, then
+review `git diff`.
+
+The brittleness of those baselines is deliberate and stays — a pinned count is a
+tripwire. The *transcription* was the risk, and it misfired twice: once setting the
+cited-entity baseline to 620 when the test measures something else and wanted 440,
+and once changing the end-dating count to 332 when the pass had added none. Both
+failed loudly. A wrong-but-*passing* baseline would not have.
+
+The tool refuses to run when a pattern stops matching, rather than skipping the
+baseline, because a silent no-op edit is how a validator rule once got "tested"
+while never being in the file at all.
+
+Not automated on purpose: the split-dating-method catalogue, which is a
+hand-curated registry whose point is that a human decides membership.
+
 ## The gap report
 
 `python3 tools/report_gaps.py` looks for places where the dataset **implies an

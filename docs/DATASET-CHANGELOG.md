@@ -1,5 +1,34 @@
 # Changelog
 
+## 0.29.1.0 — Source the region claims added in 0.29.0.0 (2026-08-09)
+
+A self-inflicted regression, fixed one release later.
+
+Issue #5 says the authored region lists are the only field in the dataset that is
+neither sourced nor visibly marked as unsourced, and calls them its least honest
+field. The previous release then added **nine more cross-links with no citation
+at all** — seven of them on entities carrying no source whatsoever. The mistake
+was made again, immediately, by the same reasoning that had identified it.
+
+"This dynasty ruled Iran" is a claim, and the research that produced those links
+already carried the warrant for each one. It simply was not attached. Now it is:
+
+* **Seljuk** — every Great Seljuk capital (Nishapur, Ray, Isfahan, Hamadan) was
+  in Iran.
+* **Samanid** — held Khorasan, Ray, Tabaristan, Gorgan, Isfahan despite a Central
+  Asian capital.
+* **Ilkhanate** — Maragheh, Tabriz and Soltaniyeh were all Iranian capitals.
+* **Khwarazmian** — Tabriz was the capital from 1225.
+* **Ghaznavid** — cited to Dandanaqan, the 1040 defeat that ended its Iranian
+  phase, which is what the qualification on the link refers to.
+* **Timurid** — cited to Britannica's own hedged treatment, so the hedge points at
+  something a reader can check.
+* **Rashidun, Umayyad, Abbasid** — cited to Britannica's account of the conquest
+  and its aftermath.
+
+Cross-linked entities carrying a source: 22 → 29 of 46. The remaining 17 predate
+this pass and are still open under #5.
+
 ## 0.29.0.0 — Central Asia and Islamic Iran, found by tooling (2026-08-09)
 
 The first release where the *target* was chosen by a tool rather than by

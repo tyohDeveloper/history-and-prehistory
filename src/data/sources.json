@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.29.0.0",
-  "generated_at": "2026-08-10T04:09:15Z",
+  "dataset_version": "0.29.1.0",
+  "generated_at": "2026-08-10T04:32:46Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -1983,6 +1983,48 @@
       "citation": "'List of monarchs of Iran', Wikipedia",
       "url": "https://en.wikipedia.org/wiki/List_of_monarchs_of_Iran",
       "note": "Gives the Afsharids 1736-1796 and the Zand 1751-1794, and states plainly that the two competed for supremacy rather than succeeding one another."
+    },
+    {
+      "id": "britannica-jalal-al-din-mingburnu",
+      "kind": "reference",
+      "citation": "'Jalal al-Din Mingburnu', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Jalal-al-Din-Mingburnu",
+      "note": "The last Khwarazmian ruler, whose base was in western Iran; Tabriz was the capital from 1225."
+    },
+    {
+      "id": "britannica-seljuq",
+      "kind": "reference",
+      "citation": "'Seljuq', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Seljuq",
+      "note": "Every Great Seljuk capital -- Nishapur, Ray, Isfahan, Hamadan -- was in Iran, which is the warrant for reaching this dynasty from the Iran branch."
+    },
+    {
+      "id": "britannica-samanid-dynasty",
+      "kind": "reference",
+      "citation": "'Samanid dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Samanid-dynasty",
+      "note": "Held Khorasan, Ray, Tabaristan, Gorgan and Isfahan despite a Central Asian capital."
+    },
+    {
+      "id": "britannica-il-khanid-dynasty",
+      "kind": "reference",
+      "citation": "'Il-Khanid dynasty', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Il-Khanid-dynasty",
+      "note": "Centred on Iran throughout: Maragheh, Tabriz and Soltaniyeh were all Iranian capitals."
+    },
+    {
+      "id": "britannica-iran-timurids-turkmen",
+      "kind": "reference",
+      "citation": "'Iran: The Timurids and Turkmen', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Iran/The-Timurids-and-Turkmen",
+      "note": "Britannica's framing of Timurid authority over Iran is hedged and effectively limited to Shah Rokh's reign, which is why the cross-link carries a qualification rather than standing bare."
+    },
+    {
+      "id": "britannica-battle-of-dandanqan",
+      "kind": "reference",
+      "citation": "'Battle of Dandanqan', Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/event/Battle-of-Dandanqan",
+      "note": "1040, where the Ghaznavids lost Khorasan to the Seljuks -- the end of their Iranian phase."
     },
     {
       "id": "iranica-aq-qoyunlu",

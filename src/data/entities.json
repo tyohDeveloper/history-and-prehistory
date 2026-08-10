@@ -1,7 +1,7 @@
 {
   "schema_version": "3.4.0",
-  "dataset_version": "0.29.0.0",
-  "generated_at": "2026-08-10T04:09:15Z",
+  "dataset_version": "0.29.1.0",
+  "generated_at": "2026-08-10T04:32:46Z",
   "entities": [
     {
       "id": "global",
@@ -6943,6 +6943,9 @@
         "west-asia.arabia",
         "west-asia.iran"
       ],
+      "source_ids": [
+        "britannica-iran-islamic-conquest"
+      ],
       "regions": [
         "africa",
         "west-asia"
@@ -6967,6 +6970,9 @@
         "west-asia.iran",
         "west-asia.mesopotamia"
       ],
+      "source_ids": [
+        "britannica-iran-islamic-conquest"
+      ],
       "regions": [
         "africa",
         "europe",
@@ -6990,6 +6996,9 @@
         "central-asia",
         "west-asia.iran",
         "west-asia.mesopotamia"
+      ],
+      "source_ids": [
+        "britannica-iran-islamic-conquest"
       ],
       "regions": [
         "central-asia",
@@ -8717,6 +8726,9 @@
       "cross_parent_ids": [
         "west-asia.iran"
       ],
+      "source_ids": [
+        "britannica-samanid-dynasty"
+      ],
       "regions": [
         "central-asia",
         "west-asia"
@@ -8733,6 +8745,9 @@
       "date_precision": "approx",
       "cross_parent_ids": [
         "west-asia.iran"
+      ],
+      "source_ids": [
+        "britannica-seljuq"
       ],
       "regions": [
         "central-asia",
@@ -8800,6 +8815,9 @@
       ],
       "tier": "intermediate",
       "date_precision": "approx",
+      "source_ids": [
+        "britannica-il-khanid-dynasty"
+      ],
       "regions": [
         "central-asia",
         "west-asia"
@@ -8937,6 +8955,9 @@
         "west-asia.iran"
       ],
       "date_note": "Control over Iran was loose and effectively limited to the reign of Shah Rokh; Britannica's own framing is hedged.",
+      "source_ids": [
+        "britannica-iran-timurids-turkmen"
+      ],
       "regions": [
         "central-asia",
         "west-asia"
@@ -28307,6 +28328,7 @@
       "tier": "foundational",
       "date_note": "Lost Khorasan to the Seljuks at Dandanaqan in 1040 and was thereafter an Afghan and north Indian power rather than an Iranian one. Held Khorasan, and briefly Ray and Hamadan, until Dandanaqan in 1040. After that it was an Afghan and north Indian power rather than an Iranian one.",
       "source_ids": [
+        "britannica-battle-of-dandanqan",
         "britannica-ghaznavid-dynasty"
       ],
       "summary": "Turkic dynasty ruling from Ghazna, whose raids into northern India opened the way for later Muslim rule there.",
@@ -28344,6 +28366,7 @@
       "tier": "foundational",
       "date_note": "Ends with the death of Jalal al-Din in 1231, some years after the Mongols had broken the state itself.",
       "source_ids": [
+        "britannica-jalal-al-din-mingburnu",
         "britannica-khwarezm-shah-dynasty"
       ],
       "summary": "Briefly the dominant power from Transoxiana to western Iran, destroyed by the Mongol invasion.",

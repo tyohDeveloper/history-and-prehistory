@@ -42,6 +42,12 @@ S_BRIT_ZAND = "britannica-zand-dynasty"
 S_IRANICA_ZAND = "iranica-zand-dynasty"
 S_WIKI_AFSHARID = "wikipedia-afsharid-dynasty"
 S_WIKI_IRAN_MONARCHS = "wikipedia-list-monarchs-iran"
+S_BRIT_SELJUQ = "britannica-seljuq"
+S_BRIT_SAMANID = "britannica-samanid-dynasty"
+S_BRIT_ILKHANID = "britannica-il-khanid-dynasty"
+S_BRIT_TIMURID_IRAN = "britannica-iran-timurids-turkmen"
+S_BRIT_DANDANAQAN = "britannica-battle-of-dandanqan"
+S_BRIT_KHWARAZM_IRAN = "britannica-jalal-al-din-mingburnu"
 
 IRAN_ISLAMIC_SOURCES = [
     {"id": S_BRIT_YAZDEGERD, "kind": "reference",
@@ -100,6 +106,37 @@ IRAN_ISLAMIC_SOURCES = [
      "url": "https://en.wikipedia.org/wiki/List_of_monarchs_of_Iran",
      "note": "Gives the Afsharids 1736-1796 and the Zand 1751-1794, and states plainly "
              "that the two competed for supremacy rather than succeeding one another."},
+    {"id": S_BRIT_KHWARAZM_IRAN, "kind": "reference",
+     "citation": "'Jalal al-Din Mingburnu', Encyclopaedia Britannica",
+     "url": "https://www.britannica.com/biography/Jalal-al-Din-Mingburnu",
+     "note": "The last Khwarazmian ruler, whose base was in western Iran; Tabriz was "
+             "the capital from 1225."},
+    {"id": S_BRIT_SELJUQ, "kind": "reference",
+     "citation": "'Seljuq', Encyclopaedia Britannica",
+     "url": "https://www.britannica.com/topic/Seljuq",
+     "note": "Every Great Seljuk capital -- Nishapur, Ray, Isfahan, Hamadan -- was in "
+             "Iran, which is the warrant for reaching this dynasty from the Iran branch."},
+    {"id": S_BRIT_SAMANID, "kind": "reference",
+     "citation": "'Samanid dynasty', Encyclopaedia Britannica",
+     "url": "https://www.britannica.com/topic/Samanid-dynasty",
+     "note": "Held Khorasan, Ray, Tabaristan, Gorgan and Isfahan despite a Central Asian "
+             "capital."},
+    {"id": S_BRIT_ILKHANID, "kind": "reference",
+     "citation": "'Il-Khanid dynasty', Encyclopaedia Britannica",
+     "url": "https://www.britannica.com/topic/Il-Khanid-dynasty",
+     "note": "Centred on Iran throughout: Maragheh, Tabriz and Soltaniyeh were all "
+             "Iranian capitals."},
+    {"id": S_BRIT_TIMURID_IRAN, "kind": "reference",
+     "citation": "'Iran: The Timurids and Turkmen', Encyclopaedia Britannica",
+     "url": "https://www.britannica.com/place/Iran/The-Timurids-and-Turkmen",
+     "note": "Britannica's framing of Timurid authority over Iran is hedged and "
+             "effectively limited to Shah Rokh's reign, which is why the cross-link "
+             "carries a qualification rather than standing bare."},
+    {"id": S_BRIT_DANDANAQAN, "kind": "reference",
+     "citation": "'Battle of Dandanqan', Encyclopaedia Britannica",
+     "url": "https://www.britannica.com/event/Battle-of-Dandanqan",
+     "note": "1040, where the Ghaznavids lost Khorasan to the Seljuks -- the end of "
+             "their Iranian phase."},
     {"id": S_IRANICA_AQQOYUNLU, "kind": "reference",
      "citation": "'Aq Qoyunlu', Encyclopaedia Iranica",
      "url": "https://iranicaonline.org/articles/aq-qoyunlu-confederation",
@@ -109,26 +146,33 @@ IRAN_ISLAMIC_SOURCES = [
 
 # Entities already in the dataset that also belong to Iran, with the qualification
 # each one needs. A bare cross-link would assert more than the sources support.
+# Each entry carries the source for the territorial claim, because "this dynasty
+# ruled Iran" IS a claim. An earlier pass added cross-links with no citation at
+# all while an open issue said unsourced region lists were the least honest field
+# in the dataset -- so the same mistake was made again, one release later, by the
+# same reasoning that identified it.
 IRAN_REACH = {
-    "central-asia.seljuk": None,
-    "central-asia.samanid": None,
-    "central-asia.khwarazmian": None,
-    "central-asia.mongol-empire.ilkhanate": None,
-    "central-asia.ghaznavid":
+    "central-asia.seljuk": (None, [S_BRIT_SELJUQ]),
+    "central-asia.samanid": (None, [S_BRIT_SAMANID]),
+    "central-asia.khwarazmian": (None, [S_BRIT_KHWARAZM_IRAN]),
+    "central-asia.mongol-empire.ilkhanate": (None, [S_BRIT_ILKHANID]),
+    "central-asia.ghaznavid": (
         "Held Khorasan, and briefly Ray and Hamadan, until Dandanaqan in 1040. After "
         "that it was an Afghan and north Indian power rather than an Iranian one.",
-    "central-asia.timurid":
+        [S_BRIT_DANDANAQAN]),
+    "central-asia.timurid": (
         "Control over Iran was loose and effectively limited to the reign of Shah Rokh; "
         "Britannica's own framing is hedged.",
+        [S_BRIT_TIMURID_IRAN]),
     # The caliphates governed Iran outright between the Sasanians and the
     # Tahirids, but were reachable only from Arabia, Mesopotamia and Central
     # Asia -- so the Iran branch showed 651-821 as empty when it was merely
     # filed elsewhere. The gap report caught this on the pass that closed the
     # larger hole, which is the argument for re-running it after every change
     # rather than once.
-    "global.multi-regional.rashidun": None,
-    "global.multi-regional.umayyad": None,
-    "global.multi-regional.abbasid": None,
+    "global.multi-regional.rashidun": (None, [S_BRIT_IRAN_ISLAMIC]),
+    "global.multi-regional.umayyad": (None, [S_BRIT_IRAN_ISLAMIC]),
+    "global.multi-regional.abbasid": (None, [S_BRIT_IRAN_ISLAMIC]),
 }
 
 
@@ -210,13 +254,14 @@ def extend(E, entities):
 
     # ── make the already-present dynasties reachable from Iran ────────────
     linked = 0
-    for eid, note in IRAN_REACH.items():
+    for eid, (note, warrant) in IRAN_REACH.items():
         e = by_id.get(eid)
         if e is None:
             continue
         e["cross_parent_ids"] = sorted(set(e.get("cross_parent_ids", [])) | {IRAN})
         if note is not None:
             e["date_note"] = (e.get("date_note", "") + " " + note).strip()
+        e["source_ids"] = sorted(set(e.get("source_ids", [])) | set(warrant))
         linked += 1
 
     print(f"Islamic Iran: intermezzo and Turkoman states, {linked} dynasties "

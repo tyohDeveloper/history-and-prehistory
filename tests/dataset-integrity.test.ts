@@ -126,10 +126,13 @@ describe("gap-analysis baseline", () => {
         // 1,036, down from 1,700. The drop is the fix, not a regression: 664 entities dated after
     // 1000 CE had been given plus-or-minus a century by a convention that keyed on abs(year) and
     // so treated 1989 CE like 1989 BCE. The Fall of the Berlin Wall read 1889 to 2089.
-    // Down 51 from 2,254: the Japanese court eras had carried a fabricated plus-or-minus 25 years,
-    // and a proclaimed era recorded in court documents has no measurement error. Shucho lasted
-    // three months in 686 and had been given a window of 661 to 711.
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(2203);
+    // Down from 2,203 to 71. Every remaining interval was typed by a person: either it sits
+    // off-centre, or it is one-sided. The 2,132 that went were produced by a convention that
+    // multiplied the year by a fixed percentage -- 316 entities at exactly 6%, 241 at 15%, and
+    // 2,193 of 2,218 intervals exactly symmetric. A reader seeing plus-or-minus a century
+    // believes somebody measured it, so an invented interval is worse than none. The sourcing
+    // pass will write real ones back with a method that says where they came from.
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(71);
   });
 
   it("dates each boundary on its own evidence", () => {
@@ -383,9 +386,11 @@ describe("Europe 10,000-2,500 BCE", () => {
   it("refuses a single pan-European Sauveterrian date", () => {
     // Italian AMS and French typological dating differ by about a millennium.
     const s = entities.find((e) => e.id === "europe.prehistory.sauveterrian")!;
-    // "disputed" was a precision value; the dispute now lives in the bounds and the note.
-    expect(s.start_year_min).toBeDefined();
-    expect(s.start_year_max).toBeDefined();
+    // "disputed" was a precision value. The dispute lived in the bounds and the note; the
+    // bounds were a symmetric plus-or-minus 200 from the convention generator and went with the
+    // rest, so the note and the rival reading now carry it alone until the sourcing pass.
+    expect(s.date_standing).toBe("minority");
+    expect(s.alternatives?.length).toBeGreaterThan(0);
     expect(s.date_note).toMatch(/REGIONAL, NOT PAN-EUROPEAN/);
   });
 
@@ -538,8 +543,11 @@ describe("Central Asia and the Austronesian world", () => {
       // named alternatives. Hammurabi is the case that forces the "either": his dates come
       // from rival Mesopotamian chronologies, so the method is `received` and bounds would be
       // meaningless -- the disagreement is between whole schemes, not a width around a number.
+      // Bounds were one of the three ways to carry a scheme dispute and are no longer
+      // available, the convention generator having supplied most of them. A named scheme in
+      // the note is itself the disclosure this test exists to require.
       const carriesDispute =
-        e.start_year_min !== undefined || (e.alternatives?.length ?? 0) > 0;
+        (e.alternatives?.length ?? 0) > 0 || /[Cc]hronology/.test(e.date_note ?? "");
       expect(carriesDispute, `${id} carries the dispute`).toBe(true);
       expect(/[Cc]hronology/.test(e.date_note ?? ""), `${id} names the scheme`).toBe(true);
     }
@@ -814,13 +822,15 @@ describe("Central Asia and the Austronesian world", () => {
     // range. Thin, but sourced — so it is a minority claim, not a convention.
     const k = entities.find((e) => e.id === "central-asia.prehistory.kelteminar")!;
     expect(k.date_standing).toBe("minority");
-    // Was precision "millennium"; that now means explicit bounds a millennium wide.
-    expect(k.start_year_max! - k.start_year_min!).toBe(1000);
+    // Was precision "millennium", then explicit bounds a millennium wide. Those bounds were
+    // symmetric and indistinguishable from the generator's output, so what remains is the
+    // standing and the source -- which is what made this a minority claim rather than a
+    // convention in the first place.
+    expect(k.source_ids?.length).toBeGreaterThan(0);
   });
 
   it("keeps three rival Seima-Turbino chronologies apart", () => {
     const st = entities.find((e) => e.id === "central-asia.prehistory.seima-turbino")!;
-    expect(st.start_year_min).toBeDefined();
     expect(st.alternatives?.length).toBe(2);
     expect(st.alternatives?.some((a) => a.standing === "superseded")).toBe(true);
   });
@@ -860,8 +870,10 @@ describe("Central Asia and the Austronesian world", () => {
 
   it("marks Lapita's own start as unresolved", () => {
     const l = entities.find((e) => e.id === "oceania.melanesia.lapita")!;
-    expect(l.start_year_min).toBeDefined();
-    expect(l.start_year_max).toBeDefined();
+    // The unresolved start is carried by two rival readings and a majority standing rather than
+    // by a window, the window having been generated rather than sourced.
+    expect(l.date_standing).toBe("majority");
+    expect(l.alternatives?.length).toBe(2);
   });
 });
 

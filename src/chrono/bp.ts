@@ -30,9 +30,7 @@ import {
   DATUM_LABEL,
   DATUM_YEAR,
   isCalendarConvertible,
-  isScientificDating,
   supportOf,
-  uncertaintyOf,
   BP_SENSE_LABEL,
   type BpSense,
   type Datum,
@@ -71,7 +69,9 @@ export const BP_UNIT_DIVISOR: Record<BpUnit, number> = { yr: 1, ka: 1_000, Ma: 1
 export function bpUnitFor(bp: number): BpUnit {
   const magnitude = Math.abs(bp);
   if (magnitude >= 1_000_000) return "Ma";
-  if (magnitude >= 10_000) return "ka";
+  // Was 10,000. The automatic BP floor is 6,950, so a threshold above it left a dead band where
+  // an auto-framed BP date still printed as bare years -- "6,950 BP" rather than "6.9 ka".
+  if (magnitude >= BP_FLOOR_BP) return "ka";
   return "yr";
 }
 
@@ -235,15 +235,27 @@ export type DisplayFrame = Datum | "calendar";
 export type FramePreference = "auto" | DisplayFrame;
 
 export /**
- * Below this age, always use calendar reckoning.
+ * The boundary between the two frames, and now the whole of the automatic rule.
  *
- * 3,000 years before present reaches back past the Bronze Age collapse, which is comfortably
- * inside the range where cultures were keeping their own dated records. A reader looking at
- * anything this recent expects BCE or CE.
+ * 5000 BCE, which is 6,950 years before present. Earlier than this, dates are archaeological
+ * whatever method produced them, and Before Present is the frame that fits: it counts from a
+ * datum instead of asserting a position in a calendar nobody was keeping. Later than this,
+ * readers expect BCE and CE.
+ *
+ * This replaces a rule that reasoned from dating method and from the width of the uncertainty
+ * interval. That rule could not survive the removal of the fabricated bounds -- it would have
+ * had almost no input left -- and it had already produced the Berlin Conference of 1884 as
+ * "66 - 65 BP", because the entity's method was `unknown` and its invented plus-or-minus a
+ * century made the fuzz ratio conclude that a date one and a half centuries old was best
+ * expressed as a count backward from 1950. Age is the honest discriminator, and it needs no
+ * uncertainty data to work.
  */
-const DOCUMENTARY_FLOOR_BP = 3000;
+const BP_FLOOR_BP = 6950;
 
-const HOLOCENE_BACKSTOP_BP = 11_700;
+/**
+ * Retained only because the chrono tests pin it. Nothing reads it any more: the automatic frame
+ * choice is now age alone, so there is no rule left that consults how fuzzy a date is.
+ */
 export const UNKNOWN_METHOD_FUZZ_RATIO = 0.05;
 
 /** The default frame for a value, absent any user preference. */
@@ -252,24 +264,10 @@ export function suggestFrame(v: YearValue): DisplayFrame {
   // source's own number, including its datum and its rounding.
   if (v.nativeFrame !== undefined) return v.nativeFrame;
   const bp = bpFromYear(v.consensus.year);
-  if (bp >= HOLOCENE_BACKSTOP_BP) return "bp";
-
-  // A floor, because every rule below this reasons from method or fuzziness and none of them
-  // asks how recent the date is. The Berlin Conference of 1884 rendered as "66 - 65 BP": its
-  // dating method was `unknown`, its convention bounds were plus-or-minus a century, and the
-  // fuzz ratio duly concluded that a date one and a half centuries old was best expressed in
-  // years before present. Before Present is a frame for radiocarbon and geology. Nothing inside
-  // the documentary era belongs in it, however uncertain the date is.
-  if (bp < DOCUMENTARY_FLOOR_BP) return "calendar";
-
+  // An uncalibrated measurement has no calendar equivalent to show, so it leads in BP whatever
+  // its age. Everything else is decided by age alone.
   if (!isCalendarConvertible(v)) return "bp";
-  if (v.method !== undefined && v.method !== "unknown") {
-    return isScientificDating(v) ? "bp" : "calendar";
-  }
-
-  const uncertainty = uncertaintyOf(v);
-  if (uncertainty === undefined || bp <= 0) return "calendar";
-  return uncertainty / bp >= UNKNOWN_METHOD_FUZZ_RATIO ? "bp" : "calendar";
+  return bp >= BP_FLOOR_BP ? "bp" : "calendar";
 }
 
 /**

@@ -613,11 +613,19 @@ if warnings:
 # a text.
 # ---------------------------------------------------------------------------
 
+# Bounds are no longer required anywhere. The rule as first written demanded them on every
+# endpoint whose method was not calendar or received, and the only way to satisfy that at scale
+# was to compute them -- which is exactly what happened: 316 entities ended up at 6% of their
+# own start year, 241 at 15%, and 2,193 of 2,218 intervals were exactly symmetric. The rule
+# manufactured the very thing it was meant to demand evidence of. What remains is the half that
+# was always sound: every populated endpoint must say how it was dated, and any interval that IS
+# present must bracket its estimate. A sourcing pass will restore real intervals with a method
+# that says where they came from.
 NO_BOUNDS_METHODS = {"calendar", "received"}
 
 
 def _check_dating_spine(entities):
-    missing_method, missing_bounds, bad_interval = [], [], []
+    missing_method, bad_interval = [], []
     for e in entities:
         for ep in ("start", "end"):
             year = e.get(f"{ep}_year")
@@ -627,12 +635,8 @@ def _check_dating_spine(entities):
             if method is None:
                 missing_method.append(f"{e['id']} {ep}")
                 continue
-            if method in NO_BOUNDS_METHODS:
-                continue
             lo, hi = e.get(f"{ep}_year_min"), e.get(f"{ep}_year_max")
             if lo is None and hi is None:
-                # A threshold is one-sided by definition, so a lower bound alone satisfies it.
-                missing_bounds.append(f"{e['id']} {ep} ({method})")
                 continue
             if lo is not None and lo > year:
                 bad_interval.append(f"{e['id']} {ep}: min {lo} above estimate {year}")
@@ -640,7 +644,6 @@ def _check_dating_spine(entities):
                 bad_interval.append(f"{e['id']} {ep}: max {hi} below estimate {year}")
 
     for label, rows in (("no dating method", missing_method),
-                        ("no uncertainty bounds", missing_bounds),
                         ("bounds do not bracket the estimate", bad_interval)):
         if rows:
             errors.append(f"dating spine — {label} on {len(rows)} endpoint(s): "

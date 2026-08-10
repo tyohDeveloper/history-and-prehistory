@@ -68,26 +68,39 @@ describe("BP datum arithmetic", () => {
   });
 });
 
-describe("frame selection is driven by provenance, not age", () => {
-  it("puts measured dates in BP even when recent", () => {
-    expect(suggestFrame(STONEHENGE)).toBe("bp");
+describe("frame selection is driven by age", () => {
+  // This was previously driven by provenance: a measured date led in BP however recent, and a
+  // reckoned one led in calendar however old. The rule read well and did not survive contact
+  // with the data. It depended on the dating method and on the width of the uncertainty
+  // interval, and both inputs turned out to be manufactured -- the interval was a fixed
+  // percentage of the year, and the method was a restatement of whether an interval existed.
+  // It produced the Berlin Conference of 1884 as "66 - 65 BP". The boundary is now a single
+  // date, 5000 BCE, which needs no uncertainty data to evaluate.
+
+  it("puts anything before 5000 BCE in BP, whatever the method says", () => {
+    expect(suggestFrame({ consensus: { year: bce(20000) }, method: "calendar" })).toBe("bp");
+    expect(suggestFrame({ consensus: { year: bce(6000) }, method: "received" })).toBe("bp");
   });
 
-  it("keeps reckoned dates in calendar reckoning even when BCE", () => {
+  it("keeps everything after 5000 BCE in calendar reckoning", () => {
     expect(suggestFrame(ALEXANDER)).toBe("calendar");
     expect(suggestFrame(CYRUS)).toBe("calendar");
     expect(suggestFrame(SEPT_11)).toBe("calendar");
-  });
-
-  it("puts anything pre-Holocene in BP regardless of method", () => {
-    expect(suggestFrame({ consensus: { year: bce(20000) }, method: "calendar" })).toBe("bp");
-  });
-
-  it("falls back on relative fuzziness when method is unknown", () => {
-    // Tight date, no method: stays in calendar reckoning.
+    // Stonehenge is the case the old rule was built around: a radiocarbon date, and so measured,
+    // which led in BP at 2500 BCE. Under the age rule it reads in BCE, which is what a reader
+    // looking at Stonehenge expects and what every reference work prints.
+    expect(suggestFrame(STONEHENGE)).toBe("calendar");
+    // Fuzziness no longer votes. A date uncertain by 800 years is still inside the era where
+    // readers expect BCE, and expressing it as a count back from 1950 helped nobody.
+    expect(suggestFrame({ consensus: { year: bce(3000), fuzz: 800 } })).toBe("calendar");
     expect(suggestFrame({ consensus: { year: bce(500), fuzz: 10 } })).toBe("calendar");
-    // Uncertainty a large fraction of its own age: reads as measurement-shaped.
-    expect(suggestFrame({ consensus: { year: bce(3000), fuzz: 800 } })).toBe("bp");
+  });
+
+  it("still leads in BP when no calendar equivalent exists", () => {
+    // An uncalibrated radiocarbon age is the one case age does not decide, because there is no
+    // calendar year to convert to.
+    expect(suggestFrame({ consensus: { year: bce(1000) }, method: "radiocarbon-uncalibrated" }))
+      .toBe("bp");
   });
 });
 
@@ -111,7 +124,9 @@ describe("uncertainty is widened by each bound's own fuzz", () => {
 
 describe("rendering never claims more precision than it has", () => {
   it("scales units by magnitude", () => {
-    expect(formatBp(bce(8000))).toBe("9,949 BP");
+    // Was "9,949 BP". The thousands threshold now sits at the BP floor rather than at 10,000,
+    // so every date the app frames as BP prints in ka or Ma and none in bare years.
+    expect(formatBp(bce(8000))).toBe("9.9 ka");
     expect(formatBpRange(OLDOWAN)).toBe("3.4\u20133.2 Ma");
   });
 

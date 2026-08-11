@@ -21,7 +21,21 @@ export interface TreeIndex {
 }
 
 /** Sort: chronological by start_year, undated last, then name. */
+/**
+ * Top-level branches that are classifications rather than places, and so read last.
+ *
+ * The ten geographic regions carry no date, and the comparator sorts undated entities after dated
+ * ones, so Languages jumped to the head of the list the moment it inherited 50,000 BCE from the
+ * earliest language beneath it. A reader opening the app landed on a language taxonomy before any
+ * history. Its own date is now null, which is truthful -- a taxonomy does not begin in a year --
+ * and this set carries it past the regions rather than into the middle of them alphabetically.
+ */
+const APPENDIX_ROOTS = new Set(["languages"]);
+
 export function compareEntities(a: Entity, b: Entity): number {
+  const aa = APPENDIX_ROOTS.has(a.id);
+  const ba = APPENDIX_ROOTS.has(b.id);
+  if (aa !== ba) return aa ? 1 : -1;
   const as = a.start_year;
   const bs = b.start_year;
   if (as === null && bs === null) return a.name.localeCompare(b.name);

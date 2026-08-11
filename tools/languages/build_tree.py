@@ -74,6 +74,14 @@ def main():
     kept = json.load(open(os.path.join(LANG, "kept.json")))
 
     # ---- which family nodes are actually needed -----------------------------
+    # Glottolog's non-genealogical pseudo-families are not descent groups and must not be emitted
+    # as clades. Bookkeeping is the worst of them -- entries given a code for administrative
+    # reasons that the editors do not regard as real languoids -- and it had shipped as a top-level
+    # branch of the Languages tree beside Indo-European.
+    PSEUDO_FAMILIES = {"Bookkeeping", "Unclassifiable", "Pidgin", "Sign Language",
+                       "Artificial Language", "Unattested", "Speech Register", "Mixed Language"}
+    pseudo_gcs = {gc for gc, m in meta.items() if m.get("name") in PSEUDO_FAMILIES}
+
     needed = set()
     for r in kept:
         for gc in r.get("path") or []:
@@ -160,7 +168,7 @@ def main():
     emitted = {}
     for gc in sorted(surviving, key=lambda g: len(paths.get(g, "").split("/"))):
         m = meta.get(gc)
-        if m is None:
+        if m is None or gc in pseudo_gcs:
             continue
         chain = [resolve(a) for a in paths.get(gc, "").split("/") if a]
         chain = [c for c in chain if c in surviving and c != gc]
@@ -224,6 +232,14 @@ def main():
     for r in kept:
         path = [resolve(a) for a in (r.get("path") or [])]
         path = [p for p in path if p in surviving]
+        # A language whose only ancestry runs through a pseudo-family has no descent claim, so it
+        # goes to Unclassified rather than being filed beneath a bookkeeping label.
+        if path and all(p in pseudo_gcs for p in path):
+            parent = f"{ROOT}.unclassified"
+            r["parent_id"] = parent
+            r["entity_id"] = f"{parent}.{slug(r['name'])}"
+            out.append(r | {"id": r["entity_id"], "kind": "language", "is_family_node": False})
+            continue
         if r.get("classification") == "proto_language" and not path:
             parent = proto_home(r)
         elif r["isolate"]:

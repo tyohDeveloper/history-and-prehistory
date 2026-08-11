@@ -219,6 +219,14 @@ def _fill_hulls(out, by_id):
     for e in out:
         if e.get("parent_id") is None:
             walk(e)
+            # The root of a taxonomy has no date of its own. Taking the hull gave it 50,000 BCE,
+            # from whichever reconstruction reaches furthest back, which is not a fact about
+            # "Languages" and sorted the whole branch above the geographic regions.
+            e["start_year"] = None
+            e["end_year"] = None
+            e.pop("start_dating_method", None)
+            e.pop("end_dating_method", None)
+            e.pop("extant", None)
     # Any node still undated has no dated descendant at all, so it becomes a pure container. A
     # region node is the highest-traffic kind in the app and must carry a summary, so say what the
     # node is rather than leaving a reader who lands on it with a bare name.

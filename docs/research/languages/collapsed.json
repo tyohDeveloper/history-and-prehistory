@@ -1,0 +1,4988 @@
+[
+ {
+  "absorbed": "AHK",
+  "absorbed_glottocode": "ahkk1235",
+  "absorbed_level": "family",
+  "into": "South Omotic",
+  "into_glottocode": "sout2845",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Algonquian",
+  "absorbed_glottocode": "algo1257",
+  "absorbed_level": "family",
+  "into": "Algonquian-Blackfoot",
+  "into_glottocode": "algo1256",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Alor",
+  "absorbed_glottocode": "alor1250",
+  "absorbed_level": "family",
+  "into": "Alor-Pantar",
+  "into_glottocode": "alor1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Amalumute",
+  "absorbed_glottocode": "amal1243",
+  "absorbed_level": "family",
+  "into": "Three Rivers",
+  "into_glottocode": "thre1238",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Ambonic",
+  "absorbed_glottocode": "ambo1254",
+  "absorbed_level": "family",
+  "into": "Piru Bay",
+  "into_glottocode": "piru1243",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Antillean Arawakan",
+  "absorbed_glottocode": "anti1247",
+  "absorbed_level": "family",
+  "into": "Caribbean Arawakan",
+  "into_glottocode": "cari1281",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Apachean",
+  "absorbed_glottocode": "apac1239",
+  "absorbed_level": "family",
+  "into": "Athabaskan-Eyak",
+  "into_glottocode": "atha1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Arabic",
+  "absorbed_glottocode": "arab1395",
+  "absorbed_level": "family",
+  "into": "Arabian",
+  "into_glottocode": "arab1394",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Upper Arrernte",
+  "absorbed_glottocode": "aran1263",
+  "absorbed_level": "family",
+  "into": "Arandic-Thura-Yura",
+  "into_glottocode": "aran1266",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Arandic",
+  "absorbed_glottocode": "aran1267",
+  "absorbed_level": "family",
+  "into": "Arandic-Thura-Yura",
+  "into_glottocode": "aran1266",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Arapesh",
+  "absorbed_glottocode": "arap1279",
+  "absorbed_level": "family",
+  "into": "Kombio-Arapesh-Urat",
+  "into_glottocode": "komb1276",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Are-Taupota linkage",
+  "absorbed_glottocode": "aret1241",
+  "absorbed_level": "family",
+  "into": "North Papuan Mainland-D'Entrecasteaux linkage",
+  "into_glottocode": "nort2848",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Asha-Ashe-Kak",
+  "absorbed_glottocode": "asha1241",
+  "absorbed_level": "family",
+  "into": "Southern Maipuran",
+  "into_glottocode": "sout3131",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Asha-Ashe-Kak-Matsi-Nan",
+  "absorbed_glottocode": "asha1244",
+  "absorbed_level": "family",
+  "into": "Southern Maipuran",
+  "into_glottocode": "sout3131",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Ashkun-Kate-Waigali",
+  "absorbed_glottocode": "ashk1248",
+  "absorbed_level": "family",
+  "into": "Nuristani",
+  "into_glottocode": "nuri1243",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Asmat-Kamoro",
+  "absorbed_glottocode": "asma1258",
+  "absorbed_level": "family",
+  "into": "Asmat-Kamrau Bay",
+  "into_glottocode": "asma1256",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Kamrupa",
+  "absorbed_glottocode": "assa1262",
+  "absorbed_level": "family",
+  "into": "Kamrupa",
+  "into_glottocode": "kamt1240",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Athabaskan",
+  "absorbed_glottocode": "atha1247",
+  "absorbed_level": "family",
+  "into": "Athabaskan-Eyak",
+  "into_glottocode": "atha1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Atlas Berber",
+  "absorbed_glottocode": "atla1275",
+  "absorbed_level": "family",
+  "into": "Kabyle-Atlas Berber",
+  "into_glottocode": "kaby1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Atrato",
+  "absorbed_glottocode": "atra1235",
+  "absorbed_level": "family",
+  "into": "Chocoan",
+  "into_glottocode": "choc1280",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Au-Olo-Elkei",
+  "absorbed_glottocode": "auol1234",
+  "absorbed_level": "family",
+  "into": "Central Torricelli",
+  "into_glottocode": "cent2407",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Awyu-Dumut",
+  "absorbed_glottocode": "awyu1263",
+  "absorbed_level": "family",
+  "into": "Greater Awyu",
+  "into_glottocode": "grea1275",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Awyu",
+  "absorbed_glottocode": "awyu1264",
+  "absorbed_level": "family",
+  "into": "Greater Awyu",
+  "into_glottocode": "grea1275",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Oghuz",
+  "absorbed_glottocode": "azer1255",
+  "absorbed_level": "family",
+  "into": "Oghuz",
+  "into_glottocode": "oghu1243",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Badaic-Limola",
+  "absorbed_glottocode": "bada1265",
+  "absorbed_level": "family",
+  "into": "Rampi-Seko-Badaic",
+  "into_glottocode": "ramp1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Baic",
+  "absorbed_glottocode": "baic1239",
+  "absorbed_level": "family",
+  "into": "Macro-Bai",
+  "into_glottocode": "macr1275",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bak",
+  "absorbed_glottocode": "bakk1238",
+  "absorbed_level": "family",
+  "into": "Central Atlantic",
+  "into_glottocode": "cent2230",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bam-Manam",
+  "absorbed_glottocode": "bamm1241",
+  "absorbed_level": "family",
+  "into": "Schouten linkage",
+  "into_glottocode": "scho1242",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bandaic",
+  "absorbed_glottocode": "band1341",
+  "absorbed_level": "family",
+  "into": "Ubangi Ka",
+  "into_glottocode": "uban1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bantu Layer Gulf Guinea Creole Portuguese",
+  "absorbed_glottocode": "bant1299",
+  "absorbed_level": "family",
+  "into": "Gulf Guinea Creole Portuguese",
+  "into_glottocode": "lowe1440",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Barian",
+  "absorbed_glottocode": "bari1283",
+  "absorbed_level": "family",
+  "into": "Nilotic",
+  "into_glottocode": "nilo1247",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Basaa (A.40)",
+  "absorbed_glottocode": "basa1283",
+  "absorbed_level": "family",
+  "into": "Basaa-Yaunde (A40-70)",
+  "into_glottocode": "basa1292",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Basaa-Bakoko",
+  "absorbed_glottocode": "basa1289",
+  "absorbed_level": "family",
+  "into": "Basaa-Yaunde (A40-70)",
+  "into_glottocode": "basa1292",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bassaic",
+  "absorbed_glottocode": "bass1262",
+  "absorbed_level": "family",
+  "into": "Kru",
+  "into_glottocode": "krua1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bassa-Klao",
+  "absorbed_glottocode": "bass1266",
+  "absorbed_level": "family",
+  "into": "Kru",
+  "into_glottocode": "krua1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bel",
+  "absorbed_glottocode": "bell1262",
+  "absorbed_level": "family",
+  "into": "Vitiaz linkage",
+  "into_glottocode": "viti1243",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bel-Roinji-Nenaya",
+  "absorbed_glottocode": "belr1234",
+  "absorbed_level": "family",
+  "into": "Vitiaz linkage",
+  "into_glottocode": "viti1243",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Beteic",
+  "absorbed_glottocode": "bete1265",
+  "absorbed_level": "family",
+  "into": "Kru",
+  "into_glottocode": "krua1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Biakic",
+  "absorbed_glottocode": "biak1249",
+  "absorbed_level": "family",
+  "into": "Cenderawasih Bay",
+  "into_glottocode": "cend1238",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bataic",
+  "absorbed_glottocode": "bium1271",
+  "absorbed_level": "family",
+  "into": "South Biu-Mandara",
+  "into_glottocode": "sout3145",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bobangic",
+  "absorbed_glottocode": "boba1248",
+  "absorbed_level": "family",
+  "into": "Ngiri Riverain Ubangi",
+  "into_glottocode": "ngir1252",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Bobangic Riverain",
+  "absorbed_glottocode": "boba1249",
+  "absorbed_level": "family",
+  "into": "Ngiri Riverain Ubangi",
+  "into_glottocode": "ngir1252",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Bodish",
+  "absorbed_glottocode": "bodi1257",
+  "absorbed_level": "family",
+  "into": "Bodic",
+  "into_glottocode": "bodi1256",
+  "reason": "same name stem",
+  "languages_below": 5
+ },
+ {
+  "absorbed": "Bontok-Kankanay",
+  "absorbed_glottocode": "bont1246",
+  "absorbed_level": "family",
+  "into": "Central Cordilleran",
+  "into_glottocode": "cent2296",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Boroic",
+  "absorbed_glottocode": "boro1284",
+  "absorbed_level": "family",
+  "into": "Bodo-Garo",
+  "into_glottocode": "bodo1279",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bringen",
+  "absorbed_glottocode": "brin1245",
+  "absorbed_level": "family",
+  "into": "Western Daly",
+  "into_glottocode": "west2434",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Tamanic-Bugis",
+  "absorbed_glottocode": "bugi1243",
+  "absorbed_level": "family",
+  "into": "Greater South Sulawesi",
+  "into_glottocode": "sout2923",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Buinic",
+  "absorbed_glottocode": "buin1247",
+  "absorbed_level": "family",
+  "into": "South Bougainville",
+  "into_glottocode": "sout2948",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Buin",
+  "absorbed_glottocode": "buin1248",
+  "absorbed_level": "family",
+  "into": "South Bougainville",
+  "into_glottocode": "sout2948",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Buka",
+  "absorbed_glottocode": "buka1262",
+  "absorbed_level": "family",
+  "into": "Northwest Solomonic",
+  "into_glottocode": "nort3225",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Mel",
+  "absorbed_glottocode": "bull1245",
+  "absorbed_level": "family",
+  "into": "Mel",
+  "into_glottocode": "mela1257",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bungku-Tolaki",
+  "absorbed_glottocode": "bung1268",
+  "absorbed_level": "family",
+  "into": "Southeastern Celebic",
+  "into_glottocode": "sout2928",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bura-Marghi",
+  "absorbed_glottocode": "bura1296",
+  "absorbed_level": "family",
+  "into": "Margi-Mandara-Mofu",
+  "into_glottocode": "marg1267",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Buram-Saraf",
+  "absorbed_glottocode": "bura1298",
+  "absorbed_level": "family",
+  "into": "Narrow Talodi",
+  "into_glottocode": "narr1279",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bwamu-Oti-Volta",
+  "absorbed_glottocode": "bwam1248",
+  "absorbed_level": "family",
+  "into": "Gur",
+  "into_glottocode": "gura1261",
+  "reason": "only child, held no language of its own",
+  "languages_below": 6
+ },
+ {
+  "absorbed": "Central Totonacan",
+  "absorbed_glottocode": "cent1397",
+  "absorbed_level": "family",
+  "into": "Totonacan",
+  "into_glottocode": "toto1251",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central-Northern Aslian",
+  "absorbed_glottocode": "cent1987",
+  "absorbed_level": "family",
+  "into": "Aslian",
+  "into_glottocode": "asli1243",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Core Central Kuki-Chin",
+  "absorbed_glottocode": "cent2005",
+  "absorbed_level": "family",
+  "into": "Kuki-Chin",
+  "into_glottocode": "kuki1246",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Bandaic",
+  "absorbed_glottocode": "cent2021",
+  "absorbed_level": "family",
+  "into": "Ubangi Ka",
+  "into_glottocode": "uban1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Core Central Bandaic",
+  "absorbed_glottocode": "cent2022",
+  "absorbed_level": "family",
+  "into": "Ubangi Ka",
+  "into_glottocode": "uban1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Upper Cross",
+  "absorbed_glottocode": "cent2027",
+  "absorbed_level": "family",
+  "into": "Upper Cross",
+  "into_glottocode": "uppe1418",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Moru-Madi",
+  "absorbed_glottocode": "cent2043",
+  "absorbed_level": "family",
+  "into": "Moru-Madi",
+  "into_glottocode": "moru1252",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Sara Central",
+  "absorbed_glottocode": "cent2044",
+  "absorbed_level": "family",
+  "into": "Saraic",
+  "into_glottocode": "sara1349",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Papuan Oceanic",
+  "absorbed_glottocode": "cent2070",
+  "absorbed_level": "family",
+  "into": "Peripheral Papuan Tip linkage",
+  "into_glottocode": "peri1258",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Timoric A",
+  "absorbed_glottocode": "cent2079",
+  "absorbed_level": "family",
+  "into": "Eastern Timor",
+  "into_glottocode": "east2894",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central East Formosan",
+  "absorbed_glottocode": "cent2103",
+  "absorbed_level": "family",
+  "into": "East Formosan",
+  "into_glottocode": "east2493",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Tariku",
+  "absorbed_glottocode": "cent2110",
+  "absorbed_level": "family",
+  "into": "Lakes Plain",
+  "into_glottocode": "lake1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Salish",
+  "absorbed_glottocode": "cent2129",
+  "absorbed_level": "family",
+  "into": "Salishan",
+  "into_glottocode": "sali1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Numic",
+  "absorbed_glottocode": "cent2130",
+  "absorbed_level": "family",
+  "into": "Uto-Aztecan",
+  "into_glottocode": "utoa1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Chumashan",
+  "absorbed_glottocode": "cent2139",
+  "absorbed_level": "family",
+  "into": "Chumashan",
+  "into_glottocode": "chum1262",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Quechua I",
+  "absorbed_glottocode": "cent2141",
+  "absorbed_level": "family",
+  "into": "Quechuan",
+  "into_glottocode": "quec1387",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Eastern Aramaic",
+  "absorbed_glottocode": "cent2217",
+  "absorbed_level": "family",
+  "into": "Aramaic",
+  "into_glottocode": "aram1259",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Central-Western Kadugli-Krongo",
+  "absorbed_glottocode": "cent2229",
+  "absorbed_level": "family",
+  "into": "Kadugli-Krongo",
+  "into_glottocode": "kadu1256",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Kainji",
+  "absorbed_glottocode": "cent2242",
+  "absorbed_level": "family",
+  "into": "Kainji",
+  "into_glottocode": "kain1275",
+  "reason": "same name stem",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Central Gur",
+  "absorbed_glottocode": "cent2243",
+  "absorbed_level": "family",
+  "into": "Gur",
+  "into_glottocode": "gura1261",
+  "reason": "same name stem",
+  "languages_below": 11
+ },
+ {
+  "absorbed": "Central Philippine",
+  "absorbed_glottocode": "cent2246",
+  "absorbed_level": "family",
+  "into": "Greater Central Philippine",
+  "into_glottocode": "grea1284",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Central Ngayarda",
+  "absorbed_glottocode": "cent2248",
+  "absorbed_level": "family",
+  "into": "South-West Pama-Nyungan",
+  "into_glottocode": "sout3134",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Lower Cross",
+  "absorbed_glottocode": "cent2253",
+  "absorbed_level": "family",
+  "into": "Lower Cross",
+  "into_glottocode": "obol1242",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Nahuatl",
+  "absorbed_glottocode": "cent2258",
+  "absorbed_level": "family",
+  "into": "Aztec",
+  "into_glottocode": "azte1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Tano",
+  "absorbed_glottocode": "cent2262",
+  "absorbed_level": "family",
+  "into": "Tano",
+  "into_glottocode": "tano1248",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Central Micronesian",
+  "absorbed_glottocode": "cent2276",
+  "absorbed_level": "family",
+  "into": "Micronesian",
+  "into_glottocode": "micr1243",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Central Eastern Botatwe",
+  "absorbed_glottocode": "cent2279",
+  "absorbed_level": "family",
+  "into": "Botatwe",
+  "into_glottocode": "bota1239",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Oil",
+  "absorbed_glottocode": "cent2283",
+  "absorbed_level": "family",
+  "into": "Oil",
+  "into_glottocode": "oila1234",
+  "reason": "same name stem",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Central Kalenjin",
+  "absorbed_glottocode": "cent2293",
+  "absorbed_level": "family",
+  "into": "Nilotic",
+  "into_glottocode": "nilo1247",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Northern Outlier Polynesian-East Polynesian",
+  "absorbed_glottocode": "cent2298",
+  "absorbed_level": "family",
+  "into": "Solomons Northern Outlier Polynesian-East Polynesian",
+  "into_glottocode": "solo1260",
+  "reason": "only child, held no language of its own",
+  "languages_below": 5
+ },
+ {
+  "absorbed": "Central Kuki-Chin",
+  "absorbed_glottocode": "cent2330",
+  "absorbed_level": "family",
+  "into": "Kuki-Chin",
+  "into_glottocode": "kuki1246",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Tibetan",
+  "absorbed_glottocode": "cent2346",
+  "absorbed_level": "family",
+  "into": "Early Old Tibetan",
+  "into_glottocode": "oldm1245",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Dagan",
+  "absorbed_glottocode": "cent2401",
+  "absorbed_level": "family",
+  "into": "Dagan",
+  "into_glottocode": "daga1274",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Sotho-Tswana",
+  "absorbed_glottocode": "cent2406",
+  "absorbed_level": "family",
+  "into": "Sotho-Tswana (S.30)",
+  "into_glottocode": "soth1248",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Central Italian Romance",
+  "absorbed_glottocode": "cent2427",
+  "absorbed_level": "family",
+  "into": "Italian Romance",
+  "into_glottocode": "ital1287",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Chali-Bumthangic",
+  "absorbed_glottocode": "chal1266",
+  "absorbed_level": "family",
+  "into": "Phobjib-Chali-Bumthangic",
+  "into_glottocode": "phob1238",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Chama subgroup",
+  "absorbed_glottocode": "cham1314",
+  "absorbed_level": "family",
+  "into": "Mainline Pano",
+  "into_glottocode": "main1279",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Cham",
+  "absorbed_glottocode": "cham1328",
+  "absorbed_level": "family",
+  "into": "Aceh-Chamic",
+  "into_glottocode": "cham1327",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Chamic",
+  "absorbed_glottocode": "cham1330",
+  "absorbed_level": "family",
+  "into": "Aceh-Chamic",
+  "into_glottocode": "cham1327",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Chang-Phom-Konyak",
+  "absorbed_glottocode": "chan1331",
+  "absorbed_level": "family",
+  "into": "Patkaian",
+  "into_glottocode": "kony1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Chokwe-Ngangela-Nyemba (K.20)",
+  "absorbed_glottocode": "chok1244",
+  "absorbed_level": "family",
+  "into": "Chokwe-Lunda",
+  "into_glottocode": "chok1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Cholan-Tzeltalan",
+  "absorbed_glottocode": "chol1286",
+  "absorbed_level": "family",
+  "into": "Mayan",
+  "into_glottocode": "maya1287",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Chuanqiandian",
+  "absorbed_glottocode": "chua1248",
+  "absorbed_level": "family",
+  "into": "Greater Chuanqiandian",
+  "into_glottocode": "grea1295",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Chukotian",
+  "absorbed_glottocode": "chuk1272",
+  "absorbed_level": "family",
+  "into": "Chukotko-Kamchatkan",
+  "into_glottocode": "chuk1271",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Classical-Middle Armenian",
+  "absorbed_glottocode": "clas1249",
+  "absorbed_level": "language",
+  "into": "Armenic",
+  "into_glottocode": "arme1241",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Classical-Middle-Modern Sinitic",
+  "absorbed_glottocode": "clas1255",
+  "absorbed_level": "family",
+  "into": "Sinitic",
+  "into_glottocode": "sini1245",
+  "reason": "same name stem",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Classical Indo-European",
+  "absorbed_glottocode": "clas1257",
+  "absorbed_level": "family",
+  "into": "Indo-European",
+  "into_glottocode": "indo1319",
+  "reason": "same name stem",
+  "languages_below": 159
+ },
+ {
+  "absorbed": "Coastal Chatino",
+  "absorbed_glottocode": "coas1314",
+  "absorbed_level": "family",
+  "into": "Chatino",
+  "into_glottocode": "chat1268",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Coastal NEC Bantu",
+  "absorbed_glottocode": "coas1317",
+  "absorbed_level": "family",
+  "into": "Northeast Coastal Bantu",
+  "into_glottocode": "nort3209",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Coastal Finnic",
+  "absorbed_glottocode": "coas1319",
+  "absorbed_level": "family",
+  "into": "Finnic",
+  "into_glottocode": "finn1317",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Coast Salish",
+  "absorbed_glottocode": "coas1325",
+  "absorbed_level": "family",
+  "into": "Salishan",
+  "into_glottocode": "sali1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Common Turkic",
+  "absorbed_glottocode": "comm1245",
+  "absorbed_level": "family",
+  "into": "Turkic",
+  "into_glottocode": "turk1311",
+  "reason": "same name stem",
+  "languages_below": 9
+ },
+ {
+  "absorbed": "Common Kaili",
+  "absorbed_glottocode": "comm1248",
+  "absorbed_level": "family",
+  "into": "Kaili-Wolio",
+  "into_glottocode": "kail1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Core Chibchan",
+  "absorbed_glottocode": "core1252",
+  "absorbed_level": "family",
+  "into": "Chibchan",
+  "into_glottocode": "chib1249",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Core Mayan",
+  "absorbed_glottocode": "core1254",
+  "absorbed_level": "family",
+  "into": "Mayan",
+  "into_glottocode": "maya1287",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Core Chatino",
+  "absorbed_glottocode": "core1263",
+  "absorbed_level": "family",
+  "into": "Chatino",
+  "into_glottocode": "chat1268",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Cree-Montagnais-Naskapi",
+  "absorbed_glottocode": "cree1271",
+  "absorbed_level": "family",
+  "into": "Algonquian-Blackfoot",
+  "into_glottocode": "algo1256",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Cree",
+  "absorbed_glottocode": "cree1272",
+  "absorbed_level": "family",
+  "into": "Algonquian-Blackfoot",
+  "into_glottocode": "algo1256",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Dakotan",
+  "absorbed_glottocode": "dako1257",
+  "absorbed_level": "family",
+  "into": "Siouan",
+  "into_glottocode": "siou1252",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Dangla-Mabire-Birgit",
+  "absorbed_glottocode": "dang1275",
+  "absorbed_level": "family",
+  "into": "East Chadic B",
+  "into_glottocode": "east2633",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Dimsuffix Southern Bantu",
+  "absorbed_glottocode": "dims1234",
+  "absorbed_level": "family",
+  "into": "Southern Bantu",
+  "into_glottocode": "sout3387",
+  "reason": "only child, held no language of its own",
+  "languages_below": 10
+ },
+ {
+  "absorbed": "Dusunic",
+  "absorbed_glottocode": "dusu1277",
+  "absorbed_level": "family",
+  "into": "Greater Dusunic",
+  "into_glottocode": "grea1293",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Dzongkhic",
+  "absorbed_glottocode": "dzon1238",
+  "absorbed_level": "family",
+  "into": "Early Old Tibetan",
+  "into_glottocode": "oldm1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern South Slavic",
+  "absorbed_glottocode": "east2269",
+  "absorbed_level": "family",
+  "into": "South Slavic",
+  "into_glottocode": "sout3147",
+  "reason": "same name stem",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "East Palaungic",
+  "absorbed_glottocode": "east2331",
+  "absorbed_level": "family",
+  "into": "Palaungic",
+  "into_glottocode": "pala1352",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Grusi",
+  "absorbed_glottocode": "east2397",
+  "absorbed_level": "family",
+  "into": "East-West Grusi",
+  "into_glottocode": "east2740",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "East Ogonoid",
+  "absorbed_glottocode": "east2401",
+  "absorbed_level": "family",
+  "into": "Ogonoid",
+  "into_glottocode": "ogon1240",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Kru",
+  "absorbed_glottocode": "east2415",
+  "absorbed_level": "family",
+  "into": "Kru",
+  "into_glottocode": "krua1234",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Bete",
+  "absorbed_glottocode": "east2416",
+  "absorbed_level": "family",
+  "into": "Kru",
+  "into_glottocode": "krua1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Nilotic",
+  "absorbed_glottocode": "east2418",
+  "absorbed_level": "family",
+  "into": "Nilotic",
+  "into_glottocode": "nilo1247",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Songhay",
+  "absorbed_glottocode": "east2431",
+  "absorbed_level": "family",
+  "into": "Songhay",
+  "into_glottocode": "song1307",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Tokalau Fijian",
+  "absorbed_glottocode": "east2445",
+  "absorbed_level": "family",
+  "into": "Central Pacific linkage",
+  "into_glottocode": "cent2060",
+  "reason": "only child, held no language of its own",
+  "languages_below": 13
+ },
+ {
+  "absorbed": "East Polynesian",
+  "absorbed_glottocode": "east2449",
+  "absorbed_level": "family",
+  "into": "Solomons Northern Outlier Polynesian-East Polynesian",
+  "into_glottocode": "solo1260",
+  "reason": "only child, held no language of its own",
+  "languages_below": 5
+ },
+ {
+  "absorbed": "Eastern Admiralty Islands",
+  "absorbed_glottocode": "east2459",
+  "absorbed_level": "family",
+  "into": "Admiralty Islands",
+  "into_glottocode": "admi1239",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "East Manus",
+  "absorbed_glottocode": "east2460",
+  "absorbed_level": "family",
+  "into": "Manus",
+  "into_glottocode": "manu1262",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Celebic",
+  "absorbed_glottocode": "east2488",
+  "absorbed_level": "family",
+  "into": "Celebic",
+  "into_glottocode": "cele1242",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Eastern Saluan-Banggai",
+  "absorbed_glottocode": "east2491",
+  "absorbed_level": "family",
+  "into": "Saluan-Banggai",
+  "into_glottocode": "salu1251",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Eleman",
+  "absorbed_glottocode": "east2494",
+  "absorbed_level": "family",
+  "into": "Eleman",
+  "into_glottocode": "nucl1580",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Pauwasi",
+  "absorbed_glottocode": "east2530",
+  "absorbed_level": "family",
+  "into": "Pauwasi",
+  "into_glottocode": "pauw1244",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Miwokan",
+  "absorbed_glottocode": "east2546",
+  "absorbed_level": "family",
+  "into": "Miwok-Costanoan",
+  "into_glottocode": "miwo1274",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Naduhup",
+  "absorbed_glottocode": "east2549",
+  "absorbed_level": "family",
+  "into": "Naduhup",
+  "into_glottocode": "nada1235",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Otomanguean",
+  "absorbed_glottocode": "east2557",
+  "absorbed_level": "family",
+  "into": "Otomanguean",
+  "into_glottocode": "otom1299",
+  "reason": "same name stem",
+  "languages_below": 11
+ },
+ {
+  "absorbed": "East Chadic A.2",
+  "absorbed_glottocode": "east2645",
+  "absorbed_level": "family",
+  "into": "East Chadic A",
+  "into_glottocode": "east2640",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Omo-Tana",
+  "absorbed_glottocode": "east2653",
+  "absorbed_level": "family",
+  "into": "Omo-Tana",
+  "into_glottocode": "omot1245",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Aramaic",
+  "absorbed_glottocode": "east2680",
+  "absorbed_level": "family",
+  "into": "Aramaic",
+  "into_glottocode": "aram1259",
+  "reason": "same name stem",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Eastern Mande",
+  "absorbed_glottocode": "east2697",
+  "absorbed_level": "family",
+  "into": "Mande",
+  "into_glottocode": "mand1469",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Tucanoan",
+  "absorbed_glottocode": "east2698",
+  "absorbed_level": "family",
+  "into": "Tucanoan",
+  "into_glottocode": "tuca1253",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Eastern Tucanoan",
+  "absorbed_glottocode": "east2702",
+  "absorbed_level": "family",
+  "into": "Tucanoan",
+  "into_glottocode": "tuca1253",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Huon",
+  "absorbed_glottocode": "east2705",
+  "absorbed_level": "family",
+  "into": "Huon",
+  "into_glottocode": "huon1246",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "East Chadic B.1",
+  "absorbed_glottocode": "east2709",
+  "absorbed_level": "family",
+  "into": "East Chadic B",
+  "into_glottocode": "east2633",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Malayo-Polynesian",
+  "absorbed_glottocode": "east2712",
+  "absorbed_level": "family",
+  "into": "Malayo-Polynesian",
+  "into_glottocode": "mala1545",
+  "reason": "same name stem",
+  "languages_below": 46
+ },
+ {
+  "absorbed": "Eastern Romance",
+  "absorbed_glottocode": "east2714",
+  "absorbed_level": "family",
+  "into": "Romance",
+  "into_glottocode": "roma1334",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Kiranti",
+  "absorbed_glottocode": "east2719",
+  "absorbed_level": "family",
+  "into": "Kiranti",
+  "into_glottocode": "kira1253",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "East Chadic A.2 1",
+  "absorbed_glottocode": "east2721",
+  "absorbed_level": "family",
+  "into": "East Chadic A",
+  "into_glottocode": "east2640",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Panjabic",
+  "absorbed_glottocode": "east2727",
+  "absorbed_level": "family",
+  "into": "Greater Panjabic",
+  "into_glottocode": "lahn1241",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Goidelic",
+  "absorbed_glottocode": "east2734",
+  "absorbed_level": "family",
+  "into": "Goidelic",
+  "into_glottocode": "goid1240",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Ede",
+  "absorbed_glottocode": "east2738",
+  "absorbed_level": "family",
+  "into": "Defoid",
+  "into_glottocode": "defo1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Farsic",
+  "absorbed_glottocode": "east2745",
+  "absorbed_level": "family",
+  "into": "Farsic",
+  "into_glottocode": "fars1255",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "East Piru Bay",
+  "absorbed_glottocode": "east2752",
+  "absorbed_level": "family",
+  "into": "Piru Bay",
+  "into_glottocode": "piru1243",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern-Western Armenian",
+  "absorbed_glottocode": "east2768",
+  "absorbed_level": "family",
+  "into": "Armenic",
+  "into_glottocode": "arme1241",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Ngero",
+  "absorbed_glottocode": "east2772",
+  "absorbed_level": "family",
+  "into": "Ngero",
+  "into_glottocode": "nger1240",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "East-Central Swedic",
+  "absorbed_glottocode": "east2780",
+  "absorbed_level": "family",
+  "into": "North Scandinavian",
+  "into_glottocode": "nort3266",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "East Swedic",
+  "absorbed_glottocode": "east2781",
+  "absorbed_level": "family",
+  "into": "North Scandinavian",
+  "into_glottocode": "nort3266",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Samur",
+  "absorbed_glottocode": "east2790",
+  "absorbed_level": "family",
+  "into": "Daghestanian",
+  "into_glottocode": "dagh1238",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "South Greek",
+  "absorbed_glottocode": "east2798",
+  "absorbed_level": "family",
+  "into": "Graeco-Phrygian",
+  "into_glottocode": "grae1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 5
+ },
+ {
+  "absorbed": "Eastern Romanian",
+  "absorbed_glottocode": "east2865",
+  "absorbed_level": "family",
+  "into": "Romance",
+  "into_glottocode": "roma1334",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Skouic",
+  "absorbed_glottocode": "east2892",
+  "absorbed_level": "family",
+  "into": "Sko",
+  "into_glottocode": "skoo1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Tupian",
+  "absorbed_glottocode": "east2909",
+  "absorbed_level": "family",
+  "into": "Tupian",
+  "into_glottocode": "tupi1275",
+  "reason": "same name stem",
+  "languages_below": 7
+ },
+ {
+  "absorbed": "Ede",
+  "absorbed_glottocode": "edea1234",
+  "absorbed_level": "family",
+  "into": "Defoid",
+  "into_glottocode": "defo1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Edekiri",
+  "absorbed_glottocode": "edek1238",
+  "absorbed_level": "family",
+  "into": "Defoid",
+  "into_glottocode": "defo1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Edoid",
+  "absorbed_glottocode": "edoi1239",
+  "absorbed_level": "family",
+  "into": "Akpes-Edoid",
+  "into_glottocode": "akpe1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Efate",
+  "absorbed_glottocode": "efat1236",
+  "absorbed_level": "family",
+  "into": "Epi-Efate",
+  "into_glottocode": "epie1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Efate-Shepherds",
+  "absorbed_glottocode": "efat1241",
+  "absorbed_level": "family",
+  "into": "Epi-Efate",
+  "into_glottocode": "epie1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Efikic",
+  "absorbed_glottocode": "efik1244",
+  "absorbed_level": "family",
+  "into": "Lower Cross",
+  "into_glottocode": "obol1242",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Embera",
+  "absorbed_glottocode": "embe1258",
+  "absorbed_level": "family",
+  "into": "Chocoan",
+  "into_glottocode": "choc1280",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eskimo",
+  "absorbed_glottocode": "eski1265",
+  "absorbed_level": "family",
+  "into": "Eskimo-Aleut",
+  "into_glottocode": "eski1264",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Farsic-Caucasian Tat",
+  "absorbed_glottocode": "fars1254",
+  "absorbed_level": "family",
+  "into": "Middle-Modern Persian",
+  "into_glottocode": "midd1352",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "First Vernacular Hmong",
+  "absorbed_glottocode": "firs1234",
+  "absorbed_level": "family",
+  "into": "Greater Chuanqiandian",
+  "into_glottocode": "grea1295",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West-Central Flores",
+  "absorbed_glottocode": "flor1241",
+  "absorbed_level": "family",
+  "into": "Flores",
+  "into_glottocode": "flor1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Garuhic",
+  "absorbed_glottocode": "garu1247",
+  "absorbed_level": "family",
+  "into": "Hanseman",
+  "into_glottocode": "hans1243",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "General Yokuts",
+  "absorbed_glottocode": "gene1243",
+  "absorbed_level": "family",
+  "into": "Yokutsan",
+  "into_glottocode": "yoku1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "General Yuman",
+  "absorbed_glottocode": "gene1244",
+  "absorbed_level": "family",
+  "into": "Cochimi-Yuman",
+  "into_glottocode": "coch1271",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Georgian-Zan",
+  "absorbed_glottocode": "geor1252",
+  "absorbed_level": "family",
+  "into": "Kartvelian",
+  "into_glottocode": "kart1248",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Ghale-Tamangic",
+  "absorbed_glottocode": "ghal1247",
+  "absorbed_level": "family",
+  "into": "Kaike-Ghale-Tamangic",
+  "into_glottocode": "kaik1248",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Goroka",
+  "absorbed_glottocode": "goro1272",
+  "absorbed_level": "family",
+  "into": "Kainantu-Goroka",
+  "into_glottocode": "kain1273",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Greater Barito linkage",
+  "absorbed_glottocode": "grea1283",
+  "absorbed_level": "family",
+  "into": "Basap-Greater Barito",
+  "into_glottocode": "basa1291",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Greater Eastern Celebic",
+  "absorbed_glottocode": "grea1299",
+  "absorbed_level": "family",
+  "into": "Celebic",
+  "into_glottocode": "cele1242",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Greater Western Kru",
+  "absorbed_glottocode": "grea1300",
+  "absorbed_level": "family",
+  "into": "Kru",
+  "into_glottocode": "krua1234",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Greek",
+  "absorbed_glottocode": "gree1276",
+  "absorbed_level": "family",
+  "into": "Graeco-Phrygian",
+  "into_glottocode": "grae1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 5
+ },
+ {
+  "absorbed": "Grusi",
+  "absorbed_glottocode": "grus1239",
+  "absorbed_level": "family",
+  "into": "Gur",
+  "into_glottocode": "gura1261",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Central Guahibo",
+  "absorbed_glottocode": "guah1253",
+  "absorbed_level": "family",
+  "into": "Guahiboan",
+  "into_glottocode": "guah1252",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Guaicuru del Sur",
+  "absorbed_glottocode": "guai1250",
+  "absorbed_level": "family",
+  "into": "Guaicuruan",
+  "into_glottocode": "guai1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Gujarati-Rajasthani",
+  "absorbed_glottocode": "guja1255",
+  "absorbed_level": "family",
+  "into": "Apabhramsic",
+  "into_glottocode": "apab1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Gurma",
+  "absorbed_glottocode": "gurm1249",
+  "absorbed_level": "family",
+  "into": "Gurma-Yom-Naudem",
+  "into_glottocode": "gurm1248",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Gurma B",
+  "absorbed_glottocode": "gurm1250",
+  "absorbed_level": "family",
+  "into": "Gurma-Yom-Naudem",
+  "into_glottocode": "gurm1248",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Gusap-Mot",
+  "absorbed_glottocode": "gusa1245",
+  "absorbed_level": "family",
+  "into": "Finisterre-Saruwaged",
+  "into_glottocode": "fini1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Hanic",
+  "absorbed_glottocode": "hani1250",
+  "absorbed_level": "family",
+  "into": "Bisoid-Hanic",
+  "into_glottocode": "biso1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Middle German",
+  "absorbed_glottocode": "high1287",
+  "absorbed_level": "family",
+  "into": "Middle German",
+  "into_glottocode": "fran1268",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Hre-Sedang-Todrah-Monam",
+  "absorbed_glottocode": "hres1236",
+  "absorbed_level": "family",
+  "into": "North Bahnaric",
+  "into_glottocode": "nort3150",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Hua",
+  "absorbed_glottocode": "huaa1247",
+  "absorbed_level": "family",
+  "into": "Tuu",
+  "into_glottocode": "tuuu1241",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Huon Tip",
+  "absorbed_glottocode": "huon1247",
+  "absorbed_level": "family",
+  "into": "Huon",
+  "into_glottocode": "huon1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Igboid",
+  "absorbed_glottocode": "igbo1259",
+  "absorbed_level": "family",
+  "into": "Igboid",
+  "into_glottocode": "igbo1258",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Ijo",
+  "absorbed_glottocode": "ijoo1239",
+  "absorbed_level": "family",
+  "into": "Ijoid",
+  "into_glottocode": "ijoi1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Imperial Latin",
+  "absorbed_glottocode": "impe1234",
+  "absorbed_level": "family",
+  "into": "Latinic",
+  "into_glottocode": "lati1263",
+  "reason": "same name stem",
+  "languages_below": 26
+ },
+ {
+  "absorbed": "Imperial-Middle-Modern Aramaic",
+  "absorbed_glottocode": "impe1236",
+  "absorbed_level": "family",
+  "into": "Aramaic",
+  "into_glottocode": "aram1259",
+  "reason": "same name stem",
+  "languages_below": 8
+ },
+ {
+  "absorbed": "Ineric",
+  "absorbed_glottocode": "iner1234",
+  "absorbed_level": "family",
+  "into": "Caribbean Arawakan",
+  "into_glottocode": "cari1281",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Interior Kasai-Ngounie",
+  "absorbed_glottocode": "inte1264",
+  "absorbed_level": "family",
+  "into": "Moyen Kasai-Ngounie",
+  "into_glottocode": "moye1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Inuit",
+  "absorbed_glottocode": "inui1246",
+  "absorbed_level": "family",
+  "into": "Eskimo-Aleut",
+  "into_glottocode": "eski1264",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Iquito-Arabela",
+  "absorbed_glottocode": "iqui1244",
+  "absorbed_level": "family",
+  "into": "Zaparoan",
+  "into_glottocode": "zapa1251",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Iten-Cara-Berom",
+  "absorbed_glottocode": "iten1245",
+  "absorbed_level": "family",
+  "into": "Beromic",
+  "into_glottocode": "iten1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Je",
+  "absorbed_glottocode": "jeee1236",
+  "absorbed_level": "family",
+  "into": "Nuclear-Macro-Je",
+  "into_glottocode": "nucl1710",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Je",
+  "absorbed_glottocode": "jeme1246",
+  "absorbed_level": "family",
+  "into": "Nuclear-Macro-Je",
+  "into_glottocode": "nucl1710",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Joola-Manjaku",
+  "absorbed_glottocode": "jool1234",
+  "absorbed_level": "family",
+  "into": "Central Atlantic",
+  "into_glottocode": "cent2230",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kaburic",
+  "absorbed_glottocode": "kabu1258",
+  "absorbed_level": "family",
+  "into": "South Bird's Head",
+  "into_glottocode": "sout3418",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Greater Kaili",
+  "absorbed_glottocode": "kail1254",
+  "absorbed_level": "family",
+  "into": "Kaili-Wolio",
+  "into_glottocode": "kail1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kaingang-Xokleng",
+  "absorbed_glottocode": "kain1270",
+  "absorbed_level": "family",
+  "into": "Nuclear-Macro-Je",
+  "into_glottocode": "nucl1710",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kairiru-Manam",
+  "absorbed_glottocode": "kair1261",
+  "absorbed_level": "family",
+  "into": "Schouten linkage",
+  "into_glottocode": "scho1242",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kalam-Kobon",
+  "absorbed_glottocode": "kala1404",
+  "absorbed_level": "family",
+  "into": "Kalamic-South Adelbert",
+  "into_glottocode": "kala1403",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kalenjin",
+  "absorbed_glottocode": "kale1246",
+  "absorbed_level": "family",
+  "into": "Nilotic",
+  "into_glottocode": "nilo1247",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kambaric",
+  "absorbed_glottocode": "kamb1319",
+  "absorbed_level": "family",
+  "into": "Kambari-Cicipu",
+  "into_glottocode": "kamb1317",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kambakunyic Kikongo",
+  "absorbed_glottocode": "kamb1321",
+  "absorbed_level": "family",
+  "into": "Kikongoic",
+  "into_glottocode": "kiko1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Kampa-Amuesha",
+  "absorbed_glottocode": "kamp1244",
+  "absorbed_level": "family",
+  "into": "Southern Maipuran",
+  "into_glottocode": "sout3131",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kangric-Chamealic-Bhattiyali",
+  "absorbed_glottocode": "kang1292",
+  "absorbed_level": "family",
+  "into": "Himachali",
+  "into_glottocode": "hima1250",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kannadoid",
+  "absorbed_glottocode": "kann1259",
+  "absorbed_level": "family",
+  "into": "Badaga-Kannada",
+  "into_glottocode": "bada1263",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Kanuri-Kanembu",
+  "absorbed_glottocode": "kanu1279",
+  "absorbed_level": "family",
+  "into": "Saharan",
+  "into_glottocode": "saha1256",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kasai-Ngounie",
+  "absorbed_glottocode": "kasa1251",
+  "absorbed_level": "family",
+  "into": "Kwilu-Ngounie",
+  "into_glottocode": "kwil1238",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Keleic",
+  "absorbed_glottocode": "kele1261",
+  "absorbed_level": "family",
+  "into": "Inner Basin Bantu",
+  "into_glottocode": "inne1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kele-Poke",
+  "absorbed_glottocode": "kele1263",
+  "absorbed_level": "family",
+  "into": "Inner Basin Bantu",
+  "into_glottocode": "inne1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kenyahic",
+  "absorbed_glottocode": "keny1280",
+  "absorbed_level": "family",
+  "into": "North Sarawakan",
+  "into_glottocode": "nort3171",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Khalkha-Buriat",
+  "absorbed_glottocode": "khal1273",
+  "absorbed_level": "family",
+  "into": "Mongolic",
+  "into_glottocode": "mong1329",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Khasi-Pnar-Lyngngam",
+  "absorbed_glottocode": "khas1274",
+  "absorbed_level": "family",
+  "into": "Khasian",
+  "into_glottocode": "khas1268",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kherwarian",
+  "absorbed_glottocode": "kher1245",
+  "absorbed_level": "family",
+  "into": "Mundaic",
+  "into_glottocode": "mund1335",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Khoe",
+  "absorbed_glottocode": "khoe1241",
+  "absorbed_level": "family",
+  "into": "Khoe-Kwadi",
+  "into_glottocode": "khoe1240",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Kikongo Language Cluster",
+  "absorbed_glottocode": "kiko1235",
+  "absorbed_level": "family",
+  "into": "KLC Extended",
+  "into_glottocode": "klce1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 6
+ },
+ {
+  "absorbed": "Ruboni",
+  "absorbed_glottocode": "kire1239",
+  "absorbed_level": "family",
+  "into": "Ramu",
+  "into_glottocode": "ramu1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kivu",
+  "absorbed_glottocode": "kivu1239",
+  "absorbed_level": "family",
+  "into": "Great Lakes Bantu",
+  "into_glottocode": "grea1289",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Komoic",
+  "absorbed_glottocode": "komo1265",
+  "absorbed_level": "family",
+  "into": "Old Bomokandian",
+  "into_glottocode": "oldb1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Konja-Mambila-Vute",
+  "absorbed_glottocode": "konj1251",
+  "absorbed_level": "family",
+  "into": "Mambiloid",
+  "into_glottocode": "mamb1309",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "South Patkaian",
+  "absorbed_glottocode": "kony1247",
+  "absorbed_level": "family",
+  "into": "Patkaian",
+  "into_glottocode": "kony1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Koring-Kukele",
+  "absorbed_glottocode": "kori1259",
+  "absorbed_level": "family",
+  "into": "Upper Cross",
+  "into_glottocode": "uppe1418",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kuku-Wik-Ep",
+  "absorbed_glottocode": "kuku1276",
+  "absorbed_level": "family",
+  "into": "Compromise Middle Pama",
+  "into_glottocode": "comp1236",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Kuku-Wik",
+  "absorbed_glottocode": "kuku1277",
+  "absorbed_level": "family",
+  "into": "Compromise Middle Pama",
+  "into_glottocode": "comp1236",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Late Old Tibetan",
+  "absorbed_glottocode": "late1253",
+  "absorbed_level": "family",
+  "into": "Early Old Tibetan",
+  "into_glottocode": "oldm1245",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Late Palestinian Aramaic",
+  "absorbed_glottocode": "late1255",
+  "absorbed_level": "language",
+  "into": "Aramaic",
+  "into_glottocode": "aram1259",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Latin",
+  "absorbed_glottocode": "lati1261",
+  "absorbed_level": "language",
+  "into": "Latinic",
+  "into_glottocode": "lati1263",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Lebonya",
+  "absorbed_glottocode": "lebo1246",
+  "absorbed_level": "family",
+  "into": "Inner Basin Bantu",
+  "into_glottocode": "inne1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Greater Eastern Botatwe",
+  "absorbed_glottocode": "lenj1247",
+  "absorbed_level": "family",
+  "into": "Botatwe",
+  "into_glottocode": "bota1239",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Lezgic",
+  "absorbed_glottocode": "lezg1248",
+  "absorbed_level": "family",
+  "into": "Daghestanian",
+  "into_glottocode": "dagh1238",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Loange-Atlantic",
+  "absorbed_glottocode": "loan1238",
+  "absorbed_level": "family",
+  "into": "Dingic",
+  "into_glottocode": "ding1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 10
+ },
+ {
+  "absorbed": "Lower Ramu",
+  "absorbed_glottocode": "lowe1439",
+  "absorbed_level": "family",
+  "into": "Ramu",
+  "into_glottocode": "ramu1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Lowland-Midland-South Highland Mixe",
+  "absorbed_glottocode": "lowl1268",
+  "absorbed_level": "family",
+  "into": "Mixe-Zoque",
+  "into_glottocode": "mixe1284",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Lowland-Midland Mixe",
+  "absorbed_glottocode": "lowl1269",
+  "absorbed_level": "family",
+  "into": "Mixe-Zoque",
+  "into_glottocode": "mixe1284",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Lowland-Sierra Totonacan",
+  "absorbed_glottocode": "lowl1271",
+  "absorbed_level": "family",
+  "into": "Totonacan",
+  "into_glottocode": "toto1251",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Luangic-Kisaric",
+  "absorbed_glottocode": "luan1261",
+  "absorbed_level": "family",
+  "into": "Southwest Maluku",
+  "into_glottocode": "sout3382",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Luba-Kaonde",
+  "absorbed_glottocode": "luba1254",
+  "absorbed_level": "family",
+  "into": "Luban",
+  "into_glottocode": "luba1253",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Lubaic",
+  "absorbed_glottocode": "luba1255",
+  "absorbed_level": "family",
+  "into": "Luban",
+  "into_glottocode": "luba1253",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Luvic",
+  "absorbed_glottocode": "luvi1234",
+  "absorbed_level": "family",
+  "into": "Luvo-Palaic",
+  "into_glottocode": "luvo1235",
+  "reason": "only child, held no language of its own",
+  "languages_below": 5
+ },
+ {
+  "absorbed": "Luvian",
+  "absorbed_glottocode": "luvi1235",
+  "absorbed_level": "family",
+  "into": "Luvo-Palaic",
+  "into_glottocode": "luvo1235",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Moselle Franconian",
+  "absorbed_glottocode": "luxe1241",
+  "absorbed_level": "language",
+  "into": "Middle German",
+  "into_glottocode": "fran1268",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mabang",
+  "absorbed_glottocode": "maba1275",
+  "absorbed_level": "family",
+  "into": "Maban",
+  "into_glottocode": "maba1274",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Maba-Masalit",
+  "absorbed_glottocode": "maba1276",
+  "absorbed_level": "family",
+  "into": "Maban",
+  "into_glottocode": "maba1274",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Macro-Portuguese",
+  "absorbed_glottocode": "macr1272",
+  "absorbed_level": "family",
+  "into": "Galician Romance",
+  "into_glottocode": "gali1263",
+  "reason": "only child, held no language of its own",
+  "languages_below": 6
+ },
+ {
+  "absorbed": "Macro-French",
+  "absorbed_glottocode": "macr1273",
+  "absorbed_level": "family",
+  "into": "Oil",
+  "into_glottocode": "oila1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Madi-Madiha",
+  "absorbed_glottocode": "madi1262",
+  "absorbed_level": "family",
+  "into": "Arawan",
+  "into_glottocode": "araw1282",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Magdalenic",
+  "absorbed_glottocode": "magd1236",
+  "absorbed_level": "family",
+  "into": "Chibchan",
+  "into_glottocode": "chib1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Maghrebi",
+  "absorbed_glottocode": "magh1239",
+  "absorbed_level": "family",
+  "into": "Western Middle Arabic",
+  "into_glottocode": "west3017",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mahakiranti",
+  "absorbed_glottocode": "maha1306",
+  "absorbed_level": "family",
+  "into": "Himalayish",
+  "into_glottocode": "hima1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Mainland North Halmaheran",
+  "absorbed_glottocode": "main1282",
+  "absorbed_level": "family",
+  "into": "North Halmahera",
+  "into_glottocode": "nort2923",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Malagasic",
+  "absorbed_glottocode": "mala1537",
+  "absorbed_level": "family",
+  "into": "Southeast Barito",
+  "into_glottocode": "sout2919",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Malaita-Makira",
+  "absorbed_glottocode": "mala1540",
+  "absorbed_level": "family",
+  "into": "Longgu-Malaita-Makira",
+  "into_glottocode": "mala1485",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Malaita",
+  "absorbed_glottocode": "mala1542",
+  "absorbed_level": "family",
+  "into": "Longgu-Malaita-Makira",
+  "into_glottocode": "mala1485",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mambila-Vute",
+  "absorbed_glottocode": "mamb1310",
+  "absorbed_level": "family",
+  "into": "Mambiloid",
+  "into_glottocode": "mamb1309",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mambila-Mbongno",
+  "absorbed_glottocode": "mamb1311",
+  "absorbed_level": "family",
+  "into": "Mambiloid",
+  "into_glottocode": "mamb1309",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Manamic linkage",
+  "absorbed_glottocode": "mana1294",
+  "absorbed_level": "family",
+  "into": "Schouten linkage",
+  "into_glottocode": "scho1242",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Manggaraiic",
+  "absorbed_glottocode": "mang1430",
+  "absorbed_level": "family",
+  "into": "Flores",
+  "into_glottocode": "flor1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Marathic",
+  "absorbed_glottocode": "mara1416",
+  "absorbed_level": "family",
+  "into": "Indo-Aryan Southern zone",
+  "into_glottocode": "indo1325",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Marind-Boazi-Yaqai",
+  "absorbed_glottocode": "mari1437",
+  "absorbed_level": "family",
+  "into": "Anim",
+  "into_glottocode": "anim1240",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Maric",
+  "absorbed_glottocode": "mari1445",
+  "absorbed_level": "family",
+  "into": "Guwa-Maric",
+  "into_glottocode": "guwa1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Markham",
+  "absorbed_glottocode": "mark1257",
+  "absorbed_level": "family",
+  "into": "Huon Gulf",
+  "into_glottocode": "huon1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mataguayo II",
+  "absorbed_glottocode": "mata1291",
+  "absorbed_level": "family",
+  "into": "Mataguayan",
+  "into_glottocode": "mata1289",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mayo Group",
+  "absorbed_glottocode": "mayo1269",
+  "absorbed_level": "family",
+  "into": "Mayoruna Branch",
+  "into_glottocode": "mayo1277",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mazatecan",
+  "absorbed_glottocode": "maza1295",
+  "absorbed_level": "family",
+  "into": "Popolocan-Mazatecan",
+  "into_glottocode": "popo1293",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Mazatec",
+  "absorbed_glottocode": "maza1309",
+  "absorbed_level": "family",
+  "into": "Popolocan-Mazatecan",
+  "into_glottocode": "popo1293",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Melanau-Kajang",
+  "absorbed_glottocode": "mela1262",
+  "absorbed_level": "family",
+  "into": "Central Sarawak",
+  "into_glottocode": "sara1342",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mende-Loma",
+  "absorbed_glottocode": "mend1263",
+  "absorbed_level": "family",
+  "into": "Southwest Mande",
+  "into_glottocode": "sout2842",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mende-Bandi",
+  "absorbed_glottocode": "mend1264",
+  "absorbed_level": "family",
+  "into": "Southwest Mande",
+  "into_glottocode": "sout2842",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mephaa",
+  "absorbed_glottocode": "meph1234",
+  "absorbed_level": "family",
+  "into": "Subtiaba-Tlapanec",
+  "into_glottocode": "subt1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Middle Franconian",
+  "absorbed_glottocode": "midd1319",
+  "absorbed_level": "family",
+  "into": "Middle German",
+  "into_glottocode": "fran1268",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Middle-Modern Dutch",
+  "absorbed_glottocode": "midd1347",
+  "absorbed_level": "family",
+  "into": "Macro-Dutch",
+  "into_glottocode": "macr1270",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Middle-Modern Sinitic",
+  "absorbed_glottocode": "midd1354",
+  "absorbed_level": "family",
+  "into": "Sinitic",
+  "into_glottocode": "sini1245",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Middle Aramaic",
+  "absorbed_glottocode": "midd1366",
+  "absorbed_level": "language",
+  "into": "Aramaic",
+  "into_glottocode": "aram1259",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Middle-Modern Aramaic",
+  "absorbed_glottocode": "midd1367",
+  "absorbed_level": "family",
+  "into": "Aramaic",
+  "into_glottocode": "aram1259",
+  "reason": "same name stem",
+  "languages_below": 7
+ },
+ {
+  "absorbed": "Middle-Modern Indo-Aryan",
+  "absorbed_glottocode": "midd1375",
+  "absorbed_level": "family",
+  "into": "Indo-Aryan",
+  "into_glottocode": "indo1321",
+  "reason": "same name stem",
+  "languages_below": 31
+ },
+ {
+  "absorbed": "Middle-Modern Southwestern Brythonic",
+  "absorbed_glottocode": "midd1379",
+  "absorbed_level": "family",
+  "into": "Southwestern Brythonic",
+  "into_glottocode": "sout3176",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mississippi Valley",
+  "absorbed_glottocode": "miss1254",
+  "absorbed_level": "family",
+  "into": "Siouan",
+  "into_glottocode": "siou1252",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Miwokan",
+  "absorbed_glottocode": "miwo1275",
+  "absorbed_level": "family",
+  "into": "Miwok-Costanoan",
+  "into_glottocode": "miwo1274",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mixe",
+  "absorbed_glottocode": "mixe1286",
+  "absorbed_level": "family",
+  "into": "Mixe-Zoque",
+  "into_glottocode": "mixe1284",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Miyak-Bun-Biwat",
+  "absorbed_glottocode": "miya1267",
+  "absorbed_level": "family",
+  "into": "Yuat",
+  "into_glottocode": "yuat1252",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Modern Javanese",
+  "absorbed_glottocode": "mode1251",
+  "absorbed_level": "family",
+  "into": "Javanesic",
+  "into_glottocode": "java1253",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Modern Dutch",
+  "absorbed_glottocode": "mode1257",
+  "absorbed_level": "family",
+  "into": "Macro-Dutch",
+  "into_glottocode": "macr1270",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Modern High German",
+  "absorbed_glottocode": "mode1258",
+  "absorbed_level": "family",
+  "into": "Middle-Modern High German",
+  "into_glottocode": "midd1349",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Modern Southwestern Iranian",
+  "absorbed_glottocode": "mode1259",
+  "absorbed_level": "family",
+  "into": "Middle-Modern Persian",
+  "into_glottocode": "midd1352",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Modern Goidelic",
+  "absorbed_glottocode": "mode1265",
+  "absorbed_level": "family",
+  "into": "Goidelic",
+  "into_glottocode": "goid1240",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Modern Koineic Greek",
+  "absorbed_glottocode": "mode1266",
+  "absorbed_level": "family",
+  "into": "Koineic Greek",
+  "into_glottocode": "koin1234",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Modern Marathi",
+  "absorbed_glottocode": "mode1268",
+  "absorbed_level": "family",
+  "into": "Old-Modern Marathi",
+  "into_glottocode": "oldm1248",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Moreic-Waric",
+  "absorbed_glottocode": "more1263",
+  "absorbed_level": "family",
+  "into": "Chapacuran",
+  "into_glottocode": "chap1271",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Morokodo-Beli",
+  "absorbed_glottocode": "moro1293",
+  "absorbed_level": "family",
+  "into": "Baka-Beli",
+  "into_glottocode": "moro1282",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mossi-Farefare",
+  "absorbed_glottocode": "moss1237",
+  "absorbed_level": "family",
+  "into": "Northwest Oti-Volta",
+  "into_glottocode": "nort3234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mranmaic",
+  "absorbed_glottocode": "mran1234",
+  "absorbed_level": "family",
+  "into": "Burmish",
+  "into_glottocode": "burm1266",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Mufian-Bukiyip-Abu",
+  "absorbed_glottocode": "mufi1239",
+  "absorbed_level": "family",
+  "into": "Kombio-Arapesh-Urat",
+  "into_glottocode": "komb1276",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mulam-Kam",
+  "absorbed_glottocode": "mula1252",
+  "absorbed_level": "family",
+  "into": "Kam-Sui",
+  "into_glottocode": "kams1241",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mungkanic",
+  "absorbed_glottocode": "mung1276",
+  "absorbed_level": "family",
+  "into": "Compromise Middle Pama",
+  "into_glottocode": "comp1236",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Murutic",
+  "absorbed_glottocode": "muru1275",
+  "absorbed_level": "family",
+  "into": "Greater Murutic",
+  "into_glottocode": "grea1294",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Naish",
+  "absorbed_glottocode": "nais1236",
+  "absorbed_level": "family",
+  "into": "Naic",
+  "into_glottocode": "naic1235",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Narrow Grassfields",
+  "absorbed_glottocode": "narr1282",
+  "absorbed_level": "family",
+  "into": "Wide Grassfields",
+  "into_glottocode": "wide1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "North Bougainville Oceanic",
+  "absorbed_glottocode": "neha1246",
+  "absorbed_level": "family",
+  "into": "Northwest Solomonic",
+  "into_glottocode": "nort3225",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Neva",
+  "absorbed_glottocode": "neva1234",
+  "absorbed_level": "family",
+  "into": "Finnic",
+  "into_glottocode": "finn1317",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Newar",
+  "absorbed_glottocode": "newa1247",
+  "absorbed_level": "family",
+  "into": "Newaric",
+  "into_glottocode": "newa1245",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "New Shtokavian",
+  "absorbed_glottocode": "news1236",
+  "absorbed_level": "dialect",
+  "into": "South Slavic",
+  "into_glottocode": "sout3147",
+  "reason": "only child, held no language of its own",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Ngayarda",
+  "absorbed_glottocode": "ngay1241",
+  "absorbed_level": "family",
+  "into": "South-West Pama-Nyungan",
+  "into_glottocode": "sout3134",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Ngbandic",
+  "absorbed_glottocode": "ngba1280",
+  "absorbed_level": "family",
+  "into": "Ngbandi-Mongoba-Kazibati",
+  "into_glottocode": "ngba1290",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Ngiri Riverain Ubangi-Ripuaire",
+  "absorbed_glottocode": "ngir1254",
+  "absorbed_level": "family",
+  "into": "Ngiri Riverain Ubangi",
+  "into_glottocode": "ngir1252",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Ngizim-Southwestern Bade",
+  "absorbed_glottocode": "ngiz1243",
+  "absorbed_level": "family",
+  "into": "West Chadic B",
+  "into_glottocode": "west2790",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nile Nubian",
+  "absorbed_glottocode": "nile1239",
+  "absorbed_level": "family",
+  "into": "Nubian",
+  "into_glottocode": "nubi1251",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Ninam-Yanomam-Yaroame",
+  "absorbed_glottocode": "nina1239",
+  "absorbed_level": "family",
+  "into": "Yanomamic",
+  "into_glottocode": "yano1268",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nisoid",
+  "absorbed_glottocode": "niso1234",
+  "absorbed_level": "family",
+  "into": "Southeastern Ngwi",
+  "into_glottocode": "sout3212",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nizaa-Mambila-Vute",
+  "absorbed_glottocode": "niza1234",
+  "absorbed_level": "family",
+  "into": "Mambiloid",
+  "into_glottocode": "mamb1309",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Njebi (B.50)",
+  "absorbed_glottocode": "njeb1244",
+  "absorbed_level": "family",
+  "into": "Moyen Kasai-Ngounie",
+  "into_glottocode": "moye1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nkafa-Kirya-Bana",
+  "absorbed_glottocode": "nkaf1238",
+  "absorbed_level": "family",
+  "into": "Higic",
+  "into_glottocode": "higi1241",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Yeniseian",
+  "absorbed_glottocode": "nort2746",
+  "absorbed_level": "family",
+  "into": "Yeniseian",
+  "into_glottocode": "yeni1252",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Central Gur",
+  "absorbed_glottocode": "nort2777",
+  "absorbed_level": "family",
+  "into": "Gur",
+  "into_glottocode": "gura1261",
+  "reason": "same name stem",
+  "languages_below": 7
+ },
+ {
+  "absorbed": "Northern Grusi",
+  "absorbed_glottocode": "nort2782",
+  "absorbed_level": "family",
+  "into": "Gur",
+  "into_glottocode": "gura1261",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "North-South Central Delta Cross",
+  "absorbed_glottocode": "nort2790",
+  "absorbed_level": "family",
+  "into": "Upper Cross",
+  "into_glottocode": "uppe1418",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Lwoo",
+  "absorbed_glottocode": "nort2814",
+  "absorbed_level": "family",
+  "into": "Lwoo",
+  "into_glottocode": "lwoo1234",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central-Northern Malaita",
+  "absorbed_glottocode": "nort2833",
+  "absorbed_level": "family",
+  "into": "Longgu-Malaita-Makira",
+  "into_glottocode": "mala1485",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Kaili-Wolio",
+  "absorbed_glottocode": "nort2898",
+  "absorbed_level": "family",
+  "into": "Kaili-Wolio",
+  "into_glottocode": "kail1255",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern North Halmahera",
+  "absorbed_glottocode": "nort2924",
+  "absorbed_level": "family",
+  "into": "North Halmahera",
+  "into_glottocode": "nort2923",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Caddoan",
+  "absorbed_glottocode": "nort2950",
+  "absorbed_level": "family",
+  "into": "Caddoan",
+  "into_glottocode": "cadd1255",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Uto-Aztecan",
+  "absorbed_glottocode": "nort2953",
+  "absorbed_level": "family",
+  "into": "Uto-Aztecan",
+  "into_glottocode": "utoa1244",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "North Munda",
+  "absorbed_glottocode": "nort3151",
+  "absorbed_level": "family",
+  "into": "Mundaic",
+  "into_glottocode": "mund1335",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "North Masa",
+  "absorbed_glottocode": "nort3157",
+  "absorbed_level": "family",
+  "into": "Masa",
+  "into_glottocode": "masa1323",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern-Eastern-Western Agaw",
+  "absorbed_glottocode": "nort3158",
+  "absorbed_level": "family",
+  "into": "Agaw",
+  "into_glottocode": "cent2193",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "North-West Ometo",
+  "absorbed_glottocode": "nort3161",
+  "absorbed_level": "family",
+  "into": "Ta-Ne-Omotic",
+  "into_glottocode": "gong1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Bantoid",
+  "absorbed_glottocode": "nort3168",
+  "absorbed_level": "family",
+  "into": "Bantoid",
+  "into_glottocode": "bant1294",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Northeastern Kuki-Chin",
+  "absorbed_glottocode": "nort3179",
+  "absorbed_level": "family",
+  "into": "Peripheral Kuki-Chin",
+  "into_glottocode": "peri1260",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Daic",
+  "absorbed_glottocode": "nort3180",
+  "absorbed_level": "family",
+  "into": "Northern Daic-Sek",
+  "into_glottocode": "nort3326",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "North-Central Edoid",
+  "absorbed_glottocode": "nort3182",
+  "absorbed_level": "family",
+  "into": "Akpes-Edoid",
+  "into_glottocode": "akpe1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Murutic",
+  "absorbed_glottocode": "nort3186",
+  "absorbed_level": "family",
+  "into": "Greater Murutic",
+  "into_glottocode": "grea1294",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "North-Central Malagasic",
+  "absorbed_glottocode": "nort3196",
+  "absorbed_level": "family",
+  "into": "Southeast Barito",
+  "into_glottocode": "sout2919",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "North Guang",
+  "absorbed_glottocode": "nort3204",
+  "absorbed_level": "family",
+  "into": "Guang",
+  "into_glottocode": "guan1278",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Mid-Northern New Caledonian",
+  "absorbed_glottocode": "nort3211",
+  "absorbed_level": "family",
+  "into": "Northern New Caledonian",
+  "into_glottocode": "nort3325",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northwest Seram",
+  "absorbed_glottocode": "nort3221",
+  "absorbed_level": "family",
+  "into": "Three Rivers",
+  "into_glottocode": "thre1238",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Njila",
+  "absorbed_glottocode": "nort3257",
+  "absorbed_level": "family",
+  "into": "Njila",
+  "into_glottocode": "njil1234",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Samba-Duru",
+  "absorbed_glottocode": "nort3259",
+  "absorbed_level": "family",
+  "into": "Central Adamawa",
+  "into_glottocode": "samb1322",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "North-Central Mephaa",
+  "absorbed_glottocode": "nort3350",
+  "absorbed_level": "family",
+  "into": "Subtiaba-Tlapanec",
+  "into_glottocode": "subt1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Romanian",
+  "absorbed_glottocode": "nort3361",
+  "absorbed_level": "family",
+  "into": "Romance",
+  "into_glottocode": "roma1334",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northwest Kasai-Ngounie",
+  "absorbed_glottocode": "nort3377",
+  "absorbed_level": "family",
+  "into": "Moyen Kasai-Ngounie",
+  "into_glottocode": "moye1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Northern Adelbert",
+  "absorbed_glottocode": "nort3379",
+  "absorbed_level": "family",
+  "into": "Greater Northern Adelbert",
+  "into_glottocode": "grea1298",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Hlaic",
+  "absorbed_glottocode": "nucl1241",
+  "absorbed_level": "family",
+  "into": "Hlaic",
+  "into_glottocode": "hlai1238",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Left May",
+  "absorbed_glottocode": "nucl1244",
+  "absorbed_level": "family",
+  "into": "Left May",
+  "into_glottocode": "left1242",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Pashto",
+  "absorbed_glottocode": "nucl1276",
+  "absorbed_level": "family",
+  "into": "Pashto",
+  "into_glottocode": "pash1269",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Dzongkhic",
+  "absorbed_glottocode": "nucl1307",
+  "absorbed_level": "family",
+  "into": "Early Old Tibetan",
+  "into_glottocode": "oldm1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Samur",
+  "absorbed_glottocode": "nucl1321",
+  "absorbed_level": "family",
+  "into": "Daghestanian",
+  "into_glottocode": "dagh1238",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Guadalcanal-Nggelic",
+  "absorbed_glottocode": "nucl1470",
+  "absorbed_level": "family",
+  "into": "Guadalcanal-Nggelic",
+  "into_glottocode": "guad1241",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Polynesian",
+  "absorbed_glottocode": "nucl1485",
+  "absorbed_level": "family",
+  "into": "Polynesian",
+  "into_glottocode": "poly1242",
+  "reason": "same name stem",
+  "languages_below": 10
+ },
+ {
+  "absorbed": "Western Bel",
+  "absorbed_glottocode": "nucl1510",
+  "absorbed_level": "family",
+  "into": "Vitiaz linkage",
+  "into_glottocode": "viti1243",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Sentanic",
+  "absorbed_glottocode": "nucl1631",
+  "absorbed_level": "family",
+  "into": "Sentanic",
+  "into_glottocode": "sent1261",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear West Bomberai",
+  "absorbed_glottocode": "nucl1641",
+  "absorbed_level": "family",
+  "into": "West Bomberai",
+  "into_glottocode": "west2604",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Witotoan",
+  "absorbed_glottocode": "nucl1659",
+  "absorbed_level": "family",
+  "into": "Huitotoan",
+  "into_glottocode": "huit1251",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Kamakanan",
+  "absorbed_glottocode": "nucl1661",
+  "absorbed_level": "family",
+  "into": "Kamakanan",
+  "into_glottocode": "kama1371",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Celtic",
+  "absorbed_glottocode": "nucl1715",
+  "absorbed_level": "family",
+  "into": "Celtic",
+  "into_glottocode": "celt1248",
+  "reason": "same name stem",
+  "languages_below": 14
+ },
+ {
+  "absorbed": "Nuclear SBB Occidental",
+  "absorbed_glottocode": "nucl1719",
+  "absorbed_level": "family",
+  "into": "SBB Occidental",
+  "into_glottocode": "sbbo1237",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Nuclear Pintupic",
+  "absorbed_glottocode": "nucl1724",
+  "absorbed_level": "family",
+  "into": "Desert Nyungic",
+  "into_glottocode": "dese1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Tamang",
+  "absorbed_glottocode": "nucl1729",
+  "absorbed_level": "family",
+  "into": "Kaike-Ghale-Tamangic",
+  "into_glottocode": "kaik1248",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Lisoid",
+  "absorbed_glottocode": "nucl1734",
+  "absorbed_level": "family",
+  "into": "Lisoid",
+  "into_glottocode": "liso1234",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Ngbandic",
+  "absorbed_glottocode": "nucl1737",
+  "absorbed_level": "family",
+  "into": "Ngbandi-Mongoba-Kazibati",
+  "into_glottocode": "ngba1290",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Nisoid",
+  "absorbed_glottocode": "nucl1739",
+  "absorbed_level": "family",
+  "into": "Southeastern Ngwi",
+  "into_glottocode": "sout3212",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Oti-Volta",
+  "absorbed_glottocode": "nucl1743",
+  "absorbed_level": "family",
+  "into": "Oti-Volta",
+  "into_glottocode": "otiv1239",
+  "reason": "same name stem",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Nuclear Papuan Tip linkage",
+  "absorbed_glottocode": "nucl1744",
+  "absorbed_level": "family",
+  "into": "Papuan Tip linkage",
+  "into_glottocode": "papu1253",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Nuclear Yoruba",
+  "absorbed_glottocode": "nucl1747",
+  "absorbed_level": "family",
+  "into": "Defoid",
+  "into_glottocode": "defo1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Oti-Volta Occidental",
+  "absorbed_glottocode": "nucl1748",
+  "absorbed_level": "family",
+  "into": "Oti-Volta Occidental",
+  "into_glottocode": "west2461",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Nuclear North Bougainville Oceanic",
+  "absorbed_glottocode": "nucl1750",
+  "absorbed_level": "family",
+  "into": "Northwest Solomonic",
+  "into_glottocode": "nort3225",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Cordilleran",
+  "absorbed_glottocode": "nucl1754",
+  "absorbed_level": "family",
+  "into": "Central Cordilleran",
+  "into_glottocode": "cent2296",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Siane-Yagaria",
+  "absorbed_glottocode": "nucl1756",
+  "absorbed_level": "family",
+  "into": "Kainantu-Goroka",
+  "into_glottocode": "kain1273",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Goroka",
+  "absorbed_glottocode": "nucl1760",
+  "absorbed_level": "family",
+  "into": "Kainantu-Goroka",
+  "into_glottocode": "kain1273",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Angan",
+  "absorbed_glottocode": "nucl1763",
+  "absorbed_level": "family",
+  "into": "Angan",
+  "into_glottocode": "anga1289",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Core Zapotec",
+  "absorbed_glottocode": "nucl1765",
+  "absorbed_level": "family",
+  "into": "Zapotecan",
+  "into_glottocode": "zapo1436",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Nuclear Oghuz",
+  "absorbed_glottocode": "nucl1769",
+  "absorbed_level": "family",
+  "into": "Oghuz",
+  "into_glottocode": "oghu1243",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Nuclear Santo",
+  "absorbed_glottocode": "nucl1793",
+  "absorbed_level": "family",
+  "into": "Espiritu Santo",
+  "into_glottocode": "espi1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Taupota linkage",
+  "absorbed_glottocode": "nucl1794",
+  "absorbed_level": "family",
+  "into": "North Papuan Mainland-D'Entrecasteaux linkage",
+  "into_glottocode": "nort2848",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Zaric",
+  "absorbed_glottocode": "nucl1795",
+  "absorbed_level": "family",
+  "into": "West-Central Benue-Congo Plateau",
+  "into_glottocode": "benu1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Barian",
+  "absorbed_glottocode": "nucl1796",
+  "absorbed_level": "family",
+  "into": "Nilotic",
+  "into_glottocode": "nilo1247",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Bandaic",
+  "absorbed_glottocode": "nucl1797",
+  "absorbed_level": "family",
+  "into": "Ubangi Ka",
+  "into_glottocode": "uban1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Malayic",
+  "absorbed_glottocode": "nucl1806",
+  "absorbed_level": "family",
+  "into": "Malayic",
+  "into_glottocode": "mala1538",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Nuclear Mranmaic",
+  "absorbed_glottocode": "nucl1811",
+  "absorbed_level": "family",
+  "into": "Burmish",
+  "into_glottocode": "burm1266",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Nuclear Shastan",
+  "absorbed_glottocode": "nucl1814",
+  "absorbed_level": "family",
+  "into": "Shastan",
+  "into_glottocode": "shas1238",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Eastern Dardic",
+  "absorbed_glottocode": "nucl1819",
+  "absorbed_level": "family",
+  "into": "Eastern Dardic",
+  "into_glottocode": "dard1244",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Alor-Pantar",
+  "absorbed_glottocode": "nucl1821",
+  "absorbed_level": "family",
+  "into": "Alor-Pantar",
+  "into_glottocode": "alor1249",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Eastern Fijian",
+  "absorbed_glottocode": "nucl1823",
+  "absorbed_level": "family",
+  "into": "Eastern Fijian",
+  "into_glottocode": "east2446",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Southern Bantu",
+  "absorbed_glottocode": "nucl1826",
+  "absorbed_level": "family",
+  "into": "Southern Bantu",
+  "into_glottocode": "sout3387",
+  "reason": "same name stem",
+  "languages_below": 11
+ },
+ {
+  "absorbed": "Nuclear Guahiboan",
+  "absorbed_glottocode": "nucl1828",
+  "absorbed_level": "family",
+  "into": "Guahiboan",
+  "into_glottocode": "guah1252",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Lower Cross",
+  "absorbed_glottocode": "nucl1838",
+  "absorbed_level": "family",
+  "into": "Lower Cross",
+  "into_glottocode": "obol1242",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Gumuz",
+  "absorbed_glottocode": "nucl1843",
+  "absorbed_level": "family",
+  "into": "Gumuz",
+  "into_glottocode": "gumu1250",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Yucatecan",
+  "absorbed_glottocode": "nucl1844",
+  "absorbed_level": "family",
+  "into": "Yucatecan",
+  "into_glottocode": "yuca1252",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear Chonan",
+  "absorbed_glottocode": "nucl1848",
+  "absorbed_level": "family",
+  "into": "Chonan",
+  "into_glottocode": "chon1288",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nukuma",
+  "absorbed_glottocode": "nuku1256",
+  "absorbed_level": "family",
+  "into": "Sepik",
+  "into_glottocode": "sepi1257",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Numic",
+  "absorbed_glottocode": "numi1242",
+  "absorbed_level": "family",
+  "into": "Uto-Aztecan",
+  "into_glottocode": "utoa1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Bantu D33",
+  "absorbed_glottocode": "nyal1255",
+  "absorbed_level": "family",
+  "into": "Inner Basin Bantu",
+  "into_glottocode": "inne1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nzebi-Laali-Yaa",
+  "absorbed_glottocode": "nzeb1234",
+  "absorbed_level": "family",
+  "into": "Moyen Kasai-Ngounie",
+  "into_glottocode": "moye1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Oaxaca Mixe",
+  "absorbed_glottocode": "oaxa1241",
+  "absorbed_level": "family",
+  "into": "Mixe-Zoque",
+  "into_glottocode": "mixe1284",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Eastern Mongolic",
+  "absorbed_glottocode": "oira1260",
+  "absorbed_level": "family",
+  "into": "Mongolic",
+  "into_glottocode": "mong1329",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Okop Usem",
+  "absorbed_glottocode": "okop1234",
+  "absorbed_level": "family",
+  "into": "Lower Cross",
+  "into_glottocode": "obol1242",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Old Turkic",
+  "absorbed_glottocode": "oldu1238",
+  "absorbed_level": "language",
+  "into": "Turkic",
+  "into_glottocode": "turk1311",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Old-Middle Welsh",
+  "absorbed_glottocode": "oldw1239",
+  "absorbed_level": "language",
+  "into": "Old-Modern Welsh",
+  "into_glottocode": "oldm1247",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Ometo",
+  "absorbed_glottocode": "omet1238",
+  "absorbed_level": "family",
+  "into": "Ta-Ne-Omotic",
+  "into_glottocode": "gong1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Central Koman",
+  "absorbed_glottocode": "opuu1238",
+  "absorbed_level": "family",
+  "into": "Koman",
+  "into_glottocode": "koma1264",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Otomian",
+  "absorbed_glottocode": "otom1297",
+  "absorbed_level": "family",
+  "into": "Otopame-Chinantecan",
+  "into_glottocode": "otop1241",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Otopamean",
+  "absorbed_glottocode": "otop1242",
+  "absorbed_level": "family",
+  "into": "Otopame-Chinantecan",
+  "into_glottocode": "otop1241",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Pano Nawa",
+  "absorbed_glottocode": "pano1257",
+  "absorbed_level": "family",
+  "into": "Mainline Pano",
+  "into_glottocode": "main1279",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Pawnee-Kitsai",
+  "absorbed_glottocode": "pawn1252",
+  "absorbed_level": "family",
+  "into": "Caddoan",
+  "into_glottocode": "cadd1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Pemong-Panare",
+  "absorbed_glottocode": "pemo1246",
+  "absorbed_level": "family",
+  "into": "Cariban",
+  "into_glottocode": "cari1283",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Peripheral Western Malakula",
+  "absorbed_glottocode": "peri1262",
+  "absorbed_level": "family",
+  "into": "Western Malakula linkage",
+  "into_glottocode": "west2871",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Pilbara",
+  "absorbed_glottocode": "pilb1234",
+  "absorbed_level": "family",
+  "into": "South-West Pama-Nyungan",
+  "into_glottocode": "sout3134",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Pintupic",
+  "absorbed_glottocode": "pint1254",
+  "absorbed_level": "family",
+  "into": "Desert Nyungic",
+  "into_glottocode": "dese1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Potou-Tano",
+  "absorbed_glottocode": "poto1254",
+  "absorbed_level": "family",
+  "into": "Nyo",
+  "into_glottocode": "nyoa1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Pre-Andine Maipuran",
+  "absorbed_glottocode": "prea1240",
+  "absorbed_level": "family",
+  "into": "Southern Maipuran",
+  "into_glottocode": "sout3131",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Pukapukic",
+  "absorbed_glottocode": "puka1245",
+  "absorbed_level": "family",
+  "into": "Ellicean",
+  "into_glottocode": "elli1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Qom",
+  "absorbed_glottocode": "qomm1235",
+  "absorbed_level": "family",
+  "into": "Guaicuruan",
+  "into_glottocode": "guai1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Quechua I",
+  "absorbed_glottocode": "quec1386",
+  "absorbed_level": "family",
+  "into": "Quechuan",
+  "into_glottocode": "quec1387",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Gyalrongic",
+  "absorbed_glottocode": "rgya1241",
+  "absorbed_level": "family",
+  "into": "Qiangic",
+  "into_glottocode": "qian1263",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Russian River and Eastern",
+  "absorbed_glottocode": "russ1265",
+  "absorbed_level": "family",
+  "into": "Pomoan",
+  "into_glottocode": "pomo1273",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Russian River",
+  "absorbed_glottocode": "russ1266",
+  "absorbed_level": "family",
+  "into": "Pomoan",
+  "into_glottocode": "pomo1273",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Highlands Kivu",
+  "absorbed_glottocode": "rwan1241",
+  "absorbed_level": "family",
+  "into": "Great Lakes Bantu",
+  "into_glottocode": "grea1289",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Old Sabellic",
+  "absorbed_glottocode": "sabe1248",
+  "absorbed_level": "language",
+  "into": "Sabellic",
+  "into_glottocode": "sabe1249",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Luish",
+  "absorbed_glottocode": "sakk1239",
+  "absorbed_level": "family",
+  "into": "Jingpho-Luish",
+  "into_glottocode": "jing1259",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Samba-Duru",
+  "absorbed_glottocode": "samb1323",
+  "absorbed_level": "family",
+  "into": "Central Adamawa",
+  "into_glottocode": "samb1322",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Sena-Nyanja",
+  "absorbed_glottocode": "sena1271",
+  "absorbed_level": "family",
+  "into": "Tumbuka-Sena-Nyanja",
+  "into_glottocode": "tumb1253",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Seram Straits",
+  "absorbed_glottocode": "sera1270",
+  "absorbed_level": "family",
+  "into": "Piru Bay",
+  "into_glottocode": "piru1243",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Shanic",
+  "absorbed_glottocode": "shan1276",
+  "absorbed_level": "family",
+  "into": "Southwestern Tai P",
+  "into_glottocode": "sout2743",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Shtokavski",
+  "absorbed_glottocode": "shto1241",
+  "absorbed_level": "dialect",
+  "into": "South Slavic",
+  "into_glottocode": "sout3147",
+  "reason": "only child, held no language of its own",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Sidaama-Hadiyya-Kambaata",
+  "absorbed_glottocode": "sida1247",
+  "absorbed_level": "family",
+  "into": "Highland East Cushitic",
+  "into_glottocode": "high1285",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Sindhi-Lahnda",
+  "absorbed_glottocode": "sind1278",
+  "absorbed_level": "family",
+  "into": "Indo-Aryan Northwestern zone",
+  "into_glottocode": "indo1324",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Skou-Serra-Piore",
+  "absorbed_glottocode": "skou1238",
+  "absorbed_level": "family",
+  "into": "Sko",
+  "into_glottocode": "skoo1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Skouic",
+  "absorbed_glottocode": "skou1239",
+  "absorbed_level": "family",
+  "into": "Sko",
+  "into_glottocode": "skoo1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Solehua",
+  "absorbed_glottocode": "sole1243",
+  "absorbed_level": "family",
+  "into": "Piru Bay",
+  "into_glottocode": "piru1243",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "So-Lebonya",
+  "absorbed_glottocode": "sole1244",
+  "absorbed_level": "family",
+  "into": "Inner Basin Bantu",
+  "into_glottocode": "inne1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "So-Poke",
+  "absorbed_glottocode": "sopo1239",
+  "absorbed_level": "family",
+  "into": "Inner Basin Bantu",
+  "into_glottocode": "inne1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Nuclear South Bird's Head",
+  "absorbed_glottocode": "sout1516",
+  "absorbed_level": "family",
+  "into": "South Bird's Head",
+  "into_glottocode": "sout3418",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Serbian-Croatian-Bosnian",
+  "absorbed_glottocode": "sout1528",
+  "absorbed_level": "language",
+  "into": "South Slavic",
+  "into_glottocode": "sout3147",
+  "reason": "only child, held no language of its own",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Southern Karen",
+  "absorbed_glottocode": "sout1554",
+  "absorbed_level": "family",
+  "into": "Karenic",
+  "into_glottocode": "kare1337",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "South Bahnaric",
+  "absorbed_glottocode": "sout2690",
+  "absorbed_level": "family",
+  "into": "West Bahnaric",
+  "into_glottocode": "west2399",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Shanic",
+  "absorbed_glottocode": "sout2744",
+  "absorbed_level": "family",
+  "into": "Southwestern Tai P",
+  "into_glottocode": "sout2743",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Maric",
+  "absorbed_glottocode": "sout2765",
+  "absorbed_level": "family",
+  "into": "Guwa-Maric",
+  "into_glottocode": "guwa1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Nilotic",
+  "absorbed_glottocode": "sout2830",
+  "absorbed_level": "family",
+  "into": "Nilotic",
+  "into_glottocode": "nilo1247",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "South Surmic",
+  "absorbed_glottocode": "sout2836",
+  "absorbed_level": "family",
+  "into": "Surmic",
+  "into_glottocode": "surm1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southwest Surmic",
+  "absorbed_glottocode": "sout2838",
+  "absorbed_level": "family",
+  "into": "Surmic",
+  "into_glottocode": "surm1244",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Wakashan",
+  "absorbed_glottocode": "sout2981",
+  "absorbed_level": "family",
+  "into": "Wakashan",
+  "into_glottocode": "waka1280",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Magdalenic",
+  "absorbed_glottocode": "sout3015",
+  "absorbed_level": "family",
+  "into": "Chibchan",
+  "into_glottocode": "chib1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Lowland East Cushitic",
+  "absorbed_glottocode": "sout3055",
+  "absorbed_level": "family",
+  "into": "Lowland East Cushitic",
+  "into_glottocode": "lowl1267",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Southern Chumashan",
+  "absorbed_glottocode": "sout3132",
+  "absorbed_level": "family",
+  "into": "Chumashan",
+  "into_glottocode": "chum1262",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Uto-Aztecan",
+  "absorbed_glottocode": "sout3136",
+  "absorbed_level": "family",
+  "into": "Uto-Aztecan",
+  "into_glottocode": "utoa1244",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Southwestern Apachean",
+  "absorbed_glottocode": "sout3151",
+  "absorbed_level": "family",
+  "into": "Athabaskan-Eyak",
+  "into_glottocode": "atha1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Bantoid",
+  "absorbed_glottocode": "sout3152",
+  "absorbed_level": "family",
+  "into": "Bantoid",
+  "into_glottocode": "bant1294",
+  "reason": "same name stem",
+  "languages_below": 63
+ },
+ {
+  "absorbed": "Southwest Sabahan",
+  "absorbed_glottocode": "sout3154",
+  "absorbed_level": "family",
+  "into": "Sabahan",
+  "into_glottocode": "saba1285",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Southern Burmish",
+  "absorbed_glottocode": "sout3159",
+  "absorbed_level": "family",
+  "into": "Burmish",
+  "into_glottocode": "burm1266",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "South Bauchi West",
+  "absorbed_glottocode": "sout3162",
+  "absorbed_level": "family",
+  "into": "West Chadic B",
+  "into_glottocode": "west2790",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Zaric",
+  "absorbed_glottocode": "sout3163",
+  "absorbed_level": "family",
+  "into": "West-Central Benue-Congo Plateau",
+  "into_glottocode": "benu1249",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Central Gur",
+  "absorbed_glottocode": "sout3164",
+  "absorbed_level": "family",
+  "into": "Gur",
+  "into_glottocode": "gura1261",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Southwest South Bauchi",
+  "absorbed_glottocode": "sout3170",
+  "absorbed_level": "family",
+  "into": "West Chadic B",
+  "into_glottocode": "west2790",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southwestern Tai",
+  "absorbed_glottocode": "sout3184",
+  "absorbed_level": "family",
+  "into": "Sapa-Southwestern Tai",
+  "into_glottocode": "sapa1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Southeastern Ede",
+  "absorbed_glottocode": "sout3186",
+  "absorbed_level": "family",
+  "into": "Defoid",
+  "into_glottocode": "defo1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "South-Central Cordilleran",
+  "absorbed_glottocode": "sout3211",
+  "absorbed_level": "family",
+  "into": "Meso-Cordilleran",
+  "into_glottocode": "meso1254",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Southern Tibetic",
+  "absorbed_glottocode": "sout3217",
+  "absorbed_level": "family",
+  "into": "Early Old Tibetan",
+  "into_glottocode": "oldm1245",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "South Halmahera",
+  "absorbed_glottocode": "sout3231",
+  "absorbed_level": "family",
+  "into": "Raja Ampat-South Halmahera",
+  "into_glottocode": "raja1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Njila",
+  "absorbed_glottocode": "sout3233",
+  "absorbed_level": "family",
+  "into": "Njila",
+  "into_glottocode": "njil1234",
+  "reason": "same name stem",
+  "languages_below": 7
+ },
+ {
+  "absorbed": "Central-Southern Kikongo",
+  "absorbed_glottocode": "sout3249",
+  "absorbed_level": "family",
+  "into": "Kilaadic Kikongo",
+  "into_glottocode": "kila1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Southern Tuareg",
+  "absorbed_glottocode": "sout3263",
+  "absorbed_level": "family",
+  "into": "Tuareg",
+  "into_glottocode": "tuar1240",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southern Tupi-Guarani",
+  "absorbed_glottocode": "sout3271",
+  "absorbed_level": "family",
+  "into": "Aweti-Guarani",
+  "into_glottocode": "awet1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Southern Mbam-Nkam",
+  "absorbed_glottocode": "sout3350",
+  "absorbed_level": "family",
+  "into": "Mbam-Nkam",
+  "into_glottocode": "mbam1249",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southeastern Kikongo",
+  "absorbed_glottocode": "sout3353",
+  "absorbed_level": "family",
+  "into": "Kilaadic Kikongo",
+  "into_glottocode": "kila1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Southern Kikongo",
+  "absorbed_glottocode": "sout3354",
+  "absorbed_level": "family",
+  "into": "Kilaadic Kikongo",
+  "into_glottocode": "kila1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Southern East Polynesian Proximal",
+  "absorbed_glottocode": "sout3383",
+  "absorbed_level": "family",
+  "into": "East Polynesian Proximal",
+  "into_glottocode": "east2896",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "South Arandic",
+  "absorbed_glottocode": "sout3384",
+  "absorbed_level": "family",
+  "into": "Arandic-Thura-Yura",
+  "into_glottocode": "aran1266",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Southeast Kipchak",
+  "absorbed_glottocode": "sout3396",
+  "absorbed_level": "family",
+  "into": "Kipchak",
+  "into_glottocode": "kipc1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Southwestern Patkaian",
+  "absorbed_glottocode": "sout3407",
+  "absorbed_level": "family",
+  "into": "Patkaian",
+  "into_glottocode": "kony1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "South Sulawesi",
+  "absorbed_glottocode": "sout3413",
+  "absorbed_level": "family",
+  "into": "Greater South Sulawesi",
+  "into_glottocode": "sout2923",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "South-Central Totonacan",
+  "absorbed_glottocode": "sout3429",
+  "absorbed_level": "family",
+  "into": "Totonacan",
+  "into_glottocode": "toto1251",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Sumambu-Tagal",
+  "absorbed_glottocode": "suma1273",
+  "absorbed_level": "family",
+  "into": "Greater Murutic",
+  "into_glottocode": "grea1294",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Swahili (G.40)",
+  "absorbed_glottocode": "swah1254",
+  "absorbed_level": "family",
+  "into": "Sabaki-Swahili",
+  "into_glottocode": "saba1282",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Takanik-Chamik",
+  "absorbed_glottocode": "taka1267",
+  "absorbed_level": "family",
+  "into": "Tacanan",
+  "into_glottocode": "taca1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Tama-Sungor-Miisiirii",
+  "absorbed_glottocode": "tama1330",
+  "absorbed_level": "family",
+  "into": "Tamaic",
+  "into_glottocode": "tama1329",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Tamangic",
+  "absorbed_glottocode": "tama1367",
+  "absorbed_level": "family",
+  "into": "Kaike-Ghale-Tamangic",
+  "into_glottocode": "kaik1248",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Tamil-Irula",
+  "absorbed_glottocode": "tami1294",
+  "absorbed_level": "family",
+  "into": "Tamil-Toda",
+  "into_glottocode": "tami1293",
+  "reason": "only child, held no language of its own",
+  "languages_below": 5
+ },
+ {
+  "absorbed": "Tamil-Malayalam",
+  "absorbed_glottocode": "tami1298",
+  "absorbed_level": "family",
+  "into": "Tamil-Kodagu",
+  "into_glottocode": "tami1297",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Tanna",
+  "absorbed_glottocode": "tann1242",
+  "absorbed_level": "family",
+  "into": "Southern Vanuatu",
+  "into_glottocode": "sout2868",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Tariku",
+  "absorbed_glottocode": "tari1255",
+  "absorbed_level": "family",
+  "into": "Lakes Plain",
+  "into_glottocode": "lake1255",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Taupota linkage",
+  "absorbed_glottocode": "taup1241",
+  "absorbed_level": "family",
+  "into": "North Papuan Mainland-D'Entrecasteaux linkage",
+  "into_glottocode": "nort2848",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Core Celtic",
+  "absorbed_glottocode": "tgbc1234",
+  "absorbed_level": "family",
+  "into": "Celtic",
+  "into_glottocode": "celt1248",
+  "reason": "same name stem",
+  "languages_below": 13
+ },
+ {
+  "absorbed": "Middle Old Tibetan",
+  "absorbed_glottocode": "tibe1276",
+  "absorbed_level": "family",
+  "into": "Early Old Tibetan",
+  "into_glottocode": "oldm1245",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Tidung-Bulusu",
+  "absorbed_glottocode": "tidu1238",
+  "absorbed_level": "family",
+  "into": "Greater Murutic",
+  "into_glottocode": "grea1294",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Tiwa-Boro",
+  "absorbed_glottocode": "tiwa1256",
+  "absorbed_level": "family",
+  "into": "Bodo-Garo",
+  "into_glottocode": "bodo1279",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Totonac",
+  "absorbed_glottocode": "toto1252",
+  "absorbed_level": "family",
+  "into": "Totonacan",
+  "into_glottocode": "toto1251",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Trans Vitiaz",
+  "absorbed_glottocode": "tran1296",
+  "absorbed_level": "family",
+  "into": "Huon",
+  "into_glottocode": "huon1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Tswa-Ronga (S.50)",
+  "absorbed_glottocode": "tswa1254",
+  "absorbed_level": "family",
+  "into": "Tsonga-Copi",
+  "into_glottocode": "tson1250",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Tupi-Guarani",
+  "absorbed_glottocode": "tupi1276",
+  "absorbed_level": "family",
+  "into": "Aweti-Guarani",
+  "into_glottocode": "awet1245",
+  "reason": "only child, held no language of its own",
+  "languages_below": 4
+ },
+ {
+  "absorbed": "Tupi-Guarani Subgroup I.A",
+  "absorbed_glottocode": "tupi1282",
+  "absorbed_level": "family",
+  "into": "Tupi-Guarani Subgroup I",
+  "into_glottocode": "tupi1277",
+  "reason": "only child, held no language of its own",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Upper Franconian",
+  "absorbed_glottocode": "uppe1464",
+  "absorbed_level": "family",
+  "into": "Middle-Modern High German",
+  "into_glottocode": "midd1349",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Modern Turkestan",
+  "absorbed_glottocode": "uygh1240",
+  "absorbed_level": "family",
+  "into": "Turkestan",
+  "into_glottocode": "uygh1241",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Venezuelan Cariban",
+  "absorbed_glottocode": "vene1261",
+  "absorbed_level": "family",
+  "into": "Cariban",
+  "into_glottocode": "cari1283",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Vere-Gimme",
+  "absorbed_glottocode": "vere1249",
+  "absorbed_level": "family",
+  "into": "Central Adamawa",
+  "into_glottocode": "samb1322",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Voh-Kone-Cem-Pac",
+  "absorbed_glottocode": "vohk1236",
+  "absorbed_level": "family",
+  "into": "Northern New Caledonian",
+  "into_glottocode": "nort3325",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Waic",
+  "absorbed_glottocode": "waic1245",
+  "absorbed_level": "family",
+  "into": "Palaungic",
+  "into_glottocode": "pala1352",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Wa-Lawa",
+  "absorbed_glottocode": "wala1271",
+  "absorbed_level": "family",
+  "into": "Palaungic",
+  "into_glottocode": "pala1352",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Wangkatja-Tjarra",
+  "absorbed_glottocode": "wang1300",
+  "absorbed_level": "family",
+  "into": "Desert Nyungic",
+  "into_glottocode": "dese1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Wanham-Wari-Oro Win",
+  "absorbed_glottocode": "wanh1234",
+  "absorbed_level": "family",
+  "into": "Chapacuran",
+  "into_glottocode": "chap1271",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Wapeic",
+  "absorbed_glottocode": "wape1250",
+  "absorbed_level": "family",
+  "into": "Central Torricelli",
+  "into_glottocode": "cent2407",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Waric",
+  "absorbed_glottocode": "wari1269",
+  "absorbed_level": "family",
+  "into": "Chapacuran",
+  "into_glottocode": "chap1271",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Wati",
+  "absorbed_glottocode": "wati1241",
+  "absorbed_level": "family",
+  "into": "Desert Nyungic",
+  "into_glottocode": "dese1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Wee-Bassa-Klao",
+  "absorbed_glottocode": "weeb1234",
+  "absorbed_level": "family",
+  "into": "Kru",
+  "into_glottocode": "krua1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Mao",
+  "absorbed_glottocode": "west2445",
+  "absorbed_level": "family",
+  "into": "Blue Nile Mao",
+  "into_glottocode": "maoo1243",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Ijo",
+  "absorbed_glottocode": "west2446",
+  "absorbed_level": "family",
+  "into": "Ijoid",
+  "into_glottocode": "ijoi1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Kru",
+  "absorbed_glottocode": "west2485",
+  "absorbed_level": "family",
+  "into": "Kru",
+  "into_glottocode": "krua1234",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Nilotic",
+  "absorbed_glottocode": "west2493",
+  "absorbed_level": "family",
+  "into": "Nilotic",
+  "into_glottocode": "nilo1247",
+  "reason": "same name stem",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Western Dajuic",
+  "absorbed_glottocode": "west2501",
+  "absorbed_level": "family",
+  "into": "Dajuic",
+  "into_glottocode": "daju1249",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West-Central Heibanic",
+  "absorbed_glottocode": "west2502",
+  "absorbed_level": "family",
+  "into": "Heibanic",
+  "into_glottocode": "heib1242",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Saharan",
+  "absorbed_glottocode": "west2505",
+  "absorbed_level": "family",
+  "into": "Saharan",
+  "into_glottocode": "saha1256",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Western Admiralty Islands",
+  "absorbed_glottocode": "west2532",
+  "absorbed_level": "family",
+  "into": "Admiralty Islands",
+  "into_glottocode": "admi1239",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Bungku-Tolaki",
+  "absorbed_glottocode": "west2566",
+  "absorbed_level": "family",
+  "into": "Southeastern Celebic",
+  "into_glottocode": "sout2928",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Muskogean",
+  "absorbed_glottocode": "west2614",
+  "absorbed_level": "family",
+  "into": "Muskogean",
+  "into_glottocode": "musk1252",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Chadic B.1",
+  "absorbed_glottocode": "west2710",
+  "absorbed_level": "family",
+  "into": "West Chadic B",
+  "into_glottocode": "west2790",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Chadic A.2",
+  "absorbed_glottocode": "west2715",
+  "absorbed_level": "family",
+  "into": "West Chadic A",
+  "into_glottocode": "west2714",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Chadic A.3",
+  "absorbed_glottocode": "west2717",
+  "absorbed_level": "family",
+  "into": "West Chadic A",
+  "into_glottocode": "west2714",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Chadic A.1",
+  "absorbed_glottocode": "west2718",
+  "absorbed_level": "family",
+  "into": "West Chadic A",
+  "into_glottocode": "west2714",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Western Mande",
+  "absorbed_glottocode": "west2780",
+  "absorbed_level": "family",
+  "into": "Mande",
+  "into_glottocode": "mand1469",
+  "reason": "same name stem",
+  "languages_below": 13
+ },
+ {
+  "absorbed": "Western Otomanguean",
+  "absorbed_glottocode": "west2783",
+  "absorbed_level": "family",
+  "into": "Otomanguean",
+  "into_glottocode": "otom1299",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "Western Tucanoan",
+  "absorbed_glottocode": "west2784",
+  "absorbed_level": "family",
+  "into": "Tucanoan",
+  "into_glottocode": "tuca1253",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Chadic A.2-3",
+  "absorbed_glottocode": "west2799",
+  "absorbed_level": "family",
+  "into": "West Chadic A",
+  "into_glottocode": "west2714",
+  "reason": "same name stem",
+  "languages_below": 2
+ },
+ {
+  "absorbed": "West Chadic B.3",
+  "absorbed_glottocode": "west2800",
+  "absorbed_level": "family",
+  "into": "West Chadic B",
+  "into_glottocode": "west2790",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Gbe",
+  "absorbed_glottocode": "west2802",
+  "absorbed_level": "family",
+  "into": "Gbe",
+  "into_glottocode": "gbee1241",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western South Slavic",
+  "absorbed_glottocode": "west2804",
+  "absorbed_level": "family",
+  "into": "South Slavic",
+  "into_glottocode": "sout3147",
+  "reason": "same name stem",
+  "languages_below": 5
+ },
+ {
+  "absorbed": "Western Nahuatl",
+  "absorbed_glottocode": "west2809",
+  "absorbed_level": "family",
+  "into": "Aztec",
+  "into_glottocode": "azte1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Southwestern Apachean",
+  "absorbed_glottocode": "west2810",
+  "absorbed_level": "family",
+  "into": "Athabaskan-Eyak",
+  "into_glottocode": "atha1246",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Hindi",
+  "absorbed_glottocode": "west2812",
+  "absorbed_level": "family",
+  "into": "Indo-Aryan Central zone",
+  "into_glottocode": "indo1322",
+  "reason": "only child, held no language of its own",
+  "languages_below": 5
+ },
+ {
+  "absorbed": "Western Aramaic",
+  "absorbed_glottocode": "west2815",
+  "absorbed_level": "family",
+  "into": "Aramaic",
+  "into_glottocode": "aram1259",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Lakes Bantu",
+  "absorbed_glottocode": "west2842",
+  "absorbed_level": "family",
+  "into": "Great Lakes Bantu",
+  "into_glottocode": "grea1289",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Micronesian",
+  "absorbed_glottocode": "west2844",
+  "absorbed_level": "family",
+  "into": "Micronesian",
+  "into_glottocode": "micr1243",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Mayan",
+  "absorbed_glottocode": "west2865",
+  "absorbed_level": "family",
+  "into": "Mayan",
+  "into_glottocode": "maya1287",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Nyulnyulan",
+  "absorbed_glottocode": "west2872",
+  "absorbed_level": "family",
+  "into": "Nyulnyulan",
+  "into_glottocode": "nyul1248",
+  "reason": "same name stem",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Moselle Franconian",
+  "absorbed_glottocode": "west2891",
+  "absorbed_level": "dialect",
+  "into": "Middle German",
+  "into_glottocode": "fran1268",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Valley Zapotec",
+  "absorbed_glottocode": "west2947",
+  "absorbed_level": "family",
+  "into": "Central Core Zapotec",
+  "into_glottocode": "cent2146",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Kasai-Ngounie",
+  "absorbed_glottocode": "west2969",
+  "absorbed_level": "family",
+  "into": "Moyen Kasai-Ngounie",
+  "into_glottocode": "moye1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "West Gyalrongic",
+  "absorbed_glottocode": "west2973",
+  "absorbed_level": "family",
+  "into": "Qiangic",
+  "into_glottocode": "qian1263",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Western Sotho-Tswana",
+  "absorbed_glottocode": "west2997",
+  "absorbed_level": "family",
+  "into": "Sotho-Tswana (S.30)",
+  "into_glottocode": "soth1248",
+  "reason": "only child, held no language of its own",
+  "languages_below": 3
+ },
+ {
+  "absorbed": "Wik",
+  "absorbed_glottocode": "wika1239",
+  "absorbed_level": "family",
+  "into": "Compromise Middle Pama",
+  "into_glottocode": "comp1236",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Yanomam-Yaroame",
+  "absorbed_glottocode": "yano1266",
+  "absorbed_level": "family",
+  "into": "Yanomamic",
+  "into_glottocode": "yano1268",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Yoruboid",
+  "absorbed_glottocode": "yoru1244",
+  "absorbed_level": "family",
+  "into": "Defoid",
+  "into_glottocode": "defo1239",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Yue Chinese",
+  "absorbed_glottocode": "yuec1235",
+  "absorbed_level": "language",
+  "into": "Yue-Pinghua",
+  "into_glottocode": "yuep1234",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Yuman",
+  "absorbed_glottocode": "yuma1250",
+  "absorbed_level": "family",
+  "into": "Cochimi-Yuman",
+  "into_glottocode": "coch1271",
+  "reason": "only child, held no language of its own",
+  "languages_below": 1
+ },
+ {
+  "absorbed": "Zapotec",
+  "absorbed_glottocode": "zapo1437",
+  "absorbed_level": "family",
+  "into": "Zapotecan",
+  "into_glottocode": "zapo1436",
+  "reason": "same name stem",
+  "languages_below": 4
+ }
+]

@@ -1,6 +1,6 @@
 {
-  "gzipBytes": 608960,
-  "recordedAt": "2026-08-10",
+  "gzipBytes": 683349,
+  "recordedAt": "2026-08-11",
   "note": "v3.33.1.0 Three Sovereigns, inclusion-over-citation policy (data 0.34.1.0). Measured with zlib.gzipSync.",
-  "reason": "Raised for the modern era, which the dataset had almost entirely skipped. 69 entities began in the nineteenth century and 71 in the twentieth, worldwide, and the whole United States subtree was two rows -- itself and the Civil War -- while India had ten prime ministers listed and Britain none. 2,241 rows were authored and 215 dropped in reconciliation, taking the corpus from 3,301 to 5,507 at a cost of about 140 kB gzipped. Deleting the fabricated uncertainty gave some of that back."
+  "reason": "Raised for the Languages branch: 1,158 languages placed on 1,178 Glottolog clade nodes, with the 28 that had been sitting in a flat global.languages list folded in. The corpus goes from 5,507 to 7,793 entities. The raw-artifact ceiling moved from 3 MB to 5 MB in the same change, since gzip is what governs delivery and the raw size only governs parse time."
 }

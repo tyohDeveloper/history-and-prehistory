@@ -1,7 +1,7 @@
 {
   "schema_version": "3.7.0",
   "dataset_version": "0.37.0.0",
-  "generated_at": "2026-08-10T22:47:21Z",
+  "generated_at": "2026-08-11T19:54:08Z",
   "sources": [
     {
       "id": "dominguez-rodrigo-2016-lomekwi",
@@ -1020,6 +1020,20 @@
       "citation": "Published radiocarbon determinations for the Taruga iron-smelting furnaces",
       "url": "http://www.diaspora.illinois.edu/news0311/news0311-5.pdf",
       "note": "Four samples spanning 920 BCE to 280 BCE."
+    },
+    {
+      "id": "glottolog-5-3",
+      "kind": "reference",
+      "citation": "Hammarström, Forkel, Haspelmath & Bank (2026), Glottolog 5.3, Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/",
+      "note": "Genealogical classification, languoid level, isolate status and documentation depth. Dates are not from Glottolog, which dates nothing; see each entity's date note."
+    },
+    {
+      "id": "roster-tier-1",
+      "kind": "reference",
+      "citation": "History & Prehistory language roster (2026), compiled from Glottolog 5.3, Wikipedia, Britannica and regional scholarship across fourteen research passes",
+      "url": "https://glottolog.org/",
+      "note": "Used where Glottolog has no entry: reconstructed proto-languages and attested stages without a glottocode. Placement and dates are the roster's, not Glottolog's."
     },
     {
       "id": "roberts-copper-age-concept",

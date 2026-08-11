@@ -294,6 +294,12 @@ def main():
     # One trap this must not fall into: Ancient Macedonian is not an ancestor of Macedonian. The
     # first is Hellenic, the second is Slavic, and they share only a place name. Anything whose
     # candidate parent sits in a different top-level family is refused.
+    # Verified by hand: the stage really is an earlier form of the modern language it names.
+    # Ancient Macedonian is deliberately absent -- see the guard below.
+    VOUCHED_STAGES = {
+        "Early Assamese", "Old Bengali (Charyapada)", "Old Gujarati", "Old Kashmiri",
+        "Old Latvian", "Old Malayalam", "Old Nepali", "Old Odia", "Old Punjabi", "Old Sindhi",
+    }
     STAGE = re.compile(r"^(old|classical|ancient|early|middle|literary|elu)\b[\s(]*", re.I)
     by_name = {}
     for row in out:
@@ -310,7 +316,21 @@ def main():
         if not target:
             continue
         # Same top-level family, or refuse.
-        if target.split(".")[1] != (r.get("path") or [None])[0] and r.get("path"):
+        # The guard has to hold when the row has NO Glottolog path too, which is exactly when it
+        # is needed: Ancient Macedonian has no glottocode, so `path` is empty, so an earlier
+        # version skipped the check and filed it under South Slavic beside modern Macedonian. The
+        # two share a place name and nothing else -- one is Hellenic, the other Slavic. A row with
+        # no path has no family to compare against, so it must be placed explicitly or not at all.
+        if not r.get("path"):
+            # Explicitly vouched for: each was checked against the modern language's own parent and
+            # really is its earlier stage. There is nothing to verify mechanically, because a row
+            # without a glottocode has no Glottolog path to compare -- which is precisely why
+            # Ancient Macedonian must be refused here and placed by hand instead.
+            if r["name"] not in VOUCHED_STAGES:
+                refused.append(r["name"])
+                continue
+            # Vouched: fall through and place it.
+        elif target.split(".")[1] != r["path"][0]:
             refused.append(r["name"])
             continue
         new_id = f"{target}.{slug(r['name'])}"
@@ -329,6 +349,9 @@ def main():
         "Elu (Old Sinhala)": "Indo-Aryan", "Old Balinese": "Malayo-Polynesian",
         "Old Siamese (Sukhothai Thai)": "Tai-Kadai", "Old Tibetan": "Sino-Tibetan",
         "Dogon": "Atlantic-Congo", "Quechua": "Quechuan",
+        # Usually classed with Greek, and emphatically not with the Slavic language that shares
+        # the place name.
+        "Ancient Macedonian": "Graeco-Phrygian",
         # Aquitanian is generally read as ancestral to Basque, which is an isolate, so it belongs
         # beside it rather than in a family.
         "Aquitanian": None,
@@ -391,7 +414,29 @@ def main():
         dupes.append(node)
         seen[row["id"]] = lang
     out[:] = [r for r in out if id(r) not in {id(d) for d in dupes}]
-    print(f"  merged {len(dupes)} language(s) into their own clade node")
+
+    # The same situation one level down, which the id check above cannot see: the clade node is
+    # `mongolic.mongolian` and the language became `mongolic.mongolian.mongolian`, so the ids differ
+    # while the entity is still doubled. A language whose parent is a family node of the same name
+    # is that node.
+    by_id_now = {r["id"]: r for r in out}
+    absorbed = []
+    for row in out:
+        if row.get("is_family_node"):
+            continue
+        parent = by_id_now.get(row.get("parent_id") or "")
+        if parent is None or not parent.get("is_family_node"):
+            continue
+        if parent.get("name") != row.get("name"):
+            continue
+        for other in out:
+            if other.get("parent_id") == row["id"]:
+                other["parent_id"] = parent["id"]
+        row["id"], row["parent_id"] = parent["id"], parent.get("parent_id")
+        absorbed.append(parent)
+    out[:] = [r for r in out if id(r) not in {id(a) for a in absorbed}]
+    print(f"  merged {len(dupes)} language(s) into their own clade node"
+          + (f", {len(absorbed)} into a same-named parent" if absorbed else ""))
 
     # Two rows were parented onto a row that later moved: Literary Vietnamese onto Old Vietnamese,
     # and Proto-Eastern Sudanic onto Proto-Nilo-Saharan, both of which were relocated by the

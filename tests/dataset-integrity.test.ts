@@ -35,7 +35,9 @@ describe("dataset envelope", () => {
     // 3,301 -> 5,507. The modern era was almost absent: 69 entities began in the nineteenth
     // century and 71 in the twentieth, worldwide, and the entire United States subtree was two
     // rows. 2,241 were authored and 215 dropped as duplicates during reconciliation.
-    expect(entities.length).toBe(5507);
+    // 5,507 -> 7,793. The Languages branch adds 1,158 languages on 1,178 Glottolog clade nodes,
+    // and folds in the 28 that had been sitting in a flat global.languages list.
+    expect(entities.length).toBe(7793);
     expect(calendars.length).toBe(21);
     expect(themes.length).toBe(16);
     expect(referenceFrames.length).toBe(46);
@@ -115,7 +117,10 @@ describe("gap-analysis baseline", () => {
     // Was 0/1305 across the whole dataset: the builders could not emit the
     // field at all. Closing that (Q-10) is what made this possible.
     const cited = entities.filter((e) => (e.source_ids?.length ?? 0) > 0);
-    expect(cited.length).toBe(585);
+// 585 -> 1,742. Every language cites Glottolog for its placement, or the roster where
+    // Glottolog has no entry. Those are placement citations, not date citations; the sourcing
+    // pass still has the rest of the corpus to do.
+    expect(cited.length).toBe(1742);
   });
 
   it("carries dating methods and uncertainty bounds", () => {
@@ -125,7 +130,7 @@ describe("gap-analysis baseline", () => {
     // populated endpoint, and bounds are required unless the method is `calendar` (an
     // attested year is not an estimate) or `received` (a traditional figure is the
     // tradition's claim, not a measurement).
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(5461);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(7746);
         // 1,036, down from 1,700. The drop is the fix, not a regression: 664 entities dated after
     // 1000 CE had been given plus-or-minus a century by a convention that keyed on abs(year) and
     // so treated 1989 CE like 1989 BCE. The Fall of the Berlin Wall read 1889 to 2089.
@@ -139,7 +144,9 @@ describe("gap-analysis baseline", () => {
     // estimate, which asserts the date is known exactly and is the opposite of what recording an
     // interval is for. Those had survived the symmetry test precisely because being equal on one
     // side makes a pair asymmetric.
-    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(53);
+    // 52, not 53: one of the surviving hand-authored intervals belonged to a global.languages
+    // entity that has now been folded into the Languages tree, which carries no bounds.
+    expect(entities.filter((e) => e.start_year_min !== undefined).length).toBe(52);
   });
 
   it("dates each boundary on its own evidence", () => {
@@ -150,7 +157,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(4385);
+    expect(withEnd.length).toBe(4887);
 
     // The differing set was a hand-listed dozen and is now 233, which is the property working
     // rather than breaking: a city founded in prehistory and abandoned in the documentary era
@@ -205,7 +212,9 @@ describe("gap-analysis baseline", () => {
     // entities in the app -- a reader clicking "China" or "Africa" lands on one -- and
     // they were the emptiest. Now an invariant rather than a record of the gap.
     const regions = entities.filter((e) => e.kind === "region");
-    expect(regions.length).toBe(46);
+// 46 -> 50. Languages joins as a top-level region, with Isolates and Disputed Groupings
+    // beneath it, plus one clade node that has no dated descendant and so stays a container.
+    expect(regions.length).toBe(50);
     const missing = regions.filter((e) => (e.summary ?? "").trim() === "").map((e) => e.id);
     expect(missing).toEqual([]);
   });
@@ -1012,7 +1021,9 @@ describe("the Essentials view", () => {
     const roots = entities.filter((e) => e.parent_id === null);
     const hidden = roots.filter((e) => e.tier !== "foundational").map((e) => e.id);
     expect(hidden).toEqual([]);
-    expect(roots.length).toBe(10);
+// 11, not 10: Languages joins the ten geographic regions, since a language's home is its
+    // family rather than a place.
+    expect(roots.length).toBe(11);
   });
 
   it("does not strand a foundational entity under a hidden parent", () => {
@@ -1331,10 +1342,17 @@ describe("the new kinds", () => {
   it("files languages by descent, not geography", () => {
     // parent_id means linguistic ancestor here. Akkadian's parent is Proto-Semitic, not
     // Mesopotamia -- and ids stay flat so re-subgrouping a family never changes identity.
-    const akkadian = entities.find((e) => e.id === "global.languages.akkadian")!;
-    expect(akkadian.parent_id).toBe("global.languages.proto-semitic");
-    const semitic = entities.find((e) => e.id === "global.languages.proto-semitic")!;
-    expect(semitic.parent_id).toBe("global.languages.proto-afroasiatic");
+    // The flat global.languages branch was folded into the Languages tree, so a language now sits
+    // at its position in Glottolog's genealogy rather than one level under a proto. Akkadian's
+    // ancestor is still Proto-Semitic; there are simply real clades in between.
+    const akkadian = entities.find((e) => e.name === "Akkadian" && e.kind === "language")!;
+    expect(akkadian.id.startsWith("languages.semitic.")).toBe(true);
+    const semitic = entities.find((e) => e.id === "languages.semitic.proto-semitic")!;
+    expect(semitic.parent_id).toBe("languages.semitic");
+    // And descent, not geography: nothing about Mesopotamia appears in Akkadian's ancestry.
+    expect(akkadian.id).not.toContain("west-asia");
+    // The historical placement is carried by cross_parent_ids instead.
+    expect(akkadian.cross_parent_ids).toContain("west-asia.mesopotamia");
   });
 
   it("marks proto-languages reconstructed, not doubtful", () => {
@@ -1342,7 +1360,9 @@ describe("the new kinds", () => {
     // contested one. Nobody doubts Proto-Indo-European; nobody has heard it either.
     for (const e of entities.filter((x) => x.kind === "language")) {
       if (!e.name.startsWith("Proto-")) continue;
-      expect(e.historicity, `${e.id}`).toBe("reconstructed");
+      // Reconstructed, unless the family being reconstructed is itself disputed: Glottolog
+      // recognises no Altaic, Amerind or Nostratic, so those five are contested as well.
+      expect(["reconstructed", "contested"], `${e.id}`).toContain(e.historicity);
       expect(e.start_dating_method, `${e.id}`).toBe("glottochronology");
     }
   });

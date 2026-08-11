@@ -31,8 +31,9 @@ EXPLICIT = {
     "west-asia.mesopotamia.israel-judah.solomon": "King Solomon united monarchy historicity",
     "east-asia.china.legendary": "Three Sovereigns Five Emperors Chinese mythology",
     "east-asia.korea.gojoseon.dangun": "Dangun Wanggeom Gojoseon foundation myth",
-    "global.languages.old-chinese": "Old Chinese reconstruction Shijing rhymes",
-    "global.languages.classical-maya": "Classical Maya script decipherment",
+    # The two language phrases moved to author_languages, keyed by name. Held here as ids they
+    # broke on every tree restructure -- Old Chinese changed id three times in one afternoon as
+    # clades were merged and collapsed.
     "global.traditions.great-schism": "East-West Schism 1054",
     "global.traditions.sunni-shia-split": "Sunni Shia split succession to Muhammad",
     "global.milestones.zero-as-number": "Brahmagupta zero as a number Brahmasphutasiddhanta",

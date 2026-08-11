@@ -252,6 +252,9 @@ RE_KIND = {
     "west-asia.anatolia.lydia.coinage": "threshold",
 }
 
+# Was "global.languages". The Languages branch now provides every language, so this module's
+# job here is done; the constant survives only because the language rows it once authored are
+# migrated by author_languages, which needs the old ids to build its redirects.
 LANG_ROOT = "global.languages"
 TRAD_ROOT = "global.traditions"
 NET_ROOT = "global.networks"

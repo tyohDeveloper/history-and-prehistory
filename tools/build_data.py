@@ -2019,6 +2019,11 @@ _author_modern(E, entities)
 # rather than by name, and caught 24 tenures the merge's string comparison could not see.
 from modern_dedupe import extend as _modern_dedupe
 _modern_dedupe(E, entities)
+
+# Before normalisation, like the other authoring modules. The Languages branch also absorbs the
+# old global.languages entities, so it must run before anything reads language ids.
+from author_languages import extend as _author_languages
+_LANGUAGE_REDIRECTS = _author_languages(E, entities)
 from modern_dedupe import reparent_anachronisms as _reparent_anachronisms, \
     resolve_collisions as _resolve_collisions
 from modern_dedupe import reparent_off_places as _reparent_off_places
@@ -2030,6 +2035,9 @@ _reparent_anachronisms(E, entities)
 # ids -- it looked for `ur-iii` while the entity was still `ur3` -- so a correct id list failed.
 # Canonicalise once, then let everything downstream use the canonical form.
 _ID_REDIRECTS = _normalize_ids(E, entities) or {}
+# The old global.languages ids must keep resolving; nothing referenced them internally, but a
+# reader may have one bookmarked.
+_ID_REDIRECTS.update(_LANGUAGE_REDIRECTS or {})
 # AFTER normalisation, because it names entities by id and the seed carried `william1` where the
 # canonical form is `william-i`. Placed before it, the lookup silently matched nothing and the
 # duplicate survived -- the same ordering mistake this file already documents twice above.
@@ -3268,6 +3276,32 @@ sources = [
 
 from extensions_africa import AFRICA_SOURCES  # noqa: E402
 sources.extend(AFRICA_SOURCES)
+
+# The authority behind the Languages branch: its genealogical classification, its isolate flag and
+# its Most Extensive Description ranking. CC-BY 4.0, so redistributable inside the app with
+# attribution -- which is why it was chosen over Ethnologue, whose terms cap fair use at a thousand
+# words per project and require a commercial licence to ship.
+sources.append({
+    "id": "glottolog-5-3",
+    "kind": "reference",
+    "citation": ("Hammarström, Forkel, Haspelmath & Bank (2026), Glottolog 5.3, "
+                 "Max Planck Institute for Evolutionary Anthropology"),
+    "url": "https://glottolog.org/",
+    "note": ("Genealogical classification, languoid level, isolate status and documentation depth. "
+             "Dates are not from Glottolog, which dates nothing; see each entity's date note."),
+})
+# The roster itself, for the rows Glottolog could not classify: reconstructions, which have no
+# glottocode because they are not attested varieties, and a few ancient stages whose codes did not
+# resolve. Placement for those came from the research passes rather than from Glottolog.
+sources.append({
+    "id": "roster-tier-1",
+    "kind": "reference",
+    "citation": ("History & Prehistory language roster (2026), compiled from Glottolog 5.3, "
+                 "Wikipedia, Britannica and regional scholarship across fourteen research passes"),
+    "url": "https://glottolog.org/",
+    "note": ("Used where Glottolog has no entry: reconstructed proto-languages and attested stages "
+             "without a glottocode. Placement and dates are the roster's, not Glottolog's."),
+})
 from extensions_ages import AGES_SOURCES  # noqa: E402
 sources.extend(AGES_SOURCES)
 from extensions_neolithic import NEOLITHIC_SOURCES  # noqa: E402

@@ -31,7 +31,12 @@ const OUTPUT_FILE = path.join(OUTPUT_DIR, "index.html");
 const BASELINE_FILE = path.join(ROOT, "scripts", "build-baseline.json");
 const MANIFEST_FILE = path.join(ROOT, "scripts", "testid-manifest.json");
 
-const MAX_SIZE_BYTES = 3 * 1024 * 1024;
+// Raised from 3 MB when the Languages branch took the corpus to 7,793 entities. The number that
+// governs delivery is the gzip size, checked separately against a recorded baseline, and that is
+// 667 kB; this ceiling is about parse time and memory once the file is open. 5 MB of mostly-text
+// HTML parses in well under a second on any browser this app targets, and the file still opens
+// from disk with no network at all, which is the property that matters.
+const MAX_SIZE_BYTES = 5 * 1024 * 1024;
 const GZIP_HEADROOM_RATIO = 1.05;
 
 let failed = false;

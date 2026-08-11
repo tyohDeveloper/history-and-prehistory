@@ -80,6 +80,16 @@ def main():
     kept = json.load(open(os.path.join(LANG, "kept.json")))
 
     # ---- which family nodes are actually needed -----------------------------
+    # Glottolog's non-genealogical pseudo-families are not descent groups and must not be emitted
+    # as clades. Bookkeeping is the worst of them -- entries given a code for administrative
+    # reasons that the editors do not regard as real languoids -- and it had shipped as a top-level
+    # branch of the Languages tree beside Indo-European.
+    PSEUDO_FAMILIES = {"Bookkeeping", "Unclassifiable", "Pidgin", "Sign Language",
+                       "Artificial Language", "Unattested", "Speech Register", "Mixed Language"}
+    # Union of the two ways this was found: BOOKKEEPING_GC names the three glottocodes that
+    # actually occur, and the name set catches the wider category should another ever appear.
+    pseudo_gcs = {gc for gc, m in meta.items() if m.get("name") in PSEUDO_FAMILIES} | BOOKKEEPING_GC
+
     needed = set()
     for r in kept:
         for gc in r.get("path") or []:
@@ -180,7 +190,7 @@ def main():
         if gc in BOOKKEEPING_GC:
             continue
         m = meta.get(gc)
-        if m is None:
+        if m is None or gc in pseudo_gcs:
             continue
         chain = [resolve(a) for a in paths.get(gc, "").split("/") if a]
         chain = [c for c in chain if c in surviving and c != gc]
@@ -243,7 +253,10 @@ def main():
     unplaced = []
     for r in kept:
         path = [resolve(a) for a in (r.get("path") or [])]
-        path = [p for p in path if p in surviving and p not in BOOKKEEPING_GC]
+        # Filtering the bookkeeping codes out of the path upstream, rather than special-casing
+        # the all-bookkeeping case downstream: a language whose ancestry runs only through them
+        # then has an empty path and falls through to Unclassified by the ordinary route.
+        path = [p for p in path if p in surviving and p not in pseudo_gcs]
         if r.get("classification") == "proto_language" and not path:
             parent = proto_home(r)
         elif r["isolate"]:

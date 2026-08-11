@@ -11,7 +11,7 @@ import { isScientificDating } from "../src/chrono/year";
 const idx = buildIndex(entities);
 
 describe("dataset envelope", () => {
-  it("is v0.37.0.0 on schema 3.7.0", () => {
+  it("is v0.38.0.0 on schema 3.7.0", () => {
     // MAJOR on both. Schema 2.0.0 adds the taxon and threshold kinds, so a
     // consumer switching exhaustively on kind breaks. Dataset 3.0.0 moves the
     // prehistory ids (origins -> hominins) and re-parents the stone ages, so
@@ -22,7 +22,7 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.37.0.0");
+    expect(datasetVersion).toBe("0.38.0.0");
     // 3.6.0: retired the three precision enums, added extant, historicity, date_standing,
     // search_phrase, qualified_name and redirects, and added the polity, culture, language,
     // tradition, people, network, person and city kinds.

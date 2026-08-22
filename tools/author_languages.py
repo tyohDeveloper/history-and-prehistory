@@ -140,11 +140,15 @@ def extend(E, entities):
             e["end_year"] = None
         out.append(e)
 
+    needs_review = _flag_fallback_dates(out)
+    # Regrouping BEFORE the migration, because regrouping moves ids. Run the other way round,
+    # the redirects were written against ids that then changed -- Dravidian turned out to be a
+    # one-language family and moved, leaving global.languages.proto-dravidian pointing at nothing.
+    _group_singletons(out)
+
     by_id = {e["id"]: e for e in out}
 
     # Fold the old branch in before the hull is computed, so a migrated entity's dates count.
-    # E is the entity-builder function, not the envelope -- redirects are collected by
-    # build_data into _ID_REDIRECTS and written to the envelope there, so this returns them.
     redirects = {}
     drop = migrate(entities, by_id, redirects)
     entities[:] = [e for e in entities if e["id"] not in drop]
@@ -172,6 +176,9 @@ def extend(E, entities):
 
     entities.extend(out)
     apply_cross_parents(E, entities, out)
+    # Published as a theme, so the set is a worklist a reader (or the next dating pass) can open,
+    # rather than a note buried on eighteen separate entities.
+    globals()["NEEDS_DATING_REVIEW"] = sorted(e["id"] for e in out if id(e) in needs_review)
 
     fam = sum(1 for e in out if e.get("start_dating_method") is None)
     print(f"author_languages: added {len(out)} entities "
@@ -238,3 +245,87 @@ def _fill_hulls(out, by_id):
                 f"A subgroup within the {e['id'].split('.')[1].replace('-', ' ').title()} family. "
                 "No language in this roster is placed directly here; it exists to keep the descent "
                 "path intact.")
+
+
+# A top-level family holding exactly one language adds no branching a reader can use, and there
+# were 135 of them -- half the Languages column was Greater Kwerba, Pahoturi, Mailuan and their
+# kind, each a real Glottolog family represented here by a single Tier 2 exemplar.
+#
+# They are NOT isolates and must not be filed as such. An isolate has no known relatives, which is
+# a claim about the evidence; these have relatives that this roster simply does not carry, which is
+# a claim about the roster. Conflating the two would assert something false about Abkhaz-Adyge.
+SINGLETON_ID = "languages.one-language-families"
+SINGLETON_NAME = "Families With One Language Here"
+
+
+def _group_singletons(out):
+    by_parent = {}
+    for e in out:
+        by_parent.setdefault(e.get("parent_id"), []).append(e)
+
+    def languages_below(eid):
+        n = 0
+        for child in by_parent.get(eid, ()):
+            if child["kind"] == "language":
+                n += 1
+            n += languages_below(child["id"])
+        return n
+
+    tops = [e for e in out if e.get("parent_id") == "languages"
+            and e["id"] not in {"languages.isolates", "languages.disputed",
+                                "languages.unclassified"}]
+    movers = [e for e in tops if languages_below(e["id"]) <= 1
+              and e["id"] != SINGLETON_ID]
+    if not movers:
+        return
+
+    out.append({
+        "id": SINGLETON_ID,
+        "name": SINGLETON_NAME,
+        "kind": "region",
+        "parent_id": "languages",
+        # Every node needs a tier; the demotion pass in apply_corrections reads it unguarded.
+        "tier": "foundational",
+        "summary": ("Families represented in this dataset by a single language. They are not "
+                    "isolates: each has relatives, which this roster does not carry. Grouped so "
+                    "the top of the tree shows the families that branch."),
+    })
+    moved = 0
+    for e in movers:
+        old = e["id"]
+        e["parent_id"] = SINGLETON_ID
+        e["id"] = f"{SINGLETON_ID}.{old.rsplit('.', 1)[-1]}"
+        for other in out:
+            if other.get("parent_id") == old:
+                other["parent_id"] = e["id"]
+                other["id"] = f"{e['id']}.{other['id'].rsplit('.', 1)[-1]}"
+        moved += 1
+    print(f"author_languages: grouped {moved} one-language famil(ies) under {SINGLETON_NAME!r}")
+
+
+# Nineteen languages start at exactly 50,000 BCE and six at 40,000 BCE. Those are not dates for
+# those languages: where no divergence estimate existed, the research fell back to when the region
+# was first settled, which says when PEOPLE arrived and nothing about when a language began. The
+# clustering on round numbers is the tell -- real estimates do not land 19 deep on one figure.
+#
+# The dates stay, at the user's instruction, but they say what they are, and the entities are
+# collected into a theme so the set is a worklist rather than a footnote nobody reads.
+_FALLBACK_FLOOR = -20000
+
+
+def _flag_fallback_dates(out):
+    flagged = set()
+    for e in out:
+        y = e.get("start_year")
+        if y is None or y > _FALLBACK_FLOOR or e["kind"] != "language":
+            continue
+        note = ("Start is a regional settlement estimate, not a date for this language: no "
+                "divergence estimate exists for it. Treat as a floor on time-depth, not a "
+                "beginning.")
+        prior = (e.get("date_note") or "").strip()
+        if note not in prior:
+            e["date_note"] = (prior + " " + note).strip()
+        e.setdefault("historicity", "reconstructed")
+        flagged.add(id(e))
+    print(f"author_languages: flagged {len(flagged)} date(s) as regional fallback")
+    return flagged

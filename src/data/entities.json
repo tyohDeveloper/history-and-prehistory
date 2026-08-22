@@ -1,7 +1,7 @@
 {
   "schema_version": "3.7.0",
   "dataset_version": "0.38.0.0",
-  "generated_at": "2026-08-11T20:20:32Z",
+  "generated_at": "2026-08-22T19:58:05Z",
   "entities": [
     {
       "id": "global",
@@ -119604,10 +119604,10 @@
       "extant": true
     },
     {
-      "id": "languages.pauwasi",
+      "id": "languages.one-language-families.pauwasi",
       "name": "Pauwasi",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -119670,10 +119670,10 @@
       "extant": true
     },
     {
-      "id": "languages.piawi",
+      "id": "languages.one-language-families.piawi",
       "name": "Piawi",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -5000,
       "end_year": null,
@@ -119693,10 +119693,10 @@
       "qualified_name": "Bolgar (Turkic)"
     },
     {
-      "id": "languages.yukaghir",
+      "id": "languages.one-language-families.yukaghir",
       "name": "Yukaghir",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -1000,
       "end_year": null,
@@ -119704,10 +119704,10 @@
       "extant": true
     },
     {
-      "id": "languages.san-dionisio-san-mateo-huave",
+      "id": "languages.one-language-families.san-dionisio-san-mateo-huave",
       "name": "San Dionisio-San Mateo Huave",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -1000,
       "end_year": null,
@@ -119715,10 +119715,10 @@
       "extant": true
     },
     {
-      "id": "languages.northern-daly",
+      "id": "languages.one-language-families.northern-daly",
       "name": "Northern Daly",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -119726,10 +119726,10 @@
       "extant": true
     },
     {
-      "id": "languages.south-eastern-tasmanian",
+      "id": "languages.one-language-families.south-eastern-tasmanian",
       "name": "South-Eastern Tasmanian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1500,
       "end_year": 1876,
@@ -119737,10 +119737,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.ngurlun",
+      "id": "languages.one-language-families.ngurlun",
       "name": "Ngurlun",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -119748,10 +119748,10 @@
       "extant": true
     },
     {
-      "id": "languages.north-eastern-tasmanian",
+      "id": "languages.one-language-families.north-eastern-tasmanian",
       "name": "North-Eastern Tasmanian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -6000,
       "end_year": 1905,
@@ -119759,10 +119759,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.humene-kwale",
+      "id": "languages.one-language-families.humene-kwale",
       "name": "Humene-Kwale",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -50000,
       "end_year": null,
@@ -119770,10 +119770,10 @@
       "extant": true
     },
     {
-      "id": "languages.iwaidjan-proper",
+      "id": "languages.one-language-families.iwaidjan-proper",
       "name": "Iwaidjan Proper",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -10000,
       "end_year": null,
@@ -119781,10 +119781,10 @@
       "extant": true
     },
     {
-      "id": "languages.greater-kwerba",
+      "id": "languages.one-language-families.greater-kwerba",
       "name": "Greater Kwerba",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -50000,
       "end_year": null,
@@ -119803,10 +119803,10 @@
       "extant": true
     },
     {
-      "id": "languages.jicaquean",
+      "id": "languages.one-language-families.jicaquean",
       "name": "Jicaquean",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1,
       "end_year": null,
@@ -119814,10 +119814,10 @@
       "extant": true
     },
     {
-      "id": "languages.muskogean",
+      "id": "languages.one-language-families.muskogean",
       "name": "Muskogean",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 800,
       "end_year": null,
@@ -119847,10 +119847,10 @@
       "extant": true
     },
     {
-      "id": "languages.north-dravidian",
+      "id": "languages.one-language-families.north-dravidian",
       "name": "North Dravidian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2000,
       "end_year": null,
@@ -119858,10 +119858,10 @@
       "extant": true
     },
     {
-      "id": "languages.harakmbut",
+      "id": "languages.one-language-families.harakmbut",
       "name": "Harakmbut",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1894,
       "end_year": null,
@@ -119935,10 +119935,10 @@
       "extant": true
     },
     {
-      "id": "languages.kamakanan",
+      "id": "languages.one-language-families.kamakanan",
       "name": "Kamakanan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1500,
       "end_year": 1959,
@@ -119990,10 +119990,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.gunwinyguan",
+      "id": "languages.one-language-families.gunwinyguan",
       "name": "Gunwinyguan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -120001,10 +120001,10 @@
       "extant": true
     },
     {
-      "id": "languages.hibito-cholon",
+      "id": "languages.one-language-families.hibito-cholon",
       "name": "Hibito-Cholon",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -1000,
       "end_year": 2000,
@@ -120056,10 +120056,10 @@
       "extant": true
     },
     {
-      "id": "languages.jarrakan",
+      "id": "languages.one-language-families.jarrakan",
       "name": "Jarrakan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -120133,10 +120133,10 @@
       "extant": true
     },
     {
-      "id": "languages.kunimaipan",
+      "id": "languages.one-language-families.kunimaipan",
       "name": "Kunimaipan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -5000,
       "end_year": null,
@@ -120144,10 +120144,10 @@
       "extant": true
     },
     {
-      "id": "languages.lencan",
+      "id": "languages.one-language-families.lencan",
       "name": "Lencan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -5069,
       "end_year": 1979,
@@ -120155,10 +120155,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.hokkaido-kuril-ainu",
+      "id": "languages.one-language-families.hokkaido-kuril-ainu",
       "name": "Hokkaido-Kuril Ainu",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1000,
       "end_year": null,
@@ -120166,10 +120166,10 @@
       "extant": true
     },
     {
-      "id": "languages.monic",
+      "id": "languages.one-language-families.monic",
       "name": "Monic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 500,
       "end_year": 1300,
@@ -120177,10 +120177,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.rashad",
+      "id": "languages.one-language-families.rashad",
       "name": "Rashad",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -120188,10 +120188,10 @@
       "extant": true
     },
     {
-      "id": "languages.chiquitano",
+      "id": "languages.one-language-families.chiquitano",
       "name": "Chiquitano",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1500,
       "end_year": null,
@@ -120221,10 +120221,10 @@
       "extant": true
     },
     {
-      "id": "languages.maiduan",
+      "id": "languages.one-language-families.maiduan",
       "name": "Maiduan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1000,
       "end_year": 2010,
@@ -120232,10 +120232,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.elevala",
+      "id": "languages.one-language-families.elevala",
       "name": "Elevala",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -120309,10 +120309,10 @@
       "extant": true
     },
     {
-      "id": "languages.motu-based-pidgin",
+      "id": "languages.one-language-families.motu-based-pidgin",
       "name": "Motu-based pidgin",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1800,
       "end_year": null,
@@ -120353,10 +120353,10 @@
       "extant": true
     },
     {
-      "id": "languages.baraic",
+      "id": "languages.one-language-families.baraic",
       "name": "Baraic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -120364,10 +120364,10 @@
       "extant": true
     },
     {
-      "id": "languages.puri-coroado",
+      "id": "languages.one-language-families.puri-coroado",
       "name": "Puri-Coroado",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -9200,
       "end_year": 1900,
@@ -120397,10 +120397,10 @@
       "extant": true
     },
     {
-      "id": "languages.garrwan",
+      "id": "languages.one-language-families.garrwan",
       "name": "Garrwan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -120419,10 +120419,10 @@
       "extant": true
     },
     {
-      "id": "languages.shastan",
+      "id": "languages.one-language-families.shastan",
       "name": "Shastan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1770,
       "end_year": 1980,
@@ -120430,10 +120430,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.chimakuan",
+      "id": "languages.one-language-families.chimakuan",
       "name": "Chimakuan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 700,
       "end_year": 1999,
@@ -120441,10 +120441,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.hlaic",
+      "id": "languages.one-language-families.hlaic",
       "name": "Hlaic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2000,
       "end_year": null,
@@ -120496,10 +120496,10 @@
       "extant": true
     },
     {
-      "id": "languages.maybratic",
+      "id": "languages.one-language-families.maybratic",
       "name": "Maybratic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -24000,
       "end_year": null,
@@ -120518,10 +120518,10 @@
       "extant": true
     },
     {
-      "id": "languages.namla-tofanma",
+      "id": "languages.one-language-families.namla-tofanma",
       "name": "Namla-Tofanma",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -8000,
       "end_year": null,
@@ -120540,10 +120540,10 @@
       "extant": true
     },
     {
-      "id": "languages.barapasi-sauri-kofei",
+      "id": "languages.one-language-families.barapasi-sauri-kofei",
       "name": "Barapasi-Sauri-Kofei",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -7000,
       "end_year": null,
@@ -120551,10 +120551,10 @@
       "extant": true
     },
     {
-      "id": "languages.doso-turumsa",
+      "id": "languages.one-language-families.doso-turumsa",
       "name": "Doso-Turumsa",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -7000,
       "end_year": null,
@@ -120562,10 +120562,10 @@
       "extant": true
     },
     {
-      "id": "languages.coosan",
+      "id": "languages.one-language-families.coosan",
       "name": "Coosan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1500,
       "end_year": 1972,
@@ -120595,10 +120595,10 @@
       "extant": true
     },
     {
-      "id": "languages.konda-yahadian",
+      "id": "languages.one-language-families.konda-yahadian",
       "name": "Konda-Yahadian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -120606,10 +120606,10 @@
       "extant": true
     },
     {
-      "id": "languages.nyimang",
+      "id": "languages.one-language-families.nyimang",
       "name": "Nyimang",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2000,
       "end_year": null,
@@ -120650,10 +120650,10 @@
       "extant": true
     },
     {
-      "id": "languages.kiowa-tanoan",
+      "id": "languages.one-language-families.kiowa-tanoan",
       "name": "Kiowa-Tanoan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1200,
       "end_year": null,
@@ -120661,10 +120661,10 @@
       "extant": true
     },
     {
-      "id": "languages.west-bomberai",
+      "id": "languages.one-language-families.west-bomberai",
       "name": "West Bomberai",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -120683,10 +120683,10 @@
       "extant": true
     },
     {
-      "id": "languages.furan",
+      "id": "languages.one-language-families.furan",
       "name": "Furan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -120705,10 +120705,10 @@
       "extant": true
     },
     {
-      "id": "languages.jarawa-onge",
+      "id": "languages.one-language-families.jarawa-onge",
       "name": "Jarawa-Onge",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -14000,
       "end_year": null,
@@ -120716,10 +120716,10 @@
       "extant": true
     },
     {
-      "id": "languages.misumalpan",
+      "id": "languages.one-language-families.misumalpan",
       "name": "Misumalpan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -1000,
       "end_year": null,
@@ -120727,10 +120727,10 @@
       "extant": true
     },
     {
-      "id": "languages.palaihnihan",
+      "id": "languages.one-language-families.palaihnihan",
       "name": "Palaihnihan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -10000,
       "end_year": 2013,
@@ -120760,10 +120760,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.chumashan",
+      "id": "languages.one-language-families.chumashan",
       "name": "Chumashan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2000,
       "end_year": 1965,
@@ -120771,10 +120771,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.tequistlatecan",
+      "id": "languages.one-language-families.tequistlatecan",
       "name": "Tequistlatecan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -12000,
       "end_year": null,
@@ -120815,10 +120815,10 @@
       "extant": true
     },
     {
-      "id": "languages.eastern-daly",
+      "id": "languages.one-language-families.eastern-daly",
       "name": "Eastern Daly",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": 2006,
@@ -120848,10 +120848,10 @@
       "extant": true
     },
     {
-      "id": "languages.otomaco-taparita",
+      "id": "languages.one-language-families.otomaco-taparita",
       "name": "Otomaco-Taparita",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1500,
       "end_year": 1850,
@@ -120870,10 +120870,10 @@
       "extant": true
     },
     {
-      "id": "languages.south-bougainville",
+      "id": "languages.one-language-families.south-bougainville",
       "name": "South Bougainville",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -120881,10 +120881,10 @@
       "extant": true
     },
     {
-      "id": "languages.katla-julud",
+      "id": "languages.one-language-families.katla-julud",
       "name": "Katla-Julud",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -1000,
       "end_year": null,
@@ -120892,10 +120892,10 @@
       "extant": true
     },
     {
-      "id": "languages.gumuz",
+      "id": "languages.one-language-families.gumuz",
       "name": "Gumuz",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -1000,
       "end_year": null,
@@ -120925,10 +120925,10 @@
       "extant": true
     },
     {
-      "id": "languages.senagi",
+      "id": "languages.one-language-families.senagi",
       "name": "Senagi",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -5000,
       "end_year": null,
@@ -120936,10 +120936,10 @@
       "extant": true
     },
     {
-      "id": "languages.xincan",
+      "id": "languages.one-language-families.xincan",
       "name": "Xincan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -500,
       "end_year": 1997,
@@ -120958,10 +120958,10 @@
       "extant": true
     },
     {
-      "id": "languages.nivkh",
+      "id": "languages.one-language-families.nivkh",
       "name": "Nivkh",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4570,
       "end_year": null,
@@ -120969,10 +120969,10 @@
       "extant": true
     },
     {
-      "id": "languages.chinookan",
+      "id": "languages.one-language-families.chinookan",
       "name": "Chinookan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1000,
       "end_year": 2012,
@@ -121013,10 +121013,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.charruan",
+      "id": "languages.one-language-families.charruan",
       "name": "Charruan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1500,
       "end_year": 1964,
@@ -121035,10 +121035,10 @@
       "extant": true
     },
     {
-      "id": "languages.eastern-jebel",
+      "id": "languages.one-language-families.eastern-jebel",
       "name": "Eastern Jebel",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -1000,
       "end_year": null,
@@ -121046,10 +121046,10 @@
       "extant": true
     },
     {
-      "id": "languages.kimaama-riantana",
+      "id": "languages.one-language-families.kimaama-riantana",
       "name": "Kimaama-Riantana",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -50000,
       "end_year": null,
@@ -121079,10 +121079,10 @@
       "extant": true
     },
     {
-      "id": "languages.tsimshian",
+      "id": "languages.one-language-families.tsimshian",
       "name": "Tsimshian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -121158,10 +121158,10 @@
       "aliases": []
     },
     {
-      "id": "languages.north-central-alacufan",
+      "id": "languages.one-language-families.north-central-alacufan",
       "name": "North Central Alacufan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -121213,10 +121213,10 @@
       "extant": true
     },
     {
-      "id": "languages.eleman",
+      "id": "languages.one-language-families.eleman",
       "name": "Eleman",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -121268,10 +121268,10 @@
       "extant": true
     },
     {
-      "id": "languages.yareba-bariji-nawaru",
+      "id": "languages.one-language-families.yareba-bariji-nawaru",
       "name": "Yareba-Bariji-Nawaru",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -121312,10 +121312,10 @@
       "extant": true
     },
     {
-      "id": "languages.south-great-andamanese",
+      "id": "languages.one-language-families.south-great-andamanese",
       "name": "South Great Andamanese",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2000,
       "end_year": 1931,
@@ -121323,10 +121323,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.cahuapanan",
+      "id": "languages.one-language-families.cahuapanan",
       "name": "Cahuapanan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 800,
       "end_year": null,
@@ -121356,10 +121356,10 @@
       "extant": true
     },
     {
-      "id": "languages.western-coastal-tasmanian",
+      "id": "languages.one-language-families.western-coastal-tasmanian",
       "name": "Western Coastal Tasmanian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -12000,
       "end_year": 1900,
@@ -121367,10 +121367,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.marrku-wurrugu",
+      "id": "languages.one-language-families.marrku-wurrugu",
       "name": "Marrku-Wurrugu",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -10000,
       "end_year": 2006,
@@ -121400,10 +121400,10 @@
       "extant": true
     },
     {
-      "id": "languages.binaturi",
+      "id": "languages.one-language-families.binaturi",
       "name": "Binaturi",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -121411,10 +121411,10 @@
       "extant": true
     },
     {
-      "id": "languages.teberan",
+      "id": "languages.one-language-families.teberan",
       "name": "Teberan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -121422,10 +121422,10 @@
       "extant": true
     },
     {
-      "id": "languages.uru-chipaya",
+      "id": "languages.one-language-families.uru-chipaya",
       "name": "Uru-Chipaya",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -1400,
       "end_year": null,
@@ -121455,10 +121455,10 @@
       "extant": true
     },
     {
-      "id": "languages.manubaran",
+      "id": "languages.one-language-families.manubaran",
       "name": "Manubaran",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -121488,10 +121488,10 @@
       "extant": true
     },
     {
-      "id": "languages.southern-daly",
+      "id": "languages.one-language-families.southern-daly",
       "name": "Southern Daly",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -10000,
       "end_year": null,
@@ -121532,10 +121532,10 @@
       "extant": true
     },
     {
-      "id": "languages.baining",
+      "id": "languages.one-language-families.baining",
       "name": "Baining",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -121543,10 +121543,10 @@
       "extant": true
     },
     {
-      "id": "languages.chicham",
+      "id": "languages.one-language-families.chicham",
       "name": "Chicham",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 200,
       "end_year": null,
@@ -121554,10 +121554,10 @@
       "extant": true
     },
     {
-      "id": "languages.bayono-awbono",
+      "id": "languages.one-language-families.bayono-awbono",
       "name": "Bayono-Awbono",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -121576,10 +121576,10 @@
       "extant": true
     },
     {
-      "id": "languages.wintuan",
+      "id": "languages.one-language-families.wintuan",
       "name": "Wintuan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1,
       "end_year": 2011,
@@ -121642,10 +121642,10 @@
       "extant": true
     },
     {
-      "id": "languages.dizoid",
+      "id": "languages.one-language-families.dizoid",
       "name": "Dizoid",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -121653,10 +121653,10 @@
       "extant": true
     },
     {
-      "id": "languages.nakh-daghestanian",
+      "id": "languages.one-language-families.nakh-daghestanian",
       "name": "Nakh-Daghestanian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -6000,
       "end_year": -2000,
@@ -121730,10 +121730,10 @@
       "extant": true
     },
     {
-      "id": "languages.chonan",
+      "id": "languages.one-language-families.chonan",
       "name": "Chonan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": 2019,
@@ -121763,10 +121763,10 @@
       "extant": true
     },
     {
-      "id": "languages.lower-sepik",
+      "id": "languages.one-language-families.lower-sepik",
       "name": "Lower Sepik",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -121829,10 +121829,10 @@
       "extant": true
     },
     {
-      "id": "languages.taulil-butam",
+      "id": "languages.one-language-families.taulil-butam",
       "name": "Taulil-Butam",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1,
       "end_year": null,
@@ -121840,10 +121840,10 @@
       "extant": true
     },
     {
-      "id": "languages.sahaptian",
+      "id": "languages.one-language-families.sahaptian",
       "name": "Sahaptian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -9500,
       "end_year": null,
@@ -121851,10 +121851,10 @@
       "extant": true
     },
     {
-      "id": "languages.central-southern-aymara",
+      "id": "languages.one-language-families.central-southern-aymara",
       "name": "Central-Southern Aymara",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1000,
       "end_year": null,
@@ -121884,10 +121884,10 @@
       "extant": true
     },
     {
-      "id": "languages.gogodalic",
+      "id": "languages.one-language-families.gogodalic",
       "name": "Gogodalic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -5000,
       "end_year": null,
@@ -121895,10 +121895,10 @@
       "extant": true
     },
     {
-      "id": "languages.tangkic",
+      "id": "languages.one-language-families.tangkic",
       "name": "Tangkic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -121950,10 +121950,10 @@
       "extant": true
     },
     {
-      "id": "languages.tegem",
+      "id": "languages.one-language-families.tegem",
       "name": "Tegem",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3500,
       "end_year": null,
@@ -121983,10 +121983,10 @@
       "extant": true
     },
     {
-      "id": "languages.bunaban",
+      "id": "languages.one-language-families.bunaban",
       "name": "Bunaban",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -10000,
       "end_year": null,
@@ -122027,10 +122027,10 @@
       "extant": true
     },
     {
-      "id": "languages.tor",
+      "id": "languages.one-language-families.tor",
       "name": "Tor",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -5000,
       "end_year": null,
@@ -122115,10 +122115,10 @@
       "extant": true
     },
     {
-      "id": "languages.lepki-murkim-kembra",
+      "id": "languages.one-language-families.lepki-murkim-kembra",
       "name": "Lepki-Murkim-Kembra",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -50000,
       "end_year": null,
@@ -122159,10 +122159,10 @@
       "extant": true
     },
     {
-      "id": "languages.japonic",
+      "id": "languages.one-language-families.japonic",
       "name": "Japonic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -700,
       "end_year": 700,
@@ -122170,10 +122170,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.giimbiyu",
+      "id": "languages.one-language-families.giimbiyu",
       "name": "Giimbiyu",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": 1999,
@@ -122247,10 +122247,10 @@
       "extant": true
     },
     {
-      "id": "languages.arafundi",
+      "id": "languages.one-language-families.arafundi",
       "name": "Arafundi",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -122302,10 +122302,10 @@
       "extant": true
     },
     {
-      "id": "languages.kalapuyan",
+      "id": "languages.one-language-families.kalapuyan",
       "name": "Kalapuyan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1800,
       "end_year": 1954,
@@ -122313,10 +122313,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.temeinic",
+      "id": "languages.one-language-families.temeinic",
       "name": "Temeinic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -1000,
       "end_year": null,
@@ -122324,10 +122324,10 @@
       "extant": true
     },
     {
-      "id": "languages.kaure-kosare",
+      "id": "languages.one-language-families.kaure-kosare",
       "name": "Kaure-Kosare",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -7000,
       "end_year": null,
@@ -122346,10 +122346,10 @@
       "extant": true
     },
     {
-      "id": "languages.lakes-plain",
+      "id": "languages.one-language-families.lakes-plain",
       "name": "Lakes Plain",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -122379,10 +122379,10 @@
       "extant": true
     },
     {
-      "id": "languages.maco-piaroa",
+      "id": "languages.one-language-families.maco-piaroa",
       "name": "Maco-Piaroa",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -9200,
       "end_year": null,
@@ -122390,10 +122390,10 @@
       "extant": true
     },
     {
-      "id": "languages.amto-musan",
+      "id": "languages.one-language-families.amto-musan",
       "name": "Amto-Musan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -122401,10 +122401,10 @@
       "extant": true
     },
     {
-      "id": "languages.haida",
+      "id": "languages.one-language-families.haida",
       "name": "Haida",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1000,
       "end_year": null,
@@ -122438,10 +122438,10 @@
       "extant": true
     },
     {
-      "id": "languages.tarascan",
+      "id": "languages.one-language-families.tarascan",
       "name": "Tarascan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1530,
       "end_year": 1800,
@@ -122471,10 +122471,10 @@
       "extant": true
     },
     {
-      "id": "languages.kiwaian",
+      "id": "languages.one-language-families.kiwaian",
       "name": "Kiwaian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -122493,10 +122493,10 @@
       "extant": true
     },
     {
-      "id": "languages.worrorran",
+      "id": "languages.one-language-families.worrorran",
       "name": "Worrorran",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -122526,10 +122526,10 @@
       "extant": true
     },
     {
-      "id": "languages.peba-yagua",
+      "id": "languages.one-language-families.peba-yagua",
       "name": "Peba-Yagua",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1000,
       "end_year": null,
@@ -122559,10 +122559,10 @@
       "extant": true
     },
     {
-      "id": "languages.boran",
+      "id": "languages.one-language-families.boran",
       "name": "Boran",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -9200,
       "end_year": null,
@@ -122581,10 +122581,10 @@
       "extant": true
     },
     {
-      "id": "languages.huarpean",
+      "id": "languages.one-language-families.huarpean",
       "name": "Huarpean",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 400,
       "end_year": 1700,
@@ -122603,10 +122603,10 @@
       "extant": true
     },
     {
-      "id": "languages.east-kutubu",
+      "id": "languages.one-language-families.east-kutubu",
       "name": "East Kutubu",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -122625,10 +122625,10 @@
       "extant": true
     },
     {
-      "id": "languages.keresan",
+      "id": "languages.one-language-families.keresan",
       "name": "Keresan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1000,
       "end_year": null,
@@ -122647,10 +122647,10 @@
       "extant": true
     },
     {
-      "id": "languages.kakua-nukak",
+      "id": "languages.one-language-families.kakua-nukak",
       "name": "Kakua-Nukak",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 1000,
       "end_year": null,
@@ -122680,10 +122680,10 @@
       "extant": true
     },
     {
-      "id": "languages.bogia",
+      "id": "languages.one-language-families.bogia",
       "name": "Bogia",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -122702,10 +122702,10 @@
       "extant": true
     },
     {
-      "id": "languages.limilngan-wulna",
+      "id": "languages.one-language-families.limilngan-wulna",
       "name": "Limilngan-Wulna",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -10000,
       "end_year": 2009,
@@ -122713,10 +122713,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.wakashan",
+      "id": "languages.one-language-families.wakashan",
       "name": "Wakashan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2000,
       "end_year": null,
@@ -122779,10 +122779,10 @@
       "extant": true
     },
     {
-      "id": "languages.pahoturi",
+      "id": "languages.one-language-families.pahoturi",
       "name": "Pahoturi",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -50000,
       "end_year": null,
@@ -122812,10 +122812,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.ijoid",
+      "id": "languages.one-language-families.ijoid",
       "name": "Ijoid",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2000,
       "end_year": null,
@@ -122834,10 +122834,10 @@
       "extant": true
     },
     {
-      "id": "languages.walioic",
+      "id": "languages.one-language-families.walioic",
       "name": "Walioic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -8000,
       "end_year": null,
@@ -122845,10 +122845,10 @@
       "extant": true
     },
     {
-      "id": "languages.yuki-wappo",
+      "id": "languages.one-language-families.yuki-wappo",
       "name": "Yuki-Wappo",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2000,
       "end_year": 1983,
@@ -122856,10 +122856,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.kuliak",
+      "id": "languages.one-language-families.kuliak",
       "name": "Kuliak",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -3000,
       "end_year": null,
@@ -122867,10 +122867,10 @@
       "extant": true
     },
     {
-      "id": "languages.nimboranic",
+      "id": "languages.one-language-families.nimboranic",
       "name": "Nimboranic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -5000,
       "end_year": null,
@@ -122878,10 +122878,10 @@
       "extant": true
     },
     {
-      "id": "languages.mombum-koneraw",
+      "id": "languages.one-language-families.mombum-koneraw",
       "name": "Mombum-Koneraw",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -122889,10 +122889,10 @@
       "extant": true
     },
     {
-      "id": "languages.hatam-mansim",
+      "id": "languages.one-language-families.hatam-mansim",
       "name": "Hatam-Mansim",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -5000,
       "end_year": null,
@@ -122900,10 +122900,10 @@
       "extant": true
     },
     {
-      "id": "languages.left-may",
+      "id": "languages.one-language-families.left-may",
       "name": "Left May",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -7000,
       "end_year": null,
@@ -122922,10 +122922,10 @@
       "extant": true
     },
     {
-      "id": "languages.ndu",
+      "id": "languages.one-language-families.ndu",
       "name": "Ndu",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -122933,10 +122933,10 @@
       "extant": true
     },
     {
-      "id": "languages.warisic",
+      "id": "languages.one-language-families.warisic",
       "name": "Warisic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -122944,10 +122944,10 @@
       "extant": true
     },
     {
-      "id": "languages.ticuna-yuri",
+      "id": "languages.one-language-families.ticuna-yuri",
       "name": "Ticuna-Yuri",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -9200,
       "end_year": null,
@@ -122955,10 +122955,10 @@
       "extant": true
     },
     {
-      "id": "languages.kwomtari-nai",
+      "id": "languages.one-language-families.kwomtari-nai",
       "name": "Kwomtari-Nai",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": null,
@@ -122966,10 +122966,10 @@
       "extant": true
     },
     {
-      "id": "languages.dravidian",
+      "id": "languages.one-language-families.dravidian",
       "name": "Dravidian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -4000,
       "end_year": -2000,
@@ -122977,10 +122977,10 @@
       "end_dating_method": "received"
     },
     {
-      "id": "languages.yangmanic",
+      "id": "languages.one-language-families.yangmanic",
       "name": "Yangmanic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -10000,
       "end_year": null,
@@ -122999,10 +122999,10 @@
       "extant": true
     },
     {
-      "id": "languages.katukinan",
+      "id": "languages.one-language-families.katukinan",
       "name": "Katukinan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2000,
       "end_year": null,
@@ -123010,10 +123010,10 @@
       "extant": true
     },
     {
-      "id": "languages.mailuan",
+      "id": "languages.one-language-families.mailuan",
       "name": "Mailuan",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -50000,
       "end_year": null,
@@ -123065,10 +123065,10 @@
       "extant": true
     },
     {
-      "id": "languages.araucanian",
+      "id": "languages.one-language-families.araucanian",
       "name": "Araucanian",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": 500,
       "end_year": null,
@@ -123076,10 +123076,10 @@
       "extant": true
     },
     {
-      "id": "languages.yawa-saweru",
+      "id": "languages.one-language-families.yawa-saweru",
       "name": "Yawa-Saweru",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -2500,
       "end_year": null,
@@ -123087,10 +123087,10 @@
       "extant": true
     },
     {
-      "id": "languages.tungusic",
+      "id": "languages.one-language-families.tungusic",
       "name": "Tungusic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -500,
       "end_year": 500,
@@ -123120,10 +123120,10 @@
       "extant": true
     },
     {
-      "id": "languages.mairasic",
+      "id": "languages.one-language-families.mairasic",
       "name": "Mairasic",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -5000,
       "end_year": null,
@@ -123131,10 +123131,10 @@
       "extant": true
     },
     {
-      "id": "languages.baibai-fas",
+      "id": "languages.one-language-families.baibai-fas",
       "name": "Baibai-Fas",
       "kind": "language",
-      "parent_id": "languages",
+      "parent_id": "languages.one-language-families",
       "tier": "foundational",
       "start_year": -5000,
       "end_year": null,
@@ -133056,10 +133056,10 @@
       ]
     },
     {
-      "id": "languages.tarascan.colonial-nahuatl-adjacent-tarascan-purepecha-colonial",
+      "id": "languages.one-language-families.tarascan.colonial-nahuatl-adjacent-tarascan-purepecha-colonial",
       "name": "Colonial Nahuatl-adjacent Tarascan (Purepecha, colonial)",
       "kind": "language",
-      "parent_id": "languages.tarascan",
+      "parent_id": "languages.one-language-families.tarascan",
       "tier": "intermediate",
       "start_year": 1530,
       "end_year": 1800,
@@ -134822,10 +134822,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.monic.old-mon",
+      "id": "languages.one-language-families.monic.old-mon",
       "name": "Old Mon",
       "kind": "language",
-      "parent_id": "languages.monic",
+      "parent_id": "languages.one-language-families.monic",
       "tier": "intermediate",
       "start_year": 500,
       "end_year": 1300,
@@ -137114,10 +137114,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.motu-based-pidgin.hiri-motu",
+      "id": "languages.one-language-families.motu-based-pidgin.hiri-motu",
       "name": "Hiri Motu",
       "kind": "language",
-      "parent_id": "languages.motu-based-pidgin",
+      "parent_id": "languages.one-language-families.motu-based-pidgin",
       "tier": "intermediate",
       "start_year": 1800,
       "end_year": null,
@@ -139929,10 +139929,10 @@
       "historicity": "reconstructed"
     },
     {
-      "id": "languages.dravidian.proto-dravidian",
+      "id": "languages.one-language-families.dravidian.proto-dravidian",
       "name": "Proto-Dravidian",
       "kind": "language",
-      "parent_id": "languages.dravidian",
+      "parent_id": "languages.one-language-families.dravidian",
       "tier": "intermediate",
       "start_year": -4000,
       "end_year": -2000,
@@ -140221,10 +140221,10 @@
       "historicity": "reconstructed"
     },
     {
-      "id": "languages.japonic.proto-japonic",
+      "id": "languages.one-language-families.japonic.proto-japonic",
       "name": "Proto-Japonic",
       "kind": "language",
-      "parent_id": "languages.japonic",
+      "parent_id": "languages.one-language-families.japonic",
       "tier": "intermediate",
       "start_year": -700,
       "end_year": 700,
@@ -140461,10 +140461,10 @@
       "historicity": "reconstructed"
     },
     {
-      "id": "languages.nakh-daghestanian.proto-northeast-caucasian",
+      "id": "languages.one-language-families.nakh-daghestanian.proto-northeast-caucasian",
       "name": "Proto-Northeast Caucasian",
       "kind": "language",
-      "parent_id": "languages.nakh-daghestanian",
+      "parent_id": "languages.one-language-families.nakh-daghestanian",
       "tier": "intermediate",
       "start_year": -6000,
       "end_year": -2000,
@@ -140871,10 +140871,10 @@
       "historicity": "reconstructed"
     },
     {
-      "id": "languages.tungusic.proto-tungusic",
+      "id": "languages.one-language-families.tungusic.proto-tungusic",
       "name": "Proto-Tungusic",
       "kind": "language",
-      "parent_id": "languages.tungusic",
+      "parent_id": "languages.one-language-families.tungusic",
       "tier": "intermediate",
       "start_year": -500,
       "end_year": 500,
@@ -141186,10 +141186,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.hokkaido-kuril-ainu.hokkaido-ainu",
+      "id": "languages.one-language-families.hokkaido-kuril-ainu.hokkaido-ainu",
       "name": "Hokkaido Ainu",
       "kind": "language",
-      "parent_id": "languages.hokkaido-kuril-ainu",
+      "parent_id": "languages.one-language-families.hokkaido-kuril-ainu",
       "tier": "specialist",
       "start_year": 1000,
       "end_year": null,
@@ -141298,10 +141298,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.amto-musan.amto",
+      "id": "languages.one-language-families.amto-musan.amto",
       "name": "Amto",
       "kind": "language",
-      "parent_id": "languages.amto-musan",
+      "parent_id": "languages.one-language-families.amto-musan",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -141441,10 +141441,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.arafundi.nanubae-imangae",
+      "id": "languages.one-language-families.arafundi.nanubae-imangae",
       "name": "Nanubae-Imangae",
       "kind": "language",
-      "parent_id": "languages.arafundi",
+      "parent_id": "languages.one-language-families.arafundi",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -141473,10 +141473,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.araucanian.mapudungun",
+      "id": "languages.one-language-families.araucanian.mapudungun",
       "name": "Mapudungun",
       "kind": "language",
-      "parent_id": "languages.araucanian",
+      "parent_id": "languages.one-language-families.araucanian",
       "tier": "specialist",
       "start_year": 500,
       "end_year": null,
@@ -141697,10 +141697,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.central-southern-aymara.southern-aymara",
+      "id": "languages.one-language-families.central-southern-aymara.southern-aymara",
       "name": "Southern Aymara",
       "kind": "language",
-      "parent_id": "languages.central-southern-aymara",
+      "parent_id": "languages.one-language-families.central-southern-aymara",
       "tier": "specialist",
       "start_year": 1000,
       "end_year": null,
@@ -141729,10 +141729,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.baibai-fas.momu-fas",
+      "id": "languages.one-language-families.baibai-fas.momu-fas",
       "name": "Momu-Fas",
       "kind": "language",
-      "parent_id": "languages.baibai-fas",
+      "parent_id": "languages.one-language-families.baibai-fas",
       "tier": "specialist",
       "start_year": -5000,
       "end_year": null,
@@ -141745,10 +141745,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.baining.qaqet",
+      "id": "languages.one-language-families.baining.qaqet",
       "name": "Qaqet",
       "kind": "language",
-      "parent_id": "languages.baining",
+      "parent_id": "languages.one-language-families.baining",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -141857,10 +141857,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.bayono-awbono.bayono",
+      "id": "languages.one-language-families.bayono-awbono.bayono",
       "name": "Bayono",
       "kind": "language",
-      "parent_id": "languages.bayono-awbono",
+      "parent_id": "languages.one-language-families.bayono-awbono",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -142081,10 +142081,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.bogia.monumbo",
+      "id": "languages.one-language-families.bogia.monumbo",
       "name": "Monumbo",
       "kind": "language",
-      "parent_id": "languages.bogia",
+      "parent_id": "languages.one-language-families.bogia",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -142097,10 +142097,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.boran.bora",
+      "id": "languages.one-language-families.boran.bora",
       "name": "Bora",
       "kind": "language",
-      "parent_id": "languages.boran",
+      "parent_id": "languages.one-language-families.boran",
       "tier": "specialist",
       "start_year": -9200,
       "end_year": null,
@@ -142113,10 +142113,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.warisic.amanab",
+      "id": "languages.one-language-families.warisic.amanab",
       "name": "Amanab",
       "kind": "language",
-      "parent_id": "languages.warisic",
+      "parent_id": "languages.one-language-families.warisic",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -142177,10 +142177,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.bunaban.gooniyandi",
+      "id": "languages.one-language-families.bunaban.gooniyandi",
       "name": "Gooniyandi",
       "kind": "language",
-      "parent_id": "languages.bunaban",
+      "parent_id": "languages.one-language-families.bunaban",
       "tier": "specialist",
       "start_year": -10000,
       "end_year": null,
@@ -142257,10 +142257,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.cahuapanan.shawi",
+      "id": "languages.one-language-families.cahuapanan.shawi",
       "name": "Shawi",
       "kind": "language",
-      "parent_id": "languages.cahuapanan",
+      "parent_id": "languages.one-language-families.cahuapanan",
       "tier": "specialist",
       "start_year": 800,
       "end_year": null,
@@ -142625,10 +142625,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.charruan.charr-a",
+      "id": "languages.one-language-families.charruan.charr-a",
       "name": "Charrúa",
       "kind": "language",
-      "parent_id": "languages.charruan",
+      "parent_id": "languages.one-language-families.charruan",
       "tier": "specialist",
       "start_year": 1500,
       "end_year": 1964,
@@ -142657,10 +142657,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.chicham.aguaruna",
+      "id": "languages.one-language-families.chicham.aguaruna",
       "name": "Aguaruna",
       "kind": "language",
-      "parent_id": "languages.chicham",
+      "parent_id": "languages.one-language-families.chicham",
       "tier": "specialist",
       "start_year": 200,
       "end_year": null,
@@ -142673,10 +142673,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.chimakuan.quileute",
+      "id": "languages.one-language-families.chimakuan.quileute",
       "name": "Quileute",
       "kind": "language",
-      "parent_id": "languages.chimakuan",
+      "parent_id": "languages.one-language-families.chimakuan",
       "tier": "specialist",
       "start_year": 700,
       "end_year": 1999,
@@ -142705,10 +142705,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.chinookan.upper-chinook",
+      "id": "languages.one-language-families.chinookan.upper-chinook",
       "name": "Upper Chinook",
       "kind": "language",
-      "parent_id": "languages.chinookan",
+      "parent_id": "languages.one-language-families.chinookan",
       "tier": "specialist",
       "start_year": 1000,
       "end_year": 2012,
@@ -142721,10 +142721,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.chiquitano.lomeriano-ignaciano-chiquitano-b-s-ro",
+      "id": "languages.one-language-families.chiquitano.lomeriano-ignaciano-chiquitano-b-s-ro",
       "name": "Lomeriano-Ignaciano Chiquitano (Bésɨro)",
       "kind": "language",
-      "parent_id": "languages.chiquitano",
+      "parent_id": "languages.one-language-families.chiquitano",
       "tier": "specialist",
       "start_year": 1500,
       "end_year": null,
@@ -142769,10 +142769,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.chonan.tehuelche",
+      "id": "languages.one-language-families.chonan.tehuelche",
       "name": "Tehuelche",
       "kind": "language",
-      "parent_id": "languages.chonan",
+      "parent_id": "languages.one-language-families.chonan",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": 2019,
@@ -142817,10 +142817,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.chumashan.barbare-o",
+      "id": "languages.one-language-families.chumashan.barbare-o",
       "name": "Barbareño",
       "kind": "language",
-      "parent_id": "languages.chumashan",
+      "parent_id": "languages.one-language-families.chumashan",
       "tier": "specialist",
       "start_year": -2000,
       "end_year": 1965,
@@ -142913,10 +142913,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.coosan.hanis",
+      "id": "languages.one-language-families.coosan.hanis",
       "name": "Hanis",
       "kind": "language",
-      "parent_id": "languages.coosan",
+      "parent_id": "languages.one-language-families.coosan",
       "tier": "specialist",
       "start_year": 1500,
       "end_year": 1972,
@@ -143185,10 +143185,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.dizoid.sheko",
+      "id": "languages.one-language-families.dizoid.sheko",
       "name": "Sheko",
       "kind": "language",
-      "parent_id": "languages.dizoid",
+      "parent_id": "languages.one-language-families.dizoid",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -143201,10 +143201,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.doso-turumsa.doso",
+      "id": "languages.one-language-families.doso-turumsa.doso",
       "name": "Doso",
       "kind": "language",
-      "parent_id": "languages.doso-turumsa",
+      "parent_id": "languages.one-language-families.doso-turumsa",
       "tier": "specialist",
       "start_year": -7000,
       "end_year": null,
@@ -143217,10 +143217,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.north-dravidian.brahui",
+      "id": "languages.one-language-families.north-dravidian.brahui",
       "name": "Brahui",
       "kind": "language",
-      "parent_id": "languages.north-dravidian",
+      "parent_id": "languages.one-language-families.north-dravidian",
       "tier": "specialist",
       "start_year": -2000,
       "end_year": null,
@@ -143297,10 +143297,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.east-kutubu.foi",
+      "id": "languages.one-language-families.east-kutubu.foi",
       "name": "Foi",
       "kind": "language",
-      "parent_id": "languages.east-kutubu",
+      "parent_id": "languages.one-language-families.east-kutubu",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -143361,10 +143361,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.eastern-daly.madngele",
+      "id": "languages.one-language-families.eastern-daly.madngele",
       "name": "Madngele",
       "kind": "language",
-      "parent_id": "languages.eastern-daly",
+      "parent_id": "languages.one-language-families.eastern-daly",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": 2006,
@@ -143377,10 +143377,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.eastern-jebel.gaam",
+      "id": "languages.one-language-families.eastern-jebel.gaam",
       "name": "Gaam",
       "kind": "language",
-      "parent_id": "languages.eastern-jebel",
+      "parent_id": "languages.one-language-families.eastern-jebel",
       "tier": "specialist",
       "start_year": -1000,
       "end_year": null,
@@ -143441,10 +143441,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.binaturi.wipi",
+      "id": "languages.one-language-families.binaturi.wipi",
       "name": "Wipi",
       "kind": "language",
-      "parent_id": "languages.binaturi",
+      "parent_id": "languages.one-language-families.binaturi",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -143505,10 +143505,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.eleman.toaripi",
+      "id": "languages.one-language-families.eleman.toaripi",
       "name": "Toaripi",
       "kind": "language",
-      "parent_id": "languages.eleman",
+      "parent_id": "languages.one-language-families.eleman",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -143530,11 +143530,12 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 1991 CE.",
+      "date_note": "Start estimated between 50000 BCE and 1991 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.eskimo-aleut.greenlandic-inuit.kalaallisut",
@@ -143649,10 +143650,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.furan.fur",
+      "id": "languages.one-language-families.furan.fur",
       "name": "Fur",
       "kind": "language",
-      "parent_id": "languages.furan",
+      "parent_id": "languages.one-language-families.furan",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -143674,11 +143675,12 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 1973 CE.",
+      "date_note": "Start estimated between 50000 BCE and 1973 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.isolates.gaagudju",
@@ -143697,10 +143699,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.garrwan.garrwa",
+      "id": "languages.one-language-families.garrwan.garrwa",
       "name": "Garrwa",
       "kind": "language",
-      "parent_id": "languages.garrwan",
+      "parent_id": "languages.one-language-families.garrwan",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -143713,10 +143715,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.barapasi-sauri-kofei.barapasi",
+      "id": "languages.one-language-families.barapasi-sauri-kofei.barapasi",
       "name": "Barapasi",
       "kind": "language",
-      "parent_id": "languages.barapasi-sauri-kofei",
+      "parent_id": "languages.one-language-families.barapasi-sauri-kofei",
       "tier": "specialist",
       "start_year": -7000,
       "end_year": null,
@@ -143729,10 +143731,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.giimbiyu.mangerr",
+      "id": "languages.one-language-families.giimbiyu.mangerr",
       "name": "Mangerr",
       "kind": "language",
-      "parent_id": "languages.giimbiyu",
+      "parent_id": "languages.one-language-families.giimbiyu",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": 1999,
@@ -143745,10 +143747,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.south-great-andamanese.akabea",
+      "id": "languages.one-language-families.south-great-andamanese.akabea",
       "name": "Akabea",
       "kind": "language",
-      "parent_id": "languages.south-great-andamanese",
+      "parent_id": "languages.one-language-families.south-great-andamanese",
       "tier": "specialist",
       "start_year": -2000,
       "end_year": 1931,
@@ -143857,20 +143859,21 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.greater-kwerba.isirawa",
+      "id": "languages.one-language-families.greater-kwerba.isirawa",
       "name": "Isirawa",
       "kind": "language",
-      "parent_id": "languages.greater-kwerba",
+      "parent_id": "languages.one-language-families.greater-kwerba",
       "tier": "specialist",
       "start_year": -50000,
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 1975 CE.",
+      "date_note": "Start estimated between 50000 BCE and 1975 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.pama-nyungan.greater-maric.unclassified-greater-maric.bindalic.bindal-cunningham",
@@ -144080,10 +144083,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.gumuz.northern-gumuz",
+      "id": "languages.one-language-families.gumuz.northern-gumuz",
       "name": "Northern Gumuz",
       "kind": "language",
-      "parent_id": "languages.gumuz",
+      "parent_id": "languages.one-language-families.gumuz",
       "tier": "specialist",
       "start_year": -1000,
       "end_year": null,
@@ -144096,10 +144099,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.gunwinyguan.bininj-kun-wok",
+      "id": "languages.one-language-families.gunwinyguan.bininj-kun-wok",
       "name": "Bininj Kun-Wok",
       "kind": "language",
-      "parent_id": "languages.gunwinyguan",
+      "parent_id": "languages.one-language-families.gunwinyguan",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -144160,10 +144163,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.haida.northern-haida",
+      "id": "languages.one-language-families.haida.northern-haida",
       "name": "Northern Haida",
       "kind": "language",
-      "parent_id": "languages.haida",
+      "parent_id": "languages.one-language-families.haida",
       "tier": "specialist",
       "start_year": 1000,
       "end_year": null,
@@ -144208,10 +144211,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.harakmbut.amarakaeri",
+      "id": "languages.one-language-families.harakmbut.amarakaeri",
       "name": "Amarakaeri",
       "kind": "language",
-      "parent_id": "languages.harakmbut",
+      "parent_id": "languages.one-language-families.harakmbut",
       "tier": "specialist",
       "start_year": 1894,
       "end_year": null,
@@ -144224,10 +144227,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.hatam-mansim.hatam",
+      "id": "languages.one-language-families.hatam-mansim.hatam",
       "name": "Hatam",
       "kind": "language",
-      "parent_id": "languages.hatam-mansim",
+      "parent_id": "languages.one-language-families.hatam-mansim",
       "tier": "specialist",
       "start_year": -5000,
       "end_year": null,
@@ -144256,10 +144259,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.hibito-cholon.chol-n",
+      "id": "languages.one-language-families.hibito-cholon.chol-n",
       "name": "Cholón",
       "kind": "language",
-      "parent_id": "languages.hibito-cholon",
+      "parent_id": "languages.one-language-families.hibito-cholon",
       "tier": "specialist",
       "start_year": -1000,
       "end_year": 2000,
@@ -144352,10 +144355,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.huarpean.allentiac",
+      "id": "languages.one-language-families.huarpean.allentiac",
       "name": "Allentiac",
       "kind": "language",
-      "parent_id": "languages.huarpean",
+      "parent_id": "languages.one-language-families.huarpean",
       "tier": "specialist",
       "start_year": 400,
       "end_year": 1700,
@@ -144368,10 +144371,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.san-dionisio-san-mateo-huave.san-mateo-del-mar-huave",
+      "id": "languages.one-language-families.san-dionisio-san-mateo-huave.san-mateo-del-mar-huave",
       "name": "San Mateo del Mar Huave",
       "kind": "language",
-      "parent_id": "languages.san-dionisio-san-mateo-huave",
+      "parent_id": "languages.one-language-families.san-dionisio-san-mateo-huave",
       "tier": "specialist",
       "start_year": -1000,
       "end_year": null,
@@ -144432,10 +144435,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.ijoid.izon",
+      "id": "languages.one-language-families.ijoid.izon",
       "name": "Izon",
       "kind": "language",
-      "parent_id": "languages.ijoid",
+      "parent_id": "languages.one-language-families.ijoid",
       "tier": "specialist",
       "start_year": -2000,
       "end_year": null,
@@ -144560,10 +144563,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.iwaidjan-proper.mawng",
+      "id": "languages.one-language-families.iwaidjan-proper.mawng",
       "name": "Mawng",
       "kind": "language",
-      "parent_id": "languages.iwaidjan-proper",
+      "parent_id": "languages.one-language-families.iwaidjan-proper",
       "tier": "specialist",
       "start_year": -10000,
       "end_year": null,
@@ -144592,10 +144595,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.jarawa-onge.jarawa-india",
+      "id": "languages.one-language-families.jarawa-onge.jarawa-india",
       "name": "Jarawa (India)",
       "kind": "language",
-      "parent_id": "languages.jarawa-onge",
+      "parent_id": "languages.one-language-families.jarawa-onge",
       "tier": "specialist",
       "start_year": -14000,
       "end_year": null,
@@ -144608,10 +144611,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.jarrakan.kitja-gija",
+      "id": "languages.one-language-families.jarrakan.kitja-gija",
       "name": "Kitja (Gija)",
       "kind": "language",
-      "parent_id": "languages.jarrakan",
+      "parent_id": "languages.one-language-families.jarrakan",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -144624,10 +144627,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.jicaquean.tol",
+      "id": "languages.one-language-families.jicaquean.tol",
       "name": "Tol",
       "kind": "language",
-      "parent_id": "languages.jicaquean",
+      "parent_id": "languages.one-language-families.jicaquean",
       "tier": "specialist",
       "start_year": 1,
       "end_year": null,
@@ -144752,10 +144755,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.kakua-nukak.nukak-mak",
+      "id": "languages.one-language-families.kakua-nukak.nukak-mak",
       "name": "Nukak Makú",
       "kind": "language",
-      "parent_id": "languages.kakua-nukak",
+      "parent_id": "languages.one-language-families.kakua-nukak",
       "tier": "specialist",
       "start_year": 1000,
       "end_year": null,
@@ -144784,10 +144787,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.kalapuyan.central-kalapuya",
+      "id": "languages.one-language-families.kalapuyan.central-kalapuya",
       "name": "Central Kalapuya",
       "kind": "language",
-      "parent_id": "languages.kalapuyan",
+      "parent_id": "languages.one-language-families.kalapuyan",
       "tier": "specialist",
       "start_year": 1800,
       "end_year": 1954,
@@ -144816,10 +144819,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.kamakanan.kamakan",
+      "id": "languages.one-language-families.kamakanan.kamakan",
       "name": "Kamakan",
       "kind": "language",
-      "parent_id": "languages.kamakanan",
+      "parent_id": "languages.one-language-families.kamakanan",
       "tier": "specialist",
       "start_year": 1500,
       "end_year": 1959,
@@ -144848,10 +144851,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.elevala.aekyom-awin",
+      "id": "languages.one-language-families.elevala.aekyom-awin",
       "name": "Aekyom (Awin)",
       "kind": "language",
-      "parent_id": "languages.elevala",
+      "parent_id": "languages.one-language-families.elevala",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -144992,10 +144995,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.katla-julud.katla",
+      "id": "languages.one-language-families.katla-julud.katla",
       "name": "Katla",
       "kind": "language",
-      "parent_id": "languages.katla-julud",
+      "parent_id": "languages.one-language-families.katla-julud",
       "tier": "specialist",
       "start_year": -1000,
       "end_year": null,
@@ -145008,10 +145011,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.katukinan.katuk-na-kanamar",
+      "id": "languages.one-language-families.katukinan.katuk-na-kanamar",
       "name": "Katukína-Kanamarí",
       "kind": "language",
-      "parent_id": "languages.katukinan",
+      "parent_id": "languages.one-language-families.katukinan",
       "tier": "specialist",
       "start_year": -2000,
       "end_year": null,
@@ -145024,10 +145027,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.kaure-kosare.kaure-narau",
+      "id": "languages.one-language-families.kaure-kosare.kaure-narau",
       "name": "Kaure-Narau",
       "kind": "language",
-      "parent_id": "languages.kaure-kosare",
+      "parent_id": "languages.one-language-families.kaure-kosare",
       "tier": "specialist",
       "start_year": -7000,
       "end_year": null,
@@ -145040,10 +145043,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.north-central-alacufan.qawasqar-kaw-sqar",
+      "id": "languages.one-language-families.north-central-alacufan.qawasqar-kaw-sqar",
       "name": "Qawasqar (Kawésqar)",
       "kind": "language",
-      "parent_id": "languages.north-central-alacufan",
+      "parent_id": "languages.one-language-families.north-central-alacufan",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -145081,11 +145084,12 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 2009 CE.",
+      "date_note": "Start estimated between 50000 BCE and 2009 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.isolates.kenaboi",
@@ -145120,10 +145124,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.keresan.eastern-keres",
+      "id": "languages.one-language-families.keresan.eastern-keres",
       "name": "Eastern Keres",
       "kind": "language",
-      "parent_id": "languages.keresan",
+      "parent_id": "languages.one-language-families.keresan",
       "tier": "specialist",
       "start_year": 1000,
       "end_year": null,
@@ -145225,17 +145229,18 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 2004 CE.",
+      "date_note": "Start estimated between 50000 BCE and 2004 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
-      "id": "languages.kiowa-tanoan.towa",
+      "id": "languages.one-language-families.kiowa-tanoan.towa",
       "name": "Towa",
       "kind": "language",
-      "parent_id": "languages.kiowa-tanoan",
+      "parent_id": "languages.one-language-families.kiowa-tanoan",
       "tier": "specialist",
       "start_year": 1200,
       "end_year": null,
@@ -145264,10 +145269,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.kiwaian.southern-kiwai",
+      "id": "languages.one-language-families.kiwaian.southern-kiwai",
       "name": "Southern Kiwai",
       "kind": "language",
-      "parent_id": "languages.kiwaian",
+      "parent_id": "languages.one-language-families.kiwaian",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -145296,10 +145301,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.baraic.ese-managalasi",
+      "id": "languages.one-language-families.baraic.ese-managalasi",
       "name": "Ese (Managalasi)",
       "kind": "language",
-      "parent_id": "languages.baraic",
+      "parent_id": "languages.one-language-families.baraic",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -145328,20 +145333,21 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.kimaama-riantana.kimaama-kimaghama",
+      "id": "languages.one-language-families.kimaama-riantana.kimaama-kimaghama",
       "name": "Kimaama (Kimaghama)",
       "kind": "language",
-      "parent_id": "languages.kimaama-riantana",
+      "parent_id": "languages.one-language-families.kimaama-riantana",
       "tier": "specialist",
       "start_year": -50000,
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 2025 CE.",
+      "date_note": "Start estimated between 50000 BCE and 2025 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.koman.komo-uduk.uduk",
@@ -145360,10 +145366,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.konda-yahadian.yaben-konda",
+      "id": "languages.one-language-families.konda-yahadian.yaben-konda",
       "name": "Yaben (Konda)",
       "kind": "language",
-      "parent_id": "languages.konda-yahadian",
+      "parent_id": "languages.one-language-families.konda-yahadian",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -145440,10 +145446,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.kuliak.ik",
+      "id": "languages.one-language-families.kuliak.ik",
       "name": "Ik",
       "kind": "language",
-      "parent_id": "languages.kuliak",
+      "parent_id": "languages.one-language-families.kuliak",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -145472,10 +145478,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.kunimaipan.kunimaipa",
+      "id": "languages.one-language-families.kunimaipan.kunimaipa",
       "name": "Kunimaipa",
       "kind": "language",
-      "parent_id": "languages.kunimaipan",
+      "parent_id": "languages.one-language-families.kunimaipan",
       "tier": "specialist",
       "start_year": -5000,
       "end_year": null,
@@ -145552,20 +145558,21 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.humene-kwale.uare-kwale",
+      "id": "languages.one-language-families.humene-kwale.uare-kwale",
       "name": "Uare (Kwale)",
       "kind": "language",
-      "parent_id": "languages.humene-kwale",
+      "parent_id": "languages.one-language-families.humene-kwale",
       "tier": "specialist",
       "start_year": -50000,
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 2000 CE.",
+      "date_note": "Start estimated between 50000 BCE and 2000 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.isolates.kwaza",
@@ -145600,10 +145607,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.kwomtari-nai.nai",
+      "id": "languages.one-language-families.kwomtari-nai.nai",
       "name": "Nai",
       "kind": "language",
-      "parent_id": "languages.kwomtari-nai",
+      "parent_id": "languages.one-language-families.kwomtari-nai",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -145648,10 +145655,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.lakes-plain.iau",
+      "id": "languages.one-language-families.lakes-plain.iau",
       "name": "Iau",
       "kind": "language",
-      "parent_id": "languages.lakes-plain",
+      "parent_id": "languages.one-language-families.lakes-plain",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -145728,10 +145735,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.left-may.ama-papua-new-guinea",
+      "id": "languages.one-language-families.left-may.ama-papua-new-guinea",
       "name": "Ama (Papua New Guinea)",
       "kind": "language",
-      "parent_id": "languages.left-may",
+      "parent_id": "languages.one-language-families.left-may",
       "tier": "specialist",
       "start_year": -7000,
       "end_year": null,
@@ -145744,10 +145751,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.lencan.lenca-honduras",
+      "id": "languages.one-language-families.lencan.lenca-honduras",
       "name": "Lenca-Honduras",
       "kind": "language",
-      "parent_id": "languages.lencan",
+      "parent_id": "languages.one-language-families.lencan",
       "tier": "specialist",
       "start_year": -5069,
       "end_year": 1979,
@@ -145776,26 +145783,27 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.lepki-murkim-kembra.lepki",
+      "id": "languages.one-language-families.lepki-murkim-kembra.lepki",
       "name": "Lepki",
       "kind": "language",
-      "parent_id": "languages.lepki-murkim-kembra",
+      "parent_id": "languages.one-language-families.lepki-murkim-kembra",
       "tier": "specialist",
       "start_year": -50000,
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 2007 CE.",
+      "date_note": "Start estimated between 50000 BCE and 2007 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
-      "id": "languages.limilngan-wulna.limilngan",
+      "id": "languages.one-language-families.limilngan-wulna.limilngan",
       "name": "Limilngan",
       "kind": "language",
-      "parent_id": "languages.limilngan-wulna",
+      "parent_id": "languages.one-language-families.limilngan-wulna",
       "tier": "specialist",
       "start_year": -10000,
       "end_year": 2009,
@@ -145872,10 +145880,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.lower-sepik.angoram",
+      "id": "languages.one-language-families.lower-sepik.angoram",
       "name": "Angoram",
       "kind": "language",
-      "parent_id": "languages.lower-sepik",
+      "parent_id": "languages.one-language-families.lower-sepik",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -145968,10 +145976,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.maiduan.nisenan",
+      "id": "languages.one-language-families.maiduan.nisenan",
       "name": "Nisenan",
       "kind": "language",
-      "parent_id": "languages.maiduan",
+      "parent_id": "languages.one-language-families.maiduan",
       "tier": "specialist",
       "start_year": 1000,
       "end_year": 2010,
@@ -145984,20 +145992,21 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.mailuan.mailu",
+      "id": "languages.one-language-families.mailuan.mailu",
       "name": "Mailu",
       "kind": "language",
-      "parent_id": "languages.mailuan",
+      "parent_id": "languages.one-language-families.mailuan",
       "tier": "specialist",
       "start_year": -50000,
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 2000 CE.",
+      "date_note": "Start estimated between 50000 BCE and 2000 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.austronesian.malayo-polynesian.oceanic.southern-melanesian.new-caledonian.mainland-new-caledonian.southern-new-caledonian.mid-southern-new-caledonian.x-r-c",
@@ -146032,10 +146041,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.mairasic.mairasi",
+      "id": "languages.one-language-families.mairasic.mairasi",
       "name": "Mairasi",
       "kind": "language",
-      "parent_id": "languages.mairasic",
+      "parent_id": "languages.one-language-families.mairasic",
       "tier": "specialist",
       "start_year": -5000,
       "end_year": null,
@@ -146208,10 +146217,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.manubaran.doromu-koki",
+      "id": "languages.one-language-families.manubaran.doromu-koki",
       "name": "Doromu-Koki",
       "kind": "language",
-      "parent_id": "languages.manubaran",
+      "parent_id": "languages.one-language-families.manubaran",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -146288,10 +146297,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.marrku-wurrugu.margu-marrgu",
+      "id": "languages.one-language-families.marrku-wurrugu.margu-marrgu",
       "name": "Margu (Marrgu)",
       "kind": "language",
-      "parent_id": "languages.marrku-wurrugu",
+      "parent_id": "languages.one-language-families.marrku-wurrugu",
       "tier": "specialist",
       "start_year": -10000,
       "end_year": 2006,
@@ -146416,20 +146425,21 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.maybratic.maybrat",
+      "id": "languages.one-language-families.maybratic.maybrat",
       "name": "Maybrat",
       "kind": "language",
-      "parent_id": "languages.maybratic",
+      "parent_id": "languages.one-language-families.maybratic",
       "tier": "specialist",
       "start_year": -24000,
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 24000 BCE and 1930 CE.",
+      "date_note": "Start estimated between 24000 BCE and 1930 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.atlantic-congo.volta-congo.benue-congo.bantoid.wide-grassfields.mbam-nkam.nkambe.limbum",
@@ -146528,10 +146538,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.ngurlun.wambayan",
+      "id": "languages.one-language-families.ngurlun.wambayan",
       "name": "Wambayan",
       "kind": "language",
-      "parent_id": "languages.ngurlun",
+      "parent_id": "languages.one-language-families.ngurlun",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -146544,10 +146554,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.misumalpan.m-skito",
+      "id": "languages.one-language-families.misumalpan.m-skito",
       "name": "Mískito",
       "kind": "language",
-      "parent_id": "languages.misumalpan",
+      "parent_id": "languages.one-language-families.misumalpan",
       "tier": "specialist",
       "start_year": -1000,
       "end_year": null,
@@ -146688,10 +146698,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.mombum-koneraw.koneraw",
+      "id": "languages.one-language-families.mombum-koneraw.koneraw",
       "name": "Koneraw",
       "kind": "language",
-      "parent_id": "languages.mombum-koneraw",
+      "parent_id": "languages.one-language-families.mombum-koneraw",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -146847,10 +146857,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.muskogean.choctaw",
+      "id": "languages.one-language-families.muskogean.choctaw",
       "name": "Choctaw",
       "kind": "language",
-      "parent_id": "languages.muskogean",
+      "parent_id": "languages.one-language-families.muskogean",
       "tier": "specialist",
       "start_year": 800,
       "end_year": null,
@@ -146943,10 +146953,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.namla-tofanma.tofanma",
+      "id": "languages.one-language-families.namla-tofanma.tofanma",
       "name": "Tofanma",
       "kind": "language",
-      "parent_id": "languages.namla-tofanma",
+      "parent_id": "languages.one-language-families.namla-tofanma",
       "tier": "specialist",
       "start_year": -8000,
       "end_year": null,
@@ -147043,10 +147053,10 @@
       ]
     },
     {
-      "id": "languages.ndu.boikin",
+      "id": "languages.one-language-families.ndu.boikin",
       "name": "Boikin",
       "kind": "language",
-      "parent_id": "languages.ndu",
+      "parent_id": "languages.one-language-families.ndu",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -147203,10 +147213,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.nimboranic.nimboran",
+      "id": "languages.one-language-families.nimboranic.nimboran",
       "name": "Nimboran",
       "kind": "language",
-      "parent_id": "languages.nimboranic",
+      "parent_id": "languages.one-language-families.nimboranic",
       "tier": "specialist",
       "start_year": -5000,
       "end_year": null,
@@ -147219,10 +147229,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.nivkh.amur-nivkh",
+      "id": "languages.one-language-families.nivkh.amur-nivkh",
       "name": "Amur Nivkh",
       "kind": "language",
-      "parent_id": "languages.nivkh",
+      "parent_id": "languages.one-language-families.nivkh",
       "tier": "specialist",
       "start_year": -4570,
       "end_year": null,
@@ -147347,10 +147357,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.north-eastern-tasmanian.ben-lomond-cape-portland",
+      "id": "languages.one-language-families.north-eastern-tasmanian.ben-lomond-cape-portland",
       "name": "Ben-Lomond-Cape-Portland",
       "kind": "language",
-      "parent_id": "languages.north-eastern-tasmanian",
+      "parent_id": "languages.one-language-families.north-eastern-tasmanian",
       "tier": "specialist",
       "start_year": -6000,
       "end_year": 1905,
@@ -147427,10 +147437,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.northern-daly.mullukmulluk-malak-malak",
+      "id": "languages.one-language-families.northern-daly.mullukmulluk-malak-malak",
       "name": "Mullukmulluk (Malak-Malak)",
       "kind": "language",
-      "parent_id": "languages.northern-daly",
+      "parent_id": "languages.one-language-families.northern-daly",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -147715,10 +147725,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.nyimang.ama-sudan",
+      "id": "languages.one-language-families.nyimang.ama-sudan",
       "name": "Ama (Sudan)",
       "kind": "language",
-      "parent_id": "languages.nyimang",
+      "parent_id": "languages.one-language-families.nyimang",
       "tier": "specialist",
       "start_year": -2000,
       "end_year": null,
@@ -147804,11 +147814,12 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 40000 BCE and 1975 CE.",
+      "date_note": "Start estimated between 40000 BCE and 1975 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.asmat-awyu-ok.awyu-ok.ok-oksapmin.ok.ngalum",
@@ -147923,10 +147934,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.otomaco-taparita.otomaco",
+      "id": "languages.one-language-families.otomaco-taparita.otomaco",
       "name": "Otomaco",
       "kind": "language",
-      "parent_id": "languages.otomaco-taparita",
+      "parent_id": "languages.one-language-families.otomaco-taparita",
       "tier": "specialist",
       "start_year": 1500,
       "end_year": 1850,
@@ -147971,26 +147982,27 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.pahoturi.agob-ende-kawam",
+      "id": "languages.one-language-families.pahoturi.agob-ende-kawam",
       "name": "Agob-Ende-Kawam",
       "kind": "language",
-      "parent_id": "languages.pahoturi",
+      "parent_id": "languages.one-language-families.pahoturi",
       "tier": "specialist",
       "start_year": -50000,
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 2000 CE.",
+      "date_note": "Start estimated between 50000 BCE and 2000 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
-      "id": "languages.palaihnihan.achumawi",
+      "id": "languages.one-language-families.palaihnihan.achumawi",
       "name": "Achumawi",
       "kind": "language",
-      "parent_id": "languages.palaihnihan",
+      "parent_id": "languages.one-language-families.palaihnihan",
       "tier": "specialist",
       "start_year": -10000,
       "end_year": 2013,
@@ -148147,10 +148159,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.pauwasi.emumu",
+      "id": "languages.one-language-families.pauwasi.emumu",
       "name": "Emumu",
       "kind": "language",
-      "parent_id": "languages.pauwasi",
+      "parent_id": "languages.one-language-families.pauwasi",
       "tier": "specialist",
       "start_year": -4000,
       "end_year": null,
@@ -148195,10 +148207,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.peba-yagua.yagua",
+      "id": "languages.one-language-families.peba-yagua.yagua",
       "name": "Yagua",
       "kind": "language",
-      "parent_id": "languages.peba-yagua",
+      "parent_id": "languages.one-language-families.peba-yagua",
       "tier": "specialist",
       "start_year": 1000,
       "end_year": null,
@@ -148220,11 +148232,12 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 21000 BCE and 1000 BCE.",
+      "date_note": "Start estimated between 21000 BCE and 1000 BCE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.kuki-chin-naga.kuki-chin.peripheral-kuki-chin.thadoic.thado-chin",
@@ -148259,10 +148272,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.piawi.haruai",
+      "id": "languages.one-language-families.piawi.haruai",
       "name": "Haruai",
       "kind": "language",
-      "parent_id": "languages.piawi",
+      "parent_id": "languages.one-language-families.piawi",
       "tier": "specialist",
       "start_year": -5000,
       "end_year": null,
@@ -148444,17 +148457,18 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 1902 CE.",
+      "date_note": "Start estimated between 50000 BCE and 1902 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
-      "id": "languages.puri-coroado.puri",
+      "id": "languages.one-language-families.puri-coroado.puri",
       "name": "Puri",
       "kind": "language",
-      "parent_id": "languages.puri-coroado",
+      "parent_id": "languages.one-language-families.puri-coroado",
       "tier": "specialist",
       "start_year": -9200,
       "end_year": 1900,
@@ -148477,11 +148491,12 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 40000 BCE and 1975 CE.",
+      "date_note": "Start estimated between 40000 BCE and 1975 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
       "allow_outside_parent_dates": true,
+      "historicity": "reconstructed",
       "qualified_name": "Pyu (Isolates)"
     },
     {
@@ -148581,10 +148596,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.rashad.tegali",
+      "id": "languages.one-language-families.rashad.tegali",
       "name": "Tegali",
       "kind": "language",
-      "parent_id": "languages.rashad",
+      "parent_id": "languages.one-language-families.rashad",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -148661,10 +148676,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.sahaptian.nez-perce",
+      "id": "languages.one-language-families.sahaptian.nez-perce",
       "name": "Nez Perce",
       "kind": "language",
-      "parent_id": "languages.sahaptian",
+      "parent_id": "languages.one-language-families.sahaptian",
       "tier": "specialist",
       "start_year": -9500,
       "end_year": null,
@@ -148677,10 +148692,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.maco-piaroa.piaroa",
+      "id": "languages.one-language-families.maco-piaroa.piaroa",
       "name": "Piaroa",
       "kind": "language",
-      "parent_id": "languages.maco-piaroa",
+      "parent_id": "languages.one-language-families.maco-piaroa",
       "tier": "specialist",
       "start_year": -9200,
       "end_year": null,
@@ -148853,10 +148868,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.senagi.angor",
+      "id": "languages.one-language-families.senagi.angor",
       "name": "Angor",
       "kind": "language",
-      "parent_id": "languages.senagi",
+      "parent_id": "languages.one-language-families.senagi",
       "tier": "specialist",
       "start_year": -5000,
       "end_year": null,
@@ -148878,11 +148893,12 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 40000 BCE and 1965 CE.",
+      "date_note": "Start estimated between 40000 BCE and 1965 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.sepik.kwanga-mende.kwanga",
@@ -148933,10 +148949,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.shastan.shasta",
+      "id": "languages.one-language-families.shastan.shasta",
       "name": "Shasta",
       "kind": "language",
-      "parent_id": "languages.shastan",
+      "parent_id": "languages.one-language-families.shastan",
       "tier": "specialist",
       "start_year": 1770,
       "end_year": 1980,
@@ -149093,10 +149109,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.south-bougainville.terei",
+      "id": "languages.one-language-families.south-bougainville.terei",
       "name": "Terei",
       "kind": "language",
-      "parent_id": "languages.south-bougainville",
+      "parent_id": "languages.one-language-families.south-bougainville",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -149189,10 +149205,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.south-eastern-tasmanian.bruny-island",
+      "id": "languages.one-language-families.south-eastern-tasmanian.bruny-island",
       "name": "Bruny Island",
       "kind": "language",
-      "parent_id": "languages.south-eastern-tasmanian",
+      "parent_id": "languages.one-language-families.south-eastern-tasmanian",
       "tier": "specialist",
       "start_year": 1500,
       "end_year": 1876,
@@ -149301,10 +149317,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.southern-daly.murriny-patha",
+      "id": "languages.one-language-families.southern-daly.murriny-patha",
       "name": "Murriny Patha",
       "kind": "language",
-      "parent_id": "languages.southern-daly",
+      "parent_id": "languages.one-language-families.southern-daly",
       "tier": "specialist",
       "start_year": -10000,
       "end_year": null,
@@ -149477,10 +149493,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.gogodalic.gogodala",
+      "id": "languages.one-language-families.gogodalic.gogodala",
       "name": "Gogodala",
       "kind": "language",
-      "parent_id": "languages.gogodalic",
+      "parent_id": "languages.one-language-families.gogodalic",
       "tier": "specialist",
       "start_year": -5000,
       "end_year": null,
@@ -149525,10 +149541,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.hlaic.hlai",
+      "id": "languages.one-language-families.hlaic.hlai",
       "name": "Hlai",
       "kind": "language",
-      "parent_id": "languages.hlaic",
+      "parent_id": "languages.one-language-families.hlaic",
       "tier": "specialist",
       "start_year": -2000,
       "end_year": null,
@@ -149701,10 +149717,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.tangkic.lardil",
+      "id": "languages.one-language-families.tangkic.lardil",
       "name": "Lardil",
       "kind": "language",
-      "parent_id": "languages.tangkic",
+      "parent_id": "languages.one-language-families.tangkic",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -149765,10 +149781,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.taulil-butam.taulil",
+      "id": "languages.one-language-families.taulil-butam.taulil",
       "name": "Taulil",
       "kind": "language",
-      "parent_id": "languages.taulil-butam",
+      "parent_id": "languages.one-language-families.taulil-butam",
       "tier": "specialist",
       "start_year": 1,
       "end_year": null,
@@ -149797,10 +149813,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.teberan.dadibi",
+      "id": "languages.one-language-families.teberan.dadibi",
       "name": "Dadibi",
       "kind": "language",
-      "parent_id": "languages.teberan",
+      "parent_id": "languages.one-language-families.teberan",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -149813,10 +149829,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.tegem.lafofa",
+      "id": "languages.one-language-families.tegem.lafofa",
       "name": "Lafofa",
       "kind": "language",
-      "parent_id": "languages.tegem",
+      "parent_id": "languages.one-language-families.tegem",
       "tier": "specialist",
       "start_year": -3500,
       "end_year": null,
@@ -149829,10 +149845,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.temeinic.temein",
+      "id": "languages.one-language-families.temeinic.temein",
       "name": "Temein",
       "kind": "language",
-      "parent_id": "languages.temeinic",
+      "parent_id": "languages.one-language-families.temeinic",
       "tier": "specialist",
       "start_year": -1000,
       "end_year": null,
@@ -149845,10 +149861,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.tequistlatecan.highland-oaxaca-chontal",
+      "id": "languages.one-language-families.tequistlatecan.highland-oaxaca-chontal",
       "name": "Highland Oaxaca Chontal",
       "kind": "language",
-      "parent_id": "languages.tequistlatecan",
+      "parent_id": "languages.one-language-families.tequistlatecan",
       "tier": "specialist",
       "start_year": -12000,
       "end_year": null,
@@ -149861,10 +149877,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.ticuna-yuri.ticuna",
+      "id": "languages.one-language-families.ticuna-yuri.ticuna",
       "name": "Ticuna",
       "kind": "language",
-      "parent_id": "languages.ticuna-yuri",
+      "parent_id": "languages.one-language-families.ticuna-yuri",
       "tier": "specialist",
       "start_year": -9200,
       "end_year": null,
@@ -149973,10 +149989,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.tor.kwesten",
+      "id": "languages.one-language-families.tor.kwesten",
       "name": "Kwesten",
       "kind": "language",
-      "parent_id": "languages.tor",
+      "parent_id": "languages.one-language-families.tor",
       "tier": "specialist",
       "start_year": -5000,
       "end_year": null,
@@ -150037,10 +150053,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.tsimshian.southern-coastal-tsimshian",
+      "id": "languages.one-language-families.tsimshian.southern-coastal-tsimshian",
       "name": "Southern-Coastal Tsimshian",
       "kind": "language",
-      "parent_id": "languages.tsimshian",
+      "parent_id": "languages.one-language-families.tsimshian",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -150245,10 +150261,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.uru-chipaya.chipaya",
+      "id": "languages.one-language-families.uru-chipaya.chipaya",
       "name": "Chipaya",
       "kind": "language",
-      "parent_id": "languages.uru-chipaya",
+      "parent_id": "languages.one-language-families.uru-chipaya",
       "tier": "specialist",
       "start_year": -1400,
       "end_year": null,
@@ -150373,10 +150389,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.wakashan.nuu-chah-nulth",
+      "id": "languages.one-language-families.wakashan.nuu-chah-nulth",
       "name": "Nuu-chah-nulth",
       "kind": "language",
-      "parent_id": "languages.wakashan",
+      "parent_id": "languages.one-language-families.wakashan",
       "tier": "specialist",
       "start_year": -2000,
       "end_year": null,
@@ -150389,10 +150405,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.walioic.tuwari",
+      "id": "languages.one-language-families.walioic.tuwari",
       "name": "Tuwari",
       "kind": "language",
-      "parent_id": "languages.walioic",
+      "parent_id": "languages.one-language-families.walioic",
       "tier": "specialist",
       "start_year": -8000,
       "end_year": null,
@@ -150517,10 +150533,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.west-bomberai.iha",
+      "id": "languages.one-language-families.west-bomberai.iha",
       "name": "Iha",
       "kind": "language",
-      "parent_id": "languages.west-bomberai",
+      "parent_id": "languages.one-language-families.west-bomberai",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -150725,10 +150741,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.western-coastal-tasmanian.northwestern-tasmanian",
+      "id": "languages.one-language-families.western-coastal-tasmanian.northwestern-tasmanian",
       "name": "Northwestern Tasmanian",
       "kind": "language",
-      "parent_id": "languages.western-coastal-tasmanian",
+      "parent_id": "languages.one-language-families.western-coastal-tasmanian",
       "tier": "specialist",
       "start_year": -12000,
       "end_year": 1900,
@@ -150757,10 +150773,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.wintuan.wintu",
+      "id": "languages.one-language-families.wintuan.wintu",
       "name": "Wintu",
       "kind": "language",
-      "parent_id": "languages.wintuan",
+      "parent_id": "languages.one-language-families.wintuan",
       "tier": "specialist",
       "start_year": 1,
       "end_year": 2011,
@@ -150789,10 +150805,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.worrorran.ngarinyin",
+      "id": "languages.one-language-families.worrorran.ngarinyin",
       "name": "Ngarinyin",
       "kind": "language",
-      "parent_id": "languages.worrorran",
+      "parent_id": "languages.one-language-families.worrorran",
       "tier": "specialist",
       "start_year": -3000,
       "end_year": null,
@@ -150805,10 +150821,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.xincan.xinca-guazacap-n",
+      "id": "languages.one-language-families.xincan.xinca-guazacap-n",
       "name": "Xinca-Guazacapán",
       "kind": "language",
-      "parent_id": "languages.xincan",
+      "parent_id": "languages.one-language-families.xincan",
       "tier": "specialist",
       "start_year": -500,
       "end_year": 1997,
@@ -150846,11 +150862,12 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 50000 BCE and 1991 CE.",
+      "date_note": "Start estimated between 50000 BCE and 1991 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.yam.morehead-maro.yei",
@@ -150885,10 +150902,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.yangmanic.wardaman",
+      "id": "languages.one-language-families.yangmanic.wardaman",
       "name": "Wardaman",
       "kind": "language",
-      "parent_id": "languages.yangmanic",
+      "parent_id": "languages.one-language-families.yangmanic",
       "tier": "specialist",
       "start_year": -10000,
       "end_year": null,
@@ -150917,10 +150934,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.yareba-bariji-nawaru.yareba",
+      "id": "languages.one-language-families.yareba-bariji-nawaru.yareba",
       "name": "Yareba",
       "kind": "language",
-      "parent_id": "languages.yareba-bariji-nawaru",
+      "parent_id": "languages.one-language-families.yareba-bariji-nawaru",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -150933,10 +150950,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.yawa-saweru.yawa",
+      "id": "languages.one-language-families.yawa-saweru.yawa",
       "name": "Yawa",
       "kind": "language",
-      "parent_id": "languages.yawa-saweru",
+      "parent_id": "languages.one-language-families.yawa-saweru",
       "tier": "specialist",
       "start_year": -2500,
       "end_year": null,
@@ -151006,11 +151023,12 @@
       "end_year": null,
       "start_dating_method": "glottochronology",
       "extant": true,
-      "date_note": "Start estimated between 40000 BCE and 1975 CE.",
+      "date_note": "Start estimated between 40000 BCE and 1975 CE. Start is a regional settlement estimate, not a date for this language: no divergence estimate exists for it. Treat as a floor on time-depth, not a beginning.",
       "source_ids": [
         "glottolog-5-3"
       ],
-      "allow_outside_parent_dates": true
+      "allow_outside_parent_dates": true,
+      "historicity": "reconstructed"
     },
     {
       "id": "languages.yokutsan.nim-yokuts.northern-yokuts",
@@ -151061,10 +151079,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.yukaghir.northern-tundra-yukaghir",
+      "id": "languages.one-language-families.yukaghir.northern-tundra-yukaghir",
       "name": "Northern (Tundra) Yukaghir",
       "kind": "language",
-      "parent_id": "languages.yukaghir",
+      "parent_id": "languages.one-language-families.yukaghir",
       "tier": "specialist",
       "start_year": -1000,
       "end_year": null,
@@ -151077,10 +151095,10 @@
       "allow_outside_parent_dates": true
     },
     {
-      "id": "languages.yuki-wappo.northern-yukian",
+      "id": "languages.one-language-families.yuki-wappo.northern-yukian",
       "name": "Northern Yukian",
       "kind": "language",
-      "parent_id": "languages.yuki-wappo",
+      "parent_id": "languages.one-language-families.yuki-wappo",
       "tier": "specialist",
       "start_year": -2000,
       "end_year": 1983,
@@ -151219,6 +151237,18 @@
         "glottolog-5-3"
       ],
       "allow_outside_parent_dates": true
+    },
+    {
+      "id": "languages.one-language-families",
+      "name": "Families With One Language Here",
+      "kind": "region",
+      "parent_id": "languages",
+      "tier": "foundational",
+      "summary": "Families represented in this dataset by a single language. They are not isolates: each has relatives, which this roster does not carry. Grouped so the top of the tree shows the families that branch.",
+      "start_year": -50000,
+      "start_dating_method": "glottochronology",
+      "end_year": null,
+      "extant": true
     }
   ],
   "redirects": {
@@ -151288,8 +151318,8 @@
     "global.languages.proto-uralic": "languages.uralic.proto-uralic",
     "global.languages.proto-sino-tibetan": "languages.sino-tibetan.proto-sino-tibetan",
     "global.languages.proto-austronesian": "languages.austronesian.proto-austronesian",
-    "global.languages.proto-dravidian": "languages.dravidian.proto-dravidian",
-    "global.languages.proto-japonic": "languages.japonic.proto-japonic",
+    "global.languages.proto-dravidian": "languages.one-language-families.dravidian.proto-dravidian",
+    "global.languages.proto-japonic": "languages.one-language-families.japonic.proto-japonic",
     "global.languages.proto-koreanic": "languages.koreanic.proto-koreanic",
     "global.languages.proto-bantu": "languages.atlantic-congo.volta-congo.benue-congo.bantoid.proto-bantu",
     "global.languages.latin": "languages.indo-european.italic.latino-faliscan.latinic",

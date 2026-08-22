@@ -36,6 +36,12 @@ LANG = os.path.join(HP, "docs/research/languages")
 
 ROOT = "languages"
 
+# Glottolog's own catch-all bookkeeping codes, not genealogical families. A language filed under
+# one of these has not been classified at all, which is exactly what the Unclassified container is
+# for -- they must not surface as if "Unclassifiable", "Pidgin", and "Bookkeeping" were real,
+# independent language families sitting beside Indo-European.
+BOOKKEEPING_GC = {"uncl1493", "pidg1258", "book1242"}
+
 
 # Words that qualify a family name without changing which family it is.
 _QUALIFIER = re.compile(
@@ -157,8 +163,22 @@ def main():
         out.append({"id": f"{ROOT}.{special}", "name": label, "kind": "region",
                     "parent_id": ROOT, "summary": why})
 
+    # Real ancestor depth, not len("".split("/")). A genuinely top-level family has NO
+    # Glottolog path (paths.get(gc) is None or ""), which must sort as depth 0. The previous key
+    # used len(paths.get(g, "").split("/")), and splitting an empty string yields [''] -- length 1,
+    # the SAME length as a real one-element path like Semitic's "afro1255". That tie let a depth-1
+    # child (Semitic) sort before its own depth-0 parent (Afro-Asiatic) whenever set-iteration order
+    # happened to put it first, so `emitted.get(chain[-1])` came back None and the child fell back
+    # to ROOT as a sibling of its own parent. Confirmed by rebuild: the old key stranded 60 nodes at
+    # root despite each having a real, already-surviving ancestor; this key strands zero.
+    def _depth(gc):
+        p = paths.get(gc)
+        return 0 if not p else len([a for a in p.split("/") if a])
+
     emitted = {}
-    for gc in sorted(surviving, key=lambda g: len(paths.get(g, "").split("/"))):
+    for gc in sorted(surviving, key=_depth):
+        if gc in BOOKKEEPING_GC:
+            continue
         m = meta.get(gc)
         if m is None:
             continue
@@ -223,7 +243,7 @@ def main():
     unplaced = []
     for r in kept:
         path = [resolve(a) for a in (r.get("path") or [])]
-        path = [p for p in path if p in surviving]
+        path = [p for p in path if p in surviving and p not in BOOKKEEPING_GC]
         if r.get("classification") == "proto_language" and not path:
             parent = proto_home(r)
         elif r["isolate"]:

@@ -1,5 +1,35 @@
 # Changelog
 
+## 0.39.0.0 — Afro-Asiatic and 52 other families were sitting beside their own parent (2026-08-22)
+
+`build_tree.py`'s topological sort used `len(paths.get(g, "").split("/"))` as an ancestor-depth key.
+Splitting an empty string returns `['']` -- length 1, the same length as a genuine one-element path
+like Semitic's `afro1255`. That tie let a depth-1 child sort before its own depth-0 parent whenever
+Python's set-iteration order happened to put it first, so `emitted.get(chain[-1])` came back `None`
+and the child fell back to the tree root as a sibling of its own parent instead of a child of it.
+
+Confirmed empirically, not just by reading the sort key: rebuilding with a corrected key (0 for no
+Glottolog path, real segment count otherwise) resolved all 60 fallback cases; the buggy key stranded
+60. 53 of those were still visible as separate root nodes in the shipped tree, including Semitic,
+Chadic, Cushitic, and Egyptian sitting beside Afro-Asiatic rather than under it, and Korean sitting
+beside Koreanic.
+
+Also folded Glottolog's own catch-all bookkeeping codes -- `Unclassifiable`, `Pidgin`, and
+`Bookkeeping` (`uncl1493`, `pidg1258`, `book1242`) -- into the existing Unclassified container
+instead of letting them surface as if they were independent, accepted language families.
+
+Root-level family nodes: 292 -> 237. Isolates (184), Disputed Groupings (5) unaffected. Unclassified
+grew from 0 to 8 (the languages previously mis-typed as belonging to a bookkeeping "family"). One
+known placement quirk remains and is untouched here: Songhay sits at root outside any family node.
+
+This fix lands in `docs/research/languages/tree.json` and its companions only.
+`author_languages.py`'s `extend()` raises on any id already present in `src/data/entities.json`, and
+reparenting under this fix changes ids for the 53 affected nodes while leaving the other ~237
+identical -- a same-tree rerun cannot be reconciled against an already-authored dataset without a
+deliberate re-authoring pass (drop the existing `languages.*` subtree, rerun `extend()`, repair any
+cross-links pointing at the ~53 changed ids, rerun `dataset-integrity.test.ts`). The deployed app
+still serves the pre-fix branch until that pass runs.
+
 ## 0.31.0.0 — Phoenicia and the Vedic period (2026-08-10)
 
 The two widest childless blocks `coverage.py` was reporting. Both were hiding a
@@ -2195,3 +2225,4 @@ New schema files:
 
 ### Validation result
 `✓ OK — no errors. 0 warnings.`
+

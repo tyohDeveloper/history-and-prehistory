@@ -37,7 +37,7 @@ describe("dataset envelope", () => {
     // rows. 2,241 were authored and 215 dropped as duplicates during reconciliation.
     // 5,507 -> 7,793. The Languages branch adds 1,158 languages on 1,178 Glottolog clade nodes,
     // and folds in the 28 that had been sitting in a flat global.languages list.
-    expect(entities.length).toBe(7794);
+    expect(entities.length).toBe(7813);
     expect(calendars.length).toBe(21);
     // 17: "Needs Dating Review" joins, a worklist of languages whose start year is a regional
     // settlement estimate standing in for a divergence date nobody has produced.
@@ -132,7 +132,7 @@ describe("gap-analysis baseline", () => {
     // populated endpoint, and bounds are required unless the method is `calendar` (an
     // attested year is not an estimate) or `received` (a traditional figure is the
     // tradition's claim, not a measurement).
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(7746);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(7765);
         // 1,036, down from 1,700. The drop is the fix, not a regression: 664 entities dated after
     // 1000 CE had been given plus-or-minus a century by a convention that keyed on abs(year) and
     // so treated 1989 CE like 1989 BCE. The Fall of the Berlin Wall read 1889 to 2089.
@@ -159,7 +159,7 @@ describe("gap-analysis baseline", () => {
     // beyond radiocarbon's reach was never dated by the start's method and
     // saying otherwise is the exact error the split exists to prevent.
     const withEnd = entities.filter((e) => e.end_dating_method !== undefined);
-    expect(withEnd.length).toBe(4885);
+    expect(withEnd.length).toBe(4883);
 
     // The differing set was a hand-listed dozen and is now 233, which is the property working
     // rather than breaking: a city founded in prehistory and abandoned in the documentary era
@@ -1348,9 +1348,11 @@ describe("the new kinds", () => {
     // at its position in Glottolog's genealogy rather than one level under a proto. Akkadian's
     // ancestor is still Proto-Semitic; there are simply real clades in between.
     const akkadian = entities.find((e) => e.name === "Akkadian" && e.kind === "language")!;
-    expect(akkadian.id.startsWith("languages.semitic.")).toBe(true);
-    const semitic = entities.find((e) => e.id === "languages.semitic.proto-semitic")!;
-    expect(semitic.parent_id).toBe("languages.semitic");
+    // Semitic sits under Afro-Asiatic, not at the root. It had been stranded alongside its own
+    // parent by a sort key that gave an empty path the same depth as a one-element path.
+    expect(akkadian.id.startsWith("languages.afro-asiatic.semitic.")).toBe(true);
+    const semitic = entities.find((e) => e.id === "languages.afro-asiatic.semitic.proto-semitic")!;
+    expect(semitic.parent_id).toBe("languages.afro-asiatic.semitic");
     // And descent, not geography: nothing about Mesopotamia appears in Akkadian's ancestry.
     expect(akkadian.id).not.toContain("west-asia");
     // The historical placement is carried by cross_parent_ids instead.

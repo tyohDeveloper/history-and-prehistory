@@ -1,7 +1,7 @@
 {
   "schema_version": "3.7.0",
   "dataset_version": "0.38.0.0",
-  "generated_at": "2026-08-22T19:58:05Z",
+  "generated_at": "2026-08-22T20:00:38Z",
   "themes": [
     {
       "id": "empires-classical",
@@ -267,9 +267,9 @@
         "languages.isolates.pyu",
         "languages.isolates.yale-yal-nagatman",
         "languages.isolates.yetfa",
+        "languages.kolopom.kimaama-riantana.kimaama-kimaghama",
+        "languages.kwalean.humene-kwale.uare-kwale",
         "languages.one-language-families.greater-kwerba.isirawa",
-        "languages.one-language-families.humene-kwale.uare-kwale",
-        "languages.one-language-families.kimaama-riantana.kimaama-kimaghama",
         "languages.one-language-families.lepki-murkim-kembra.lepki",
         "languages.one-language-families.mailuan.mailu",
         "languages.one-language-families.maybratic.maybrat",

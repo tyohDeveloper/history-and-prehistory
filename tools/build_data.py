@@ -3386,6 +3386,22 @@ with open(DATA / "sources.json", "w") as f:
     f.write("\n")
 print(f"Wrote sources.json — {len(sources)} sources")
 
+# A worklist rather than a footnote: eighteen languages whose start year is a regional settlement
+# estimate standing in for a divergence date nobody has produced. Published as a theme so the set
+# can be opened and worked through, and so it shrinks visibly as real dates land.
+from author_languages import NEEDS_DATING_REVIEW as _NEEDS_DATING
+if _NEEDS_DATING:
+    themes.append({
+        "id": "needs-dating-review",
+        "name": "Needs Dating Review",
+        "description": (
+            "Languages whose start year is a regional settlement estimate rather than a date for "
+            "the language itself. Where no divergence estimate exists, the research fell back to "
+            "when the region was first settled, which says when people arrived and nothing about "
+            "when the language began. Held here as a worklist."),
+        "entity_ids": list(_NEEDS_DATING),
+    })
+
 with open(DATA / "themes.json", "w") as f:
     _n = _rewrite_refs(themes, _ID_REDIRECTS)
     if _n:

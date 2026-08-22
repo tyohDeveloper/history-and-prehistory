@@ -1,7 +1,7 @@
 {
   "schema_version": "3.7.0",
   "dataset_version": "0.38.0.0",
-  "generated_at": "2026-08-11T20:20:32Z",
+  "generated_at": "2026-08-22T19:58:05Z",
   "themes": [
     {
       "id": "empires-classical",
@@ -251,6 +251,31 @@
         "europe.enlightenment"
       ],
       "sort": "chronological"
+    },
+    {
+      "id": "needs-dating-review",
+      "name": "Needs Dating Review",
+      "description": "Languages whose start year is a regional settlement estimate rather than a date for the language itself. Where no divergence estimate exists, the research fell back to when the region was first settled, which says when people arrived and nothing about when the language began. Held here as a worklist.",
+      "entity_ids": [
+        "languages.isolates.elseng",
+        "languages.isolates.fuyug",
+        "languages.isolates.kehu-keuw",
+        "languages.isolates.kimki",
+        "languages.isolates.odiai",
+        "languages.isolates.pele-ata",
+        "languages.isolates.purari",
+        "languages.isolates.pyu",
+        "languages.isolates.yale-yal-nagatman",
+        "languages.isolates.yetfa",
+        "languages.one-language-families.greater-kwerba.isirawa",
+        "languages.one-language-families.humene-kwale.uare-kwale",
+        "languages.one-language-families.kimaama-riantana.kimaama-kimaghama",
+        "languages.one-language-families.lepki-murkim-kembra.lepki",
+        "languages.one-language-families.mailuan.mailu",
+        "languages.one-language-families.maybratic.maybrat",
+        "languages.one-language-families.pahoturi.agob-ende-kawam",
+        "languages.sentanic.sentani-nafri.sentani"
+      ]
     }
   ]
 }

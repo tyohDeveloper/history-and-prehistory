@@ -37,9 +37,11 @@ describe("dataset envelope", () => {
     // rows. 2,241 were authored and 215 dropped as duplicates during reconciliation.
     // 5,507 -> 7,793. The Languages branch adds 1,158 languages on 1,178 Glottolog clade nodes,
     // and folds in the 28 that had been sitting in a flat global.languages list.
-    expect(entities.length).toBe(7793);
+    expect(entities.length).toBe(7794);
     expect(calendars.length).toBe(21);
-    expect(themes.length).toBe(16);
+    // 17: "Needs Dating Review" joins, a worklist of languages whose start year is a regional
+    // settlement estimate standing in for a divergence date nobody has produced.
+    expect(themes.length).toBe(17);
     expect(referenceFrames.length).toBe(46);
   });
 });
@@ -130,7 +132,7 @@ describe("gap-analysis baseline", () => {
     // populated endpoint, and bounds are required unless the method is `calendar` (an
     // attested year is not an estimate) or `received` (a traditional figure is the
     // tradition's claim, not a measurement).
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(7745);
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(7746);
         // 1,036, down from 1,700. The drop is the fix, not a regression: 664 entities dated after
     // 1000 CE had been given plus-or-minus a century by a convention that keyed on abs(year) and
     // so treated 1989 CE like 1989 BCE. The Fall of the Berlin Wall read 1889 to 2089.
@@ -214,7 +216,7 @@ describe("gap-analysis baseline", () => {
     const regions = entities.filter((e) => e.kind === "region");
 // 46 -> 50. Languages joins as a top-level region, with Isolates and Disputed Groupings
     // beneath it, plus one clade node that has no dated descendant and so stays a container.
-    expect(regions.length).toBe(51);
+    expect(regions.length).toBe(52);
     const missing = regions.filter((e) => (e.summary ?? "").trim() === "").map((e) => e.id);
     expect(missing).toEqual([]);
   });
@@ -1003,7 +1005,7 @@ describe("themes", () => {
   });
 
   it("keeps every theme non-empty and named", () => {
-    expect(themes.length).toBe(16);
+    expect(themes.length).toBe(17);
     for (const t of themes) {
       expect(t.entity_ids.length).toBeGreaterThan(0);
       expect(t.name.trim()).not.toBe("");

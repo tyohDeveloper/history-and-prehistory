@@ -144,9 +144,10 @@ def extend(E, entities):
     # _group_singletons(out) used to run here -- grouping BEFORE the migration, because regrouping
     # moves ids, and the other order once left global.languages.proto-dravidian pointing at nothing.
     # That grouping is now done upstream in build_tree.py instead, on tree.json's own rows while they
-    # still carry is_family_node: a top tier by roster count (>=10, plus Mayan/Uto-Aztecan/Tupian
-    # named explicitly so the Americas are not erased by a pure count threshold), Smaller Language
-    # Families for 3-9, and Other Families for 1-2. By the time `out` exists here every row is
+    # still carry is_family_node: a top tier by roster count (>=5, purely algorithmic -- no named
+    # exceptions, since at this threshold Maya/Uto-Aztecan/Tupian already clear it on count alone),
+    # Other Language Families for 3-4, and Small Language Families for 1-2. By the time `out` exists
+    # here every row is
     # already correctly parented, so calling it again would be a no-op at best and, since its own
     # counting reads kind=="language" rather than is_family_node, a source of a second, disagreeing
     # bucket boundary at worst. Kept below, unused, as a record of the count-based approach it

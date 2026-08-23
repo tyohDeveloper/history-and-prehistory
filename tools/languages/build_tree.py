@@ -497,19 +497,18 @@ def main():
     # A reader opening Languages should meet the families they already have a mental slot for,
     # not all 237 Glottolog root families flattened into one row of tiles. Roster-entry count is
     # a proxy for that, not the thing itself -- it counts how many named languages our Tier 1/Tier 2
-    # research happened to carry for a family, not how historically significant the family is. On
-    # its own the proxy fails the Americas: Maya (calendars, hieroglyphic writing), the Aztec empire
-    # (Uto-Aztecan) and Guarani/Tupi both sit at 5, 5 and 9 roster entries respectively, well under
-    # the count that would keep them beside Indo-European and Sino-Tibetan. Named explicitly rather
-    # than folded into a lower count threshold, since lowering the threshold to catch these three
-    # would also catch every other family at 5-9 regardless of whether it is one anyone has heard of.
+    # research happened to carry for a family, not how historically significant the family is. A
+    # first pass at this used a >=10 threshold plus three families (Maya, Uto-Aztecan, Tupian) named
+    # explicitly because the count alone erased the Americas from the top level. At >=5 the named
+    # exceptions are unnecessary -- all three already clear it on roster count alone (5, 5 and 9
+    # entries) -- so the threshold is purely algorithmic now: no family-name allowlist to maintain,
+    # and no judgment call about which families "everyone has heard of" baked into the code.
     #
     # Grouping happens here, in the research artifact, rather than as a later pass over the authored
     # entity list: this loop still has is_family_node/kind on every row, which is what makes a
     # correct recursive leaf-language count possible. By the time author_languages.py builds the
     # dataset, family nodes with no dated descendant have already been reclassified kind="region"
     # (see _fill_hulls there), which erases exactly the distinction a count needs.
-    PROMOTE_BELOW_THRESHOLD = {"tupi1275", "utoa1244", "maya1287"}  # Tupian, Uto-Aztecan, Mayan
 
     by_id_final = {r["id"]: r for r in out}
     kids_final = {}
@@ -531,12 +530,12 @@ def main():
 
     root_families = [r for r in out if r.get("parent_id") == ROOT and r.get("is_family_node")]
     for special, label, why in (
-        ("smaller-families", "Smaller Language Families",
+        ("other-families", "Other Language Families",
          "Recognised Glottolog families with a handful of roster entries -- real, independent "
          "families, just not ones most readers arrive already knowing. Grouped here rather than "
-         "left beside Indo-European so the dozen or so families everyone has heard of are not lost "
-         "among two hundred that are each one or two languages deep."),
-        ("other-families", "Other Families",
+         "left beside Indo-European so the families everyone has heard of are not lost among two "
+         "hundred that are each one or two languages deep."),
+        ("small-families", "Small Language Families",
          "Recognised Glottolog families represented by only one or two roster entries. Not "
          "isolates -- Glottolog does show them with relatives -- just families this roster barely "
          "touches."),
@@ -550,14 +549,12 @@ def main():
     # prefix baked into their own ids however many levels deep they go. Move the root without also
     # rewriting the subtree and every id/tier/depth calculation downstream reads the wrong ancestry.
     id_map = {}
-    demoted_smaller = demoted_other = 0
+    demoted_other = demoted_small = 0
     for row in root_families:
-        if row["glottocode"] in PROMOTE_BELOW_THRESHOLD:
-            continue
         count = _leaf_count(row["id"])
-        if count >= 10:
+        if count >= 5:
             continue
-        bucket = "smaller-families" if count >= 3 else "other-families"
+        bucket = "other-families" if count >= 3 else "small-families"
         old_prefix = row["id"]
         row["parent_id"] = f"{ROOT}.{bucket}"
         stack = [old_prefix]
@@ -565,18 +562,18 @@ def main():
             cur = stack.pop()
             id_map[cur] = f"{ROOT}.{bucket}.{cur[len(ROOT) + 1:]}"
             stack.extend(kids_final.get(cur, ()))
-        if bucket == "smaller-families":
-            demoted_smaller += 1
-        else:
+        if bucket == "other-families":
             demoted_other += 1
+        else:
+            demoted_small += 1
     for row in out:
         if row["id"] in id_map:
             row["id"] = id_map[row["id"]]
         if row.get("parent_id") in id_map:
             row["parent_id"] = id_map[row["parent_id"]]
-    print(f"  top-level families: {len(root_families) - demoted_smaller - demoted_other} "
-          f"(moved {demoted_smaller} to Smaller Language Families, "
-          f"{demoted_other} to Other Families)")
+    print(f"  top-level families: {len(root_families) - demoted_other - demoted_small} "
+          f"(moved {demoted_other} to Other Language Families, "
+          f"{demoted_small} to Small Language Families)")
 
     json.dump(out, open(os.path.join(LANG, "tree.json"), "w"), indent=1, ensure_ascii=False)
     json.dump(unplaced, open(os.path.join(LANG, "unplaced.json"), "w"), indent=1, ensure_ascii=False)

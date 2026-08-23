@@ -27,7 +27,7 @@ DATA.mkdir(exist_ok=True)
 # sanctuaries, necropoleis and mound centres that had been filed as cities and said so themselves.
 # Additive, so no reader of 3.6.0 data breaks; a reader of 3.7.0 data needs the new kind.
 SCHEMA_VERSION = "3.7.0"
-DATASET_VERSION = "0.42.0.0"
+DATASET_VERSION = "0.43.0.0"
 _GENERATED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 

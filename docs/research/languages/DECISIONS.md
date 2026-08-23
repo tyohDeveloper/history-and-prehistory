@@ -36,7 +36,7 @@ Branches with languages at depth 8 or more:
 - **Mande** — 6 languages
 - **Tai-Kadai** — 4 languages
 - **Sino-Tibetan** — 3 languages
-- **Smaller Language Families** — 3 languages
+- **Hmong-Mien** — 1 languages
 
 ## 2. The 91 proto-languages cannot be placed automatically
 

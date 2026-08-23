@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.43.0.0 — Top-level threshold simplified to >=5, purely algorithmic (2026-08-22)
+
+The 0.42.0.0 threshold (>=10 entries, plus Mayan, Uto-Aztecan and Tupian named explicitly so the
+Americas were not erased by a pure count cutoff) is replaced by a single >=5 threshold with no
+named exceptions. All three previously-named families already clear >=5 on roster count alone (5,
+5 and 9 entries), so the allowlist added nothing a lower, purely algorithmic threshold couldn't
+already do -- and a threshold beats a hand-picked list for the obvious reason: no judgment call
+about which families "everyone has heard of" lives in the code, and no list to revisit as roster
+coverage changes.
+
+Also renamed the two grouping containers for clarity now that the split is 3-4 vs. 1-2 rather than
+3-9 vs. 1-2:
+
+- **Other Language Families** (`languages.other-families`, was `smaller-families`): 3-4 roster
+  entries, 14 families.
+- **Small Language Families** (`languages.small-families`, was `other-families`): 1-2 entries,
+  203 families.
+
+Top level: 20 families (was 16). Uralic, Hmong-Mien, Central Sudanic and Nilotic (5-9 entries)
+move up from Other Language Families to the top level; nothing moves down. Isolates and Disputed
+Groupings are unaffected -- they were never count-based.
+
+`entities.json` stays at 7814 entities: same five containers, same total membership, only the
+line between "top level" and "Other Language Families" moved. No test assertions needed updating
+beyond the dataset_version string.
+
 ## 0.42.0.0 — Smaller Language Families / Other Families, authored into the live dataset (2026-08-22)
 
 The same pseudo-hierarchy from the research artifact (previously landed in

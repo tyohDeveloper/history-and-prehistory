@@ -22,7 +22,7 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.42.0.0");
+    expect(datasetVersion).toBe("0.43.0.0");
     // 3.6.0: retired the three precision enums, added extant, historicity, date_standing,
     // search_phrase, qualified_name and redirects, and added the polity, culture, language,
     // tradition, people, network, person and city kinds.

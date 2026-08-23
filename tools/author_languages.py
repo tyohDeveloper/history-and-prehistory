@@ -141,10 +141,16 @@ def extend(E, entities):
         out.append(e)
 
     needs_review = _flag_fallback_dates(out)
-    # Regrouping BEFORE the migration, because regrouping moves ids. Run the other way round,
-    # the redirects were written against ids that then changed -- Dravidian turned out to be a
-    # one-language family and moved, leaving global.languages.proto-dravidian pointing at nothing.
-    _group_singletons(out)
+    # _group_singletons(out) used to run here -- grouping BEFORE the migration, because regrouping
+    # moves ids, and the other order once left global.languages.proto-dravidian pointing at nothing.
+    # That grouping is now done upstream in build_tree.py instead, on tree.json's own rows while they
+    # still carry is_family_node: a top tier by roster count (>=10, plus Mayan/Uto-Aztecan/Tupian
+    # named explicitly so the Americas are not erased by a pure count threshold), Smaller Language
+    # Families for 3-9, and Other Families for 1-2. By the time `out` exists here every row is
+    # already correctly parented, so calling it again would be a no-op at best and, since its own
+    # counting reads kind=="language" rather than is_family_node, a source of a second, disagreeing
+    # bucket boundary at worst. Kept below, unused, as a record of the count-based approach it
+    # replaced.
 
     by_id = {e["id"]: e for e in out}
 

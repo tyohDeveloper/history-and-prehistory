@@ -1,7 +1,7 @@
 {
   "schema_version": "3.7.0",
-  "dataset_version": "0.41.0.0",
-  "generated_at": "2026-08-22T20:00:38Z",
+  "dataset_version": "0.42.0.0",
+  "generated_at": "2026-08-23T00:48:26Z",
   "themes": [
     {
       "id": "empires-classical",
@@ -267,14 +267,14 @@
         "languages.isolates.pyu",
         "languages.isolates.yale-yal-nagatman",
         "languages.isolates.yetfa",
-        "languages.kolopom.kimaama-riantana.kimaama-kimaghama",
-        "languages.kwalean.humene-kwale.uare-kwale",
-        "languages.one-language-families.greater-kwerba.isirawa",
-        "languages.one-language-families.lepki-murkim-kembra.lepki",
-        "languages.one-language-families.mailuan.mailu",
-        "languages.one-language-families.maybratic.maybrat",
-        "languages.one-language-families.pahoturi.agob-ende-kawam",
-        "languages.sentanic.sentani-nafri.sentani"
+        "languages.other-families.greater-kwerba.isirawa",
+        "languages.other-families.kolopom.kimaama-riantana.kimaama-kimaghama",
+        "languages.other-families.kwalean.humene-kwale.uare-kwale",
+        "languages.other-families.lepki-murkim-kembra.lepki",
+        "languages.other-families.mailuan.mailu",
+        "languages.other-families.maybratic.maybrat",
+        "languages.other-families.pahoturi.agob-ende-kawam",
+        "languages.other-families.sentanic.sentani-nafri.sentani"
       ]
     }
   ]

@@ -22,7 +22,7 @@ describe("dataset envelope", () => {
     // Schema 3.0.0 splits dating_method into start_dating_method /
     // end_dating_method (Q-30). MAJOR because a consumer reading the old
     // entity-level field now finds nothing at all.
-    expect(datasetVersion).toBe("0.41.0.0");
+    expect(datasetVersion).toBe("0.42.0.0");
     // 3.6.0: retired the three precision enums, added extant, historicity, date_standing,
     // search_phrase, qualified_name and redirects, and added the polity, culture, language,
     // tradition, people, network, person and city kinds.
@@ -37,7 +37,16 @@ describe("dataset envelope", () => {
     // rows. 2,241 were authored and 215 dropped as duplicates during reconciliation.
     // 5,507 -> 7,793. The Languages branch adds 1,158 languages on 1,178 Glottolog clade nodes,
     // and folds in the 28 that had been sitting in a flat global.languages list.
-    expect(entities.length).toBe(7813);
+    // 7,793 -> 7,814 (net, across the sort-key fix and this release): the sort-key fix in
+    // build_tree.py reparented 53 subfamilies that had been stranded as false root siblings of
+    // their own parent (no count change, just correct nesting), and this release adds two
+    // container nodes -- Smaller Language Families (3-9 roster entries) and Other Families (1-2) --
+    // so the top of the Languages branch shows 16 recognisable families instead of 237 flattened
+    // Glottolog roots. Mayan, Uto-Aztecan and Tupian are named exceptions to the >=10 threshold,
+    // kept at top level because roster-entry count under-represents the Americas: it measures how
+    // many named languages the research happened to carry for a family, not how historically
+    // significant it is.
+    expect(entities.length).toBe(7814);
     expect(calendars.length).toBe(21);
     // 17: "Needs Dating Review" joins, a worklist of languages whose start year is a regional
     // settlement estimate standing in for a divergence date nobody has produced.
@@ -132,7 +141,10 @@ describe("gap-analysis baseline", () => {
     // populated endpoint, and bounds are required unless the method is `calendar` (an
     // attested year is not an estimate) or `received` (a traditional figure is the
     // tradition's claim, not a measurement).
-    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(7765);
+    // 7765 -> 7766: the Smaller Language Families / Other Families container nodes this release
+    // adds pick up hull dates from their descendants like any other family node, so the count of
+    // dated entities moves with the two new containers even though no leaf language changed.
+    expect(entities.filter((e) => e.start_dating_method !== undefined).length).toBe(7766);
         // 1,036, down from 1,700. The drop is the fix, not a regression: 664 entities dated after
     // 1000 CE had been given plus-or-minus a century by a convention that keyed on abs(year) and
     // so treated 1989 CE like 1989 BCE. The Fall of the Berlin Wall read 1889 to 2089.
@@ -213,10 +225,13 @@ describe("gap-analysis baseline", () => {
     // Was a debt marker asserting 5 of 42. Region nodes are the highest-traffic
     // entities in the app -- a reader clicking "China" or "Africa" lands on one -- and
     // they were the emptiest. Now an invariant rather than a record of the gap.
+    // 52 -> 53: Smaller Language Families and Other Families join as region-kind containers
+    // (both carry summaries, so the invariant holds), which nets to +1 rather than +2 because
+    // reparenting shifted which family nodes end up with no dated descendant of their own.
     const regions = entities.filter((e) => e.kind === "region");
 // 46 -> 50. Languages joins as a top-level region, with Isolates and Disputed Groupings
     // beneath it, plus one clade node that has no dated descendant and so stays a container.
-    expect(regions.length).toBe(52);
+    expect(regions.length).toBe(53);
     const missing = regions.filter((e) => (e.summary ?? "").trim() === "").map((e) => e.id);
     expect(missing).toEqual([]);
   });

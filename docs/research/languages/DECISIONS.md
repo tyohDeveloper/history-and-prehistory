@@ -2,7 +2,7 @@
 
 Built from Tier 1 (521) + Tier 2 (636) = **1,157 languages**, no exclusions applied, placed into **1174 family and subgroup nodes** taken from Glottolog 5.3.
 
-- Total nodes: **2335**
+- Total nodes: **2337**
 - Isolates: **183**
 - Maximum depth: **16** levels below the root
 - Pass-through nodes already collapsed: **554**
@@ -36,7 +36,7 @@ Branches with languages at depth 8 or more:
 - **Mande** — 6 languages
 - **Tai-Kadai** — 4 languages
 - **Sino-Tibetan** — 3 languages
-- **Hmong-Mien** — 1 languages
+- **Smaller Language Families** — 3 languages
 
 ## 2. The 91 proto-languages cannot be placed automatically
 

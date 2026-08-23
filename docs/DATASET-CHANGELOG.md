@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.42.0.0 — Smaller Language Families / Other Families, authored into the live dataset (2026-08-22)
+
+The same pseudo-hierarchy from the research artifact (previously landed in
+`docs/research/languages/tree.json` only) is now authored into `src/data/entities.json`, the file
+the app actually ships. Reported from use: the Languages tab was still showing all 129 root family
+nodes plus the existing "Families With One Language Here" container -- correctly grouping the
+single-roster-entry families, but leaving every 2-9-entry family (Uralic, Hmong-Mien, Chibchan,
+Algic, and 17 more) sitting at the top alongside Indo-European.
+
+Replaced `author_languages.py`'s own `_group_singletons` (grouped 1-language families only, counted
+from the authored entity list after family nodes with no dated descendant had already lost their
+`is_family_node` distinction) with grouping done upstream in `build_tree.py`, on tree.json's own rows
+while they still carry that field. One grouping pass, one count, no risk of the two disagreeing on
+where the line falls:
+
+- Top level (16): every family with >=10 roster entries, plus Mayan, Uto-Aztecan and Tupian named
+  explicitly. Roster-entry count under-represents the Americas -- it measures how many named
+  languages the Tier 1/Tier 2 research happened to carry for a family, not how historically
+  significant it is, and a pure count threshold would have erased Maya, the Aztec empire and
+  Guarani/Tupi from the top of the tree entirely.
+- Smaller Language Families (`languages.smaller-families`): 3-9 entries, 18 families.
+- Other Families (`languages.other-families`): 1-2 entries, 203 families. Not the same as
+  Isolates -- Glottolog does show these with relatives, the roster just barely touches them.
+
+`entities.json`: 7813 -> 7814 (two new container nodes; no leaf language moved or lost). Both
+new containers carry summaries and pick up hull dates from their descendants like any other family
+node, so region-node and dated-entity counts each move by the corresponding amount.
+
+`author_languages._group_singletons` is left in the file, unused, as a record of the count-based
+approach it replaced -- it is no longer called.
+
 ## 0.39.0.0 — Afro-Asiatic and 52 other families were sitting beside their own parent (2026-08-22)
 
 `build_tree.py`'s topological sort used `len(paths.get(g, "").split("/"))` as an ancestor-depth key.

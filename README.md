@@ -164,7 +164,7 @@ TypeScript (strict) · Vite · `vite-plugin-singlefile` · Vitest · Playwright 
 `html-minifier-terser` · GitHub Actions.
 
 Directories under `src/` name domains, not layers — there is no `lib/`, `utils/`, or `helpers/`.
-`docs/CODING-STANDARDS.md` §3.8 makes this binding and `tools/check_standards.py` measures it.
+Core rule C-6 / TS-7 (predecessor §3.8) makes this binding and `tools/check_standards.py` measures it.
 
 No UI framework. The picker is a tree renderer over a static dataset — a framework would cost
 bundle budget that the 1,417-entity dataset needs, and would not remove any real complexity.
@@ -201,8 +201,8 @@ per-entity source attribution is a tracked gap (see the gap analysis, §5.2).
 
 ## Coding & architecture standards
 
-All code in this repository follows **[`docs/CODING-STANDARDS.md`](docs/CODING-STANDARDS.md)** — the binding rules for layer boundaries, purity, function and file size limits, naming, data externalization, testing, and dependency budgets. Read it before making changes.
+Policy: `tyohDeveloper/engineering-standards` release 1.0.1.1 (tag `standards-1.0.1.1`). [`docs/CODING-STANDARDS.md`](docs/CODING-STANDARDS.md) records the adopted release, delivery profile (`none / single-file / none / none / none / interactive`, no localization scope; calendars are domain data), role mapping, enforcement matrix and local extensions; the rule text is retrieved from the hub at that tag. [`STANDARDS-ADOPTION.json`](STANDARDS-ADOPTION.json) is the machine-readable record; [`docs/EXCEPTIONS.md`](docs/EXCEPTIONS.md) lists open exceptions (C-27). [`docs/standards/portable-v2.2.md`](docs/standards/portable-v2.2.md) is the superseded predecessor, kept for history.
 
-Key hard limits: exported function bodies ≤ 20 lines; one export per pure-logic file; pure-core files ≤ 100 lines, other pure/state/controller files ≤ 150, view files ≤ 250 with ≤ 80 lines of markup in the return. §0 of that file maps those layer roles to this repository's actual directories.
+Key hard limits (C-11, C-12, C-6): exported function bodies ≤ 20 lines; one export per PURE file; PURE-CORE files ≤ 100 lines, other PURE/STATE/CONTROLLER files ≤ 150, VIEW files ≤ 250. `npm run check:standards` measures them against a ratcheting debt baseline (E-1).
 
-The canonical source of truth is the `programming` project knowledge wiki page `concepts/coding-architecture-standards`; the in-repo file is a derived copy. Amend the wiki first, then propagate here.
+Proposals to change a rule go to the hub, not to this repository.
